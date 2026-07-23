@@ -1,3 +1,4 @@
+import json
 from datetime import UTC, date, datetime
 from pathlib import Path
 
@@ -42,11 +43,65 @@ def test_runtime_store_rejects_invalid_transition(tmp_path: Path) -> None:
         store.mark_notified("2026-07-23-a1b2c3", [])
 
 
+@pytest.mark.parametrize(
+    "unsafe_run_id",
+    ["../../escaped-run", "absolute"],
+)
+def test_runtime_store_rejects_unsafe_run_ids_at_public_boundaries(
+    tmp_path: Path,
+    unsafe_run_id: str,
+) -> None:
+    store = RuntimeStore(tmp_path)
+    run_id = (
+        str(tmp_path.parent / "escaped-run")
+        if unsafe_run_id == "absolute"
+        else unsafe_run_id
+    )
+    unsafe_report = report().model_copy(update={"run_id": run_id})
+
+    with pytest.raises(ValueError, match="safe run_id"):
+        store.save_prepared(unsafe_report, set())
+    with pytest.raises(ValueError, match="safe run_id"):
+        store.load_run(run_id)
+    with pytest.raises(ValueError, match="safe run_id"):
+        store.mark_published(run_id, "https://ai.example.com/2026/07/23/")
+    with pytest.raises(ValueError, match="safe run_id"):
+        store.mark_notified(run_id, [])
+
+
 def test_seen_fingerprints_round_trip(tmp_path: Path) -> None:
     store = RuntimeStore(tmp_path)
     store.save_seen_fingerprints({"a", "b"}, date(2026, 7, 23))
     assert store.load_seen_fingerprints() == {"a", "b"}
     assert store.load_seen_fingerprints(excluding_date=date(2026, 7, 23)) == set()
+
+
+def test_mark_published_retry_recreates_missing_latest_file(tmp_path: Path) -> None:
+    store = RuntimeStore(tmp_path)
+    saved = store.save_prepared(report(), {"fingerprint-a"})
+    published = store.mark_published(saved.run_id, "https://ai.example.com/2026/07/23/")
+    (tmp_path / "latest.json").unlink()
+
+    retried = store.mark_published(saved.run_id, "https://ignored.example.com/")
+
+    assert retried == published
+    assert json.loads((tmp_path / "latest.json").read_text(encoding="utf-8")) == {
+        "run_id": saved.run_id,
+        "report_url": "https://ai.example.com/2026/07/23/",
+    }
+    assert store.load_seen_fingerprints() == {"fingerprint-a"}
+
+
+def test_mark_published_rejects_published_record_without_report_url(tmp_path: Path) -> None:
+    store = RuntimeStore(tmp_path)
+    saved = store.save_prepared(report(), set())
+    run_path = tmp_path / "runs" / f"{saved.run_id}.json"
+    serialized = json.loads(run_path.read_text(encoding="utf-8"))
+    serialized["status"] = RunStatus.PUBLISHED
+    run_path.write_text(json.dumps(serialized), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="report_url"):
+        store.mark_published(saved.run_id, "https://ai.example.com/2026/07/23/")
 
 
 def test_load_run_is_public(tmp_path: Path) -> None:

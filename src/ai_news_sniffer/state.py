@@ -27,7 +27,20 @@ class RuntimeStore:
         temporary.replace(path)
 
     def _run_path(self, run_id: str) -> Path:
-        return self.runs_dir / f"{run_id}.json"
+        if (
+            not run_id
+            or run_id in {".", ".."}
+            or "/" in run_id
+            or "\\" in run_id
+            or Path(run_id).is_absolute()
+        ):
+            raise ValueError("run_id must be a safe run_id path segment")
+        path = self.runs_dir / f"{run_id}.json"
+        try:
+            path.resolve().relative_to(self.runs_dir.resolve())
+        except ValueError as error:
+            raise ValueError("run_id must be a safe run_id path segment") from error
+        return path
 
     def _load_run(self, run_id: str) -> RunRecord:
         return RunRecord.model_validate_json(
@@ -88,7 +101,13 @@ class RuntimeStore:
             RunStatus.NOTIFIED,
             RunStatus.PARTIALLY_NOTIFIED,
         }:
+            if record.report_url is None:
+                raise ValueError("published run must have a report_url")
             self.save_seen_fingerprints(set(record.pending_fingerprints), record.target_date)
+            self._write_json(
+                self.root / "latest.json",
+                {"run_id": run_id, "report_url": record.report_url},
+            )
             return record
         if record.status not in {RunStatus.PREPARED, RunStatus.DEGRADED}:
             raise ValueError("run must be prepared before it can be published")
