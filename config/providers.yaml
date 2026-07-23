@@ -1,0 +1,9 @@
+providers:
+  - id: deepseek
+    api_style: openai_chat_completions
+    base_url: https://api.deepseek.com
+    model: deepseek-v4-flash
+    api_key_env: DEEPSEEK_API_KEY
+    timeout_seconds: 60
+    max_retries: 3
+fallback_order: [deepseek]

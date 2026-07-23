@@ -1,0 +1,19 @@
+channels:
+  - id: meow
+    kind: meow
+    enabled: true
+    nickname_env: MEOW_NICKNAME
+    timeout_seconds: 15
+    max_retries: 3
+  - id: wecom
+    kind: wecom
+    enabled: false
+    endpoint_env: WECOM_WEBHOOK_URL
+    timeout_seconds: 15
+    max_retries: 3
+  - id: webhook
+    kind: webhook
+    enabled: false
+    endpoint_env: GENERIC_WEBHOOK_URL
+    timeout_seconds: 15
+    max_retries: 3

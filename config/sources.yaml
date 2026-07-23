@@ -1,0 +1,46 @@
+active_profile: balanced
+profile_candidate_limits:
+  light: 20
+  balanced: 30
+  full: 40
+source_groups:
+  official: {enabled: true}
+  research: {enabled: true}
+  media: {enabled: true}
+  community: {enabled: true}
+sources:
+  - {id: openai-news, name: OpenAI Newsroom, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://openai.com/news/", categories: [models, products, company], weight: 25}
+  - {id: anthropic-news, name: Anthropic Newsroom, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://www.anthropic.com/news", categories: [models, products, safety], weight: 25}
+  - {id: deepmind-news, name: Google DeepMind News, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://deepmind.google/discover/blog/", categories: [models, research], weight: 25}
+  - {id: google-research, name: Google Research Blog, kind: html_whitelist, group: official, enabled: true, profiles: [balanced, full], url: "https://research.google/blog/", categories: [research], weight: 24}
+  - {id: meta-ai-blog, name: Meta AI Blog, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://ai.meta.com/blog", categories: [models, research, open-source], weight: 25}
+  - {id: microsoft-research, name: Microsoft Research Blog, kind: html_whitelist, group: official, enabled: true, profiles: [balanced, full], url: "https://www.microsoft.com/en-us/research/blog/", categories: [research, products], weight: 23}
+  - {id: nvidia-genai, name: NVIDIA Generative AI Blog, kind: rss, group: official, enabled: true, profiles: [balanced, full], url: "https://developer.nvidia.com/blog/blog/category/generative-ai/feed/", categories: [infrastructure, products], weight: 23}
+  - {id: aws-ai-blog, name: AWS AI and ML Blog, kind: rss, group: official, enabled: true, profiles: [full], url: "https://aws.amazon.com/blogs/machine-learning/feed/", categories: [products, developer-tools], weight: 21}
+  - {id: huggingface-blog, name: Hugging Face Blog, kind: rss, group: official, enabled: true, profiles: [light, balanced, full], url: "https://huggingface.co/blog/feed.xml", categories: [models, research, open-source], weight: 25}
+  - {id: deepseek-updates, name: DeepSeek API Updates, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://api-docs.deepseek.com/updates/", categories: [models, products], weight: 25}
+  - {id: kimi-platform-blog, name: Kimi Platform Blog, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://platform.kimi.com/blog", categories: [models, products], weight: 25}
+  - {id: qwen-blog, name: Qwen Blog, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://qwenlm.github.io/blog/", categories: [models, open-source], weight: 25}
+  - {id: minimax-news, name: MiniMax News, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://www.minimaxi.com/news", categories: [models, products], weight: 25}
+  - {id: zhipu-research, name: Zhipu GLM Research, kind: html_whitelist, group: official, enabled: true, profiles: [light, balanced, full], url: "https://www.zhipuai.cn/zh/research", categories: [models, research, open-source], weight: 25}
+  - {id: mistral-news, name: Mistral News, kind: html_whitelist, group: official, enabled: true, profiles: [balanced, full], url: "https://mistral.ai/news/", categories: [models, products, open-source], weight: 24}
+  - {id: cohere-blog, name: Cohere Blog, kind: html_whitelist, group: official, enabled: true, profiles: [balanced, full], url: "https://cohere.com/blog", categories: [models, products, research], weight: 23}
+  - {id: apple-ml, name: Apple Machine Learning Research, kind: html_whitelist, group: official, enabled: true, profiles: [full], url: "https://machinelearning.apple.com/", categories: [research, products], weight: 23}
+  - {id: arxiv-ai, name: arXiv AI, kind: arxiv, group: research, enabled: true, profiles: [light, balanced, full], url: "https://export.arxiv.org/api/query", categories: [research], weight: 22, options: {query: "cat:cs.AI OR cat:cs.CL OR cat:cs.LG", max_results: 30}}
+  - {id: hf-daily-papers, name: Hugging Face Daily Papers, kind: html_whitelist, group: research, enabled: true, profiles: [light, balanced, full], url: "https://huggingface.co/papers", categories: [research], weight: 22}
+  - {id: vllm-releases, name: vLLM Releases, kind: github_releases, group: research, enabled: true, profiles: [balanced, full], url: "https://api.github.com/repos/vllm-project/vllm/releases", categories: [open-source, inference], weight: 22, options: {repository: "vllm-project/vllm"}}
+  - {id: transformers-releases, name: Transformers Releases, kind: github_releases, group: research, enabled: true, profiles: [balanced, full], url: "https://api.github.com/repos/huggingface/transformers/releases", categories: [open-source, developer-tools], weight: 22, options: {repository: "huggingface/transformers"}}
+  - {id: llama-cpp-releases, name: llama.cpp Releases, kind: github_releases, group: research, enabled: true, profiles: [balanced, full], url: "https://api.github.com/repos/ggml-org/llama.cpp/releases", categories: [open-source, inference], weight: 21, options: {repository: "ggml-org/llama.cpp"}}
+  - {id: ollama-releases, name: Ollama Releases, kind: github_releases, group: research, enabled: true, profiles: [full], url: "https://api.github.com/repos/ollama/ollama/releases", categories: [open-source, products], weight: 20, options: {repository: "ollama/ollama"}}
+  - {id: langchain-releases, name: LangChain Releases, kind: github_releases, group: research, enabled: true, profiles: [full], url: "https://api.github.com/repos/langchain-ai/langchain/releases", categories: [open-source, developer-tools], weight: 19, options: {repository: "langchain-ai/langchain"}}
+  - {id: llama-index-releases, name: LlamaIndex Releases, kind: github_releases, group: research, enabled: true, profiles: [full], url: "https://api.github.com/repos/run-llama/llama_index/releases", categories: [open-source, developer-tools], weight: 19, options: {repository: "run-llama/llama_index"}}
+  - {id: 36kr, name: 36Kr, kind: rss, group: media, enabled: true, profiles: [balanced, full], url: "https://36kr.com/feed", categories: [business, products], weight: 17}
+  - {id: jiqizhixin, name: 机器之心, kind: html_whitelist, group: media, enabled: true, profiles: [balanced, full], url: "https://www.jiqizhixin.com/", categories: [models, research, products], weight: 18}
+  - {id: qbitai, name: 量子位, kind: html_whitelist, group: media, enabled: true, profiles: [balanced, full], url: "https://www.qbitai.com/", categories: [models, products, business], weight: 18}
+  - {id: techcrunch-ai, name: TechCrunch AI, kind: rss, group: media, enabled: true, profiles: [balanced, full], url: "https://techcrunch.com/category/artificial-intelligence/feed/", categories: [business, products], weight: 17}
+  - {id: venturebeat-ai, name: VentureBeat AI, kind: rss, group: media, enabled: true, profiles: [full], url: "https://venturebeat.com/category/ai/feed/", categories: [business, products], weight: 16}
+  - {id: the-verge-ai, name: The Verge AI, kind: rss, group: media, enabled: true, profiles: [full], url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", categories: [products, policy], weight: 16}
+  - {id: ars-ai, name: Ars Technica AI, kind: rss, group: media, enabled: true, profiles: [full], url: "https://feeds.arstechnica.com/arstechnica/technology-lab", categories: [technology, policy], weight: 16}
+  - {id: hacker-news, name: Hacker News, kind: hacker_news, group: community, enabled: true, profiles: [balanced, full], url: "https://hacker-news.firebaseio.com/v0/topstories.json", categories: [products, developer-tools], weight: 10, options: {item_limit: 100}}
+  - {id: github-trending, name: GitHub Trending, kind: html_whitelist, group: community, enabled: true, profiles: [full], url: "https://github.com/trending", categories: [open-source, developer-tools], weight: 9}
+  - {id: hf-trending-models, name: Hugging Face Trending Models, kind: html_whitelist, group: community, enabled: true, profiles: [full], url: "https://huggingface.co/models?sort=trending", categories: [models, open-source], weight: 9}

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-news-sniffer"
+version = "0.1.0"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+  "feedparser>=6.0.12,<7",
+  "httpx>=0.28.1,<1",
+  "jinja2>=3.1.6,<4",
+  "openai>=2.47,<3",
+  "pydantic>=2.13.4,<3",
+  "pyyaml>=6.0.2,<7",
+  "rapidfuzz>=3.13,<4",
+  "selectolax>=0.4.11,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.1,<10",
+  "pytest-cov>=7,<8",
+  "respx>=0.22,<1",
+  "ruff>=0.14,<1",
+]
+
+[project.scripts]
+ai-news-sniffer = "ai_news_sniffer.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_news_sniffer"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

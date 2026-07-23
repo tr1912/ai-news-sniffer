@@ -1,0 +1,10 @@
+timezone: Asia/Shanghai
+lookback_hours: 48
+min_items: 8
+max_items: 15
+template: default
+public_base_url: https://example.github.io/ai-news-sniffer
+editorial:
+  max_candidates: 30
+  max_excerpt_chars_per_item: 1200
+  max_total_prompt_chars: 60000
