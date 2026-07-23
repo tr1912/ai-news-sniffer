@@ -3,11 +3,12 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
+import pytest
 import respx
 
-from ai_news_sniffer.models import SourceConfig, SourceGroup, SourceKind
+from ai_news_sniffer.models import HtmlSelectors, SourceConfig, SourceGroup, SourceKind
 from ai_news_sniffer.normalization import normalize_article
-from ai_news_sniffer.sources.base import build_source_adapter
+from ai_news_sniffer.sources.base import SourceParseError, build_source_adapter
 
 FIXTURES = Path(__file__).parent / "fixtures"
 SINCE = datetime(2026, 7, 22, tzinfo=UTC)
@@ -120,3 +121,84 @@ def test_normalization_removes_tracking_and_preserves_source_group() -> None:
     assert str(article.canonical_url) == "https://example.com/post?id=7"
     assert article.source_group == SourceGroup.RESEARCH
     assert len(article.fingerprint) == 64
+
+
+@respx.mock
+def test_html_adapter_prefers_jsonld_and_resolves_relative_urls() -> None:
+    html_source = SourceConfig(
+        id="official-html",
+        name="Official HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://official.example/news",
+        categories=["models"],
+    )
+    respx.get(str(html_source.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text=(FIXTURES / "html_jsonld.html").read_text(encoding="utf-8"),
+        )
+    )
+
+    articles = build_source_adapter(
+        html_source,
+        httpx.Client(),
+    ).fetch(html_source, SINCE, UNTIL)
+
+    assert [item.title for item in articles] == ["Official model launch"]
+    assert str(articles[0].url) == "https://official.example/model"
+
+
+@respx.mock
+def test_html_adapter_uses_explicit_selectors_and_skips_missing_date() -> None:
+    html_source = SourceConfig(
+        id="selector-html",
+        name="Selector HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.MEDIA,
+        profiles={"full"},
+        url="https://media.example/ai",
+        categories=["products"],
+        selectors=HtmlSelectors(
+            item=".story",
+            title=".title",
+            link="a",
+            date="time",
+            excerpt=".summary",
+        ),
+    )
+    respx.get(str(html_source.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text=(FIXTURES / "html_selectors.html").read_text(encoding="utf-8"),
+        )
+    )
+
+    articles = build_source_adapter(
+        html_source,
+        httpx.Client(),
+    ).fetch(html_source, SINCE, UNTIL)
+
+    assert [item.title for item in articles] == ["Selector story"]
+
+
+@respx.mock
+def test_html_adapter_fails_closed_on_unparseable_page() -> None:
+    html_source = SourceConfig(
+        id="empty-html",
+        name="Empty HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://empty.example/news",
+    )
+    respx.get(str(html_source.url)).mock(
+        return_value=httpx.Response(200, text="<html><body>app shell</body></html>")
+    )
+
+    with pytest.raises(SourceParseError):
+        build_source_adapter(
+            html_source,
+            httpx.Client(),
+        ).fetch(html_source, SINCE, UNTIL)
