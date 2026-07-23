@@ -90,7 +90,7 @@ class SourcesConfig(BaseModel):
 class EditorialBudget(BaseModel):
     max_candidates: int = Field(default=30, ge=1, le=100)
     max_excerpt_chars_per_item: int = Field(default=1200, ge=100, le=5000)
-    max_total_prompt_chars: int = Field(default=60000, ge=1000, le=200000)
+    max_total_prompt_chars: int = Field(default=60000, ge=100, le=200000)
 
 
 class AppConfig(BaseModel):
