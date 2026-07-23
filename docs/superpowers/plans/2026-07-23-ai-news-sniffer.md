@@ -8,6 +8,10 @@
 
 **Tech Stack:** Python 3.12, Pydantic 2, PyYAML, httpx, feedparser, RapidFuzz, Jinja2 sandbox, OpenAI Python SDK, pytest, respx, Ruff, GitHub Actions, GitHub Pages.
 
+## Execution Prerequisite
+
+Execute `docs/superpowers/plans/2026-07-23-ai-news-source-strategy.md` first. That focused plan implements the approved 35-source registry, source profiles and switches, AI input budget, RSS/API/GitHub/HTML adapters, fact confirmation, source health, discovery, and source CLI. It supersedes Tasks 1–3 below. After its completion gate passes, continue this plan at Task 4.
+
 ## Global Constraints
 
 - Output 8–15 stories normally; publish fewer rather than padding with low-quality items.
@@ -93,6 +97,8 @@
 ---
 
 ### Task 1: Core Domain Models and Configuration
+
+> **Superseded — do not execute.** Execute Tasks 1–2 of `docs/superpowers/plans/2026-07-23-ai-news-source-strategy.md`; they provide compatible domain models and the approved 35-source configuration.
 
 **Files:**
 - Create: `pyproject.toml`
@@ -585,6 +591,8 @@ git commit -m "feat: add core models and configuration"
 ---
 
 ### Task 2: Source Adapters and Normalization
+
+> **Superseded — do not execute.** Execute Tasks 3–4 of `docs/superpowers/plans/2026-07-23-ai-news-source-strategy.md`; they add RSS, arXiv, GitHub Releases, Hacker News, and HTML-whitelist adapters plus normalization.
 
 **Files:**
 - Create: `src/ai_news_sniffer/sources/__init__.py`
@@ -1086,6 +1094,8 @@ git commit -m "feat: add free news source adapters"
 ---
 
 ### Task 3: Deterministic Deduplication and Scoring
+
+> **Superseded — do not execute.** Execute Task 5 of `docs/superpowers/plans/2026-07-23-ai-news-source-strategy.md`; it adds compatible deduplication and scoring plus the required fact-confirmation gate.
 
 **Files:**
 - Create: `src/ai_news_sniffer/dedup.py`
@@ -1781,8 +1791,18 @@ import json
 
 from pydantic import BaseModel, Field
 
-from ai_news_sniffer.models import Article, NewsEvent, SourceRef
+from ai_news_sniffer.models import (
+    Article,
+    ConfirmationStatus,
+    NewsEvent,
+    SourceGroup,
+    SourceRef,
+)
 from ai_news_sniffer.providers.base import StructuredProvider
+from ai_news_sniffer.source_verification import (
+    confirmation_status,
+    validate_event_sources,
+)
 
 
 class EditorialEvent(BaseModel):
@@ -1826,6 +1846,8 @@ class EditorialService:
                         "title": item.title,
                         "excerpt": item.excerpt[:1500],
                         "source": item.source_name,
+                        "source_group": item.source_group,
+                        "independence_group": item.independence_group,
                         "url": str(item.url),
                         "published_at": item.published_at.isoformat(),
                         "categories": item.categories,
@@ -1841,11 +1863,16 @@ class EditorialService:
         )
         events: list[NewsEvent] = []
         for event in output.events:
-            referenced_ids = {
-                event.primary_candidate_id,
-                *event.candidate_ids,
-                *event.related_candidate_ids,
-            }
+            evidence_ids = list(
+                dict.fromkeys(
+                    [
+                        event.primary_candidate_id,
+                        *event.candidate_ids,
+                        *event.related_candidate_ids,
+                    ]
+                )
+            )
+            referenced_ids = set(evidence_ids)
             unknown = referenced_ids.difference(by_id)
             if unknown:
                 raise ValueError(f"unknown candidate ids: {sorted(unknown)}")
@@ -1855,34 +1882,37 @@ class EditorialService:
                 for item_id in event.related_candidate_ids
                 if item_id != event.primary_candidate_id
             ]
-            events.append(
-                NewsEvent(
-                    id=event.id,
-                    candidate_ids=event.candidate_ids,
-                    category=event.category,
-                    title_zh=event.title_zh,
-                    summary_zh=event.summary_zh,
-                    why_it_matters_zh=event.why_it_matters_zh,
-                    importance_score=event.importance_score,
-                    primary_source=SourceRef(
-                        source_id=primary.source_id,
-                        source_name=primary.source_name,
-                        title=primary.title,
-                        url=primary.url,
-                        published_at=primary.published_at,
-                    ),
-                    related_sources=[
-                        SourceRef(
-                            source_id=item.source_id,
-                            source_name=item.source_name,
-                            title=item.title,
-                            url=item.url,
-                            published_at=item.published_at,
-                        )
-                        for item in related
-                    ],
-                )
+            news_event = NewsEvent(
+                id=event.id,
+                candidate_ids=evidence_ids,
+                category=event.category,
+                title_zh=event.title_zh,
+                summary_zh=event.summary_zh,
+                why_it_matters_zh=event.why_it_matters_zh,
+                importance_score=event.importance_score,
+                confirmation_status=confirmation_status(
+                    [by_id[item_id] for item_id in evidence_ids]
+                ),
+                primary_source=SourceRef(
+                    source_id=primary.source_id,
+                    source_name=primary.source_name,
+                    title=primary.title,
+                    url=primary.url,
+                    published_at=primary.published_at,
+                ),
+                related_sources=[
+                    SourceRef(
+                        source_id=item.source_id,
+                        source_name=item.source_name,
+                        title=item.title,
+                        url=item.url,
+                        published_at=item.published_at,
+                    )
+                    for item in related
+                ],
             )
+            validate_event_sources(news_event, candidates)
+            events.append(news_event)
         return output.daily_summary_zh, events
 ```
 
@@ -1896,7 +1926,10 @@ Never invent facts, dates, organizations, metrics, or source URLs. Use candidate
 IDs exactly as provided. Prefer official and primary sources. Rank model,
 technical, open-source, developer-tool, and AI-product events slightly higher,
 while retaining genuinely important business, financing, acquisition, and
-policy events. Separate factual summary from why the event matters.
+policy events. Separate factual summary from why the event matters. Do not
+select a community candidate as `primary_candidate_id`. Do not include an event
+unless its candidates contain an official/research source or two independent
+media origins.
 
 The JSON object must have `daily_summary_zh` and `events`. Every event must have
 `id`, `candidate_ids`, `category`, `title_zh`, `summary_zh`,
@@ -1918,7 +1951,7 @@ Append to `tests/test_providers.py`:
 ```python
 from datetime import UTC, datetime
 
-from ai_news_sniffer.models import Article
+from ai_news_sniffer.models import Article, ConfirmationStatus, SourceGroup
 
 
 class ValidProvider:
@@ -1928,7 +1961,7 @@ class ValidProvider:
             "events": [
                 {
                     "id": "event-1",
-                    "candidate_ids": ["a1"],
+                    "candidate_ids": [],
                     "category": "models",
                     "title_zh": "新模型发布",
                     "summary_zh": "某公司发布了新模型。",
@@ -1946,6 +1979,8 @@ def test_editorial_service_builds_news_event() -> None:
         id="a1",
         source_id="official",
         source_name="Official",
+        source_group=SourceGroup.OFFICIAL,
+        independence_group="official",
         title="New model",
         url="https://example.com/model",
         canonical_url="https://example.com/model",
@@ -1962,7 +1997,12 @@ def test_editorial_service_builds_news_event() -> None:
     summary, events = service.edit([candidate], min_items=1, max_items=15)
 
     assert summary == "今日 AI 要闻"
+    assert events[0].candidate_ids == ["a1"]
     assert events[0].primary_source.source_id == candidate.source_id
+    assert (
+        events[0].confirmation_status
+        == ConfirmationStatus.PRIMARY_CONFIRMED
+    )
     assert events[0].title_zh == "新模型发布"
 ```
 
@@ -2004,7 +2044,13 @@ Create `tests/test_selection.py`:
 ```python
 from datetime import UTC, datetime
 
-from ai_news_sniffer.models import Article, NewsEvent, SourceRef
+from ai_news_sniffer.models import (
+    Article,
+    ConfirmationStatus,
+    NewsEvent,
+    SourceGroup,
+    SourceRef,
+)
 from ai_news_sniffer.selection import build_degraded_events, select_diverse_events
 
 NOW = datetime(2026, 7, 23, 13, tzinfo=UTC)
@@ -2029,6 +2075,7 @@ def event(number: int, category: str, source_id: str) -> NewsEvent:
         summary_zh="事实摘要",
         why_it_matters_zh="重要性说明",
         importance_score=100 - number,
+        confirmation_status=ConfirmationStatus.PRIMARY_CONFIRMED,
         primary_source=source(source_id, str(number)),
     )
 
@@ -2057,6 +2104,8 @@ def test_build_degraded_events_does_not_invent_why_it_matters() -> None:
         id="a1",
         source_id="official",
         source_name="Official",
+        source_group=SourceGroup.OFFICIAL,
+        independence_group="official",
         title="Original title",
         url="https://example.com/a1",
         canonical_url="https://example.com/a1",
@@ -2092,7 +2141,13 @@ Create `src/ai_news_sniffer/selection.py`:
 ```python
 from collections import Counter
 
-from ai_news_sniffer.models import Article, NewsEvent, SourceRef
+from ai_news_sniffer.models import (
+    Article,
+    ConfirmationStatus,
+    NewsEvent,
+    SourceGroup,
+    SourceRef,
+)
 
 
 def select_diverse_events(
@@ -2105,6 +2160,8 @@ def select_diverse_events(
     source_counts: Counter[str] = Counter()
     selected: list[NewsEvent] = []
     for event in sorted(events, key=lambda item: item.importance_score, reverse=True):
+        if event.confirmation_status == ConfirmationStatus.UNVERIFIED:
+            continue
         source_id = event.primary_source.source_id
         if category_counts[event.category] >= max_per_category:
             continue
@@ -2124,6 +2181,11 @@ def build_degraded_events(
 ) -> list[NewsEvent]:
     events: list[NewsEvent] = []
     for article in articles[:max_items]:
+        if article.source_group not in {
+            SourceGroup.OFFICIAL,
+            SourceGroup.RESEARCH,
+        }:
+            continue
         events.append(
             NewsEvent(
                 id=f"degraded-{article.id}",
@@ -2133,6 +2195,7 @@ def build_degraded_events(
                 summary_zh=article.excerpt[:500],
                 why_it_matters_zh="",
                 importance_score=article.rule_score,
+                confirmation_status=ConfirmationStatus.PRIMARY_CONFIRMED,
                 primary_source=SourceRef(
                     source_id=article.source_id,
                     source_name=article.source_name,
@@ -2192,7 +2255,12 @@ from pathlib import Path
 
 import pytest
 
-from ai_news_sniffer.models import DailyReport, NewsEvent, SourceRef
+from ai_news_sniffer.models import (
+    ConfirmationStatus,
+    DailyReport,
+    NewsEvent,
+    SourceRef,
+)
 from ai_news_sniffer.rendering.site import SiteRenderer
 
 
@@ -2212,6 +2280,7 @@ def make_report() -> DailyReport:
         summary_zh="这是事实摘要。",
         why_it_matters_zh="这会影响开发者。",
         importance_score=95,
+        confirmation_status=ConfirmationStatus.PRIMARY_CONFIRMED,
         primary_source=source,
     )
     return DailyReport(
@@ -2220,6 +2289,13 @@ def make_report() -> DailyReport:
         run_id="run-1",
         daily_summary_zh="今日共一条重要新闻。",
         events=[event],
+        source_coverage={
+            "enabled": 12,
+            "ai_candidates": 20,
+            "estimated_input_tokens": 8000,
+            "failed_source_ids": [],
+            "newly_auto_paused_source_ids": [],
+        },
     )
 
 
@@ -2234,6 +2310,8 @@ def test_render_creates_latest_dated_archive_and_noindex(tmp_path: Path) -> None
     assert '<meta name="robots" content="noindex,nofollow">' in html
     assert "为什么重要" in html
     assert "https://example.com/original" in html
+    assert "来源覆盖" in html
+    assert "启用 12" in html
 
 
 def test_render_notification_includes_only_three_headlines() -> None:
@@ -2384,6 +2462,25 @@ Create `templates/default/report.html.j2`:
       <p class="warning">模型不可用，本期为来源摘要降级版。</p>
       {% endif %}
     </section>
+    <section class="coverage">
+      <h2>来源覆盖</h2>
+      <p>
+        成功 {{ report.source_coverage.get("enabled", 0) - report.source_coverage.get("failed_source_ids", [])|length }}
+        / 启用 {{ report.source_coverage.get("enabled", 0) }}；
+        模型候选 {{ report.source_coverage.get("ai_candidates", 0) }} 条；
+        估算输入 {{ report.source_coverage.get("estimated_input_tokens", 0) }} Token。
+      </p>
+      {% if report.source_coverage.get("failed_source_ids") %}
+      <p class="warning">
+        降级来源：{{ report.source_coverage["failed_source_ids"]|join("、") }}
+      </p>
+      {% endif %}
+      {% if report.warnings %}
+      <details><summary>运行提示</summary><ul>
+        {% for warning in report.warnings %}<li>{{ warning }}</li>{% endfor %}
+      </ul></details>
+      {% endif %}
+    </section>
     {% for event in report.events %}
     <article id="{{ event.id }}">
       <div class="meta">{{ event.category }} · {{ event.primary_source.source_name }}</div>
@@ -2452,6 +2549,10 @@ Create `templates/default/notification.md.j2`:
 
 ```markdown
 {{ report.daily_summary_zh }}
+{% if report.source_coverage.get("newly_auto_paused_source_ids") %}
+⚠️ 来源维护提醒：已自动暂停
+{{ report.source_coverage["newly_auto_paused_source_ids"]|join("、") }}
+{% endif %}
 {% for event in top_items %}
 {{ loop.index }}. **{{ event.title_zh }}**
 {{ event.summary_zh }}
@@ -2469,7 +2570,7 @@ body{margin:0;background:#f8fafc;color:var(--ink);font:16px/1.65 system-ui,sans-
 .hero>*{max-width:760px;margin-left:auto;margin-right:auto}
 .eyebrow{color:#c4b5fd;font-size:.75rem;letter-spacing:.12em}
 main{max-width:760px;margin:auto;padding:1rem}
-.summary,article{background:#fff;border-radius:16px;padding:1.1rem;margin:1rem 0}
+.summary,.coverage,article{background:#fff;border-radius:16px;padding:1.1rem;margin:1rem 0}
 .summary{background:#f5f3ff;border:1px solid #ddd6fe}
 .meta{color:var(--brand);font-size:.78rem;font-weight:700}
 h1,h2{line-height:1.25}
@@ -2819,9 +2920,11 @@ git commit -m "feat: add pluggable notification channels"
 
 ### Task 9: End-to-End Pipeline and CLI Stage Commands
 
+> Extend the `src/ai_news_sniffer/cli.py` created by the source-strategy plan. Preserve its `sources list`, `sources test`, `sources audit`, and `sources candidates` command tree.
+
 **Files:**
 - Create: `src/ai_news_sniffer/pipeline.py`
-- Create: `src/ai_news_sniffer/cli.py`
+- Modify: `src/ai_news_sniffer/cli.py`
 - Create: `src/ai_news_sniffer/__main__.py`
 - Test: `tests/test_pipeline.py`
 - Test: `tests/test_cli.py`
@@ -2848,6 +2951,8 @@ class FixtureAdapter:
             RawArticle(
                 source_id=source.id,
                 source_name=source.name,
+                source_group=source.group,
+                independence_group=source.independence_group or source.id,
                 title="Official AI model release",
                 url="https://example.com/model",
                 published_at=datetime(2026, 7, 23, 10, tzinfo=UTC),
@@ -2952,18 +3057,16 @@ from zoneinfo import ZoneInfo
 
 import httpx
 
-from ai_news_sniffer.dedup import deduplicate_articles
 from ai_news_sniffer.models import (
     DailyReport,
     RunRecord,
     Settings,
     SourceConfig,
 )
-from ai_news_sniffer.normalization import normalize_article
 from ai_news_sniffer.providers.editorial import EditorialService
 from ai_news_sniffer.rendering.site import SiteRenderer
-from ai_news_sniffer.scoring import score_articles
 from ai_news_sniffer.selection import build_degraded_events, select_diverse_events
+from ai_news_sniffer.source_service import collect_source_candidates
 from ai_news_sniffer.sources.base import SourceAdapter, build_source_adapter
 from ai_news_sniffer.state import RuntimeStore
 
@@ -2982,47 +3085,56 @@ class Pipeline:
         ] = build_source_adapter,
     ) -> None:
         self.settings = settings
+        self.runtime_dir = runtime_dir
         self.store = RuntimeStore(runtime_dir)
         self.output_dir = output_dir
         self.renderer = SiteRenderer(templates_root)
         self.editorial_service = editorial_service
         self.adapter_factory = adapter_factory
 
-    def build(self, target_date: date, dry_run: bool) -> RunRecord:
+    def build(
+        self,
+        target_date: date,
+        dry_run: bool,
+        source_profile: str | None = None,
+        include_sources: set[str] | None = None,
+        exclude_sources: set[str] | None = None,
+        max_ai_candidates: int | None = None,
+    ) -> RunRecord:
         now = datetime.now(UTC)
         timezone = ZoneInfo(self.settings.app.timezone)
         local_start = datetime.combine(target_date, time.min, tzinfo=timezone)
         until = (local_start + timedelta(days=1)).astimezone(UTC)
         since = until - timedelta(hours=self.settings.app.lookback_hours)
-        warnings: list[str] = []
-        raw_articles = []
+        seen_fingerprints = self.store.load_seen_fingerprints(
+            excluding_date=target_date
+        )
         with httpx.Client(
             headers={"User-Agent": "ai-news-sniffer/0.1"},
             follow_redirects=True,
         ) as client:
-            for source in self.settings.sources.sources:
-                if not source.enabled:
-                    continue
-                try:
-                    raw_articles.extend(
-                        self.adapter_factory(source, client).fetch(source, since, until)
-                    )
-                except Exception as error:
-                    warnings.append(f"source {source.id} failed: {error}")
-        normalized = [normalize_article(item) for item in raw_articles]
-        deduplicated = deduplicate_articles(
-            normalized,
-            self.store.load_seen_fingerprints(excluding_date=target_date),
+            collection = collect_source_candidates(
+                settings=self.settings,
+                runtime_root=self.runtime_dir,
+                since=since,
+                until=until,
+                profile=source_profile,
+                include_sources=include_sources,
+                exclude_sources=exclude_sources,
+                max_ai_candidates=max_ai_candidates,
+                seen_fingerprints=seen_fingerprints,
+                client=client,
+                adapter_factory=self.adapter_factory,
+            )
+        ranked = collection.budgeted.articles
+        warnings = [
+            f"source {source_id} failed: {error}"
+            for source_id, error in sorted(collection.failures.items())
+        ]
+        warnings.extend(
+            f"maintenance required: source {source_id} auto-paused after 7 failures"
+            for source_id in collection.newly_auto_paused_source_ids
         )
-        source_weights = {
-            source.id: source.weight for source in self.settings.sources.sources
-        }
-        ranked = score_articles(
-            deduplicated,
-            self.settings.interests,
-            source_weights,
-            now,
-        )[: self.settings.app.candidate_limit]
         degraded = False
         try:
             summary, events = self.editorial_service.edit(
@@ -3049,10 +3161,25 @@ class Pipeline:
             events=events,
             degraded=degraded,
             warnings=warnings,
+            source_coverage={
+                "enabled": len(collection.enabled_source_ids),
+                "fetched": collection.fetched_count,
+                "normalized": collection.normalized_count,
+                "filtered": collection.filtered_count,
+                "ai_candidates": len(collection.budgeted.articles),
+                "prompt_chars": collection.budgeted.prompt_chars,
+                "estimated_input_tokens": (
+                    collection.budgeted.estimated_input_tokens
+                ),
+                "failed_source_ids": sorted(collection.failures),
+                "newly_auto_paused_source_ids": (
+                    collection.newly_auto_paused_source_ids
+                ),
+            },
         )
         record = self.store.save_prepared(
             report,
-            {item.fingerprint for item in deduplicated},
+            {item.fingerprint for item in ranked},
         )
         reports = self.store.load_reports()
         self.renderer.render(
@@ -3077,6 +3204,7 @@ from ai_news_sniffer.cli import build_parser, verify_report_url
 def test_cli_exposes_required_stage_commands() -> None:
     parser = build_parser()
     for argv in (
+        ["sources", "list", "--profile", "light"],
         ["build", "--dry-run"],
         ["verify-url", "https://example.com/report/"],
         ["mark-published", "--run-id", "run-1", "--report-url", "https://example.com/r/"],
@@ -3122,6 +3250,7 @@ from ai_news_sniffer.providers.base import ProviderChain
 from ai_news_sniffer.providers.editorial import EditorialService
 from ai_news_sniffer.providers.openai_compatible import OpenAICompatibleProvider
 from ai_news_sniffer.rendering.site import SiteRenderer
+from ai_news_sniffer.source_cli import add_source_commands, run_source_command
 from ai_news_sniffer.state import RuntimeStore
 
 
@@ -3132,9 +3261,17 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output-dir", type=Path, default=Path("build/site"))
     parser.add_argument("--templates-dir", type=Path, default=Path("templates"))
     subparsers = parser.add_subparsers(dest="command", required=True)
+    add_source_commands(subparsers)
     build = subparsers.add_parser("build")
     build.add_argument("--target-date", type=date.fromisoformat)
     build.add_argument("--dry-run", action="store_true")
+    build.add_argument(
+        "--source-profile",
+        choices=["light", "balanced", "full"],
+    )
+    build.add_argument("--include-sources", default="")
+    build.add_argument("--exclude-sources", default="")
+    build.add_argument("--max-ai-candidates", type=int)
     verify = subparsers.add_parser("verify-url")
     verify.add_argument("url")
     published = subparsers.add_parser("mark-published")
@@ -3175,8 +3312,14 @@ def _provider_chain(settings) -> ProviderChain:
     )
 
 
+def _source_ids(value: str) -> set[str]:
+    return {item.strip() for item in value.split(",") if item.strip()}
+
+
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    if args.command == "sources":
+        return run_source_command(args)
     settings = load_settings(args.config_dir)
     store = RuntimeStore(args.runtime_dir)
     if args.command == "verify-url":
@@ -3202,7 +3345,16 @@ def main(argv: list[str] | None = None) -> int:
             templates_root=args.templates_dir,
             editorial_service=EditorialService(_provider_chain(settings), prompt),
         )
-        print(pipeline.build(target_date, args.dry_run).model_dump_json())
+        print(
+            pipeline.build(
+                target_date,
+                args.dry_run,
+                source_profile=args.source_profile,
+                include_sources=_source_ids(args.include_sources),
+                exclude_sources=_source_ids(args.exclude_sources),
+                max_ai_candidates=args.max_ai_candidates or None,
+            ).model_dump_json()
+        )
         return 0
     if args.command == "notify-failure":
         payload = NotificationPayload(
@@ -3302,10 +3454,12 @@ git commit -m "feat: orchestrate digest stages through cli"
 
 ### Task 10: GitHub Actions, Pages, Runtime Branch, and Operator Documentation
 
+> Reuse the source-strategy plan's `source_profile`, `include_sources`, `exclude_sources`, and `max_ai_candidates` inputs. Persist source health, source-run summaries, and candidate-source records on `runtime-data`.
+
 **Files:**
 - Create: `.github/workflows/ci.yml`
 - Create: `.github/workflows/daily-digest.yml`
-- Create: `README.md`
+- Modify: `README.md`
 - Modify: `.gitignore`
 - Test: `tests/test_workflow_contract.py`
 
@@ -3350,7 +3504,18 @@ def test_daily_workflow_has_schedule_manual_inputs_and_concurrency() -> None:
     workflow = load_workflow("daily-digest.yml")
     assert workflow["on"]["schedule"][0]["cron"] == "0 13 * * *"
     inputs = workflow["on"]["workflow_dispatch"]["inputs"]
-    assert {"dry_run", "publish", "notify", "target_date"} <= set(inputs)
+    assert set(inputs) == {
+        "dry_run",
+        "publish",
+        "notify",
+        "target_date",
+        "source_profile",
+        "include_sources",
+        "exclude_sources",
+        "max_ai_candidates",
+    }
+    assert inputs["source_profile"]["default"] == "balanced"
+    assert inputs["max_ai_candidates"]["default"] == "0"
     assert workflow["concurrency"]["cancel-in-progress"] is False
 
 
@@ -3428,6 +3593,23 @@ on:
         description: Optional YYYY-MM-DD date
         type: string
         default: ""
+      source_profile:
+        description: Source coverage profile
+        type: choice
+        options: [light, balanced, full]
+        default: balanced
+      include_sources:
+        description: Optional comma-separated allowlist
+        type: string
+        default: ""
+      exclude_sources:
+        description: Optional comma-separated blocklist
+        type: string
+        default: ""
+      max_ai_candidates:
+        description: Candidate cap; 0 uses the selected profile default
+        type: string
+        default: "0"
 
 concurrency:
   group: daily-ai-digest
@@ -3499,11 +3681,20 @@ jobs:
           if [[ -n "$TARGET_DATE" ]]; then DATE_ARGS=(--target-date "$TARGET_DATE"); fi
           DRY_ARGS=()
           if [[ "${{ steps.mode.outputs.dry_run }}" == "true" ]]; then DRY_ARGS=(--dry-run); fi
+          SOURCE_PROFILE="${{ inputs.source_profile || 'balanced' }}"
+          INCLUDE_SOURCES="${{ inputs.include_sources }}"
+          EXCLUDE_SOURCES="${{ inputs.exclude_sources }}"
+          MAX_AI_CANDIDATES="${{ inputs.max_ai_candidates || '0' }}"
           OUTPUT_FILE="$RUNNER_TEMP/build-output.json"
           python -m ai_news_sniffer \
             --runtime-dir runtime-data \
             --output-dir build/site \
-            build "${DATE_ARGS[@]}" "${DRY_ARGS[@]}" | tee "$OUTPUT_FILE"
+            build \
+            --source-profile "$SOURCE_PROFILE" \
+            --include-sources "$INCLUDE_SOURCES" \
+            --exclude-sources "$EXCLUDE_SOURCES" \
+            --max-ai-candidates "$MAX_AI_CANDIDATES" \
+            "${DATE_ARGS[@]}" "${DRY_ARGS[@]}" | tee "$OUTPUT_FILE"
           RUN_ID="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["run_id"])' "$OUTPUT_FILE")"
           REPORT_DATE="${RUN_ID:0:10}"
           REPORT_PATH="${REPORT_DATE:0:4}/${REPORT_DATE:5:2}/${REPORT_DATE:8:2}"
@@ -3517,7 +3708,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add reports runs
+          git add reports runs source-health.json source-runs candidate-sources.json
           git commit -m "data: prepare ${{ steps.build.outputs.run_id }}" || true
           git push origin HEAD:runtime-data
       - name: Upload dry-run preview
@@ -3644,6 +3835,14 @@ def test_cli_accepts_workflow_build_argument_order() -> None:
             "--output-dir",
             "build/site",
             "build",
+            "--source-profile",
+            "balanced",
+            "--include-sources",
+            "openai-news,anthropic-news",
+            "--exclude-sources",
+            "hacker-news",
+            "--max-ai-candidates",
+            "0",
             "--target-date",
             "2026-07-23",
             "--dry-run",
@@ -3653,6 +3852,10 @@ def test_cli_accepts_workflow_build_argument_order() -> None:
     assert args.output_dir == Path("build/site")
     assert args.target_date == date(2026, 7, 23)
     assert args.dry_run is True
+    assert args.source_profile == "balanced"
+    assert args.include_sources == "openai-news,anthropic-news"
+    assert args.exclude_sources == "hacker-news"
+    assert args.max_ai_candidates == 0
 ```
 
 Run:
@@ -3703,6 +3906,22 @@ python -m ai_news_sniffer \
 Open `build/site/index.html` locally. A dry run does not update fingerprints,
 publish Pages, or send notifications.
 
+## Source configuration
+
+`config/sources.yaml` contains the reviewed 35-source whitelist and all
+source/group switches. `light`, `balanced`, and `full` resolve to 12, 25, and
+35 sources with default AI candidate caps of 20, 30, and 40. Inspect effective
+selection without network access:
+
+```bash
+ai-news-sniffer sources list --profile balanced
+ai-news-sniffer sources candidates
+```
+
+For an intentional live check, use `ai-news-sniffer sources test SOURCE_ID` or
+run the manual Source audit workflow. A successful audit clears runtime
+auto-pause state but never changes `config/sources.yaml`.
+
 ## GitHub configuration
 
 Create repository secrets `DEEPSEEK_API_KEY` and `MEOW_NICKNAME`. Add
@@ -3717,7 +3936,9 @@ The first successful non-dry run creates the `runtime-data` branch. Protect
 
 Open Actions → Daily AI Digest → Run workflow. Keep `dry_run=true` for preview.
 For a real run set `dry_run=false`, `publish=true`, and set `notify=true` only
-when notifications should be sent.
+when notifications should be sent. `source_profile` defaults to `balanced`;
+`include_sources` and `exclude_sources` accept comma-separated source IDs.
+`max_ai_candidates=0` uses the selected profile's default budget.
 
 ## Custom domain
 
@@ -3743,7 +3964,10 @@ or other endpoints.
 Source failures are logged and isolated. Provider failure uses the configured
 fallback order, then creates a clearly labeled source-summary digest. Pages are
 verified before notification. Channel failures are recorded independently in
-`runtime-data/runs/`.
+`runtime-data/runs/`. A source is marked degraded after three consecutive
+failures and auto-paused after seven; the next successful notification includes
+a maintenance reminder. Use the manual Source audit workflow to test and clear
+an auto-pause only after a real network audit succeeds.
 ````
 
 Add these lines to `.gitignore`:
@@ -3800,14 +4024,15 @@ git commit -m "ci: schedule publish and notify daily digest"
 | Design specification area | Implementation tasks |
 |---|---|
 | Goals, daily cadence, manual trigger | Tasks 9–10 |
-| Free source collection and normalization | Tasks 1–2 |
-| Deterministic deduplication and 100-point scoring | Task 3 |
+| Free source collection, source switches, profiles, and normalization | Source-strategy Tasks 1–4 |
+| Deterministic deduplication, 100-point scoring, and confirmation | Source-strategy Task 5 |
+| Source health, auto-pause, discovery, audit, and AI budgets | Source-strategy Tasks 2, 6–7 |
 | Runtime data, 48-hour window, idempotent reruns | Tasks 4 and 9–10 |
 | Provider fallback, semantic grouping, Chinese editorial output | Tasks 5–6 |
 | Mobile HTML, history, `noindex`, repository templates | Task 7 |
 | MeoW, WeCom, generic webhook, channel isolation | Task 8 |
 | Failure degradation, publish verification, failure alert | Tasks 5–6 and 8–10 |
-| Secrets, URL/error redaction, template sandbox | Tasks 1, 7–8, and 10 |
+| Secrets, URL/error redaction, template sandbox | Source-strategy Task 1 and main Tasks 7–8 and 10 |
 | Unit, fixture, integration, workflow, and visual checks | Every task; final gate below |
 | GitHub Pages and custom-domain operations | Task 10 |
 | Explicit v1 non-goals | Global Constraints and the absence of admin, auth, paid search, realtime, and native-app tasks |
