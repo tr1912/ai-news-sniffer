@@ -111,6 +111,77 @@ def test_editorial_output_cannot_reference_unknown_candidate() -> None:
         validate_event_sources(event, [known])
 
 
+@pytest.mark.parametrize(
+    ("field", "forged_value"),
+    [
+        ("source_id", "forged-source"),
+        ("source_name", "Forged source"),
+        ("title", "Forged title"),
+        ("url", "https://official.example/forged"),
+        ("published_at", NOW),
+    ],
+)
+def test_editorial_output_rejects_primary_reference_not_matching_candidate(
+    field: str,
+    forged_value: str | datetime,
+) -> None:
+    known = article("a", "official", SourceGroup.OFFICIAL, "official")
+    primary_source = SourceRef(
+        source_id=known.source_id,
+        source_name=known.source_name,
+        title=known.title,
+        url=known.url,
+        published_at=known.published_at,
+    ).model_copy(update={field: forged_value})
+    event = NewsEvent(
+        id="event-forged-primary",
+        candidate_ids=[known.id],
+        category="models",
+        title_zh="模型发布",
+        summary_zh="摘要",
+        why_it_matters_zh="重要性",
+        importance_score=90,
+        confirmation_status=ConfirmationStatus.PRIMARY_CONFIRMED,
+        primary_source=primary_source,
+    )
+
+    with pytest.raises(ValueError, match="source reference is not backed"):
+        validate_event_sources(event, [known])
+
+
+def test_editorial_output_rejects_related_reference_not_matching_candidate() -> None:
+    known = article("a", "official", SourceGroup.OFFICIAL, "official")
+    event = NewsEvent(
+        id="event-forged-related",
+        candidate_ids=[known.id],
+        category="models",
+        title_zh="模型发布",
+        summary_zh="摘要",
+        why_it_matters_zh="重要性",
+        importance_score=90,
+        confirmation_status=ConfirmationStatus.PRIMARY_CONFIRMED,
+        primary_source=SourceRef(
+            source_id=known.source_id,
+            source_name=known.source_name,
+            title=known.title,
+            url=known.url,
+            published_at=known.published_at,
+        ),
+        related_sources=[
+            SourceRef(
+                source_id=known.source_id,
+                source_name=known.source_name,
+                title=known.title,
+                url="https://official.example/forged",
+                published_at=known.published_at,
+            )
+        ],
+    )
+
+    with pytest.raises(ValueError, match="source reference is not backed"):
+        validate_event_sources(event, [known])
+
+
 def test_editorial_output_rejects_unverified_or_community_primary() -> None:
     official = article("a", "official", SourceGroup.OFFICIAL, "official")
     community = article("b", "hn", SourceGroup.COMMUNITY, "hn")

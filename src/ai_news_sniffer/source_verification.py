@@ -3,9 +3,28 @@ from ai_news_sniffer.models import (
     ConfirmationStatus,
     NewsEvent,
     SourceGroup,
+    SourceRef,
 )
 
 PRIMARY_GROUPS = {SourceGroup.OFFICIAL, SourceGroup.RESEARCH}
+
+
+def _matching_candidate(
+    source_ref: SourceRef,
+    candidates: list[Article],
+) -> Article | None:
+    return next(
+        (
+            candidate
+            for candidate in candidates
+            if candidate.source_id == source_ref.source_id
+            and candidate.source_name == source_ref.source_name
+            and candidate.title == source_ref.title
+            and str(candidate.url) == str(source_ref.url)
+            and candidate.published_at == source_ref.published_at
+        ),
+        None,
+    )
 
 
 def confirmation_status(
@@ -31,16 +50,16 @@ def validate_event_sources(
     unknown = set(event.candidate_ids) - by_id.keys()
     if unknown:
         raise ValueError(f"unknown candidate ids: {sorted(unknown)}")
-    source_ids = {by_id[item_id].source_id for item_id in event.candidate_ids}
-    if event.primary_source.source_id not in source_ids:
-        raise ValueError("primary source is not backed by a candidate")
-    expected = confirmation_status([by_id[item_id] for item_id in event.candidate_ids])
-    primary_candidate = next(
-        item
-        for item in by_id.values()
-        if item.source_id == event.primary_source.source_id
-        and item.id in event.candidate_ids
-    )
+    candidates = [by_id[item_id] for item_id in event.candidate_ids]
+    primary_candidate = _matching_candidate(event.primary_source, candidates)
+    if primary_candidate is None:
+        raise ValueError("source reference is not backed by a candidate")
+    if any(
+        _matching_candidate(source_ref, candidates) is None
+        for source_ref in event.related_sources
+    ):
+        raise ValueError("source reference is not backed by a candidate")
+    expected = confirmation_status(candidates)
     if primary_candidate.source_group == SourceGroup.COMMUNITY:
         raise ValueError("community source cannot be primary")
     if expected == ConfirmationStatus.UNVERIFIED:
