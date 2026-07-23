@@ -76,6 +76,16 @@ def test_corrupt_health_file_is_replaced_by_next_failure(tmp_path: Path) -> None
     assert '"broken-source"' in health_path.read_text(encoding="utf-8")
 
 
+def test_invalid_utf8_health_file_is_replaced_by_next_failure(tmp_path: Path) -> None:
+    health_path = tmp_path / "source-health.json"
+    health_path.write_bytes(b'{"source": "\xc3"}')
+
+    health = SourceHealthStore(tmp_path).record_failure("broken-source", "timeout", NOW)
+
+    assert health.consecutive_failures == 1
+    assert '"broken-source"' in health_path.read_text(encoding="utf-8")
+
+
 def test_discovery_records_unknown_domain_without_enabling_it(tmp_path: Path) -> None:
     candidates = discover_candidate_sources(
         [article_with_upstream("https://new-lab.example/releases/model")],
@@ -117,6 +127,21 @@ def test_discovery_merges_referrers_and_preserves_first_seen(tmp_path: Path) -> 
 def test_corrupt_candidate_file_is_replaced_by_discovery(tmp_path: Path) -> None:
     output_path = tmp_path / "candidate-sources.json"
     output_path.write_text("[not valid json", encoding="utf-8")
+
+    candidates = discover_candidate_sources(
+        [article_with_upstream("https://new-lab.example/releases/model")],
+        known_domains=set(),
+        output_path=output_path,
+        now=NOW,
+    )
+
+    assert [candidate.domain for candidate in candidates] == ["new-lab.example"]
+    assert '"enabled": false' in output_path.read_text(encoding="utf-8")
+
+
+def test_invalid_utf8_candidate_file_is_replaced_by_discovery(tmp_path: Path) -> None:
+    output_path = tmp_path / "candidate-sources.json"
+    output_path.write_bytes(b'["\xc3"]')
 
     candidates = discover_candidate_sources(
         [article_with_upstream("https://new-lab.example/releases/model")],

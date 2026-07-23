@@ -23,7 +23,13 @@ def discover_candidate_sources(
                     item["domain"]: CandidateSource.model_validate(item)
                     for item in payload
                 }
-        except (json.JSONDecodeError, KeyError, TypeError, ValidationError):
+        except (
+            json.JSONDecodeError,
+            UnicodeDecodeError,
+            KeyError,
+            TypeError,
+            ValidationError,
+        ):
             existing = {}
 
     normalized_known_domains = {domain.casefold() for domain in known_domains}

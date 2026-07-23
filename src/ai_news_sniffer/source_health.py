@@ -22,7 +22,7 @@ class SourceHealthStore:
                 source_id: SourceHealth.model_validate(value)
                 for source_id, value in payload.items()
             }
-        except (json.JSONDecodeError, ValidationError):
+        except (json.JSONDecodeError, UnicodeDecodeError, ValidationError):
             return {}
 
     def _save(self, health: dict[str, SourceHealth]) -> None:
