@@ -1,6 +1,8 @@
 from datetime import UTC, datetime
 from pathlib import Path
 
+import pytest
+
 from ai_news_sniffer.models import Article, SourceGroup
 from ai_news_sniffer.source_discovery import discover_candidate_sources
 from ai_news_sniffer.source_health import SourceHealthStore
@@ -84,6 +86,56 @@ def test_invalid_utf8_health_file_is_replaced_by_next_failure(tmp_path: Path) ->
 
     assert health.consecutive_failures == 1
     assert '"broken-source"' in health_path.read_text(encoding="utf-8")
+
+
+def test_missing_health_file_does_not_use_exists_precheck(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    def fail_exists(_: Path) -> bool:
+        raise AssertionError("runtime reads must not precheck with Path.exists")
+
+    with monkeypatch.context() as patch:
+        patch.setattr(Path, "exists", fail_exists)
+
+        assert SourceHealthStore(tmp_path).load_all() == {}
+
+
+def test_missing_candidate_file_does_not_use_exists_precheck(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    def fail_exists(_: Path) -> bool:
+        raise AssertionError("runtime reads must not precheck with Path.exists")
+
+    with monkeypatch.context() as patch:
+        patch.setattr(Path, "exists", fail_exists)
+
+        candidates = discover_candidate_sources(
+            [article_with_upstream("https://new-lab.example/releases/model")],
+            known_domains=set(),
+            output_path=tmp_path / "candidate-sources.json",
+            now=NOW,
+        )
+
+    assert [candidate.domain for candidate in candidates] == ["new-lab.example"]
+
+
+def test_runtime_read_permission_errors_propagate(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    health_path = tmp_path / "source-health.json"
+    candidate_path = tmp_path / "candidate-sources.json"
+    health_path.write_text("{}", encoding="utf-8")
+    candidate_path.write_text("[]", encoding="utf-8")
+
+    def deny_read(_: Path, *, encoding: str) -> str:
+        raise PermissionError("denied")
+
+    monkeypatch.setattr(Path, "read_text", deny_read)
+
+    with pytest.raises(PermissionError, match="denied"):
+        SourceHealthStore(tmp_path).load_all()
+    with pytest.raises(PermissionError, match="denied"):
+        discover_candidate_sources([], set(), candidate_path, NOW)
 
 
 def test_discovery_records_unknown_domain_without_enabling_it(tmp_path: Path) -> None:

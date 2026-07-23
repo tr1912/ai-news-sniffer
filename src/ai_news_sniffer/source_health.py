@@ -12,8 +12,6 @@ class SourceHealthStore:
         self.path = runtime_root / "source-health.json"
 
     def load_all(self) -> dict[str, SourceHealth]:
-        if not self.path.exists():
-            return {}
         try:
             payload = json.loads(self.path.read_text(encoding="utf-8"))
             if not isinstance(payload, dict):
@@ -22,6 +20,8 @@ class SourceHealthStore:
                 source_id: SourceHealth.model_validate(value)
                 for source_id, value in payload.items()
             }
+        except FileNotFoundError:
+            return {}
         except (json.JSONDecodeError, UnicodeDecodeError, ValidationError):
             return {}
 

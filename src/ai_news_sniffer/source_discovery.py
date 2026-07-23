@@ -15,22 +15,23 @@ def discover_candidate_sources(
     now: datetime,
 ) -> list[CandidateSource]:
     existing: dict[str, CandidateSource] = {}
-    if output_path.exists():
-        try:
-            payload = json.loads(output_path.read_text(encoding="utf-8"))
-            if isinstance(payload, list):
-                existing = {
-                    item["domain"]: CandidateSource.model_validate(item)
-                    for item in payload
-                }
-        except (
-            json.JSONDecodeError,
-            UnicodeDecodeError,
-            KeyError,
-            TypeError,
-            ValidationError,
-        ):
-            existing = {}
+    try:
+        payload = json.loads(output_path.read_text(encoding="utf-8"))
+        if isinstance(payload, list):
+            existing = {
+                item["domain"]: CandidateSource.model_validate(item)
+                for item in payload
+            }
+    except FileNotFoundError:
+        pass
+    except (
+        json.JSONDecodeError,
+        UnicodeDecodeError,
+        KeyError,
+        TypeError,
+        ValidationError,
+    ):
+        existing = {}
 
     normalized_known_domains = {domain.casefold() for domain in known_domains}
     for article in articles:
