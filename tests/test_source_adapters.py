@@ -202,3 +202,36 @@ def test_html_adapter_fails_closed_on_unparseable_page() -> None:
             html_source,
             httpx.Client(),
         ).fetch(html_source, SINCE, UNTIL)
+
+
+@respx.mock
+def test_html_adapter_fails_closed_on_naive_jsonld_date() -> None:
+    html_source = SourceConfig(
+        id="naive-date-html",
+        name="Naive date HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://official.example/news",
+    )
+    respx.get(str(html_source.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text="""
+                <script type="application/ld+json">
+                  {
+                    "@type": "NewsArticle",
+                    "headline": "Missing timezone",
+                    "url": "/model",
+                    "datePublished": "2026-07-23T09:00:00"
+                  }
+                </script>
+            """,
+        )
+    )
+
+    with pytest.raises(SourceParseError):
+        build_source_adapter(
+            html_source,
+            httpx.Client(),
+        ).fetch(html_source, SINCE, UNTIL)
