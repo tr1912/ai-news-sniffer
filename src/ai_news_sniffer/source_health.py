@@ -2,6 +2,8 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from pydantic import ValidationError
+
 from ai_news_sniffer.models import SourceHealth
 
 
@@ -12,11 +14,16 @@ class SourceHealthStore:
     def load_all(self) -> dict[str, SourceHealth]:
         if not self.path.exists():
             return {}
-        payload = json.loads(self.path.read_text(encoding="utf-8"))
-        return {
-            source_id: SourceHealth.model_validate(value)
-            for source_id, value in payload.items()
-        }
+        try:
+            payload = json.loads(self.path.read_text(encoding="utf-8"))
+            if not isinstance(payload, dict):
+                return {}
+            return {
+                source_id: SourceHealth.model_validate(value)
+                for source_id, value in payload.items()
+            }
+        except (json.JSONDecodeError, ValidationError):
+            return {}
 
     def _save(self, health: dict[str, SourceHealth]) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
@@ -24,10 +31,12 @@ class SourceHealthStore:
             source_id: value.model_dump(mode="json")
             for source_id, value in sorted(health.items())
         }
-        self.path.write_text(
+        temporary_path = self.path.with_suffix(f"{self.path.suffix}.tmp")
+        temporary_path.write_text(
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
+        temporary_path.replace(self.path)
 
     def record_success(self, source_id: str, at: datetime) -> SourceHealth:
         values = self.load_all()

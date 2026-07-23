@@ -3,6 +3,8 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from pydantic import ValidationError
+
 from ai_news_sniffer.models import Article, CandidateSource, SourceGroup, SourceKind
 
 
@@ -14,11 +16,15 @@ def discover_candidate_sources(
 ) -> list[CandidateSource]:
     existing: dict[str, CandidateSource] = {}
     if output_path.exists():
-        payload = json.loads(output_path.read_text(encoding="utf-8"))
-        existing = {
-            item["domain"]: CandidateSource.model_validate(item)
-            for item in payload
-        }
+        try:
+            payload = json.loads(output_path.read_text(encoding="utf-8"))
+            if isinstance(payload, list):
+                existing = {
+                    item["domain"]: CandidateSource.model_validate(item)
+                    for item in payload
+                }
+        except (json.JSONDecodeError, KeyError, TypeError, ValidationError):
+            existing = {}
 
     normalized_known_domains = {domain.casefold() for domain in known_domains}
     for article in articles:
@@ -44,7 +50,8 @@ def discover_candidate_sources(
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     ordered = sorted(existing.values(), key=lambda item: item.domain)
-    output_path.write_text(
+    temporary_path = output_path.with_suffix(f"{output_path.suffix}.tmp")
+    temporary_path.write_text(
         json.dumps(
             [item.model_dump(mode="json") for item in ordered],
             ensure_ascii=False,
@@ -53,4 +60,5 @@ def discover_candidate_sources(
         + "\n",
         encoding="utf-8",
     )
+    temporary_path.replace(output_path)
     return ordered
