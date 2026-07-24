@@ -1,0 +1,136 @@
+{
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T05:36:44.422002Z",
+  "run_id": "2026-07-24-021738b9",
+  "daily_summary_zh": "今日AI领域涌现多项研究成果与开源进展：arXiv发布多篇论文，涵盖医学教育Agent、强化学习框架、多模态推理、语音识别、长上下文推测解码、视频编辑等方向；Hugging Face 博客宣布 Nunchaku 4-bit 扩散推理集成到 Diffusers；llama.cpp 发布 b10099 版本，优化 CUDA NVFP4 量化。",
+  "events": [
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "8d857b003c004cba"
+      ],
+      "category": "models",
+      "title_zh": "Nunchaku 4-bit扩散推理集成至Hugging Face Diffusers",
+      "summary_zh": "Hugging Face 博客宣布将 Nunchaku 4-bit 量化扩散推理集成到 Diffusers 库中，支持模型在保持质量的同时大幅降低内存占用和推理成本。",
+      "why_it_matters_zh": "该集成使开发者能方便地在Diffusers中使用4-bit量化模型，降低了扩散模型部署的门槛，促进了高效推理在社区中的普及。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+        "url": "https://huggingface.co/blog/nunchaku-diffusers",
+        "published_at": "2026-07-23T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-15",
+      "candidate_ids": [
+        "16ff89a08f17edd9"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10099 版本，优化 CUDA NVFP4 量化",
+      "summary_zh": "llama.cpp 发布 b10099 版本，重点改进了 CUDA 上的 NVFP4 W4A4 激活量化，包括融合 per-channel amax 和量化内核、使用 32 字节加载等优化，提升推理效率。",
+      "why_it_matters_zh": "llama.cpp 是广泛使用的本地 LLM 推理引擎，本次优化进一步降低了量化模型的运行开销，支持更多用户高效部署本地模型。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10099",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10099",
+        "published_at": "2026-07-23T23:34:13Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "111c51c2ffb16013"
+      ],
+      "category": "research",
+      "title_zh": "Windowed-MTP：消除百万token上下文中全上下文草稿KV读取开销",
+      "summary_zh": "Windowed-MTP 是一种无需训练、即插即用的推测解码改进方法，通过对草稿注意力头应用滑动窗口和注意力汇聚，将KV工作集绑定到常数，在百万token上下文中降低约99%的草稿读取成本。",
+      "why_it_matters_zh": "该方法解决了长上下文场景下多token预测草稿阶段成本高昂的问题，使推测解码在超长序列中仍然高效，对部署长上下文模型具有实际价值。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+        "url": "https://arxiv.org/abs/2607.21535v1",
+        "published_at": "2026-07-23T17:21:44Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "271d039f87ff968a"
+      ],
+      "category": "research",
+      "title_zh": "OpenForgeRL：端到端训练基于推理框架的AI Agent",
+      "summary_zh": "OpenForgeRL 是一个开源框架，用于在多样化环境中端到端训练基于推理框架的Agent。它通过轻量级代理和Kubernetes编排器实现，支持多种复杂框架和环境，包括基于工具/爪的Agent和多模态GUI Agent。",
+      "why_it_matters_zh": "该框架解决了现代Agent因复杂推理框架难以端到端训练的问题，为研究者在实际部署环境中训练Agent提供了可扩展的开源基础设施。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+        "url": "https://arxiv.org/abs/2607.21557v1",
+        "published_at": "2026-07-23T17:38:30Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source kimi-platform-blog failed: SourceParseError: kimi-platform-blog: no dated article records found",
+    "source meta-ai-blog failed: SourceParseError: meta-ai-blog: no dated article records found",
+    "source microsoft-research failed: TypeError: unhashable type: 'list'",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qbitai failed: SourceParseError: qbitai: no dated article records found",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 168,
+    "normalized": 168,
+    "filtered": 157,
+    "ai_candidates": 30,
+    "prompt_chars": 31326,
+    "estimated_input_tokens": 7831,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "kimi-platform-blog",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qbitai",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
