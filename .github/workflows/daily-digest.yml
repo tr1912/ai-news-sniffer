@@ -95,7 +95,8 @@ jobs:
             git worktree add --detach runtime-data
             cd runtime-data
             git switch --orphan runtime-data
-            git rm -rf .
+            git rm -rf . || true
+            git clean -fdx || true
             mkdir -p reports runs
           fi
       - name: Build digest
