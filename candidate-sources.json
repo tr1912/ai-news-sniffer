@@ -31,8 +31,8 @@
   },
   {
     "domain": "arxiv.org",
-    "sample_url": "https://arxiv.org/abs/2507.09369",
-    "sample_title": "A taxonomy of omnicidal futures involving artificial intelligence (2025)",
+    "sample_url": "https://arxiv.org/abs/2606.22608",
+    "sample_title": "Automated sign detection across the Electronic Babylonian Library",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
     "referring_source_ids": [
@@ -363,6 +363,21 @@
     "domain": "nealstephenson.substack.com",
     "sample_url": "https://nealstephenson.substack.com/p/writing-by-hand-is-good-for-your",
     "sample_title": "Writing by hand is good for your brain",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "news.mit.edu",
+    "sample_url": "https://news.mit.edu/2026/us-drivers-electric-vehicles-offer-emissions-benefits-cost-savings-0512",
+    "sample_title": "For most US drivers, EVs offer emissions benefits and cost savings",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
     "referring_source_ids": [
