@@ -1,27 +1,26 @@
-# AI News Sniffer
+# AI News Sniffer · AI 新闻日报
 
-Daily Chinese AI-news digest generated from free public sources.
+无人值守 AI 新闻日报系统 — 每日自动从免费公开源采集资讯，经 AI 筛选、编辑后生成中文移动端日报，部署到 GitHub Pages 并推送通知。
 
-## Local setup
+## 本地搭建
 
 ```bash
 python3.12 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
 python -m pip install -e '.[dev]'
-cp .env.example .env
+cp .env.example .env           # 填写 API Key 等环境变量
 ```
 
-Export the required values from `.env` in your shell; the application does not
-load `.env` automatically in production.
+应用在运行时从环境变量读取密钥，生产环境不会自动加载 `.env` 文件。本地开发时请手动 `export` 或使用 `source .env`。
 
-## Test
+## 运行测试
 
 ```bash
 ruff check src tests
 pytest
 ```
 
-## Dry run
+## 本地试运行
 
 ```bash
 python -m ai_news_sniffer \
@@ -30,68 +29,44 @@ python -m ai_news_sniffer \
   build --target-date 2026-07-23 --dry-run
 ```
 
-Open `build/site/index.html` locally. A dry run does not update fingerprints,
-publish Pages, or send notifications.
+在浏览器中打开 `build/site/index.html` 即可预览。试运行不会写入指纹、不会部署 Pages、不会发送通知。
 
-## Source configuration
+## 来源配置
 
-`config/sources.yaml` contains the reviewed 35-source whitelist and all
-source/group switches. `light`, `balanced`, and `full` resolve to 12, 25, and
-35 sources with default AI candidate caps of 20, 30, and 40. Inspect effective
-selection without network access:
+`config/sources.yaml` 包含经过审查的 35 个全球中英文信息源白名单，以及所有来源 / 分组的开关。三档覆盖级别快速切换：
+
+| 配置档 | 来源数 | AI 候选上限 |
+|--------|--------|-------------|
+| `light` | 12 | 20 |
+| `balanced` | 25 | 30 |
+| `full` | 35 | 40 |
+
+在不联网的情况下查看当前生效的来源：
 
 ```bash
 ai-news-sniffer sources list --profile balanced
 ai-news-sniffer sources candidates
 ```
 
-For an intentional live check, use `ai-news-sniffer sources test SOURCE_ID` or
-run the manual Source audit workflow. A successful audit clears runtime
-auto-pause state but never changes `config/sources.yaml`.
+如需验证某个来源的连通性，使用 `ai-news-sniffer sources test SOURCE_ID`。测试成功后会自动清除运行时的自动暂停状态，但**不会**修改 `config/sources.yaml`。
 
-## GitHub configuration
+## 模板自定义
 
-Create repository secrets `DEEPSEEK_API_KEY` and `MEOW_NICKNAME`. Add
-`WECOM_WEBHOOK_URL` and `GENERIC_WEBHOOK_URL` only when those channels are
-enabled. Create repository variable `PUBLIC_BASE_URL` without a trailing slash.
-Enable GitHub Pages with GitHub Actions as its source.
+将 `templates/default` 复制为 `templates/<新名称>`，编辑其中的 Jinja2 模板和 CSS 文件，然后在 `config/app.yaml` 中设置 `template: <新名称>`。后续运行会使用新模板重新渲染所有已存储的日报 JSON。
 
-The first successful non-dry run creates the `runtime-data` branch. Protect
-`main`; allow the workflow token to write repository contents and Pages.
+## 供应商扩展
 
-## Manual run
+在 `config/providers.yaml` 中添加新条目，将其 API Key 设置为 GitHub Secret，并将供应商 ID 加入 `fallback_order`。使用 `api_style: openai_chat_completions` 即可兼容 DeepSeek、Kimi、MiniMax 等 OpenAI 兼容接口。
 
-Open Actions → Daily AI Digest → Run workflow. Keep `dry_run=true` for preview.
-For a real run set `dry_run=false`, `publish=true`, and set `notify=true` only
-when notifications should be sent. `source_profile` defaults to `balanced`;
-`include_sources` and `exclude_sources` accept comma-separated source IDs.
-`max_ai_candidates=0` uses the selected profile's default budget.
+## 故障行为
 
-## Custom domain
+- **来源故障**：记录日志并隔离，不影响其他来源的采集
+- **供应商故障**：自动按 `fallback_order` 切换到备用供应商；全部失败时生成标注来源的摘要日报
+- **页面校验**：发布前会对生成的日报 URL 进行可达性校验，确保内容已正确部署
+- **通知故障**：每个通道的发送结果独立记录在 `runtime-data/runs/` 中
+- **来源降级**：同一来源连续 3 次失败标记为降级，连续 7 次自动暂停；暂停状态的来源在下一次成功的通知中会附带维护提醒
+- **手动恢复**：使用来源审计工作流手动测试，仅在真实网络审计成功后自动解除暂停
 
-Verify the domain in GitHub, configure it in repository Pages settings, and use
-a subdomain CNAME pointing to `<account>.github.io` or the documented apex
-records. Do not use wildcard DNS. Set `PUBLIC_BASE_URL` to the final HTTPS URL.
+---
 
-## Templates
-
-Copy `templates/default` to `templates/<new-name>`, edit the Jinja2/CSS files,
-then set `template: <new-name>` in `config/app.yaml`. A later run rebuilds all
-stored report JSON through the selected template.
-
-## Provider extension
-
-Add an entry to `config/providers.yaml`, put its key in a new GitHub Secret,
-and add the provider ID to `fallback_order`. Use
-`api_style: openai_chat_completions` for compatible DeepSeek, Kimi, MiniMax,
-or other endpoints.
-
-## Failure behavior
-
-Source failures are logged and isolated. Provider failure uses the configured
-fallback order, then creates a clearly labeled source-summary digest. Pages are
-verified before notification. Channel failures are recorded independently in
-`runtime-data/runs/`. A source is marked degraded after three consecutive
-failures and auto-paused after seven; the next successful notification includes
-a maintenance reminder. Use the manual Source audit workflow to test and clear
-an auto-pause only after a real network audit succeeds.
+详细部署说明请参阅 → [DEPLOY.md](docs/DEPLOY.md)
