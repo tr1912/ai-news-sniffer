@@ -8,8 +8,9 @@ from ai_news_sniffer.models import DailyReport
 
 
 class SiteRenderer:
-    def __init__(self, templates_root: Path) -> None:
+    def __init__(self, templates_root: Path, base_path: str = "/") -> None:
         self.templates_root = templates_root
+        self.base_path = base_path.rstrip("/")
 
     def _environment(self, template_name: str) -> SandboxedEnvironment:
         root = self.templates_root.resolve()
@@ -39,6 +40,7 @@ class SiteRenderer:
         created: list[Path] = []
         ordered = sorted(reports, key=lambda item: item.date, reverse=True)
         report_template = environment.get_template("report.html.j2")
+        context = {"base_path": self.base_path}
         for index, report in enumerate(ordered):
             destination = (
                 output_dir
@@ -53,20 +55,25 @@ class SiteRenderer:
                     report=report,
                     previous=ordered[index + 1] if index + 1 < len(ordered) else None,
                     next=ordered[index - 1] if index > 0 else None,
+                    **context,
                 ),
                 encoding="utf-8",
             )
             created.append(destination)
         latest = output_dir / "index.html"
         latest.write_text(
-            environment.get_template("index.html.j2").render(report=ordered[0]),
+            environment.get_template("index.html.j2").render(
+                report=ordered[0], **context
+            ),
             encoding="utf-8",
         )
         created.append(latest)
         archive = output_dir / "archive" / "index.html"
         archive.parent.mkdir(parents=True, exist_ok=True)
         archive.write_text(
-            environment.get_template("archive.html.j2").render(reports=ordered),
+            environment.get_template("archive.html.j2").render(
+                reports=ordered, **context
+            ),
             encoding="utf-8",
         )
         created.append(archive)

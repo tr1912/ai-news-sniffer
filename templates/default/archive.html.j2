@@ -5,11 +5,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>AI 日报归档</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237c3aed'/><text x='16' y='22' text-anchor='middle' font-size='18'>🤖</text></svg>">
+  <link rel="stylesheet" href="{{ base_path }}/static/style.css">
 </head>
-<body><main><h1>历史归档</h1><ul>
-{% for report in reports %}
-  <li><a href="/{{ report.date|date_path }}/">{{ report.date }} · {{ report.events|length }} 条</a></li>
-{% endfor %}
-</ul></main></body>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Archive</p>
+    <h1>历史归档</h1>
+  </header>
+  <main>
+    <ul class="archive-list">
+    {% for report in reports %}
+      <li>
+        <a href="{{ base_path }}/{{ report.date|date_path }}/">
+          <span>{{ report.date }} · {{ report.events|length }} 条精选</span>
+          <span class="archive-count">→</span>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+    <nav style="padding-top:2rem">
+      <a href="{{ base_path }}/">← 返回首页</a>
+    </nav>
+  </main>
+</body>
 </html>

@@ -59,7 +59,8 @@ def test_render_creates_latest_dated_archive_and_noindex(tmp_path: Path) -> None
     assert "为什么重要" in html
     assert "https://example.com/original" in html
     assert "来源覆盖" in html
-    assert "启用 12" in html
+    assert "12/12" in html
+    assert "来源成功/启用" in html
 
 
 def test_render_notification_includes_only_three_headlines() -> None:

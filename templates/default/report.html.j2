@@ -4,53 +4,91 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="AI 每日情报 · {{ report.date }}">
+  <meta property="og:description" content="{{ report.daily_summary_zh|truncate(120) }}">
+  <meta property="og:type" content="article">
   <title>AI 每日情报 · {{ report.date }}</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237c3aed'/><text x='16' y='22' text-anchor='middle' font-size='18'>🤖</text></svg>">
+  <link rel="stylesheet" href="{{ base_path }}/static/style.css">
 </head>
 <body>
   <header class="hero">
-    <p class="eyebrow">DAILY AI SIGNAL</p>
+    <p class="eyebrow">Daily AI Signal</p>
     <h1>AI 每日情报 · {{ report.date }}</h1>
-    <p>{{ report.events|length }} 条精选 · 更新于 {{ report.generated_at }}</p>
+    <p class="hero-meta">{{ report.events|length }} 条精选 · 更新于 {{ report.generated_at.strftime('%Y-%m-%d %H:%M') }} UTC</p>
   </header>
   <main>
     <section class="summary">
       <h2>今日速览</h2>
       <p>{{ report.daily_summary_zh }}</p>
       {% if report.degraded %}
-      <p class="warning">模型不可用，本期为来源摘要降级版。</p>
+      <div class="warning">模型不可用，本期为来源摘要降级版。</div>
       {% endif %}
     </section>
-    <section class="coverage">
-      <h2>来源覆盖</h2>
-      <p>
-        成功 {{ report.source_coverage.get("enabled", 0) - report.source_coverage.get("failed_source_ids", [])|length }}
-        / 启用 {{ report.source_coverage.get("enabled", 0) }}；
-        模型候选 {{ report.source_coverage.get("ai_candidates", 0) }} 条；
-        估算输入 {{ report.source_coverage.get("estimated_input_tokens", 0) }} Token。
-      </p>
-      {% if report.source_coverage.get("failed_source_ids") %}
-      <p class="warning">
-        降级来源：{{ report.source_coverage["failed_source_ids"]|join("、") }}
-      </p>
-      {% endif %}
-      {% if report.warnings %}
-      <details><summary>运行提示</summary><ul>
-        {% for warning in report.warnings %}<li>{{ warning }}</li>{% endfor %}
-      </ul></details>
-      {% endif %}
+
+    <section class="coverage" id="coverage">
+      <h2 onclick="this.parentElement.classList.toggle('open')">来源覆盖</h2>
+      <div class="coverage-body">
+        <div class="coverage-stats">
+          {% set failed_count = report.source_coverage.get("failed_source_ids", [])|length %}
+          <div class="stat">
+            <div class="stat-value">{{ report.source_coverage.get("enabled", 0) - failed_count }}/{{ report.source_coverage.get("enabled", 0) }}</div>
+            <div class="stat-label">来源成功/启用</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">{{ report.source_coverage.get("ai_candidates", 0) }}</div>
+            <div class="stat-label">AI 候选条数</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">{{ report.source_coverage.get("estimated_input_tokens", 0) }}</div>
+            <div class="stat-label">估算 Token</div>
+          </div>
+        </div>
+        {% if report.source_coverage.get("failed_source_ids") %}
+        <div class="degraded-sources">
+          <strong>降级来源：{{ report.source_coverage["failed_source_ids"]|length }} 个</strong>
+          <details><summary>查看详情</summary>
+            <ul>{% for sid in report.source_coverage["failed_source_ids"] %}<li>{{ sid }}</li>{% endfor %}</ul>
+          </details>
+        </div>
+        {% endif %}
+        {% if report.warnings %}
+        <details style="margin-top:.6rem">
+          <summary style="cursor:pointer;font-size:.78rem;color:var(--muted)">运行提示（{{ report.warnings|length }} 条）</summary>
+          <ul style="font-size:.72rem;padding-left:1.2rem;margin-top:.3rem">
+            {% for warning in report.warnings %}<li style="margin:.1rem 0;word-break:break-all">{{ warning }}</li>{% endfor %}
+          </ul>
+        </details>
+        {% endif %}
+      </div>
     </section>
+
     {% for event in report.events %}
     <article id="{{ event.id }}">
-      <div class="meta">{{ event.category }} · {{ event.primary_source.source_name }}</div>
+      {# Determine category for badge coloring #}
+      {% set cat = event.category|lower %}
+      {% macro cat_class(c) %}
+        {%- if 'research' in c or 'arxiv' in c -%}research
+        {%- elif 'model' in c or 'llm' in c -%}models
+        {%- elif 'product' in c or 'launch' in c -%}products
+        {%- elif 'tool' in c or 'framework' in c -%}tools
+        {%- elif 'community' in c or 'open source' in c -%}community
+        {%- else -%}default
+        {%- endif -%}
+      {% endmacro %}
+      <div class="meta" data-cat="{{ cat_class(cat)|trim }}">
+        <span>{{ event.category }}</span>
+        <span class="source-tag">· {{ event.primary_source.source_name }}</span>
+      </div>
       <h2>{{ event.title_zh }}</h2>
       <p>{{ event.summary_zh }}</p>
       {% if event.why_it_matters_zh %}
       <aside><strong>为什么重要：</strong>{{ event.why_it_matters_zh }}</aside>
       {% endif %}
-      <p><a href="{{ event.primary_source.url }}" rel="noopener noreferrer">阅读原文 ↗</a></p>
+      <a class="read-more" href="{{ event.primary_source.url }}" rel="noopener noreferrer">阅读原文</a>
       {% if event.related_sources %}
-      <details><summary>其他相关来源</summary>
+      <details>
+        <summary>其他相关来源（{{ event.related_sources|length }}）</summary>
         <ul>{% for source in event.related_sources %}
           <li><a href="{{ source.url }}">{{ source.source_name }}</a></li>
         {% endfor %}</ul>
@@ -58,10 +96,11 @@
       {% endif %}
     </article>
     {% endfor %}
+
     <nav>
-      {% if previous %}<a href="/{{ previous.date|date_path }}/">← 前一天</a>{% endif %}
-      <a href="/archive/">历史归档</a>
-      {% if next %}<a href="/{{ next.date|date_path }}/">后一天 →</a>{% endif %}
+      <span>{% if previous %}<a href="{{ base_path }}/{{ previous.date|date_path }}/">← 前一天</a>{% endif %}</span>
+      <a href="{{ base_path }}/archive/">📂 历史归档</a>
+      <span>{% if next %}<a href="{{ base_path }}/{{ next.date|date_path }}/">后一天 →</a>{% endif %}</span>
     </nav>
   </main>
 </body>

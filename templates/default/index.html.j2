@@ -4,8 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta http-equiv="refresh" content="0;url=/{{ report.date|date_path }}/">
+  <meta http-equiv="refresh" content="0;url={{ base_path }}/{{ report.date|date_path }}/">
   <title>AI 每日情报</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237c3aed'/><text x='16' y='22' text-anchor='middle' font-size='18'>🤖</text></svg>">
+  <link rel="stylesheet" href="{{ base_path }}/static/style.css">
 </head>
-<body><a href="/{{ report.date|date_path }}/">查看最新日报</a></body>
+<body style="display:flex;justify-content:center;align-items:center;min-height:100vh">
+  <a href="{{ base_path }}/{{ report.date|date_path }}/" style="padding:1rem 2rem;border-radius:100px;background:var(--brand);color:#fff;text-decoration:none;font-weight:600">查看最新日报 →</a>
+</body>
 </html>

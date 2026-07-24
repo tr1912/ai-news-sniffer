@@ -2,6 +2,7 @@ import hashlib
 from collections.abc import Callable
 from datetime import UTC, date, datetime, time, timedelta
 from pathlib import Path
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -38,7 +39,9 @@ class Pipeline:
         self.runtime_dir = runtime_dir
         self.store = RuntimeStore(runtime_dir)
         self.output_dir = output_dir
-        self.renderer = SiteRenderer(templates_root)
+        url_path = urlparse(str(settings.app.public_base_url)).path.rstrip("/")
+        base_path = url_path if url_path else "/"
+        self.renderer = SiteRenderer(templates_root, base_path=base_path)
         self.editorial_service = editorial_service
         self.adapter_factory = adapter_factory
 
