@@ -1,19 +1,19 @@
 {
   "date": "2026-07-24",
-  "generated_at": "2026-07-24T06:02:37.627064Z",
-  "run_id": "2026-07-24-3a91b4bf",
-  "daily_summary_zh": "模型暂不可用��本期仅展示来源标题与摘要。",
+  "generated_at": "2026-07-24T06:38:36.575899Z",
+  "run_id": "2026-07-24-b355a17b",
+  "daily_summary_zh": "今日AI领域有多篇重要研究论文发表，涵盖医学教育游戏化、代理训练框架、认知障碍检测、多模态推理、非洲语言语音识别、LLM安全漏洞、模型量化、开源推理库更新等。同时，Hugging Face集成Nunchaku 4位推理，llama.cpp发布新版本。这些研究和技术进展推动了AI在不同方向的发展。",
   "events": [
     {
-      "id": "degraded-291d22eb23bbf5e3",
+      "id": "event-1",
       "candidate_ids": [
         "291d22eb23bbf5e3"
       ],
       "category": "research",
-      "title_zh": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
-      "summary_zh": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical stor",
-      "why_it_matters_zh": "",
-      "importance_score": 71.78411111111112,
+      "title_zh": "MedGame：利用大语言模型进行叙事游戏化医学教育",
+      "summary_zh": "该框架将静态临床病例转化为结构化的可执行叙事游戏，采用双引擎设计：医学叙事设计师合成病例驱动的临床故事线，故事导演将其转化为依赖感知的多模态编排计划。在5000病例基准上实验表明，任务特定微调显著提升开源LLM性能，缩小与商业模型差距。初步学生研究显示，学习者认为MedGame比纯文本替代方案更具参与度和实用性。",
+      "why_it_matters_zh": "MedGame将大语言模型应用于医学教育，通过游戏化叙事提升学习体验，展示了LLM在专业教育领域的创新应用潜力。",
+      "importance_score": 72.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -25,15 +25,15 @@
       "related_sources": []
     },
     {
-      "id": "degraded-271d039f87ff968a",
+      "id": "event-2",
       "candidate_ids": [
         "271d039f87ff968a"
       ],
       "category": "research",
-      "title_zh": "OpenForgeRL: Train Harness-native Agents in Any Environment",
-      "summary_zh": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks cannot natively express stateful, multi-process harness inference. To address this, we present OpenForgeRL, an open-source framework for training harness-based agents end-to-end in diverse environments. ",
-      "why_it_matters_zh": "",
-      "importance_score": 67.76416666666667,
+      "title_zh": "OpenForgeRL：在任何环境中训练基于Harness的原生代理",
+      "summary_zh": "提出了一个开源框架，用于在多样化环境中端到端训练基于harness的代理。通过轻量级代理提供模型调用并记录训练数据，使用Kubernetes编排远程容器，实现在真实harness和环境中训练代理。在多种复杂harness和环境中验证，涵盖工具/基于claw的代理和多模态GUI浏览器及计算机使用代理。",
+      "why_it_matters_zh": "OpenForgeRL解决了现代AI代理训练中harness推理难以端到端训练的痛点，为代理训练提供了可扩展的开源基础设施。",
+      "importance_score": 68.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -45,14 +45,14 @@
       "related_sources": []
     },
     {
-      "id": "degraded-8d857b003c004cba",
+      "id": "event-7",
       "candidate_ids": [
         "8d857b003c004cba"
       ],
       "category": "models",
-      "title_zh": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
+      "title_zh": "将Nunchaku 4位扩散模型推理集成到Diffusers库",
+      "summary_zh": "Hugging Face博客介绍了如何将Nunchaku的4位扩散模型推理功能引入Diffusers库，实现高效的模型压缩和推理加速。",
+      "why_it_matters_zh": "该集成使得开发者能够更容易地在Diffusers中使用量化扩散模型，降低显存占用和推理延迟，推动扩散模型的部署。",
       "importance_score": 57.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
@@ -63,9 +63,29 @@
         "published_at": "2026-07-23T00:00:00Z"
       },
       "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "e437681b855990d4"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp发布b10103版本",
+      "summary_zh": "llama.cpp发布b10103版本，主要更新为在Metal后端为leaky ReLU添加f16类型支持。",
+      "why_it_matters_zh": "llama.cpp是流行的开源LLM推理库，新版本持续优化后端支持，提升推理性能和兼容性。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10103",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10103",
+        "published_at": "2026-07-24T06:14:22Z"
+      },
+      "related_sources": []
     }
   ],
-  "degraded": true,
+  "degraded": false,
   "warnings": [
     "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
     "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
@@ -82,18 +102,17 @@
     "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
     "source qbitai failed: SourceParseError: qbitai: no dated article records found",
     "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found",
-    "model chain failed: unverified event cannot be published"
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
   ],
   "report_url": null,
   "source_coverage": {
     "enabled": 25,
     "fetched": 167,
     "normalized": 167,
-    "filtered": 156,
+    "filtered": 155,
     "ai_candidates": 30,
-    "prompt_chars": 31326,
-    "estimated_input_tokens": 7831,
+    "prompt_chars": 32306,
+    "estimated_input_tokens": 8076,
     "failed_source_ids": [
       "anthropic-news",
       "cohere-blog",

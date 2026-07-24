@@ -135,6 +135,21 @@
     "enabled": false
   },
   {
+    "domain": "danielc.dev",
+    "sample_url": "https://danielc.dev/blog/slipperyslope/",
+    "sample_title": "Technology is a slippery slope to the bottom",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "dfarq.homeip.net",
     "sample_url": "https://dfarq.homeip.net/amiga-1000-ten-years-ahead-of-its-time/",
     "sample_title": "Amiga 1000: Ten years ahead of its time",
@@ -616,8 +631,8 @@
   },
   {
     "domain": "twitter.com",
-    "sample_url": "https://twitter.com/andrewcurran_/status/2080397684134007189",
-    "sample_title": "Stripe in talks to buy OpenRouter for about $10B",
+    "sample_url": "https://twitter.com/fried_rice/status/2080059356322918777",
+    "sample_title": "Kimi K3 exploited the latest Redis server",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
     "referring_source_ids": [
@@ -795,6 +810,21 @@
     "enabled": false
   },
   {
+    "domain": "www.robinlinacre.com",
+    "sample_url": "https://www.robinlinacre.com/letterpaths_llms_good_even_when_bad/",
+    "sample_title": "Letterpaths: Or how LLMs can be good even when they're bad",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.rtx.com",
     "sample_url": "https://www.rtx.com/news/news-center/2026/07/21/rtxs-pratt-whitney-canada-advances-hybrid-electric-technology-development",
     "sample_title": "Hybrid-Electric Aicraft Engine Targeting 30% Fuel Efficiency",
@@ -888,6 +918,21 @@
     "domain": "www.theregister.com",
     "sample_url": "https://www.theregister.com/ai-and-ml/2026/07/15/australia-demands-ai-companies-must-produce-more-energy-than-they-consume-stop-theft-of-content/5271535",
     "sample_title": "Australia to AI: Produce More Power Than You Burn, Stop Content 'Theft'",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.washingtonpost.com",
+    "sample_url": "https://www.washingtonpost.com/technology/2026/07/19/tech-has-never-been-richer-its-workers-have-never-felt-less-secure/",
+    "sample_title": "Tech workers fear they're sinking fast",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
     "referring_source_ids": [
