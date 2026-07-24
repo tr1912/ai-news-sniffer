@@ -45,6 +45,21 @@
     "enabled": false
   },
   {
+    "domain": "bfl.ai",
+    "sample_url": "https://bfl.ai/blog/flux-3",
+    "sample_title": "Flux 3",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "blog.google",
     "sample_url": "https://blog.google/innovation-and-ai/technology/safety-security/selfie-video-sign-in/",
     "sample_title": "Introducing selfie for sign-in: a new way to access your Google Account",
@@ -255,6 +270,21 @@
     "enabled": false
   },
   {
+    "domain": "hackaday.com",
+    "sample_url": "https://hackaday.com/2026/05/09/its-an-apple-lisa-on-a-fpga/",
+    "sample_title": "It's an Apple Lisa, on a FPGA",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "haqr.eu",
     "sample_url": "https://haqr.eu/tinyrenderer/",
     "sample_title": "Software rendering in 500 lines of bare C++",
@@ -333,6 +363,21 @@
     "domain": "lwn.net",
     "sample_url": "https://lwn.net/Articles/1084545/",
     "sample_title": "Mourning Dan Williams",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "mariusbancila.ro",
+    "sample_url": "https://mariusbancila.ro/blog/2026/07/23/the-pimpl-idiom-and-the-cpp26-stdindirect-type/",
+    "sample_title": "The PImpl idiom and the C++26 std:indirect type",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
     "referring_source_ids": [
@@ -453,6 +498,21 @@
     "domain": "papers.ssrn.com",
     "sample_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6959699",
     "sample_title": "Encryption and Globalization 15 Years Later: E2EE and the \"Going Dark\" Debate",
+    "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "platform.claude.com",
+    "sample_url": "https://platform.claude.com/cookbook/",
+    "sample_title": "Claude Cookbook",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
     "referring_source_ids": [
@@ -631,8 +691,8 @@
   },
   {
     "domain": "twitter.com",
-    "sample_url": "https://twitter.com/fried_rice/status/2080059356322918777",
-    "sample_title": "Kimi K3 exploited the latest Redis server",
+    "sample_url": "https://twitter.com/andrewcurran_/status/2080397684134007189",
+    "sample_title": "Stripe in talks to buy OpenRouter for about $10B",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
     "referring_source_ids": [
