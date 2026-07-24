@@ -1,39 +1,19 @@
 {
   "date": "2026-07-24",
-  "generated_at": "2026-07-24T14:56:56.728233Z",
-  "run_id": "2026-07-24-ce37461b",
-  "daily_summary_zh": "模型暂不可用��本期仅展示来源标题与摘要。",
+  "generated_at": "2026-07-24T15:57:01.926511Z",
+  "run_id": "2026-07-24-f6543fb6",
+  "daily_summary_zh": "今日AI领域发布多项重要研究成果与工具：Nunchaku 4位扩散推理集成到Diffusers库、llama.cpp发布b10107版本、OpenForgeRL开源框架实现智能体端到端训练、GS-Agent从自然语言生成4D物理世界、MIRROR提升多模态推理、Agentic Context Management提出智能体记忆管理方案、VLM-IE3D融合几何感知增强3D视觉语言模型、VCSD提出对比自蒸馏简化训练。",
   "events": [
     {
-      "id": "degraded-291d22eb23bbf5e3",
-      "candidate_ids": [
-        "291d22eb23bbf5e3"
-      ],
-      "category": "research",
-      "title_zh": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
-      "summary_zh": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical stor",
-      "why_it_matters_zh": "",
-      "importance_score": 71.78411111111112,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "arxiv-ai",
-        "source_name": "arXiv AI",
-        "title": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
-        "url": "https://arxiv.org/abs/2607.21570v1",
-        "published_at": "2026-07-23T17:50:28Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "degraded-271d039f87ff968a",
+      "id": "event-3",
       "candidate_ids": [
         "271d039f87ff968a"
       ],
       "category": "research",
-      "title_zh": "OpenForgeRL: Train Harness-native Agents in Any Environment",
-      "summary_zh": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks cannot natively express stateful, multi-process harness inference. To address this, we present OpenForgeRL, an open-source framework for training harness-based agents end-to-end in diverse environments. ",
-      "why_it_matters_zh": "",
-      "importance_score": 67.76416666666667,
+      "title_zh": "OpenForgeRL：开源框架实现基于工具的智能体端到端训练",
+      "summary_zh": "arXiv论文提出OpenForgeRL，一个开源框架，支持在任意环境中对使用推理工具（如Claude Code）的智能体进行强化学习训练，解耦训练与推理。",
+      "why_it_matters_zh": "填补了开源基础设施在训练复杂智能体方面的空白，将推动更强大的AI Agent研发。",
+      "importance_score": 85.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -45,15 +25,35 @@
       "related_sources": []
     },
     {
-      "id": "degraded-8d857b003c004cba",
+      "id": "event-6",
+      "candidate_ids": [
+        "7b7e0ccdd1d81eb2"
+      ],
+      "category": "research",
+      "title_zh": "Agentic Context Management：将智能体记忆和成本问题视为生命周期与架构问题",
+      "summary_zh": "论文提出智能体上下文管理（ACM）框架，定义五个原语：架构、摄取、范围、预测、压缩与整合，以解决智能体在长对话中的记忆和成本挑战。",
+      "why_it_matters_zh": "为生产级AI智能体提供了系统性的记忆管理策略，有助于降低部署成本和提升可靠性。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
+        "url": "https://arxiv.org/abs/2607.21503v1",
+        "published_at": "2026-07-23T16:51:31Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
       "candidate_ids": [
         "8d857b003c004cba"
       ],
       "category": "models",
-      "title_zh": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
-      "summary_zh": "",
-      "why_it_matters_zh": "",
-      "importance_score": 57.0,
+      "title_zh": "Nunchaku 4位扩散推理集成到Diffusers库",
+      "summary_zh": "Hugging Face博客宣布，Nunchaku 4-bit diffusion推理方法现已集成到Diffusers库，支持高效生成模型推理。",
+      "why_it_matters_zh": "降低了扩散模型部署的显存需求，有利于在消费级硬件上运行，推动生成式AI普及。",
+      "importance_score": 80.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "huggingface-blog",
@@ -65,15 +65,15 @@
       "related_sources": []
     },
     {
-      "id": "degraded-1156f61449ce87cb",
+      "id": "event-2",
       "candidate_ids": [
         "1156f61449ce87cb"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp Releases: b10107",
-      "summary_zh": "<details open>\n\nhexagon: fix Windows crash when op_poll is enabled (#26029)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10107/llama-b10107-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10107/llama-b10107-bin-macos-x64.tar.gz)",
-      "why_it_matters_zh": "",
-      "importance_score": 56.80211111111111,
+      "title_zh": "llama.cpp 发布 b10107 版本",
+      "summary_zh": "llama.cpp 发布 b10107，修复了 Windows 下 op_poll 导致的崩溃问题。",
+      "why_it_matters_zh": "llama.cpp 是本地运行LLM的重要工具，持续更新提升稳定性和性能，对开发者社区有直接影响。",
+      "importance_score": 75.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
@@ -85,7 +85,7 @@
       "related_sources": []
     }
   ],
-  "degraded": true,
+  "degraded": false,
   "warnings": [
     "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
     "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
@@ -102,18 +102,17 @@
     "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
     "source qbitai failed: SourceParseError: qbitai: no dated article records found",
     "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found",
-    "model chain failed: unverified event cannot be published"
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
   ],
   "report_url": null,
   "source_coverage": {
     "enabled": 25,
-    "fetched": 177,
-    "normalized": 177,
-    "filtered": 161,
+    "fetched": 179,
+    "normalized": 179,
+    "filtered": 163,
     "ai_candidates": 30,
-    "prompt_chars": 27851,
-    "estimated_input_tokens": 6962,
+    "prompt_chars": 26331,
+    "estimated_input_tokens": 6582,
     "failed_source_ids": [
       "anthropic-news",
       "cohere-blog",
