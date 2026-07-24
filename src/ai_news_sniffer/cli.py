@@ -2,6 +2,7 @@ import argparse
 import time
 from datetime import date, datetime
 from pathlib import Path
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 import httpx
@@ -45,6 +46,11 @@ def build_parser() -> argparse.ArgumentParser:
     failure = subparsers.add_parser("notify-failure")
     failure.add_argument("--message", required=True)
     return parser
+
+
+def _extract_path(public_base_url: str) -> str:
+    url_path = urlparse(str(public_base_url)).path.rstrip("/")
+    return url_path if url_path else "/"
 
 
 def verify_report_url(url: str, client: httpx.Client) -> None:
@@ -164,9 +170,13 @@ def main(argv: list[str] | None = None) -> int:
             report_url=record.report_url,
             generated_at=report.generated_at,
         )
-        message = SiteRenderer(args.templates_dir).render_notification(
+        message = SiteRenderer(
+            args.templates_dir,
+            base_path=_extract_path(settings.app.public_base_url),
+        ).render_notification(
             report,
             settings.app.template,
+            report_url=str(record.report_url),
         )
         previous_successes = [
             result for result in record.channel_results if result.success

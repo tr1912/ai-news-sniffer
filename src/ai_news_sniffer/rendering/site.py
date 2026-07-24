@@ -86,7 +86,15 @@ class SiteRenderer:
         self,
         report: DailyReport,
         template_name: str,
+        *,
+        report_url: str = "",
     ) -> str:
+        context = {
+            "report": report,
+            "top_items": report.events[:3],
+            "report_url": report_url,
+            "base_path": self.base_path,
+        }
         return self._environment(template_name).get_template(
             "notification.md.j2"
-        ).render(report=report, top_items=report.events[:3])
+        ).render(**context)

@@ -1,10 +1,22 @@
+📰 **AI 日报 · {{ report.date }}**
+
 {{ report.daily_summary_zh }}
-{% if report.source_coverage.get("newly_auto_paused_source_ids") %}
-⚠️ 来源维护提醒：已自动暂停
-{{ report.source_coverage["newly_auto_paused_source_ids"]|join("、") }}
-{% endif %}
+
+---
+
 {% for event in top_items %}
-{{ loop.index }}. **{{ event.title_zh }}**
+**{{ loop.index }}. {{ event.title_zh }}**
 {{ event.summary_zh }}
-[阅读原文]({{ event.primary_source.url }})
+
+🔗 {{ event.primary_source.url }}
+{% if not loop.last %}
+
+{% endif %}
 {% endfor %}
+---
+{% if report_url %}
+📮 查看完整日报：{{ report_url }}
+{% endif %}
+{% if report.source_coverage.get("newly_auto_paused_source_ids") %}
+⚠️ 来源自动暂停：{{ report.source_coverage["newly_auto_paused_source_ids"]|join("、") }}
+{% endif %}

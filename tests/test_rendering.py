@@ -67,7 +67,7 @@ def test_render_notification_includes_only_three_headlines() -> None:
     report = make_report()
     report.events = report.events * 4
     text = SiteRenderer(Path("templates")).render_notification(report, "default")
-    assert text.count("阅读原文") == 3
+    assert text.count("🔗") == 3
 
 
 def test_renderer_rejects_template_path_traversal(tmp_path: Path) -> None:
