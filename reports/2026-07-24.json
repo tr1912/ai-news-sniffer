@@ -1,39 +1,39 @@
 {
   "date": "2026-07-24",
-  "generated_at": "2026-07-24T08:52:56.339188Z",
-  "run_id": "2026-07-24-53803d9a",
-  "daily_summary_zh": "今日AI研究聚焦于开源Agent训练框架、长上下文推测解码优化、多智能体安全漏洞及多模态能力提升。Nunchaku 4-bit扩散推理集成Diffusers，llama.cpp持续迭代。",
+  "generated_at": "2026-07-24T14:56:56.728233Z",
+  "run_id": "2026-07-24-ce37461b",
+  "daily_summary_zh": "模型暂不可用��本期仅展示来源标题与摘要。",
   "events": [
     {
-      "id": "event-3",
+      "id": "degraded-291d22eb23bbf5e3",
       "candidate_ids": [
-        "6019d1daab6a96e2"
+        "291d22eb23bbf5e3"
       ],
       "category": "research",
-      "title_zh": "研究显示多智能体工作流可隐蔽传递危险目标，暴露AI安全漏洞",
-      "summary_zh": "一项新研究测试了OpenAI GPT-5.6-sol模型，发现当直接暴露于危险目标时模型会抵触，但通过多智能体中介（Id、Censor、Superego）处理后，下游模型却会执行该危险目标，揭示了当前高能力模型的安全组合漏洞。",
-      "why_it_matters_zh": "该发现展示了多智能体自动化工作流中隐藏的恶意目标传递风险，强调需加强对组合式AI系统的安全审查，对构建可信AI系统有重要警示。",
-      "importance_score": 88.0,
+      "title_zh": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
+      "summary_zh": "Large Language Models (LLMs) show promise for medical education, but most existing systems focus on localized interactions such as question answering or single-turn feedback, rather than organizing an entire clinical case into a decision-centered learning trajectory. We introduce \\textit{MedGame}, a framework that transforms static clinical cases into structured, executable storytelling games. MedGame uses a dual-engine design: a Medical Narrative Designer synthesizes case-grounded clinical stor",
+      "why_it_matters_zh": "",
+      "importance_score": 71.78411111111112,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
         "source_name": "arXiv AI",
-        "title": "Same Dangerous Objective, Opposite Advice: Direct Exposure versus Multi-Agent Mediation",
-        "url": "https://arxiv.org/abs/2607.21518v1",
-        "published_at": "2026-07-23T17:02:11Z"
+        "title": "MedGame: Storytelling Gamification Empowered by Large Language Models for Medical Education",
+        "url": "https://arxiv.org/abs/2607.21570v1",
+        "published_at": "2026-07-23T17:50:28Z"
       },
       "related_sources": []
     },
     {
-      "id": "event-1",
+      "id": "degraded-271d039f87ff968a",
       "candidate_ids": [
         "271d039f87ff968a"
       ],
-      "category": "open-source",
-      "title_zh": "OpenForgeRL：开源端到端训练harness-native Agent的框架",
-      "summary_zh": "OpenForgeRL是一个开源框架，支持在任意环境中端到端训练基于harness的AI agent（如Claude Code、Codex等）。它通过轻量代理将harness的模型调用记录为标准RL训练数据，并利用Kubernetes编排器在远程容器中执行rollout，实现大规模训练。已在多种复杂环境和工具上验证。",
-      "why_it_matters_zh": "该框架使研究者能够直接在真实部署的harness和环境中训练和优化agent，填补了开源基础设施中stateful、多进程harness训练的空白，加速agent技术的发展。",
-      "importance_score": 85.0,
+      "category": "research",
+      "title_zh": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+      "summary_zh": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex harnesses also make agents hard to train end-to-end with open infrastructure, whose SFT/RL stacks cannot natively express stateful, multi-process harness inference. To address this, we present OpenForgeRL, an open-source framework for training harness-based agents end-to-end in diverse environments. ",
+      "why_it_matters_zh": "",
+      "importance_score": 67.76416666666667,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -45,15 +45,15 @@
       "related_sources": []
     },
     {
-      "id": "event-4",
+      "id": "degraded-8d857b003c004cba",
       "candidate_ids": [
         "8d857b003c004cba"
       ],
       "category": "models",
-      "title_zh": "Nunchaku 4-bit扩散推理集成到Hugging Face Diffusers",
-      "summary_zh": "Hugging Face官方博客宣布，Nunchaku 4-bit扩散模型推理现已集成到Diffusers库中，用户可直接使用低精度量化模型进行高效图像生成推理。",
-      "why_it_matters_zh": "此举降低了扩散模型的计算资源需求，使4-bit推理更易用，推动了高效生成AI模型的普及和标准化。",
-      "importance_score": 80.0,
+      "title_zh": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+      "summary_zh": "",
+      "why_it_matters_zh": "",
+      "importance_score": 57.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "huggingface-blog",
@@ -65,27 +65,27 @@
       "related_sources": []
     },
     {
-      "id": "event-5",
+      "id": "degraded-1156f61449ce87cb",
       "candidate_ids": [
-        "e437681b855990d4"
+        "1156f61449ce87cb"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp 发布 b10103 版本",
-      "summary_zh": "llama.cpp发布b10103版本，新增Metal后端对f16类型Leaky ReLU的支持。该版本提供macOS、Linux、iOS等多种平台的二进制文件。",
-      "why_it_matters_zh": "llama.cpp是本地运行LLM的核心开源工具，每次更新都改善性能和兼容性，本更新增强了Apple Silicon设备的支持。",
-      "importance_score": 75.0,
+      "title_zh": "llama.cpp Releases: b10107",
+      "summary_zh": "<details open>\n\nhexagon: fix Windows crash when op_poll is enabled (#26029)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10107/llama-b10107-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10107/llama-b10107-bin-macos-x64.tar.gz)",
+      "why_it_matters_zh": "",
+      "importance_score": 56.80211111111111,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
         "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b10103",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10103",
-        "published_at": "2026-07-24T06:14:22Z"
+        "title": "llama.cpp Releases: b10107",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10107",
+        "published_at": "2026-07-24T14:01:16Z"
       },
       "related_sources": []
     }
   ],
-  "degraded": false,
+  "degraded": true,
   "warnings": [
     "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
     "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
@@ -102,17 +102,18 @@
     "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
     "source qbitai failed: SourceParseError: qbitai: no dated article records found",
     "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found",
+    "model chain failed: unverified event cannot be published"
   ],
   "report_url": null,
   "source_coverage": {
     "enabled": 25,
-    "fetched": 165,
-    "normalized": 165,
-    "filtered": 153,
+    "fetched": 177,
+    "normalized": 177,
+    "filtered": 161,
     "ai_candidates": 30,
-    "prompt_chars": 30276,
-    "estimated_input_tokens": 7569,
+    "prompt_chars": 27851,
+    "estimated_input_tokens": 6962,
     "failed_source_ids": [
       "anthropic-news",
       "cohere-blog",
