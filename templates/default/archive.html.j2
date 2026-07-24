@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>AI 日报归档</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body><main><h1>历史归档</h1><ul>
+{% for report in reports %}
+  <li><a href="/{{ report.date|date_path }}/">{{ report.date }} · {{ report.events|length }} 条</a></li>
+{% endfor %}
+</ul></main></body>
+</html>

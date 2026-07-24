@@ -1,0 +1,57 @@
+name: Source audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_profile:
+        description: Source profile
+        required: true
+        default: balanced
+        type: choice
+        options: [light, balanced, full]
+      include_sources:
+        description: Optional comma-separated allowlist
+        required: false
+        default: ""
+        type: string
+      exclude_sources:
+        description: Optional comma-separated blocklist
+        required: false
+        default: ""
+        type: string
+      max_ai_candidates:
+        description: Candidate cap; 0 uses the selected profile default
+        required: false
+        default: "0"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: python -m pip install -e .
+      - name: Audit enabled sources
+        run: >
+          ai-news-sniffer
+          --config-dir config
+          --runtime-dir runtime-data
+          sources audit
+          --profile "${{ inputs.source_profile }}"
+          --include-sources "${{ inputs.include_sources }}"
+          --exclude-sources "${{ inputs.exclude_sources }}"
+          --max-ai-candidates "${{ inputs.max_ai_candidates }}"
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: source-audit
+          path: runtime-data/
+          if-no-files-found: warn
