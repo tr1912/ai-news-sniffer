@@ -1,0 +1,246 @@
+name: Daily AI Digest
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Generate preview only
+        type: boolean
+        default: true
+      publish:
+        description: Deploy to GitHub Pages
+        type: boolean
+        default: false
+      notify:
+        description: Send enabled notifications after publish
+        type: boolean
+        default: false
+      target_date:
+        description: Optional YYYY-MM-DD date
+        type: string
+        default: ""
+      source_profile:
+        description: Source coverage profile
+        type: choice
+        options: [light, balanced, full]
+        default: balanced
+      include_sources:
+        description: Optional comma-separated allowlist
+        type: string
+        default: ""
+      exclude_sources:
+        description: Optional comma-separated blocklist
+        type: string
+        default: ""
+      max_ai_candidates:
+        description: Candidate cap; 0 uses the selected profile default
+        type: string
+        default: "0"
+
+concurrency:
+  group: daily-ai-digest
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: "3.12"
+  PUBLIC_BASE_URL: ${{ vars.PUBLIC_BASE_URL }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      run_id: ${{ steps.build.outputs.run_id }}
+      report_url: ${{ steps.build.outputs.report_url }}
+      should_publish: ${{ steps.mode.outputs.should_publish }}
+      should_notify: ${{ steps.mode.outputs.should_notify }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: python -m pip install -e .
+      - name: Resolve mode
+        id: mode
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            echo "dry_run=false" >> "$GITHUB_OUTPUT"
+            echo "should_publish=true" >> "$GITHUB_OUTPUT"
+            echo "should_notify=true" >> "$GITHUB_OUTPUT"
+          else
+            if [[ "${{ inputs.notify }}" == "true" && "${{ inputs.publish }}" != "true" ]]; then
+              echo "notify requires publish" >&2
+              exit 2
+            fi
+            if [[ "${{ inputs.dry_run }}" == "true" && ( "${{ inputs.publish }}" == "true" || "${{ inputs.notify }}" == "true" ) ]]; then
+              echo "dry_run cannot publish or notify" >&2
+              exit 2
+            fi
+            echo "dry_run=${{ inputs.dry_run }}" >> "$GITHUB_OUTPUT"
+            echo "should_publish=${{ inputs.publish }}" >> "$GITHUB_OUTPUT"
+            echo "should_notify=${{ inputs.notify }}" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check out runtime data
+        shell: bash
+        run: |
+          git fetch origin runtime-data || true
+          if git show-ref --verify --quiet refs/remotes/origin/runtime-data; then
+            git worktree add runtime-data origin/runtime-data
+          else
+            git worktree add --detach runtime-data
+            cd runtime-data
+            git switch --orphan runtime-data
+            git rm -rf .
+            mkdir -p reports runs
+          fi
+      - name: Build digest
+        id: build
+        shell: bash
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          TARGET_DATE="${{ inputs.target_date }}"
+          DATE_ARGS=()
+          if [[ -n "$TARGET_DATE" ]]; then DATE_ARGS=(--target-date "$TARGET_DATE"); fi
+          DRY_ARGS=()
+          if [[ "${{ steps.mode.outputs.dry_run }}" == "true" ]]; then DRY_ARGS=(--dry-run); fi
+          SOURCE_PROFILE="${{ inputs.source_profile || 'balanced' }}"
+          INCLUDE_SOURCES="${{ inputs.include_sources }}"
+          EXCLUDE_SOURCES="${{ inputs.exclude_sources }}"
+          MAX_AI_CANDIDATES="${{ inputs.max_ai_candidates || '0' }}"
+          OUTPUT_FILE="$RUNNER_TEMP/build-output.json"
+          python -m ai_news_sniffer \
+            --runtime-dir runtime-data \
+            --output-dir build/site \
+            build \
+            --source-profile "$SOURCE_PROFILE" \
+            --include-sources "$INCLUDE_SOURCES" \
+            --exclude-sources "$EXCLUDE_SOURCES" \
+            --max-ai-candidates "$MAX_AI_CANDIDATES" \
+            "${DATE_ARGS[@]}" "${DRY_ARGS[@]}" | tee "$OUTPUT_FILE"
+          RUN_ID="$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["run_id"])' "$OUTPUT_FILE")"
+          REPORT_DATE="${RUN_ID:0:10}"
+          REPORT_PATH="${REPORT_DATE:0:4}/${REPORT_DATE:5:2}/${REPORT_DATE:8:2}"
+          REPORT_URL="${{ vars.PUBLIC_BASE_URL }}/$REPORT_PATH/"
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+          echo "report_url=$REPORT_URL" >> "$GITHUB_OUTPUT"
+      - name: Persist prepared runtime state
+        if: steps.mode.outputs.dry_run != 'true'
+        working-directory: runtime-data
+        shell: bash
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add reports runs source-health.json source-runs candidate-sources.json
+          git commit -m "data: prepare ${{ steps.build.outputs.run_id }}" || true
+          git push origin HEAD:runtime-data
+      - name: Upload dry-run preview
+        if: steps.mode.outputs.dry_run == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: ai-digest-preview-${{ steps.build.outputs.run_id }}
+          path: build/site
+          retention-days: 7
+      - name: Upload Pages artifact
+        if: steps.mode.outputs.should_publish == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/site
+
+  deploy:
+    if: needs.build.outputs.should_publish == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  finalize:
+    if: needs.build.outputs.should_publish == 'true'
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: python -m pip install -e .
+      - name: Check out runtime data
+        run: |
+          git fetch origin runtime-data
+          git worktree add runtime-data origin/runtime-data
+      - name: Verify published URL and mark published
+        run: |
+          python -m ai_news_sniffer \
+            --runtime-dir runtime-data \
+            mark-published \
+            --run-id "${{ needs.build.outputs.run_id }}" \
+            --report-url "${{ needs.build.outputs.report_url }}"
+      - name: Persist published state
+        working-directory: runtime-data
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add latest.json runs seen_fingerprints.json
+          git commit -m "data: publish ${{ needs.build.outputs.run_id }}" || true
+          git push origin HEAD:runtime-data
+      - name: Send notifications
+        id: notify
+        if: needs.build.outputs.should_notify == 'true'
+        continue-on-error: true
+        env:
+          MEOW_NICKNAME: ${{ secrets.MEOW_NICKNAME }}
+          WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+        run: |
+          python -m ai_news_sniffer \
+            --runtime-dir runtime-data \
+            notify --run-id "${{ needs.build.outputs.run_id }}"
+      - name: Persist notification results
+        if: always() && needs.build.outputs.should_notify == 'true'
+        working-directory: runtime-data
+        run: |
+          git add runs
+          git commit -m "data: notify ${{ needs.build.outputs.run_id }}" || true
+          git push origin HEAD:runtime-data
+      - name: Fail after persisting partial notification status
+        if: steps.notify.outcome == 'failure'
+        run: exit 2
+
+  failure-alert:
+    if: ${{ always() && (needs.build.result == 'failure' || needs.deploy.result == 'failure' || needs.finalize.result == 'failure') }}
+    needs: [build, deploy, finalize]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: python -m pip install -e .
+      - name: Send failure alert through available channels
+        env:
+          MEOW_NICKNAME: ${{ secrets.MEOW_NICKNAME }}
+          WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}
+          GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
+        run: |
+          python -m ai_news_sniffer notify-failure \
+            --message "Daily AI Digest workflow failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

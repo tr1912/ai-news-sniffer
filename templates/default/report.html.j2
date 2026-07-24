@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>AI 每日情报 · {{ report.date }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">DAILY AI SIGNAL</p>
+    <h1>AI 每日情报 · {{ report.date }}</h1>
+    <p>{{ report.events|length }} 条精选 · 更新于 {{ report.generated_at }}</p>
+  </header>
+  <main>
+    <section class="summary">
+      <h2>今日速览</h2>
+      <p>{{ report.daily_summary_zh }}</p>
+      {% if report.degraded %}
+      <p class="warning">模型不可用，本期为来源摘要降级版。</p>
+      {% endif %}
+    </section>
+    <section class="coverage">
+      <h2>来源覆盖</h2>
+      <p>
+        成功 {{ report.source_coverage.get("enabled", 0) - report.source_coverage.get("failed_source_ids", [])|length }}
+        / 启用 {{ report.source_coverage.get("enabled", 0) }}；
+        模型候选 {{ report.source_coverage.get("ai_candidates", 0) }} 条；
+        估算输入 {{ report.source_coverage.get("estimated_input_tokens", 0) }} Token。
+      </p>
+      {% if report.source_coverage.get("failed_source_ids") %}
+      <p class="warning">
+        降级来源：{{ report.source_coverage["failed_source_ids"]|join("、") }}
+      </p>
+      {% endif %}
+      {% if report.warnings %}
+      <details><summary>运行提示</summary><ul>
+        {% for warning in report.warnings %}<li>{{ warning }}</li>{% endfor %}
+      </ul></details>
+      {% endif %}
+    </section>
+    {% for event in report.events %}
+    <article id="{{ event.id }}">
+      <div class="meta">{{ event.category }} · {{ event.primary_source.source_name }}</div>
+      <h2>{{ event.title_zh }}</h2>
+      <p>{{ event.summary_zh }}</p>
+      {% if event.why_it_matters_zh %}
+      <aside><strong>为什么重要：</strong>{{ event.why_it_matters_zh }}</aside>
+      {% endif %}
+      <p><a href="{{ event.primary_source.url }}" rel="noopener noreferrer">阅读原文 ↗</a></p>
+      {% if event.related_sources %}
+      <details><summary>其他相关来源</summary>
+        <ul>{% for source in event.related_sources %}
+          <li><a href="{{ source.url }}">{{ source.source_name }}</a></li>
+        {% endfor %}</ul>
+      </details>
+      {% endif %}
+    </article>
+    {% endfor %}
+    <nav>
+      {% if previous %}<a href="/{{ previous.date|date_path }}/">← 前一天</a>{% endif %}
+      <a href="/archive/">历史归档</a>
+      {% if next %}<a href="/{{ next.date|date_path }}/">后一天 →</a>{% endif %}
+    </nav>
+  </main>
+</body>
+</html>
