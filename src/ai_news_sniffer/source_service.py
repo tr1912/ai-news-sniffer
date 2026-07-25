@@ -56,7 +56,7 @@ def collect_source_candidates(
                     health_store.clear_pause_after_audit(source.id, until)
                 else:
                     health_store.record_success(source.id, until)
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001 — per-source isolation: one bad adapter must not kill the full collection run
                 message = f"{type(exc).__name__}: {str(exc)[:200]}"
                 failures[source.id] = message
                 health = health_store.record_failure(source.id, message, until)

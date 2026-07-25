@@ -31,7 +31,7 @@ class GitHubReleasesAdapter:
             if not release.get("published_at") or release.get("draft"):
                 continue
             published_at = datetime.fromisoformat(
-                release["published_at"].replace("Z", "+00:00")
+                release["published_at"]
             )
             if not since <= published_at <= until:
                 continue

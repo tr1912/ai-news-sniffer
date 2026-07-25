@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from typing import TypeVar
 
 import yaml
 from pydantic import BaseModel
@@ -14,10 +13,8 @@ from ai_news_sniffer.models import (
     SourcesConfig,
 )
 
-ConfigModel = TypeVar("ConfigModel", bound=BaseModel)
 
-
-def _load_yaml(path: Path, model: type[ConfigModel]) -> ConfigModel:
+def _load_yaml[ConfigModel: BaseModel](path: Path, model: type[ConfigModel]) -> ConfigModel:
     payload = yaml.safe_load(path.read_text(encoding="utf-8"))
     return model.model_validate(payload)
 
