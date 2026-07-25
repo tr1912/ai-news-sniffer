@@ -32,8 +32,8 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
@@ -49,7 +49,7 @@ jobs:
           --include-sources "${{ inputs.include_sources }}"
           --exclude-sources "${{ inputs.exclude_sources }}"
           --max-ai-candidates "${{ inputs.max_ai_candidates }}"
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: source-audit

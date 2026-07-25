@@ -58,8 +58,8 @@ jobs:
       should_publish: ${{ steps.mode.outputs.should_publish }}
       should_notify: ${{ steps.mode.outputs.should_notify }}
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
@@ -142,7 +142,7 @@ jobs:
           git push origin HEAD:runtime-data
       - name: Upload dry-run preview
         if: steps.mode.outputs.dry_run == 'true'
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v4
         with:
           name: ai-digest-preview-${{ steps.build.outputs.run_id }}
           path: build/site
@@ -176,8 +176,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
@@ -235,8 +235,8 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
