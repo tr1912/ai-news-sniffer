@@ -1,4 +1,5 @@
 import argparse
+import sys
 import time
 from datetime import date, datetime
 from pathlib import Path
@@ -98,6 +99,17 @@ def main(argv: list[str] | None = None) -> int:
             verify_report_url(args.url, client)
         return 0
     if args.command == "mark-published":
+        record = store.load_run(args.run_id)
+        if record.status in {
+            RunStatus.PUBLISHED,
+            RunStatus.NOTIFIED,
+            RunStatus.PARTIALLY_NOTIFIED,
+        }:
+            print(
+                f"[skip] run {args.run_id} is already published/notified, "
+                f"updating fingerprints only",
+                file=sys.stderr,
+            )
         with httpx.Client() as client:
             verify_report_url(args.report_url, client)
         store.mark_published(args.run_id, args.report_url)
@@ -150,6 +162,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "notify":
         record = store.load_run(args.run_id)
         if record.status is RunStatus.NOTIFIED:
+            print(
+                f"[skip] run {args.run_id} was already notified — no duplicate "
+                f"notification will be sent",
+                file=sys.stderr,
+            )
             return 0
         if record.status not in {
             RunStatus.PUBLISHED,

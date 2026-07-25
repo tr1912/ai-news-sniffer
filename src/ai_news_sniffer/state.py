@@ -76,11 +76,17 @@ class RuntimeStore:
 
     def save_prepared(self, report: DailyReport, fingerprints: set[str]) -> RunRecord:
         run_path = self._run_path(report.run_id)
-        if run_path.exists():
-            return self._load_run(report.run_id)
-
+        # Always persist the latest report data so re-runs pick up fresh content
         report_path = self.reports_dir / f"{report.date.isoformat()}.json"
         self._write_json(report_path, report.model_dump(mode="json"))
+        if run_path.exists():
+            existing = self._load_run(report.run_id)
+            # Update fingerprints in case new candidates appeared
+            existing.pending_fingerprints = sorted(
+                set(existing.pending_fingerprints) | fingerprints
+            )
+            self._write_json(run_path, existing.model_dump(mode="json"))
+            return existing
         now = datetime.now(UTC)
         record = RunRecord(
             run_id=report.run_id,
