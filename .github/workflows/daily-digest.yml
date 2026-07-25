@@ -210,9 +210,13 @@ jobs:
           WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}
           GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
         run: |
+          FORCE_FLAG=""
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            FORCE_FLAG="--force"
+          fi
           python -m ai_news_sniffer \
             --runtime-dir runtime-data \
-            notify --run-id "${{ needs.build.outputs.run_id }}"
+            notify --run-id "${{ needs.build.outputs.run_id }}" $FORCE_FLAG
       - name: Persist notification results
         if: always() && needs.build.outputs.should_notify == 'true'
         working-directory: runtime-data

@@ -44,6 +44,7 @@ def build_parser() -> argparse.ArgumentParser:
     published.add_argument("--report-url", required=True)
     notify = subparsers.add_parser("notify")
     notify.add_argument("--run-id", required=True)
+    notify.add_argument("--force", action="store_true")
     failure = subparsers.add_parser("notify-failure")
     failure.add_argument("--message", required=True)
     return parser
@@ -161,7 +162,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0 if any(result.success for result in results) else 2
     if args.command == "notify":
         record = store.load_run(args.run_id)
-        if record.status is RunStatus.NOTIFIED:
+        if record.status is RunStatus.NOTIFIED and not args.force:
             print(
                 f"[skip] run {args.run_id} was already notified — no duplicate "
                 f"notification will be sent",
