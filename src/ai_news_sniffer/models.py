@@ -116,7 +116,7 @@ class ProviderConfig(BaseModel):
     base_url: HttpUrl
     model: str
     api_key_env: str
-    timeout_seconds: int = 60
+    timeout_seconds: int = 180
     max_retries: int = 3
 
 

@@ -4,6 +4,6 @@ providers:
     base_url: https://api.deepseek.com
     model: deepseek-v4-flash
     api_key_env: DEEPSEEK_API_KEY
-    timeout_seconds: 60
+    timeout_seconds: 180
     max_retries: 3
 fallback_order: [deepseek]

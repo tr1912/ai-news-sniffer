@@ -97,8 +97,11 @@ class Pipeline:
             )
         except (RuntimeError, ValueError) as error:
             degraded = True
-            warnings.append(f"model chain failed: {error}")
-            summary = "模型暂不可用��本期仅展示来源标题与摘要。"
+            warnings.append(
+                f"model chain failed: {error}. "
+                f"Falling back to degraded mode with {len(ranked)} raw candidates."
+            )
+            summary = "模型暂不可用，本期仅展示来源标题与摘要。"
             events = build_degraded_events(ranked, self.settings.app.max_items)
         events = select_diverse_events(events, self.settings.app.max_items)
         event_key = "|".join(

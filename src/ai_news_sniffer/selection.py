@@ -1,3 +1,4 @@
+import re
 from collections import Counter
 
 from ai_news_sniffer.models import (
@@ -7,6 +8,22 @@ from ai_news_sniffer.models import (
     SourceGroup,
     SourceRef,
 )
+
+
+def _clean_degraded_excerpt(text: str, max_chars: int = 350) -> str:
+    stripped = re.sub(r"<[^>]+>", "", text)
+    stripped = re.sub(r"\*\*([^*]+)\*\*", r"\1", stripped)
+    stripped = re.sub(r"\*([^*]+)\*", r"\1", stripped)
+    stripped = re.sub(r"__([^_]+)__", r"\1", stripped)
+    stripped = re.sub(r"_([^_]+)_", r"\1", stripped)
+    stripped = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", stripped)
+    stripped = re.sub(r"`([^`]+)`", r"\1", stripped)
+    stripped = re.sub(r"^#{1,6}\s+", "", stripped, flags=re.MULTILINE)
+    stripped = re.sub(r"^[-*+]\s+", "", stripped, flags=re.MULTILINE)
+    stripped = re.sub(r"---+", "", stripped)
+    stripped = re.sub(r"\n{3,}", "\n\n", stripped)
+    stripped = " ".join(stripped.split())
+    return stripped[:max_chars].strip()
 
 
 def select_diverse_events(
@@ -51,7 +68,7 @@ def build_degraded_events(
                 candidate_ids=[article.id],
                 category=article.categories[0] if article.categories else "other",
                 title_zh=article.title,
-                summary_zh=article.excerpt[:500],
+                summary_zh=_clean_degraded_excerpt(article.excerpt),
                 why_it_matters_zh="",
                 importance_score=article.rule_score,
                 confirmation_status=ConfirmationStatus.PRIMARY_CONFIRMED,
