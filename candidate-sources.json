@@ -1575,6 +1575,21 @@
     "enabled": false
   },
   {
+    "domain": "www.cbc.ca",
+    "sample_url": "https://www.cbc.ca/news/canada/nova-scotia/how-a-single-underscore-led-to-an-innocent-halifax-man-s-conviction-9.7283149",
+    "sample_title": "Man convicted of child sex crime by added _ char \"Fus Ro Dah\" Skyrim username",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.cerebras.ai",
     "sample_url": "https://www.cerebras.ai/press-release/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference",
     "sample_title": "AMD and Cerebras Launch AI Inference Solution",
