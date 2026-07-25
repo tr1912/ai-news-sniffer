@@ -1,60 +1,39 @@
 {
   "date": "2026-07-25",
-  "generated_at": "2026-07-25T09:35:25.920790Z",
-  "run_id": "2026-07-25-6d3767a7",
-  "daily_summary_zh": "Anthropic发布Claude Opus 5模型；llama.cpp发布b10106更新；arXiv新研究探索代码模型表征的通用性。",
+  "generated_at": "2026-07-25T14:38:16.286149Z",
+  "run_id": "2026-07-25-714ea2ba",
+  "daily_summary_zh": "模型暂不可用，本期仅展示来源标题与摘要。",
   "events": [
     {
-      "id": "event-1",
+      "id": "degraded-489b1bceadfc9bb4",
       "candidate_ids": [
-        "d724d5933e511687",
-        "d697a52dc7dbfe0c"
+        "489b1bceadfc9bb4"
       ],
-      "category": "models",
-      "title_zh": "Anthropic正式发布Claude Opus 5，性能接近Fable 5但成本减半",
-      "summary_zh": "Anthropic于7月24-25日发布最新旗舰AI模型Claude Opus 5，在编程、Agent任务及复杂推理上进一步提升，整体性能接近更高端的Claude Fable 5，但API价格维持Opus 4.8水平（输入5美元/百万Token，输出25美元/百万Token），适合企业办公、软件开发等高频场景，并增强了安全性和抗滥用能力。",
-      "why_it_matters_zh": "Anthropic以更低成本提供接近旗舰级的模型性能，将推动更多企业采用其AI服务，同时加剧了与OpenAI等竞争对手的模型性价比竞争。",
-      "importance_score": 85.0,
-      "confirmation_status": "cross_confirmed",
-      "primary_source": {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "title": "9点1氪｜宇树科技CEO王兴兴登上《时代》杂志封面；国家反诈中心App可一键检测AI生成痕迹；Claude Opus 5正式发布",
-        "url": "https://36kr.com/p/3910351337821318?f=rss",
-        "published_at": "2026-07-25T00:57:52Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-3",
-      "candidate_ids": [
-        "a4a84423f7a18c06"
-      ],
-      "category": "research",
-      "title_zh": "新研究揭示代码模型表征的通用性取决于任务而非模型架构",
-      "summary_zh": "该研究在Python和Rust两种语言上，对Qwen2.5-Coder-7B和DeepSeek-Coder-V1-6.7B模型进行概念电路提取，发现哪些概念获得专用回路（What）由任务决定，而回路位置（Where）和增长方式（How）由模型决定，表明表征通用性是一种属性依赖。",
-      "why_it_matters_zh": "为理解不同代码模型内部表征的异同提供了系统性分析，有助于指导未来模型的改进和跨模型知识迁移。",
-      "importance_score": 70.0,
+      "category": "open-source",
+      "title_zh": "vLLM Releases: v0.26.0",
+      "summary_zh": "vLLM v0.26.0 Release Notes Highlights This release features 411 commits from 212 contributors (61 new)! New Inkling model family with a full support stack: base modeling (#48799), piecewise CUDA graph support (#48822), Hopper FA4 relative attention (#48858), MTP=1 speculative decoding (#48869), LoRA (#48884), and standard ModelOpt NVFP4 quantizatio",
+      "why_it_matters_zh": "",
+      "importance_score": 69.46480555555556,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
-        "source_id": "arxiv-ai",
-        "source_name": "arXiv AI",
-        "title": "What, Where, and How: Disentangling the Roles of Task, Language, and Model in Code Model Representations",
-        "url": "https://arxiv.org/abs/2607.21491v1",
-        "published_at": "2026-07-23T16:34:14Z"
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "title": "vLLM Releases: v0.26.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.26.0",
+        "published_at": "2026-07-25T10:38:53Z"
       },
       "related_sources": []
     },
     {
-      "id": "event-2",
+      "id": "degraded-b2e7f46d3398ff91",
       "candidate_ids": [
         "b2e7f46d3398ff91"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp 发布 b10106 版本更新",
-      "summary_zh": "llama.cpp 发布 b10106 版本，修复了 CUDA 外部编译中 q1_0 MMQ 的问题，并提供多种平台（macOS、Linux、iOS）的预编译二进制文件。",
-      "why_it_matters_zh": "llama.cpp 是本地运行大语言模型的重要开源工具，持续更新有助于开发者稳定高效地在消费者硬件上部署 AI 推理。",
-      "importance_score": 60.0,
+      "title_zh": "llama.cpp Releases: b10106",
+      "summary_zh": "CUDA: fix external compilation of q1_0 MMQ (#25778) Website: macOS/iOS: macOS Apple Silicon (arm64) macOS Apple Silicon (arm64, KleidiAI enabled) DISABLED macOS Intel (x64) iOS XCFramework Linux: Ubuntu x64 (CPU) Ubuntu arm64 (CPU) Ubuntu s390x (CPU) Ubuntu x64 (Vulkan) [Ubuntu arm64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download",
+      "why_it_matters_zh": "",
+      "importance_score": 54.157805555555555,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
@@ -66,17 +45,19 @@
       "related_sources": []
     }
   ],
-  "degraded": false,
-  "warnings": [],
+  "degraded": true,
+  "warnings": [
+    "model chain failed: community source cannot be primary. Falling back to degraded mode with 30 raw candidates."
+  ],
   "report_url": null,
   "source_coverage": {
     "enabled": 9,
-    "fetched": 149,
-    "normalized": 149,
-    "filtered": 112,
+    "fetched": 154,
+    "normalized": 154,
+    "filtered": 117,
     "ai_candidates": 30,
-    "prompt_chars": 9925,
-    "estimated_input_tokens": 2481,
+    "prompt_chars": 10887,
+    "estimated_input_tokens": 2721,
     "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }

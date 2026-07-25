@@ -45,6 +45,21 @@
     "enabled": false
   },
   {
+    "domain": "antirez.com",
+    "sample_url": "https://antirez.com/news/171",
+    "sample_title": "Being Linux Torvalds",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "apps.apple.com",
     "sample_url": "https://apps.apple.com/us/app/life-tile-auto-tracker/id6767332648",
     "sample_title": "Show HN: Life Tile – Passive time tracker that shows your day as a Mondrian grid",
@@ -63,6 +78,21 @@
     "domain": "arcprize.org",
     "sample_url": "https://arcprize.org/leaderboard",
     "sample_title": "ARC-AGI Leaderboard",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "areadenial.games",
+    "sample_url": "https://areadenial.games/design/preface#00-01",
+    "sample_title": "League of Legends designer shares game design field manual",
     "first_seen_at": "2026-07-25T16:00:00Z",
     "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
@@ -138,6 +168,21 @@
     "domain": "blog.cloudflare.com",
     "sample_url": "https://blog.cloudflare.com/bgp-origin-attribute/",
     "sample_title": "BGP ORIGIN attribute manipulation and its impact on the Internet",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "blog.getutm.app",
+    "sample_url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
+    "sample_title": "Triton: DirectX 11 driver for QEMU",
     "first_seen_at": "2026-07-25T16:00:00Z",
     "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
@@ -480,9 +525,39 @@
     "enabled": false
   },
   {
+    "domain": "ew.com",
+    "sample_url": "https://ew.com/blade-runner-2099-exclusive-first-look-replicant-uprising-12020855",
+    "sample_title": "Blade Runner 2099 exclusive first look at the replicant uprising",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "extinct-media-museum.blog.jp",
     "sample_url": "https://extinct-media-museum.blog.jp/otemachi/",
     "sample_title": "Extinct Media Museum Tokyo",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "finance.yahoo.com",
+    "sample_url": "https://finance.yahoo.com/technology/ai/articles/stripe-talks-acquire-openrouter-potential-215104525.html",
+    "sample_title": "Stripe in talks to acquire OpenRouter in potential $10B deal, WSJ reports",
     "first_seen_at": "2026-07-25T16:00:00Z",
     "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
@@ -1335,6 +1410,21 @@
     "enabled": false
   },
   {
+    "domain": "supakeen.com",
+    "sample_url": "https://supakeen.com/weblog/the-fedora-45-sausage-factory/",
+    "sample_title": "The Fedora 45 Sausage Factory",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "tactkicks.com",
     "sample_url": "https://tactkicks.com/",
     "sample_title": "Soccer/Wordle/Chess",
@@ -1426,8 +1516,8 @@
   },
   {
     "domain": "twitter.com",
-    "sample_url": "https://twitter.com/trq212/status/2080710971228918066",
-    "sample_title": "\"We removed over 80% of Claude Code's system prompt for Opus 5 and Fable 5\"",
+    "sample_url": "https://twitter.com/fried_rice/status/2080059356322918777",
+    "sample_title": "Kimi K3 exploited the latest Redis server",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
@@ -1549,6 +1639,36 @@
     "sample_url": "https://www.andrewzigler.com/feed/the-case-for-muds-in-modern-times",
     "sample_title": "The case for MUDs in modern times (2018)",
     "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.augmental.tech",
+    "sample_url": "https://www.augmental.tech/",
+    "sample_title": "MouthPad: A Tongue-Controlled Touchpad",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.bloomberg.com",
+    "sample_url": "https://www.bloomberg.com/news/features/2026-07-24/why-debt-is-one-of-humanity-s-most-beautiful-inventions",
+    "sample_title": "Why Debt Is One of Humanity's Most Beautiful Inventions",
+    "first_seen_at": "2026-07-25T16:00:00Z",
     "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
@@ -1740,6 +1860,21 @@
     "enabled": false
   },
   {
+    "domain": "www.heise.de",
+    "sample_url": "https://www.heise.de/en/news/Dobrindt-ID-requirement-to-halt-freedom-of-information-11376646.html",
+    "sample_title": "ID requirement to halt freedom of information in Germany",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.honest-broker.com",
     "sample_url": "https://www.honest-broker.com/p/the-collapse-at-netflix-signals-the",
     "sample_title": "The Collapse at Netflix Signals the End of Audience Capture",
@@ -1906,10 +2041,10 @@
   },
   {
     "domain": "www.reuters.com",
-    "sample_url": "https://www.reuters.com/legal/litigation/indian-court-rules-favor-openai-copyright-lawsuit-brought-by-news-agency-ani-2026-07-24/",
-    "sample_title": "Indian court says OpenAI did not violate news agency ANI's copyright",
+    "sample_url": "https://www.reuters.com/graphics/IRAN-WAR/FERTILIZER/zjvqgwgakvx/",
+    "sample_title": "The Iran War threatened a food crisis with soaring fertilizer costs",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -1995,6 +2130,21 @@
     "enabled": false
   },
   {
+    "domain": "www.theatlantic.com",
+    "sample_url": "https://www.theatlantic.com/technology/2026/07/meta-strike-3-porn-lawsuit/688023/",
+    "sample_title": "Why Would Meta Download So Much Porn?",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.theguardian.com",
     "sample_url": "https://www.theguardian.com/technology/2026/jul/24/openai-rogue-hacker",
     "sample_title": "Be skeptical of OpenAI's rogue hacker agent story",
@@ -2030,6 +2180,21 @@
     "sample_title": "Light Flip Phone",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.theparisreview.org",
+    "sample_url": "https://www.theparisreview.org/blog/2020/01/23/the-silurian-hypothesis/",
+    "sample_title": "The Silurian Hypothesis (2020)",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2146,8 +2311,8 @@
   },
   {
     "domain": "www.youtube.com",
-    "sample_url": "https://www.youtube.com/watch?v=U8Omt6K8OnM",
-    "sample_title": "The universe isn't random – it's something stranger – Stephen Wolfram [video]",
+    "sample_url": "https://www.youtube.com/watch?v=zLZwpH5lCD4",
+    "sample_title": "Don't Take the Black Pill [video]",
     "first_seen_at": "2026-07-25T16:00:00Z",
     "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
