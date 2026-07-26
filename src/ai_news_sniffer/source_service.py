@@ -44,6 +44,7 @@ def collect_source_candidates(
         if health.get(source_id) is None
         or health[source_id].last_attempt_at is None
         or (until - health[source_id].last_attempt_at) >= PAUSED_RETRY_COOLDOWN
+        or health[source_id].last_attempt_at.date() != until.date()
     }
     selected = resolve_sources(
         settings.sources,

@@ -125,7 +125,9 @@ def test_auto_paused_source_is_retried_after_cooldown(tmp_path: Path) -> None:
 def test_auto_paused_source_is_skipped_before_cooldown(tmp_path: Path) -> None:
     settings = load_settings(ROOT / "config")
     health_store = SourceHealthStore(tmp_path)
-    old_attempt = UNTIL - timedelta(hours=23)
+    # Same calendar day, less than 24 hours since last attempt.
+    until = datetime(2026, 7, 24, 20, tzinfo=UTC)
+    old_attempt = until - timedelta(hours=1)
     for number in range(7):
         health_store.record_failure(
             "anthropic-news",
@@ -139,8 +141,8 @@ def test_auto_paused_source_is_skipped_before_cooldown(tmp_path: Path) -> None:
     result = collect_source_candidates(
         settings=settings,
         runtime_root=tmp_path,
-        since=SINCE,
-        until=UNTIL,
+        since=datetime(2026, 7, 22, tzinfo=UTC),
+        until=until,
         profile="light",
         client=httpx.Client(),
         adapter_factory=factory,
