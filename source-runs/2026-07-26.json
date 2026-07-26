@@ -1,0 +1,814 @@
+{
+  "enabled_source_ids": [
+    "nvidia-genai",
+    "huggingface-blog",
+    "arxiv-ai",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 101,
+  "normalized_count": 101,
+  "filtered_count": 85,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "硬氪首发 | 复旦教授、前英特尔首席科学家做端侧具身大脑，「眸深智能」完成近亿元Pre-A轮追加融资",
+        "url": "https://36kr.com/p/3911162147640456?f=rss",
+        "published_at": "2026-07-26T01:00:00Z",
+        "fetched_at": "2026-07-26T03:33:54.799625Z",
+        "language": "unknown",
+        "excerpt": "<p>作者&nbsp;|&nbsp;邱晓芬</p>\n  <p>编辑&nbsp;|&nbsp;袁斯来</p>\n  <p>硬氪获悉，「眸深智能」（Motion Brain）完成近亿元Pre-A轮追加融资，本轮投资方包括中国头部物业服务公司、香港财团、多家上市公司联合打造的产业投资平台瑾悦投资、创合汇资本，以及老股东徐汇资本。</p>\n  <p>这也是继2026年5月3亿元Pre-A轮之后，「眸深智能」两个月内再次获得投资，此外，该公司Pre-A+轮的近5亿融资也在交割当中。该公司透露，今年上半年以来，「眸深智能」的估值增长超10倍，是业内发展速度最快的具身大脑企业之一。</p>\n  <p>「眸深智能」成立于2025年1月，定位为全球最懂动作的自进化具身大脑公司，致力于\"给10亿台机器人装原生通用大脑\"。</p>\n  <p>该公司由复旦大学深度学习实验室主任陈涛教授、原英特尔中国首席科学家张益民博士，与连续创业者穆泽林共同创办。核心团队拥有海思、英特尔、英伟达三大芯片巨头的背景人士，是国内少数具备算子级适配能力的具身大模型团队。</p>\n  <p>尽管2025年才注册成立，「眸深智能」的技术积累从2022年已经开始。在技术路线上，「眸深智能」选择了一条与主流VLA（视觉-语言-动作）不同的路径——以动作为核心的\"世界动作模型\"（World Motion Model）。</p>\n  <p class=\"image-wrapper\"><img src=\"https://img.36krcdn.com/hsossms/20260725/v2_adde42ccc1284ca98cb44e97b6d41f5a@1199336245_oswg77948oswg1080oswg810_img_000?x-oss-process=image/format,jpg/interlace,1\" /></p>\n  <p class=\"img-desc\">（图源/企业）</p>\n  <p>从2022年起，「眸深智能」团队已经发布了<strong>MLD（隐空间动作扩散模型）</strong>。在当时，行业主流是将动作视为离散的信号，导致生成的动作僵硬且缺乏多样性，而「眸深智能」团队在全球dede范围内首次提出将动作映射到隐空间（Latent Space），并引入扩散模型（Diffusion Model）。</p>\n  <p><strong>MLD</strong>相当于让AI学会了“无师自通”地生成动作：不再需要逐帧教机器人如何走路，而是让模型像画家去噪一样，从一团随机噪声中还原出自然、连贯的人体姿态。</p>\n  <p>如果说MLD解决了“怎么生成动作”，「眸深智能」又进一步着眼于如何“指挥动作”。2023年9月，团队创造性发布了<strong>MotionGPT</strong>。类比",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b2b519141fe26fdc",
+        "canonical_url": "https://36kr.com/p/3911162147640456?f=rss",
+        "normalized_title": "硬氪首发 复旦教授 前英特尔首席科学家做端侧具身大脑 眸深智能 完成近亿元pre a轮追加融资",
+        "fingerprint": "b2b519141fe26fdc3b86216932762ff6414d807b0b09804085018b0ae20066d1",
+        "rule_score": 79.5
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "高盛：MiniMax-W重申“买入”评级 目标价860港元",
+        "url": "https://36kr.com/newsflashes/3911788906386823?f=rss",
+        "published_at": "2026-07-26T01:17:27Z",
+        "fetched_at": "2026-07-26T03:33:54.799807Z",
+        "language": "unknown",
+        "excerpt": "高盛发布研报称，MiniMax-W的多模态策略为其关键差异化优势，H3模型已进入推出前最后阶段，预期即将面世，相信会对多模态行业格局带来深远影响，重申MiniMax“买入”评级，目标价860港元。高盛指出，MiniMax创办人兼首席执行官闫俊杰近日在分析员会议上，透露未来重点将专注于为旗下每个模型追求最佳的性价比，特别是目前M3模型每日处理万亿级Token，开放平台/API收入已达健康毛利率水平，目标最终实现高双位数毛利率，又预期9月至10月将推出的M3 Pro将拥有显著成本效益。（新浪财经）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "67275316972953f6",
+        "canonical_url": "https://36kr.com/newsflashes/3911788906386823?f=rss",
+        "normalized_title": "高盛 minimax w重申 买入 评级 目标价860港元",
+        "fingerprint": "67275316972953f6fa1ae195032f757c317f89280ae368ace428703ae6792dcd",
+        "rule_score": 55.52908333333333
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "李在明：人工智能时代为韩国带来全新机遇",
+        "url": "https://36kr.com/newsflashes/3911788141286792?f=rss",
+        "published_at": "2026-07-26T01:16:40Z",
+        "fetched_at": "2026-07-26T03:33:54.799820Z",
+        "language": "unknown",
+        "excerpt": "韩国总统李在明周六表示，人工智能时代的到来给韩国带来全新机遇，他承诺推动韩国从产业追赶者蜕变为全球行业领军国家。李在明表示，全新人工智能浪潮为韩国送上难得的发展机遇，他致力于将韩国打造为无可替代的国家，让各国形成“发展产业离不开韩国”的共识。此前一日，李在明出席高端产业合作峰会，英伟达、OpenAI、Anthropic等多家美国全球科技巨头，与三星电子、SK海力士等韩国企业签署多项商业合作协议。总统府官员此前透露，本次达成的合作项目总规模高达9500亿美元。（新浪财经）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0144f7060e8af559",
+        "canonical_url": "https://36kr.com/newsflashes/3911788141286792?f=rss",
+        "normalized_title": "李在明 人工智能时代为韩国带来全新机遇",
+        "fingerprint": "0144f7060e8af5595cec6e937a51a65bde1d50024911c6c68d0c8f8494674215",
+        "rule_score": 55.52777777777778
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "中南大学：收到费某某学位论文涉嫌抄袭举报，已成立调查组全面核查",
+        "url": "https://36kr.com/newsflashes/3911804929332611?f=rss",
+        "published_at": "2026-07-26T01:33:45Z",
+        "fetched_at": "2026-07-26T03:33:54.799742Z",
+        "language": "unknown",
+        "excerpt": "中南大学研究生院7月25日发布情况通报：近日我校收到相关举报，反映商学院2002届同等学力硕士费某某学位论文涉嫌抄袭。学校已成立调查组，进行全面核查工作。学校始终严守学术底线、维护学术规范，对学术不端行为绝不姑息。（界面新闻）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cc041c1b1caa1001",
+        "canonical_url": "https://36kr.com/newsflashes/3911804929332611?f=rss",
+        "normalized_title": "中南大学 收到费某某学位论文涉嫌抄袭举报 已成立调查组全面核查",
+        "fingerprint": "cc041c1b1caa100193df92da082bfe562a40f53b80992a6339c44c7a95df9507",
+        "rule_score": 51.55625
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "瑞银：中国再保险升至“买入”评级 目标价上调至1.75港元",
+        "url": "https://36kr.com/newsflashes/3911790076368000?f=rss",
+        "published_at": "2026-07-26T01:18:38Z",
+        "fetched_at": "2026-07-26T03:33:54.799795Z",
+        "language": "unknown",
+        "excerpt": "瑞银发布研报称，将中国再保险 投资评级由“中性”上调至“买入”，目标价由1.7港元上调至1.75港元，预测该公司上半年税后净利润将同比增长10%至69亿元人民币，主要受到保险服务业绩全面增长所带动，而非投资收益。瑞银将中再保2026至2028年每股盈利预测分别上调8%、13%及7%，至0.3元、0.34元及0.35元人民币。瑞银估计，上半年财险再保险保费同比增长2%，其中境内保费增长3%，受惠于非车险业务比重较高，预期增长幅度将跑赢行业，境外保费则大致平稳。（新浪财经）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "191e6c251339e851",
+        "canonical_url": "https://36kr.com/newsflashes/3911790076368000?f=rss",
+        "normalized_title": "瑞银 中国再保险升至 买入 评级 目标价上调至1 75港元",
+        "fingerprint": "191e6c251339e85161a7d01000f7001c20dbc55d3550762ddb8ad2da90657a60",
+        "rule_score": 51.531055555555554
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "2026暑期档电影票房破55亿",
+        "url": "https://36kr.com/newsflashes/3911784384451714?f=rss",
+        "published_at": "2026-07-26T01:12:51Z",
+        "fetched_at": "2026-07-26T03:33:54.799851Z",
+        "language": "unknown",
+        "excerpt": "据网络平台数据，截至目前，2026年暑期档电影总票房（含预售）突破55亿元。2026年度电影总票房（含预售）突破212亿元。（财联社）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cd87e1b407ebcf84",
+        "canonical_url": "https://36kr.com/newsflashes/3911784384451714?f=rss",
+        "normalized_title": "2026暑期档电影票房破55亿",
+        "fingerprint": "cd87e1b407ebcf84a8adc5966270bff3cedc27ad7d2d1431dc2f729abfaf63e9",
+        "rule_score": 51.52141666666667
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "SK崔泰源：韩国需转型为“AI原生”国家",
+        "url": "https://36kr.com/newsflashes/3911821420303744?f=rss",
+        "published_at": "2026-07-26T01:50:31Z",
+        "fetched_at": "2026-07-26T03:33:54.799728Z",
+        "language": "unknown",
+        "excerpt": "SK海力士掌门人崔泰源表示，韩国必须成为一个“AI原生国家”，并补充道：“目标是实现每个人至少拥有一个AI智能体。”他表示：“如果这一目标实现，韩国将成为全球AI试验场，让各种AI技术能够在这里进行实验和应用。”崔泰源称，SK集团将通过持续不断的研发投入，为AI发展提供更多机会。崔泰源还强调，降低AI成本至关重要。他表示：“目前，AI成本过高。”“我们必须通过各种方式降低成本，让世界更多人能够享受到AI带来的益处。”崔泰源表示，韩国可以通过扩大存储芯片生产规模，以及建设更多AI数据中心，降低AI成本，并打造连接美国、欧洲和亚洲的全球AI数据中心枢纽。（新浪财经）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "095c57d236724010",
+        "canonical_url": "https://36kr.com/newsflashes/3911821420303744?f=rss",
+        "normalized_title": "sk崔泰源 韩国需转型为 ai原生 国家",
+        "fingerprint": "095c57d23672401099e3980beba1bb0204c38d9eee7f7420b095c8c62b66ded0",
+        "rule_score": 47.58419444444444
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "下周，SK海力士、三星电子和铠侠将公布最新财报，或影响下一阶段芯片股走势",
+        "url": "https://36kr.com/newsflashes/3911802943935620?f=rss",
+        "published_at": "2026-07-26T01:31:43Z",
+        "fetched_at": "2026-07-26T03:33:54.799769Z",
+        "language": "unknown",
+        "excerpt": "下周，SK海力士、三星及铠侠三家存储龙头即将公布最新业绩。在市场对AI投资可持续性及存储长约可靠性的疑虑下，这几份财报也将成为检验巨头在这一轮周期中盈利能力的“试金石”。三份财报能否证明AI需求仍在转化为HBM、DRAM和企业级固态硬盘订单，或将影响下一阶段芯片股走势。（中新经纬）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f228a7ea4288af39",
+        "canonical_url": "https://36kr.com/newsflashes/3911802943935620?f=rss",
+        "normalized_title": "下周 sk海力士 三星电子和铠侠将公布最新财报 或影响下一阶段芯片股走势",
+        "fingerprint": "f228a7ea4288af39342d97936568360b8f8d323729884e365a7195067c356cd5",
+        "rule_score": 47.55286111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+        "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+        "published_at": "2026-07-26T01:30:00Z",
+        "fetched_at": "2026-07-26T03:33:54.948047Z",
+        "language": "unknown",
+        "excerpt": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan, Connie Loizos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4d88192268b02ea6",
+        "canonical_url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai",
+        "normalized_title": "monday com is the latest tech company to blame ai for layoffs here are 20 others",
+        "fingerprint": "4d88192268b02ea6c31aabd7481975f074db1b6b0b3dece58b0b10d4a30cb9c4",
+        "rule_score": 47.55
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Axtary – Content Authorization for AI Agents",
+        "url": "https://axtary.com/",
+        "published_at": "2026-07-26T01:02:04Z",
+        "fetched_at": "2026-07-26T03:33:57.403930Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Axtary",
+        "upstream_urls": [
+          "https://axtary.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49053543,
+          "score": 3
+        },
+        "id": "2ccd1606f7fa53eb",
+        "canonical_url": "https://axtary.com/",
+        "normalized_title": "show hn axtary content authorization for ai agents",
+        "fingerprint": "2ccd1606f7fa53eb099554067580c807eb75fdd2d76e4c6ec39a2b1370fc6dac",
+        "rule_score": 44.50344444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I scanned my AI agent framework for destructive/consequential actions, and wow",
+        "url": "https://www.actenon.com/",
+        "published_at": "2026-07-26T00:58:07Z",
+        "fetched_at": "2026-07-26T03:33:57.575729Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Bucko1",
+        "upstream_urls": [
+          "https://www.actenon.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49053520,
+          "score": 4
+        },
+        "id": "ff5d58d9b9cdf1ab",
+        "canonical_url": "https://www.actenon.com/",
+        "normalized_title": "i scanned my ai agent framework for destructive consequential actions and wow",
+        "fingerprint": "ff5d58d9b9cdf1ab80b63f006b956969ec3c6114d6a773963ebcd986af95def2",
+        "rule_score": 44.49686111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
+        "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
+        "published_at": "2026-07-25T23:32:50Z",
+        "fetched_at": "2026-07-26T03:33:56.777113Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "oliculipolicula",
+        "upstream_urls": [
+          "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf"
+        ],
+        "raw_metadata": {
+          "hn_id": 49052912,
+          "score": 98
+        },
+        "id": "aabc50c30281bb5f",
+        "canonical_url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
+        "normalized_title": "deepseek pause fundraise after comments on compute gap to us leaked transcript pdf",
+        "fingerprint": "aabc50c30281bb5f0d316a2c7aeb32ed7fdbff0ff862c6767018603e5b2f533d",
+        "rule_score": 44.35472222222222
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "世界杯带动旅游热度不减：夺冠后西班牙机票搜索量激增33倍，南美游咨询热度翻倍增长",
+        "url": "https://36kr.com/newsflashes/3911804395951234?f=rss",
+        "published_at": "2026-07-26T01:33:12Z",
+        "fetched_at": "2026-07-26T03:33:54.799756Z",
+        "language": "unknown",
+        "excerpt": "近日，多家旅游平台和旅行社披露的数据显示，世界杯参赛国家的相关旅游咨询量和搜索量猛增。西班牙夺冠世界杯后：机票搜索量激增33倍，中秋国庆多批跟团游已成团。西班牙夺冠的消息一出，中国旅行者的反应几乎是即时性的。去哪儿旅行指数显示，截至7月20日9:00，即夺冠后数小时内，巴塞罗那机票搜索量较前一小时增长1.6倍。其中，深圳-巴塞罗那航线搜索量环比暴增33倍。昆明、青岛、贵阳飞巴塞罗那的搜索热度同样迅速攀升，昆明-巴塞罗那搜索量同比上周增长10倍。（澎湃新闻）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cb86ac5dc691826a",
+        "canonical_url": "https://36kr.com/newsflashes/3911804395951234?f=rss",
+        "normalized_title": "世界杯带动旅游热度不减 夺冠后西班牙机票搜索量激增33倍 南美游咨询热度翻倍增长",
+        "fingerprint": "cb86ac5dc691826abb5ae1a215eddbedf9fb81419eaf7c051404659d63ae6660",
+        "rule_score": 43.55533333333334
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "特斯拉一周跌没18%，马斯克自嘲回应财富急速缩水",
+        "url": "https://36kr.com/newsflashes/3911795043816840?f=rss",
+        "published_at": "2026-07-26T01:23:41Z",
+        "fetched_at": "2026-07-26T03:33:54.799782Z",
+        "language": "unknown",
+        "excerpt": "特斯拉周五跌超2%，本周累跌近18%，创2022年以来最大单周跌幅；SpaceX跌超2%，创该公司上月美国IPO以来最低收盘价，本周跌约7%。由此，马斯克的个人财富一周内蒸发了约1300亿美元（约人民币8803.86亿元），距离他成为世界上首位万亿富翁仅过去了几周时间。面对财富的急速缩水，马斯克本人日前在社交平台上发帖自嘲：“（前）万亿富翁。”（中新经纬）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a1beae2148730dd5",
+        "canonical_url": "https://36kr.com/newsflashes/3911795043816840?f=rss",
+        "normalized_title": "特斯拉一周跌没18 马斯克自嘲回应财富急速缩水",
+        "fingerprint": "a1beae2148730dd5d54866c6d0ce472d6f8cd80cda775aa8d5240f0822760e89",
+        "rule_score": 43.53947222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "UK AISI / Caisi Preliminary Assessment of Kimi K3's Cyber Capabilities",
+        "url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+        "published_at": "2026-07-25T04:20:21Z",
+        "fetched_at": "2026-07-26T03:33:58.714109Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "walrus01",
+        "upstream_urls": [
+          "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities"
+        ],
+        "raw_metadata": {
+          "hn_id": 49044492,
+          "score": 124
+        },
+        "id": "3ae9119e64652354",
+        "canonical_url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+        "normalized_title": "uk aisi caisi preliminary assessment of kimi k3 s cyber capabilities",
+        "fingerprint": "3ae9119e64652354fa091bf1305d0ab101706e11f3ce71446f17b47eb3dc4a3b",
+        "rule_score": 42.43391666666667
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "ModelExpress: Distributing Model Artifacts at the Speed of Light",
+        "url": "https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/",
+        "published_at": "2026-07-24T16:45:00Z",
+        "fetched_at": "2026-07-26T03:33:51.510928Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/07/image5-11-768x432.jpg\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"image5\" width=\"768\" />Every byte moved has a cost. As model checkpoints grow to hundreds of gigabytes or even a terabyte, that cost adds up quickly. To make things even worse, moving...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Elizabeth Goodman",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c50a262551db0d3e",
+        "canonical_url": "https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light",
+        "normalized_title": "modelexpress distributing model artifacts at the speed of light",
+        "fingerprint": "c50a262551db0d3e41399d034db0fccb6007dc8a604169fdc44586eafa1b028d",
+        "rule_score": 42.275
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "VC价格一个多月涨幅超40%，厂商限量供货",
+        "url": "https://36kr.com/newsflashes/3910693301654656?f=rss",
+        "published_at": "2026-07-25T07:07:36Z",
+        "fetched_at": "2026-07-26T03:33:54.799932Z",
+        "language": "unknown",
+        "excerpt": "百川盈孚数据显示，7月24日VC均价为20万元/吨，近一个多月涨幅超40%；其中7月23日单日跳涨2万元/吨，时隔4年多再破20万元/吨关口。受产品涨价刺激，A股VC板块迎来大涨。7月23日，孚日股份等多股涨停。“明显感觉供应紧张起来了，目前大多数VC厂商都限量供货，不再是想要多少就能拿到多少。”华中地区一位电解液企业相关负责人告诉记者，现阶段VC厂都很强势，账款哪怕逾期一天，第二天就停止发货了。（证券时报）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "492c5c7fac082ae0",
+        "canonical_url": "https://36kr.com/newsflashes/3910693301654656?f=rss",
+        "normalized_title": "vc价格一个多月涨幅超40 厂商限量供货",
+        "fingerprint": "492c5c7fac082ae0d4273407ff78bded111f46220343e31769eeb33c28702428",
+        "rule_score": 41.712666666666664
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "三星电子与博通达成价值2000亿美元的半导体供应合作协议",
+        "url": "https://36kr.com/newsflashes/3910562246645128?f=rss",
+        "published_at": "2026-07-25T06:15:11Z",
+        "fetched_at": "2026-07-26T03:33:54.799957Z",
+        "language": "unknown",
+        "excerpt": "据报道，三星电子与博通达成价值2000亿美元的半导体供应合作协议。（第一财经）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bb3fc1ba25c5887e",
+        "canonical_url": "https://36kr.com/newsflashes/3910562246645128?f=rss",
+        "normalized_title": "三星电子与博通达成价值2000亿美元的半导体供应合作协议",
+        "fingerprint": "bb3fc1ba25c5887ebe0514581e62e685f3ca612f07cbd5b01f091045ae5e5e0f",
+        "rule_score": 41.625305555555556
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "三星电子、SK海力士将与美国科技巨头推进规模达1375万亿韩元的芯片合作项目",
+        "url": "https://36kr.com/newsflashes/3910551543289216?f=rss",
+        "published_at": "2026-07-25T06:11:43Z",
+        "fetched_at": "2026-07-26T03:33:54.799970Z",
+        "language": "unknown",
+        "excerpt": "媒体援引韩国总统顾问消息：三星电子、SK海力士将与美国科技巨头推进规模达1375万亿韩元的芯片合作项目。（新浪财经）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "612c295ad585b932",
+        "canonical_url": "https://36kr.com/newsflashes/3910551543289216?f=rss",
+        "normalized_title": "三星电子 sk海力士将与美国科技巨头推进规模达1375万亿韩元的芯片合作项目",
+        "fingerprint": "612c295ad585b932c678dd61b4499baef907f0dd4c0c9beefc98e15b095e0203",
+        "rule_score": 41.619527777777776
+      },
+      {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "source_group": "media",
+        "independence_group": "36kr",
+        "title": "“景德镇手工瓷业遗存”申遗成功！我国世界遗产达61项",
+        "url": "https://36kr.com/newsflashes/3910543068009602?f=rss",
+        "published_at": "2026-07-25T05:47:14Z",
+        "fetched_at": "2026-07-26T03:33:54.799982Z",
+        "language": "unknown",
+        "excerpt": "北京时间7月25日，在韩国釜山举行的第48届世界遗产大会上，由我国申报的“景德镇手工瓷业遗存”项目经世界遗产委员会审议，成功列入《世界遗产名录》。这标志着这座享有“千年瓷都”美誉的历史文化名城，正式斩获全球最高等级的文化认证，成为我国第61项世界遗��。（央视新闻）",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4403e7e1ec9992c4",
+        "canonical_url": "https://36kr.com/newsflashes/3910543068009602?f=rss",
+        "normalized_title": "景德镇手工瓷业遗存 申遗成功 我国世界遗产达61项",
+        "fingerprint": "4403e7e1ec9992c4fc7885a152b0d8568ada59e09fa9ada7645eb75699db006b",
+        "rule_score": 41.578722222222225
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Possible invasive species superspreader event near Strait of Hormuz",
+        "url": "https://abcnews.com/International/scientists-warn-invasive-species-superspreader-event-due-stalling/story?id=135051186",
+        "published_at": "2026-07-26T01:13:19Z",
+        "fetched_at": "2026-07-26T03:33:57.346972Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "russfink",
+        "upstream_urls": [
+          "https://abcnews.com/International/scientists-warn-invasive-species-superspreader-event-due-stalling/story?id=135051186"
+        ],
+        "raw_metadata": {
+          "hn_id": 49053603,
+          "score": 28
+        },
+        "id": "a7ba9fb40ee936b4",
+        "canonical_url": "https://abcnews.com/International/scientists-warn-invasive-species-superspreader-event-due-stalling/story?id=135051186",
+        "normalized_title": "possible invasive species superspreader event near strait of hormuz",
+        "fingerprint": "a7ba9fb40ee936b4a8962753c11c916af6179c3d3932b797142d5c51d35eb6dc",
+        "rule_score": 40.522194444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Collective Intelligence: The Next Frontier of AI",
+        "url": "https://github.com/ailinone/collective-intelligence",
+        "published_at": "2026-07-26T00:49:55Z",
+        "fetched_at": "2026-07-26T03:33:57.746443Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "alissonidalo",
+        "upstream_urls": [
+          "https://github.com/ailinone/collective-intelligence"
+        ],
+        "raw_metadata": {
+          "hn_id": 49053465,
+          "score": 4
+        },
+        "id": "4ac5f54307f0aef7",
+        "canonical_url": "https://github.com/ailinone/collective-intelligence",
+        "normalized_title": "collective intelligence the next frontier of ai",
+        "fingerprint": "4ac5f54307f0aef76a7f976568806dbb04b3a61e8d0fb507255e95448e3f6fb2",
+        "rule_score": 40.48319444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Clinical failure rates over the decades: yikes",
+        "url": "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes",
+        "published_at": "2026-07-25T22:57:17Z",
+        "fetched_at": "2026-07-26T03:33:55.392080Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "EA-3167",
+        "upstream_urls": [
+          "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes"
+        ],
+        "raw_metadata": {
+          "hn_id": 49052628,
+          "score": 63
+        },
+        "id": "541e87b3565d5563",
+        "canonical_url": "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes",
+        "normalized_title": "clinical failure rates over the decades yikes",
+        "fingerprint": "541e87b3565d5563ffef1e5e1a302ccef4d4115dbff5f40ca8cebfaf8a3536f4",
+        "rule_score": 40.29547222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "What is happening to jobs? Separating AI hype from reality",
+        "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+        "published_at": "2026-07-25T22:51:10Z",
+        "fetched_at": "2026-07-26T03:33:59.189446Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pod_krad",
+        "upstream_urls": [
+          "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality"
+        ],
+        "raw_metadata": {
+          "hn_id": 49052570,
+          "score": 58
+        },
+        "id": "d475098a9d9245a6",
+        "canonical_url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+        "normalized_title": "what is happening to jobs separating ai hype from reality",
+        "fingerprint": "d475098a9d9245a6df593a9e214dd5ce1addc669ed9ed14d623f1e52704f5f2c",
+        "rule_score": 40.28527777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Cloudflare's new AI traffic options for customers",
+        "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+        "published_at": "2026-07-25T22:50:49Z",
+        "fetched_at": "2026-07-26T03:33:55.562688Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "alphabetatango",
+        "upstream_urls": [
+          "https://blog.cloudflare.com/content-independence-day-ai-options/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49052564,
+          "score": 55
+        },
+        "id": "65d1865d9e4f7a4b",
+        "canonical_url": "https://blog.cloudflare.com/content-independence-day-ai-options",
+        "normalized_title": "cloudflare s new ai traffic options for customers",
+        "fingerprint": "65d1865d9e4f7a4b65cd7ebca4ea5d4a0530e3d7180fd2a0dfdacd1bfd74c370",
+        "rule_score": 40.28469444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI isn't killing consulting. It's killing time as a proxy for value",
+        "url": "https://www.markwilson.co.uk/thoughts/2026/07/16/ai-isnt-killing-consulting-its-killing-time-as-a-proxy-for-value/",
+        "published_at": "2026-07-25T22:04:00Z",
+        "fetched_at": "2026-07-26T03:33:58.886094Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "disillusioned1",
+        "upstream_urls": [
+          "https://www.markwilson.co.uk/thoughts/2026/07/16/ai-isnt-killing-consulting-its-killing-time-as-a-proxy-for-value/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49052081,
+          "score": 6
+        },
+        "id": "12c61d4d7fb170dc",
+        "canonical_url": "https://www.markwilson.co.uk/thoughts/2026/07/16/ai-isnt-killing-consulting-its-killing-time-as-a-proxy-for-value",
+        "normalized_title": "ai isn t killing consulting it s killing time as a proxy for value",
+        "fingerprint": "12c61d4d7fb170dc49c9f8105548e6ce577bb3ee1264deed8e275fbdafc8628d",
+        "rule_score": 40.20666666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Becoming a Research Engineer at a Big LLM Lab",
+        "url": "https://www.maxmynter.com/pages/blog/jobhunt",
+        "published_at": "2026-07-25T21:19:42Z",
+        "fetched_at": "2026-07-26T03:33:57.233179Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "felixdoerp",
+        "upstream_urls": [
+          "https://www.maxmynter.com/pages/blog/jobhunt"
+        ],
+        "raw_metadata": {
+          "hn_id": 49051707,
+          "score": 24
+        },
+        "id": "3030b1e65e9bdbb9",
+        "canonical_url": "https://www.maxmynter.com/pages/blog/jobhunt",
+        "normalized_title": "becoming a research engineer at a big llm lab",
+        "fingerprint": "3030b1e65e9bdbb97f716d6fdcb37a09d90c10772ec5fcc8ecc58664de33bb88",
+        "rule_score": 40.13283333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "LLM Usage in Debian: Three Proposals",
+        "url": "https://www.debian.org/vote/2026/vote_002",
+        "published_at": "2026-07-25T19:44:39Z",
+        "fetched_at": "2026-07-26T03:33:56.036050Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "zdw",
+        "upstream_urls": [
+          "https://www.debian.org/vote/2026/vote_002"
+        ],
+        "raw_metadata": {
+          "hn_id": 49050859,
+          "score": 98
+        },
+        "id": "b1647b6a503e2356",
+        "canonical_url": "https://www.debian.org/vote/2026/vote_002",
+        "normalized_title": "llm usage in debian three proposals",
+        "fingerprint": "b1647b6a503e23565031e3636d8252a60cd4d68fcac6c48295f036802e12fd9d",
+        "rule_score": 39.97441666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Running a 28.9M parameter LLM on an $8 microcontroller",
+        "url": "https://github.com/slvDev/esp32-ai",
+        "published_at": "2026-07-25T18:59:50Z",
+        "fetched_at": "2026-07-26T03:33:55.979252Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "boveyking",
+        "upstream_urls": [
+          "https://github.com/slvDev/esp32-ai"
+        ],
+        "raw_metadata": {
+          "hn_id": 49050512,
+          "score": 98
+        },
+        "id": "ef5eb96413eef5ed",
+        "canonical_url": "https://github.com/slvDev/esp32-ai",
+        "normalized_title": "running a 28 9m parameter llm on an 8 microcontroller",
+        "fingerprint": "ef5eb96413eef5ed34f702e62ba0d3824edeb7c24505eb89167241d267eb1478",
+        "rule_score": 39.89972222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Brolly, a plain-text weather forecast site",
+        "url": "https://brolly.sh/forecast/RWFP2qW8",
+        "published_at": "2026-07-25T17:34:34Z",
+        "fetched_at": "2026-07-26T03:33:56.548451Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jsax",
+        "upstream_urls": [
+          "https://brolly.sh/forecast/RWFP2qW8"
+        ],
+        "raw_metadata": {
+          "hn_id": 49049693,
+          "score": 140
+        },
+        "id": "d0eaf13ffc66ff76",
+        "canonical_url": "https://brolly.sh/forecast/RWFP2qW8",
+        "normalized_title": "show hn brolly a plain text weather forecast site",
+        "fingerprint": "d0eaf13ffc66ff765ca3dc8e5dc16c9ed871ec0e03568ca48179e28e1093ed8a",
+        "rule_score": 39.75761111111111
+      }
+    ],
+    "prompt_chars": 6026,
+    "estimated_input_tokens": 1506
+  },
+  "failures": {},
+  "newly_auto_paused_source_ids": []
+}

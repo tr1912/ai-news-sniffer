@@ -4,8 +4,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": null
   },
   "anthropic-news": {
@@ -22,8 +22,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": null
   },
   "cohere-blog": {
@@ -67,8 +67,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": null
   },
   "hf-daily-papers": {
@@ -85,8 +85,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": null
   },
   "jiqizhixin": {
@@ -109,12 +109,12 @@
   },
   "llama-cpp-releases": {
     "source_id": "llama-cpp-releases",
-    "consecutive_failures": 1,
+    "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
-    "last_error": "SourceFetchError: llama-cpp-releases: GitHub fetch failed"
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
+    "last_error": null
   },
   "meta-ai-blog": {
     "source_id": "meta-ai-blog",
@@ -157,8 +157,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": null
   },
   "openai-news": {
@@ -193,27 +193,27 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": null
   },
   "transformers-releases": {
     "source_id": "transformers-releases",
-    "consecutive_failures": 1,
+    "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
-    "last_error": "SourceFetchError: transformers-releases: GitHub fetch failed"
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
+    "last_error": null
   },
   "vllm-releases": {
     "source_id": "vllm-releases",
-    "consecutive_failures": 1,
+    "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-07-25T16:00:00Z",
-    "last_attempt_at": "2026-07-25T16:00:00Z",
-    "last_error": "SourceFetchError: vllm-releases: GitHub fetch failed"
+    "last_success_at": "2026-07-26T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
+    "last_error": null
   },
   "zhipu-research": {
     "source_id": "zhipu-research",

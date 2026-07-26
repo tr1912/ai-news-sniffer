@@ -1,0 +1,23 @@
+{
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T03:33:50.303698Z",
+  "run_id": "2026-07-26-e3b0c442",
+  "daily_summary_zh": "模型暂不可用，本期仅展示来源标题与摘要。",
+  "events": [],
+  "degraded": true,
+  "warnings": [
+    "model chain failed: unverified event cannot be published. Falling back to degraded mode with 30 raw candidates."
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 9,
+    "fetched": 101,
+    "normalized": 101,
+    "filtered": 85,
+    "ai_candidates": 30,
+    "prompt_chars": 6026,
+    "estimated_input_tokens": 1506,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
