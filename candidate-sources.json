@@ -180,6 +180,21 @@
     "enabled": false
   },
   {
+    "domain": "astral.sh",
+    "sample_url": "https://astral.sh/blog/ruff-v0.16.0",
+    "sample_title": "Ruff v0.16.0 – Significant new updates – 413 default rules up from 59",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "axtary.com",
     "sample_url": "https://axtary.com/",
     "sample_title": "Show HN: Axtary – Content Authorization for AI Agents",
@@ -480,6 +495,21 @@
     "enabled": false
   },
   {
+    "domain": "comuniq.xyz",
+    "sample_url": "https://comuniq.xyz/post?t=1439",
+    "sample_title": "No Stack Overflow, No Autocomplete: What Coding Felt Like in the 80s",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "danielc.dev",
     "sample_url": "https://danielc.dev/blog/slipperyslope/",
     "sample_title": "Technology is a slippery slope to the bottom",
@@ -557,7 +587,22 @@
   {
     "domain": "didtheyghostyou.com",
     "sample_url": "https://didtheyghostyou.com/",
-    "sample_title": "Did They Ghost You?",
+    "sample_title": "Did they ghost you?",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "discuss.grapheneos.org",
+    "sample_url": "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices",
+    "sample_title": "GrapheneOS protections against data extraction from locked devices",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -710,6 +755,36 @@
     "sample_title": "Emacs Is a Lispboard",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "english.mapn.ro",
+    "sample_url": "https://english.mapn.ro/",
+    "sample_title": "Third Drone Shot Down in Three Days in Romanian Territory",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "etbe.coker.com.au",
+    "sample_url": "https://etbe.coker.com.au/2026/07/24/systemd-linger/",
+    "sample_title": "Systemd Linger",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -887,7 +962,7 @@
   {
     "domain": "golfcoursebrowser.com",
     "sample_url": "https://golfcoursebrowser.com/",
-    "sample_title": "Show HN: I mapped every US golf course – 16k+ courses, free, no signup",
+    "sample_title": "Show HN: I mapped every US golf course",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -1037,7 +1112,7 @@
   {
     "domain": "itsallaboutthebit.com",
     "sample_url": "https://itsallaboutthebit.com/memory-safety-absolutists/",
-    "sample_title": "Memory Safety Absolutists",
+    "sample_title": "Memory safety absolutists",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -1142,7 +1217,7 @@
   {
     "domain": "kitsumed.github.io",
     "sample_url": "https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/",
-    "sample_title": "Android May Soon Restrict On-Device ADB",
+    "sample_title": "Android may soon restrict on-device ADB",
     "first_seen_at": "2026-07-25T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -1410,6 +1485,21 @@
     "enabled": false
   },
   {
+    "domain": "notes.hella.cheap",
+    "sample_url": "https://notes.hella.cheap/maybe-we-should-revisit-microkernels.html",
+    "sample_title": "Maybe we should revisit microkernels",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "nvlabs.github.io",
     "sample_url": "https://nvlabs.github.io/Sana/Video2/",
     "sample_title": "SANA-Video 2.0",
@@ -1455,6 +1545,21 @@
     "enabled": false
   },
   {
+    "domain": "old.reddit.com",
+    "sample_url": "https://old.reddit.com/r/ClaudeCode/comments/1v6y5q2/claude_code_has_a_hardcoded_instruction_telling/",
+    "sample_title": "Claude Code has a hardcoded instruction telling Opus 5 not to use subagents",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "openjdk.org",
     "sample_url": "https://openjdk.org/jeps/541",
     "sample_title": "JEP 541: Deprecate the macOS/x64 Port for Removal",
@@ -1475,6 +1580,21 @@
     "sample_title": "Encryption and Globalization 15 Years Later: E2EE and the \"Going Dark\" Debate",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "pkg.go.dev",
+    "sample_url": "https://pkg.go.dev/golang.org/x/tools/go/analysis",
+    "sample_title": "Go Analysis Framework: modular static analysis by go team",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -1608,6 +1728,21 @@
     "domain": "rauno.me",
     "sample_url": "https://rauno.me/notes/2",
     "sample_title": "Rauno's Field Notes #2",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "refp.se",
+    "sample_url": "https://refp.se/articles/your-shell-and-the-magic-colon",
+    "sample_title": "A shell colon does nothing. Use it anyway",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -1834,6 +1969,21 @@
     "sample_url": "https://spectrum.ieee.org/sodium-ion-battery-peak-energy",
     "sample_title": "GM Backs Sodium Ion Batteries for U.S. Grid Storage",
     "first_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "status.claude.com",
+    "sample_url": "https://status.claude.com/incidents/zftg3gqkmv18",
+    "sample_title": "Elevated Errors for Opus 5",
+    "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
@@ -2296,10 +2446,10 @@
   },
   {
     "domain": "www.cnn.com",
-    "sample_url": "https://www.cnn.com/2026/07/15/science/medici-family-mystery-dna-malaria",
-    "sample_title": "Medici family mystery may be solved after more than 400 years",
+    "sample_url": "https://www.cnn.com/2026/07/26/world/live-news/france-spain-wildfires-evacuations",
+    "sample_title": "France and Spain wildfires: more than 300k people displaced",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2343,6 +2493,21 @@
     "domain": "www.debian.org",
     "sample_url": "https://www.debian.org/vote/2026/vote_002",
     "sample_title": "LLM Usage in Debian: Three Proposals",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.dw.com",
+    "sample_url": "https://www.dw.com/en/germany-classifies-berlin-pride-ramming-as-terror-attack/live-78117180",
+    "sample_title": "Islamist terrorist attack in Berlin Pride event",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -2462,7 +2627,7 @@
   {
     "domain": "www.harvardmagazine.com",
     "sample_url": "https://www.harvardmagazine.com/research/harvard-human-evolution-genes-selective-pressure",
-    "sample_title": "Humans Haven't Stopped Evolving",
+    "sample_title": "Humans haven't stopped evolving",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -3136,10 +3301,10 @@
   },
   {
     "domain": "www.wsj.com",
-    "sample_url": "https://www.wsj.com/health/taylor-farms-cyclospora-recall-delay-call-41fef0bc",
-    "sample_title": "Taylor Farms Called White House to Try to Delay Cyclospora Recall",
+    "sample_url": "https://www.wsj.com/tech/google-discloses-94-1-billion-in-spacex-stock-marking-6-stake-91655d7c",
+    "sample_title": "Google Discloses $94.1B in SpaceX Stock, Marking 6% Stake",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
