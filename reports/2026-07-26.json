@@ -1,22 +1,22 @@
 {
   "date": "2026-07-26",
-  "generated_at": "2026-07-26T04:00:37.435363Z",
+  "generated_at": "2026-07-26T04:18:03.293399Z",
   "run_id": "2026-07-26-e3b0c442",
   "daily_summary_zh": "模型暂不可用，本期仅展示来源标题与摘要。",
   "events": [],
   "degraded": true,
   "warnings": [
-    "model chain failed: community source cannot be primary. Falling back to degraded mode with 30 raw candidates."
+    "model chain failed: unverified event cannot be published. Falling back to degraded mode with 30 raw candidates."
   ],
   "report_url": null,
   "source_coverage": {
     "enabled": 9,
-    "fetched": 109,
-    "normalized": 109,
+    "fetched": 108,
+    "normalized": 108,
     "filtered": 94,
     "ai_candidates": 30,
-    "prompt_chars": 6487,
-    "estimated_input_tokens": 1621,
+    "prompt_chars": 6673,
+    "estimated_input_tokens": 1668,
     "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
