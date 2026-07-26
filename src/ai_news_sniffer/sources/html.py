@@ -1,5 +1,6 @@
 import json
 from datetime import UTC, datetime
+from email.utils import parsedate_to_datetime
 from typing import Any
 from urllib.parse import urljoin
 
@@ -9,17 +10,74 @@ from selectolax.lexbor import LexborHTMLParser
 from ai_news_sniffer.models import RawArticle, SourceConfig
 from ai_news_sniffer.sources.base import SourceFetchError, SourceParseError
 
+_DATE_FORMATS = [
+    "%Y-%m-%d",
+    "%B %d, %Y",
+    "%b %d, %Y",
+    "%Y/%m/%d",
+    "%d %B %Y",
+    "%d %b %Y",
+    "%Y-%m-%dT%H:%M:%S",
+    "%Y-%m-%d %H:%M:%S",
+    "%Y-%m-%dT%H:%M",
+    "%Y-%m-%d %H:%M",
+]
 
-def _datetime(value: str | None) -> datetime | None:
+
+def _parse_datetime(value: str | None) -> datetime | None:
     if not value:
         return None
+    value = value.strip()
+
+    # ISO 8601 / Python datetime strings (including naive ones).
     try:
         parsed = datetime.fromisoformat(value)
+        if parsed.tzinfo is None or parsed.utcoffset() is None:
+            parsed = parsed.replace(tzinfo=UTC)
+        return parsed
     except ValueError:
+        pass
+
+    # Common human-readable formats found on news sites.
+    for fmt in _DATE_FORMATS:
+        try:
+            return datetime.strptime(value, fmt).replace(tzinfo=UTC)
+        except ValueError:
+            pass
+
+    # RSS-style RFC 2822 dates, e.g., "Tue, 25 Jul 2026 09:00:00 GMT".
+    try:
+        return parsedate_to_datetime(value).astimezone(UTC)
+    except (ValueError, TypeError, AttributeError):
         return None
-    if parsed.tzinfo is None or parsed.utcoffset() is None:
-        return None
-    return parsed
+
+
+def _record_types(record: dict[str, Any]) -> set[str]:
+    raw = record.get("@type")
+    if isinstance(raw, str):
+        return {raw}
+    if isinstance(raw, list):
+        return {item for item in raw if isinstance(item, str)}
+    return set()
+
+
+def _collect_jsonld_records(
+    value: Any,
+    records: list[dict[str, Any]],
+) -> None:
+    if not isinstance(value, dict):
+        return
+    if _record_types(value) & {"Article", "BlogPosting", "NewsArticle"}:
+        records.append(value)
+    graph = value.get("@graph")
+    if isinstance(graph, list):
+        for item in graph:
+            _collect_jsonld_records(item, records)
+    if "ItemList" in _record_types(value):
+        items = value.get("itemListElement", [])
+        if isinstance(items, list):
+            for item in items:
+                _collect_jsonld_records(item, records)
 
 
 def _jsonld_records(tree: LexborHTMLParser) -> list[dict[str, Any]]:
@@ -31,21 +89,7 @@ def _jsonld_records(tree: LexborHTMLParser) -> list[dict[str, Any]]:
             continue
         values = payload if isinstance(payload, list) else [payload]
         for value in values:
-            if not isinstance(value, dict):
-                continue
-            graph = value.get("@graph", [])
-            candidates = graph if isinstance(graph, list) else []
-            if value.get("@type") == "ItemList":
-                candidates.extend(value.get("itemListElement", []))
-            else:
-                candidates.append(value)
-            for candidate in candidates:
-                if isinstance(candidate, dict) and candidate.get("@type") in {
-                    "Article",
-                    "BlogPosting",
-                    "NewsArticle",
-                }:
-                    records.append(candidate)
+            _collect_jsonld_records(value, records)
     return records
 
 
@@ -73,7 +117,7 @@ class HtmlWhitelistAdapter:
         records = _jsonld_records(tree)
         parsed: list[tuple[str, str, datetime, str]] = []
         for record in records:
-            published = _datetime(
+            published = _parse_datetime(
                 record.get("datePublished") or record.get("dateModified")
             )
             title = record.get("headline") or record.get("name")
@@ -97,7 +141,9 @@ class HtmlWhitelistAdapter:
                 date_value = (
                     date_node.attributes.get("datetime") if date_node else None
                 )
-                published = _datetime(date_value)
+                if not date_value and date_node:
+                    date_value = date_node.text(strip=True)
+                published = _parse_datetime(date_value)
                 href = link_node.attributes.get("href") if link_node else None
                 if not title_node or not href or not published:
                     continue

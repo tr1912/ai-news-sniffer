@@ -1,6 +1,6 @@
 import json
 from collections.abc import Callable
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -17,6 +17,8 @@ from ai_news_sniffer.source_registry import resolve_sources
 from ai_news_sniffer.sources.base import SourceAdapter, build_source_adapter
 
 AdapterFactory = Callable[[SourceConfig, httpx.Client], SourceAdapter]
+
+PAUSED_RETRY_COOLDOWN = timedelta(hours=24)
 
 
 def collect_source_candidates(
@@ -35,12 +37,20 @@ def collect_source_candidates(
 ) -> SourceCollection:
     health_store = SourceHealthStore(runtime_root)
     auto_paused_before = health_store.auto_paused_ids()
+    health = health_store.load_all()
+    due_for_retry = {
+        source_id
+        for source_id in auto_paused_before
+        if health.get(source_id) is None
+        or health[source_id].last_attempt_at is None
+        or (until - health[source_id].last_attempt_at) >= PAUSED_RETRY_COOLDOWN
+    }
     selected = resolve_sources(
         settings.sources,
         profile_override=profile,
         include_sources=include_sources,
         exclude_sources=exclude_sources,
-        auto_paused=set() if live_audit else health_store.auto_paused_ids(),
+        auto_paused=set() if live_audit else auto_paused_before - due_for_retry,
     )
     owned_client = client is None
     http_client = client or httpx.Client(follow_redirects=True)

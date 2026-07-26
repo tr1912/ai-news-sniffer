@@ -70,9 +70,9 @@ def test_provider_chain_rejects_empty_provider_list() -> None:
 # ---------------------------------------------------------------------------
 
 
-def test_editorial_service_rejects_unknown_candidate_ids() -> None:
+def test_editorial_service_raises_when_no_events_pass_validation() -> None:
     service = EditorialService(FixtureProvider(), "Output JSON.")
-    with pytest.raises(ValueError, match="unknown candidate"):
+    with pytest.raises(ValueError, match="no verified events"):
         service.edit([], min_items=1, max_items=15)
 
 
@@ -149,7 +149,7 @@ def test_editorial_service_evidence_ids_deduplicated() -> None:
     assert events[0].candidate_ids == ["a1"]
 
 
-def test_editorial_service_rejects_community_primary() -> None:
+def test_editorial_service_drops_community_primary_event() -> None:
     community = Article(
         id="c1",
         source_id="community-blog",
@@ -188,11 +188,11 @@ def test_editorial_service_rejects_community_primary() -> None:
             }
 
     service = EditorialService(CommunityPrimaryProvider(), "Output JSON.")
-    with pytest.raises(ValueError, match="community"):
+    with pytest.raises(ValueError, match="no verified events"):
         service.edit([community], min_items=1, max_items=15)
 
 
-def test_editorial_service_rejects_unverified_event() -> None:
+def test_editorial_service_drops_unverified_event() -> None:
     community = Article(
         id="c1",
         source_id="community-blog",
@@ -231,6 +231,80 @@ def test_editorial_service_rejects_unverified_event() -> None:
             }
 
     service = EditorialService(UnverifiedProvider(), "Output JSON.")
-    # First fails on community primary, not unverified
-    with pytest.raises(ValueError):
+    with pytest.raises(ValueError, match="no verified events"):
         service.edit([community], min_items=1, max_items=15)
+
+
+def test_editorial_service_keeps_valid_event_and_drops_invalid_one() -> None:
+    official = Article(
+        id="a1",
+        source_id="official",
+        source_name="Official",
+        source_group=SourceGroup.OFFICIAL,
+        independence_group="official",
+        title="New model",
+        url="https://example.com/model",
+        canonical_url="https://example.com/model",
+        normalized_title="new model",
+        fingerprint="a" * 64,
+        published_at=datetime(2026, 7, 23, tzinfo=UTC),
+        fetched_at=datetime(2026, 7, 23, tzinfo=UTC),
+        excerpt="Release notes.",
+        categories=["models"],
+        rule_score=90,
+    )
+    community = Article(
+        id="c1",
+        source_id="community-blog",
+        source_name="Community Blog",
+        source_group=SourceGroup.COMMUNITY,
+        independence_group="community-blog",
+        title="Rumor",
+        url="https://community.example.com/rumor",
+        canonical_url="https://community.example.com/rumor",
+        normalized_title="rumor",
+        fingerprint="c" * 64,
+        published_at=datetime(2026, 7, 23, tzinfo=UTC),
+        fetched_at=datetime(2026, 7, 23, tzinfo=UTC),
+        excerpt="Something.",
+        categories=["models"],
+        rule_score=40,
+    )
+
+    class MixedProvider:
+        def generate_json(self, system_prompt: str, user_prompt: str) -> dict:
+            return {
+                "daily_summary_zh": "今日 AI 要闻",
+                "events": [
+                    {
+                        "id": "event-bad",
+                        "candidate_ids": [],
+                        "category": "models",
+                        "title_zh": "无效事件",
+                        "summary_zh": "社区来源作为主编",
+                        "why_it_matters_zh": "不应保留",
+                        "importance_score": 90,
+                        "primary_candidate_id": "c1",
+                        "related_candidate_ids": [],
+                    },
+                    {
+                        "id": "event-good",
+                        "candidate_ids": [],
+                        "category": "models",
+                        "title_zh": "有效事件",
+                        "summary_zh": "官方来源",
+                        "why_it_matters_zh": "应保留",
+                        "importance_score": 90,
+                        "primary_candidate_id": "a1",
+                        "related_candidate_ids": [],
+                    },
+                ],
+            }
+
+    service = EditorialService(MixedProvider(), "Output JSON.")
+    summary, events = service.edit([official, community], min_items=1, max_items=15)
+
+    assert summary == "今日 AI 要闻"
+    assert len(events) == 1
+    assert events[0].id == "event-good"
+    assert events[0].primary_source.source_id == "official"

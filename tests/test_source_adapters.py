@@ -205,7 +205,7 @@ def test_html_adapter_fails_closed_on_unparseable_page() -> None:
 
 
 @respx.mock
-def test_html_adapter_fails_closed_on_naive_jsonld_date() -> None:
+def test_html_adapter_accepts_naive_jsonld_date_as_utc() -> None:
     html_source = SourceConfig(
         id="naive-date-html",
         name="Naive date HTML",
@@ -230,8 +230,53 @@ def test_html_adapter_fails_closed_on_naive_jsonld_date() -> None:
         )
     )
 
-    with pytest.raises(SourceParseError):
-        build_source_adapter(
-            html_source,
-            httpx.Client(),
-        ).fetch(html_source, SINCE, UNTIL)
+    articles = build_source_adapter(
+        html_source,
+        httpx.Client(),
+    ).fetch(html_source, SINCE, UNTIL)
+
+    assert len(articles) == 1
+    assert articles[0].title == "Missing timezone"
+    assert articles[0].published_at.tzinfo is UTC
+
+
+@respx.mock
+def test_html_adapter_handles_jsonld_type_list_and_nested_graph() -> None:
+    html_source = SourceConfig(
+        id="typed-list-html",
+        name="Typed List HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://typed.example/news",
+        categories=["models"],
+    )
+    respx.get(str(html_source.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text="""
+                <script type="application/ld+json">
+                  {
+                    "@context": "https://schema.org",
+                    "@graph": [
+                      {
+                        "@type": ["WebPage", "NewsArticle"],
+                        "headline": "Nested article",
+                        "url": "/nested",
+                        "datePublished": "2026-07-23T10:00:00Z",
+                        "description": "Summary"
+                      }
+                    ]
+                  }
+                </script>
+            """,
+        )
+    )
+
+    articles = build_source_adapter(
+        html_source,
+        httpx.Client(),
+    ).fetch(html_source, SINCE, UNTIL)
+
+    assert [item.title for item in articles] == ["Nested article"]
+    assert str(articles[0].url) == "https://typed.example/nested"

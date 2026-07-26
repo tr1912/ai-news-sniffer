@@ -80,42 +80,50 @@ class EditorialService:
             referenced_ids = set(evidence_ids)
             unknown = referenced_ids.difference(by_id)
             if unknown:
-                raise ValueError(f"unknown candidate ids: {sorted(unknown)}")
+                # Drop hallucinated candidate references instead of failing the whole
+                # batch; the model may still return other valid events.
+                continue
             primary = by_id[event.primary_candidate_id]
             related = [
                 by_id[item_id]
                 for item_id in event.related_candidate_ids
                 if item_id != event.primary_candidate_id
             ]
-            news_event = NewsEvent(
-                id=event.id,
-                candidate_ids=evidence_ids,
-                category=event.category,
-                title_zh=event.title_zh,
-                summary_zh=event.summary_zh,
-                why_it_matters_zh=event.why_it_matters_zh,
-                importance_score=event.importance_score,
-                confirmation_status=confirmation_status(
-                    [by_id[item_id] for item_id in evidence_ids]
-                ),
-                primary_source=SourceRef(
-                    source_id=primary.source_id,
-                    source_name=primary.source_name,
-                    title=primary.title,
-                    url=primary.url,
-                    published_at=primary.published_at,
-                ),
-                related_sources=[
-                    SourceRef(
-                        source_id=item.source_id,
-                        source_name=item.source_name,
-                        title=item.title,
-                        url=item.url,
-                        published_at=item.published_at,
-                    )
-                    for item in related
-                ],
-            )
-            validate_event_sources(news_event, candidates)
+            try:
+                news_event = NewsEvent(
+                    id=event.id,
+                    candidate_ids=evidence_ids,
+                    category=event.category,
+                    title_zh=event.title_zh,
+                    summary_zh=event.summary_zh,
+                    why_it_matters_zh=event.why_it_matters_zh,
+                    importance_score=event.importance_score,
+                    confirmation_status=confirmation_status(
+                        [by_id[item_id] for item_id in evidence_ids]
+                    ),
+                    primary_source=SourceRef(
+                        source_id=primary.source_id,
+                        source_name=primary.source_name,
+                        title=primary.title,
+                        url=primary.url,
+                        published_at=primary.published_at,
+                    ),
+                    related_sources=[
+                        SourceRef(
+                            source_id=item.source_id,
+                            source_name=item.source_name,
+                            title=item.title,
+                            url=item.url,
+                            published_at=item.published_at,
+                        )
+                        for item in related
+                    ],
+                )
+                validate_event_sources(news_event, candidates)
+            except ValueError:
+                # Skip individual events that violate source/verification rules.
+                continue
             events.append(news_event)
+        if not events:
+            raise ValueError("no verified events after editorial validation")
         return output.daily_summary_zh, events

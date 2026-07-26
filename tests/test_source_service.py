@@ -1,4 +1,4 @@
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import httpx
@@ -91,3 +91,60 @@ def test_zero_candidate_override_uses_profile_default(tmp_path: Path) -> None:
     )
 
     assert len(result.budgeted.articles) == result.filtered_count
+
+
+def test_auto_paused_source_is_retried_after_cooldown(tmp_path: Path) -> None:
+    settings = load_settings(ROOT / "config")
+    health_store = SourceHealthStore(tmp_path)
+    old_attempt = UNTIL - timedelta(hours=25)
+    for number in range(7):
+        health_store.record_failure(
+            "anthropic-news",
+            f"prior failure {number}",
+            old_attempt,
+        )
+
+    def factory(source: SourceConfig, client: httpx.Client) -> FakeAdapter:
+        return FakeAdapter(should_fail=False)
+
+    result = collect_source_candidates(
+        settings=settings,
+        runtime_root=tmp_path,
+        since=SINCE,
+        until=UNTIL,
+        profile="light",
+        client=httpx.Client(),
+        adapter_factory=factory,
+    )
+
+    assert "anthropic-news" in result.enabled_source_ids
+    assert "anthropic-news" not in result.failures
+    assert result.fetched_count == 12
+
+
+def test_auto_paused_source_is_skipped_before_cooldown(tmp_path: Path) -> None:
+    settings = load_settings(ROOT / "config")
+    health_store = SourceHealthStore(tmp_path)
+    old_attempt = UNTIL - timedelta(hours=23)
+    for number in range(7):
+        health_store.record_failure(
+            "anthropic-news",
+            f"prior failure {number}",
+            old_attempt,
+        )
+
+    def factory(source: SourceConfig, client: httpx.Client) -> FakeAdapter:
+        return FakeAdapter(should_fail=False)
+
+    result = collect_source_candidates(
+        settings=settings,
+        runtime_root=tmp_path,
+        since=SINCE,
+        until=UNTIL,
+        profile="light",
+        client=httpx.Client(),
+        adapter_factory=factory,
+    )
+
+    assert "anthropic-news" not in result.enabled_source_ids
+    assert result.fetched_count == 11
