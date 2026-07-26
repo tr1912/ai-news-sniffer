@@ -2760,6 +2760,21 @@
     "enabled": false
   },
   {
+    "domain": "www.seti.org",
+    "sample_url": "https://www.seti.org/news/alien-world-chemistry-found-inside-meteorite/",
+    "sample_title": "Alien World Chemistry Found Inside Meteorite That Struck New Jersey Home",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.the-scientist.com",
     "sample_url": "https://www.the-scientist.com/police-removed-prominent-scientists-from-the-ada-meeting-researchers-respond-74607",
     "sample_title": "Police Removed Prominent Scientists from the ADA Meeting. Researchers Respond",
