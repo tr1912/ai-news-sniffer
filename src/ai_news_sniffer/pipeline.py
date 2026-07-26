@@ -105,6 +105,11 @@ class Pipeline:
             summary = "模型暂不可用，本期仅展示来源标题与摘要。"
             events = build_degraded_events(ranked, self.settings.app.max_items)
         events = select_diverse_events(events, self.settings.app.max_items)
+        if degraded and not events:
+            summary = (
+                "今日未找到符合发布标准的已验证事件。"
+                "多数高质量源处于暂停/解析失败状态，已自动尝试恢复。"
+            )
         event_key = "|".join(
             sorted(candidate_id for event in events for candidate_id in event.candidate_ids)
         )
