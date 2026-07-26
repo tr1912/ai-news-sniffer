@@ -1,4 +1,5 @@
 import hashlib
+import sys
 from collections.abc import Callable
 from datetime import UTC, date, datetime, time, timedelta
 from pathlib import Path
@@ -132,6 +133,14 @@ class Pipeline:
                     collection.newly_auto_paused_source_ids
                 ),
             },
+        )
+        for warning in report.warnings:
+            print(f"[warning] {warning}", file=sys.stderr)
+        print(
+            f"[summary] events={len(report.events)} "
+            f"degraded={report.degraded} "
+            f"coverage={report.source_coverage}",
+            file=sys.stderr,
         )
         if dry_run:
             reports_for_render = self.store.load_reports() + [report]

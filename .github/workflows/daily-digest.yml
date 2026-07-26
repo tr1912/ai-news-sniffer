@@ -130,6 +130,19 @@ jobs:
           REPORT_URL="${{ vars.PUBLIC_BASE_URL }}/$REPORT_PATH/"
           echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
           echo "report_url=$REPORT_URL" >> "$GITHUB_OUTPUT"
+      - name: Dump report for debugging
+        if: always() && steps.mode.outputs.dry_run != 'true'
+        shell: bash
+        env:
+          RUN_ID: ${{ steps.build.outputs.run_id }}
+        run: |
+          REPORT_DATE="${RUN_ID:0:10}"
+          REPORT_FILE="runtime-data/reports/${REPORT_DATE}.json"
+          if [[ -f "$REPORT_FILE" ]]; then
+            echo "=== report json ==="
+            cat "$REPORT_FILE"
+            echo ""
+          fi
       - name: Persist prepared runtime state
         if: steps.mode.outputs.dry_run != 'true'
         working-directory: runtime-data
