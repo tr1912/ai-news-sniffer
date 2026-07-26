@@ -15,6 +15,7 @@ def test_cli_exposes_required_stage_commands() -> None:
         ["verify-url", "https://example.com/report/"],
         ["mark-published", "--run-id", "run-1", "--report-url", "https://example.com/r/"],
         ["notify", "--run-id", "run-1"],
+        ["notify", "--run-id", "run-1", "--force"],
         ["notify-failure", "--message", "deploy failed"],
     ):
         assert parser.parse_args(argv).command == argv[0]

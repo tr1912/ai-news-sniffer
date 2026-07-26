@@ -169,10 +169,13 @@ def main(argv: list[str] | None = None) -> int:
                 file=sys.stderr,
             )
             return 0
-        if record.status not in {
+        allowed_for_notify = {
             RunStatus.PUBLISHED,
             RunStatus.PARTIALLY_NOTIFIED,
-        } or not record.report_url:
+        }
+        if args.force:
+            allowed_for_notify.add(RunStatus.NOTIFIED)
+        if record.status not in allowed_for_notify or not record.report_url:
             raise RuntimeError("run must be published before notification")
         report = next(
             item for item in store.load_reports() if item.run_id == args.run_id
