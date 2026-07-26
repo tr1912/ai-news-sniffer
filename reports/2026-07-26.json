@@ -1,23 +1,76 @@
 {
   "date": "2026-07-26",
-  "generated_at": "2026-07-26T04:18:03.293399Z",
-  "run_id": "2026-07-26-e3b0c442",
-  "daily_summary_zh": "模型暂不可用，本期仅展示来源标题与摘要。",
-  "events": [],
-  "degraded": true,
+  "generated_at": "2026-07-26T04:58:09.684095Z",
+  "run_id": "2026-07-26-66e134f5",
+  "daily_summary_zh": "今日主要AI新闻：NVIDIA发布ModelExpress技术，加速模型工件分发。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "c50a262551db0d3e"
+      ],
+      "category": "infrastructure",
+      "title_zh": "ModelExpress：以光速分发模型工件",
+      "summary_zh": "NVIDIA发布了ModelExpress，一种高效分发模型工件的技术，旨在解决模型检查点体积巨大（数百GB至TB）带来的传输成本问题。",
+      "why_it_matters_zh": "模型工件的快速分发对大规模AI训练和部署至关重要，尤其是在多节点训练和边缘部署场景下。NVIDIA的这项技术有望显著提升模型分发效率，降低延迟和成本。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "ModelExpress: Distributing Model Artifacts at the Speed of Light",
+        "url": "https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/",
+        "published_at": "2026-07-24T16:45:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
   "warnings": [
-    "model chain failed: unverified event cannot be published. Falling back to degraded mode with 30 raw candidates."
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source kimi-platform-blog failed: SourceParseError: kimi-platform-blog: no dated article records found",
+    "source meta-ai-blog failed: SourceParseError: meta-ai-blog: no dated article records found",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qbitai failed: SourceParseError: qbitai: no dated article records found",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
   ],
   "report_url": null,
   "source_coverage": {
-    "enabled": 9,
-    "fetched": 108,
-    "normalized": 108,
-    "filtered": 94,
+    "enabled": 25,
+    "fetched": 109,
+    "normalized": 109,
+    "filtered": 98,
     "ai_candidates": 30,
-    "prompt_chars": 6673,
-    "estimated_input_tokens": 1668,
-    "failed_source_ids": [],
+    "prompt_chars": 7230,
+    "estimated_input_tokens": 1807,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "kimi-platform-blog",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qbitai",
+      "qwen-blog",
+      "zhipu-research"
+    ],
     "newly_auto_paused_source_ids": []
   }
 }

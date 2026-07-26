@@ -2700,6 +2700,21 @@
     "enabled": false
   },
   {
+    "domain": "www.nature.com",
+    "sample_url": "https://www.nature.com/articles/d41586-024-01046-z",
+    "sample_title": "Scientists discover first eukaryote that can fix nitrogen (2024)",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.newyorker.com",
     "sample_url": "https://www.newyorker.com/culture/the-weekend-essay/the-rise-of-the-scenario-a-trendy-way-of-forecasting-our-dystopian-future",
     "sample_title": "The Rise of the \"Scenario,\" a Trendy Way of Forecasting Our Dystopian Future",
@@ -2870,6 +2885,21 @@
     "sample_title": "Hybrid-Electric Aicraft Engine Targeting 30% Fuel Efficiency",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.schneier.com",
+    "sample_url": "https://www.schneier.com/blog/archives/2026/07/mit-to-become-hotbed-of-ai-video-surveillance.html",
+    "sample_title": "MIT to become hotbed of AI video surveillance",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],

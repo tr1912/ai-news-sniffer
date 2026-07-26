@@ -10,11 +10,11 @@
   },
   "anthropic-news": {
     "source_id": "anthropic-news",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: anthropic-news: no dated article records found"
   },
   "arxiv-ai": {
@@ -28,38 +28,38 @@
   },
   "cohere-blog": {
     "source_id": "cohere-blog",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: cohere-blog: no dated article records found"
   },
   "deepmind-news": {
     "source_id": "deepmind-news",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: deepmind-news: no dated article records found"
   },
   "deepseek-updates": {
     "source_id": "deepseek-updates",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: deepseek-updates: no dated article records found"
   },
   "google-research": {
     "source_id": "google-research",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: google-research: no dated article records found"
   },
   "hacker-news": {
@@ -73,11 +73,11 @@
   },
   "hf-daily-papers": {
     "source_id": "hf-daily-papers",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: hf-daily-papers: no dated article records found"
   },
   "huggingface-blog": {
@@ -91,20 +91,20 @@
   },
   "jiqizhixin": {
     "source_id": "jiqizhixin",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: jiqizhixin: no dated article records found"
   },
   "kimi-platform-blog": {
     "source_id": "kimi-platform-blog",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: kimi-platform-blog: no dated article records found"
   },
   "llama-cpp-releases": {
@@ -118,38 +118,38 @@
   },
   "meta-ai-blog": {
     "source_id": "meta-ai-blog",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: meta-ai-blog: no dated article records found"
   },
   "microsoft-research": {
     "source_id": "microsoft-research",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
-    "last_error": "TypeError: unhashable type: 'list'"
+    "last_attempt_at": "2026-07-26T16:00:00Z",
+    "last_error": "SourceParseError: microsoft-research: no dated article records found"
   },
   "minimax-news": {
     "source_id": "minimax-news",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: minimax-news: no dated article records found"
   },
   "mistral-news": {
     "source_id": "mistral-news",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: mistral-news: no dated article records found"
   },
   "nvidia-genai": {
@@ -163,29 +163,29 @@
   },
   "openai-news": {
     "source_id": "openai-news",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceFetchError: openai-news: HTML fetch failed"
   },
   "qbitai": {
     "source_id": "qbitai",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: qbitai: no dated article records found"
   },
   "qwen-blog": {
     "source_id": "qwen-blog",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: qwen-blog: no dated article records found"
   },
   "techcrunch-ai": {
@@ -217,11 +217,11 @@
   },
   "zhipu-research": {
     "source_id": "zhipu-research",
-    "consecutive_failures": 7,
+    "consecutive_failures": 8,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-07-25T16:00:00Z",
+    "last_attempt_at": "2026-07-26T16:00:00Z",
     "last_error": "SourceParseError: zhipu-research: no dated article records found"
   }
 }
