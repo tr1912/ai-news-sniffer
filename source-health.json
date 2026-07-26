@@ -109,12 +109,12 @@
   },
   "llama-cpp-releases": {
     "source_id": "llama-cpp-releases",
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "degraded": false,
     "auto_paused": false,
     "last_success_at": "2026-07-25T16:00:00Z",
     "last_attempt_at": "2026-07-25T16:00:00Z",
-    "last_error": null
+    "last_error": "SourceFetchError: llama-cpp-releases: GitHub fetch failed"
   },
   "meta-ai-blog": {
     "source_id": "meta-ai-blog",
@@ -199,21 +199,21 @@
   },
   "transformers-releases": {
     "source_id": "transformers-releases",
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "degraded": false,
     "auto_paused": false,
     "last_success_at": "2026-07-25T16:00:00Z",
     "last_attempt_at": "2026-07-25T16:00:00Z",
-    "last_error": null
+    "last_error": "SourceFetchError: transformers-releases: GitHub fetch failed"
   },
   "vllm-releases": {
     "source_id": "vllm-releases",
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "degraded": false,
     "auto_paused": false,
     "last_success_at": "2026-07-25T16:00:00Z",
     "last_attempt_at": "2026-07-25T16:00:00Z",
-    "last_error": null
+    "last_error": "SourceFetchError: vllm-releases: GitHub fetch failed"
   },
   "zhipu-research": {
     "source_id": "zhipu-research",

@@ -1,64 +1,119 @@
 {
   "date": "2026-07-25",
-  "generated_at": "2026-07-25T14:38:16.286149Z",
-  "run_id": "2026-07-25-714ea2ba",
-  "daily_summary_zh": "模型暂不可用，本期仅展示来源标题与摘要。",
+  "generated_at": "2026-07-26T03:30:59.384493Z",
+  "run_id": "2026-07-25-cbce7445",
+  "daily_summary_zh": "今日主要AI动态：Anthropic发布Claude Opus 5，性能接近Fable 5且成本减半；NVIDIA推出Nemotron 3 Nano定制工具；多项研究进展发布，包括代码模型表示分析、可变维度生成模型Expanding Flow Maps，以及交互图可控视频生成模型GraphVid。",
   "events": [
     {
-      "id": "degraded-489b1bceadfc9bb4",
+      "id": "event-1",
       "candidate_ids": [
-        "489b1bceadfc9bb4"
+        "d697a52dc7dbfe0c",
+        "d724d5933e511687"
       ],
-      "category": "open-source",
-      "title_zh": "vLLM Releases: v0.26.0",
-      "summary_zh": "vLLM v0.26.0 Release Notes Highlights This release features 411 commits from 212 contributors (61 new)! New Inkling model family with a full support stack: base modeling (#48799), piecewise CUDA graph support (#48822), Hopper FA4 relative attention (#48858), MTP=1 speculative decoding (#48869), LoRA (#48884), and standard ModelOpt NVFP4 quantizatio",
-      "why_it_matters_zh": "",
-      "importance_score": 69.46480555555556,
+      "category": "models",
+      "title_zh": "Anthropic发布Claude Opus 5",
+      "summary_zh": "Anthropic于7月25日正式发布旗舰AI模型Claude Opus 5，在编程、Agent任务及复杂推理上能力提升，整体性能接近更高端的Claude Fable 5，但API价格维持Opus 4.8水平，为每百万输入Token 5美元、输出Token 25美元。该模型适合企业办公和软件开发等日常高频场景，并增强了安全性和抗滥用能力。",
+      "why_it_matters_zh": "Claude Opus 5以更低成本提供接近顶级模型的性能，对企业和开发者具有实际价值，可能推动AI应用进一步普及。",
+      "importance_score": 90.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "title": "Anthropic launches Opus 5",
+        "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+        "published_at": "2026-07-24T17:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "36kr",
+          "source_name": "36Kr",
+          "title": "9点1氪｜宇树科技CEO王兴兴登上《时代》杂志封面；国家反诈中心App可一键检测AI生成痕迹；Claude Opus 5正式发布",
+          "url": "https://36kr.com/p/3910351337821318?f=rss",
+          "published_at": "2026-07-25T00:57:52Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "0e09ec7241efc492"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA推出Nemotron 3 Nano定制方案",
+      "summary_zh": "NVIDIA通过博客介绍如何利用Prime Intellect Lab在几分钟内快速定制Nemotron 3 Nano模型，使开发者能够针对特定用例、领域和语言进行模型调整。",
+      "why_it_matters_zh": "该工具降低了开发者定制NVIDIA模型的门槛，加速了模型在实际场景中的落地。",
+      "importance_score": 80.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
-        "source_id": "vllm-releases",
-        "source_name": "vLLM Releases",
-        "title": "vLLM Releases: v0.26.0",
-        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.26.0",
-        "published_at": "2026-07-25T10:38:53Z"
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Start Customizing NVIDIA Nemotron 3 Nano with Prime Intellect Lab in Minutes",
+        "url": "https://developer.nvidia.com/blog/start-customizing-nvidia-nemotron-3-nano-with-prime-intellect-lab-in-minutes/",
+        "published_at": "2026-07-23T16:00:00Z"
       },
       "related_sources": []
     },
     {
-      "id": "degraded-b2e7f46d3398ff91",
+      "id": "event-3",
       "candidate_ids": [
-        "b2e7f46d3398ff91"
+        "a4a84423f7a18c06"
       ],
-      "category": "open-source",
-      "title_zh": "llama.cpp Releases: b10106",
-      "summary_zh": "CUDA: fix external compilation of q1_0 MMQ (#25778) Website: macOS/iOS: macOS Apple Silicon (arm64) macOS Apple Silicon (arm64, KleidiAI enabled) DISABLED macOS Intel (x64) iOS XCFramework Linux: Ubuntu x64 (CPU) Ubuntu arm64 (CPU) Ubuntu s390x (CPU) Ubuntu x64 (Vulkan) [Ubuntu arm64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download",
-      "why_it_matters_zh": "",
-      "importance_score": 54.157805555555555,
+      "category": "research",
+      "title_zh": "研究揭示代码模型表示中的通用性与差异性",
+      "summary_zh": "该研究扩展概念电路提取方法至Python和Rust代码，发现Qwen2.5-Coder-7B和DeepSeek-Coder-V1-6.7B在任务层面（哪些概念有专用电路）上高度一致，但在电路位置和成长方式上因模型而异。",
+      "why_it_matters_zh": "该发现对理解AI模型的可迁移性和电路通用性具有指导意义，有助于设计更高效的代码模型。",
+      "importance_score": 75.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
-        "source_id": "llama-cpp-releases",
-        "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b10106",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10106",
-        "published_at": "2026-07-24T11:34:41Z"
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "What, Where, and How: Disentangling the Roles of Task, Language, and Model in Code Model Representations",
+        "url": "https://arxiv.org/abs/2607.21491v1",
+        "published_at": "2026-07-23T16:34:14Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "b6e21338d4713ff0"
+      ],
+      "category": "research",
+      "title_zh": "GraphVid：交互图可控视频生成",
+      "summary_zh": "研究提出GraphVid，一种图条件图像到视频生成模型，通过结构化交互图实现多对象可控视频生成。在GraphVid-Bench数据集上，相比Motion-I2V，FID降低39.9%，FVD降低37.6%，PSNR和SSIM显著提升。",
+      "why_it_matters_zh": "GraphVid提供了更直观的多对象视频控制方式，改善了视频生成的可控性和质量，对交互式内容创作有重要价值。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "GraphVid: Interactive Graph-Controllable Video Generation",
+        "url": "https://arxiv.org/abs/2607.21580v1",
+        "published_at": "2026-07-23T17:56:30Z"
       },
       "related_sources": []
     }
   ],
-  "degraded": true,
+  "degraded": false,
   "warnings": [
-    "model chain failed: community source cannot be primary. Falling back to degraded mode with 30 raw candidates."
+    "source llama-cpp-releases failed: SourceFetchError: llama-cpp-releases: GitHub fetch failed",
+    "source transformers-releases failed: SourceFetchError: transformers-releases: GitHub fetch failed",
+    "source vllm-releases failed: SourceFetchError: vllm-releases: GitHub fetch failed"
   ],
   "report_url": null,
   "source_coverage": {
     "enabled": 9,
-    "fetched": 154,
-    "normalized": 154,
-    "filtered": 117,
+    "fetched": 99,
+    "normalized": 99,
+    "filtered": 70,
     "ai_candidates": 30,
-    "prompt_chars": 10887,
-    "estimated_input_tokens": 2721,
-    "failed_source_ids": [],
+    "prompt_chars": 17536,
+    "estimated_input_tokens": 4384,
+    "failed_source_ids": [
+      "llama-cpp-releases",
+      "transformers-releases",
+      "vllm-releases"
+    ],
     "newly_auto_paused_source_ids": []
   }
 }

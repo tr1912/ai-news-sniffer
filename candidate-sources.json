@@ -150,6 +150,21 @@
     "enabled": false
   },
   {
+    "domain": "baturin.org",
+    "sample_url": "https://baturin.org/docs/iproute2/",
+    "sample_title": "Task-centered iproute2 user guide",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "bfl.ai",
     "sample_url": "https://bfl.ai/blog/flux-3-mimic",
     "sample_title": "Flux 3 X Mimic: The Next Generation of Video-Action Models",
@@ -260,6 +275,21 @@
     "sample_title": "The Book Prize Index",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "brandonli.net",
+    "sample_url": "https://brandonli.net/semisim/animations",
+    "sample_title": "Show HN: I made some transistor animations",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -795,6 +825,36 @@
     "enabled": false
   },
   {
+    "domain": "karimjedda.com",
+    "sample_url": "https://karimjedda.com/engineering-management-after-cost-of-code-collapse/",
+    "sample_title": "Engineering management after the cost of code collapsed",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "kirwinhampshire.substack.com",
+    "sample_url": "https://kirwinhampshire.substack.com/p/the-dark-night-of-mathematics",
+    "sample_title": "The Dark Night of Mathematics",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "kitsumed.github.io",
     "sample_url": "https://kitsumed.github.io/blog/posts/android-may-soon-restrict-on-device-adb/",
     "sample_title": "Android May Soon Restrict On-Device ADB",
@@ -1200,6 +1260,36 @@
     "enabled": false
   },
   {
+    "domain": "pytorch.org",
+    "sample_url": "https://pytorch.org/blog/bringing-pytorch-monarch-to-amd-gpus-single-controller-distributed-training-on-rocm/",
+    "sample_title": "Bringing PyTorch Monarch to AMD GPUs",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "radicle.network",
+    "sample_url": "https://radicle.network/nodes/rosa.radicle.network/rad%3Az2v9tRJz1oknFAqCSY5W5c76nVvm6",
+    "sample_title": "Bitchat is now on Radicle",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "reprodev.com",
     "sample_url": "https://reprodev.com/the-corporate-creep-of-plex-why-it-may-be-time-to-move-to-jellyfin-and-the-open-source-reality/",
     "sample_title": "The Corporate Creep of Plex: Why it may be time to move to Jellyfin",
@@ -1485,6 +1575,21 @@
     "enabled": false
   },
   {
+    "domain": "tobi.knaup.me",
+    "sample_url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/",
+    "sample_title": "Open-weight AI is having its Kubernetes moment",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "tombedor.dev",
     "sample_url": "https://tombedor.dev/arguments-against-open-source-ai-are-very-bad/",
     "sample_title": "The arguments against open source AI are bad",
@@ -1580,6 +1685,21 @@
     "sample_title": "The Visual 6502",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "webmars.nfiles.top",
+    "sample_url": "https://webmars.nfiles.top/",
+    "sample_title": "My web version of Mars MIPS, now has built-in C compiler",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -1860,6 +1980,21 @@
     "enabled": false
   },
   {
+    "domain": "www.hardresetmedia.com",
+    "sample_url": "https://www.hardresetmedia.com/p/the-ai-productivity-illusion",
+    "sample_title": "The AI Productivity Illusion",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.heise.de",
     "sample_url": "https://www.heise.de/en/news/Dobrindt-ID-requirement-to-halt-freedom-of-information-11376646.html",
     "sample_title": "ID requirement to halt freedom of information in Germany",
@@ -1920,11 +2055,41 @@
     "enabled": false
   },
   {
+    "domain": "www.law.uchicago.edu",
+    "sample_url": "https://www.law.uchicago.edu/news/ai-strategy-statement",
+    "sample_title": "Rethinking Legal Education in the AI Era",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.logisheets.com",
     "sample_url": "https://www.logisheets.com/?craft=factory-simulator",
     "sample_title": "Show HN: A factory simulator game built on Spreadsheets",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.marginalia.nu",
+    "sample_url": "https://www.marginalia.nu/log/a_139_hdd/",
+    "sample_title": "Harddrive Is Probably Full",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2360,6 +2525,21 @@
     "sample_title": "I regret migrating to Codeberg",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "xn--vk5b17r.online",
+    "sample_url": "https://xn--vk5b17r.online/posts/ram-gpu-consp/",
+    "sample_title": "What if the RAM/GPU shortage is deliberate?",
+    "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-25T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],

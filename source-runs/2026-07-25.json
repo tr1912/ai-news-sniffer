@@ -10,9 +10,9 @@
     "techcrunch-ai",
     "hacker-news"
   ],
-  "fetched_count": 154,
-  "normalized_count": 154,
-  "filtered_count": 117,
+  "fetched_count": 99,
+  "normalized_count": 99,
+  "filtered_count": 70,
   "budgeted": {
     "articles": [
       {
@@ -23,7 +23,7 @@
         "title": "9点1氪｜宇树科技CEO王兴兴登上《时代》杂志封面；国家反诈中心App可一键检测AI生成痕迹；Claude Opus 5正式发布",
         "url": "https://36kr.com/p/3910351337821318?f=rss",
         "published_at": "2026-07-25T00:57:52Z",
-        "fetched_at": "2026-07-25T14:38:26.873397Z",
+        "fetched_at": "2026-07-26T03:31:08.103311Z",
         "language": "unknown",
         "excerpt": "<h2>今日热点导览</h2>\n  <ul>\n   <li>小鹏主动召回3.35万辆X9，涉及前空气弹簧安全隐患</li>\n   <li>微信撤回消息后可删除提示字</li>\n   <li>怡颗莓莓果线下仍在售，公司称针对近期舆论正准备维权</li>\n   <li>菲尔兹奖得主雅各布·齐默曼将加入OpenAI</li>\n   <li>欧盟对谷歌处以8.9亿欧元罚款</li>\n  </ul>\n  <h2>TOP3大新闻</h2>\n  <p><strong>宇树科技CEO王兴兴登上《时代》杂志封面</strong></p>\n  <p>当地时间7月23日，宇树科技创始人兼CEO王兴兴与其载人机甲产品GD01共同登上《时代》杂志封面，标题为《机器人时代来临》。</p>\n  <p>据悉，距上次中国企业家登上该刊物封面，已过去整整8年。</p>\n  <p>《时代》杂志评价王兴兴是“AI时代一位非典型的预言者”，“他身材瘦削，戴着眼镜，完全没有许多科技创始人身上那种张扬的傲气。相反，他在谈论机器人技术时，带着一种安静而坚定的信念”。（澎湃新闻）</p>\n  <p class=\"image-wrapper\"><img src=\"https://img.36krcdn.com/hsossms/20260725/v2_646a451123024b64a1fa218b0da952f2@6100851_oswg997001oswg1080oswg1439_img_000?x-oss-process=image/format,jpg/interlace,1\" /></p>\n  <p class=\"img-desc\">&nbsp;</p>\n  <p><strong>公安部：国家反诈中心App可一键检测AI生成痕迹</strong></p>\n  <p>7月24日，公安部刑事侦查局局长姜国利在上午举行的国新办新闻发布会上介绍，公安机关在国家反诈中心App上构建了人工智能内容鉴定功能，大家可以上传可疑视频、语音、图片，一键检测是否存在人工智能生成痕迹，鉴别伪造信息。（人民网）</p>\n  <p><strong>Anthropic推出Claude Opus 5，性能接近Fable 5但成本减半</strong></p>\n  <p>7月25日，Anthropic正式发布最新旗舰AI模型Claude Opus 5。官方称，Opus 5在编程、Agent任务及复杂推理等能力上进一步提升，整体性能接近更高端的Claude Fable 5，但API价格仍维持上一代Opus 4.8水平，为每百万输入Token 5美元、输出Token 25美元。Anthropic表示，该模型更适合企业办公、软件开发等日常高频场景，并进一步增强了安全性和抗滥用能力。目前，Claude Opus 5已向Claude平台及API",
         "categories": [
@@ -40,32 +40,6 @@
         "rule_score": 84.49644444444445
       },
       {
-        "source_id": "vllm-releases",
-        "source_name": "vLLM Releases",
-        "source_group": "research",
-        "independence_group": "vllm-releases",
-        "title": "vLLM Releases: v0.26.0",
-        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.26.0",
-        "published_at": "2026-07-25T10:38:53Z",
-        "fetched_at": "2026-07-25T14:38:24.360061Z",
-        "language": "unknown",
-        "excerpt": "# vLLM v0.26.0 Release Notes\r\n\r\n## Highlights\r\n\r\nThis release features 411 commits from 212 contributors (61 new)!\r\n\r\n* **New Inkling model family** with a full support stack: base modeling (#48799), piecewise CUDA graph support (#48822), Hopper FA4 relative attention (#48858), MTP=1 speculative decoding (#48869), LoRA (#48884), and standard ModelOpt NVFP4 quantization (#48990).\r\n* **DeepSeek-V4 performance push** across vendors: a specialized routing kernel (2.94% E2E TPOT, #48660), `fused_topk_bias` (1.5–2x kernel, #47463), and redundant repeat/copy removal (1.8% E2E TPOT, #48137), plus ROCm two-stage compressor for HCA prefill (#47718), sparse decode/prefill optimizations (#48519, #48788, #46275), and DSpark speculative decoding on AMD (#47419) and XPU (#47677).\r\n* **fp32 `lm_head` for generation models via `head_dtype`** (#48390), extended to the LoRA path (#48525) and given a ROCm `torch.mm` fast path (#48688), improving accuracy for generation heads.\r\n* **Flexible attention backends**: the attention backend can now be selected per KV-cache group (#48012), and sliding-window support is now an explicit backend capability (#48011) — improving support for hybrid models.\r\n* **KV o",
-        "categories": [
-          "open-source",
-          "inference"
-        ],
-        "author": "khluu",
-        "upstream_urls": [],
-        "raw_metadata": {
-          "release_id": 359735987
-        },
-        "id": "489b1bceadfc9bb4",
-        "canonical_url": "https://github.com/vllm-project/vllm/releases/tag/v0.26.0",
-        "normalized_title": "vllm releases v0 26 0",
-        "fingerprint": "489b1bceadfc9bb4b95826aa87c20587305ea49eb6850d299f3e96503bd9407f",
-        "rule_score": 69.46480555555556
-      },
-      {
         "source_id": "techcrunch-ai",
         "source_name": "TechCrunch AI",
         "source_group": "media",
@@ -73,7 +47,7 @@
         "title": "‘AI communism’, rogue models, and the why Kimi K3 spooked Wall Street",
         "url": "https://techcrunch.com/podcast/ai-communism-rogue-models-and-the-why-kimi-k3-spooked-wall-street/",
         "published_at": "2026-07-24T14:00:00Z",
-        "fetched_at": "2026-07-25T14:38:26.918964Z",
+        "fetched_at": "2026-07-26T03:31:08.179261Z",
         "language": "unknown",
         "excerpt": "Chinese AI lab Moonshot&#8217;s&#160;open model Kimi went viral this week&#160;for reasons that had less to do with the model itself and more to do with&#160;how the U.S. AI industry reacted to it. Meanwhile, an unreleased OpenAI model wandered outside its test environment and ended up connected to a real&#160;security breach at Hugging Face&#160;— a reminder [&#8230;]",
         "categories": [
@@ -97,7 +71,7 @@
         "title": "派拉蒙天舞宣布推迟收购华纳兄弟交易",
         "url": "https://36kr.com/newsflashes/3910698042643844?f=rss",
         "published_at": "2026-07-25T07:35:06Z",
-        "fetched_at": "2026-07-25T14:38:26.873561Z",
+        "fetched_at": "2026-07-26T03:31:08.103494Z",
         "language": "unknown",
         "excerpt": "派拉蒙天舞公司24日宣布同意推迟收购华纳兄弟探索公司的交易。该项被广泛认为将改变美国娱乐、媒体等多个行业格局的交易目前正面临严峻法律挑战。派拉蒙天舞是在经过数轮交锋和不断提高收购报价后，才最终击败流媒体巨头奈飞。华纳兄弟探索公司股东4月23日投票批准了派拉蒙天舞提出的收购协议。这笔交易原计划在今年第三季度完成。提交给美国证券监管机构的文件显示，若交易延期，派拉蒙天舞公司或将付出高昂代价。（新华社）",
         "categories": [
@@ -114,78 +88,6 @@
         "rule_score": 60.158500000000004
       },
       {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "TCL科技收购广州华星半导体45%股权事宜获深交所审议通过",
-        "url": "https://36kr.com/newsflashes/3910519718270081?f=rss",
-        "published_at": "2026-07-25T04:53:01Z",
-        "fetched_at": "2026-07-25T14:38:26.873655Z",
-        "language": "unknown",
-        "excerpt": "7月24日，TCL科技发布公告，公司收购广州华星半导体45%股权事项已获深交所审核通过。根据本次交易方案，收购完成后TCL科技将直接及间接持有广州华星半导体100%股权。据了解，广州华星半导体为TCL华星t9产线运营主体，2026年1—6月，广州华星半导体营业收入为79.26亿元，同比增长7.40%；净利润为11.54亿元，同比增长203.99%。（央广网）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "f1aab99f009ba35b",
-        "canonical_url": "https://36kr.com/newsflashes/3910519718270081?f=rss",
-        "normalized_title": "tcl科技收购广州华星半导体45 股权事宜获深交所审议通过",
-        "fingerprint": "f1aab99f009ba35ba751e1abcf200af44c48e2708336388074ec18045c5fc737",
-        "rule_score": 59.88836111111111
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "携程回应被处罚：诚恳接受、坚决服从",
-        "url": "https://36kr.com/newsflashes/3910496040555652?f=rss",
-        "published_at": "2026-07-25T03:22:16Z",
-        "fetched_at": "2026-07-25T14:38:26.873730Z",
-        "language": "unknown",
-        "excerpt": "携程7月25日发布关于诚恳接受国家市场监督管理总局行政处罚决定的公告：今日，我们收到《国家市场监督管理总局行政处罚决定书》。对此，我们诚恳接受、坚决服从，并将严格对照监管要求，逐项推进、系统落实各项整改工作，确保各项措施执行到位。",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "bc486fabe0ba882e",
-        "canonical_url": "https://36kr.com/newsflashes/3910496040555652?f=rss",
-        "normalized_title": "携程回应被处罚 诚恳接受 坚决服从",
-        "fingerprint": "bc486fabe0ba882ea0d190e0d374983a1a55510264602df7ea6586e1f62fe9d7",
-        "rule_score": 59.73711111111111
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "穆迪警告AI投资狂潮冲击科技巨头财务稳健性 微软、甲骨文等公司自由现金流承压",
-        "url": "https://36kr.com/newsflashes/3910433082545536?f=rss",
-        "published_at": "2026-07-25T03:00:00Z",
-        "fetched_at": "2026-07-25T14:38:26.873755Z",
-        "language": "unknown",
-        "excerpt": "随着全球科技巨头竞相加码人工智能基础设施建设，穆迪评级警告称，AI投资热潮正侵蚀大型云计算服务商的自由现金流，并推高资产负债表风险，未来投资者将更加关注这些企业能否从巨额AI投入中获得足够回报。穆迪在本周发布的研究报告中表示，包括微软(MSFT.US)、亚马逊(AMZN.US)、谷歌母公司Alphabet(GOOGL.US)、Meta(META.US)、甲骨文(ORCL.US)及CoreWeave(CRWV.US)在内的六家科技企业，正从过去依赖软件、知识产权和云服务的“轻资产”商业模式，转向需要大规模建设数据中心等基础设施的“重资产”模式。（财联社）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "865877875903604e",
-        "canonical_url": "https://36kr.com/newsflashes/3910433082545536?f=rss",
-        "normalized_title": "穆迪警告ai投资狂潮冲击科技巨头财务稳健性 微软 甲骨文等公司自由现金流承压",
-        "fingerprint": "865877875903604e8b5e1f64852ae6702c5ce72fda58218fe3a05624919e0717",
-        "rule_score": 55.7
-      },
-      {
         "source_id": "techcrunch-ai",
         "source_name": "TechCrunch AI",
         "source_group": "media",
@@ -193,7 +95,7 @@
         "title": "Anthropic launches Opus 5",
         "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
         "published_at": "2026-07-24T17:00:00Z",
-        "fetched_at": "2026-07-25T14:38:26.918919Z",
+        "fetched_at": "2026-07-26T03:31:08.179216Z",
         "language": "unknown",
         "excerpt": "Opus 5 will be both cheaper and less restrictive than Fable, likely making it preferable in most use cases.",
         "categories": [
@@ -210,32 +112,6 @@
         "rule_score": 54.7
       },
       {
-        "source_id": "llama-cpp-releases",
-        "source_name": "llama.cpp Releases",
-        "source_group": "research",
-        "independence_group": "llama-cpp-releases",
-        "title": "llama.cpp Releases: b10106",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10106",
-        "published_at": "2026-07-24T11:34:41Z",
-        "fetched_at": "2026-07-25T14:38:25.130644Z",
-        "language": "unknown",
-        "excerpt": "<details open>\n\nCUDA: fix external compilation of q1_0 MMQ (#25778)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10106/llama-b10106-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10106/llama-b10106-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10106/llama-b10106-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10106/llama-b10106-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10106/llama-b10106-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10106/llama-b10106-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10106/llama-b10106-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu arm64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b1",
-        "categories": [
-          "open-source",
-          "inference"
-        ],
-        "author": "github-actions[bot]",
-        "upstream_urls": [],
-        "raw_metadata": {
-          "release_id": 359261786
-        },
-        "id": "b2e7f46d3398ff91",
-        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10106",
-        "normalized_title": "llama cpp releases b10106",
-        "fingerprint": "b2e7f46d3398ff91c7a014acb0615b69e0e5aaa6796bc343aea75aa423e97f76",
-        "rule_score": 54.157805555555555
-      },
-      {
         "source_id": "36kr",
         "source_name": "36Kr",
         "source_group": "media",
@@ -243,7 +119,7 @@
         "title": "《2026能源产业生态报告》发布 风电光伏装机超越火电",
         "url": "https://36kr.com/newsflashes/3910816808457602?f=rss",
         "published_at": "2026-07-25T09:27:27Z",
-        "fetched_at": "2026-07-25T14:38:26.873511Z",
+        "fetched_at": "2026-07-26T03:31:08.103445Z",
         "language": "unknown",
         "excerpt": "记者今天（25日）从中国企业改革与发展研究会获悉，《2026能源产业生态报告》正式发布。报告显示，“十四五”时期，我国风电光伏装机历史性超越火电，核能、生物质能领域领跑全球。“十四五”期间，我国能源产业实现安全保供与绿色低碳转型双向协同发展。2025年全国能源重点项目投资额首超3.5万亿元，同比增长近11%。新能源产业实现跨越式发展，2020至2025年风电光伏装机从5.3亿千瓦增至18.4亿千瓦。核电运行装机总量稳居全球第一，生物质能发电装机连续7年规模全球第一。（央视新闻）",
         "categories": [
@@ -267,7 +143,7 @@
         "title": "今年上半年新疆霍尔果斯口岸进出口货运量创新高",
         "url": "https://36kr.com/newsflashes/3910803462559108?f=rss",
         "published_at": "2026-07-25T09:00:24Z",
-        "fetched_at": "2026-07-25T14:38:26.873524Z",
+        "fetched_at": "2026-07-26T03:31:08.103458Z",
         "language": "unknown",
         "excerpt": "今年上半年，新疆霍尔果斯口岸依托公铁联运枢纽优势，进出口货运量持续增长，据霍尔果斯海关统计，今年1—6月，新疆霍尔果斯口岸实际监管进出口货运量2295.4万吨，同比增长3.1%，创历史新高。（央视新闻）",
         "categories": [
@@ -291,7 +167,7 @@
         "title": "奇瑞集团全球累计销量突破2000万辆",
         "url": "https://36kr.com/newsflashes/3910802157589891?f=rss",
         "published_at": "2026-07-25T08:33:40Z",
-        "fetched_at": "2026-07-25T14:38:26.873536Z",
+        "fetched_at": "2026-07-26T03:31:08.103470Z",
         "language": "unknown",
         "excerpt": "36氪获悉，据“奇瑞集团”公众号消息，2026年7月25日，奇瑞集团全球累计销量正式突破2000万辆。奇瑞集团表示，同一天即将迎来上市的风云A9，将作为第2000万辆车，正式交付给用户。",
         "categories": [
@@ -315,7 +191,7 @@
         "title": "携程公布五个方面、共十九项整改措施",
         "url": "https://36kr.com/newsflashes/3910756819358855?f=rss",
         "published_at": "2026-07-25T08:00:10Z",
-        "fetched_at": "2026-07-25T14:38:26.873548Z",
+        "fetched_at": "2026-07-26T03:31:08.103483Z",
         "language": "unknown",
         "excerpt": "7月25日，携程发布关于落实行政处罚决定整改措施的公告，公布了五个方面、共十九项整改措施。其中包括立即停止独家合作行为、保障酒店经营者自主经营权；立即停止不合理“全网最低价”要求、保障酒店经营者自主定价权；维护酒店经营者合法权益，持续倾听商家意见与诉求，不断优化商家经营环境；强化消费者权益保护，持续提升服务保障水平；加强合规建设，健全长效机制。",
         "categories": [
@@ -332,35 +208,6 @@
         "rule_score": 52.20027777777778
       },
       {
-        "source_id": "hacker-news",
-        "source_name": "Hacker News",
-        "source_group": "community",
-        "independence_group": "hacker-news",
-        "title": "AMD and Cerebras Launch AI Inference Solution",
-        "url": "https://www.cerebras.ai/press-release/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference",
-        "published_at": "2026-07-24T20:44:05Z",
-        "fetched_at": "2026-07-25T14:38:30.019670Z",
-        "language": "unknown",
-        "excerpt": "",
-        "categories": [
-          "products",
-          "developer-tools"
-        ],
-        "author": "rbanffy",
-        "upstream_urls": [
-          "https://www.cerebras.ai/press-release/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference"
-        ],
-        "raw_metadata": {
-          "hn_id": 49041347,
-          "score": 23
-        },
-        "id": "b438951c2a1b5b1d",
-        "canonical_url": "https://www.cerebras.ai/press-release/amd-and-cerebras-announce-industry-leading-ultra-low-latency-and-high-throughput-ai-inference",
-        "normalized_title": "amd and cerebras launch ai inference solution",
-        "fingerprint": "b438951c2a1b5b1de974a84b957ea738af1ed7566ce9728b7055dfb48931edf9",
-        "rule_score": 52.07347222222222
-      },
-      {
         "source_id": "36kr",
         "source_name": "36Kr",
         "source_group": "media",
@@ -368,7 +215,7 @@
         "title": "2026年度票房破210亿元",
         "url": "https://36kr.com/newsflashes/3910541410145411?f=rss",
         "published_at": "2026-07-25T05:20:36Z",
-        "fetched_at": "2026-07-25T14:38:26.873643Z",
+        "fetched_at": "2026-07-26T03:31:08.103569Z",
         "language": "unknown",
         "excerpt": "据电影平台数据，截至7月25日，2026年年度总票房（含预售）突破210亿元。《飞驰人生3》《给阿嬷的情书》《功夫女足》暂列年度票房榜前三位。（每经网）",
         "categories": [
@@ -385,150 +232,6 @@
         "rule_score": 51.934333333333335
       },
       {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "枣庄财金“一把手”接掌*ST雅博",
-        "url": "https://36kr.com/newsflashes/3910508571579528?f=rss",
-        "published_at": "2026-07-25T04:25:54Z",
-        "fetched_at": "2026-07-25T14:38:26.873667Z",
-        "language": "unknown",
-        "excerpt": "7月24日晚间，*ST雅博发布公告称，公司董事长张宗辉因到达法定退休年龄，近日已提交书面辞职报告，辞去第七届董事会董事长及董事职务，其原定任期至第七届董事会届满。同一天，*ST雅博召开第七届董事会第六次会议，审议通过了《关于选举董事长的议案》，选举杨建东为公司新任董事长，任期自董事会审议通过之日起至公司第七届董事会任期届满之日止。简历显示，杨建东2024年5月至今任枣庄市财金控股集团有限公司董事长、党委书记。（界面新闻）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "7932ac0d1b7ce24b",
-        "canonical_url": "https://36kr.com/newsflashes/3910508571579528?f=rss",
-        "normalized_title": "枣庄财金 一把手 接掌 st雅博",
-        "fingerprint": "7932ac0d1b7ce24b498d680a21211dd607a5e1d8c90319962508083d40cef4fa",
-        "rule_score": 51.84316666666667
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "2025年我国数字产业收入39.6万亿元",
-        "url": "https://36kr.com/newsflashes/3910502774101383?f=rss",
-        "published_at": "2026-07-25T04:04:57Z",
-        "fetched_at": "2026-07-25T14:38:26.873679Z",
-        "language": "unknown",
-        "excerpt": "国家互联网信息办公室最新发布的《国家信息化发展报告（2025年）》显示，2025年，我国数字经济核心产业增加值占GDP的比重超过10.5%，数字产业收入39.6万亿元，同比增长8.8%。我国居民数字消费规模达25.3万亿元，同比增长8.7%。同时，我国网络基础设施提质升级。截至2025年底，我国5G基站总数达483.8万个，三分之二地级市达到千兆城市标准。IPv6活跃用户数达8.69亿。（央视新闻）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "52236040fef50749",
-        "canonical_url": "https://36kr.com/newsflashes/3910502774101383?f=rss",
-        "normalized_title": "2025年我国数字产业收入39 6万亿元",
-        "fingerprint": "52236040fef507499fd1f73dee41a98ce1359d42ca95efda00f814a9fa50cb26",
-        "rule_score": 51.80825
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "一审判决支付工程款2449.18万元 翰博高新：不会产生重大不利影响",
-        "url": "https://36kr.com/newsflashes/3910444488709513?f=rss",
-        "published_at": "2026-07-25T03:48:40Z",
-        "fetched_at": "2026-07-25T14:38:26.873691Z",
-        "language": "unknown",
-        "excerpt": "7月24日晚间，翰博高新材料（合肥）股份有限公司（以下简称“翰博高新”）发布公告称，公司及全资子公司博讯光电科技（合肥）有限公司（以下简称“博讯光电”）与陕西建工第一建设集团有限公司（以下简称“陕建一建集团”）之间的工程施工合同纠纷，已由合肥市瑶海区人民法院作出一审判决。公告显示，根据瑶海区人民法院送达的《民事判决书》，一审判决被告博讯光电支付工程欠款2449.18万元及相应逾期付款损失，同时驳回原告陕建一建集团其他诉讼请求。（证券日报）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "4cb216d1c1d22a9a",
-        "canonical_url": "https://36kr.com/newsflashes/3910444488709513?f=rss",
-        "normalized_title": "一审判决支付工程款2449 18万元 翰博高新 不会产生重大不利影响",
-        "fingerprint": "4cb216d1c1d22a9a84589465860143c6b2a91ae2564e3b5e00bd3bab7ff5cc0c",
-        "rule_score": 51.78111111111111
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "中国电池工业协会与中国汽车工业协会签订战略合作协议",
-        "url": "https://36kr.com/newsflashes/3910441114703232?f=rss",
-        "published_at": "2026-07-25T03:33:25Z",
-        "fetched_at": "2026-07-25T14:38:26.873703Z",
-        "language": "unknown",
-        "excerpt": "根据合作协议，双方将围绕产业战略与政策协同研究、产业链协同生态打造、电池数字身份体系建设、行业标准共建、国际产业交流、行业公共服务共享多方面开展深度协作，搭建常态化沟通对接机制，通过联合调研、行业活动、成果发布等多元形式推进各项合作落地，赋能两大产业融合升级。（新浪财经）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "7c969fcd5532ccbf",
-        "canonical_url": "https://36kr.com/newsflashes/3910441114703232?f=rss",
-        "normalized_title": "中国电池工业协会与中国汽车工业协会签订战略合作协议",
-        "fingerprint": "7c969fcd5532ccbfe610434615c0749e359b4bf3063d3a43599d5232bf489f06",
-        "rule_score": 51.755694444444444
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "北汽集团：坚定看好中国资本市场发展前景，全力支持控股上市公司高质量发展",
-        "url": "https://36kr.com/newsflashes/3910437664920964?f=rss",
-        "published_at": "2026-07-25T03:23:44Z",
-        "fetched_at": "2026-07-25T14:38:26.873716Z",
-        "language": "unknown",
-        "excerpt": "北汽集团发文称，坚信中国经济长期向好基本面，坚定看好中国资本市场发展前景，全力支持控股上市公司高质量发展。7月24日，北汽蓝谷、福田汽车、渤海汽车同步发布增持公告，北汽集团拟增持北汽蓝谷股份5000万元至1亿元、福田汽车股份5000万元至1亿元、渤海汽车股份2500万元至5000万元，合计增持金额不超过2.5亿元。",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "37ed059a0d667c74",
-        "canonical_url": "https://36kr.com/newsflashes/3910437664920964?f=rss",
-        "normalized_title": "北汽集团 坚定看好中国资本市场发展前景 全力支持控股上市公司高质量发展",
-        "fingerprint": "37ed059a0d667c7429473e800da10bc3591d75f0966047951f71047d241db8b3",
-        "rule_score": 51.739555555555555
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "黑格G1系列破年内科技造物众筹首日记录",
-        "url": "https://36kr.com/newsflashes/3910478626804868?f=rss",
-        "published_at": "2026-07-25T03:04:33Z",
-        "fetched_at": "2026-07-25T14:38:26.873742Z",
-        "language": "unknown",
-        "excerpt": "36氪获悉，近期，黑格科技(HeyGears)旗下“桌面级全彩3D及UV打印机”G1系列上线全球众筹平台Kickstarter，24小时众筹金额突破722万美元（约合人民币4900万元），创年内科技造物品类全球首日众筹纪录。",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "0159a97f74911fe3",
-        "canonical_url": "https://36kr.com/newsflashes/3910478626804868?f=rss",
-        "normalized_title": "黑格g1系列破年内科技造物众筹首日记录",
-        "fingerprint": "0159a97f74911fe3c212c0b0b904b7f377193294146795b002be5700b23182b3",
-        "rule_score": 51.70758333333333
-      },
-      {
         "source_id": "techcrunch-ai",
         "source_name": "TechCrunch AI",
         "source_group": "media",
@@ -536,7 +239,7 @@
         "title": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
         "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/",
         "published_at": "2026-07-25T00:23:11Z",
-        "fetched_at": "2026-07-25T14:38:26.918878Z",
+        "fetched_at": "2026-07-26T03:31:08.179178Z",
         "language": "unknown",
         "excerpt": "OpenAI's fancy new AI keypad will be a lot of fun for some, while many others are probably not going to touch it.",
         "categories": [
@@ -560,7 +263,7 @@
         "title": "Why Cognition bought Poke: AI personality is becoming a competitive advantage",
         "url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/",
         "published_at": "2026-07-24T18:07:32Z",
-        "fetched_at": "2026-07-25T14:38:26.918907Z",
+        "fetched_at": "2026-07-26T03:31:08.179203Z",
         "language": "unknown",
         "excerpt": "The acquisition brings Poke’s conversational style and interaction model to Cognition’s coding agent Devin, reflecting a growing belief that how AI assistants interact with users is as important as the models powering them.",
         "categories": [
@@ -584,7 +287,7 @@
         "title": "What, Where, and How: Disentangling the Roles of Task, Language, and Model in Code Model Representations",
         "url": "https://arxiv.org/abs/2607.21491v1",
         "published_at": "2026-07-23T16:34:14Z",
-        "fetched_at": "2026-07-25T14:38:23.950600Z",
+        "fetched_at": "2026-07-26T03:31:06.286806Z",
         "language": "unknown",
         "excerpt": "Do independently trained language models come to represent the same thing in the same way? We answer for code, extending a recently introduced concept-circuit extraction method to a 2x2 design -- Python and Rust crossed with Qwen2.5-Coder-7B and DeepSeek-Coder-V1-6.7B -- and measuring a complete inventory of grammatical concepts (58 Python, 57 Rust) identically in all four cells: the smallest design that separates what depends on the task, the language, and the model.\n  The answer splits into three parts. What earns dedicated circuitry is set by the task: the models agree on which concepts receive circuits (Spearman $ρ$ = 0.638 for Python, 0.673 for Rust, both p < $10^{-7}$). Where those circuits sit is set by the model: Qwen processes concepts in a late band (~L17-19), DeepSeek at L6-7, for both languages. How circuits grow across layers is also set by the model: Qwen gives its atomic concepts an early spike that DeepSeek does not. \"Are circuits universal?\" thus has no single answer: yes for What, no for Where and How -- universality is a property of representational content, not of computational organisation.\n  None of this structure was fixed in advance. The agreement could have",
         "categories": [
@@ -604,10 +307,34 @@
         "source_name": "TechCrunch AI",
         "source_group": "media",
         "independence_group": "techcrunch-ai",
+        "title": "Librarians are hosting viral ‘Avoiding AI’ workshops for people who are fed up with Big Tech",
+        "url": "https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech/",
+        "published_at": "2026-07-25T16:00:00Z",
+        "fetched_at": "2026-07-26T03:31:08.179113Z",
+        "language": "unknown",
+        "excerpt": "At libraries around the country, \"Avoiding AI\" workshops have elicited unprecedented demand.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Amanda Silberling",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e086424e4730f6b5",
+        "canonical_url": "https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech",
+        "normalized_title": "librarians are hosting viral avoiding ai workshops for people who are fed up with big tech",
+        "fingerprint": "e086424e4730f6b55426751ee920dfcbd37f5c917a2d497a7677cbc212036c97",
+        "rule_score": 49.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
         "title": "One fallen power line exposed a growing AI data center problem. Here’s how to fix it.",
         "url": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
         "published_at": "2026-07-25T13:05:00Z",
-        "fetched_at": "2026-07-25T14:38:26.918835Z",
+        "fetched_at": "2026-07-26T03:31:08.179163Z",
         "language": "unknown",
         "excerpt": "A close call in Northern Virginia revealed just how poorly data centers respond to grid disruptions. Here's how to fix the problem.",
         "categories": [
@@ -631,7 +358,7 @@
         "title": "Anthropic updates Claude voice mode with more capable models",
         "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
         "published_at": "2026-07-23T19:00:00Z",
-        "fetched_at": "2026-07-25T14:38:26.919031Z",
+        "fetched_at": "2026-07-26T03:31:08.179307Z",
         "language": "unknown",
         "excerpt": "Claude's new voice model will let you reschedule your meeting or draft an email.",
         "categories": [
@@ -655,7 +382,7 @@
         "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
         "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
         "published_at": "2026-07-23T18:38:34Z",
-        "fetched_at": "2026-07-25T14:38:26.919043Z",
+        "fetched_at": "2026-07-26T03:31:08.179318Z",
         "language": "unknown",
         "excerpt": "AegisAI co-founders developed AI agents that quickly analyze each message as a human would, paying attention to small anomalies that even the most elaborate checklist wouldn’t catch.",
         "categories": [
@@ -679,7 +406,7 @@
         "title": "OpenAI makes ChatGPT Health available to all US users",
         "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
         "published_at": "2026-07-23T17:00:00Z",
-        "fetched_at": "2026-07-25T14:38:26.919065Z",
+        "fetched_at": "2026-07-26T03:31:08.179340Z",
         "language": "unknown",
         "excerpt": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
         "categories": [
@@ -703,7 +430,7 @@
         "title": "SK集团与英伟达通过一项涵盖人工智能工厂和下一代内存的5000亿美元以上战略合作项目",
         "url": "https://36kr.com/newsflashes/3910690882507907?f=rss",
         "published_at": "2026-07-25T06:40:29Z",
-        "fetched_at": "2026-07-25T14:38:26.873586Z",
+        "fetched_at": "2026-07-26T03:31:08.103518Z",
         "language": "unknown",
         "excerpt": "英伟达宣布，SK集团与英伟达在AI工厂及下一代内存领域扩大战略合作。SK集团与英伟达今日宣布计划建立一项超过5000亿美元的综合合作伙伴关系，以建立满足全球计算需求激增的人工智能基础设施。双方签署了意向书，正式化协议，涵盖从人工智能工厂建设到人工智能内存供应。SK电信将建设2吉瓦的NVIDIA Vera Rubin DSX AI工厂，以满足全球计算需求。英伟达与SK海力士建立长期合作关系，共同保障并共同开发包括HBM在内的下一代AI内存。两家公司将共同开发和优化下一代AI内存解决方案，包括HBM，以满足从大型语言模型训练到代理AI和物理AI等不断变化的基础设施需求。（财联社）",
         "categories": [
@@ -720,38 +447,293 @@
         "rule_score": 48.06747222222222
       },
       {
-        "source_id": "hacker-news",
-        "source_name": "Hacker News",
-        "source_group": "community",
-        "independence_group": "hacker-news",
-        "title": "Be skeptical of OpenAI's rogue hacker agent story",
-        "url": "https://www.theguardian.com/technology/2026/jul/24/openai-rogue-hacker",
-        "published_at": "2026-07-24T16:33:31Z",
-        "fetched_at": "2026-07-25T14:38:28.930178Z",
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Prentis, new AI lab co-founded by Reid Hoffman, Mark Pincus in talks to raise $100M",
+        "url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/",
+        "published_at": "2026-07-24T22:25:58Z",
+        "fetched_at": "2026-07-26T03:31:08.179191Z",
         "language": "unknown",
-        "excerpt": "",
+        "excerpt": "The neolab is betting that automating routine computer tasks will soon outpace coding as AI's biggest use case.",
         "categories": [
-          "products",
-          "developer-tools"
+          "business",
+          "products"
         ],
-        "author": "rwmj",
-        "upstream_urls": [
-          "https://www.theguardian.com/technology/2026/jul/24/openai-rogue-hacker"
+        "author": "Marina Temkin",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6296408ff46ad871",
+        "canonical_url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m",
+        "normalized_title": "prentis new ai lab co founded by reid hoffman mark pincus in talks to raise 100m",
+        "fingerprint": "6296408ff46ad871097bab0b499529f99394cc0413fc4e451ce3438b7f8f5d5c",
+        "rule_score": 47.24327777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "As US weighs response to Chinese AI, industry urges against broad open-weight restrictions",
+        "url": "https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/",
+        "published_at": "2026-07-24T15:51:49Z",
+        "fetched_at": "2026-07-26T03:31:08.179227Z",
+        "language": "unknown",
+        "excerpt": "AI companies, including Nvidia and Mistral, urge policymakers to avoid broad restrictions on open-weight AI models as Washington debates responses to Chinese AI and alleged model distillation.",
+        "categories": [
+          "business",
+          "products"
         ],
-        "raw_metadata": {
-          "hn_id": 49038060,
-          "score": 511
-        },
-        "id": "44a8b9caf3304914",
-        "canonical_url": "https://www.theguardian.com/technology/2026/jul/24/openai-rogue-hacker",
-        "normalized_title": "be skeptical of openai s rogue hacker agent story",
-        "fingerprint": "44a8b9caf330491485a48828b3ae6b5ad25c0f7d9ab672e7045c09d3a8aec99a",
-        "rule_score": 47.65586111111111
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1a18c76f795fd85c",
+        "canonical_url": "https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions",
+        "normalized_title": "as us weighs response to chinese ai industry urges against broad open weight restrictions",
+        "fingerprint": "1a18c76f795fd85c631bdbedbd3a67563294c20883aecf89f929d573ed4f206c",
+        "rule_score": 46.58636111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Bluesky’s AI assistant Attie expands into an open social research tool",
+        "url": "https://techcrunch.com/2026/07/24/blueskys-ai-assistant-attie-expands-into-an-open-social-research-tool/",
+        "published_at": "2026-07-24T15:13:57Z",
+        "fetched_at": "2026-07-26T03:31:08.179239Z",
+        "language": "unknown",
+        "excerpt": "Users can now ask Attie questions about news, trends, and conversations on Bluesky and other apps on the AT Protocol.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a9b7532b7dd9851a",
+        "canonical_url": "https://techcrunch.com/2026/07/24/blueskys-ai-assistant-attie-expands-into-an-open-social-research-tool",
+        "normalized_title": "bluesky s ai assistant attie expands into an open social research tool",
+        "fingerprint": "a9b7532b7dd9851aa7c72ff2fd8e564a8d028e0227b9f5a67026c3b66747cd16",
+        "rule_score": 46.52325
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Start Customizing NVIDIA Nemotron 3 Nano with Prime Intellect Lab in Minutes",
+        "url": "https://developer.nvidia.com/blog/start-customizing-nvidia-nemotron-3-nano-with-prime-intellect-lab-in-minutes/",
+        "published_at": "2026-07-23T16:00:00Z",
+        "fetched_at": "2026-07-26T03:31:05.710618Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"Decorative image.\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/07/Start-Customizing-768x432.png\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"Start-Customizing\" width=\"768\" />Customization is what enables developers to take a general model and tailor it to use cases, domains, languages, and more. However, customization comes with a...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Michelle Horton",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0e09ec7241efc492",
+        "canonical_url": "https://developer.nvidia.com/blog/start-customizing-nvidia-nemotron-3-nano-with-prime-intellect-lab-in-minutes",
+        "normalized_title": "start customizing nvidia nemotron 3 nano with prime intellect lab in minutes",
+        "fingerprint": "0e09ec7241efc49200a395ba41dc290115a3bc6fc8737f5488cc7f60ecf0207a",
+        "rule_score": 46.2
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Expanding Flow Maps",
+        "url": "https://arxiv.org/abs/2607.21585v1",
+        "published_at": "2026-07-23T17:57:38Z",
+        "fetched_at": "2026-07-26T03:31:06.286464Z",
+        "language": "unknown",
+        "excerpt": "Flow-based generative models have enabled remarkable progress in fast and controllable generation across continuous and discrete state spaces, yet existing parameterizations are constrained to fixed dimensions or fixed sequence lengths. Here, we introduce Expanding Generative Flows (EFlows), which define flows between distributions of increasing dimensionality along an expanding interpolant that grows the state by augmenting it with conditional noise. Building on this construction, we propose Expanding Flow Maps (EFMs), a new class of flow maps that distill the expanding interpolant into efficient few-step generative models. Each EFM factors the map between any two timesteps into two learnable operations: an expand operator, which augments the state space with new coordinates or tokens conditioned on the current state, and a transport map, which pushes the expanded state forward along the interpolant. Composing these operators yields a single map that jointly expands and denoises the state, recovering existing fixed-canvas flows and flow maps as the special case in which the expand operator is the identity. We further extend the framework to the discrete simplex, enabling variable-",
+        "categories": [
+          "research"
+        ],
+        "author": "Pranam Chatterjee",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5f0f0c6382949cfc",
+        "canonical_url": "https://arxiv.org/abs/2607.21585v1",
+        "normalized_title": "expanding flow maps",
+        "fingerprint": "5f0f0c6382949cfc7a8ecde560f8d9f5caa40786fa775327d9535eb0a737f37e",
+        "rule_score": 45.396055555555556
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "GraphVid: Interactive Graph-Controllable Video Generation",
+        "url": "https://arxiv.org/abs/2607.21580v1",
+        "published_at": "2026-07-23T17:56:30Z",
+        "fetched_at": "2026-07-26T03:31:06.286487Z",
+        "language": "unknown",
+        "excerpt": "Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movement. In practice, trajectory-based control often requires users to draw accurate tracks for multiple objects, which scales poorly with scene complexity and becomes ambiguous under occlusion or overlap. To enable flexible yet precise multi-subject control, we introduce $\\textbf{GraphVid}$, a graph-conditioned image-to-video generation model that enables interactive control through structured interaction graphs. We further curate $\\textbf{GraphVid-Bench}$, a large-scale interaction-centric video dataset with structured relational annotations to enable training of interaction-aware video generation models. Despite using substantially less training data and fewer trainable parameters than prior motion-control methods, GraphVid delivers strong controllability and video quality. Compared with Motion-I2V, GraphVid reduces FID by up to 39.9% and FVD by 37.6%, while improving PSNR (9.87=>15.98) and SSIM (0.38=>0.61). Our results highlight the potential of structured semantic interfaces as a pow",
+        "categories": [
+          "research"
+        ],
+        "author": "Ismini Lourentzou",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b6e21338d4713ff0",
+        "canonical_url": "https://arxiv.org/abs/2607.21580v1",
+        "normalized_title": "graphvid interactive graph controllable video generation",
+        "fingerprint": "b6e21338d4713ff0f57bbfa0b4dd90d046ec0512a00b1597df8ba699b38588b0",
+        "rule_score": 45.39416666666666
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
+        "url": "https://arxiv.org/abs/2607.21579v1",
+        "published_at": "2026-07-23T17:56:05Z",
+        "fetched_at": "2026-07-26T03:31:06.286500Z",
+        "language": "unknown",
+        "excerpt": "Barzilai--Borwein (BB) method has shown strong practical performance in continuous optimization, yet its convergence dynamics remains poorly understood. In particular, a central unresolved question is whether BB converges superlinearly for almost every strictly convex quadratic problem and initialization. We provide a negative answer to this question. Specifically, for every finite dimension $n\\geq4$, we construct a nonempty open, hence positive-Lebesgue-measure, family of strictly convex quadratic problems and initial points for which the long Barzilai--Borwein method (BB1) converges but cannot converge root-superlinearly. More precisely, with the explicit constants $ρ_{\\min}=10^{-6},ρ_{\\max}=0.61$, every spectral component of the gradient is bounded above and below by the corresponding geometric sequence. Consequently, the gradient norm and the energy norm of the error satisfy two-sided geometric estimates with the same rates, while the objective gap satisfies the corresponding estimates with squared rates. In particular, all three quantities are bounded below by geometric sequences, ruling out superlinear convergence. The construction is highly nontrivial, based on a computer-as",
+        "categories": [
+          "research"
+        ],
+        "author": "Mingyi Hong",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0f675b3b2e45a860",
+        "canonical_url": "https://arxiv.org/abs/2607.21579v1",
+        "normalized_title": "barzilai borwein fails superlinear convergence on an open set of quadratics for every dimension n geq 4",
+        "fingerprint": "0f675b3b2e45a860d00626a23af3eaf6c3b112d334f2f61a42ad68f7658fc88a",
+        "rule_score": 45.39347222222222
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Synthetic data generation framework for quality control automation in gravure printing",
+        "url": "https://arxiv.org/abs/2607.21577v1",
+        "published_at": "2026-07-23T17:55:21Z",
+        "fetched_at": "2026-07-26T03:31:06.286511Z",
+        "language": "unknown",
+        "excerpt": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered by the extreme scarcity of real-world industrial defects images. To overcome this limitation, this paper introduces a novel synthetic data generation framework tailored for rotogravure printing quality control. The proposed pipeline automatically generates high-fidelity images of specific printing defects (creases, streaks, misregistration, etc.) and outputs corresponding bounding boxes and annotations. To validate the framework, a synthetic dataset of 7533 images was generated and used to train the state-of-the-art object-detection model RFDETR. Experimental results demonstrate that the model trained on our synthetic data achieves a Mean Average Precision (mAP) of 80.9\\% on real industrial testing samples. This framework provides a zero-cost, rapid-deployment solution for automating defect",
+        "categories": [
+          "research"
+        ],
+        "author": "Andrea Trombin",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7b6e8a86fd79f7dd",
+        "canonical_url": "https://arxiv.org/abs/2607.21577v1",
+        "normalized_title": "synthetic data generation framework for quality control automation in gravure printing",
+        "fingerprint": "7b6e8a86fd79f7ddd9716148d1bf21c021591fa4c8f614bc4e79504da28a7596",
+        "rule_score": 45.39225
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Surprisal Theory is Tautological (without Rational Grounding)",
+        "url": "https://arxiv.org/abs/2607.21574v1",
+        "published_at": "2026-07-23T17:54:37Z",
+        "fetched_at": "2026-07-26T03:31:06.286522Z",
+        "language": "unknown",
+        "excerpt": "Surprisal theory holds that the human processing difficulty of a linguistic unit in context is an affine function of its surprisal under some language model. I argue this claim is a tautology without further constraint: for any non-negative difficulty measure over units in context, there exists a language model whose surprisal is an affine function of it under mild technical conditions. Therefore, because any pattern of difficulty is consistent with some language model, without an additional constraint on the language model, surprisal theory makes no falsifiable predictions. The tautology was long obscured by an assumption implicit in two decades of psycholinguistic work---that the relevant language model is the distribution that generated the training corpus, so that improving corpus fit improves predictions of human behavior. Recent empirical work has undermined this assumption, demonstrating that better corpus models can be worse predictors of processing difficulty. I conclude that breaking the tautology requires a rationalist intervention, i.e., the relevant language model must be derived from a non-empirically motivated model of the comprehender, which could be based on, for i",
+        "categories": [
+          "research"
+        ],
+        "author": "Ryan Cotterell",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "998b6c8b8b5c41ab",
+        "canonical_url": "https://arxiv.org/abs/2607.21574v1",
+        "normalized_title": "surprisal theory is tautological without rational grounding",
+        "fingerprint": "998b6c8b8b5c41ab29dabc09d7f68137f630c54be873503e0565d868509f2dee",
+        "rule_score": 45.39102777777778
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
+        "url": "https://arxiv.org/abs/2607.21573v1",
+        "published_at": "2026-07-23T17:52:01Z",
+        "fetched_at": "2026-07-26T03:31:06.286533Z",
+        "language": "unknown",
+        "excerpt": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, existing sufficiency-oriented methods can assign high importance to spurious subsequences that support the prediction without being essential to the model's decision. We introduce \\textbf{TimePNS}, a necessity-aware framework for time-series explanation. Inspired by Pearl's counterfactual notion of necessity, TimePNS assesses whether a temporal factor is necessary by intervening on it and measuring whether the original prediction is disrupted. The framework adopts a two-stage design. Stage I learns an identifiable causal generative process together with a sufficiency-oriented explanation mask. Stage II performs counterfactual interventions on temporal factors to derive necessity signals, which supervise a temporal gate that refines the initial explanation by suppressing non-essential components and emphasizing counterfactually necessary ones. Experiments on synthetic and real-world time-series benchmarks show that TimePNS more accurately identifies decision-critical subsequences and con",
+        "categories": [
+          "research"
+        ],
+        "author": "Weiru Liu",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "98ce24b52e65d2bf",
+        "canonical_url": "https://arxiv.org/abs/2607.21573v1",
+        "normalized_title": "beyond sufficiency time series explanation with counterfactual necessity",
+        "fingerprint": "98ce24b52e65d2bfba0c8c049c751aa039bb50bd04535c977e15aeb6a737fb47",
+        "rule_score": 45.386694444444444
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+        "url": "https://arxiv.org/abs/2607.21561v1",
+        "published_at": "2026-07-23T17:42:51Z",
+        "fetched_at": "2026-07-26T03:31:06.286555Z",
+        "language": "unknown",
+        "excerpt": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representations with a Set Attention Block. We pretrain the model on CREMP, a cyclic peptide ensemble dataset, using a multi-task self-supervised objective combining masked token recovery, noisy-coordinate reconstruction, and pairwise distance reconstruction. On the CREMP-CycPeptMPDB dataset, training EnsembleEGNN from scratch fails entirely ($R^2=0.005$). However, the pretrained model reaches $R^2=0.477$ and Pearson $r=0.699$, outperforming the sequence-only BERT baseline ($R^2=0.439$, Pearson $r=0.667$). When EnsembleEGNN is co-trained end-to-end with the BERT sequence encoder, the hybrid model improves further to $R^2=0.538$ and Pearson $r=0.737$. These results demonstrate that encoding conformational ensembles into a single thermodynamically informed embedding improves cyclic-peptide property pred",
+        "categories": [
+          "research"
+        ],
+        "author": "Maxim Secor",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "922faff00664e41d",
+        "canonical_url": "https://arxiv.org/abs/2607.21561v1",
+        "normalized_title": "graph learning on ensembles of cyclic peptides an investigation of molecular ensemble modeling",
+        "fingerprint": "922faff00664e41d9ceedafd2908ded8c160c7d5d1cc7880e550e051106aaec4",
+        "rule_score": 45.37141666666667
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Neural solutions of coupled ghost and gluon Dyson--Schwinger equations in Landau gauge",
+        "url": "https://arxiv.org/abs/2607.21548v1",
+        "published_at": "2026-07-23T17:35:18Z",
+        "fetched_at": "2026-07-26T03:31:06.286630Z",
+        "language": "unknown",
+        "excerpt": "The coupled ghost and gluon Dyson--Schwinger equations (DSEs) of four-dimensional Landau-gauge Yang--Mills (YM) theory are solved with a neural representation trained only from renormalized equation residuals. The neural and fixed-point solutions agree at the percent level and remain stable under changes of initialization, network size, integration grid, and infrared boundary condition. Variations of the three-gluon vertex model produce substantially larger effects than the neural error. The MiniMOM ultraviolet running and the sign change of the gluon Schwinger function are also reproduced within the limitations of the truncation.",
+        "categories": [
+          "research"
+        ],
+        "author": "Rodrigo Carmo Terin",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6825cdab4c531e9e",
+        "canonical_url": "https://arxiv.org/abs/2607.21548v1",
+        "normalized_title": "neural solutions of coupled ghost and gluon dyson schwinger equations in landau gauge",
+        "fingerprint": "6825cdab4c531e9e2398252acc20ad9750dd7a200fd2f805ac8f7acd306ff75d",
+        "rule_score": 45.35883333333334
       }
     ],
-    "prompt_chars": 10887,
-    "estimated_input_tokens": 2721
+    "prompt_chars": 17536,
+    "estimated_input_tokens": 4384
   },
-  "failures": {},
+  "failures": {
+    "vllm-releases": "SourceFetchError: vllm-releases: GitHub fetch failed",
+    "transformers-releases": "SourceFetchError: transformers-releases: GitHub fetch failed",
+    "llama-cpp-releases": "SourceFetchError: llama-cpp-releases: GitHub fetch failed"
+  },
   "newly_auto_paused_source_ids": []
 }
