@@ -1,0 +1,173 @@
+{
+  "date": "2026-07-27",
+  "generated_at": "2026-07-27T13:40:51.458849Z",
+  "run_id": "2026-07-27-c724c60c",
+  "daily_summary_zh": "今日AI领域焦点：月之暗面Kimi K3模型发布引发全球关注；llama.cpp发布新版本，开源推理框架持续迭代；NVIDIA推出多项AI技术，涵盖手术机器人仿真、Agent框架及芯片设计模型。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "a2c850f1dd3b879c",
+        "6822fc3e62ccaae1",
+        "7baa963e2bd52c51"
+      ],
+      "category": "models",
+      "title_zh": "月之暗面Kimi K3模型发布并在Hugging Face上线",
+      "summary_zh": "月之暗面发布了Kimi K3模型，该模型已在Hugging Face上线。36氪报道了庆功活动，TechCrunch分析了该模型在硅谷引发的广泛关注和恐慌。",
+      "why_it_matters_zh": "Kimi K3代表了中国AI模型的最新进展，其性能和市场反响表明中国在AI领域的竞争力进一步提升，可能改变全球AI竞争格局。",
+      "importance_score": 85.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "title": "8点1氪丨携程因滥用市场支配地位被罚没51.79亿元；长鑫科技今日上市；日本技术人员拆解宇树机器人：短期内赶不上中国",
+        "url": "https://36kr.com/p/3913118530819457?f=rss",
+        "published_at": "2026-07-26T23:50:15Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "Making sense of the panic over Chinese AI",
+          "url": "https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/",
+          "published_at": "2026-07-26T19:40:57Z"
+        },
+        {
+          "source_id": "hacker-news",
+          "source_name": "Hacker News",
+          "title": "Kimi-K3 Releases on HuggingFace 7/27",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3",
+          "published_at": "2026-07-27T06:18:10Z"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "8173667966e1fa1c"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Cosmos-H-Dreams，用于手术机器人的实时生成式仿真",
+      "summary_zh": "NVIDIA 发布了 Cosmos-H-Dreams，这是一个用于手术机器人的实时生成式仿真系统，能够提升机器人训练的效率和安全性。",
+      "why_it_matters_zh": "该技术有望显著降低手术机器人培训成本，加速医疗AI落地，对精准医疗和远程手术具有重要意义。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+        "published_at": "2026-07-27T09:32:20Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "82c64b9b6bd83340"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA Nemotron 3 Ultra 在 Agentic RTL 编码中领先开源模型",
+      "summary_zh": "NVIDIA 发布了 Nemotron 3 Ultra 模型，该模型在 agentic RTL 编码任务中表现出色，在准确性和效率上超越其他开源模型。",
+      "why_it_matters_zh": "该模型展示了AI在芯片设计领域的应用潜力，有望缩短芯片开发周期，推动半导体行业智能化转型。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA Nemotron 3 Ultra Leads Open Models on Accuracy and Efficiency in Agentic RTL Coding",
+        "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-leads-open-models-on-accuracy-and-efficiency-in-agentic-rtl-coding/",
+        "published_at": "2026-07-27T00:45:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "ba5338d06ea80217"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10151 版本",
+      "summary_zh": "llama.cpp 发布了 b10151 版本，主要改进了 SYCL 构建的并行化，并提供了多平台二进制文件下载。",
+      "why_it_matters_zh": "llama.cpp 是本地运行大模型的关键工具，持续更新有助于降低AI推理成本，推动开源生态发展。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10151",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10151",
+        "published_at": "2026-07-27T13:24:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "0efc50d0e9b6806e"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 提出六项 Agent 框架能力以提升模型性能",
+      "summary_zh": "NVIDIA 在开发者博客中介绍了六项关键的 agent harness 能力，这些能力能够优化AI agent的上下文渲染、执行等环节，从而提升整体性能。",
+      "why_it_matters_zh": "Agent 框架的优化对于构建高效、可靠的AI agent至关重要，该指南为开发者提供了实用参考，有助于推动 agentic AI 的普及。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Six Agent Harness Capabilities for Higher Model Performance",
+        "url": "https://developer.nvidia.com/blog/six-agent-harness-capabilities-for-higher-model-performance/",
+        "published_at": "2026-07-27T09:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source kimi-platform-blog failed: SourceParseError: kimi-platform-blog: no dated article records found",
+    "source meta-ai-blog failed: SourceParseError: meta-ai-blog: no dated article records found",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qbitai failed: SourceParseError: qbitai: no dated article records found",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 125,
+    "normalized": 125,
+    "filtered": 96,
+    "ai_candidates": 30,
+    "prompt_chars": 14261,
+    "estimated_input_tokens": 3565,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "kimi-platform-blog",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qbitai",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
