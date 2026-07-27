@@ -28,7 +28,7 @@ def load_workflow(name: str) -> dict:
 
 def test_daily_workflow_has_schedule_manual_inputs_and_concurrency() -> None:
     workflow = load_workflow("daily-digest.yml")
-    assert workflow["on"]["schedule"][0]["cron"] == "0 13 * * *"
+    assert workflow["on"]["schedule"][0]["cron"] == "0 11 * * *"
     inputs = workflow["on"]["workflow_dispatch"]["inputs"]
     assert set(inputs) == {
         "dry_run",
