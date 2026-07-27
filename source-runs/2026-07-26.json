@@ -10,9 +10,9 @@
     "techcrunch-ai",
     "hacker-news"
   ],
-  "fetched_count": 97,
-  "normalized_count": 97,
-  "filtered_count": 86,
+  "fetched_count": 50,
+  "normalized_count": 50,
+  "filtered_count": 42,
   "budgeted": {
     "articles": [
       {
@@ -23,7 +23,7 @@
         "title": "硬氪首发 | 复旦教授、前英特尔首席科学家做端侧具身大脑，「眸深智能」完成近亿元Pre-A轮追加融资",
         "url": "https://36kr.com/p/3911162147640456?f=rss",
         "published_at": "2026-07-26T01:00:00Z",
-        "fetched_at": "2026-07-26T14:37:52.320244Z",
+        "fetched_at": "2026-07-27T02:06:51.839560Z",
         "language": "unknown",
         "excerpt": "<p>作者&nbsp;|&nbsp;邱晓芬</p>\n  <p>编辑&nbsp;|&nbsp;袁斯来</p>\n  <p>硬氪获悉，「眸深智能」（Motion Brain）完成近亿元Pre-A轮追加融资，本轮投资方包括中国头部物业服务公司、香港财团、多家上市公司联合打造的产业投资平台瑾悦投资、创合汇资本，以及老股东徐汇资本。</p>\n  <p>这也是继2026年5月3亿元Pre-A轮之后，「眸深智能」两个月内再次获得投资，此外，该公司Pre-A+轮的近5亿融资也在交割当中。该公司透露，今年上半年以来，「眸深智能」的估值增长超10倍，是业内发展速度最快的具身大脑企业之一。</p>\n  <p>「眸深智能」成立于2025年1月，定位为全球最懂动作的自进化具身大脑公司，致力于\"给10亿台机器人装原生通用大脑\"。</p>\n  <p>该公司由复旦大学深度学习实验室主任陈涛教授、原英特尔中国首席科学家张益民博士，与连续创业者穆泽林共同创办。核心团队拥有海思、英特尔、英伟达三大芯片巨头的背景人士，是国内少数具备算子级适配能力的具身大模型团队。</p>\n  <p>尽管2025年才注册成立，「眸深智能」的技术积累从2022年已经开始。在技术路线上，「眸深智能」选择了一条与主流VLA（视觉-语言-动作）不同的路径——以动作为核心的\"世界动作模型\"（World Motion Model）。</p>\n  <p class=\"image-wrapper\"><img src=\"https://img.36krcdn.com/hsossms/20260725/v2_adde42ccc1284ca98cb44e97b6d41f5a@1199336245_oswg77948oswg1080oswg810_img_000?x-oss-process=image/format,jpg/interlace,1\" /></p>\n  <p class=\"img-desc\">（图源/企业）</p>\n  <p>从2022年起，「眸深智能」团队已经发布了<strong>MLD（隐空间动作扩散模型）</strong>。在当时，行业主流是将动作视为离散的信号，导致生成的动作僵硬且缺乏多样性，而「眸深智能」团队在全球dede范围内首次提出将动作映射到隐空间（Latent Space），并引入扩散模型（Diffusion Model）。</p>\n  <p><strong>MLD</strong>相当于让AI学会了“无师自通”地生成动作：不再需要逐帧教机器人如何走路，而是让模型像画家去噪一样，从一团随机噪声中还原出自然、连贯的人体姿态。</p>\n  <p>如果说MLD解决了“怎么生成动作”，「眸深智能」又进一步着眼于如何“指挥动作”。2023年9月，团队创造性发布了<strong>MotionGPT</strong>。类比",
         "categories": [
@@ -40,196 +40,33 @@
         "rule_score": 79.5
       },
       {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "月之暗面Kimi K3庆功照流出，张予彤疑现身，喊出“冲上月球”口号",
-        "url": "https://36kr.com/newsflashes/3911981562270848?f=rss",
-        "published_at": "2026-07-26T04:33:25Z",
-        "fetched_at": "2026-07-26T14:37:52.320544Z",
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "London Gatwick has launched a robotic airport parking service",
+        "url": "https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/",
+        "published_at": "2026-07-26T14:40:27Z",
+        "fetched_at": "2026-07-27T02:06:53.336902Z",
         "language": "unknown",
-        "excerpt": "据报道，在经历过去一段时间月之暗面Kimi K3发布引发的广泛关注后，月之暗面于本周五在北京的一个酒吧举行了庆功活动。据流出内容，月之暗面展示的一张庆功标语显示，月之暗面对于K3的定位是“扩容升级”，同时期望将下一代K4“狠狠干到极致”，并喊出了“冲上月球”口号。一张流出的图片显示，本场活动上，月之暗面联合创始人、总裁张予彤疑似也到了现场。（新浪科技）",
+        "excerpt": "",
         "categories": [
-          "business",
-          "products"
+          "products",
+          "developer-tools"
         ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "d20f63d68973d636",
-        "canonical_url": "https://36kr.com/newsflashes/3911981562270848?f=rss",
-        "normalized_title": "月之暗面kimi k3庆功照流出 张予彤疑现身 喊出 冲上月球 口号",
-        "fingerprint": "d20f63d68973d636e11128bd283564784df5a2d0d92fc03a4dc3a7a6c1a80725",
-        "rule_score": 55.855694444444445
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "马斯克警告SpaceX空头风险",
-        "url": "https://36kr.com/newsflashes/3912221918107015?f=rss",
-        "published_at": "2026-07-26T08:37:56Z",
-        "fetched_at": "2026-07-26T14:37:52.320374Z",
-        "language": "unknown",
-        "excerpt": "本周特斯拉由于二季度业绩不及预期，财报发布后的第二天股价大跌约14.5%，市值蒸发了约2145亿美元。而马斯克的另一家太空探索技术公司SpaceX目前距离首次公开募股过去一个多月，股价跌破了发行价，并且押注其股价下跌的投资者还在不断增加。数据显示，目前SpaceX的空头仓位已上升至流通股的约32%。对此，马斯克警告称，长期维持SpaceX大规模空头仓位的机构，“生存概率非常低”。现在市场还在关注的就是SpaceX和特斯拉是否可能合并，对此马斯克在财报会上既没有承认，也没有否认，只是表示两家公司之间的业务重叠会越来越多。目前部分华尔街的分析人士越来越看好两家公司最终将达成交易。（央视财经）",
-        "categories": [
-          "business",
-          "products"
+        "author": "agotterer",
+        "upstream_urls": [
+          "https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/"
         ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "e70a5298e815b3cd",
-        "canonical_url": "https://36kr.com/newsflashes/3912221918107015?f=rss",
-        "normalized_title": "马斯克警告spacex空头风险",
-        "fingerprint": "e70a5298e815b3cd9628b0bf27f69f30765ee208dfbbdbafc483bf2e0ef672ab",
-        "rule_score": 52.263222222222225
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "新点软件：预计上半年净亏损6302.10万元",
-        "url": "https://36kr.com/newsflashes/3912184409396353?f=rss",
-        "published_at": "2026-07-26T07:59:46Z",
-        "fetched_at": "2026-07-26T14:37:52.320397Z",
-        "language": "unknown",
-        "excerpt": "7月26日，新点软件发布中期业绩预告，预计2026年上半年净亏损6302.10万元左右，与上年同期（法定披露数据）相比，亏损将增加 84.39 万元左右。（每日经济新闻）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "2bfe59f427a58126",
-        "canonical_url": "https://36kr.com/newsflashes/3912184409396353?f=rss",
-        "normalized_title": "新点软件 预计上半年净亏损6302 10万元",
-        "fingerprint": "2bfe59f427a58126fbf7ad527aab19098fb04f283c27db0b5905bb14cbf9f6f7",
-        "rule_score": 52.19961111111111
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "LV因楼盘外立面装饰侵权起诉开发商？法院回应来了",
-        "url": "https://36kr.com/newsflashes/3912182569178500?f=rss",
-        "published_at": "2026-07-26T07:57:54Z",
-        "fetched_at": "2026-07-26T14:37:52.320419Z",
-        "language": "unknown",
-        "excerpt": "7月26日，厦门市湖里区人民法院发布情况通报，网传案情“路易威登公司起诉地产开发商，因楼盘外立面四叶类雕花装饰商标侵权”不属实。经核实，该案系路易威登公司起诉某小区沿街服装店经营者彭某销售侵犯其注册商标的服装，其余被告系因怠于履行管理职责被诉承担相应责任，案件与网传楼盘外立面雕花装饰没有关联。目前该案尚未开庭。（第一财经）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "c1ea000d9170d2f7",
-        "canonical_url": "https://36kr.com/newsflashes/3912182569178500?f=rss",
-        "normalized_title": "lv因楼盘外立面装饰侵权起诉开发商 法院回应来了",
-        "fingerprint": "c1ea000d9170d2f742d4c01a260a4de87e17740f1f30e257b2d03ae5e6199732",
-        "rule_score": 52.1965
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "2026年暑期档电影票房已破55亿元，超去年同期10亿元",
-        "url": "https://36kr.com/newsflashes/3912149968409736?f=rss",
-        "published_at": "2026-07-26T07:24:44Z",
-        "fetched_at": "2026-07-26T14:37:52.320453Z",
-        "language": "unknown",
-        "excerpt": "7月26日，据网络平台数据，截至目前，2026年暑期档电影总票房（含预售）已突破55亿元，超去年暑期档同期10亿元。其中，喜剧动画片《八仙！》上映8天就取得超6亿元票房的优异成绩。喜剧运动题材电影《功夫女足》目前票房已超18.8亿元，暂列年度票房第三位。（央视新闻）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "984b73a213ffb1fb",
-        "canonical_url": "https://36kr.com/newsflashes/3912149968409736?f=rss",
-        "normalized_title": "2026年暑期档电影票房已破55亿元 超去年同期10亿元",
-        "fingerprint": "984b73a213ffb1fb5acee84ff365814e0a9d0a31aa980ab67fe8ffe20f83f818",
-        "rule_score": 52.141222222222225
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "三星李在镕与OpenAI据悉磋商人工智能与半导体领域合作方案",
-        "url": "https://36kr.com/newsflashes/3912076178789766?f=rss",
-        "published_at": "2026-07-26T06:09:40Z",
-        "fetched_at": "2026-07-26T14:37:52.320509Z",
-        "language": "unknown",
-        "excerpt": "三星电子会长李在镕与OpenAI首席执行官山姆・奥特曼于旧金山OpenAI总部会面，磋商人工智能与半导体领域合作方案。OpenAI 26日对外公布，当地时间25日上午，李在镕与奥特曼在其旧金山总部举行会谈。OpenAI并未披露具体洽谈内容与议题，但业内观察人士判断，双方大概率围绕高带宽内存（HBM）、动态随机存取存储器（DRAM）、先进晶圆代工等AI基础设施深化合作展开沟通。双方或还探讨了三星全业务线落地生成式人工智能的数字化转型方案。三星电子是OpenAI全球顶级企业客户之一，已决定为全体员工开放ChatGPT及AI代码工具Codex的使用权限。（新浪财经）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "7aefa01adeed01be",
-        "canonical_url": "https://36kr.com/newsflashes/3912076178789766?f=rss",
-        "normalized_title": "三星李在镕与openai据悉磋商人工智能与半导体领域合作方案",
-        "fingerprint": "7aefa01adeed01bed36f830ebdb43d317f7244239e312ea7bbcd0220ab8d4c49",
-        "rule_score": 52.01611111111111
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "上海交大医学院：针对仇某某发表医学论文及新华医院开展临床研究事件，进行全面调查",
-        "url": "https://36kr.com/newsflashes/3912074565309576?f=rss",
-        "published_at": "2026-07-26T06:08:02Z",
-        "fetched_at": "2026-07-26T14:37:52.320521Z",
-        "language": "unknown",
-        "excerpt": "7月26日，上海交通大学医学院发布情况说明：针对近日网络上关于我院研究人员仇某某发表的相关医学研究论文，以及附属新华医院开展的一例临床研究的相关报道，医学院高度重视，已成立专项工作组，对事件进行全面调查。医学院历来重视科研诚信和科研规范，坚决反对违背科研伦理违规开展医学科学研究。医学院将根据调查情况严肃处理，感谢社会各界的关心与监督。（第一财经）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "05325100e11f485e",
-        "canonical_url": "https://36kr.com/newsflashes/3912074565309576?f=rss",
-        "normalized_title": "上海交大医学院 针对仇某某发表医学论文及新华医院开展临床研究事件 进行全面调查",
-        "fingerprint": "05325100e11f485edc10bd0a2e231c85b54212eb3dad740d4cb2782ba682e7d5",
-        "rule_score": 52.01338888888889
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "亿田智能：子公司拟不超20亿元采购服务器及配套设备，为客户提供算力服务",
-        "url": "https://36kr.com/newsflashes/3912181723518084?f=rss",
-        "published_at": "2026-07-26T07:57:02Z",
-        "fetched_at": "2026-07-26T14:37:52.320430Z",
-        "language": "unknown",
-        "excerpt": "7月26日，亿田智能公告称，公司全资子公司甘肃亿算拟向多家供应商采购服务器及配套设备，采购合同总金额预计不超过20亿元。本次采购主要用于为客户提供算力服务，不构成重大资产重组或关联交易。通过此次采购，公司能够加速构建自身的AI算力资源。亿田智能同时提示，公司算力业务尚处于业务拓展初期，公司主营业务仍为集成灶等厨房电器相关业务，整体经营基本面未发生变化。（财联社）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "1a5b910b9f717ed8",
-        "canonical_url": "https://36kr.com/newsflashes/3912181723518084?f=rss",
-        "normalized_title": "亿田智能 子公司拟不超20亿元采购服务器及配套设备 为客户提供算力服务",
-        "fingerprint": "1a5b910b9f717ed8481c7c857dcea32f5c105558180976c47cff86d66e726b83",
-        "rule_score": 48.195055555555555
+        "raw_metadata": {
+          "hn_id": 49058669,
+          "score": 270
+        },
+        "id": "3b5826ad5905b3dc",
+        "canonical_url": "https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics",
+        "normalized_title": "london gatwick has launched a robotic airport parking service",
+        "fingerprint": "3b5826ad5905b3dc810eff14ae31b17b2f4bb9eabe7e2041158ec00b00430ca1",
+        "rule_score": 49.867416666666664
       },
       {
         "source_id": "techcrunch-ai",
@@ -239,7 +76,7 @@
         "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
         "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
         "published_at": "2026-07-26T01:30:00Z",
-        "fetched_at": "2026-07-26T14:37:52.370223Z",
+        "fetched_at": "2026-07-27T02:06:51.967362Z",
         "language": "unknown",
         "excerpt": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.",
         "categories": [
@@ -256,28 +93,33 @@
         "rule_score": 47.55
       },
       {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "希音披露聆讯后资料集：2025年营收418亿美元",
-        "url": "https://36kr.com/newsflashes/3912399333676422?f=rss",
-        "published_at": "2026-07-26T11:38:24Z",
-        "fetched_at": "2026-07-26T14:37:52.320350Z",
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Htmx 4.0, the first JavaScript library to release exclusively on the Game Boy",
+        "url": "https://swag.htmx.org/en-cad/products/htmx-4-the-game",
+        "published_at": "2026-07-26T12:00:11Z",
+        "fetched_at": "2026-07-27T02:06:52.475326Z",
         "language": "unknown",
-        "excerpt": "36氪获悉，7月26日，希音（SHEIN）向港交所披露聆讯后资料集。若顺利挂牌，将成为2026年港股最大的跨境电商IPO。2025年，希音实现总收入418亿美元，2023至2025年复合年均增长率达14.2%；2025年同期实现净利润20.6亿美元。截至2025年底，平台服务约2.73亿活跃客户，业务覆盖约160个市场。",
+        "excerpt": "",
         "categories": [
-          "business",
-          "products"
+          "products",
+          "developer-tools"
         ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "86ee049952bcb89e",
-        "canonical_url": "https://36kr.com/newsflashes/3912399333676422?f=rss",
-        "normalized_title": "希音披露聆讯后资料集 2025年营收418亿美元",
-        "fingerprint": "86ee049952bcb89e41ad2a5471c8ae0aa49940b1a162592c99fecdb2c1f01bf7",
-        "rule_score": 44.564
+        "author": "rcy",
+        "upstream_urls": [
+          "https://swag.htmx.org/en-cad/products/htmx-4-the-game"
+        ],
+        "raw_metadata": {
+          "hn_id": 49057241,
+          "score": 363
+        },
+        "id": "eee006ef4048bdb9",
+        "canonical_url": "https://swag.htmx.org/en-cad/products/htmx-4-the-game",
+        "normalized_title": "htmx 4 0 the first javascript library to release exclusively on the game boy",
+        "fingerprint": "eee006ef4048bdb9dc8024c8ded5fb00cff88d11b5513040a642cda036e02d38",
+        "rule_score": 45.60030555555556
       },
       {
         "source_id": "hacker-news",
@@ -287,7 +129,7 @@
         "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
         "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
         "published_at": "2026-07-25T23:32:50Z",
-        "fetched_at": "2026-07-26T14:37:53.014559Z",
+        "fetched_at": "2026-07-27T02:06:55.020852Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
@@ -300,282 +142,13 @@
         ],
         "raw_metadata": {
           "hn_id": 49052912,
-          "score": 200
+          "score": 246
         },
         "id": "aabc50c30281bb5f",
         "canonical_url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
         "normalized_title": "deepseek pause fundraise after comments on compute gap to us leaked transcript pdf",
         "fingerprint": "aabc50c30281bb5f0d316a2c7aeb32ed7fdbff0ff862c6767018603e5b2f533d",
         "rule_score": 44.35472222222222
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "湖北能源：江陵电厂二期项目全面建成投产",
-        "url": "https://36kr.com/newsflashes/3912223423731074?f=rss",
-        "published_at": "2026-07-26T08:39:27Z",
-        "fetched_at": "2026-07-26T14:37:52.320362Z",
-        "language": "unknown",
-        "excerpt": "7月26日，湖北能源公告称，近日，公司江陵二期项目2号机组顺利通过168小时满负荷试运行，正式投入商业运营，标志着江陵二期项目全面建成投产。该项目拟配置2台66万千瓦超超临界二次再热燃煤机组，项目总投资不超过54.65亿元。江陵二期项目由湖北能源全资子公司湖北能源集团江陵发电有限公司控制运营，本项目应用66万千瓦超超临界二次再热技术，主要技术指标先进，符合现代煤电清洁化的发展方向。（界面新闻）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "7ec71cd290bc1811",
-        "canonical_url": "https://36kr.com/newsflashes/3912223423731074?f=rss",
-        "normalized_title": "湖北能源 江陵电厂二期项目全面建成投产",
-        "fingerprint": "7ec71cd290bc18110e9d43dab1df1d67fb053054bb76b7b48950f63f89a4c8dc",
-        "rule_score": 44.26575
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "百利天恒：注射用T-Bren治疗胆道癌III期临床试验完成首例受试者入组",
-        "url": "https://36kr.com/newsflashes/3912220595017093?f=rss",
-        "published_at": "2026-07-26T08:36:35Z",
-        "fetched_at": "2026-07-26T14:37:52.320385Z",
-        "language": "unknown",
-        "excerpt": "7月26日，百利天恒公告称，公司自主研发的创新生物药注射用T-Bren(HER2ADC)在HER2表达的经含铂化疗治疗失败的局部晚期或转移性胆道癌III期随机对照临床试验已完成首例受试者入组。该药物具有同类最佳潜力，目前正在国内外开展19项临床试验，覆盖一线及二线以上HER2阳性乳腺癌、HER2阳性乳腺癌术后辅助、HER2阳性乳腺癌新辅助治疗和HER2低表达乳腺癌、HER2阳性胃或胃食管结合部腺癌、HER2突变的非鳞状非小细胞肺癌和HER2阳性含铂化疗失败胆道癌，以及肺癌、消化道肿瘤、泌尿系统肿瘤和妇科肿瘤等多项适应症。（财联社）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "25b8a29d8e5af67a",
-        "canonical_url": "https://36kr.com/newsflashes/3912220595017093?f=rss",
-        "normalized_title": "百利天恒 注射用t bren治疗胆道癌iii期临床试验完成首例受试者入组",
-        "fingerprint": "25b8a29d8e5af67a3f01de1d7389ffe8e743ebcf475fb3cc626fef3c9c952ed7",
-        "rule_score": 44.26097222222222
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "*ST元道：公司股票可能因市值低于3亿元被终止上市",
-        "url": "https://36kr.com/newsflashes/3912183328347269?f=rss",
-        "published_at": "2026-07-26T07:58:40Z",
-        "fetched_at": "2026-07-26T14:37:52.320408Z",
-        "language": "unknown",
-        "excerpt": "7月26日，*ST元道(301139.SZ)公告称，7月24日，公司股票收盘价为2.39元/股，收盘市值为2.91亿元，首次出现股票收盘市值低于3亿元。根据规定，若公司出现连续20个交易日的股票收盘市值均低于3亿元，公司股票将被终止上市。（财联社）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "7fb364e261037297",
-        "canonical_url": "https://36kr.com/newsflashes/3912183328347269?f=rss",
-        "normalized_title": "st元道 公司股票可能因市值低于3亿元被终止上市",
-        "fingerprint": "7fb364e261037297db60783d6d7f9ebdc4a9dc43080a2bf00b70f31789ff42b2",
-        "rule_score": 44.19777777777778
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "福特公司召回超56万辆汽车",
-        "url": "https://36kr.com/newsflashes/3912150835680647?f=rss",
-        "published_at": "2026-07-26T07:25:37Z",
-        "fetched_at": "2026-07-26T14:37:52.320442Z",
-        "language": "unknown",
-        "excerpt": "7月26日，据美国媒体报道，美国福特汽车公司近日宣布召回56万5691辆福特“烈马”和“烈马猛禽”汽车，涉及2021至2026款车型。福特公司估计，这些汽车中约有1%的车辆存在发动机舱线束缺陷，可能发生短路，增加起火风险。目前尚未收到与此问题相关的事故或人员伤亡报告。（财联社）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "8faa923fa12b7fe9",
-        "canonical_url": "https://36kr.com/newsflashes/3912150835680647?f=rss",
-        "normalized_title": "福特公司召回超56万辆汽车",
-        "fingerprint": "8faa923fa12b7fe9d9eda395ee7e5023310ff681051507eb9ffd45788283b618",
-        "rule_score": 44.142694444444444
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "三部门调拨2.5万件物资支持粤赣湘等地救灾救助工作",
-        "url": "https://36kr.com/newsflashes/3912149644727683?f=rss",
-        "published_at": "2026-07-26T07:24:24Z",
-        "fetched_at": "2026-07-26T14:37:52.320465Z",
-        "language": "unknown",
-        "excerpt": "据央视新闻，7月26日，国家防灾减灾救灾委员会办公室、应急管理部针对台风“红霞”影响，根据广东、江西、湖南等地防汛防台风救灾工作需要，会同国家粮食和物资储备局向三省调拨折叠床、折叠桌凳、毛巾被、夏凉被、家庭应急包等2.5万件中央救灾物资，支持地方妥善做好受灾群众紧急避险转移和安置救助工作。（央视新闻）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "15cce7cad8e969c2",
-        "canonical_url": "https://36kr.com/newsflashes/3912149644727683?f=rss",
-        "normalized_title": "三部门调拨2 5万件物资支持粤赣湘等地救灾救助工作",
-        "fingerprint": "15cce7cad8e969c21976e9a83c8c6a8e6f5ccbe0592aae959a1e7bff156fd573",
-        "rule_score": 44.14066666666667
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "沪市一周新增增持回购计划最高158亿元，年内金额上限776亿元",
-        "url": "https://36kr.com/newsflashes/3912147209983368?f=rss",
-        "published_at": "2026-07-26T07:21:56Z",
-        "fetched_at": "2026-07-26T14:37:52.320476Z",
-        "language": "unknown",
-        "excerpt": "近日，沪市上市公司增持回购浪潮持续涌动，产业资本入市步伐提速。据统计，7月20日～7月26日期间，沪市新增回购计划42家次，金额上限83.86亿元；新增增持计划17家次，金额上限74.57亿元，回购用途涵盖股权激励、员工持股及市值维护等多个方向。拉长时间轴来看，2026年以来，沪市已新增披露回购计划190家次，金额上限合计达555亿元，新增增持计划155家次，金额上限达221亿元。（第一财经）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "1645170110f2807c",
-        "canonical_url": "https://36kr.com/newsflashes/3912147209983368?f=rss",
-        "normalized_title": "沪市一周新增增持回购计划最高158亿元 年内金额上限776亿元",
-        "fingerprint": "1645170110f2807cdb2396cb05a6c826181f9cb3ca2658e159ee6049bbebf50b",
-        "rule_score": 44.13655555555555
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "本周9股南向资金持股量环比增长超15%",
-        "url": "https://36kr.com/newsflashes/3912144908555649?f=rss",
-        "published_at": "2026-07-26T07:19:35Z",
-        "fetched_at": "2026-07-26T14:37:52.320486Z",
-        "language": "unknown",
-        "excerpt": "本周（7月20日至7月24日）港股市场主要股指集体上涨，恒生指数累计涨1.63%，恒生科技指数涨0.14%，恒生中国企业指数涨1.65%。据证券时报·数据宝统计，本周南向资金合计成交净买入29.78亿港元。从本周上榜成交活跃股名单来看，本周共有14只个股上榜，腾讯控股本周港股通合计买卖总额最高，达到436.4亿港元，智谱紧随其后，为397.54亿港元，其他还有中芯国际、阿里巴巴-W本周港股通买卖总额超过300亿港元。从成交净买入金额来看，华虹宏力获南向资金净买入33.18亿港元，居首。本周南向资金对互联网巨头买卖不一，网易获南向资金净买入14.09亿港元，美团-W获南向资金净买入10.31亿港元，小米集团-W净买入1.26亿港元，阿里巴巴-W净卖出51.86亿港元，腾讯控股净卖出64.08亿港元。（证券时报）",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "5f8ed9259c55182c",
-        "canonical_url": "https://36kr.com/newsflashes/3912144908555649?f=rss",
-        "normalized_title": "本周9股南向资金持股量环比增长超15",
-        "fingerprint": "5f8ed9259c55182cc78228d084123643deabf181408db78c1d8e5870bff9291c",
-        "rule_score": 44.13263888888889
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "电影《八仙！》实时票房破7亿",
-        "url": "https://36kr.com/newsflashes/3912073660830851?f=rss",
-        "published_at": "2026-07-26T06:07:07Z",
-        "fetched_at": "2026-07-26T14:37:52.320533Z",
-        "language": "unknown",
-        "excerpt": "36氪获悉，据猫眼专业版数据，电影《八仙！》上映9天， 总票房破7亿。",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "f590a0f940b13816",
-        "canonical_url": "https://36kr.com/newsflashes/3912073660830851?f=rss",
-        "normalized_title": "电影 八仙 实时票房破7亿",
-        "fingerprint": "f590a0f940b13816d1d5f0a3a447a8b7621b3ab39bda1b2f52b53d6f75cb4cf8",
-        "rule_score": 44.01186111111111
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "我国蜂群无人机首次实现台风过境全程立体观测",
-        "url": "https://36kr.com/newsflashes/3911980822091137?f=rss",
-        "published_at": "2026-07-26T04:32:40Z",
-        "fetched_at": "2026-07-26T14:37:52.320555Z",
-        "language": "unknown",
-        "excerpt": "7月26日，记者从中国气象局获悉，台风“红霞”影响我国期间，气象科研人员首次采用蜂群无人机观测方式，针对台风登陆全过程开展高频率、多维度观测试验。这也是我国首次将蜂群无人机技术应用于台风过境全过程观测。 (央视新闻)",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "4fa1f76f27ed7396",
-        "canonical_url": "https://36kr.com/newsflashes/3911980822091137?f=rss",
-        "normalized_title": "我国蜂群无人机首次实现台风过境全程立体观测",
-        "fingerprint": "4fa1f76f27ed7396fb9bdd8bab920d4bdcbad2aa0be4f0a33046930e122bf4f4",
-        "rule_score": 43.85444444444445
-      },
-      {
-        "source_id": "36kr",
-        "source_name": "36Kr",
-        "source_group": "media",
-        "independence_group": "36kr",
-        "title": "韩国养老金7月首度净买入KOSPI成分股，为今年首次",
-        "url": "https://36kr.com/newsflashes/3911979618849920?f=rss",
-        "published_at": "2026-07-26T04:31:27Z",
-        "fetched_at": "2026-07-26T14:37:52.320566Z",
-        "language": "unknown",
-        "excerpt": "韩国交易所周日披露股市数据，韩国股市最大机构投资者之一——国民年金公团等养老金资金，本月转为韩国综合股价指数（KOSPI）股票净买方，系今年以来首次。数据显示，7月1日至24日，国民年金公团及其他养老金在KOSPI主板累计净买入股票684亿韩元（折合4680万美元）。在此之前，养老金已连续六个月净卖出股票，本月是年内首月实现净买入。7月前17个交易日里，养老金有11个交易日为净买入，6个交易日净卖出。本月还剩余5个交易日，分析师判断，养老金大概率在7月全月维持净买入状态。个股买入端，SK海力士为养老金头号增持标的，累计净买入4258亿韩元；其次是SK创新（2247亿韩元）、韩国双龙炼油S-Oil（1744亿韩元）。\n\n　　卖出端则大幅减持：SK Square净卖出5757亿韩元、三星电机3136亿韩元、三星人寿保险1238亿韩元。",
-        "categories": [
-          "business",
-          "products"
-        ],
-        "author": null,
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "190c0868b2d607f4",
-        "canonical_url": "https://36kr.com/newsflashes/3911979618849920?f=rss",
-        "normalized_title": "韩国养老金7月首度净买入kospi成分股 为今年首次",
-        "fingerprint": "190c0868b2d607f44a31626df3f4f71f9348055758b4eeb34ecb2f413e1a5647",
-        "rule_score": 43.85241666666667
-      },
-      {
-        "source_id": "hacker-news",
-        "source_name": "Hacker News",
-        "source_group": "community",
-        "independence_group": "hacker-news",
-        "title": "UK AISI / Caisi Preliminary Assessment of Kimi K3's Cyber Capabilities",
-        "url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
-        "published_at": "2026-07-25T04:20:21Z",
-        "fetched_at": "2026-07-26T14:37:55.109293Z",
-        "language": "unknown",
-        "excerpt": "",
-        "categories": [
-          "products",
-          "developer-tools"
-        ],
-        "author": "walrus01",
-        "upstream_urls": [
-          "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities"
-        ],
-        "raw_metadata": {
-          "hn_id": 49044492,
-          "score": 127
-        },
-        "id": "3ae9119e64652354",
-        "canonical_url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
-        "normalized_title": "uk aisi caisi preliminary assessment of kimi k3 s cyber capabilities",
-        "fingerprint": "3ae9119e64652354fa091bf1305d0ab101706e11f3ce71446f17b47eb3dc4a3b",
-        "rule_score": 42.43391666666667
       },
       {
         "source_id": "nvidia-genai",
@@ -585,7 +158,7 @@
         "title": "ModelExpress: Distributing Model Artifacts at the Speed of Light",
         "url": "https://developer.nvidia.com/blog/modelexpress-distributing-model-artifacts-at-the-speed-of-light/",
         "published_at": "2026-07-24T16:45:00Z",
-        "fetched_at": "2026-07-26T14:37:48.376296Z",
+        "fetched_at": "2026-07-27T02:06:48.263217Z",
         "language": "unknown",
         "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/07/image5-11-768x432.jpg\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"image5\" width=\"768\" />Every byte moved has a cost. As model checkpoints grow to hundreds of gigabytes or even a terabyte, that cost adds up quickly. To make things even worse, moving...",
         "categories": [
@@ -606,58 +179,87 @@
         "source_name": "Hacker News",
         "source_group": "community",
         "independence_group": "hacker-news",
-        "title": "France and Spain wildfires: more than 300k people displaced",
-        "url": "https://www.cnn.com/2026/07/26/world/live-news/france-spain-wildfires-evacuations",
-        "published_at": "2026-07-26T09:41:03Z",
-        "fetched_at": "2026-07-26T14:37:54.347278Z",
+        "title": "Skill Router – a local-first router for large agent skill libraries",
+        "url": "https://github.com/torakagemusha-sudo/torafirma-skill-router",
+        "published_at": "2026-07-26T15:09:50Z",
+        "fetched_at": "2026-07-27T02:06:55.334703Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
           "products",
           "developer-tools"
         ],
-        "author": "tosh",
+        "author": "torafirma",
         "upstream_urls": [
-          "https://www.cnn.com/2026/07/26/world/live-news/france-spain-wildfires-evacuations"
+          "https://github.com/torakagemusha-sudo/torafirma-skill-router"
         ],
         "raw_metadata": {
-          "hn_id": 49056340,
-          "score": 24
+          "hn_id": 49058920,
+          "score": 9
         },
-        "id": "623d2ed7e7ac07dc",
-        "canonical_url": "https://www.cnn.com/2026/07/26/world/live-news/france-spain-wildfires-evacuations",
-        "normalized_title": "france and spain wildfires more than 300k people displaced",
-        "fingerprint": "623d2ed7e7ac07dc7f9d5581953e1e8e1b8e12f602d175de87486c67d73ad4dc",
-        "rule_score": 41.36841666666667
+        "id": "40bf89e73b22586a",
+        "canonical_url": "https://github.com/torakagemusha-sudo/torafirma-skill-router",
+        "normalized_title": "skill router a local first router for large agent skill libraries",
+        "fingerprint": "40bf89e73b22586a85cb5d69ee502dacd8453a9cafb6321582d47a400879092f",
+        "rule_score": 41.91638888888889
       },
       {
         "source_id": "hacker-news",
         "source_name": "Hacker News",
         "source_group": "community",
         "independence_group": "hacker-news",
-        "title": "Claude Code has a hardcoded instruction telling Opus 5 not to use subagents",
-        "url": "https://old.reddit.com/r/ClaudeCode/comments/1v6y5q2/claude_code_has_a_hardcoded_instruction_telling/",
-        "published_at": "2026-07-26T08:45:06Z",
-        "fetched_at": "2026-07-26T14:37:55.173525Z",
+        "title": "The New AI Superpowers: Focus and Followthrough",
+        "url": "https://www.rickmanelius.com/p/the-new-ai-superpowers-focus-and",
+        "published_at": "2026-07-26T13:13:03Z",
+        "fetched_at": "2026-07-27T02:06:52.828743Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
           "products",
           "developer-tools"
         ],
-        "author": "bredren",
+        "author": "mooreds",
         "upstream_urls": [
-          "https://old.reddit.com/r/ClaudeCode/comments/1v6y5q2/claude_code_has_a_hardcoded_instruction_telling/"
+          "https://www.rickmanelius.com/p/the-new-ai-superpowers-focus-and"
         ],
         "raw_metadata": {
-          "hn_id": 49056022,
-          "score": 19
+          "hn_id": 49057877,
+          "score": 145
         },
-        "id": "cf19d2636682a870",
-        "canonical_url": "https://old.reddit.com/r/ClaudeCode/comments/1v6y5q2/claude_code_has_a_hardcoded_instruction_telling",
-        "normalized_title": "claude code has a hardcoded instruction telling opus 5 not to use subagents",
-        "fingerprint": "cf19d2636682a870ef7729200fb0c4a3ee963a607b82372f6ff70059cf93ea1a",
-        "rule_score": 41.275166666666664
+        "id": "04a0167ec19cdccb",
+        "canonical_url": "https://www.rickmanelius.com/p/the-new-ai-superpowers-focus-and",
+        "normalized_title": "the new ai superpowers focus and followthrough",
+        "fingerprint": "04a0167ec19cdccb81bb5ce78f945231789b917591cdef543aeaa8724e4e7e87",
+        "rule_score": 41.72175
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Terence Tao: Mathematics in the Age of AI [pdf]",
+        "url": "https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf",
+        "published_at": "2026-07-26T10:32:35Z",
+        "fetched_at": "2026-07-27T02:06:53.494966Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Anon84",
+        "upstream_urls": [
+          "https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf"
+        ],
+        "raw_metadata": {
+          "hn_id": 49056620,
+          "score": 104
+        },
+        "id": "eacb5d95f20cece4",
+        "canonical_url": "https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf",
+        "normalized_title": "terence tao mathematics in the age of ai pdf",
+        "fingerprint": "eacb5d95f20cece4a4a6671f21d40265bcf4a76a42ae23e75dbf0951b186c43c",
+        "rule_score": 41.45430555555556
       },
       {
         "source_id": "hacker-news",
@@ -667,7 +269,7 @@
         "title": "GrapheneOS protections against data extraction from locked devices",
         "url": "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices",
         "published_at": "2026-07-26T05:57:22Z",
-        "fetched_at": "2026-07-26T14:37:52.731171Z",
+        "fetched_at": "2026-07-27T02:06:53.655302Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
@@ -680,7 +282,7 @@
         ],
         "raw_metadata": {
           "hn_id": 49055169,
-          "score": 214
+          "score": 395
         },
         "id": "fc98485acbb8577e",
         "canonical_url": "https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices",
@@ -696,7 +298,7 @@
         "title": "Clinical failure rates over the decades: yikes",
         "url": "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes",
         "published_at": "2026-07-25T22:57:17Z",
-        "fetched_at": "2026-07-26T14:37:53.549559Z",
+        "fetched_at": "2026-07-27T02:06:54.381388Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
@@ -709,7 +311,7 @@
         ],
         "raw_metadata": {
           "hn_id": 49052628,
-          "score": 118
+          "score": 136
         },
         "id": "541e87b3565d5563",
         "canonical_url": "https://www.science.org/content/blog-post/clinical-failure-rates-over-decades-yikes",
@@ -725,7 +327,7 @@
         "title": "What is happening to jobs? Separating AI hype from reality",
         "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
         "published_at": "2026-07-25T22:51:10Z",
-        "fetched_at": "2026-07-26T14:37:53.141612Z",
+        "fetched_at": "2026-07-27T02:06:53.623999Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
@@ -738,7 +340,7 @@
         ],
         "raw_metadata": {
           "hn_id": 49052570,
-          "score": 160
+          "score": 247
         },
         "id": "d475098a9d9245a6",
         "canonical_url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
@@ -754,7 +356,7 @@
         "title": "Cloudflare's new AI traffic options for customers",
         "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
         "published_at": "2026-07-25T22:50:49Z",
-        "fetched_at": "2026-07-26T14:37:53.206545Z",
+        "fetched_at": "2026-07-27T02:06:55.303547Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
@@ -767,18 +369,513 @@
         ],
         "raw_metadata": {
           "hn_id": 49052564,
-          "score": 152
+          "score": 188
         },
         "id": "65d1865d9e4f7a4b",
         "canonical_url": "https://blog.cloudflare.com/content-independence-day-ai-options",
         "normalized_title": "cloudflare s new ai traffic options for customers",
         "fingerprint": "65d1865d9e4f7a4b65cd7ebca4ea5d4a0530e3d7180fd2a0dfdacd1bfd74c370",
         "rule_score": 40.28469444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Open-weight AI is having its Kubernetes moment",
+        "url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/",
+        "published_at": "2026-07-25T14:49:49Z",
+        "fetched_at": "2026-07-27T02:06:54.927046Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "tknaup",
+        "upstream_urls": [
+          "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49048034,
+          "score": 399
+        },
+        "id": "6f476476b733b77e",
+        "canonical_url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment",
+        "normalized_title": "open weight ai is having its kubernetes moment",
+        "fingerprint": "6f476476b733b77e47f387d69a5ac4fa039a1ba1828a637d44e2422aa4b82fdc",
+        "rule_score": 39.48302777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: CheapSecurity – Lightweight, Self-Hosted CCTV for Linux SBCs",
+        "url": "https://github.com/gmrandazzo/CheapSecurity",
+        "published_at": "2026-07-26T15:53:55Z",
+        "fetched_at": "2026-07-27T02:06:52.572238Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "zeldone",
+        "upstream_urls": [
+          "https://github.com/gmrandazzo/CheapSecurity"
+        ],
+        "raw_metadata": {
+          "hn_id": 49059398,
+          "score": 106
+        },
+        "id": "aee2d684042139ae",
+        "canonical_url": "https://github.com/gmrandazzo/CheapSecurity",
+        "normalized_title": "show hn cheapsecurity lightweight self hosted cctv for linux sbcs",
+        "fingerprint": "aee2d684042139aed7db68274b7070dc3ed895ebc5f0a0f81b588f19799bf0d2",
+        "rule_score": 37.98986111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Design is compromise",
+        "url": "https://stephango.com/design-is-compromise",
+        "published_at": "2026-07-26T15:51:12Z",
+        "fetched_at": "2026-07-27T02:06:52.444362Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ankitg12",
+        "upstream_urls": [
+          "https://stephango.com/design-is-compromise"
+        ],
+        "raw_metadata": {
+          "hn_id": 49059367,
+          "score": 197
+        },
+        "id": "d3ec1d21647206f9",
+        "canonical_url": "https://stephango.com/design-is-compromise",
+        "normalized_title": "design is compromise",
+        "fingerprint": "d3ec1d21647206f987bbdbac4bd6e4f05040f277efeb3d82bc9902f6a3733686",
+        "rule_score": 37.98533333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The relay market powering token resellers and fraud",
+        "url": "https://vectoral.com/blog/token-relay-market",
+        "published_at": "2026-07-26T15:17:06Z",
+        "fetched_at": "2026-07-27T02:06:52.763965Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mlenhard",
+        "upstream_urls": [
+          "https://vectoral.com/blog/token-relay-market"
+        ],
+        "raw_metadata": {
+          "hn_id": 49058993,
+          "score": 154
+        },
+        "id": "10a58298fb2ce255",
+        "canonical_url": "https://vectoral.com/blog/token-relay-market",
+        "normalized_title": "the relay market powering token resellers and fraud",
+        "fingerprint": "10a58298fb2ce2558cb8de7eb3f7281cab7087fd4e32b28d8489a24f969fa512",
+        "rule_score": 37.9285
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: A browser-based video editor that renders videos directly with FFmpeg",
+        "url": "https://github.com/thiagoalbrecht/weave",
+        "published_at": "2026-07-26T14:07:56Z",
+        "fetched_at": "2026-07-27T02:06:54.990273Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "thiagoas",
+        "upstream_urls": [
+          "https://github.com/thiagoalbrecht/weave"
+        ],
+        "raw_metadata": {
+          "hn_id": 49058396,
+          "score": 14
+        },
+        "id": "c8888f560c7642cd",
+        "canonical_url": "https://github.com/thiagoalbrecht/weave",
+        "normalized_title": "show hn a browser based video editor that renders videos directly with ffmpeg",
+        "fingerprint": "c8888f560c7642cd37b5894ddb7c4ef42b368e4ad3fdb327dcafa8ffa7c6288b",
+        "rule_score": 37.81322222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Reverse Minesweeper",
+        "url": "https://sunflowersgame.com/",
+        "published_at": "2026-07-26T12:51:03Z",
+        "fetched_at": "2026-07-27T02:06:52.985891Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pompomsheep",
+        "upstream_urls": [
+          "https://sunflowersgame.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49057666,
+          "score": 150
+        },
+        "id": "ca17751e722c7db3",
+        "canonical_url": "https://sunflowersgame.com/",
+        "normalized_title": "show hn reverse minesweeper",
+        "fingerprint": "ca17751e722c7db3d8226c83a0e2ca87957317156bb42928885674e7b4ddf5ae",
+        "rule_score": 37.68508333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Google Discloses $94.1B in SpaceX Stock, Marking 6% Stake",
+        "url": "https://www.wsj.com/tech/google-discloses-94-1-billion-in-spacex-stock-marking-6-stake-91655d7c",
+        "published_at": "2026-07-26T12:43:21Z",
+        "fetched_at": "2026-07-27T02:06:53.716956Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "1vuio0pswjnm7",
+        "upstream_urls": [
+          "https://www.wsj.com/tech/google-discloses-94-1-billion-in-spacex-stock-marking-6-stake-91655d7c"
+        ],
+        "raw_metadata": {
+          "hn_id": 49057574,
+          "score": 312
+        },
+        "id": "52f81cb0930a969e",
+        "canonical_url": "https://www.wsj.com/tech/google-discloses-94-1-billion-in-spacex-stock-marking-6-stake-91655d7c",
+        "normalized_title": "google discloses 94 1b in spacex stock marking 6 stake",
+        "fingerprint": "52f81cb0930a969ebe244a92f62818a286ed547d5fb94cf3ebf464d148540583",
+        "rule_score": 37.67225
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Go Analysis Framework: modular static analysis by go team",
+        "url": "https://pkg.go.dev/golang.org/x/tools/go/analysis",
+        "published_at": "2026-07-26T12:21:26Z",
+        "fetched_at": "2026-07-27T02:06:52.701373Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "AbuAssar",
+        "upstream_urls": [
+          "https://pkg.go.dev/golang.org/x/tools/go/analysis"
+        ],
+        "raw_metadata": {
+          "hn_id": 49057398,
+          "score": 180
+        },
+        "id": "17046ef0f44be4f8",
+        "canonical_url": "https://pkg.go.dev/golang.org/x/tools/go/analysis",
+        "normalized_title": "go analysis framework modular static analysis by go team",
+        "fingerprint": "17046ef0f44be4f88bafe43043acc728d651ff6121220ccce959010591c186ab",
+        "rule_score": 37.63572222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Third Drone Shot Down in Three Days in Romanian Territory",
+        "url": "https://english.mapn.ro/",
+        "published_at": "2026-07-26T12:00:42Z",
+        "fetched_at": "2026-07-27T02:06:54.767956Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "_tk_",
+        "upstream_urls": [
+          "https://english.mapn.ro/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49057248,
+          "score": 221
+        },
+        "id": "dd9f376c5c00cc07",
+        "canonical_url": "https://english.mapn.ro/",
+        "normalized_title": "third drone shot down in three days in romanian territory",
+        "fingerprint": "dd9f376c5c00cc07e2851fb9138ae9ed50c2b08e233c607a7a102a36dbd5a8db",
+        "rule_score": 37.601166666666664
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Kill The Cookie Banner",
+        "url": "https://killthecookiebanner.eu/",
+        "published_at": "2026-07-26T11:53:17Z",
+        "fetched_at": "2026-07-27T02:06:52.923189Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rapnie",
+        "upstream_urls": [
+          "https://killthecookiebanner.eu/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49057175,
+          "score": 834
+        },
+        "id": "8572f071bed81601",
+        "canonical_url": "https://killthecookiebanner.eu/",
+        "normalized_title": "kill the cookie banner",
+        "fingerprint": "8572f071bed816013faee43f67337699e942dfa64edebfb5807c2e9c102ac170",
+        "rule_score": 37.58880555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Pizza, pasta, potatoes, protein – how Italian children became so overweight",
+        "url": "https://www.bbc.com/news/articles/c33y3151vydo",
+        "published_at": "2026-07-26T11:15:25Z",
+        "fetched_at": "2026-07-27T02:06:53.842205Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "porridgeraisin",
+        "upstream_urls": [
+          "https://www.bbc.com/news/articles/c33y3151vydo"
+        ],
+        "raw_metadata": {
+          "hn_id": 49056917,
+          "score": 44
+        },
+        "id": "0806375ece462ba3",
+        "canonical_url": "https://www.bbc.com/news/articles/c33y3151vydo",
+        "normalized_title": "pizza pasta potatoes protein how italian children became so overweight",
+        "fingerprint": "0806375ece462ba3a6f2747fd0f5285acae707a18000e1e74812fbe274f45f6b",
+        "rule_score": 37.52569444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Systemd Linger",
+        "url": "https://etbe.coker.com.au/2026/07/24/systemd-linger/",
+        "published_at": "2026-07-26T09:43:13Z",
+        "fetched_at": "2026-07-27T02:06:53.998642Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "edward",
+        "upstream_urls": [
+          "https://etbe.coker.com.au/2026/07/24/systemd-linger/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49056351,
+          "score": 54
+        },
+        "id": "06e5cf78c77263ea",
+        "canonical_url": "https://etbe.coker.com.au/2026/07/24/systemd-linger",
+        "normalized_title": "systemd linger",
+        "fingerprint": "06e5cf78c77263ea0ff4d6ebbf828ed023b4bc6dbdde376d076d1aa136b05321",
+        "rule_score": 37.372027777777774
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Elevated Errors for Opus 5",
+        "url": "https://status.claude.com/incidents/zftg3gqkmv18",
+        "published_at": "2026-07-26T09:18:34Z",
+        "fetched_at": "2026-07-27T02:06:54.350101Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "TimCTRL",
+        "upstream_urls": [
+          "https://status.claude.com/incidents/zftg3gqkmv18"
+        ],
+        "raw_metadata": {
+          "hn_id": 49056194,
+          "score": 91
+        },
+        "id": "5a9a71b718f47ef2",
+        "canonical_url": "https://status.claude.com/incidents/zftg3gqkmv18",
+        "normalized_title": "elevated errors for opus 5",
+        "fingerprint": "5a9a71b718f47ef2b5d148870a4f97376b67978be26d2bcdef55dd91baa7246a",
+        "rule_score": 37.33094444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ruff v0.16.0 – Significant new updates – 413 default rules up from 59",
+        "url": "https://astral.sh/blog/ruff-v0.16.0",
+        "published_at": "2026-07-26T09:01:39Z",
+        "fetched_at": "2026-07-27T02:06:54.189140Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "vismit2000",
+        "upstream_urls": [
+          "https://astral.sh/blog/ruff-v0.16.0"
+        ],
+        "raw_metadata": {
+          "hn_id": 49056112,
+          "score": 335
+        },
+        "id": "6b7e2268734db2ca",
+        "canonical_url": "https://astral.sh/blog/ruff-v0.16.0",
+        "normalized_title": "ruff v0 16 0 significant new updates 413 default rules up from 59",
+        "fingerprint": "6b7e2268734db2caf668b55410234cc2f1314658613063c46902d99cf40c60b0",
+        "rule_score": 37.30275
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "JetZero",
+        "url": "https://www.jetzero.aero/",
+        "published_at": "2026-07-26T02:55:50Z",
+        "fetched_at": "2026-07-27T02:06:55.240707Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "lisper",
+        "upstream_urls": [
+          "https://www.jetzero.aero/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49054224,
+          "score": 247
+        },
+        "id": "cf875e022d87c14f",
+        "canonical_url": "https://www.jetzero.aero/",
+        "normalized_title": "jetzero",
+        "fingerprint": "cf875e022d87c14f0f8d4cdc523a50ab0d442faa29a7f76cac495e0840f50a3b",
+        "rule_score": 36.69305555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "An ESP32 based plane radar for my desk",
+        "url": "https://blog.ktz.me/esp32-plane-radar/",
+        "published_at": "2026-07-26T02:35:43Z",
+        "fetched_at": "2026-07-27T02:06:54.696184Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "alexktz",
+        "upstream_urls": [
+          "https://blog.ktz.me/esp32-plane-radar/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49054107,
+          "score": 260
+        },
+        "id": "a68d3f25c160501c",
+        "canonical_url": "https://blog.ktz.me/esp32-plane-radar",
+        "normalized_title": "an esp32 based plane radar for my desk",
+        "fingerprint": "a68d3f25c160501ceea3d097f4bcf7de5664b6f22b0a34d5e3a8bc18df74e9ec",
+        "rule_score": 36.659527777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: I mapped every US golf course",
+        "url": "https://golfcoursebrowser.com/",
+        "published_at": "2026-07-26T02:22:26Z",
+        "fetched_at": "2026-07-27T02:06:54.221357Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rickmf",
+        "upstream_urls": [
+          "https://golfcoursebrowser.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49054010,
+          "score": 200
+        },
+        "id": "f4a565a2ac9cc8fa",
+        "canonical_url": "https://golfcoursebrowser.com/",
+        "normalized_title": "show hn i mapped every us golf course",
+        "fingerprint": "f4a565a2ac9cc8fa585aa3240536c31bf065eb2943425b991220f3dddeee0081",
+        "rule_score": 36.637388888888886
       }
     ],
-    "prompt_chars": 7240,
-    "estimated_input_tokens": 1810
+    "prompt_chars": 4136,
+    "estimated_input_tokens": 1034
   },
-  "failures": {},
+  "failures": {
+    "arxiv-ai": "SourceFetchError: arxiv-ai: RSS fetch failed"
+  },
   "newly_auto_paused_source_ids": []
 }

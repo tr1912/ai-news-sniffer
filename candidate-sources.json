@@ -15,6 +15,21 @@
     "enabled": false
   },
   {
+    "domain": "aerospaceglobalnews.com",
+    "sample_url": "https://aerospaceglobalnews.com/news/gatwick-airport-robotic-parking-stanley-robotics/",
+    "sample_title": "London Gatwick has launched a robotic airport parking service",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "alexklos.ca",
     "sample_url": "https://alexklos.ca/blog/how-do-we-stop-vibe-coding",
     "sample_title": "How Do We Stop Vibe Coding?",
@@ -407,7 +422,7 @@
   {
     "domain": "cachebag.sh",
     "sample_url": "https://cachebag.sh/journal/interactive-rebasing/",
-    "sample_title": "Git rebase -I is not that scary",
+    "sample_title": "Git rebase -i is not that scary",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -1200,6 +1215,21 @@
     "enabled": false
   },
   {
+    "domain": "killthecookiebanner.eu",
+    "sample_url": "https://killthecookiebanner.eu/",
+    "sample_title": "Kill The Cookie Banner",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "kirwinhampshire.substack.com",
     "sample_url": "https://kirwinhampshire.substack.com/p/the-dark-night-of-mathematics",
     "sample_title": "The Dark Night of Mathematics",
@@ -1950,6 +1980,21 @@
     "enabled": false
   },
   {
+    "domain": "softwarepreservation.computerhistory.org",
+    "sample_url": "https://softwarepreservation.computerhistory.org/FP/",
+    "sample_title": "History of John Backus's functional programming project [draft]",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "spacetimetech.wordpress.com",
     "sample_url": "https://spacetimetech.wordpress.com/2026/07/19/the-small-real-original-web/",
     "sample_title": "The small, real, original web",
@@ -1995,6 +2040,21 @@
     "enabled": false
   },
   {
+    "domain": "stephango.com",
+    "sample_url": "https://stephango.com/design-is-compromise",
+    "sample_title": "Design is compromise",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "stephenfollows.com",
     "sample_url": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all",
     "sample_title": "What happened to TheNumbers.com",
@@ -2025,6 +2085,21 @@
     "enabled": false
   },
   {
+    "domain": "sunflowersgame.com",
+    "sample_url": "https://sunflowersgame.com/",
+    "sample_title": "Show HN: Reverse Minesweeper",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "supakeen.com",
     "sample_url": "https://supakeen.com/weblog/the-fedora-45-sausage-factory/",
     "sample_title": "The Fedora 45 Sausage Factory",
@@ -2041,8 +2116,8 @@
   },
   {
     "domain": "swag.htmx.org",
-    "sample_url": "https://swag.htmx.org/products/htmx-4-the-game",
-    "sample_title": "Htmx 4: The Game",
+    "sample_url": "https://swag.htmx.org/en-cad/products/htmx-4-the-game",
+    "sample_title": "Htmx 4.0, the first JavaScript library to release exclusively on the Game Boy",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
@@ -2105,6 +2180,21 @@
     "sample_title": "The IBM PC, Part 1: Arrival",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "teorth.github.io",
+    "sample_url": "https://teorth.github.io/tao-web/slides/age-of-ai-icm-2026.pdf",
+    "sample_title": "Terence Tao: Mathematics in the Age of AI [pdf]",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2225,6 +2315,21 @@
     "sample_title": "Show HN: Uploads.sh – the missing upload command for coding agents (open-source)",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "vectoral.com",
+    "sample_url": "https://vectoral.com/blog/token-relay-market",
+    "sample_title": "The relay market powering token resellers and fraud",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2359,6 +2464,21 @@
     "sample_url": "https://www.augmental.tech/",
     "sample_title": "MouthPad: A Tongue-Controlled Touchpad",
     "first_seen_at": "2026-07-25T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.bbc.com",
+    "sample_url": "https://www.bbc.com/news/articles/c33y3151vydo",
+    "sample_title": "Pizza, pasta, potatoes, protein – how Italian children became so overweight",
+    "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
@@ -3020,6 +3140,21 @@
     "sample_title": "The Iran War threatened a food crisis with soaring fertilizer costs",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-07-25T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.rickmanelius.com",
+    "sample_url": "https://www.rickmanelius.com/p/the-new-ai-superpowers-focus-and",
+    "sample_title": "The New AI Superpowers: Focus and Followthrough",
+    "first_seen_at": "2026-07-26T16:00:00Z",
+    "last_seen_at": "2026-07-26T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],

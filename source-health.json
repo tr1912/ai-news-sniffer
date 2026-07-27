@@ -19,12 +19,12 @@
   },
   "arxiv-ai": {
     "source_id": "arxiv-ai",
-    "consecutive_failures": 0,
+    "consecutive_failures": 1,
     "degraded": false,
     "auto_paused": false,
     "last_success_at": "2026-07-26T16:00:00Z",
     "last_attempt_at": "2026-07-26T16:00:00Z",
-    "last_error": null
+    "last_error": "SourceFetchError: arxiv-ai: RSS fetch failed"
   },
   "cohere-blog": {
     "source_id": "cohere-blog",

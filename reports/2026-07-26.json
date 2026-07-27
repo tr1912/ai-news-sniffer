@@ -1,18 +1,18 @@
 {
   "date": "2026-07-26",
-  "generated_at": "2026-07-26T14:37:42.334401Z",
+  "generated_at": "2026-07-27T02:06:41.914166Z",
   "run_id": "2026-07-26-66e134f5",
-  "daily_summary_zh": "今日AI领域重要动态：英国AI安全研究所发布Kimi K3网络能力初步评估；NVIDIA推出ModelExpress模型分发工具。",
+  "daily_summary_zh": "NVIDIA 发布高速模型分发技术 ModelExpress，Cloudflare 推出 AI 流量新选项，Ruff 和 Go 迎来重要更新，陶哲轩探讨 AI 对数学的影响。",
   "events": [
     {
-      "id": "event-2",
+      "id": "event-1",
       "candidate_ids": [
         "c50a262551db0d3e"
       ],
       "category": "infrastructure",
-      "title_zh": "NVIDIA推出ModelExpress：以光速分发模型制品",
-      "summary_zh": "NVIDIA发布了ModelExpress工具，旨在高效分发大型模型制品（如检查点文件），减少模型搬运成本，加速AI部署。",
-      "why_it_matters_zh": "随着模型规模增长，模型分发成为瓶颈，ModelExpress有望显著提升AI基础设施效率。",
+      "title_zh": "NVIDIA 发布 ModelExpress：以光速分发模型工件",
+      "summary_zh": "NVIDIA 发布了 ModelExpress，一种用于快速分发大型模型检查点（数百GB至TB级）的新技术，旨在降低模型移动成本并加速 AI 工作负载。",
+      "why_it_matters_zh": "随着模型规模增长，模型分发成为瓶颈。ModelExpress 显著提升传输速度，对大规模 AI 部署至关重要。",
       "importance_score": 80.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
@@ -26,17 +26,21 @@
     }
   ],
   "degraded": false,
-  "warnings": [],
+  "warnings": [
+    "source arxiv-ai failed: SourceFetchError: arxiv-ai: RSS fetch failed"
+  ],
   "report_url": null,
   "source_coverage": {
     "enabled": 9,
-    "fetched": 97,
-    "normalized": 97,
-    "filtered": 86,
+    "fetched": 50,
+    "normalized": 50,
+    "filtered": 42,
     "ai_candidates": 30,
-    "prompt_chars": 7240,
-    "estimated_input_tokens": 1810,
-    "failed_source_ids": [],
+    "prompt_chars": 4136,
+    "estimated_input_tokens": 1034,
+    "failed_source_ids": [
+      "arxiv-ai"
+    ],
     "newly_auto_paused_source_ids": []
   }
 }
