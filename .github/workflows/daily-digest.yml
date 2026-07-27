@@ -2,7 +2,7 @@ name: Daily AI Digest
 
 on:
   schedule:
-    - cron: "0 13 * * *"
+    - cron: "0 11 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -223,13 +223,9 @@ jobs:
           WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}
           GENERIC_WEBHOOK_URL: ${{ secrets.GENERIC_WEBHOOK_URL }}
         run: |
-          FORCE_FLAG=""
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            FORCE_FLAG="--force"
-          fi
           python -m ai_news_sniffer \
             --runtime-dir runtime-data \
-            notify --run-id "${{ needs.build.outputs.run_id }}" $FORCE_FLAG
+            notify --run-id "${{ needs.build.outputs.run_id }}" --force
       - name: Persist notification results
         if: always() && needs.build.outputs.should_notify == 'true'
         working-directory: runtime-data
