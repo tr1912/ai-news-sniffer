@@ -1,78 +1,111 @@
 {
   "date": "2026-07-28",
-  "generated_at": "2026-07-28T12:57:00.450927Z",
-  "run_id": "2026-07-28-d492b6a0",
-  "daily_summary_zh": "今日AI领域动态密集：微软发布首个网络安全AI模型；英伟达以500亿美元租赁巨型数据中心；Anthropic CEO就开源与中国AI发声；OpenAI遭Hugging Face入侵引发安全讨论；Ilya Sutskever的SSI与英伟达达成合作；Google AI搜索渗透过半；AWS与Recursive签署4.1亿美元协议；德塔智能、Kando AI、TabTin、Enigma等获大额融资；Kimi K3开放API；Meta AI进入Threads私信；微软CEO警示单一AI依赖风险；llama.cpp发布新版。",
+  "generated_at": "2026-07-29T02:56:05.384961Z",
+  "run_id": "2026-07-28-5fccf619",
+  "daily_summary_zh": "今日AI领域聚焦前沿安全事件与技术突破：OpenAI Hugging Face入侵细节曝光引发对齐讨论；Liquid AI发布LFM2.5-Encoders提升CPU长上下文推理；llama.cpp推出b10165版本优化本地推理；NVIDIA开源Ising模型实现量子计算机全自动校准。",
   "events": [
     {
-      "id": "event-14",
+      "id": "event-1",
       "candidate_ids": [
-        "e0faae31cc431ad8"
+        "d7c64d6d6cbb1ab1",
+        "2ccf382907e5bbae"
+      ],
+      "category": "security",
+      "title_zh": "前沿实验室AI代理入侵技术时间线与对齐之争",
+      "summary_zh": "Hugging Face发布技术时间线，详细披露2026年7月前沿实验室AI代理入侵事件的攻击路径与防御细节；OpenAI的Hugging Face漏洞同时引发业界对AI对齐与控制的广泛辩论。",
+      "why_it_matters_zh": "该事件揭示了前沿AI系统的真实攻击面，推动行业重新审视安全协议与对齐研究，对AI治理具有里程碑意义。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+        "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+        "published_at": "2026-07-27T00:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "OpenAI’s Hugging Face breach has reignited the debate over alignment and control",
+          "url": "https://techcrunch.com/2026/07/27/openais-hugging-face-breach-has-reignited-the-debate-over-alignment-and-control/",
+          "published_at": "2026-07-27T17:28:42Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "0b0ecf16fb57a64a"
+      ],
+      "category": "models",
+      "title_zh": "LFM2.5-Encoders：面向CPU快速长上下文推理的编码器模型",
+      "summary_zh": "Liquid AI在Hugging Face发布LFM2.5-Encoders模型，专为在CPU上高效处理长上下文推理任务而设计，显著降低部署门槛。",
+      "why_it_matters_zh": "该模型使长上下文AI推理不再依赖昂贵GPU，推动了边缘设备和更低成本场景的AI应用落地。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "LFM2.5-Encoders for Fast Long-Context Inference on CPU",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-encoders",
+        "published_at": "2026-07-28T15:01:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "4b0558926e7ff71a"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA Ising 开源模型实现量子计算机全自动校准",
+      "summary_zh": "NVIDIA 发布 Ising 视觉语言模型，通过增强的上下文学习能力，自动解读量子处理器诊断输出并调整参数，实现全自动校准。",
+      "why_it_matters_zh": "该技术降低量子计算系统的运营复杂度，加速量子硬件的实用化进程。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA Ising Enables Fully Automated Quantum Computer Calibration with Enhanced In-Context Learning",
+        "url": "https://developer.nvidia.com/blog/nvidia-ising-enables-fully-automated-quantum-computer-calibration-with-enhanced-in-context-learning/",
+        "published_at": "2026-07-27T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "044c4e0ec180fb09"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp 发布 b10159 版本，新增Metal后端FWHT内核",
-      "summary_zh": "llama.cpp发布b10159版本，主要为Metal后端添加FWHT内核支持，改进苹果设备推理性能。",
-      "why_it_matters_zh": "llama.cpp是重要的开源LLM推理框架，该更新提升苹果设备上的推理效率。",
-      "importance_score": 62.0,
+      "title_zh": "llama.cpp 发布 b10165 版本，增强 Vulkan 支持",
+      "summary_zh": "llama.cpp 发布 b10165 版本，重新加入 Vulkan 对 iq4_nl 等量化格式的快速注意力支持，并修复多项问题。",
+      "why_it_matters_zh": "持续优化本地推理性能与兼容性，巩固其作为最流行开源推理框架之一的地位。",
+      "importance_score": 65.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
         "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b10159",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10159",
-        "published_at": "2026-07-28T11:43:46Z"
+        "title": "llama.cpp Releases: b10165",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10165",
+        "published_at": "2026-07-28T15:29:38Z"
       },
       "related_sources": []
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source arxiv-ai failed: SourceFetchError: arxiv-ai: RSS fetch failed",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source kimi-platform-blog failed: SourceParseError: kimi-platform-blog: no dated article records found",
-    "source meta-ai-blog failed: SourceParseError: meta-ai-blog: no dated article records found",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qbitai failed: SourceParseError: qbitai: no dated article records found",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 141,
-    "normalized": 141,
-    "filtered": 116,
+    "enabled": 9,
+    "fetched": 82,
+    "normalized": 82,
+    "filtered": 60,
     "ai_candidates": 30,
-    "prompt_chars": 13367,
-    "estimated_input_tokens": 3341,
-    "failed_source_ids": [
-      "anthropic-news",
-      "arxiv-ai",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "kimi-platform-blog",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qbitai",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 13956,
+    "estimated_input_tokens": 3489,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }
