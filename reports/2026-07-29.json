@@ -1,0 +1,136 @@
+{
+  "date": "2026-07-29",
+  "generated_at": "2026-07-29T13:02:42.961645Z",
+  "run_id": "2026-07-29-e7a204aa",
+  "daily_summary_zh": "今日AI领域研究动态活跃，多篇重要论文和开源项目发布。微软推出桌面GUI理解基准Desktop-Delta Bench，评估计算机使用代理的过渡理解能力；Modus提出解码器-only任意到任意多模态建模；多项研究聚焦语言模型记忆管理，包括UniMem、MemLens等；腾讯混元开源AngelSpec投机解码框架；llama.cpp发布新版本b10178；此外，还有地理空间推理平台OlmoEarth、多模态图基础模型CHARM、临床时间序列推理ClinPRISM等成果。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "ac050c945e59dae3"
+      ],
+      "category": "models",
+      "title_zh": "Allen AI发布行星尺度地理空间推理平台OlmoEarth",
+      "summary_zh": "Allen AI在Hugging Face博客上介绍了OlmoEarth平台，支持行星尺度的地理空间推理，可处理大规模遥感图像和地理数据，为环境监测、城市规划等提供AI基础模型。",
+      "why_it_matters_zh": "地理空间推理是AI落地的重要方向，该平台将基础模型能力扩展到地球尺度，有望推动遥感、气候等领域的智能化。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "The OlmoEarth Platform: Geospatial inference at planetary scale",
+        "url": "https://huggingface.co/blog/allenai/olmoearth-infrastructure",
+        "published_at": "2026-07-28T16:27:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "7598dab161c3e71d"
+      ],
+      "category": "research",
+      "title_zh": "Modus：解码器-only任意到任意多模态建模",
+      "summary_zh": "Modus提出一种解码器-only架构，可对任意模态组合进行预测，无需模态特定头或损失函数，在多个基准上表现与专用模型竞争。所有材料已开源。",
+      "why_it_matters_zh": "统一的任意到任意多模态模型简化了系统设计，为多模态AI提供了更灵活的范式，有望在科学、视觉等领域广泛应用。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MODUS: Decoder-Only Any-to-Any Modeling of Diverse Modalities",
+        "url": "https://arxiv.org/abs/2607.25948v1",
+        "published_at": "2026-07-28T16:34:23Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "151c5006970704db"
+      ],
+      "category": "research",
+      "title_zh": "ClinPRISM：面向不规则临床时间序列问答的经济型多模态LLM推理框架",
+      "summary_zh": "ClinPRISM采用不规则感知多尺度编码器、时间证据蒸馏器和渐进对齐策略，在4B参数LLM上实现临床时间序列问答的SOTA性能，并构建了大规模 instruction-tuning数据集。",
+      "why_it_matters_zh": "临床数据的不规则性挑战大，ClinPRISM提供了一种经济有效的解决方案，有助于推动AI在医疗健康中的应用。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series",
+        "url": "https://arxiv.org/abs/2607.25947v1",
+        "published_at": "2026-07-28T16:33:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "20a063773d0c7c0f"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10178 版本",
+      "summary_zh": "llama.cpp发布新版本b10178，主要新增服务器中槽相似性检查的跟踪日志，用于提示缓存槽选择优化。",
+      "why_it_matters_zh": "llama.cpp是广泛使用的LLM推理引擎，持续优化性能，新功能有助于提升缓存效率和用户体验。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10178",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10178",
+        "published_at": "2026-07-29T13:01:04Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source kimi-platform-blog failed: SourceParseError: kimi-platform-blog: no dated article records found",
+    "source meta-ai-blog failed: SourceParseError: meta-ai-blog: no dated article records found",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qbitai failed: SourceParseError: qbitai: no dated article records found",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 179,
+    "normalized": 179,
+    "filtered": 146,
+    "ai_candidates": 30,
+    "prompt_chars": 27131,
+    "estimated_input_tokens": 6782,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "kimi-platform-blog",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qbitai",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
