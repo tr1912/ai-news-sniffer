@@ -1,0 +1,152 @@
+{
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30T12:47:24.182777Z",
+  "run_id": "2026-07-30-4dec76d2",
+  "daily_summary_zh": "今日AI领域发布多项研究及开源工具，包括音频字幕基准MMAC、LLM代理办公任务基准、小语言模型软件工程、AI代理研究能力评估、本体匹配AgentMap、夜空图表示等12篇arXiv论文，以及llama.cpp b10189版本发布。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "bd7b6efa0d7e756c"
+      ],
+      "category": "research",
+      "title_zh": "MMAC: 大规模多维度音频字幕基准",
+      "summary_zh": "MMAC是一个包含5638个音频片段、覆盖6个能力类别和15个评估维度的音频字幕基准，用于评估音频大语言模型的信息覆盖和描述可靠性。",
+      "why_it_matters_zh": "该基准为音频字幕从简短描述向开放、细粒度自由形式描述的发展提供了诊断工具，有助于推动音频AI模型的改进。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MMAC: A Massive Multi-dimensional Benchmark for Audio Captioning",
+        "url": "https://arxiv.org/abs/2607.27109v1",
+        "published_at": "2026-07-29T16:38:08Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "39abcfd2005f26a0"
+      ],
+      "category": "research",
+      "title_zh": "OmegaUse-OfficeVal: 基于经济指标的LLM代理办公任务基准",
+      "summary_zh": "该基准包含100个办公套件任务，平均需要2.32小时人工完成，并配对人工劳动时间和任务价格代理两个经济信号，用于比较人类成本与LLM推理成本。",
+      "why_it_matters_zh": "为评估LLM代理在长周期办公任务中的成本效益提供了标准化基准，揭示了当前模型在交付质量上与人类的差距。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
+        "url": "https://arxiv.org/abs/2607.27155v1",
+        "published_at": "2026-07-29T17:33:47Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "7103409b003eafb2"
+      ],
+      "category": "research",
+      "title_zh": "MindForge: 通过无源程序合成教授小语言模型全生命周期软件工程",
+      "summary_zh": "MindForge将开源命令行程序转换为仅暴露编译可执行文件和文档的环境，并生成程序合成轨迹，微调Qwen3.6-27B后ProgramBench正确率从37.98%提升至49.51%。",
+      "why_it_matters_zh": "解决了从零开始构建完整程序的难题，展示了小模型通过蒸馏获得接近前沿模型性能的潜力。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MindForge: Teaching Small Language Models Whole-Life-Cycle Software Engineering via Source-Free Program Synthesis",
+        "url": "https://arxiv.org/abs/2607.27146v1",
+        "published_at": "2026-07-29T17:23:02Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "b2841743ffbe5c8b"
+      ],
+      "category": "research",
+      "title_zh": "AI代理能否进行开放式AI研究？两个案例研究的早期证据",
+      "summary_zh": "通过影子评估方法，让前沿代理在6天内、数千美元计算资源下尝试回答未发表论文的研究问题，结果均被作者明确拒绝，并识别出五种反复出现的失败模式。",
+      "why_it_matters_zh": "揭示当前AI代理在开放式研究中的根本性局限，为评估AI研发自动化进展提供了新方法论。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
+        "url": "https://arxiv.org/abs/2607.27191v1",
+        "published_at": "2026-07-29T17:57:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "b03bbd882a19a6cd"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b10189 版本发布",
+      "summary_zh": "llama.cpp发布b10189版本，主要变更包括从M3图中移除自定义CPU算子并以标准算子表达。",
+      "why_it_matters_zh": "作为最流行的本地推理框架之一，持续优化性能和兼容性，降低AI部署门槛。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10189",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10189",
+        "published_at": "2026-07-30T09:33:47Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 206,
+    "normalized": 206,
+    "filtered": 171,
+    "ai_candidates": 30,
+    "prompt_chars": 25408,
+    "estimated_input_tokens": 6352,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
