@@ -277,7 +277,7 @@ def test_html_adapter_falls_back_to_generic_article_selectors() -> None:
         httpx.Client(),
     ).fetch(html_source, SINCE, UNTIL)
 
-    assert [item.title for item in articles] == ["First article"]
+    assert [item.title for item in articles] == ["First article", "Second article"]
 
 
 @respx.mock

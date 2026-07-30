@@ -1,3 +1,4 @@
+import calendar
 import json
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
@@ -38,14 +39,12 @@ def _try_parse_partial_date(value: str, ref_year: int) -> datetime | None:
     value = value.strip()
     for fmt in ("%b %d", "%B %d", "%b %d,", "%B %d,"):
         try:
-            parsed = datetime.strptime(value, fmt)
-            return parsed.replace(year=ref_year, tzinfo=UTC)
+            return datetime.strptime(value, fmt).replace(year=ref_year, tzinfo=UTC)
         except ValueError:
             pass
     month_day = value.split()
     if len(month_day) == 2:
         try:
-            import calendar
             month_names = {m[:3].lower(): i for i, m in enumerate(calendar.month_abbr) if m}
             month_names.update({m.lower(): i for i, m in enumerate(calendar.month_name) if m})
             month_str, day_str = month_day[0].lower(), month_day[1].rstrip(",")
@@ -227,7 +226,7 @@ def _extract_title(item) -> str | None:
             text = node.text(strip=True)
             if not text and sel == "a[title]":
                 text = node.attributes.get("title", "")
-            if text and len(text) > 5:
+            if text and len(text) >= 1:
                 return text
     return None
 
