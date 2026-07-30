@@ -105,6 +105,12 @@ class Pipeline:
             summary = "模型暂不可用，本期仅展示来源标题与摘要。"
             events = build_degraded_events(ranked, self.settings.app.max_items)
         events = select_diverse_events(events, self.settings.app.max_items)
+        if not degraded and len(events) < self.settings.app.min_items // 2:
+            event_titles = [event.title_zh for event in events if event.title_zh]
+            if event_titles:
+                summary = "今日AI领域动态：" + "；".join(event_titles[:6]) + (
+                    "等。" if len(event_titles) > 6 else "。"
+                )
         if degraded and not events:
             summary = (
                 "今日未找到符合发布标准的已验证事件。"

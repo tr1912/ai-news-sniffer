@@ -241,34 +241,33 @@ def test_html_adapter_accepts_naive_jsonld_date_as_utc() -> None:
 
 
 @respx.mock
-def test_html_adapter_handles_jsonld_type_list_and_nested_graph() -> None:
+@respx.mock
+def test_html_adapter_falls_back_to_generic_article_selectors() -> None:
     html_source = SourceConfig(
-        id="typed-list-html",
-        name="Typed List HTML",
+        id="generic-html",
+        name="Generic HTML",
         kind=SourceKind.HTML_WHITELIST,
         group=SourceGroup.OFFICIAL,
         profiles={"full"},
-        url="https://typed.example/news",
+        url="https://generic.example/news",
         categories=["models"],
     )
     respx.get(str(html_source.url)).mock(
         return_value=httpx.Response(
             200,
             text="""
-                <script type="application/ld+json">
-                  {
-                    "@context": "https://schema.org",
-                    "@graph": [
-                      {
-                        "@type": ["WebPage", "NewsArticle"],
-                        "headline": "Nested article",
-                        "url": "/nested",
-                        "datePublished": "2026-07-23T10:00:00Z",
-                        "description": "Summary"
-                      }
-                    ]
-                  }
-                </script>
+                <html><body>
+                  <article>
+                    <h2><a href="/first">First article</a></h2>
+                    <time>Jul 23, 2026</time>
+                    <p>First summary.</p>
+                  </article>
+                  <article>
+                    <h2><a href="/second">Second article</a></h2>
+                    <span class="date">Jul 22, 2026</span>
+                    <p>Second summary.</p>
+                  </article>
+                </body></html>
             """,
         )
     )
@@ -278,5 +277,115 @@ def test_html_adapter_handles_jsonld_type_list_and_nested_graph() -> None:
         httpx.Client(),
     ).fetch(html_source, SINCE, UNTIL)
 
-    assert [item.title for item in articles] == ["Nested article"]
-    assert str(articles[0].url) == "https://typed.example/nested"
+    assert [item.title for item in articles] == ["First article"]
+
+
+@respx.mock
+def test_html_adapter_returns_empty_when_records_exist_outside_window() -> None:
+    html_source = SourceConfig(
+        id="old-html",
+        name="Old HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://old.example/news",
+        categories=["models"],
+    )
+    respx.get(str(html_source.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text="""
+                <html><body>
+                  <article>
+                    <h2><a href="/old">Old article</a></h2>
+                    <time>Jul 1, 2026</time>
+                    <p>Old summary.</p>
+                  </article>
+                </body></html>
+            """,
+        )
+    )
+
+    articles = build_source_adapter(
+        html_source,
+        httpx.Client(),
+    ).fetch(html_source, SINCE, UNTIL)
+
+    assert articles == []
+
+
+@respx.mock
+def test_html_adapter_uses_browser_user_agent() -> None:
+    html_source = SourceConfig(
+        id="ua-html",
+        name="UA HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://ua.example/news",
+        categories=["models"],
+    )
+    request_headers: dict[str, str] | None = None
+
+    def capture_request(request: httpx.Request) -> httpx.Response:
+        nonlocal request_headers
+        request_headers = dict(request.headers)
+        return httpx.Response(
+            200,
+            text="""
+                <html><body>
+                  <article>
+                    <h2><a href="/a">A</a></h2>
+                    <time>Jul 23, 2026</time>
+                  </article>
+                </body></html>
+            """,
+        )
+
+    respx.get(str(html_source.url)).mock(side_effect=capture_request)
+    build_source_adapter(html_source, httpx.Client()).fetch(html_source, SINCE, UNTIL)
+
+    assert request_headers is not None
+    assert "Chrome" in request_headers.get("user-agent", "")
+
+
+@respx.mock
+def test_html_adapter_selector_item_can_be_the_link() -> None:
+    html_source = SourceConfig(
+        id="link-item-html",
+        name="Link Item HTML",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://link-item.example/news",
+        categories=["models"],
+        selectors=HtmlSelectors(
+            item="[class*=\"item-row\"]",
+            title=".title",
+            link="a",
+            date="time",
+            excerpt="p",
+        ),
+    )
+    respx.get(str(html_source.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text="""
+                <html><body>
+                  <a class="item-row" href="/row1">
+                    <span class="title">Row one</span>
+                    <time>Jul 23, 2026</time>
+                    <p>Summary.</p>
+                  </a>
+                </body></html>
+            """,
+        )
+    )
+
+    articles = build_source_adapter(
+        html_source,
+        httpx.Client(),
+    ).fetch(html_source, SINCE, UNTIL)
+
+    assert [item.title for item in articles] == ["Row one"]
+    assert str(articles[0].url) == "https://link-item.example/row1"

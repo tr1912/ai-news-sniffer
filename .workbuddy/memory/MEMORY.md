@@ -7,8 +7,8 @@
 Python 3.12+, Pydantic 2, httpx, feedparser, RapidFuzz, Jinja2, OpenAI SDK, pytest, respx, Ruff, GitHub Actions.
 
 ## 工作目录
-Git worktree: `D:\aiProjects\ai-news-sniffer‌\.worktrees\ai-news-sniffer-v2`
-分支: `feature/ai-news-sniffer-v2`
+主目录: `D:\aiProjects\ai-news-sniffer`（主分支 main，直接在此开发）
+Worktree: `D:\aiProjects\ai-news-sniffer‌\.worktrees\ai-news-sniffer-v2`（分支 feature/ai-news-sniffer-v2，早期开发用）
 
 ## 实现进度
 - ✅ Source Tasks 1-7: 来源采集子系统（35 个源、5 种适配器、去重评分、健康度、CLI）
@@ -18,7 +18,12 @@ Git worktree: `D:\aiProjects\ai-news-sniffer‌\.worktrees\ai-news-sniffer-v2`
 - ✅ Main Task 7: 通知网关（MeoW/企微/Webhook、指数���避重试、通道隔离）
 - ✅ Main Task 8: 管线编排和 CLI（Pipeline 7 步、build/verify/mark-published/notify/notify-failure）
 - ✅ Main Task 10: GitHub Actions CI/CD（ci.yml + daily-digest.yml 4-job 流程、README 手册）
-- 🎉 **全部完成** — 75/75 测试通过
+- 🎉 **全部完成** — 79/79 测试通过
+
+## 定时任务
+- Cron: `0 11 * * *` UTC = 北京时间 19:00
+- 配置文件: `.github/workflows/daily-digest.yml`
+- 通知始终带 `--force`，确保定时任务不受手动运行影响
 
 ## GitHub Pages 域名
 - 自定义域名 `www.happyxiao1435.top` 绑在 `tr1912.github.io` 用户主页仓库

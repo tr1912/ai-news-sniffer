@@ -89,140 +89,173 @@ def _source_ids(value: str) -> set[str]:
     return {item.strip() for item in value.split(",") if item.strip()}
 
 
+def handle_verify_url_command(
+    args: argparse.Namespace, settings, store: RuntimeStore
+) -> int:
+    with httpx.Client() as client:
+        verify_report_url(args.url, client)
+    return 0
+
+
+def handle_mark_published_command(
+    args: argparse.Namespace, settings, store: RuntimeStore
+) -> int:
+    record = store.load_run(args.run_id)
+    if record.status in {
+        RunStatus.PUBLISHED,
+        RunStatus.NOTIFIED,
+        RunStatus.PARTIALLY_NOTIFIED,
+    }:
+        print(
+            f"[skip] run {args.run_id} is already published/notified, "
+            f"updating fingerprints only",
+            file=sys.stderr,
+        )
+    with httpx.Client() as client:
+        verify_report_url(args.report_url, client)
+    store.mark_published(args.run_id, args.report_url)
+    return 0
+
+
+def handle_build_command(
+    args: argparse.Namespace, settings, store: RuntimeStore
+) -> int:
+    from ai_news_sniffer.pipeline import Pipeline
+
+    target_date = args.target_date or datetime.now(
+        ZoneInfo(settings.app.timezone)
+    ).date()
+    prompt = Path("prompts/editorial.md").read_text(encoding="utf-8")
+    pipeline = Pipeline(
+        settings=settings,
+        runtime_dir=args.runtime_dir,
+        output_dir=args.output_dir,
+        templates_root=args.templates_dir,
+        editorial_service=EditorialService(
+            _provider_chain(settings), prompt
+        ),
+    )
+    print(
+        pipeline.build(
+            target_date,
+            args.dry_run,
+            source_profile=args.source_profile,
+            include_sources=_source_ids(args.include_sources),
+            exclude_sources=_source_ids(args.exclude_sources),
+            max_ai_candidates=args.max_ai_candidates or None,
+        ).model_dump_json()
+    )
+    return 0
+
+
+def handle_notify_failure_command(
+    args: argparse.Namespace, settings, store: RuntimeStore
+) -> int:
+    payload = NotificationPayload(
+        run_id=f"failure-{datetime.now(ZoneInfo(settings.app.timezone)):%Y%m%d%H%M%S}",
+        date=datetime.now(ZoneInfo(settings.app.timezone)).date(),
+        status=RunStatus.FAILED,
+        title="AI 日报运行失败",
+        daily_summary=args.message,
+        top_items=[],
+        report_url=settings.app.public_base_url,
+        generated_at=datetime.now(ZoneInfo("UTC")),
+    )
+    with httpx.Client() as client:
+        results = send_all(
+            build_channels(settings.channels.channels, client),
+            payload,
+            args.message,
+        )
+    return 0 if any(result.success for result in results) else 2
+
+
+def handle_notify_command(
+    args: argparse.Namespace, settings, store: RuntimeStore
+) -> int:
+    record = store.load_run(args.run_id)
+    if record.status is RunStatus.NOTIFIED and not args.force:
+        print(
+            f"[skip] run {args.run_id} was already notified — no duplicate "
+            f"notification will be sent",
+            file=sys.stderr,
+        )
+        return 0
+    allowed_for_notify = {
+        RunStatus.PUBLISHED,
+        RunStatus.PARTIALLY_NOTIFIED,
+    }
+    if args.force:
+        allowed_for_notify.add(RunStatus.NOTIFIED)
+    if record.status not in allowed_for_notify or not record.report_url:
+        raise RuntimeError("run must be published before notification")
+    report = next(
+        item for item in store.load_reports() if item.run_id == args.run_id
+    )
+    report.report_url = record.report_url
+    payload = NotificationPayload(
+        run_id=report.run_id,
+        date=report.date,
+        status=record.status,
+        title=f"AI 日报 · {report.date}",
+        daily_summary=report.daily_summary_zh,
+        top_items=report.events[:3],
+        report_url=record.report_url,
+        generated_at=report.generated_at,
+    )
+    message = SiteRenderer(
+        args.templates_dir,
+        base_path=_extract_path(settings.app.public_base_url),
+    ).render_notification(
+        report,
+        settings.app.template,
+        report_url=str(record.report_url),
+    )
+    previous_successes = [
+        result for result in record.channel_results if result.success
+    ]
+    failed_ids = {
+        result.channel_id
+        for result in record.channel_results
+        if not result.success
+    }
+    channel_configs = settings.channels.channels
+    if failed_ids:
+        channel_configs = [
+            config
+            for config in channel_configs
+            if config.id in failed_ids
+        ]
+    with httpx.Client() as client:
+        results = previous_successes + send_all(
+            build_channels(channel_configs, client),
+            payload,
+            message,
+        )
+    store.mark_notified(args.run_id, results)
+    return 0 if all(result.success for result in results) else 2
+
+
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     if args.command == "sources":
         return run_source_command(args)
     settings = load_settings(args.config_dir)
     store = RuntimeStore(args.runtime_dir)
-    if args.command == "verify-url":
-        with httpx.Client() as client:
-            verify_report_url(args.url, client)
-        return 0
-    if args.command == "mark-published":
-        record = store.load_run(args.run_id)
-        if record.status in {
-            RunStatus.PUBLISHED,
-            RunStatus.NOTIFIED,
-            RunStatus.PARTIALLY_NOTIFIED,
-        }:
-            print(
-                f"[skip] run {args.run_id} is already published/notified, "
-                f"updating fingerprints only",
-                file=sys.stderr,
-            )
-        with httpx.Client() as client:
-            verify_report_url(args.report_url, client)
-        store.mark_published(args.run_id, args.report_url)
-        return 0
-    if args.command == "build":
-        from ai_news_sniffer.pipeline import Pipeline
 
-        target_date = args.target_date or datetime.now(
-            ZoneInfo(settings.app.timezone)
-        ).date()
-        prompt = Path("prompts/editorial.md").read_text(encoding="utf-8")
-        pipeline = Pipeline(
-            settings=settings,
-            runtime_dir=args.runtime_dir,
-            output_dir=args.output_dir,
-            templates_root=args.templates_dir,
-            editorial_service=EditorialService(
-                _provider_chain(settings), prompt
-            ),
-        )
-        print(
-            pipeline.build(
-                target_date,
-                args.dry_run,
-                source_profile=args.source_profile,
-                include_sources=_source_ids(args.include_sources),
-                exclude_sources=_source_ids(args.exclude_sources),
-                max_ai_candidates=args.max_ai_candidates or None,
-            ).model_dump_json()
-        )
-        return 0
-    if args.command == "notify-failure":
-        payload = NotificationPayload(
-            run_id=f"failure-{datetime.now(ZoneInfo(settings.app.timezone)):%Y%m%d%H%M%S}",
-            date=datetime.now(ZoneInfo(settings.app.timezone)).date(),
-            status=RunStatus.FAILED,
-            title="AI 日报运行失败",
-            daily_summary=args.message,
-            top_items=[],
-            report_url=settings.app.public_base_url,
-            generated_at=datetime.now(ZoneInfo("UTC")),
-        )
-        with httpx.Client() as client:
-            results = send_all(
-                build_channels(settings.channels.channels, client),
-                payload,
-                args.message,
-            )
-        return 0 if any(result.success for result in results) else 2
-    if args.command == "notify":
-        record = store.load_run(args.run_id)
-        if record.status is RunStatus.NOTIFIED and not args.force:
-            print(
-                f"[skip] run {args.run_id} was already notified — no duplicate "
-                f"notification will be sent",
-                file=sys.stderr,
-            )
-            return 0
-        allowed_for_notify = {
-            RunStatus.PUBLISHED,
-            RunStatus.PARTIALLY_NOTIFIED,
-        }
-        if args.force:
-            allowed_for_notify.add(RunStatus.NOTIFIED)
-        if record.status not in allowed_for_notify or not record.report_url:
-            raise RuntimeError("run must be published before notification")
-        report = next(
-            item for item in store.load_reports() if item.run_id == args.run_id
-        )
-        report.report_url = record.report_url
-        payload = NotificationPayload(
-            run_id=report.run_id,
-            date=report.date,
-            status=record.status,
-            title=f"AI 日报 · {report.date}",
-            daily_summary=report.daily_summary_zh,
-            top_items=report.events[:3],
-            report_url=record.report_url,
-            generated_at=report.generated_at,
-        )
-        message = SiteRenderer(
-            args.templates_dir,
-            base_path=_extract_path(settings.app.public_base_url),
-        ).render_notification(
-            report,
-            settings.app.template,
-            report_url=str(record.report_url),
-        )
-        previous_successes = [
-            result for result in record.channel_results if result.success
-        ]
-        failed_ids = {
-            result.channel_id
-            for result in record.channel_results
-            if not result.success
-        }
-        channel_configs = settings.channels.channels
-        if failed_ids:
-            channel_configs = [
-                config
-                for config in channel_configs
-                if config.id in failed_ids
-            ]
-        with httpx.Client() as client:
-            results = previous_successes + send_all(
-                build_channels(channel_configs, client),
-                payload,
-                message,
-            )
-        store.mark_notified(args.run_id, results)
-        return 0 if all(result.success for result in results) else 2
-    raise AssertionError("unreachable command")
+    command_handlers = {
+        "verify-url": handle_verify_url_command,
+        "mark-published": handle_mark_published_command,
+        "build": handle_build_command,
+        "notify-failure": handle_notify_failure_command,
+        "notify": handle_notify_command,
+    }
+
+    handler = command_handlers.get(args.command)
+    if handler:
+        return handler(args, settings, store)
+
+    raise AssertionError(f"unreachable command: {args.command}")
 
 
 if __name__ == "__main__":

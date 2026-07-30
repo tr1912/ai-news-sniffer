@@ -29,8 +29,8 @@ def _clean_degraded_excerpt(text: str, max_chars: int = 350) -> str:
 def select_diverse_events(
     events: list[NewsEvent],
     max_items: int,
-    max_per_category: int = 3,
-    max_per_source: int = 2,
+    max_per_category: int = 5,
+    max_per_source: int = 4,
 ) -> list[NewsEvent]:
     category_counts: Counter[str] = Counter()
     source_counts: Counter[str] = Counter()
@@ -39,6 +39,11 @@ def select_diverse_events(
         if event.confirmation_status == ConfirmationStatus.UNVERIFIED:
             continue
         source_id = event.primary_source.source_id
+        if len(selected) >= max_items - 2:
+            selected.append(event)
+            if len(selected) == max_items:
+                break
+            continue
         if category_counts[event.category] >= max_per_category:
             continue
         if source_counts[source_id] >= max_per_source:
