@@ -1,0 +1,193 @@
+{
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T12:58:38.716860Z",
+  "run_id": "2026-07-31-ae1915c2",
+  "daily_summary_zh": "今日 AI 动态以研究与开源为主：Frontis-MA1 展示了面向机器学习工程递归自我改进的 AI4AI 模型，在 MLE-Bench Lite 上超过 GPT-5.5+Codex；ORCA-bench 与 OSReward 分别揭示 oncall 根因分析与 CUA 轨迹裁判的明显短板；一项大规模实验表明同等 token 预算下重复采样优于自我反思类方法。开源与基础设施方面，llama.cpp 连续发布新版本，Hugging Face 探讨 GPU 管理，NVIDIA 给出更安全 Agent 的部署建议。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "5f787142481c34e0"
+      ],
+      "category": "research",
+      "title_zh": "Frontis-MA1：面向机器学习工程递归自我改进的 AI4AI 模型",
+      "summary_zh": "arXiv 论文介绍 OpenMLE——面向机器学习工程递归自我改进研究的开源全栈系统（含 OpenMLE-Gym、OpenMLE-RL、OpenMLE-Evo），并基于该栈对 35B 模型 Frontis-MA1 进行后训练，将其作为元演化智能体。在 MLE-Bench Lite 上、单张 RTX 4090 与 12 小时单任务预算下，Frontis-MA1 将奖牌均值从基础模型的 39.39% 提升至 60.61%；使用 OpenMLE-Evo-Max 后达到 71.21%，超过 GPT-5.5+Codex，接近 GPT-5.6 Sol。",
+      "why_it_matters_zh": "这是少见的将递归自我改进落地到机器学习工程的具体系统，验证了让 AI 改进 AI 工程流程的可行路径，并展示了开源模型在小算力条件下达到前沿性能的潜力。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering",
+        "url": "https://arxiv.org/abs/2607.28568v1",
+        "published_at": "2026-07-30T17:34:01Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "e77525578ecd7ce6"
+      ],
+      "category": "research",
+      "title_zh": "ORCA-bench：衡量语言模型 Agent 的 Oncall 根因分析能力",
+      "summary_zh": "ORCA-bench 把通用编码 Agent 放到生产级 oncall 场景中：配套 OpenTelemetry 微服务系统，通过 Prometheus、Jaeger 和 Grafana 暴露 6 天的指标、日志与调用链，加上完整源码访问，共 1079 个 RCA 任务。五个前沿 Agent 在中等难度任务上的最佳 RCA 准确率仅 25.3%，困难任务为 10.0%；最弱模型在 40% 的事故报告中给出不可信的根因，去掉源码权限会全面降低指标。",
+      "why_it_matters_zh": "当前编码 Agent 在真实运维排障中远未可用，该基准为衡量和提升 Agent 的实际可靠性提供了生产级测试场，也揭示了现有多数 Agent 在模糊、噪声环境中的短板。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "ORCA-bench: How Ready Are Language Model Agents for Oncall?",
+        "url": "https://arxiv.org/abs/2607.28545v1",
+        "published_at": "2026-07-30T17:14:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "8ad55f45b723d59d"
+      ],
+      "category": "research",
+      "title_zh": "OSReward：为跨平台计算机使用奖励模型建立标准化评测",
+      "summary_zh": "OSReward 是一个评估 VLM 判断器在 CUA 轨迹上可靠性基准，轨迹来自多种 Agent 骨干执行人工验证的跨平台指令，经多阶段人工标注得到 ground truth。基于该基准还构建了 OSReward-Hard 与 OSReward-Multi。评测发现即便最先进的 VLM 判断器也未达到理想水平，存在系统性的宽松偏差。",
+      "why_it_matters_zh": "随着 CUA 评测和强化学习越来越依赖 VLM 作为裁判，该基准首次系统检验裁判本身是否可靠，为 Agent 评测、数据清洗和奖励建模提供了标准化的质量参照。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "url": "https://arxiv.org/abs/2607.28609v1",
+        "published_at": "2026-07-30T17:57:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "c29fa24dbf08bfc5"
+      ],
+      "category": "research",
+      "title_zh": "同等 token 预算下，重复采样优于自我反思与自我修正方法",
+      "summary_zh": "该研究以受控实验比较了 7 种方法（自反思、Reflexion、辩论等）与简单重复采样，覆盖 1.5B/3B/7B 开源模型、两个数学基准、各 150 道题，并计入所有生成的 token。在 36 组等代价对比中，没有任何方法稳定优于重复采样，10 种方法显著更差。",
+      "why_it_matters_zh": "许多自我反思方法宣称的收益可能只是来自生成更多文本；该研究为测试时计算分配提供了重要提醒，促使社区重新审视反思类方法的真实增益。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B",
+        "url": "https://arxiv.org/abs/2607.28576v1",
+        "published_at": "2026-07-30T17:38:23Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "6431814f5d1070a7"
+      ],
+      "category": "infrastructure",
+      "title_zh": "Hugging Face 博客：闲置 GPU 是新的停飞飞机",
+      "summary_zh": "Hugging Face 发布博客文章《GPU Management: Why Idle GPUs Are the New Grounded Aircraft》，以“闲置 GPU 如同停飞航班”为喻，讨论 GPU 管理问题，强调算力闲置带来的成本与效率挑战。",
+      "why_it_matters_zh": "GPU 集群利用率直接影响 AI 基础设施成本，该官方博客以直观类比推动开发者重新审视 GPU 调度与管理实践。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
+        "url": "https://huggingface.co/blog/Dharma-AI/gpu-management",
+        "published_at": "2026-07-30T15:09:09Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "bada45a687355930"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 发布部署更安全 AI Agent 的四种方法",
+      "summary_zh": "NVIDIA 开发者博客发表《Four Ways to Deploy More Secure AI Agents》，面向将 AI Agent 作为“数字同事”的知识工作者，介绍在部署 Agent 时提升安全性的四种方法。",
+      "why_it_matters_zh": "随着企业将 AI Agent 引入日常工作流，安全实践成为关键短板；NVIDIA 官方给出具体可操作的部署加固思路。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Four Ways to Deploy More Secure AI Agents",
+        "url": "https://developer.nvidia.com/blog/four-ways-to-deploy-more-secure-ai-agents/",
+        "published_at": "2026-07-30T21:09:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "9591ce81d23ecd43",
+        "28162477f7d3bd46"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10199/b10204：加入 SYCL dev2dev memcpy 与 server embedding 支持",
+      "summary_zh": "llama.cpp 连续发布两个新版本：b10204 为 SYCL 后端加入 dev2dev memcpy 支持；b10199 让 server 支持输入 embedding 用于生成下一个 token，并修复 server_batch 相关问题。",
+      "why_it_matters_zh": "作为最流行的本地大模型推理工具之一，llama.cpp 的持续更新降低了多后端部署和自定义嵌入工作流的门槛，惠及大量开源开发者。",
+      "importance_score": 55.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10204",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10204",
+        "published_at": "2026-07-31T12:45:21Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 207,
+    "normalized": 207,
+    "filtered": 171,
+    "ai_candidates": 30,
+    "prompt_chars": 28466,
+    "estimated_input_tokens": 7116,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
