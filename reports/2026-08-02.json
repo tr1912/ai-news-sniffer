@@ -1,0 +1,163 @@
+{
+  "date": "2026-08-02",
+  "generated_at": "2026-08-02T12:05:16.723389Z",
+  "run_id": "2026-08-02-ce7f419a",
+  "daily_summary_zh": "今日AI日报：开源推理栈llama.cpp连续发布新版本；多篇arXiv研究聚焦推理模型训练（β-OPSD）、多模态视觉蒸馏（VAD）、系统提示词审计（AISPA）、ViT量化（MixFrag）、原子结构预测（APO）、医疗影像（ScaFE）与AI语言意识形态等主题。",
+  "events": [
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "a480afc1e1e3d50d"
+      ],
+      "category": "research",
+      "title_zh": "新论文：β-OPSD 将自蒸馏泛化为可控正则化的策略优化，降低推理模型训练脆弱性",
+      "summary_zh": "论文提出 β-OPSD，将 on-policy self-distillation（OPSD）视为 β=1 的特例，β 作为可控 KL 正则化参数。通过将 RL 目标闭式解转换为蒸馏目标，用 token 级 logits 混合实现参考策略到教师策略的插值，从而降低训练方差与成本。",
+      "why_it_matters_zh": "推理大模型的强化学习训练常常脆弱且工程复杂。β-OPSD 提供了一个更一般、可解释的蒸馏框架，可能让开源社区以更低成本稳定提升模型推理能力。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "$β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
+        "url": "https://arxiv.org/abs/2607.28582v1",
+        "published_at": "2026-07-30T17:41:16Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "8b944964a627fe06"
+      ],
+      "category": "research",
+      "title_zh": "新论文：AISPA 审计 88 款商业 AI 产品的系统提示词，揭示用户保护覆盖不均",
+      "summary_zh": "AISPA 提出用户视角的系统提示词审计框架，对 88 个商业 AI 产品中的 3,249 条指令沿 8 个维度评估。结果发现 98.9% 产品至少含一条保护性指令，但仅 24% 覆盖全部维度；不同开发者差异巨大。",
+      "why_it_matters_zh": "系统提示词是商业 AI 的行为控制器，却很少公开。AISPA 提供了可复现的审计方法，推动行业透明度和用户保护责任落实。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+        "url": "https://arxiv.org/abs/2607.28617v1",
+        "published_at": "2026-07-30T17:58:58Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "d98579d051626634",
+        "8207894d9b693610"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 连续发布 b10198 与 b10227：新增 Vulkan 量化拼接与 Qwen3 解析器",
+      "summary_zh": "llama.cpp 发布 b10198 和 b10227 两个版本：b10198 为 Vulkan 后端加入量化 concat 支持；b10227 新增 Qwen3 专用解析器，支持带标签的思考/工具调用解析，并重构 chat 部分、增加 permute 辅助函数，更新工具分隔符，修正 <function 触发模式。",
+      "why_it_matters_zh": "llama.cpp 是本地大模型推理的事实标准开源项目。Vulkan 支持让更多 GPU 环境能高效运行量化模型，Qwen3 专用解析器则改善了对中文开源模型的对话与工具调用兼容性，直接影响开发者在边缘设备上的部署体验。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10227",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10227",
+        "published_at": "2026-08-02T09:43:15Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b10198",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10198",
+          "published_at": "2026-07-30T19:37:33Z"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "acf3d890ffe3c99e"
+      ],
+      "category": "research",
+      "title_zh": "新论文：APO 用无监督策略优化预测原子系统 3D 结构，免除实验标注",
+      "summary_zh": "APO 将 group-relative policy optimization 引入 3D 原子环境，通过双奖励机制（潜在结构模态奖励与热力学稳定性奖励）实现无需地面真值结构的自监督对齐。在晶体与抗体结构预测基准上超越全监督基线。",
+      "why_it_matters_zh": "新材料和新蛋白质的实验标注非常昂贵。APO 若可靠，将显著降低结构预测对监督数据的依赖，加速材料与药物发现。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "APO: Unsupervised Atomic Policy Optimization for 3D Structure Prediction of Atomic Systems",
+        "url": "https://arxiv.org/abs/2607.28553v1",
+        "published_at": "2026-07-30T17:21:58Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "58be633e71ea5050"
+      ],
+      "category": "research",
+      "title_zh": "新论文：VAD 用反事实归因区分多模态蒸馏中的视觉证据与语言先验",
+      "summary_zh": "多模态 on-policy distillation 中，教师对学生的下一步修正混合了视觉信号与语言先验。VAD 通过在有无相关视觉证据的两种情形下评估同一固定教师，估计修正中可由视觉证据归因的部分，并据此重建以学生为中心的训练目标。",
+      "why_it_matters_zh": "该方法直接回应了机器人/具身智能中“教师修正究竟来自看还是来自语言习惯”的问题，可能提升从仿真教师到真实学生策略的视觉知识迁移质量。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "VAD: Attributing Visual Evidence for Target Reconstruction in Multimodal On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2607.28590v1",
+        "published_at": "2026-07-30T17:43:46Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceFetchError: jiqizhixin: HTML fetch failed",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qbitai failed: SourceFetchError: qbitai: RSS fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 198,
+    "normalized": 198,
+    "filtered": 136,
+    "ai_candidates": 30,
+    "prompt_chars": 21984,
+    "estimated_input_tokens": 5496,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qbitai",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
