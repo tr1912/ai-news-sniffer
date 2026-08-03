@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T13:43:05.680822Z",
+  "run_id": "2026-08-03-016d2f65",
+  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 b10240：默认端口将变更并新增提示。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "0300132bbedf2db9"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10240：默认端口将变更并新增提示",
+      "summary_zh": "开源推理框架 llama.cpp 发布 b10240 版本。本次更新主要为 server 增加关于即将把默认端口从 8080 调整为 9931 的提示（#26508），并发布 macOS、iOS、Linux（Ubuntu x64/arm64/s390x）及 Vulkan 版等二进制；macOS arm64 的 KleidiAI 优化构建暂被禁用（#23780）。",
+      "why_it_matters_zh": "llama.cpp 是本地大模型推理最常用的开源项目之一，版本更新影响大量本地部署、Agent 工具链和推理性能调优。端口变更预告能帮助开发者提前修改服务配置，避免默认端口切换后造成服务中断或兼容性问题。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10240",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10240",
+        "published_at": "2026-08-03T11:24:29Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source arxiv-ai failed: SourceFetchError: arxiv-ai: RSS fetch failed",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 164,
+    "normalized": 164,
+    "filtered": 127,
+    "ai_candidates": 30,
+    "prompt_chars": 14139,
+    "estimated_input_tokens": 3534,
+    "failed_source_ids": [
+      "anthropic-news",
+      "arxiv-ai",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
