@@ -1,0 +1,214 @@
+{
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T13:04:51.792914Z",
+  "run_id": "2026-08-04-7163e0e5",
+  "daily_summary_zh": "今日亮点：DeepSeek-V4-Flash登顶全球大模型调用量榜首，海外平台跟进其低价策略；OpenAI下一代模型Astra的数学突破在24小时内遭人类论文反驳。学术方面，LiveMem、AURORA-LM、UEmbed等研究分别推进长程记忆、连续隐空间语言建模与统一多模态嵌入；NVIDIA发布AI原生存储基准，llama.cpp推出新版本，AI基础设施与开源工具持续迭代。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "6fd273c89b9c1f48",
+        "9c3157e0084d5941"
+      ],
+      "category": "models",
+      "title_zh": "DeepSeek-V4-Flash登顶全球调用量榜首，海外平台争相跟进",
+      "summary_zh": "36氪援引OpenRouter数据称，上周（7月27日至8月2日）全球AI大模型总调用量为56.8万亿Token，DeepSeek-V4-Flash以7.22万亿Token周调用量升至全球第一；中国大模型周调用量连续十四周超过美国，前五名均为中国大模型。量子位报道，DeepSeek-V4-Flash的低价策略打动硅谷，海外平台争相推广这一模型。",
+      "why_it_matters_zh": "DeepSeek-V4-Flash登顶与海外平台跟进，显示中国开源模型的成本优势与全球渗透力，正重塑海外大模型定价与调用格局。",
+      "importance_score": 90.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "36kr",
+        "source_name": "36Kr",
+        "title": "8点1氪丨宗馥莉同父异母兄弟出任新公司董事长；DeepSeek升至全球调用量第一；iPhone被曝最高或涨价超千元",
+        "url": "https://36kr.com/p/3924467692927369?f=rss",
+        "published_at": "2026-08-04T00:18:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "92ce80fac5f21e2a",
+        "6fd273c89b9c1f48"
+      ],
+      "category": "models",
+      "title_zh": "OpenAI下一代模型Astra“破解”数学难题，次日遭人类论文反驳",
+      "summary_zh": "36氪称，OpenAI下一代模型Astra曝光，据称以约2000美元算力成本破解十项数学难题；量子位报道，第二天即有一篇人类论文回应，指出AI提出的反例不成立，并称AI虽证对了每句话，但已与原猜想无关。",
+      "why_it_matters_zh": "该事件凸显AI在数学发现中的能力与局限：AI能生成看似严谨的论证，但人类仍需对结论进行真伪及与原问题的相关性核查。",
+      "importance_score": 82.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "title": "数学家24小时驳回OpenAI攻破的猜想！“AI证对了每句话，但已跟原猜想无关”",
+        "url": "https://www.qbitai.com/2026/08/465792.html",
+        "published_at": "2026-08-04T09:22:46Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "c926c03546c112e5"
+      ],
+      "category": "research",
+      "title_zh": "LiveMem：为长程LLM推理引入持续记忆状态",
+      "summary_zh": "arXiv论文提出LiveMem，为预训练全注意力LLM增加与活跃上下文生命周期无关的记忆状态，使固定容量KV窗口也能保留并读取长期历史信息；在LongMemEval等评测中，LiveMem在对比系统中取得领先综合表现。",
+      "why_it_matters_zh": "该工作瞄准AI助手与Agent的上下文翻页问题，为长对话和长任务中的记忆连续性与状态保持提供了新方案。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference",
+        "url": "https://arxiv.org/abs/2608.02515v1",
+        "published_at": "2026-08-03T17:12:05Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "59592e5c15332314"
+      ],
+      "category": "research",
+      "title_zh": "AURORA-LM：面向文本生成的连续隐空间扩散语言模型",
+      "summary_zh": "论文提出AURORA-LM，将可解码文本表征的构造与其分布建模解耦，用Query式编码器-解码器组织前缀对齐的隐序列，并以分块因果扩散Transformer通过流匹配学习文本分布，同时保留高保真解码能力。",
+      "why_it_matters_zh": "该研究为语言建模开辟不依赖离散token的连续隐空间路线，有望改进生成流畅度与整体建模能力。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling",
+        "url": "https://arxiv.org/abs/2608.02602v1",
+        "published_at": "2026-08-03T17:59:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "a0b51fe9b1ea80df"
+      ],
+      "category": "open-source",
+      "title_zh": "UEmbed开源统一稀疏与稠密多模态嵌入模型",
+      "summary_zh": "论文推出UEmbed，一个仅解码器的多模态嵌入模型，可在一次因果前向中同时生成稀疏词汇表示与稠密表示，并发布2B、4B、9B参数版本；UEmbed-9B在MMEB-v2上取得dense 71.8、sparse 71.0，超过仅用公开数据训练的多模态嵌入模型。",
+      "why_it_matters_zh": "统一稀疏与稠密表示可简化多模态检索与RAG的工程链路，开源权重将降低混合检索系统的落地门槛。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "UEmbed: Unified Sparse and Dense Multimodal Embeddings",
+        "url": "https://arxiv.org/abs/2608.02583v1",
+        "published_at": "2026-08-03T17:54:11Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "77497c9b3ebcf7e8"
+      ],
+      "category": "research",
+      "title_zh": "稀疏最小二乘条件数下界猜想获证，证明由Gemini智能体辅助完成",
+      "summary_zh": "arXiv论文在随机化精确体积小集扩张假设下，证明了Axiotis-Sviridenko关于稀疏凸优化中受限条件数线性依赖的猜想在最小二乘目标上成立。论文注明，该证明最初由Google内部开发的自动化Gemini智能体系统获得，作者已核实并编辑。",
+      "why_it_matters_zh": "该结果推进了稀疏优化理论，同时展示AI智能体可独立产出数学证明初稿，为AI辅助数学研究提供又一实例。",
+      "importance_score": 69.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "The Condition-Number Barrier in Sparse Least Squares",
+        "url": "https://arxiv.org/abs/2608.02588v1",
+        "published_at": "2026-08-03T17:57:01Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "28d3dc2ad7c1d973"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA发布Vera存储基准测试：AI原生存储性能再升级",
+      "summary_zh": "NVIDIA官方博客介绍Vera存储基准测试，展示AI原生存储在加密、压缩、完整性检查与恢复等环节的更快性能，覆盖Agent工作流中的知识检索、持久内存与KV Cache复用等负载。",
+      "why_it_matters_zh": "存储正成为Agent与AI工作流的关键瓶颈，官方基准为AI原生存储的选型、优化与性能对比提供了可量化依据。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA Vera Storage Benchmarks: Faster Encryption, Compression, Integrity Checking, and Recovery for AI-Native Storage",
+        "url": "https://developer.nvidia.com/blog/nvidia-vera-storage-benchmarks-faster-encryption-compression-integrity-checking-and-recovery-for-ai-native-storage/",
+        "published_at": "2026-08-03T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "677b3635bbd7da77"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp发布b10259：支持加载时张量重塑",
+      "summary_zh": "llama.cpp发布b10259版本，主要更新为允许在模型加载时对张量进行重塑（reshape），并同步提供macOS/iOS/Linux等多平台构建产物。",
+      "why_it_matters_zh": "作为最流行的本地LLM推理框架之一，该更新改善模型加载兼容性，有助于开发者在端侧与边缘环境部署各类模型。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10259",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10259",
+        "published_at": "2026-08-04T12:18:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 184,
+    "normalized": 184,
+    "filtered": 145,
+    "ai_candidates": 30,
+    "prompt_chars": 26124,
+    "estimated_input_tokens": 6531,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
