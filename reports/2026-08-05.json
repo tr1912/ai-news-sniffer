@@ -1,0 +1,152 @@
+{
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T12:56:44.074999Z",
+  "run_id": "2026-08-05-c05e3681",
+  "daily_summary_zh": "今日AI动态集中在推理时扩展、多模态视频理解、智能体自我改进与评测基准，以及端侧小模型发布。多篇研究系统梳理了测试时扩展范式、自适应采样和失败轨迹利用；多个新基准评估了LLM的社会演化预测、递归自我改进和真实赛事预测能力；Liquid AI 发布端侧智能体模型 LFM2.5-2.6B。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "d3d332a71dbd17f5"
+      ],
+      "category": "research",
+      "title_zh": "推理LLM的测试时扩展：推理机制、评测与可复现性",
+      "summary_zh": "论文系统梳理了测试时扩展的三种结构范式：单轨迹顺序扩展、叶级扩展（采样+投票/验证）和前缀级扩展（搜索），指出不同算法在统计结构、算力统计和失败模式上存在本质差异，不能混为单一标量预算。研究将评测对象视为整个推理系统，提出分离端到端系统性能与候选库诊断的评测原则。",
+      "why_it_matters_zh": "为测试时扩展研究提供了统一的分析框架，解决当前研究因推理协议不透明而难以对比和复现的问题，对推理时计算策略的标准化评测具有重要指导意义。",
+      "importance_score": 92.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
+        "url": "https://arxiv.org/abs/2608.04001v1",
+        "published_at": "2026-08-04T17:57:20Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "80b963b4d4ce6aa2"
+      ],
+      "category": "models",
+      "title_zh": "Liquid AI 发布 LFM2.5-2.6B 端侧智能体模型",
+      "summary_zh": "Liquid AI 在 Hugging Face 官方博客发布 LFM2.5-2.6B 模型，主打端侧本地化部署，目标是在本地设备上运行智能体应用。",
+      "why_it_matters_zh": "该模型为开发者提供低延迟、保护隐私的端侧本地智能体部署方案，是高效小模型生态和边缘AI应用的重要补充。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Deploy local agents everywhere with LFM2.5-2.6B",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-2-6b",
+        "published_at": "2026-08-04T13:58:29Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "38047e11a4ad3a0f"
+      ],
+      "category": "research",
+      "title_zh": "ReflectRL：从黄金负轨迹中学习反思到直接推理",
+      "summary_zh": "提出 ReflectRL 框架，在 on-policy 训练中利用专家模型失败轨迹（Golden Negative Trajectories），将其作为反思对象而非示范，先引出反思推理，再通过 Reflective-to-Direct Policy Transition 迁移回直接推理。在9个基准、4个LLM骨干和4种on-policy训练方法上验证了有效性。",
+      "why_it_matters_zh": "将以往被丢弃的失败轨迹转化为有效训练信号，为高难度问题的强化学习提供了新的监督来源，有助于提升模型推理能力。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning",
+        "url": "https://arxiv.org/abs/2608.03972v1",
+        "published_at": "2026-08-04T17:40:08Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "85cc2b247cd0dd26"
+      ],
+      "category": "research",
+      "title_zh": "WorldCup Arena：现场赛事上的无泄漏前沿大模型评测",
+      "summary_zh": "在2026世界杯39天比赛中，对6个具有扩展思维和原生联网搜索的前沿LLM进行每场比赛前的七市场预测，共覆盖104场比赛、12个小组头名和赛前冠军池，冻结档案含4494个计分预测。结果显示平均准确率63.9%，与押注博彩热门相当；模型间互相认同远多于正确，多数投票无增益，且对平局和进球数预测不足。",
+      "why_it_matters_zh": "通过事件发生前提问实现天然无泄漏的前瞻性评测，展示了前沿模型在真实动态预测任务上的集体行为与局限，对模型评测和预测能力研究有重要价值。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "WorldCup Arena: Prospective, Leakage-Free Evaluation of Frontier LLMs on a Live Tournament",
+        "url": "https://arxiv.org/abs/2608.04008v1",
+        "published_at": "2026-08-04T17:59:55Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "d5d6963bbcba245e"
+      ],
+      "category": "research",
+      "title_zh": "Video-DeepResearch：面向连续视频流的下一代多模态深度研究智能体",
+      "summary_zh": "提出将多模态智能体从静态图像扩展到连续视频流的 Video-DeepResearch，发现现有模型存在模态偏差（绕过视觉工具改用文本搜索）和参数知识泄漏问题。采用解耦感知-探索流水线与分阶段工具解锁，经过SFT和GRPO训练，Video-DeepResearch-35B-A3B平均准确率64.0%，超过Claude-4.5-Sonnet的59.0%，并发布了200个复杂多跳VQA实例的Video-DR-Bench基准。",
+      "why_it_matters_zh": "首次系统化地将深度研究智能体扩展到视频流，揭示并缓解了多模态智能体偷懒使用文本检索和依赖内部记忆的问题，推动多模态智能体在真实视频场景中落地。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent",
+        "url": "https://arxiv.org/abs/2608.03979v1",
+        "published_at": "2026-08-04T17:45:16Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 169,
+    "normalized": 169,
+    "filtered": 132,
+    "ai_candidates": 30,
+    "prompt_chars": 29556,
+    "estimated_input_tokens": 7389,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
