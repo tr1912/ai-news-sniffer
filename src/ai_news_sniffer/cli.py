@@ -184,9 +184,7 @@ def verify_report_url(
                 return
             if _is_transient_status(status_code) or 200 <= status_code <= 299:
                 transient_error = (
-                    "missing-marker"
-                    if 200 <= status_code <= 299
-                    else f"http-{status_code}"
+                    "missing-marker" if 200 <= status_code <= 299 else f"http-{status_code}"
                 )
                 last_detail = f"status={status_code} final_url={final_url}"
             else:
@@ -227,8 +225,7 @@ def verify_report_url(
         previous_delay, next_delay = next_delay, previous_delay + next_delay
 
     raise RuntimeError(
-        f"published report was not reachable within {max_wait_seconds:g}s: "
-        f"{last_detail}"
+        f"published report was not reachable within {max_wait_seconds:g}s: {last_detail}"
     )
 
 

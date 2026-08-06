@@ -45,9 +45,7 @@ def test_verify_report_url_logs_status_and_final_url(
         respx.get(request_url).mock(
             return_value=httpx.Response(302, headers={"Location": final_url})
         )
-        respx.get(final_url).mock(
-            return_value=httpx.Response(200, text="<h1>AI 每日情报</h1>")
-        )
+        respx.get(final_url).mock(return_value=httpx.Response(200, text="<h1>AI 每日情报</h1>"))
         with httpx.Client() as client:
             verify_report_url(request_url, client)
 
@@ -64,9 +62,11 @@ def test_verify_report_url_rejects_invalid_configuration(
     url: str,
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    with httpx.Client() as client:
-        with pytest.raises(RuntimeError, match="invalid published report URL"):
-            verify_report_url(url, client)
+    with (
+        httpx.Client() as client,
+        pytest.raises(RuntimeError, match="invalid published report URL"),
+    ):
+        verify_report_url(url, client)
 
     log = capsys.readouterr().err
     assert "attempt=0" in log
@@ -82,14 +82,16 @@ def test_verify_report_url_fails_fast_for_permanent_http_status(
     clock = FakeClock()
     with respx.mock:
         route = respx.get(request_url).mock(return_value=httpx.Response(403))
-        with httpx.Client() as client:
-            with pytest.raises(RuntimeError, match="permanent configuration error"):
-                verify_report_url(
-                    request_url,
-                    client,
-                    monotonic=clock.monotonic,
-                    sleep=clock.sleep,
-                )
+        with (
+            httpx.Client() as client,
+            pytest.raises(RuntimeError, match="permanent configuration error"),
+        ):
+            verify_report_url(
+                request_url,
+                client,
+                monotonic=clock.monotonic,
+                sleep=clock.sleep,
+            )
 
     assert route.call_count == 1
     assert clock.sleeps == []
@@ -155,17 +157,19 @@ def test_verify_report_url_caps_retries_at_eight_minute_budget(
     clock = FakeClock()
     with respx.mock:
         route = respx.get(request_url).mock(return_value=httpx.Response(503))
-        with httpx.Client() as client:
-            with pytest.raises(
+        with (
+            httpx.Client() as client,
+            pytest.raises(
                 RuntimeError,
                 match=r"within 480s: status=503 .*final_url=https://example.com/report/",
-            ):
-                verify_report_url(
-                    request_url,
-                    client,
-                    monotonic=clock.monotonic,
-                    sleep=clock.sleep,
-                )
+            ),
+        ):
+            verify_report_url(
+                request_url,
+                client,
+                monotonic=clock.monotonic,
+                sleep=clock.sleep,
+            )
 
     assert clock.sleeps == [
         1.0,

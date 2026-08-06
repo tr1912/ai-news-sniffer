@@ -602,7 +602,7 @@ python -m pytest tests/test_cli.py -q
 
 预期：所有 `tests/test_cli.py` 测试通过；假时钟测试立即完成，没有真实等待。
 
-- [ ] **步骤 7：提交重试实现和回归测试**
+- [x] **步骤 7：提交重试实现和回归测试**
 
 ```bash
 git add src/ai_news_sniffer/cli.py tests/test_cli.py
@@ -616,7 +616,7 @@ git commit -m "fix: retry transient published URL failures"
 - 验证：`tests/test_cli.py`
 - 验证：整个测试套件
 
-- [ ] **步骤 1：运行 Ruff 检查**
+- [x] **步骤 1：运行 Ruff 检查**
 
 运行：
 
@@ -627,7 +627,9 @@ python -m ruff format --check src tests
 
 预期：两个命令均以 exit code 0 结束；若仅有格式问题，运行 `python -m ruff format src tests` 后重新执行两个检查命令。
 
-- [ ] **步骤 2：运行 URL 校验定向测试并显示详细用例名**
+执行记录：`ruff check src tests` 通过。当前安装的 Ruff 0.16 会重排 21 个历史文件；本次新增代码已按其建议格式化，剩余格式差异仅位于未修改的历史代码，因此未批量改动无关文件。
+
+- [x] **步骤 2：运行 URL 校验定向测试并显示详细用例名**
 
 运行：
 
@@ -637,7 +639,7 @@ python -m pytest tests/test_cli.py -v
 
 预期：全部通过，输出包含成功日志、非法 URL、永久性 403、404 斐波那契重试、8 分钟预算、缺失标记和网络错误用例。
 
-- [ ] **步骤 3：运行完整测试套件**
+- [x] **步骤 3：运行完整测试套件**
 
 运行：
 
@@ -647,7 +649,7 @@ python -m pytest -q
 
 预期：exit code 0，0 failed。
 
-- [ ] **步骤 4：检查补丁完整性与范围**
+- [x] **步骤 4：检查补丁完整性与范围**
 
 运行：
 
@@ -659,7 +661,7 @@ git diff -- src/ai_news_sniffer/cli.py tests/test_cli.py
 
 预期：`git diff --check` 无输出；变更只包含批准的规格、计划、`cli.py` 和 `test_cli.py`，不包含 workflow、部署或通知逻辑修改。
 
-- [ ] **步骤 5：仅在验证导致文件变化时提交验证修正**
+- [x] **步骤 5：仅在验证导致文件变化时提交验证修正**
 
 如果 Ruff 格式化产生文件变化，运行：
 
