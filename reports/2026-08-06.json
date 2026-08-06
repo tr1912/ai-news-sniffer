@@ -1,0 +1,134 @@
+{
+  "date": "2026-08-06",
+  "generated_at": "2026-08-06T12:58:42.179253Z",
+  "run_id": "2026-08-06-f8f66a09",
+  "daily_summary_zh": "今日AI研究聚焦于长程推理、智能体系统、安全评估与科学发现。Argus 智能体运行时在 SWE-Bench Pro 上显著超越基线；Skill Entropy 基准与训练框架揭示技能切换鸿沟；OctoLong 用跨仓库代码上下文提升长上下文建模；IRT for AI Safety 可将安全评估成本降低 97-99%。此外有多模态蒸馏、推理架构、语音理解、科学发现等多项技术进展。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "bbf879017277db75"
+      ],
+      "category": "agents",
+      "title_zh": "Argus：面向长程推理的通用智能体运行时",
+      "summary_zh": "Argus 是一个持久化、自进化的智能体运行时，由 Manager、Planner、Engineer、Reviewer 等角色在持久化项目状态上执行有界任务。在七个 GPT-5.5 基准竞技场上，Argus 在 SWE-Bench Pro 上达到约 78%，而 Direct Copilot 为 59%，token 消耗为后者的 1.41 倍。验证门控自进化后，成熟 SWE-Bench 波次比启动波次少用 21% 的 solve-input tokens 和 15% 的活动工作流时间，并记录到 34 次验证器恢复与 22 次严格审查循环救援。",
+      "why_it_matters_zh": "Argus 展示了在不改变模型权重的情况下，通过持久化运行时状态和控制策略实现自我进化，显著提升智能体在长周期软件工程任务中的表现，为构建可靠的长程智能体系统提供了新范式。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
+        "url": "https://arxiv.org/abs/2608.05144v1",
+        "published_at": "2026-08-05T17:58:58Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "56f16f81549a0dbf"
+      ],
+      "category": "benchmark",
+      "title_zh": "Skill Entropy：面向长程推理的技能切换评估与训练框架",
+      "summary_zh": "该工作提出 Skill Entropy 来衡量不同推理技能间切换的难度，并基于 558 个技能、9 个可验证和开放式领域构建 Skill^2-Bench 基准。对 8 个前沿模型和 4 个开源模型的评估显示，任务熵越高，模型准确率越低，存在“技能切换鸿沟”。进一步提出 Skill-Entropy RL，将技能熵作为训练信号，使模型在每一步不仅预测答案，还感知技能切换成本。",
+      "why_it_matters_zh": "这是首个系统度量技能切换难度并将其用于训练的基准和框架，揭示了现有模型在长程推理中的关键短板，并为提升模型多技能协同推理能力提供了新方向。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning",
+        "url": "https://arxiv.org/abs/2608.05139v1",
+        "published_at": "2026-08-05T17:57:16Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "0bd359cbf510871b"
+      ],
+      "category": "safety",
+      "title_zh": "将项目反应理论应用于 AI 安全评估",
+      "summary_zh": "该研究对 8 个安全基准、192 个语言模型进行项目反应理论（IRT）分析，发现拒绝严格性、真实性和情境危害三个可解释因子解释了模型间的大部分差异。心理测量学选择的题目能以更低误差恢复完整基准分数，约 10 个自适应题目即可覆盖单个基准，评估成本降低 97-99%。该方法还能用于检测朴素 sandbagging 以及模型 API 背后被替换的情况。",
+      "why_it_matters_zh": "为 AI 安全评估提供了基于心理测量学的统计框架，大幅降低评估成本并提高基准透明度和抗作弊能力，对安全评测实践有重要指导意义。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Item Response Theory for AI Safety",
+        "url": "https://arxiv.org/abs/2608.05086v1",
+        "published_at": "2026-08-05T17:25:27Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "fd470c6b73cbbd7c"
+      ],
+      "category": "long-context",
+      "title_zh": "OctoLong：跨仓库代码上下文增强长上下文建模",
+      "summary_zh": "OctoLong 是一种上下文工程流水线，利用 AST 解析器、语言服务器后端和包管理器递归检索代码引用，构建依赖丰富的百万 token 级代码上下文。研究者训练了 OctoLong-Instruct 系列模型（600M 到 14B 参数），在约 50B token 的上下文扩展混合数据中加入约 6.2B token 的 OctoLong 代码上下文，并声称仅用 12% 的 OctoLong 数据替代传统语料就能在长程检索和长上下文任务上取得显著提升。",
+      "why_it_matters_zh": "为解决长上下文语料稀缺问题提供了新的代码数据来源，并开源多尺寸模型，有助于提升代码理解、智能体工作流和长程依赖建模能力。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
+        "url": "https://arxiv.org/abs/2608.05141v1",
+        "published_at": "2026-08-05T17:58:15Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qbitai failed: SourceFetchError: qbitai: RSS fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 160,
+    "normalized": 160,
+    "filtered": 127,
+    "ai_candidates": 30,
+    "prompt_chars": 29998,
+    "estimated_input_tokens": 7499,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qbitai",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
