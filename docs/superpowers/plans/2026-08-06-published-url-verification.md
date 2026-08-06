@@ -244,7 +244,7 @@ python -m pytest \
 
 预期：4 passed（参数化非法 URL 产生两个测试用例），无真实 sleep。
 
-- [ ] **步骤 5：提交成功路径和永久错误分类**
+- [x] **步骤 5：提交成功路径和永久错误分类**
 
 ```bash
 git add \
@@ -261,7 +261,7 @@ git commit -m "feat: classify published URL verification errors"
 - 修改：`tests/test_cli.py:1-110`
 - 修改：`src/ai_news_sniffer/cli.py:1-150`
 
-- [ ] **步骤 1：增加假时钟测试工具**
+- [x] **步骤 1：增加假时钟测试工具**
 
 在 `tests/test_cli.py` 顶部增加以下导入：
 
@@ -285,7 +285,7 @@ class FakeClock:
         self.now += seconds
 ```
 
-- [ ] **步骤 2：先为 404、持续 5xx、旧页面和网络错误编写失败测试**
+- [x] **步骤 2：先为 404、持续 5xx、旧页面和网络错误编写失败测试**
 
 在 `tests/test_cli.py` 中增加：
 
@@ -436,7 +436,7 @@ def test_verify_report_url_retries_transport_error(
 assert clock.sleeps == []
 ```
 
-- [ ] **步骤 3：运行新增测试并确认红灯原因正确**
+- [x] **步骤 3：运行新增测试并确认红灯原因正确**
 
 运行：
 
@@ -453,7 +453,7 @@ python -m pytest \
 
 预期：FAIL，`verify_report_url()` 尚不接受时钟/sleep 注入，也没有重试循环。
 
-- [ ] **步骤 4：为生产代码增加 Callable 类型**
+- [x] **步骤 4：为生产代码增加 Callable 类型**
 
 在 `src/ai_news_sniffer/cli.py` 的导入区增加：
 
@@ -461,7 +461,7 @@ python -m pytest \
 from collections.abc import Callable
 ```
 
-- [ ] **步骤 5：用预算受控的重试循环替换单次请求实现**
+- [x] **步骤 5：用预算受控的重试循环替换单次请求实现**
 
 保留任务 1 新增的常量与辅助函数，将 `verify_report_url()` 完整替换为：
 
@@ -592,7 +592,7 @@ def verify_report_url(
 
 实现注意：`retry_wait_budget` 始终为下一次请求保留最多 30 秒；默认假时钟下的最后一次等待因此从 233 秒截断为 74 秒，累计 sleep 450 秒，最后一次请求最多使用剩余 30 秒。
 
-- [ ] **步骤 6：运行 URL 校验测试并确认变绿**
+- [x] **步骤 6：运行 URL 校验测试并确认变绿**
 
 运行：
 

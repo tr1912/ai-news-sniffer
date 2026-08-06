@@ -1,6 +1,7 @@
 import argparse
 import sys
 import time
+from collections.abc import Callable
 from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlparse
@@ -103,7 +104,16 @@ def _log_url_verification(
     print(" ".join(fields), file=sys.stderr)
 
 
-def verify_report_url(url: str, client: httpx.Client) -> None:
+def verify_report_url(
+    url: str,
+    client: httpx.Client,
+    *,
+    max_wait_seconds: float = _VERIFY_BUDGET_SECONDS,
+    monotonic: Callable[[], float] = time.monotonic,
+    sleep: Callable[[float], None] = time.sleep,
+) -> None:
+    if max_wait_seconds <= 0:
+        raise ValueError("max_wait_seconds must be positive")
     try:
         request_url = str(_validated_report_url(url))
     except ValueError as error:
@@ -117,48 +127,108 @@ def verify_report_url(url: str, client: httpx.Client) -> None:
         )
         raise RuntimeError(f"invalid published report URL: {error}") from error
 
-    response = client.get(
-        request_url,
-        follow_redirects=True,
-        timeout=_REQUEST_TIMEOUT_SECONDS,
-    )
-    status_code = response.status_code
-    final_url = str(response.url)
-    if 200 <= status_code <= 299 and _REPORT_MARKER in response.text:
-        _log_url_verification(
-            attempt=1,
-            classification="success",
-            request_url=request_url,
-            final_url=final_url,
-            status_code=status_code,
-        )
-        return
+    deadline = monotonic() + max_wait_seconds
+    previous_delay = 0.0
+    next_delay = 1.0
+    attempt = 0
+    last_detail = "no response"
 
-    if _is_transient_status(status_code) or 200 <= status_code <= 299:
+    while True:
+        attempt += 1
+        remaining_before_request = max(0.0, deadline - monotonic())
+        request_timeout = min(
+            _REQUEST_TIMEOUT_SECONDS,
+            max(0.001, remaining_before_request),
+        )
+        try:
+            response = client.get(
+                request_url,
+                follow_redirects=True,
+                timeout=request_timeout,
+            )
+        except (
+            httpx.InvalidURL,
+            httpx.UnsupportedProtocol,
+            httpx.TooManyRedirects,
+        ) as error:
+            error_name = type(error).__name__
+            _log_url_verification(
+                attempt=attempt,
+                classification="permanent",
+                request_url=request_url,
+                final_url=None,
+                status_code=None,
+                error=error_name,
+            )
+            raise RuntimeError(
+                "published report URL has a permanent configuration error: "
+                f"error={error_name} request_url={request_url}"
+            ) from error
+        except httpx.TransportError as error:
+            error_name = type(error).__name__
+            final_url = None
+            status_code = None
+            transient_error = error_name
+            last_detail = f"error={error_name} request_url={request_url}"
+        else:
+            final_url = str(response.url)
+            status_code = response.status_code
+            if 200 <= status_code <= 299 and _REPORT_MARKER in response.text:
+                _log_url_verification(
+                    attempt=attempt,
+                    classification="success",
+                    request_url=request_url,
+                    final_url=final_url,
+                    status_code=status_code,
+                )
+                return
+            if _is_transient_status(status_code) or 200 <= status_code <= 299:
+                transient_error = (
+                    "missing-marker"
+                    if 200 <= status_code <= 299
+                    else f"http-{status_code}"
+                )
+                last_detail = f"status={status_code} final_url={final_url}"
+            else:
+                _log_url_verification(
+                    attempt=attempt,
+                    classification="permanent",
+                    request_url=request_url,
+                    final_url=final_url,
+                    status_code=status_code,
+                    error=f"http-{status_code}",
+                )
+                raise RuntimeError(
+                    "published report URL has a permanent configuration error: "
+                    f"status={status_code} request_url={request_url} "
+                    f"final_url={final_url}"
+                )
+
+        remaining_seconds = max(0.0, deadline - monotonic())
+        retry_wait_budget = max(
+            0.0,
+            remaining_seconds - min(_REQUEST_TIMEOUT_SECONDS, remaining_seconds),
+        )
+        delay_seconds = min(next_delay, retry_wait_budget)
         _log_url_verification(
-            attempt=1,
+            attempt=attempt,
             classification="transient",
             request_url=request_url,
             final_url=final_url,
             status_code=status_code,
-            error="missing-marker" if 200 <= status_code <= 299 else f"http-{status_code}",
+            error=transient_error,
+            next_delay_seconds=delay_seconds,
+            remaining_seconds=remaining_seconds,
         )
-        raise RuntimeError(
-            "published report was not reachable: "
-            f"status={status_code} final_url={final_url}"
-        )
+        if delay_seconds <= 0:
+            break
 
-    _log_url_verification(
-        attempt=1,
-        classification="permanent",
-        request_url=request_url,
-        final_url=final_url,
-        status_code=status_code,
-        error=f"http-{status_code}",
-    )
+        sleep(delay_seconds)
+        previous_delay, next_delay = next_delay, previous_delay + next_delay
+
     raise RuntimeError(
-        "published report URL has a permanent configuration error: "
-        f"status={status_code} request_url={request_url} final_url={final_url}"
+        f"published report was not reachable within {max_wait_seconds:g}s: "
+        f"{last_detail}"
     )
 
 
