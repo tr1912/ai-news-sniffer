@@ -55,23 +55,110 @@ def _extract_path(public_base_url: str) -> str:
     return url_path if url_path else "/"
 
 
+_REPORT_MARKER = "AI 每日情报"
+_VERIFY_BUDGET_SECONDS = 480.0
+_REQUEST_TIMEOUT_SECONDS = 30.0
+_TRANSIENT_STATUS_CODES = {404, 408, 425, 429}
+
+
+def _validated_report_url(url: str) -> httpx.URL:
+    try:
+        parsed = httpx.URL(url)
+    except (httpx.InvalidURL, ValueError) as error:
+        raise ValueError(str(error)) from error
+    if parsed.scheme not in {"http", "https"} or not parsed.host:
+        raise ValueError("URL must use http or https and include a host")
+    return parsed
+
+
+def _is_transient_status(status_code: int) -> bool:
+    return status_code in _TRANSIENT_STATUS_CODES or 500 <= status_code <= 599
+
+
+def _log_url_verification(
+    *,
+    attempt: int,
+    classification: str,
+    request_url: str,
+    final_url: str | None,
+    status_code: int | None,
+    error: str | None = None,
+    next_delay_seconds: float | None = None,
+    remaining_seconds: float | None = None,
+) -> None:
+    fields = [
+        "[verify-url]",
+        f"attempt={attempt}",
+        f"classification={classification}",
+        f"status={status_code if status_code is not None else 'unavailable'}",
+        f"request_url={request_url}",
+        f"final_url={final_url or 'unavailable'}",
+    ]
+    if error is not None:
+        fields.append(f"error={error}")
+    if next_delay_seconds is not None:
+        fields.append(f"next_delay_seconds={next_delay_seconds:.1f}")
+    if remaining_seconds is not None:
+        fields.append(f"remaining_seconds={remaining_seconds:.1f}")
+    print(" ".join(fields), file=sys.stderr)
+
+
 def verify_report_url(url: str, client: httpx.Client) -> None:
-    last_error: Exception | None = None
-    for attempt in range(1, 7):
-        try:
-            response = client.get(url, follow_redirects=True, timeout=30)
-            response.raise_for_status()
-            if "AI 每日情报" not in response.text:
-                raise RuntimeError(
-                    "published page does not contain the expected marker"
-                )
-            return
-        except (httpx.HTTPError, RuntimeError) as error:
-            last_error = error
-            if attempt < 6:
-                time.sleep(10)
+    try:
+        request_url = str(_validated_report_url(url))
+    except ValueError as error:
+        _log_url_verification(
+            attempt=0,
+            classification="permanent",
+            request_url=url,
+            final_url=None,
+            status_code=None,
+            error="invalid-url",
+        )
+        raise RuntimeError(f"invalid published report URL: {error}") from error
+
+    response = client.get(
+        request_url,
+        follow_redirects=True,
+        timeout=_REQUEST_TIMEOUT_SECONDS,
+    )
+    status_code = response.status_code
+    final_url = str(response.url)
+    if 200 <= status_code <= 299 and _REPORT_MARKER in response.text:
+        _log_url_verification(
+            attempt=1,
+            classification="success",
+            request_url=request_url,
+            final_url=final_url,
+            status_code=status_code,
+        )
+        return
+
+    if _is_transient_status(status_code) or 200 <= status_code <= 299:
+        _log_url_verification(
+            attempt=1,
+            classification="transient",
+            request_url=request_url,
+            final_url=final_url,
+            status_code=status_code,
+            error="missing-marker" if 200 <= status_code <= 299 else f"http-{status_code}",
+        )
+        raise RuntimeError(
+            "published report was not reachable: "
+            f"status={status_code} final_url={final_url}"
+        )
+
+    _log_url_verification(
+        attempt=1,
+        classification="permanent",
+        request_url=request_url,
+        final_url=final_url,
+        status_code=status_code,
+        error=f"http-{status_code}",
+    )
     raise RuntimeError(
-        f"published report was not reachable: {type(last_error).__name__}"
+        "published report URL has a permanent configuration error: "
+        f"status={status_code} request_url={request_url} final_url={final_url}"
     )
 
 
