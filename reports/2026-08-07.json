@@ -1,19 +1,19 @@
 {
   "date": "2026-08-07",
-  "generated_at": "2026-08-07T04:47:03.114896Z",
-  "run_id": "2026-08-07-112702bd",
-  "daily_summary_zh": "今日AI领域以研究进展为主：多篇论文聚焦工具调用范式、视觉工具使用审计、生成式奖励模型与AI治理机制；Baseten接入Hugging Face推理服务商，llama.cpp发布新版本。Agent调试、多语言推理、终端任务合成亦有重要突破。",
+  "generated_at": "2026-08-07T11:49:20.014751Z",
+  "run_id": "2026-08-07-74077021",
+  "daily_summary_zh": "今日 AI 领域的重要进展集中在开源推理生态和智能体研究。llama.cpp 发布两个修复版本；Hugging Face 新增 Baseten 推理提供商。多篇论文关注工具调用、视觉工具使用、奖励模型、自蒸馏与智能体调试，并对大模型在事件计数、标准文档审查等任务上的能力提出了新的评测基准和提升方法。",
   "events": [
     {
-      "id": "event-1",
+      "id": "event-3",
       "candidate_ids": [
         "dfd9762a6debce7b"
       ],
       "category": "research",
-      "title_zh": "工具调用中的苦涩教训：程序化工具调用显著优于JSON调用",
-      "summary_zh": "论文在BFCL v4基准上系统比较了程序化工具调用（PTC）与原生JSON工具调用，覆盖14个语言模型。结果显示，PTC在11/14个模型上达到或超过JSON调用，GPT-5.6系列提升10.6%；在并行fan-out场景中13/14占优，且在上下文受损（context rot）条件下比基线更稳定。",
-      "why_it_matters_zh": "该研究证明以代码形式调用工具比传统JSON调用更高效、更稳健，可能推动智能体工具调用范式从结构化JSON转向程序化脚本，提升复杂任务执行能力。",
-      "importance_score": 90.0,
+      "title_zh": "新研究对比程序化工具调用与 JSON 工具调用",
+      "summary_zh": "该研究在 BFCL v4 基准上对 14 个语言模型进行了系统评估，发现程序化工具调用（PTC）在 11/14 模型上匹配或超过原生 JSON 工具调用，其中 GPT-5.6 系列相比 JSON 基线提升 10.6%；在并行扇出场景下，13/14 模型匹配或超过基线，且在上下文干扰条件下表现更稳定。",
+      "why_it_matters_zh": "工具调用是 LLM 智能体的核心能力。该研究提供了大规模实证证据，表明将工具暴露为代码而非 JSON 可能是一种更稳健、更高效的范式，可能影响未来智能体框架和模型训练的设计选择。",
+      "importance_score": 80.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -25,55 +25,15 @@
       "related_sources": []
     },
     {
-      "id": "event-2",
-      "candidate_ids": [
-        "54b479364c304866"
-      ],
-      "category": "research",
-      "title_zh": "选择性上下文偏好优化：让模型学会何时信任上下文",
-      "summary_zh": "论文提出MIST基准，将每个推理问题置于干净、误导、正确上下文、无关上下文四种条件下，并设计SC2W配对指标。研究发现误导性信号普遍会使模型从正确转为错误。提出的SCOPE方法通过DPO目标在四类匹配偏好对间平衡优化，显著降低SC2W，同时保持模型在干净、正确、无关上下文下的准确率。",
-      "why_it_matters_zh": "这项工作揭示了“忽略一切上下文”式假鲁棒的陷阱，为构建真正能够辨别信息可信度、选择性信任外部信号的语言模型提供了训练与评估框架。",
-      "importance_score": 88.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "arxiv-ai",
-        "source_name": "arXiv AI",
-        "title": "Learning When to Trust via Selective Context Preference Optimization",
-        "url": "https://arxiv.org/abs/2608.06377v1",
-        "published_at": "2026-08-06T17:59:58Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-3",
-      "candidate_ids": [
-        "e736fe5daa8c0f9a"
-      ],
-      "category": "research",
-      "title_zh": "视觉工具使用的幻觉：对“看图思考”的因果审计",
-      "summary_zh": "论文将多模态模型的视觉工具使用（如裁剪缩放）建模为因果图，并从策略、轨迹、步骤三个层面进行干预审计。在6个代表性模型和5个细粒度感知基准上，发现两种失败模式：'Calling Without Looking'（返回的观察对答案无因果影响）和'Looking Without Planning'（观察无法有效用于推理），并提出Visual Evidence Gain来量化每次观察的真实贡献。",
-      "why_it_matters_zh": "该研究警示'主动视觉查看'可能只是形式主义，模型并未真正利用视觉证据，为评估和改进多模态工具调用提供了严格的因果审计方法，有助于避免无效的高额token开销。",
-      "importance_score": 86.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "arxiv-ai",
-        "source_name": "arXiv AI",
-        "title": "The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images",
-        "url": "https://arxiv.org/abs/2608.06270v1",
-        "published_at": "2026-08-06T17:01:08Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-4",
+      "id": "event-5",
       "candidate_ids": [
         "17c6b8338565040c"
       ],
       "category": "research",
-      "title_zh": "基于排序的奖励构建：释放生成式奖励模型在RL中的潜力",
-      "summary_zh": "论文分析了生成式奖励模型在强化学习（RL)中表现不佳的原因——其比较式本质与现有RL算法要求的标量打分不匹配。提出的RRC方法从相对偏好排序中构建奖励，包括自竞争排序和锚定引导排序两种策略，在开放对话和推理基准上显著提升RL训练效果。",
-      "why_it_matters_zh": "该研究为生成式奖励模型顺利接入强化学习提供了可行桥梁，可能推动RLHF从传统标量奖励迈向更灵活、更强大的生成式奖励信号。",
-      "importance_score": 85.0,
+      "title_zh": "RRC：通过基于排序的奖励构建解锁生成式奖励模型在 RL 中的潜力",
+      "summary_zh": "论文指出生成式奖励模型在排序上能力强，但与现有 RL 算法的标量评分范式不匹配。作者提出 Ranking-based Reward Construction (RRC)，包含自竞争排序和锚定引导排序两种策略，在开放对话和推理基准上显著提升 RL 训练效果。",
+      "why_it_matters_zh": "生成式奖励模型是超越判别式 RM 的重要方向，而该研究提供了一种将相对偏好排序转化为有效 RL 信号的方法，有望改进 RLHF/RLVR 等对齐流程。",
+      "importance_score": 75.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -87,13 +47,33 @@
     {
       "id": "event-6",
       "candidate_ids": [
+        "d03fc1294876d163"
+      ],
+      "category": "research",
+      "title_zh": "无需任何监督的 On-Policy 自蒸馏 (U-OPSD)",
+      "summary_zh": "U-OPSD 仅利用模型自身生成和多数投票构造伪标签，在最长错误补全上执行蒸馏，使模型在自信但错误的位置自我纠正。在 AIME24、AIME25、HMMT25、MATH500 和 AMC23 上，Qwen3 非思考模型平均提升 8.5% 和 10.7%，达到或超过使用真实标签的监督方法（如 OPSD 和 GRPO）。",
+      "why_it_matters_zh": "该工作实现了“真正”的自蒸馏，无需外部监督信号即可进行有效的后训练，可能大幅降低 LLM 对齐和增强对人工标注或强模型的依赖。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "On-Policy Self-Distillation without Any Supervision",
+        "url": "https://arxiv.org/abs/2608.06296v1",
+        "published_at": "2026-08-06T17:18:23Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
         "b17b28166416a090"
       ],
       "category": "products",
-      "title_zh": "Baseten接入Hugging Face Inference Providers",
-      "summary_zh": "Baseten宣布正式加入Hugging Face Inference Providers平台，开发者可以通过Hugging Face的统一接口调用Baseten的低延迟推理服务。",
-      "why_it_matters_zh": "此举扩充了Hugging Face推理生态的供应商选项，降低了开发者使用高性能开源模型推理的门槛，有助于推动开源模型部署服务的标准化与普及。",
-      "importance_score": 83.0,
+      "title_zh": "Baseten 上线 Hugging Face Inference Providers",
+      "summary_zh": "Hugging Face 官方博客宣布 Baseten 成为其 Inference Providers 之一，开发者可以在 Hugging Face 平台上直接使用 Baseten 提供的推理服务。",
+      "why_it_matters_zh": "这标志着 Hugging Face 推理生态进一步扩展，为开发者提供更多模型部署选择，同时也反映了推理服务市场的整合趋势。",
+      "importance_score": 70.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "huggingface-blog",
@@ -105,68 +85,67 @@
       "related_sources": []
     },
     {
-      "id": "event-15",
+      "id": "event-4",
       "candidate_ids": [
-        "bd8929ec16c75cef"
+        "e736fe5daa8c0f9a"
+      ],
+      "category": "research",
+      "title_zh": "视觉工具使用的幻觉：对“带着图像思考”的因果审计",
+      "summary_zh": "该研究将多模态 LLM 的视觉工具使用（如裁剪缩放）建模为因果图，提出 Visual Evidence Gain 指标，并通过三层干预进行审计。在 6 个模型和 5 个细粒度感知基准上发现两种失败模式：返回的观测对答案无因果影响（Calling Without Looking），以及观测结果缺乏规划（Looking Without Planning），导致工具使用收益甚微甚至为负。",
+      "why_it_matters_zh": "许多多模态模型被赋予视觉操作工具以提升推理能力，但该研究表明这些工具的实际因果贡献可能被高估。这让开发者重新审视工具使用的评估方式，避免仅凭最终答案掩盖无效的工具调用。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images",
+        "url": "https://arxiv.org/abs/2608.06270v1",
+        "published_at": "2026-08-06T17:01:08Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "75c2959efd7ebb42",
+        "8be33506b834a8be"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp发布b10298版本",
-      "summary_zh": "llama.cpp发布b10298版本，主要更新包括为mtmd多模态模型新增分块保存/加载功能，并同步提供macOS、iOS、Linux（含Vulkan）等多平台预编译二进制。",
-      "why_it_matters_zh": "llama.cpp是本地LLM推理的核心开源项目，持续迭代使开源模型在边缘设备和消费级硬件上更易用，此次更新提升了多模态模型的可用性。",
-      "importance_score": 70.0,
+      "title_zh": "llama.cpp 发布 b10299 与 b10303 版本",
+      "summary_zh": "llama.cpp 连续发布 b10299 和 b10303 两个版本：b10299 修复了 Metal 后端的 threadgroup 矩阵数组编译错误，b10303 修复了 SYCL 后端在 ARC GPU 上的 FLASH_ATTN_EXT 错误。",
+      "why_it_matters_zh": "llama.cpp 是本地运行大模型最重要的开源推理引擎之一，这些修复提升了其在 Apple 和 Intel/ARC 硬件上的稳定性和兼容性，惠及大量本地部署用户。",
+      "importance_score": 65.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
         "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b10298",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10298",
-        "published_at": "2026-08-06T22:10:39Z"
+        "title": "llama.cpp Releases: b10303",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10303",
+        "published_at": "2026-08-07T11:15:38Z"
       },
-      "related_sources": []
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b10299",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10299",
+          "published_at": "2026-08-07T07:15:32Z"
+        }
+      ]
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 159,
-    "normalized": 159,
-    "filtered": 136,
+    "enabled": 9,
+    "fetched": 149,
+    "normalized": 149,
+    "filtered": 124,
     "ai_candidates": 30,
-    "prompt_chars": 26057,
-    "estimated_input_tokens": 6514,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 33263,
+    "estimated_input_tokens": 8315,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }

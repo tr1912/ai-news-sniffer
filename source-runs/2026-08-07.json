@@ -1,34 +1,18 @@
 {
   "enabled_source_ids": [
-    "openai-news",
-    "anthropic-news",
-    "deepmind-news",
-    "google-research",
-    "meta-ai-blog",
-    "microsoft-research",
     "nvidia-genai",
     "huggingface-blog",
-    "deepseek-updates",
-    "kimi-platform-blog",
-    "qwen-blog",
-    "minimax-news",
-    "zhipu-research",
-    "mistral-news",
-    "cohere-blog",
     "arxiv-ai",
-    "hf-daily-papers",
     "vllm-releases",
     "transformers-releases",
     "llama-cpp-releases",
     "36kr",
-    "jiqizhixin",
-    "qbitai",
     "techcrunch-ai",
     "hacker-news"
   ],
-  "fetched_count": 159,
-  "normalized_count": 159,
-  "filtered_count": 136,
+  "fetched_count": 149,
+  "normalized_count": 149,
+  "filtered_count": 124,
   "budgeted": {
     "articles": [
       {
@@ -39,7 +23,7 @@
         "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
         "url": "https://arxiv.org/abs/2608.06353v1",
         "published_at": "2026-08-06T17:53:24Z",
-        "fetched_at": "2026-08-07T04:47:18.884833Z",
+        "fetched_at": "2026-08-07T11:49:27.337731Z",
         "language": "unknown",
         "excerpt": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through resource allocation so as to make authorization self enforcing via compute budgets. The mechanism seeks to establish the Safe AI paradigm that compute is an effective governance lever. We situate our work as a compliance or commons overlay on a deployer. One governance period is an extensive form game in which verified human stakeholders arrive sequentially and contribute, on a provision or a rejection market, in a governance currency that is deliberately distinct from the agents compute. A funding aggregator turns raw contributions into breadth weighted effective supports - a two threshold gate with hysteresis converts net support into a binary authorization that, through a coupling map bounded by an exogenously certified safety ceiling, releases a metered compute budget - realized in hardware as a signed compute license so that the decision is self-enforcing. We characterize the class of agents the mechanism can govern and isolate manipulation of the governing electorate by the govern",
         "categories": [
@@ -62,7 +46,7 @@
         "title": "Learning When to Trust via Selective Context Preference Optimization",
         "url": "https://arxiv.org/abs/2608.06377v1",
         "published_at": "2026-08-06T17:59:58Z",
-        "fetched_at": "2026-08-07T04:47:18.884715Z",
+        "fetched_at": "2026-08-07T11:49:27.337598Z",
         "language": "unknown",
         "excerpt": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides a failure mode: a model that ignores all context looks robust yet is useless when the context is worth trusting. We recast the problem as selective trust and introduce MIST, a human-annotated benchmark that renders each reasoning item under four matched conditions (clean, misleading, correct-context, and irrelevant-context), together with SC2W, a paired metric counting how often a misleading signal flips a clean-correct answer to wrong. Across a comprehensive benchmark study, we observe that such a susceptibility is universal. We then propose SCOPE, which mines clean-correct/misleading-wrong failures and optimizes a standard Direct Preference Optimization (DPO) objective over matched preference pairs balanced equally across all four conditions, rather than over misleading items alone. Our approach substantially reduces SC2W on popular open-sourced models while preserving accuracy when the added context is clean, correct, or irrelevant. With this work, we argue that models should be ju",
         "categories": [
@@ -85,7 +69,7 @@
         "title": "The Bitter Lesson of Tool Calling",
         "url": "https://arxiv.org/abs/2608.06370v1",
         "published_at": "2026-08-06T17:58:32Z",
-        "fetched_at": "2026-08-07T04:47:18.884761Z",
+        "fetched_at": "2026-08-07T11:49:27.337659Z",
         "language": "unknown",
         "excerpt": "Tool use transforms LLMs into agents that act beyond their training data, and for code-capable models, programmatic tool calling extends this further by replacing rigid JSON calls with scripts that chain and parallelize naturally. However, a systematic evaluation of tools as code on an established benchmark across current and prior model generations under real-world task conditions has not been conducted. In this work, we empirically compare programmatic tool calling (PTC) to native JSON tool calling across 14 language models on BFCL v4. In the programmatic tool calling paradigm, tools are exposed as typed Python stubs that the model invokes through code, with execution and results handled in a single agent turn. Programmatic tool calling matches or exceeds native JSON tool calling in 11 of 14 models on BFCL v4, with the GPT-5.6 family achieving a 10.6% improvement over the JSON tool calling baseline. Further, it matches or outperforms baseline in 13 of 14 models under parallel fan-out, and holds stable under context rot conditions where baseline degrades 2.3% on average. Our results demonstrate that programmatic tool calling is a viable and robust alternative to JSON tool calling,",
         "categories": [
@@ -108,7 +92,7 @@
         "title": "TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories",
         "url": "https://arxiv.org/abs/2608.06346v1",
         "published_at": "2026-08-06T17:51:20Z",
-        "fetched_at": "2026-08-07T04:47:18.884877Z",
+        "fetched_at": "2026-08-07T11:49:27.337775Z",
         "language": "unknown",
         "excerpt": "LLM-based agentic systems have shown remarkable capabilities in complex domains, while suffering from cascading errors and difficulty in debugging. Critical error detection aims to locate the earliest error step in a failed trajectory that is responsible for the final failure. However, progress faces two main challenges. First, long trajectories make it difficult to identify individual errors, since the evidence for judging a step may be scattered across distant instructions, observations, and prior context. Second, failed trajectories often contain multiple local errors with different downstream effects, only some of which remain responsible for the final failure. In this work, we propose TrajDebug, an error-lifecycle tracing framework that addresses long-trajectory error discovery with multi-granularity history compression and evidence-based error identification, and supports critical attribution by tracing each error's resolution status and terminal impact. We further construct TrajErrBench, a benchmark of 486 manually annotated failed trajectories from Tau2Bench and SWE-Bench Pro, covering realistic tool-use and coding scenarios. Experiments across diverse agent benchmarks show",
         "categories": [
@@ -131,7 +115,7 @@
         "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
         "url": "https://arxiv.org/abs/2608.06366v1",
         "published_at": "2026-08-06T17:57:37Z",
-        "fetched_at": "2026-08-07T04:47:18.884776Z",
+        "fetched_at": "2026-08-07T11:49:27.337676Z",
         "language": "unknown",
         "excerpt": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure, which affects an estimated 6.7 million U.S. adults and requires integrating fragmented EHR data with disease-specific, guideline-based clinical reasoning. Existing rule-based and large language model (LLM)-based approaches offer only partial automation with limited maintainability and evidence traceability. We developed the Nimblemind Multi-Agent System (nMAS), an evidence-linked, rubric-grounded pipeline for automated heart-failure feature engineering, and evaluated it on 500 dummy patient records from nine EHR source tables. nMAS generated 132 structured and 70 rubric-scored aggregated features, verified for structural integrity, rubric compliance, and provenance, and audited by a restricted LLM. Adding the aggregated features improved held-out AUROC from 0.895 to 0.963 for HFrEF and 0.870 to 0.910 for HFpEF phenotyping, and an independent LLM-based rubric assessment of evidence support and methodological soundness scored the features at 81.5% of maximum points. These results demon",
         "categories": [
@@ -154,7 +138,7 @@
         "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
         "url": "https://arxiv.org/abs/2608.06362v1",
         "published_at": "2026-08-06T17:57:11Z",
-        "fetched_at": "2026-08-07T04:47:18.884811Z",
+        "fetched_at": "2026-08-07T11:49:27.337711Z",
         "language": "unknown",
         "excerpt": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed-budget evaluations either keep paying after the result is settled or stop before the agents can be told apart, while naive optional stopping with an ordinary confidence interval invalidates the stated level. We make such an evaluation stop as soon as its evidence suffices, with the guarantee intact. The Action-Informed Value Assessment Tool (AIVAT) reduces variance in imperfect-information games through conditional mean-zero corrections, by a median $54\\times$ across 15 LLM agent configurations spanning 71,439 paired Heads-Up No-Limit Hold'em (HUNL) hands, but does not say when to stop. We combine AIVAT with continuously monitored Confidence Sequences (CSs) into anytime-valid AIVAT (AV-AIVAT), whose online value model learns only from past games so that no game scores its own correction. At the nominal 95\\% level and a target precision of $\\pm1$ Big Blind, raw outcomes need a median $74\\times$ as many hands as AIVAT-corrected outcomes to stop under the Asymptotic CS (AsympCS). Exact f",
         "categories": [
@@ -177,7 +161,7 @@
         "title": "RP-OPSD: Reasoning-Pivot-Guided On-Policy Self-Distillation for Multilingual Reasoning Transfer",
         "url": "https://arxiv.org/abs/2608.06347v1",
         "published_at": "2026-08-06T17:52:06Z",
-        "fetched_at": "2026-08-07T04:47:18.884866Z",
+        "fetched_at": "2026-08-07T11:49:27.337764Z",
         "language": "unknown",
         "excerpt": "Multilingual reasoning transfer is crucial for extending reasoning capabilities of large language models (LLMs) beyond high-resource languages. On-policy self-distillation (OPSD) and its variants have emerged as a promising paradigm, providing dense token-level supervision on student-generated rollouts, yet their objectives do not explicitly prioritize reasoning signals most critical to cross-lingual transfer. We characterize that target-language reasoning comprises the generation of both surface text and reasoning pivots, which are decisions that advance or redirect the reasoning process and shape subsequent inference. This motivates concentrating privileged distillation around such pivots. We therefore propose RP-OPSD, Reasoning-Pivot-guided On-Policy Self-Distillation, using the distributional shift between matched teacher views with and without an English reference solution as an operational proxy to guide privileged distillation and reference anchoring. Experiments on mathematical reasoning benchmarks covering 17 languages and multiple difficulty levels show that our method outperforms strong multilingual reasoning baselines and OPSD variants. Further analysis reveals that RP-",
         "categories": [
@@ -200,7 +184,7 @@
         "title": "The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images",
         "url": "https://arxiv.org/abs/2608.06270v1",
         "published_at": "2026-08-06T17:01:08Z",
-        "fetched_at": "2026-08-07T04:47:18.885093Z",
+        "fetched_at": "2026-08-07T11:49:27.337961Z",
         "language": "unknown",
         "excerpt": "The \"thinking-with-images\" paradigm equips multimodal LLMs with active visual operations such as crop-and-zoom. However, models using these operations often achieve only marginal or negative gains over direct inference at substantially higher token cost. They may also repeatedly crop irrelevant regions and fail on questions that direct inference answers correctly. We ask whether the returned visual evidence causally affects the answer. To answer this question, we formulate visual tool-use as a causal graph that separates observation-mediated paths from action-induced shortcuts. We then audit it through interventions at the three levels: policy (comparing tool-use with direct inference), trajectory (corrupting all observations during rollout), and step (counterfactually replacing one individual observation under a fixed prefix). Our step-level estimand, Visual Evidence Gain, isolates the contribution of each returned observation. Across six representative models and five fine-grained perception benchmarks, we uncover policy miscalibration with two failure modes. In Calling Without Looking, returned observations have no causal effect on the answer. In Looking Without Planning, observ",
         "categories": [
@@ -223,7 +207,7 @@
         "title": "Baseten on Hugging Face Inference Providers 🔥",
         "url": "https://huggingface.co/blog/baseten",
         "published_at": "2026-08-06T00:00:00Z",
-        "fetched_at": "2026-08-07T04:47:12.054543Z",
+        "fetched_at": "2026-08-07T11:49:27.198651Z",
         "language": "unknown",
         "excerpt": "",
         "categories": [
@@ -248,7 +232,7 @@
         "title": "Meta launches Muse Code, an AI agent for large code bases",
         "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
         "published_at": "2026-08-05T21:21:28Z",
-        "fetched_at": "2026-08-07T04:47:24.265950Z",
+        "fetched_at": "2026-08-07T11:49:29.831283Z",
         "language": "unknown",
         "excerpt": "Meta expanded its AI coding offerings with a new agent that, it promises, can handle complex tasks with complex software.",
         "categories": [
@@ -265,31 +249,6 @@
         "rule_score": 56.73577777777778
       },
       {
-        "source_id": "qbitai",
-        "source_name": "量子位",
-        "source_group": "media",
-        "independence_group": "qbitai",
-        "title": "蚂蚁集团开源Avernet，让人与智能体像组织一样高效协作",
-        "url": "https://www.qbitai.com/2026/08/467871.html",
-        "published_at": "2026-08-07T03:08:51Z",
-        "fetched_at": "2026-08-07T04:47:24.136787Z",
-        "language": "unknown",
-        "excerpt": "蚂蚁集团正式开源多智能体协作基础设施Avernet，社区版本已上线",
-        "categories": [
-          "models",
-          "products",
-          "business"
-        ],
-        "author": "量子位的朋友们",
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "779bfcce6390a6e4",
-        "canonical_url": "https://www.qbitai.com/2026/08/467871.html",
-        "normalized_title": "蚂蚁集团开源avernet 让人与智能体像组织一样高效协作",
-        "fingerprint": "779bfcce6390a6e47f9acd5acd019c8af2df9e330cd58a5cd0c02628509abaaf",
-        "rule_score": 56.71475
-      },
-      {
         "source_id": "techcrunch-ai",
         "source_name": "TechCrunch AI",
         "source_group": "media",
@@ -297,7 +256,7 @@
         "title": "Klaviyo acquires Elias Torres’ Agency in full-circle reunion for tech founders",
         "url": "https://techcrunch.com/2026/08/05/klaviyo-acquires-elias-torres-agency-in-full-circle-reunion-for-tech-founders/",
         "published_at": "2026-08-05T20:05:00Z",
-        "fetched_at": "2026-08-07T04:47:24.265961Z",
+        "fetched_at": "2026-08-07T11:49:29.831294Z",
         "language": "unknown",
         "excerpt": "The serial entrepreneur joins the e-commerce company as CPO to lead its AI agents.",
         "categories": [
@@ -314,29 +273,56 @@
         "rule_score": 56.608333333333334
       },
       {
-        "source_id": "qbitai",
-        "source_name": "量子位",
-        "source_group": "media",
-        "independence_group": "qbitai",
-        "title": "PPIO正式发布“Fusion融合模型”：用十分之一的价格超越顶级模型的智商",
-        "url": "https://www.qbitai.com/2026/08/467834.html",
-        "published_at": "2026-08-07T01:39:16Z",
-        "fetched_at": "2026-08-07T04:47:24.136810Z",
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10303",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10303",
+        "published_at": "2026-08-07T11:15:38Z",
+        "fetched_at": "2026-08-07T11:49:28.878828Z",
         "language": "unknown",
-        "excerpt": "",
+        "excerpt": "<details open>\n\nsycl : fix error Error OP FLASH_ATTN_EXT on arc770 (#26441)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10303/llama-b10303-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10303/llama-b10303-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10303/llama-b10303-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10303/llama-b10303-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10303/llama-b10303-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10303/llama-b10303-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10303/llama-b10303-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu arm64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/dow",
         "categories": [
-          "models",
-          "products",
-          "business"
+          "open-source",
+          "inference"
         ],
-        "author": "量子位的朋友们",
+        "author": "github-actions[bot]",
         "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "4d7030ef8081de6b",
-        "canonical_url": "https://www.qbitai.com/2026/08/467834.html",
-        "normalized_title": "ppio正式发布 fusion融合模型 用十分之一的价格超越顶级模型的智商",
-        "fingerprint": "4d7030ef8081de6b4865f0bf00efcd680170a518ca94bc4541f493b905739844",
-        "rule_score": 56.565444444444445
+        "raw_metadata": {
+          "release_id": 366697552
+        },
+        "id": "75c2959efd7ebb42",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10303",
+        "normalized_title": "llama cpp releases b10303",
+        "fingerprint": "75c2959efd7ebb42bda734b54938e00f0e0571d5414df91911de6ea3511b38c7",
+        "rule_score": 56.52605555555556
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10299",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10299",
+        "published_at": "2026-08-07T07:15:32Z",
+        "fetched_at": "2026-08-07T11:49:28.878876Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nmetal : avoid `threadgroup` matrix array instantiation in kernel_lightning_indexer (#26646)\n\n- In MSL, declaring an array of matrix types like `threadgroup half4x4` causes\na 'no matching constructor' compilation error because MSL matrix types do not\nhave zero-argument default constructors and threadgroup variables cannot have\ninitializers.\n\n- Fix this by declaring a POD `threadgroup half` array instead and casting\nto `threadgroup half4x4 *` for matrix indexing.\n\nSigned-off-by: JamePeng <jame_peng@sina.com>\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10299/llama-b10299-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10299/llama-b10299-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10299/llama-b10299-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10299/llama-b10299-bin-ubuntu-x64.tar.gz)\n- ",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 366578020
+        },
+        "id": "8be33506b834a8be",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10299",
+        "normalized_title": "llama cpp releases b10299",
+        "fingerprint": "8be33506b834a8bed367ee961ec5f5dcb82c86a6686f84eb2333c1c9cdcbbcd2",
+        "rule_score": 56.12588888888889
       },
       {
         "source_id": "arxiv-ai",
@@ -346,7 +332,7 @@
         "title": "Tytan: Interactive Neurosymbolic Construction of Analytic Semantic Schemas from Relational Data",
         "url": "https://arxiv.org/abs/2608.06331v1",
         "published_at": "2026-08-06T17:40:26Z",
-        "fetched_at": "2026-08-07T04:47:18.884908Z",
+        "fetched_at": "2026-08-07T11:49:27.337805Z",
         "language": "unknown",
         "excerpt": "From natural-language query interfaces to automated report generation, data analysis tools need a description of the data: the real-world entities it contains, which columns function as measures or identifiers, and how tables connect into units of analysis. Today, this semantic layer is usually written by hand. This is a knowledge-acquisition bottleneck that limits the scalability of analytic systems, keeps non-technical users dependent on experts, and is itself error-prone. We present TYTAN, a system for automatically constructing an analytic semantic schema from a relational database and, when available, a short user-provided description. TYTAN combines symbolic analysis of the database with LLM-based semantic inference for entity proposal, role assignment, and naming. When the evidence leaves a decision ambiguous, TYTAN asks the user a targeted natural-language question. We evaluate TYTAN on eight databases spanning real-world and benchmark domains along the three axes that define a schema's functional utility: (i) coverage, are all important entities and features captured?; (ii) retrieval correctness, do the schema's instructions actually reach the data; and (iii) characterizat",
         "categories": [
@@ -369,7 +355,7 @@
         "title": "Benchmarking the Benchmarks: Evaluating Benchmarks for Conversational Agents",
         "url": "https://arxiv.org/abs/2608.06329v1",
         "published_at": "2026-08-06T17:39:21Z",
-        "fetched_at": "2026-08-07T04:47:18.884919Z",
+        "fetched_at": "2026-08-07T11:49:27.337815Z",
         "language": "unknown",
         "excerpt": "Task-oriented conversational agents are evaluated using curated or automatically generated benchmarks, yet benchmark quality is rarely assessed. Poor benchmarks may contain inconsistent tasks, simplistic scenarios, or limited policy coverage, leading to unreliable evaluations. We introduce a reference-free framework that uses LLM judges to assess benchmark consistency, complexity, and policy coverage, while providing actionable diagnostics of weaknesses. We validate the framework by demonstrating agreement with independent human annotations and by evaluating benchmarks generated by LLMs of varying capabilities, as well as benchmarks subjected to controlled quality-degrading perturbations. Across domains and judge models, the proposed metrics consistently distinguish between benchmark quality levels. We further demonstrate the framework's applicability to manually curated benchmarks. Our framework offers a practical approach for evaluating synthetic and manually curated conversational-agent benchmarks.",
         "categories": [
@@ -392,7 +378,7 @@
         "title": "Benchmarking and Enhancing LLMs for Rule-Intensive Review of National Standard Documents",
         "url": "https://arxiv.org/abs/2608.06312v1",
         "published_at": "2026-08-06T17:27:23Z",
-        "fetched_at": "2026-08-07T04:47:18.884929Z",
+        "fetched_at": "2026-08-07T11:49:27.337824Z",
         "language": "unknown",
         "excerpt": "Large language models (LLMs) increasingly support complex professional tasks, yet their capabilities in rule-intensive document review remain insufficiently evaluated. National standard documents, such as China GB/T standards, offer a representative testbed: they are lengthy, highly structured, and governed by explicit rules for scope, terminology, normative wording, and cross-section consistency. Existing benchmarks focus on domain knowledge and question answering, largely overlooking intrinsic quality review for professional documents. Such reviews rely heavily on human experts, making them costly and difficult to scale. To bridge this gap, we introduce GB/T-Bench, the first benchmark for the structured review of national standard documents. Its GB/T Review Taxonomy is a hierarchical schema covering document structure, scope alignment, normative modality, terminology consistency, and normative references, with 25 diagnosable error types. A controllable counterexample generation mechanism combines deterministic rules and constrained LLM rewriting to process 488 documents into 7,306 traceable review error instances for evaluation. We also develop a diagnosis-oriented evaluation pro",
         "categories": [
@@ -415,7 +401,7 @@
         "title": "Does FLAIR super-resolution erase or hallucinate small white-matter lesions?",
         "url": "https://arxiv.org/abs/2608.06311v1",
         "published_at": "2026-08-06T17:26:01Z",
-        "fetched_at": "2026-08-07T04:47:18.884940Z",
+        "fetched_at": "2026-08-07T11:49:27.337834Z",
         "language": "unknown",
         "excerpt": "White matter hyperintensities (WMH), bright regions on Fluid-attenuated Inversion Recovery (FLAIR) scans are associated with cerebrovascular pathology and neurodegeneration. FLAIR is usually acquired with thick slices in clinical settings, giving it poor through-plane resolution. Super-resolution (SR) is a widely used method for recovering an isotropic volume from an anisotropic scan. Yet whether applying it prior to WMH segmentation preserves lesion content remains unknown: a model may erase small real lesions or hallucinate absent ones. We used 1-mm isotropic high-resolution (HR) FLAIR scans from 29 individuals in the ADNI cohort, each manually segmented for WMH by an expert. Then, we degraded each to simulated 3 and 5 mm through-plane acquisitions. Multi-contrast implicit neural representation (INR), a single-contrast self-supervised model (ECLARE), and cubic interpolation were used to upsample them onto the HR grid. WMH segmentation from a simulated thick slice and the original HR FLAIR set the floor and ceiling, respectively, for the per-lesion analysis. Of four WMH segmentation methods (WMH-SynthSeg, segcsvd, MARS-WMH, TrUE-Net), we ran the analysis under the most sensitive o",
         "categories": [
@@ -438,7 +424,7 @@
         "title": "RRC: Unlocking Generative Reward Models in LLM Reinforcement Learning via Ranking-Based Reward Construction",
         "url": "https://arxiv.org/abs/2608.06310v1",
         "published_at": "2026-08-06T17:24:36Z",
-        "fetched_at": "2026-08-07T04:47:18.884950Z",
+        "fetched_at": "2026-08-07T11:49:27.337844Z",
         "language": "unknown",
         "excerpt": "Recent advances in reward modeling show a paradigm shift from discriminative reward models to generative reward models. However, despite their strong capabilities in response ranking, generative reward models have not realized their potential in reinforcement learning (RL). Our analysis reveals that this limitation arises from a mismatch between the comparative nature of generative reward modeling and the scalar scoring paradigm adopted by existing RL algorithms. To bridge this gap, we propose a Ranking-based Reward Construction (RRC) approach, which enables generative reward models to provide more effective RL learning signals by deriving rewards from relative preference rankings. RRC introduces two complementary strategies: self-competitive ranking, which exploits comparisons among sampled responses, and anchor-guided ranking, which enables scalable ranking-based reward construction with a small set of reference responses. Experiments across open-ended chat and reasoning benchmarks demonstrate that RRC substantially improves RL training with generative reward models, achieving consistent gains over existing reward construction approaches. Our code can be found at https://github.c",
         "categories": [
@@ -461,7 +447,7 @@
         "title": "HarnessOpt-Bench: Evaluating LLMs at Harness Optimization",
         "url": "https://arxiv.org/abs/2608.06301v1",
         "published_at": "2026-08-06T17:21:05Z",
-        "fetched_at": "2026-08-07T04:47:18.884971Z",
+        "fetched_at": "2026-08-07T11:49:27.337865Z",
         "language": "unknown",
         "excerpt": "As LLMs are increasingly deployed within agentic systems, their capabilities depend not only on the model weights but also on the harness: the prompts, tools, control flow, memory, and orchestration code surrounding them. This makes automated harness optimization -- the iterative and evaluation-guided improvement of a harness by an AI system -- both an important route to improving AI systems and a demanding capability for AI systems themselves. Yet the community lacks a common protocol for measuring how well frontier LLMs perform at this task. We introduce HarnessOpt-Bench, a benchmark for end-to-end harness optimization under expensive and stochastic evaluation. An optimizer, an LLM paired with a coding harness, receives a target agent's seed harness, graded evaluation feedback, and a fixed target-evaluation budget. It edits the harness and nominates a final candidate, which is scored by its normalized gain over the seed on a held-out test partition that remains inaccessible throughout search. A trusted execution environment enforces the evaluation boundary, meters target-agent resource use, and preserves candidate versions for audit. We evaluate 5 frontier LLMs as optimizers both",
         "categories": [
@@ -484,7 +470,7 @@
         "title": "QuanTiMedAI: Quantum-Enhanced Time-Series Model guided by Agentic AI for Cardiac Arrest Mortality Prediction",
         "url": "https://arxiv.org/abs/2608.06294v1",
         "published_at": "2026-08-06T17:18:03Z",
-        "fetched_at": "2026-08-07T04:47:18.885002Z",
+        "fetched_at": "2026-08-07T11:49:27.337900Z",
         "language": "unknown",
         "excerpt": "Cardiac arrest remains one of the most lethal conditions encountered in intensive care units. Despite the growing availability of electronic health record data, existing mortality prediction studies in this population largely depend on static summaries derived from early admission. Such approaches ignore the temporal progression of physiological deterioration and recovery that unfolds throughout a patient's ICU stay. To address this limitation, we introduce QuanTiMedAI, a quantum-agentic framework developed for cardiac arrest mortality prediction using agentic AI guided quantum enhancement time series model. The proposed system combines an agentic large language model (LLM) for clinically informed feature discovery with a compact quantum recurrent network for temporality aware mortality prediction. Our findings demonstrate that agentic LLM-guided feature selection consistently outperforms conventional feature selection approaches, and the proposed quantum architecture achieves competitive predictive performance through nonlinear feature enhancement while keeping the number of parameters very low. Through extensive experimentation on a MIMIC-IV cohort of cardiac arrest patients, Qua",
         "categories": [
@@ -507,7 +493,7 @@
         "title": "NeSy-RAG: Neuro-Symbolic RAG for Explainable Question Answering",
         "url": "https://arxiv.org/abs/2608.06292v1",
         "published_at": "2026-08-06T17:16:28Z",
-        "fetched_at": "2026-08-07T04:47:18.885013Z",
+        "fetched_at": "2026-08-07T11:49:27.337911Z",
         "language": "unknown",
         "excerpt": "Retrieval-augmented generation (RAG) improves question answering by grounding large language models (LLMs) in external knowledge such as text corpora. However, its reasoning process remains largely opaque: intermediate reasoning steps are difficult to verify and cannot be reliably attributed to specific evidence. Moreover, missing user-specific context is rarely detected systematically, often leading to incomplete or incorrect output.\n  We propose NeSy-RAG, a modular neuro-symbolic RAG framework that synthesizes attributable Prolog modules from retrieved text chunks. For each chunk, the system generates semantically meaningful predicates that encode Boolean claims, which may depend on user facts. Using joint natural language-code embeddings, predicates are retrieved and composed into Prolog queries. To address incomplete user context, we introduce a symbolic knowledge-gap detection mechanism that identifies missing user facts whose truth values affect the query outcome and automatically triggers follow-up interactions.\n  Executing the resulting Prolog queries yields deterministic answers together with transparent execution traces that link each reasoning step to its originating sou",
         "categories": [
@@ -523,57 +509,6 @@
         "rule_score": 55.727444444444444
       },
       {
-        "source_id": "llama-cpp-releases",
-        "source_name": "llama.cpp Releases",
-        "source_group": "research",
-        "independence_group": "llama-cpp-releases",
-        "title": "llama.cpp Releases: b10298",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10298",
-        "published_at": "2026-08-06T22:10:39Z",
-        "fetched_at": "2026-08-07T04:47:20.435364Z",
-        "language": "unknown",
-        "excerpt": "<details open>\n\nmtmd: add chunk save/load function (#26645)\n\n* mtmd: add chunk save/load function\n\n* nits\n\n* add tests\n\n* rn _MAX --> _COUNT\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10298/llama-b10298-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10298/llama-b10298-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10298/llama-b10298-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10298/llama-b10298-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10298/llama-b10298-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10298/llama-b10298-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10298/llama-b10298-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu a",
-        "categories": [
-          "open-source",
-          "inference"
-        ],
-        "author": "github-actions[bot]",
-        "upstream_urls": [],
-        "raw_metadata": {
-          "release_id": 366413240
-        },
-        "id": "bd8929ec16c75cef",
-        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10298",
-        "normalized_title": "llama cpp releases b10298",
-        "fingerprint": "bd8929ec16c75cefca4eb71837a4b7a071e720e388ae8ac6a37702c76e081e6c",
-        "rule_score": 55.21775
-      },
-      {
-        "source_id": "qbitai",
-        "source_name": "量子位",
-        "source_group": "media",
-        "independence_group": "qbitai",
-        "title": "美学升维，流畅突破：荣耀MagicOS11双架构重塑体验",
-        "url": "https://www.qbitai.com/2026/08/467478.html",
-        "published_at": "2026-08-06T09:58:21Z",
-        "fetched_at": "2026-08-07T04:47:24.136867Z",
-        "language": "unknown",
-        "excerpt": "正式公开了安卓液态玻璃设计的完整技术底座",
-        "categories": [
-          "models",
-          "products",
-          "business"
-        ],
-        "author": "量子位的朋友们",
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "6dd60c2709b93cbe",
-        "canonical_url": "https://www.qbitai.com/2026/08/467478.html",
-        "normalized_title": "美学升维 流畅突破 荣耀magicos11双架构重塑体验",
-        "fingerprint": "6dd60c2709b93cbe79ac1ecf33cc8afa1a77004fa79584bd990b1f4ce66f993f",
-        "rule_score": 54.99725
-      },
-      {
         "source_id": "techcrunch-ai",
         "source_name": "TechCrunch AI",
         "source_group": "media",
@@ -581,7 +516,7 @@
         "title": "Google Maps adds agentic features, including food ordering and hotel bookings",
         "url": "https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/",
         "published_at": "2026-08-06T12:30:00Z",
-        "fetched_at": "2026-08-07T04:47:24.265928Z",
+        "fetched_at": "2026-08-07T11:49:29.831262Z",
         "language": "unknown",
         "excerpt": "The launch of these new features reflects Google’s ambitions to transform Google Maps from a navigation tool into an assistant that's capable of helping users complete real-world tasks.",
         "categories": [
@@ -598,31 +533,6 @@
         "rule_score": 54.25
       },
       {
-        "source_id": "qbitai",
-        "source_name": "量子位",
-        "source_group": "media",
-        "independence_group": "qbitai",
-        "title": "AI SSD：大模型推理的存储范式转移",
-        "url": "https://www.qbitai.com/2026/08/467840.html",
-        "published_at": "2026-08-07T02:56:46Z",
-        "fetched_at": "2026-08-07T04:47:24.136799Z",
-        "language": "unknown",
-        "excerpt": "算力、网络、内存与存储开始围绕每个Token协同",
-        "categories": [
-          "models",
-          "products",
-          "business"
-        ],
-        "author": "思邈",
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "c31f08a63bff6982",
-        "canonical_url": "https://www.qbitai.com/2026/08/467840.html",
-        "normalized_title": "ai ssd 大模型推理的存储范式转移",
-        "fingerprint": "c31f08a63bff69827720bf10e1b379507bb62630db3a7cc597ab7c2d089f9ddf",
-        "rule_score": 52.69461111111111
-      },
-      {
         "source_id": "techcrunch-ai",
         "source_name": "TechCrunch AI",
         "source_group": "media",
@@ -630,7 +540,7 @@
         "title": "Jeff Dean and other top AI researchers are leaving Google to launch their own startup",
         "url": "https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/",
         "published_at": "2026-08-05T19:30:19Z",
-        "fetched_at": "2026-08-07T04:47:24.265972Z",
+        "fetched_at": "2026-08-07T11:49:29.831305Z",
         "language": "unknown",
         "excerpt": "The legendary Google executive is joined by other outgoing Google execs in a joint mission to use AI to push forward the process of scientific discovery.",
         "categories": [
@@ -647,60 +557,6 @@
         "rule_score": 52.55052777777778
       },
       {
-        "source_id": "qbitai",
-        "source_name": "量子位",
-        "source_group": "media",
-        "independence_group": "qbitai",
-        "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
-        "url": "https://www.qbitai.com/2026/08/467487.html",
-        "published_at": "2026-08-07T00:25:07Z",
-        "fetched_at": "2026-08-07T04:47:24.136856Z",
-        "language": "unknown",
-        "excerpt": "此后模型、算力、数据中心都在合作范围内",
-        "categories": [
-          "models",
-          "products",
-          "business"
-        ],
-        "author": "衡宇",
-        "upstream_urls": [],
-        "raw_metadata": {},
-        "id": "95b1191ea03caa35",
-        "canonical_url": "https://www.qbitai.com/2026/08/467487.html",
-        "normalized_title": "deepseek豪掷1 4亿护航宇树ipo 杭州绝代双骄战略合体",
-        "fingerprint": "95b1191ea03caa35d648cedc9310dde8854c39bbe105f86b92e6f36f3fe83909",
-        "rule_score": 52.44186111111111
-      },
-      {
-        "source_id": "hacker-news",
-        "source_name": "Hacker News",
-        "source_group": "community",
-        "independence_group": "hacker-news",
-        "title": "OpenAI's latest math breakthroughs commit research misconduct, experts say",
-        "url": "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/",
-        "published_at": "2026-08-06T21:40:55Z",
-        "fetched_at": "2026-08-07T04:47:29.381486Z",
-        "language": "unknown",
-        "excerpt": "",
-        "categories": [
-          "products",
-          "developer-tools"
-        ],
-        "author": "beardyw",
-        "upstream_urls": [
-          "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say/"
-        ],
-        "raw_metadata": {
-          "hn_id": 49202980,
-          "score": 27
-        },
-        "id": "730b3f161a2025b0",
-        "canonical_url": "https://www.scientificamerican.com/article/openais-latest-math-breakthroughs-commit-research-misconduct-experts-say",
-        "normalized_title": "openai s latest math breakthroughs commit research misconduct experts say",
-        "fingerprint": "730b3f161a2025b0bdc97c39c06389ad377a2cec17a932537dac8318e604c154",
-        "rule_score": 52.168194444444445
-      },
-      {
         "source_id": "arxiv-ai",
         "source_name": "arXiv AI",
         "source_group": "research",
@@ -708,7 +564,7 @@
         "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
         "url": "https://arxiv.org/abs/2608.06361v1",
         "published_at": "2026-08-06T17:57:06Z",
-        "fetched_at": "2026-08-07T04:47:18.884822Z",
+        "fetched_at": "2026-08-07T11:49:27.337721Z",
         "language": "unknown",
         "excerpt": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic benchmarks offer better control, they score only the final answer rather than auditing reported events against executable ground truth. To bridge this gap, we introduce trace-grounded parametric profiling for event counting in three controlled video tasks: bouncing-ball wall contacts, visual blinks, and categorical state transitions. Across 2,190 videos, we vary event count N and frequency F while holding rendering fixed. Each video includes an executable event trace for capability-surface estimation and timestamp-level evaluation. Our results reveal a staged temporal failure. At an 80% reliability threshold, Gemini 3.6 Flash reliably counts persistent state transitions up to 12 events at 0.5 and 1.0 Hz, yet demonstrates no reliable positive-count region for transient blinking events. Thus, event representation dictates whether a model initially accesses evidence -- a limitation that compounds as count and frequency increase. In the high-count, high-frequency regime, only 0.2% of fina",
         "categories": [
@@ -731,7 +587,7 @@
         "title": "CalibForge: Adversarial Solver Calibration for Scaling Learnable Terminal Tasks",
         "url": "https://arxiv.org/abs/2608.06352v1",
         "published_at": "2026-08-06T17:53:18Z",
-        "fetched_at": "2026-08-07T04:47:18.884844Z",
+        "fetched_at": "2026-08-07T11:49:27.337742Z",
         "language": "unknown",
         "excerpt": "Training terminal agents requires executable and verifiable tasks that are not merely solvable, but appropriately challenging for learning. Executable validation establishes feasibility, yet does not reveal how a task behaves relative to a given solver setting. In this paper, we present CalibForge, an autonomous terminal-task synthesis system that uses verified solver behavior to revise candidate tasks through adversarial solver calibration. Multi-solver calibration targets disagreement within a heterogeneous solver pool, whereas contrastive solver calibration targets a designated strong-pass/weak-fail relation; both operationalize a solver-relative learnable zone anchored in demonstrated solvability. Using CalibForge, we construct 5,431 calibrated terminal tasks. Our ablations show that both strategies yield more effective supervision than authoring and validation alone or ordinary single-solver feedback. Models trained on the full collection achieve 32.58% and 47.57% on Terminal-Bench 2.0. The largest improvements over the corresponding base model reach 24.71 percentage points on Terminal-Bench 2.0, 27.68 points on SWE-bench Pro, and 30.04 points on Doc2Repo. Together, these resu",
         "categories": [
@@ -745,26 +601,126 @@
         "normalized_title": "calibforge adversarial solver calibration for scaling learnable terminal tasks",
         "fingerprint": "d6e78132d9b00c969caa2b723d57808065e2749da94eb6ebf69a0ab8b56cdca9",
         "rule_score": 51.788833333333336
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Optimal Rates for Learning with Monotone Adversaries",
+        "url": "https://arxiv.org/abs/2608.06337v1",
+        "published_at": "2026-08-06T17:45:32Z",
+        "fetched_at": "2026-08-07T11:49:27.337795Z",
+        "language": "unknown",
+        "excerpt": "A monotone adversary observes an i.i.d. labeled sample and appends a finite number of further examples of its choice, every one of them labeled correctly by the target hypothesis. The learner sees a uniform shuffle of the combined sample and is scored on the original distribution. Every example is correctly labeled, but the insertions depend on the clean sample, so the combined sample is not exchangeable. Larsen, Pabbaraju, and Shetty, who introduced this model, showed that empirical risk minimization attains expected error $O((d/n)\\log(n/d))$ for classes of VC dimension $d$, and that every known optimal learner can be pushed away from the $Θ(d/n)$ rate, optimal for PAC learning. They asked whether the extra logarithm is an artifact of those particular algorithms or an inherent consequence of the lack of exchangeability.\n  We show that this additional cost is inherent beyond VC dimension one. In the worst case over classes of VC dimension $d$ and over known finite insertion budgets, the minimax expected error is $Θ(1/n)$ at $d=1$ and $Θ((d/n)\\log(n/d))$ for $d\\geq 2$. The same rates hold with Littlestone dimension $d_{\\mathrm L}$ in place of $d$, so the clean online-to-batch rate $",
+        "categories": [
+          "research"
+        ],
+        "author": "Anay Mehrotra",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1fcfcafcc65136af",
+        "canonical_url": "https://arxiv.org/abs/2608.06337v1",
+        "normalized_title": "optimal rates for learning with monotone adversaries",
+        "fingerprint": "1fcfcafcc65136afe6ab7046c5c17ec23a82c918243e6c79374c3d49b62a67af",
+        "rule_score": 51.775888888888886
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Beyond Top-K: Replacing Black-Box Retrieval with Interpretable Agentic Operations",
+        "url": "https://arxiv.org/abs/2608.06305v1",
+        "published_at": "2026-08-06T17:23:13Z",
+        "fetched_at": "2026-08-07T11:49:27.337855Z",
+        "language": "unknown",
+        "excerpt": "Retrieval-augmented generation over long documents is dominated by one design: chunk the text, embed the chunks, and surface the top-k nearest neighbours of the query. We argue that for an important class of documents -- financial statements, audit reports, regulatory returns -- this design is structurally unsound, and we make the argument measurable. On a 780-page government financial report, 86.8% of content lines are table rows, thousands of near-identical figures compete in one embedding space, and a figure inherits its unit from a header a median of 13 lines above it -- so a chunk boundary routinely separates a number from whether it is in lakh or crore, an error of two orders of magnitude. A table-aware chunker built as a steelman fixes the unit problem but leaves 27-30% of numeric chunks with no fiscal-year header at every chunk size we tried. We propose READ (Reliable Embedding-free Agentic Document-search), in which an agent reads the raw document through three deterministic operations -- normalized lexical search, structural navigation, and bounded span reads -- exposed over the Model Context Protocol, so a trajectory is a replayable audit trail, not an opaque similarity ",
+        "categories": [
+          "research"
+        ],
+        "author": "Tabarakul Hazarika",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "86f3bad15a65db53",
+        "canonical_url": "https://arxiv.org/abs/2608.06305v1",
+        "normalized_title": "beyond top k replacing black box retrieval with interpretable agentic operations",
+        "fingerprint": "86f3bad15a65db5329043790fb4463f81b67d2fb05cab020376d4fff8cfc2bd5",
+        "rule_score": 51.73869444444445
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Bias Analysis of L2 Speaking Assessment Systems Using Concept Activation Vectors",
+        "url": "https://arxiv.org/abs/2608.06300v1",
+        "published_at": "2026-08-06T17:20:58Z",
+        "fetched_at": "2026-08-07T11:49:27.337875Z",
+        "language": "unknown",
+        "excerpt": "Automatic speaking assessment systems are increasingly deployed in high-stakes settings to mark second language (L2) learners' speaking tests, making it critical to show that their scores depend on speaking proficiency rather than irrelevant speaker attributes such as first language (L1) or age. Transformer-based foundation models have improved the accuracy of these L2 speaking graders, but their black-box representations make fairness and interpretability analysis more difficult. Building on prior work that used Concept Activation Vectors (CAVs) to detect bias towards unwanted attributes (`concepts') in feature-based graders, we extend CAV-based analysis to two neural speaking assessment systems: a text-based BERT grader and a speech-and-text multimodal grader based on Whisper. CAVs represent human-interpretable concepts as directions in a model's activation space, allowing us to distinguish between whether a concept is encoded in a model's internal representations and whether it influences the predicted score, the latter quantified using a gradient-based sensitivity metric. Since CAVs rely on linear separability, which is less likely in complex neural embedding spaces, we also in",
+        "categories": [
+          "research"
+        ],
+        "author": "Kate Knill",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d808c6b23ce8ecbf",
+        "canonical_url": "https://arxiv.org/abs/2608.06300v1",
+        "normalized_title": "bias analysis of l2 speaking assessment systems using concept activation vectors",
+        "fingerprint": "d808c6b23ce8ecbf80670417b7f0b36523fa22d6a08d6d31388336bc39d034b4",
+        "rule_score": 51.734944444444444
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "On-Policy Self-Distillation without Any Supervision",
+        "url": "https://arxiv.org/abs/2608.06296v1",
+        "published_at": "2026-08-06T17:18:23Z",
+        "fetched_at": "2026-08-07T11:49:27.337890Z",
+        "language": "unknown",
+        "excerpt": "On-policy (Self-)Distillation (OPD / OPSD) has shown strong potential for post-training large language models (LLMs). However, existing methods still rely heavily on external supervision, including ground-truth signals, environmental feedback, or guidance from larger models, and therefore fall short of genuine \"self\"-distillation. In this study, we show that on-policy self-distillation can be achieved using only a model's own generations via internal consistency. We propose Unsupervised On-Policy Self-Distillation (U-OPSD). U-OPSD first samples multiple rollouts and constructs a pseudo-solution by majority vote under a self-consistency threshold. It then conditions a teacher distribution on the shortest pseudo-solution and distills it into prefixes of the model's longest incorrect completion, allowing the model to correct itself precisely where it is confidently wrong. Across diverse benchmarks, base models, and training settings, U-OPSD consistently improves over the base models and matches or surpasses supervised methods with ground truth (GT), such as OPSD and GRPO. On AIME24, AIME25, HMMT25, MATH500, and AMC23, U-OPSD improves over the base model by 8.5% and 10.7% on Qwen3 non-",
+        "categories": [
+          "research"
+        ],
+        "author": "Nuno Vasconcelos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d03fc1294876d163",
+        "canonical_url": "https://arxiv.org/abs/2608.06296v1",
+        "normalized_title": "on policy self distillation without any supervision",
+        "fingerprint": "d03fc1294876d163dc6297afdb0796766241b738b07ade1e63b483400d484bb1",
+        "rule_score": 51.73063888888889
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "The Tamed Subgradient Unadjusted Langevin Algorithm beyond Convexity",
+        "url": "https://arxiv.org/abs/2608.06283v1",
+        "published_at": "2026-08-06T17:09:46Z",
+        "fetched_at": "2026-08-07T11:49:27.337941Z",
+        "language": "unknown",
+        "excerpt": "We study the problem of sampling from target distributions whose potentials are simultaneously non-smooth, subject to superlinear gradient growth, and non-convex. We introduce the Subgradient Tamed Unadjusted Langevin Algorithm (SG-TULA), a discretisation of the Langevin diffusion that operates directly on subgradients, without relying on computationally demanding smoothing procedures. To handle the superlinear regime, taming techniques are employed to produce a stable, explicit scheme. We derive non-asymptotic convergence bounds in Wasserstein-2 distance, with all constants tracked explicitly in terms of dimension and inverse temperature, improving upon the currently known rates for subgradient-based Langevin algorithms. We further provide excess risk estimates for the associated optimisation problem. We verify the assumptions, with explicit constants, for the regularized pretraining potential of a LLM in the GPT-2 lineage and the boosted coordinate-wise variant of SG-TULA pretrains the former competitively against finetuned AdamW and Muon, for which no comparable non-asymptotic guarantees are presently available.",
+        "categories": [
+          "research"
+        ],
+        "author": "Sotirios Sabanis",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6be672f24e41c71a",
+        "canonical_url": "https://arxiv.org/abs/2608.06283v1",
+        "normalized_title": "the tamed subgradient unadjusted langevin algorithm beyond convexity",
+        "fingerprint": "6be672f24e41c71a9684f71b578be5cd0c642a5fb2fd9d031315d4bcdb1c2a93",
+        "rule_score": 51.716277777777776
       }
     ],
-    "prompt_chars": 26057,
-    "estimated_input_tokens": 6514
+    "prompt_chars": 33263,
+    "estimated_input_tokens": 8315
   },
-  "failures": {
-    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
-    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
-    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
-    "google-research": "SourceParseError: google-research: no dated article records found",
-    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
-    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
-    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
-    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
-    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
-    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
-    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
-    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
-    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
-  },
+  "failures": {},
   "newly_auto_paused_source_ids": []
 }
