@@ -1,0 +1,172 @@
+{
+  "date": "2026-08-07",
+  "generated_at": "2026-08-07T04:47:03.114896Z",
+  "run_id": "2026-08-07-112702bd",
+  "daily_summary_zh": "今日AI领域以研究进展为主：多篇论文聚焦工具调用范式、视觉工具使用审计、生成式奖励模型与AI治理机制；Baseten接入Hugging Face推理服务商，llama.cpp发布新版本。Agent调试、多语言推理、终端任务合成亦有重要突破。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "dfd9762a6debce7b"
+      ],
+      "category": "research",
+      "title_zh": "工具调用中的苦涩教训：程序化工具调用显著优于JSON调用",
+      "summary_zh": "论文在BFCL v4基准上系统比较了程序化工具调用（PTC）与原生JSON工具调用，覆盖14个语言模型。结果显示，PTC在11/14个模型上达到或超过JSON调用，GPT-5.6系列提升10.6%；在并行fan-out场景中13/14占优，且在上下文受损（context rot）条件下比基线更稳定。",
+      "why_it_matters_zh": "该研究证明以代码形式调用工具比传统JSON调用更高效、更稳健，可能推动智能体工具调用范式从结构化JSON转向程序化脚本，提升复杂任务执行能力。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "The Bitter Lesson of Tool Calling",
+        "url": "https://arxiv.org/abs/2608.06370v1",
+        "published_at": "2026-08-06T17:58:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "54b479364c304866"
+      ],
+      "category": "research",
+      "title_zh": "选择性上下文偏好优化：让模型学会何时信任上下文",
+      "summary_zh": "论文提出MIST基准，将每个推理问题置于干净、误导、正确上下文、无关上下文四种条件下，并设计SC2W配对指标。研究发现误导性信号普遍会使模型从正确转为错误。提出的SCOPE方法通过DPO目标在四类匹配偏好对间平衡优化，显著降低SC2W，同时保持模型在干净、正确、无关上下文下的准确率。",
+      "why_it_matters_zh": "这项工作揭示了“忽略一切上下文”式假鲁棒的陷阱，为构建真正能够辨别信息可信度、选择性信任外部信号的语言模型提供了训练与评估框架。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Learning When to Trust via Selective Context Preference Optimization",
+        "url": "https://arxiv.org/abs/2608.06377v1",
+        "published_at": "2026-08-06T17:59:58Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "e736fe5daa8c0f9a"
+      ],
+      "category": "research",
+      "title_zh": "视觉工具使用的幻觉：对“看图思考”的因果审计",
+      "summary_zh": "论文将多模态模型的视觉工具使用（如裁剪缩放）建模为因果图，并从策略、轨迹、步骤三个层面进行干预审计。在6个代表性模型和5个细粒度感知基准上，发现两种失败模式：'Calling Without Looking'（返回的观察对答案无因果影响）和'Looking Without Planning'（观察无法有效用于推理），并提出Visual Evidence Gain来量化每次观察的真实贡献。",
+      "why_it_matters_zh": "该研究警示'主动视觉查看'可能只是形式主义，模型并未真正利用视觉证据，为评估和改进多模态工具调用提供了严格的因果审计方法，有助于避免无效的高额token开销。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "The Illusion of Visual Tool-Use: A Causal Audit of Thinking with Images",
+        "url": "https://arxiv.org/abs/2608.06270v1",
+        "published_at": "2026-08-06T17:01:08Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "17c6b8338565040c"
+      ],
+      "category": "research",
+      "title_zh": "基于排序的奖励构建：释放生成式奖励模型在RL中的潜力",
+      "summary_zh": "论文分析了生成式奖励模型在强化学习（RL)中表现不佳的原因——其比较式本质与现有RL算法要求的标量打分不匹配。提出的RRC方法从相对偏好排序中构建奖励，包括自竞争排序和锚定引导排序两种策略，在开放对话和推理基准上显著提升RL训练效果。",
+      "why_it_matters_zh": "该研究为生成式奖励模型顺利接入强化学习提供了可行桥梁，可能推动RLHF从传统标量奖励迈向更灵活、更强大的生成式奖励信号。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "RRC: Unlocking Generative Reward Models in LLM Reinforcement Learning via Ranking-Based Reward Construction",
+        "url": "https://arxiv.org/abs/2608.06310v1",
+        "published_at": "2026-08-06T17:24:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "b17b28166416a090"
+      ],
+      "category": "products",
+      "title_zh": "Baseten接入Hugging Face Inference Providers",
+      "summary_zh": "Baseten宣布正式加入Hugging Face Inference Providers平台，开发者可以通过Hugging Face的统一接口调用Baseten的低延迟推理服务。",
+      "why_it_matters_zh": "此举扩充了Hugging Face推理生态的供应商选项，降低了开发者使用高性能开源模型推理的门槛，有助于推动开源模型部署服务的标准化与普及。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Baseten on Hugging Face Inference Providers 🔥",
+        "url": "https://huggingface.co/blog/baseten",
+        "published_at": "2026-08-06T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-15",
+      "candidate_ids": [
+        "bd8929ec16c75cef"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp发布b10298版本",
+      "summary_zh": "llama.cpp发布b10298版本，主要更新包括为mtmd多模态模型新增分块保存/加载功能，并同步提供macOS、iOS、Linux（含Vulkan）等多平台预编译二进制。",
+      "why_it_matters_zh": "llama.cpp是本地LLM推理的核心开源项目，持续迭代使开源模型在边缘设备和消费级硬件上更易用，此次更新提升了多模态模型的可用性。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10298",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10298",
+        "published_at": "2026-08-06T22:10:39Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 159,
+    "normalized": 159,
+    "filtered": 136,
+    "ai_candidates": 30,
+    "prompt_chars": 26057,
+    "estimated_input_tokens": 6514,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
