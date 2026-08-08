@@ -1,0 +1,121 @@
+{
+  "date": "2026-08-08",
+  "generated_at": "2026-08-08T11:32:19.325360Z",
+  "run_id": "2026-08-08-285754d5",
+  "daily_summary_zh": "今日AI领域动态：OpenAI 因安全顾虑放缓 Astra 模型开发：已达“关键网络安全阈值”；AI2 发布 TutorMoments，探索 AI 辅导的“出手时机”；llama.cpp 发布 b10327：修复 CUDA 量化 cpy Kernel 启动问题。",
+  "events": [
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "f652d11ff78e5735",
+        "b46941271ffbb9f5"
+      ],
+      "category": "models",
+      "title_zh": "OpenAI 因安全顾虑放缓 Astra 模型开发：已达“关键网络安全阈值”",
+      "summary_zh": "OpenAI 表示，仍在开发中的 Astra 模型已达到“关键网络安全阈值”，即可独立识别并针对传统受良好保护的真实系统实施网络攻击；为此公司决定放缓该模型的开发进度。多家媒体（TechCrunch、量子位）报道了此事。",
+      "why_it_matters_zh": "前沿模型的安全评估成为能否按期发布的关键变量；Astra 的放缓显示网络安全能力本身可能成为最强模型面世前的硬性“刹车”，也引发对 AI 安全与商业化平衡的讨论。",
+      "importance_score": 82.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "title": "OpenAI says it slowed Astra model development over security concerns",
+        "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/",
+        "published_at": "2026-08-07T22:48:24Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "qbitai",
+          "source_name": "量子位",
+          "title": "都学坏了！奥特曼亲手封锁最强模型Astra，重蹈Mythos覆辙",
+          "url": "https://www.qbitai.com/2026/08/468462.html",
+          "published_at": "2026-08-08T04:33:53Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "c782d76ccb3d159b"
+      ],
+      "category": "research",
+      "title_zh": "AI2 发布 TutorMoments，探索 AI 辅导的“出手时机”",
+      "summary_zh": "AI2 在 Hugging Face 官方博客发布 TutorMoments 相关研究，讨论 AI 辅导系统应如何判断何时提供帮助、何时保持克制。",
+      "why_it_matters_zh": "智能辅导系统的关键难点不是能力不足，而是交互时机；该工作为教育场景的 AI 辅助决策和自适应干预提供新方向，影响 AI 教育产品的设计。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+        "url": "https://huggingface.co/blog/allenai/tutormoments",
+        "published_at": "2026-08-07T17:53:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "3e2c7dccd3142f1d"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10327：修复 CUDA 量化 cpy Kernel 启动问题",
+      "summary_zh": "llama.cpp 发布 b10327 版本，主要修复 CUDA 后端在量化 cpy kernel 启动时线程/块数计算错误，并新增不均匀块数测试用例；同时更新了 macOS、Linux、iOS 等平台的构建产物。",
+      "why_it_matters_zh": "作为广泛使用的本地大模型推理引擎，量化 kernel 的稳定性直接影响下游开源生态；该修复对 CUDA 上的量化模型执行性能与正确性有实际意义。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10327",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10327",
+        "published_at": "2026-08-08T06:04:14Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 155,
+    "normalized": 155,
+    "filtered": 101,
+    "ai_candidates": 30,
+    "prompt_chars": 12383,
+    "estimated_input_tokens": 3095,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
