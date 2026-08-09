@@ -1,0 +1,881 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 149,
+  "normalized_count": 149,
+  "filtered_count": 80,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "OpenAI acquires presentation startup NextSlide",
+        "url": "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/",
+        "published_at": "2026-08-08T19:41:13Z",
+        "fetched_at": "2026-08-09T11:32:48.234477Z",
+        "language": "unknown",
+        "excerpt": "NextSlide says its team members are now working on ChatGPT.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "edfae499849e98f5",
+        "canonical_url": "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide",
+        "normalized_title": "openai acquires presentation startup nextslide",
+        "fingerprint": "edfae499849e98f587fe2f6ff138a20e1b65efa8fb6a237128839df3a86eea6c",
+        "rule_score": 58.968694444444445
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10333",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10333",
+        "published_at": "2026-08-09T11:21:50Z",
+        "fetched_at": "2026-08-09T11:32:42.977314Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nggml-cpu : fix missing Q5_0 dispatch in SpaceMiT backend (#26792)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10333/llama-b10333-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10333/llama-b10333-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10333/llama-b10333-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10333/llama-b10333-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10333/llama-b10333-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10333/llama-b10333-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10333/llama-b10333-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu arm64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releas",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 367458796
+        },
+        "id": "421033e2b2d1bd7a",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10333",
+        "normalized_title": "llama cpp releases b10333",
+        "fingerprint": "421033e2b2d1bd7aa369d67fd43471a5811cb720a1f18491647aaefe97fead24",
+        "rule_score": 56.53638888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "GPT-5.6和Fable联手，解决了一道悬了25年的数学难题",
+        "url": "https://www.qbitai.com/2026/08/468913.html",
+        "published_at": "2026-08-09T09:16:58Z",
+        "fetched_at": "2026-08-09T11:32:48.160509Z",
+        "language": "unknown",
+        "excerpt": "作者读博时就在研究，17年后被AI解开了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "克雷西",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "73ca24835c2a194a",
+        "canonical_url": "https://www.qbitai.com/2026/08/468913.html",
+        "normalized_title": "gpt 5 6和fable联手 解决了一道悬了25年的数学难题",
+        "fingerprint": "73ca24835c2a194ab6828292bffa9c5ff6e78de6fe8a4ecda5a890e647bfa7cd",
+        "rule_score": 53.32827777777778
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "当题库追不上模型，AI开始给自己出题：中国这支团队跑通了数据层RSI",
+        "url": "https://www.qbitai.com/2026/08/468782.html",
+        "published_at": "2026-08-09T03:40:25Z",
+        "fetched_at": "2026-08-09T11:32:48.160524Z",
+        "language": "unknown",
+        "excerpt": "AI参与创造下一代AI",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "闻乐",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3fe4cc0607492258",
+        "canonical_url": "https://www.qbitai.com/2026/08/468782.html",
+        "normalized_title": "当题库追不上模型 ai开始给自己出题 中国这支团队跑通了数据层rsi",
+        "fingerprint": "3fe4cc06074922580e88820d4d9fb05dda32f80c3eab9f56caa7ebba5fd0db8e",
+        "rule_score": 52.767361111111114
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "180万刀，连亚马逊都烧不起Claude了",
+        "url": "https://www.qbitai.com/2026/08/469010.html",
+        "published_at": "2026-08-09T09:25:10Z",
+        "fetched_at": "2026-08-09T11:32:48.160459Z",
+        "language": "unknown",
+        "excerpt": "Claude不是我说你，钱真不能这么花",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "程浅",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "31159dcc7aa31fb2",
+        "canonical_url": "https://www.qbitai.com/2026/08/469010.html",
+        "normalized_title": "180万刀 连亚马逊都烧不起claude了",
+        "fingerprint": "31159dcc7aa31fb22b2c840671ce0e88ca8bb94f786bbe58ca0e3da5428b2f49",
+        "rule_score": 49.341944444444444
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "Opus 5狂烧6.9亿token做游戏，GPT-5.6用5美元复刻了",
+        "url": "https://www.qbitai.com/2026/08/468766.html",
+        "published_at": "2026-08-09T03:25:00Z",
+        "fetched_at": "2026-08-09T11:32:48.160537Z",
+        "language": "unknown",
+        "excerpt": "据说GPT-5.6很适合拿来做游戏",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "38c1f418b425b478",
+        "canonical_url": "https://www.qbitai.com/2026/08/468766.html",
+        "normalized_title": "opus 5狂烧6 9亿token做游戏 gpt 5 6用5美元复刻了",
+        "fingerprint": "38c1f418b425b47819109cbb4296f8c4fa44ba9a3eb5d89df15c9885e7147586",
+        "rule_score": 48.74166666666667
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "爆料：哈萨比斯原本要和Jeff Dean一起走！",
+        "url": "https://www.qbitai.com/2026/08/468715.html",
+        "published_at": "2026-08-09T03:17:18Z",
+        "fetched_at": "2026-08-09T11:32:48.160548Z",
+        "language": "unknown",
+        "excerpt": "谷歌缓兵之计把人留下",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2802539b3293a459",
+        "canonical_url": "https://www.qbitai.com/2026/08/468715.html",
+        "normalized_title": "爆料 哈萨比斯原本要和jeff dean一起走",
+        "fingerprint": "2802539b3293a459f859b0e859c61a78ff8875eed182d93fe2ec729e87eae78d",
+        "rule_score": 48.728833333333334
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Open-source interactive map for the Aug 12 total solar eclipse",
+        "url": "https://eclipsefan.org/?v=2&t=max&layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&lat=43.4623&lon=-3.8099&opacity=besselian%3A0.2%2Cumbra-live%3A0.2&zoom=6&palier=minute",
+        "published_at": "2026-08-08T19:38:08Z",
+        "fetched_at": "2026-08-09T11:32:49.041085Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "MarcoDewey",
+        "upstream_urls": [
+          "https://eclipsefan.org/?v=2&t=max&layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&lat=43.4623&lon=-3.8099&opacity=besselian%3A0.2%2Cumbra-live%3A0.2&zoom=6&palier=minute"
+        ],
+        "raw_metadata": {
+          "hn_id": 49225139,
+          "score": 158
+        },
+        "id": "3e1003b4ef5db61c",
+        "canonical_url": "https://eclipsefan.org/?v=2&t=max&layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&lat=43.4623&lon=-3.8099&opacity=besselian%3A0.2%2Cumbra-live%3A0.2&zoom=6&palier=minute",
+        "normalized_title": "open source interactive map for the aug 12 total solar eclipse",
+        "fingerprint": "3e1003b4ef5db61c1164db912adbdd31c4744c5e13c39fb714de93bc817bc63c",
+        "rule_score": 47.96355555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Time has started serving ads to AI agents",
+        "url": "https://digiday.com/media/time-has-started-serving-ads-to-ai-agents/",
+        "published_at": "2026-08-09T08:05:16Z",
+        "fetched_at": "2026-08-09T11:32:52.337563Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "theanonymousone",
+        "upstream_urls": [
+          "https://digiday.com/media/time-has-started-serving-ads-to-ai-agents/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49229435,
+          "score": 7
+        },
+        "id": "3bd0e5930ae64fe1",
+        "canonical_url": "https://digiday.com/media/time-has-started-serving-ads-to-ai-agents",
+        "normalized_title": "time has started serving ads to ai agents",
+        "fingerprint": "3bd0e5930ae64fe115dd30e5cea9944126b215d0d0aeadaf5010f5b2a0ffb738",
+        "rule_score": 45.208777777777776
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why MySpace fans want it back as relaunch hinted",
+        "url": "https://www.bbc.com/news/articles/c4g64152v71o",
+        "published_at": "2026-08-09T04:24:10Z",
+        "fetched_at": "2026-08-09T11:32:49.281080Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "1659447091",
+        "upstream_urls": [
+          "https://www.bbc.com/news/articles/c4g64152v71o"
+        ],
+        "raw_metadata": {
+          "hn_id": 49228426,
+          "score": 18
+        },
+        "id": "e1cc90a2316ed0dd",
+        "canonical_url": "https://www.bbc.com/news/articles/c4g64152v71o",
+        "normalized_title": "why myspace fans want it back as relaunch hinted",
+        "fingerprint": "e1cc90a2316ed0dd147242add370c03f7deb0da640d3b530366e6b18419b35fa",
+        "rule_score": 44.84027777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Naïve raises $28.5M to automate the grunt work of setting up and running a company",
+        "url": "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/",
+        "published_at": "2026-08-06T17:00:37Z",
+        "fetched_at": "2026-08-09T11:32:48.234580Z",
+        "language": "unknown",
+        "excerpt": "Taking vibe-coding a step further, Naïve claims its infra can automate most of the work in setting up and running a business.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ram Iyer",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c02649464d35c8fb",
+        "canonical_url": "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company",
+        "normalized_title": "naïve raises 28 5m to automate the grunt work of setting up and running a company",
+        "fingerprint": "c02649464d35c8fbd0ad474df7cb65d740c98cff4b298d4f83254972509a9ba9",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Planned Amazon data center could become the biggest climate polluter in the U.S.",
+        "url": "https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s/",
+        "published_at": "2026-08-08T21:24:02Z",
+        "fetched_at": "2026-08-09T11:32:48.234427Z",
+        "language": "unknown",
+        "excerpt": "As part of a planned Texas data center, Amazon is investing in an on-site power plant that could reportedly become the largest source of climate pollution in the United States.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2d03d169051717af",
+        "canonical_url": "https://techcrunch.com/2026/08/08/planned-amazon-data-center-could-become-the-biggest-climate-polluter-in-the-u-s",
+        "normalized_title": "planned amazon data center could become the biggest climate polluter in the u s",
+        "fingerprint": "2d03d169051717af589a6c4196e0080a25c12d87e97cdfcec3dd8d01d401533d",
+        "rule_score": 43.140055555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "published_at": "2026-08-08T10:57:44Z",
+        "fetched_at": "2026-08-09T11:32:50.316991Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "882542F3884314B",
+        "upstream_urls": [
+          "https://simonwillison.net/2026/Aug/7/openai-timeline/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49220609,
+          "score": 400
+        },
+        "id": "a6df3cec188dc892",
+        "canonical_url": "https://simonwillison.net/2026/Aug/7/openai-timeline",
+        "normalized_title": "timeline of the openai accidental attack against hugging face",
+        "fingerprint": "a6df3cec188dc892635de8180c17af979a0cab8561886c6d665fc0951330aa92",
+        "rule_score": 43.096222222222224
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
+        "url": "https://genesisopenmodels.anl.gov/",
+        "published_at": "2026-08-07T22:24:27Z",
+        "fetched_at": "2026-08-09T11:32:51.174663Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "moelf",
+        "upstream_urls": [
+          "https://genesisopenmodels.anl.gov/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49216946,
+          "score": 348
+        },
+        "id": "fa071c4c28cb21ce",
+        "canonical_url": "https://genesisopenmodels.anl.gov/",
+        "normalized_title": "u s department of energy launches the genesis open models initiative",
+        "fingerprint": "fa071c4c28cb21ce434c0e36add4475c8f5ad4edf031620fd050a67c83a15618",
+        "rule_score": 41.84075
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
+        "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
+        "published_at": "2026-08-09T08:00:51Z",
+        "fetched_at": "2026-08-09T11:32:49.183227Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "theanonymousone",
+        "upstream_urls": [
+          "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49229412,
+          "score": 36
+        },
+        "id": "87843acfbe3cd95b",
+        "canonical_url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost",
+        "normalized_title": "software giant sap stops most travel and hiring because of ai s soaring cost",
+        "fingerprint": "87843acfbe3cd95b31f3eca6366da1f888d8dd6e6466f79087fa266e5c86d2be",
+        "rule_score": 41.20141666666667
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "An Optimal Agnostic PAC Algorithm",
+        "url": "https://arxiv.org/abs/2608.06363v1",
+        "published_at": "2026-08-06T17:57:25Z",
+        "fetched_at": "2026-08-09T11:32:41.797472Z",
+        "language": "unknown",
+        "excerpt": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk bound: from an i.i.d.\\ sample of size $n$, for every $0<δ\\le 1/2$, with probability at least $1-δ$, \\[\n  L(\\widehat h)\n  \\le L^*+ 7\\cdot10^8\\left(\n  \\sqrt{\\frac{L^*(d+\\log(1/δ))}{n}}\n  +\\frac{d+\\log(1/δ)}{n}\n  \\right). \\] This settles the sample complexity of agnostic PAC learning up to universal constants at every fixed $L^*$, matching the lower bounds of Devroye, Györfi, and Lugosi [A Probabilistic Theory of Pattern Recognition, Springer, 1996].",
+        "categories": [
+          "research"
+        ],
+        "author": "Nikita Zhivotovskiy",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "98ee6d8dcc288a7e",
+        "canonical_url": "https://arxiv.org/abs/2608.06363v1",
+        "normalized_title": "an optimal agnostic pac algorithm",
+        "fingerprint": "98ee6d8dcc288a7e6e0d22d9296e7e12f9069516f3df189df79abfa825fb6905",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
+        "url": "http://longbets.org/601/",
+        "published_at": "2026-08-09T04:30:26Z",
+        "fetched_at": "2026-08-09T11:32:48.770692Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "doubletwoyou",
+        "upstream_urls": [
+          "http://longbets.org/601/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49228458,
+          "score": 153
+        },
+        "id": "26ed66822e9ae9cf",
+        "canonical_url": "http://longbets.org/601",
+        "normalized_title": "the original url for this prediction will no longer be available in 11 years 2011",
+        "fingerprint": "26ed66822e9ae9cf46a2376a74eeaba5feb5379f11d08479a8bc24c9d50b1d32",
+        "rule_score": 40.850722222222224
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I asked 4 AI companions what they were. They lied, then texted me the next day",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7244220",
+        "published_at": "2026-08-09T03:21:10Z",
+        "fetched_at": "2026-08-09T11:32:50.879084Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Ai_Sycophancy",
+        "upstream_urls": [
+          "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7244220"
+        ],
+        "raw_metadata": {
+          "hn_id": 49228137,
+          "score": 7
+        },
+        "id": "c643e81b400bd15a",
+        "canonical_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7244220",
+        "normalized_title": "i asked 4 ai companions what they were they lied then texted me the next day",
+        "fingerprint": "c643e81b400bd15af20dc6cd918417259b4e795aaf93d6a5cd5bee0d15ede17a",
+        "rule_score": 40.735277777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A weapon that could help red squirrels in their Battle of Britain",
+        "url": "https://www.economist.com/britain/2026/01/10/a-weapon-that-could-help-red-squirrels-in-their-battle-of-britain",
+        "published_at": "2026-08-09T01:50:51Z",
+        "fetched_at": "2026-08-09T11:32:52.277211Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "geneticdrifts",
+        "upstream_urls": [
+          "https://www.economist.com/britain/2026/01/10/a-weapon-that-could-help-red-squirrels-in-their-battle-of-britain"
+        ],
+        "raw_metadata": {
+          "hn_id": 49227657,
+          "score": 4
+        },
+        "id": "1b9f3fbc782017ca",
+        "canonical_url": "https://www.economist.com/britain/2026/01/10/a-weapon-that-could-help-red-squirrels-in-their-battle-of-britain",
+        "normalized_title": "a weapon that could help red squirrels in their battle of britain",
+        "fingerprint": "1b9f3fbc782017cab0b4880791df52c1d54ffcaa19a717afd79427a2c3ff1090",
+        "rule_score": 40.58475
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ready set march: Researchers use math to explain sudden activity bursts in ants",
+        "url": "https://engineering.nyu.edu/news/ready-set-march-researchers-use-math-explain-sudden-activity-bursts-ants",
+        "published_at": "2026-08-09T01:01:52Z",
+        "fetched_at": "2026-08-09T11:32:51.787787Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "hhs",
+        "upstream_urls": [
+          "https://engineering.nyu.edu/news/ready-set-march-researchers-use-math-explain-sudden-activity-bursts-ants"
+        ],
+        "raw_metadata": {
+          "hn_id": 49227382,
+          "score": 7
+        },
+        "id": "499b7723c13fc279",
+        "canonical_url": "https://engineering.nyu.edu/news/ready-set-march-researchers-use-math-explain-sudden-activity-bursts-ants",
+        "normalized_title": "ready set march researchers use math to explain sudden activity bursts in ants",
+        "fingerprint": "499b7723c13fc279ad5595fdd22050c56a8b8f5d87934d0d991b320f2b729715",
+        "rule_score": 40.50311111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
+        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
+        "published_at": "2026-08-09T00:59:58Z",
+        "fetched_at": "2026-08-09T11:32:48.738241Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "bohaska",
+        "upstream_urls": [
+          "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621"
+        ],
+        "raw_metadata": {
+          "hn_id": 49227365,
+          "score": 139
+        },
+        "id": "0ad9ec30f251a2ab",
+        "canonical_url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
+        "normalized_title": "melatonin impairs morning cognition in healthy young adults 2023",
+        "fingerprint": "0ad9ec30f251a2abfa00351791d6e6a3f25a604d0e6182bbc89e95d1fd02e5ea",
+        "rule_score": 40.499944444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Tura – Build agent that uses 80% less token and delivers better results",
+        "url": "https://github.com/Tura-AI/tura",
+        "published_at": "2026-08-09T00:13:12Z",
+        "fetched_at": "2026-08-09T11:32:52.080682Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "turaainet",
+        "upstream_urls": [
+          "https://github.com/Tura-AI/tura"
+        ],
+        "raw_metadata": {
+          "hn_id": 49227119,
+          "score": 7
+        },
+        "id": "df6d632d7625d5fd",
+        "canonical_url": "https://github.com/Tura-AI/tura",
+        "normalized_title": "show hn tura build agent that uses 80 less token and delivers better results",
+        "fingerprint": "df6d632d7625d5fdf42c71f25e1cc2aef5aabdb42a24259b353758eed218444a",
+        "rule_score": 40.422
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AFK – Command center for teams running coding agents",
+        "url": "https://www.mooglest.com/",
+        "published_at": "2026-08-08T23:26:19Z",
+        "fetched_at": "2026-08-09T11:32:51.306052Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "lcavadas",
+        "upstream_urls": [
+          "https://www.mooglest.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49226855,
+          "score": 7
+        },
+        "id": "6a4c5d67f6067a3d",
+        "canonical_url": "https://www.mooglest.com/",
+        "normalized_title": "afk command center for teams running coding agents",
+        "fingerprint": "6a4c5d67f6067a3d3b91a2e36a8a6dcdeab5f953cc7be18930a409baf140971f",
+        "rule_score": 40.34386111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Algebruh - Cross-check arithmetic claims with Z3, cvc5, and Lean",
+        "url": "https://github.com/skorotkiewicz/algebruh",
+        "published_at": "2026-08-08T18:04:15Z",
+        "fetched_at": "2026-08-09T11:32:52.112935Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "modinfo",
+        "upstream_urls": [
+          "https://github.com/skorotkiewicz/algebruh"
+        ],
+        "raw_metadata": {
+          "hn_id": 49224241,
+          "score": 12
+        },
+        "id": "5604e0bf2b9f6001",
+        "canonical_url": "https://github.com/skorotkiewicz/algebruh",
+        "normalized_title": "show hn algebruh cross check arithmetic claims with z3 cvc5 and lean",
+        "fingerprint": "5604e0bf2b9f6001f9f3f2b94cee9f94ddbd842b5008a33898b4cb6ec49b18b4",
+        "rule_score": 39.80708333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "TinySol, a tiny solitaire game for DOS",
+        "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
+        "published_at": "2026-08-08T17:42:40Z",
+        "fetched_at": "2026-08-09T11:32:50.383028Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "skibz",
+        "upstream_urls": [
+          "https://classicbits.net/coding-and-software/my-software/monosol/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49224020,
+          "score": 56
+        },
+        "id": "73c43cd8b68fd693",
+        "canonical_url": "https://classicbits.net/coding-and-software/my-software/monosol",
+        "normalized_title": "tinysol a tiny solitaire game for dos",
+        "fingerprint": "73c43cd8b68fd693a63f1a1355643bd86f832f0e626316b2f5e9e8815023cb6f",
+        "rule_score": 39.77111111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Fastmail offers EU data region",
+        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+        "published_at": "2026-08-08T16:04:51Z",
+        "fetched_at": "2026-08-09T11:32:48.592792Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "groomlake",
+        "upstream_urls": [
+          "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49223082,
+          "score": 437
+        },
+        "id": "98b1cc1ae047cd10",
+        "canonical_url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region",
+        "normalized_title": "fastmail offers eu data region",
+        "fingerprint": "98b1cc1ae047cd10cba0add295cb878263bfc06da20eb8d9f11d13c7d480618b",
+        "rule_score": 39.60808333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Gentoo bugzilla closed due AI bot scraper overload",
+        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "published_at": "2026-08-08T13:55:42Z",
+        "fetched_at": "2026-08-09T11:32:51.043801Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "happosai",
+        "upstream_urls": [
+          "https://social.treehouse.systems/@mgorny/117058483039362779"
+        ],
+        "raw_metadata": {
+          "hn_id": 49221864,
+          "score": 166
+        },
+        "id": "ae5bf65c5e837c8f",
+        "canonical_url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "normalized_title": "gentoo bugzilla closed due ai bot scraper overload",
+        "fingerprint": "ae5bf65c5e837c8f64af0abcb64fca5bc74d589bd92a07e2f62a41f0d2d44944",
+        "rule_score": 39.392833333333336
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "CSS: The bomb inside your inbox",
+        "url": "https://portswigger.net/research/css-the-bomb-inside-your-inbox",
+        "published_at": "2026-08-09T10:17:52Z",
+        "fetched_at": "2026-08-09T11:32:48.803305Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ashurandi",
+        "upstream_urls": [
+          "https://portswigger.net/research/css-the-bomb-inside-your-inbox"
+        ],
+        "raw_metadata": {
+          "hn_id": 49230066,
+          "score": 19
+        },
+        "id": "0c448f506eb012e2",
+        "canonical_url": "https://portswigger.net/research/css-the-bomb-inside-your-inbox",
+        "normalized_title": "css the bomb inside your inbox",
+        "fingerprint": "0c448f506eb012e273c12b50e207657bc14ea3509945af03ab721cf8d223eaaa",
+        "rule_score": 37.42977777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
+        "url": "https://halfhill.com/byte/1998-12_alpha.html",
+        "published_at": "2026-08-09T10:06:37Z",
+        "fetched_at": "2026-08-09T11:32:48.526939Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Lammy",
+        "upstream_urls": [
+          "https://halfhill.com/byte/1998-12_alpha.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49230022,
+          "score": 11
+        },
+        "id": "dcb2e07c81f5b954",
+        "canonical_url": "https://halfhill.com/byte/1998-12_alpha.html",
+        "normalized_title": "the alpha 21264 cpu nt s greatest risc 1998",
+        "fingerprint": "dcb2e07c81f5b954d8cfada22b55a4248ad6bf48e1ffa3a55fbb98296f76f886",
+        "rule_score": 37.411027777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "DeepSeek V4 Flash 0731",
+        "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
+        "published_at": "2026-08-07T17:56:20Z",
+        "fetched_at": "2026-08-09T11:32:50.747144Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "tosh",
+        "upstream_urls": [
+          "https://arcprize.org/results/deepseek-v4-flash-0731"
+        ],
+        "raw_metadata": {
+          "hn_id": 49214008,
+          "score": 773
+        },
+        "id": "c0927a23e7b9fda9",
+        "canonical_url": "https://arcprize.org/results/deepseek-v4-flash-0731",
+        "normalized_title": "deepseek v4 flash 0731",
+        "fingerprint": "c0927a23e7b9fda9f785a9bc33b6d95d461cca7c897c76f984c37dfe39b9e553",
+        "rule_score": 37.39388888888889
+      }
+    ],
+    "prompt_chars": 4626,
+    "estimated_input_tokens": 1156
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
