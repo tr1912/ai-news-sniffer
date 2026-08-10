@@ -1,0 +1,201 @@
+{
+  "date": "2026-08-10",
+  "generated_at": "2026-08-10T11:50:23.007530Z",
+  "run_id": "2026-08-10-03e59586",
+  "daily_summary_zh": "今日AI领域以开源模型与智能体研究为主线：Hugging Face Transformers v5.15.0正式支持Meta开源的30B多模态模型Muse Glimmer，llama.cpp修复共享专家MoE加载问题；多篇arXiv论文聚焦LLM智能体的统计推断、临床决策、测试时计算分配、长视界世界模型与扩散模型安全机制，整体呈现从模型能力到可用性、安全性的多重推进。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "9dba653dab3eea70",
+        "3788d30316fc142a"
+      ],
+      "category": "models",
+      "title_zh": "Transformers v5.15.0发布，支持Meta开源多模态模型Muse Glimmer",
+      "summary_zh": "Hugging Face Transformers v5.15.0新增对Meta Muse Glimmer的支持。Muse Glimmer是Meta发布的面向智能体场景的多模态模型，由Muse蒸馏而来，共30B稠密参数（2B ViT视觉编码器+28B文本解码器），采用Apache 2.0许可，可本地部署用于编码、文档分析、个人助理等隐私敏感应用。该版本同时加入GraniteMoeSWA与GraniteSWA模型支持。",
+      "why_it_matters_zh": "Muse Glimmer是Meta在开源多模态智能体模型上的重要动作，兼具体积适中、许可开放和本地部署友好等特性；Transformers官方集成将显著降低开发者上手成本，推动端侧多模态智能体生态发展。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+        "url": "https://huggingface.co/blog/muse-glimmer",
+        "published_at": "2026-08-10T00:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "transformers-releases",
+          "source_name": "Transformers Releases",
+          "title": "Transformers Releases: Release: v5.15.0",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.15.0",
+          "published_at": "2026-08-10T10:28:13Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "da137e9c66286193"
+      ],
+      "category": "research",
+      "title_zh": "Fisher-R1：让LLM智能体学会可靠假设检验，新基准上超越GPT-5.4",
+      "summary_zh": "arXiv论文提出P-Bench基准，包含425个覆盖经济学、生物学和医学的开放式假设检验任务，要求智能体选择统计方法、计算p值并给出结论。作者同时推出Fisher-R1，一个基于合成任务和强化学习训练的开放权重智能体；Fisher-R1-14B在P-Bench上较骨干模型显著提升，平均提升21%，并超越GPT-5.4和DeepSeekV4-Pro等强基线。",
+      "why_it_matters_zh": "现有LLM智能体即使代码执行正确，也常因细微统计推断错误而得出错误科学结论，而现有基准很少检验p值在数据假设下的有效性。Fisher-R1提供开放权重解决方案和更严格的评测，提升AI在科学实证中的可信度。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing",
+        "url": "https://arxiv.org/abs/2608.07437v1",
+        "published_at": "2026-08-07T17:22:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "f812c5e440ee6d62"
+      ],
+      "category": "research",
+      "title_zh": "扩散LLM既是被攻击目标也可作攻击者：机制性安全漏洞研究",
+      "summary_zh": "arXiv论文系统研究了扩散式大语言模型（DLLM）的安全对齐机制。研究发现，DLLM的安全对齐在架构间稀疏且可迁移：自我剪枝可使LLaDA的攻击成功率从2.6%升至73.8%，Dream从1.9%升至86.6%；基于Qwen2.5的迁移剪枝可使Dream和Fast-dLLM的攻击成功率分别达到73.2%与86.3%。论文还提出SN-Guided Diffusion，一种全离线黑盒越狱框架，可引导扩散过程避开安全触发区域，良性/越狱判别AUROC达1.0。",
+      "why_it_matters_zh": "扩散式LLM正在成为新范式，但其内部安全机制此前缺乏理解。该研究揭示安全神经元可迁移、易被剪枝破坏的脆弱性，并给出可复现的黑盒攻击方法，对新一代模型的安全对齐设计具有预警意义。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits",
+        "url": "https://arxiv.org/abs/2608.07430v1",
+        "published_at": "2026-08-07T17:17:18Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "2d01e15a69ccd636"
+      ],
+      "category": "research",
+      "title_zh": "ResidencyRL：在模拟临床环境中用强化学习训练医疗AI",
+      "summary_zh": "arXiv论文提出ResidencyRL，一种在模拟多轮临床场景（最多60轮对话、8次工具调用）中训练临床AI的强化学习方法。该方法将策略智能体与能模拟复杂对抗行为的LLM模拟器配对，基于诊断准确率、管理质量、沟通、文档与安全性等结构化奖励进行训练。在对抗条件下，ResidencyRL智能体的诊断准确率从81.0%提升至88.0%，漏诊红旗症状率降低31%。",
+      "why_it_matters_zh": "静态医学基准难以优化完整的临床决策序列，ResidencyRL模拟真实住院医师培训中的多轮问诊与决策过程，为医疗LLM提供了更贴近临床实践的强化学习训练范式，有望提升AI在真实诊疗中的可靠性与安全性。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "ResidencyRL: Reinforcement Learning in Simulated Clinical Environments",
+        "url": "https://arxiv.org/abs/2608.07418v1",
+        "published_at": "2026-08-07T17:04:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "52f04cb358b12bc8"
+      ],
+      "category": "research",
+      "title_zh": "将时序数据转为图像输入VLM：大幅降低推理能耗并提升精度",
+      "summary_zh": "arXiv论文提出将4G/5G网络KPI等数值时间序列绘制为2D图像后输入视觉语言模型（VLM），在Llama-3.2-90B、Qwen2.5-VL-72B和Pixtral-12B上实现3.6至10.4倍输入token缩减，推理能耗降低1.8至2.5倍。微调后的Llama-3.2-90B-Vision在电信异常检测中比纯文本版精度高220.7%，并显著优于LSTM和ARIMA基线。",
+      "why_it_matters_zh": "LLM推理占AI运营能耗的90%以上，而长数值序列在文本场景下极易超出上下文窗口。将时间序列图像化是兼顾效率、成本与准确性的实用路径，对电信边缘部署和CloudRAN等场景具有直接价值。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "A Picture is Worth a Thousand Tokens: How Vision Language Models Cut AI Energy Costs While Improving Accuracy",
+        "url": "https://arxiv.org/abs/2608.07427v1",
+        "published_at": "2026-08-07T17:14:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "8ce22f870f01dafa"
+      ],
+      "category": "inference",
+      "title_zh": "llama.cpp b10338发布：修复共享专家MoE模型加载失败问题",
+      "summary_zh": "llama.cpp b10338修复了MoE模型保存时共享/分块FFN长度键被重复写入导致模型无法加载的bug。该问题影响Qwen2MoE、Qwen3-Next、Granite-MoE、Hunyuan-MoE、Ernie4.5、BailingMoE2、Nemotron-H等采用共享专家的MoE架构；同时加强了roundtrip测试，确保各架构保存-加载循环正常。",
+      "why_it_matters_zh": "llama.cpp是本地大模型推理使用最广泛的开源引擎之一，共享专家MoE是主流高效架构。该修复直接关系到大量开源模型在本地部署的稳定性，对开发者工具链具有实际价值。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10338",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10338",
+        "published_at": "2026-08-10T10:51:18Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-15",
+      "candidate_ids": [
+        "1776fe93ef015eef"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face博客：让知识蒸馏的成本低到可大规模运行",
+      "summary_zh": "Hugging Face博客发布文章《Making Knowledge Distillation Cheap Enough to Run at Scale》，探讨如何降低知识蒸馏的成本，使其能够在大规模场景下实际运行。",
+      "why_it_matters_zh": "知识蒸馏是压缩模型、降低推理成本的核心手段，但传统蒸馏的算力开销常限制其规模化应用。该方向的成本优化有助于更多团队经济地部署高性能小模型。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+        "published_at": "2026-08-10T10:05:36Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 149,
+    "normalized": 149,
+    "filtered": 117,
+    "ai_candidates": 30,
+    "prompt_chars": 26671,
+    "estimated_input_tokens": 6667,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
