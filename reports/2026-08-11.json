@@ -1,0 +1,212 @@
+{
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11T11:46:40.332697Z",
+  "run_id": "2026-08-11-33df4f82",
+  "daily_summary_zh": "今日 AI 领域呈现学术研究与开源模型并进的格局：AMIE（Video）在实时视频问诊中达到专家级医疗 AI 表现；Meta 开源 30B 模型 Muse Glimmer，NVIDIA 发布开源多语言 TTS 模型 Magpie；安全研究揭示主流 LLM API 的加密推理轨迹可被窃取；此外多篇研究聚焦推理效率、科学视频评测、机器人价值建模与智能体安全等方向。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "257c91b27b385941"
+      ],
+      "category": "research",
+      "title_zh": "AMIE（Video）首次在实时临床视频问诊中达到专家级水平",
+      "summary_zh": "研究团队基于 Gemini 构建多智能体系统 AMIE（Video），集成低延迟对话、临床推理和实时音视频感知。在包含 30 名全科医生、15 名模拟患者和 100 个临床场景的随机 OSCE 研究中，临床评估者认为 AMIE（Video）达到专家级表现，优于纯文本版 AMIE（Text）。",
+      "why_it_matters_zh": "这是医疗 AI 首次在实时视频问诊场景中达到临床医生水平，验证了多模态交互对远程医疗和临床决策支持的重要价值。",
+      "importance_score": 92.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Towards Expert-level Medical AI for Real-time Video Consultations",
+        "url": "https://arxiv.org/abs/2608.09861v1",
+        "published_at": "2026-08-10T17:19:31Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "90fc428010527400"
+      ],
+      "category": "models",
+      "title_zh": "Meta 发布开源 30B 稠密模型 Muse Glimmer，支持 120K+ 上下文本地运行",
+      "summary_zh": "Meta 重回开源生态，发布 Muse Glimmer，一个 30B 开源权重稠密模型，具有 120K+ 上下文窗口，专为本地 AI 和智能体工作流设计。NVIDIA 博客介绍了其在本地 Agentic AI 工作流上的运行方案。",
+      "why_it_matters_zh": "Muse Glimmer 是 Meta 在开源模型生态的重要回归，强调本地部署和长上下文，为开发者和企业提供了新的高效自托管选项。",
+      "importance_score": 87.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Run Local Agentic AI Workflows with Meta’s Muse Glimmer on NVIDIA",
+        "url": "https://developer.nvidia.com/blog/run-local-agentic-ai-workflows-with-metas-muse-glimmer-on-nvidia/",
+        "published_at": "2026-08-10T13:27:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "7a7327405493235d"
+      ],
+      "category": "research",
+      "title_zh": "研究发现可从专有 LLM API 窃取推理过程，Anthropic、OpenAI、Google 受影响",
+      "summary_zh": "研究者发现一个可扩展的解密越狱漏洞：由于加密推理痕迹在不同会话、用户和模型间可互换，攻击者可将其注入同提供商的较弱模型中，强制其以明文输出专有模型推理轨迹。已在 Anthropic、OpenAI 和 Google 的模型上验证，可绕过抗蒸馏机制并造成大规模私有数据提取风险。",
+      "why_it_matters_zh": "该漏洞直指当前主流 LLM API 的架构性弱点，威胁专有模型的推理 IP 与用户隐私，将促使提供商重新设计推理痕迹的端侧加密与隔离机制。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+        "url": "https://arxiv.org/abs/2608.09867v1",
+        "published_at": "2026-08-10T17:24:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "f00aff865fa9eac5"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 开源 Magpie TTS：低延迟多语言语音智能体模型",
+      "summary_zh": "NVIDIA 在 Hugging Face 发布 Magpie TTS，提供开放权重和完整部署控制，面向低延迟多语言语音智能体场景，支持开发者自托管 TTS 服务。",
+      "why_it_matters_zh": "开放权重的多语言 TTS 模型降低了语音智能体的部署门槛，使开发者能完全掌控数据与推理流程，推动语音 Agent 应用落地。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+        "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+        "published_at": "2026-08-10T16:25:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "50504865d63c9bf6"
+      ],
+      "category": "research",
+      "title_zh": "BDH-CQ：以 1.5 亿参数在 ARC-AGI-1 上突破成本-精度帕累托前沿",
+      "summary_zh": "BDH-CQ 将上下文学习与循环潜在推理结合，不口头输出中间推理，在 ARC-AGI-1 公开集上以 150M 参数配置达到 29.5% pass@2，单任务推理成本约 0.0007 美元，突破此前报告的 ARC-AGI-1 成本效率前沿。",
+      "why_it_matters_zh": "该工作显著降低 ARC-AGI 类推理基准的成本门槛，为低成本、高效率的通用推理模型提供了新思路。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+        "url": "https://arxiv.org/abs/2608.09888v1",
+        "published_at": "2026-08-10T17:39:16Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "af8b416d882073ad"
+      ],
+      "category": "research",
+      "title_zh": "Sci-VBench：面向科学领域的视频生成评测基准发布",
+      "summary_zh": "Sci-VBench 包含 1253 个专家标注示例，覆盖自然科学、医疗健康、人文社科和工程四个学科 60 个主题，要求模型生成具有科学推理和知识基础的视频。评测显示，各系统在感知质量上接近，但在提示遵循和科学因果正确性上差异显著，且闭源与开源模型差距明显。",
+      "why_it_matters_zh": "该基准将视频生成评估从视觉逼真度扩展到科学因果正确性，揭示了当前视频模型在可靠建模科学动态上的不足。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Sci-VBench: Evaluating Knowledge- and Reasoning-Intensive Video Generation in Science Domains",
+        "url": "https://arxiv.org/abs/2608.09873v1",
+        "published_at": "2026-08-10T17:27:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "84b92accfe526662"
+      ],
+      "category": "open-source",
+      "title_zh": "vLLM 发布 v0.27.1 补丁，支持量化的 DSpark Markov heads",
+      "summary_zh": "vLLM v0.27.1 是 v0.27.0 的补丁版本，新增对量化 DSpark Markov heads 的支持。",
+      "why_it_matters_zh": "保持 vLLM 推理引擎对最新量化模型结构的兼容性，是开源推理生态持续演进的一部分。",
+      "importance_score": 57.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "title": "vLLM Releases: v0.27.1",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.27.1",
+        "published_at": "2026-08-11T10:47:49Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-14",
+      "candidate_ids": [
+        "ed68d57bd6541832"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10359，修复 WebGPU CI 问题并扩展支持",
+      "summary_zh": "llama.cpp b10359 修复 ggml-webgpu 的 CI 错误，新增 i32 支持等，并更新各平台二进制包。",
+      "why_it_matters_zh": "作为广泛使用的本地推理框架，持续的小版本更新保障了跨平台 CPU/GPU 推理的稳定性和新后端能力。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10359",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10359",
+        "published_at": "2026-08-11T10:48:48Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 154,
+    "normalized": 154,
+    "filtered": 130,
+    "ai_candidates": 30,
+    "prompt_chars": 30440,
+    "estimated_input_tokens": 7610,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
