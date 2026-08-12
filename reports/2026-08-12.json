@@ -1,0 +1,212 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "2026-08-12T11:50:08.841139Z",
+  "run_id": "2026-08-12-25c013ea",
+  "daily_summary_zh": "今日以基础设施与开源为主线：vLLM v0.27.0 完整支持 Kimi K3 并升级 PyTorch 2.13，NVIDIA 发布面向 Agent 的 Nemotron 3.5 Lightning 与 NeMo Switchyard 路由工具，llama.cpp 继续迭代。研究方面，AI 研究系统收紧了 Grothendieck 常数界，多项工作揭示了 Agentic 编程提示词的无界膨胀、多语言安全对齐的脆弱性、SAE 解释的局限，并提出 GUI 自适应、混合 RL 调度、对象级多模态预训练等新方法。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "45da6249c3270e34"
+      ],
+      "category": "open-source",
+      "title_zh": "vLLM v0.27.0 发布：原生支持 Kimi K3，新增 Qwen3.5 等模型并升级 PyTorch 2.13",
+      "summary_zh": "vLLM v0.27.0 正式发布，包含 561 个 commit、242 位贡献者。完整落地 Kimi K3 支持（模型文件、AttnRes/DeepGEMM 内核、Python/Rust 前端、压缩张量量化检查点、DSpark AR 融合等），新增 Qwen3.5、K-EXAONE-2.0、VaultGemma、jina-embeddings-v5 等模型；环境升级至 PyTorch 2.13/Triton 3.7.1，并深化 SM100 上 FlashAttention 4 的 FP8 KV cache 和 headdim-256 支持。",
+      "why_it_matters_zh": "作为最主流的开源推理服务引擎，vLLM 一次版本同时吃下前沿模型适配和底层框架升级，直接决定社区部署最新模型的成本与性能，是开源推理生态的晴雨表。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "title": "vLLM Releases: v0.27.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.27.0",
+        "published_at": "2026-08-10T21:18:11Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "9ea2dd713178055b"
+      ],
+      "category": "research",
+      "title_zh": "AI 研究系统帮助收紧 Grothendieck 常数的最佳已知界",
+      "summary_zh": "一项人机数学协作案例研究展示了 AI 研究系统将 Grothendieck 常数 K_G 的最佳已知界改进为 6π/11 ≤ K_G ≤ π/(2 log(1+√2)) - 10^-4，其中 AI 产生了被领域专家视为新颖的见解；论文详细讨论了使用 AI 做数学研究的经验与条件。",
+      "why_it_matters_zh": "这是 AI 在纯数学中获得可验证突破的代表性证据，说明长程 AI 研究系统不仅能检索和重排论证，还能产生专家认可的新想法，对科学发现范式有深远意义。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
+        "url": "https://arxiv.org/abs/2608.11195v1",
+        "published_at": "2026-08-11T17:53:48Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "f6aaaaf38de2cf8c"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Nemotron 3.5 Lightning，面向长时运行 Agent 的高频执行任务优化",
+      "summary_zh": "NVIDIA 发布 Nemotron 3.5 Lightning，面向长时运行 AI Agent 中占比最大、规模最大的执行环节（工具调用、结果验证、子代理委派），以快速、准确的方式完成专门任务执行。",
+      "why_it_matters_zh": "Agent 的端到端成本与延迟主要由执行阶段决定，专门为高吞吐执行优化的小型模型可以显著提升 Agent 基础设施的效率，是模型产品化的重要方向。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA Nemotron 3.5 Lightning Delivers Fast, Accurate Specialized Task Execution for Long-Running Agents",
+        "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/",
+        "published_at": "2026-08-11T13:01:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "54f93689934e8ba9"
+      ],
+      "category": "research",
+      "title_zh": "为什么 CLAUDE.md 一直膨胀？Agentic 编程中的“灾难性记住”",
+      "summary_zh": "研究基于 1,867 个仓库中 247,694 条指令生命周期发现，Agentic 编程的提示文件无界增长（+226%，每 commit 净增 4.9 条指令），旧指令越老越难删除；原因是删除指令需要对抗 O(2^|D|) 的回归风险。通过在提示中引入编码潜在推理的注释，可去除 99.3% 的多余指令。",
+      "why_it_matters_zh": "AI 编程助手被广泛采用后，项目提示词的无界膨胀正成为真实工程负担；该研究给出了可量化的诊断和低成本的缓解手段。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding",
+        "url": "https://arxiv.org/abs/2608.11095v1",
+        "published_at": "2026-08-11T16:00:55Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "b895a37a576b16ac"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA NeMo Switchyard：在模型间路由 AI Agent 工作负载",
+      "summary_zh": "NVIDIA 在官方博客介绍 NeMo Switchyard，帮助构建 Agent 时根据每个模型的优势、短板和成本画像，在不同模型之间路由工作负载。",
+      "why_it_matters_zh": "多模型路由是控制 Agent 成本和保证质量的关键工程手段，NVIDIA 将其纳入 NeMo 平台有助于企业级 Agent 部署标准化。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Route AI Agent Workloads Across Models with NVIDIA NeMo Switchyard",
+        "url": "https://developer.nvidia.com/blog/route-ai-agent-workloads-across-models-with-nvidia-nemo-switchyard/",
+        "published_at": "2026-08-11T13:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "db0521f4c2182d76"
+      ],
+      "category": "research",
+      "title_zh": "MISA-T：面向混合 RL rollout 的调度策略",
+      "summary_zh": "论文提出 MISA-T，一种路由层准入策略，将自适应会话准入、工作负载感知的 KV 容量分配和驻留时间感知的 KV 记账结合，以服务 RLVR、RLHF、Agentic rollout 混合共享的推理集群。在 Step3.7 和 Qwen3.6-35B-A3B 的 rollout 消融中，相比调参后的缓存感知 vLLM Router，吞吐分别提升 53.3% 和 43.6%。",
+      "why_it_matters_zh": "RL 后训练负载日益异构，KV 缓存竞争成为推理吞吐瓶颈；MISA-T 为 RL 训练推理一体化提供了可落地的调度优化。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Scheduling Mixed RL Rollouts Beyond Prefix Locality",
+        "url": "https://arxiv.org/abs/2608.11152v1",
+        "published_at": "2026-08-11T17:10:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "6b400828c6b985a0"
+      ],
+      "category": "research",
+      "title_zh": "测试时自进化：反思引导的 GUI 视觉 grounding 自适应",
+      "summary_zh": "论文提出测试时自进化框架，让 GUI grounding 模型部署后无需人工标注即可适应新界面。框架包含探索、评估、反思、内化闭环：MLLM 反射器评估预测并提供推理反思，反思引导的 On-Policy 自蒸馏将高层推理转化为 token 级监督，并用对比校准防止错误自回归前缀污染信号。",
+      "why_it_matters_zh": "GUI Agent 要真正落地必须应对未见过界面，该工作用测试时自适应减少人工标注依赖，是提升 Agent 泛化能力的重要探索。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
+        "url": "https://arxiv.org/abs/2608.11191v1",
+        "published_at": "2026-08-11T17:50:25Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "5be2f29cc11969e7"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10373 版本",
+      "summary_zh": "llama.cpp b10373 发布：imatrix.cpp 改为只检查被触及的专家并进行有限值检查；同步更新官方网站 llama.app；为 macOS/iOS、Linux（含 Vulkan、s390x）提供预编译二进制，KleidiAI 构建默认禁用。",
+      "why_it_matters_zh": "llama.cpp 是本地与边缘 LLM 推理的核心开源项目，持续的小步迭代保证了跨平台生态的稳定性和可部署性。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10373",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10373",
+        "published_at": "2026-08-12T09:23:01Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 167,
+    "normalized": 167,
+    "filtered": 141,
+    "ai_candidates": 30,
+    "prompt_chars": 25848,
+    "estimated_input_tokens": 6462,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
