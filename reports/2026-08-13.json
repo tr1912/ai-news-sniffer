@@ -1,0 +1,213 @@
+{
+  "date": "2026-08-13",
+  "generated_at": "2026-08-13T11:51:18.383167Z",
+  "run_id": "2026-08-13-bf0f0f1f",
+  "daily_summary_zh": "今日焦点集中在开源模型与推理基础设施：NVIDIA 发布 Qwen3.8-Max 在 GB300 NVL72 上的部署指南，Liquid AI 推出边缘视觉模型，llama.cpp 连续更新；学术界则围绕长上下文训练、多智能体模拟器坍缩、企业智能体基准与技能供应链安全等发布多项新研究。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "8095593fac322baa"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 发布 Qwen3.8-2.4T-A95B 在 GB300 NVL72 上的部署指南",
+      "summary_zh": "阿里巴巴开源了 Qwen3.8-2.4T-A95B（Qwen3.8-Max）的权重，NVIDIA 官方博客介绍了如何在 GB300 NVL72 上以可配置推理模式部署这一 2.4T 参数模型。",
+      "why_it_matters_zh": "Qwen3.8-Max 是阿里目前最大的开源权重模型，接近前沿能力；NVIDIA 提供 GB300 NVL72 上的服务方案，降低了企业自托管超大模型的门槛。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Serve Qwen3.8-2.4T-A95B, a 2.4T-Parameter Model, with Configurable Reasoning on NVIDIA GB300 NVL72",
+        "url": "https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/",
+        "published_at": "2026-08-12T18:23:13Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "7da69da953e07f40"
+      ],
+      "category": "research",
+      "title_zh": "“信息充裕悖论”：长上下文训练削弱参数化知识",
+      "summary_zh": "研究发现，预训练中增大上下文窗口只在中间最优区间提升语言建模与知识问答，之后持续下降；SFT 中更多训练上下文提高带支持场景的表现，但降低无上下文或误导场景的鲁棒性。",
+      "why_it_matters_zh": "挑战了‘上下文越长越好’的隐含假设，提示长上下文训练可能让模型过度依赖上下文而减少参数内化知识。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Information Abundance Paradox: Long-Context Training Undermines Parametric Knowledge",
+        "url": "https://arxiv.org/abs/2608.12218v1",
+        "published_at": "2026-08-12T16:13:05Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "79850b8c7b200267"
+      ],
+      "category": "research",
+      "title_zh": "研究揭示多智能体强化学习中的“模拟器坍缩”问题",
+      "summary_zh": "论文指出，用单一 LLM 模拟用户行为会导致策略过拟合到模拟器的主导模式，跨模拟器与真实用户泛化差；提出 Verbalized Sampling 和 Co-Training 两种方案，在 Persuasion for Good、τ²-bench、CooperBench 上分别将留出成功率提升至多 9% 和 14%。",
+      "why_it_matters_zh": "为 human-AI 交互训练中的模拟器使用提供了理论解释和实用解法，直接关系 RL 策略的可靠性。",
+      "importance_score": 81.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL",
+        "url": "https://arxiv.org/abs/2608.12253v1",
+        "published_at": "2026-08-12T16:55:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "45a3cda4a7a2ee6d"
+      ],
+      "category": "security",
+      "title_zh": "新研究提出针对 LLM 智能体技能供应链的“汇聚绕行劫持”攻击",
+      "summary_zh": "CDH 攻击利用技能描述与指令体的配合，在任务规划中引入攻击者控制的协调器并招募良性技能，形成有界绕行后回归原任务；在 DeepSeek-V4-Pro 上匹配协调器的选中率达 80.02%。",
+      "why_it_matters_zh": "揭示了第三方技能生态的端到端组合风险，为 LLM 智能体安全评估与防御提供新攻击面。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents",
+        "url": "https://arxiv.org/abs/2608.12273v1",
+        "published_at": "2026-08-12T17:12:49Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "a56f6705cd0ca708",
+        "228e7ed30e325f50"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10369、b10405：新增 Pocket-TTS 支持并修复 HIP 数值一致性",
+      "summary_zh": "b10369 在 mtmd 中支持 Pocket-TTS，将转置卷积改为 GEMM+col2im，CUDA 每帧生成时间降低 80%、CPU 降低 50%；b10405 移除了 HIP 构建中的 -funsafe-math-optimizations，使 RDNA3.5 等平台保持 IEEE 合规。",
+      "why_it_matters_zh": "作为最广泛使用的开源 LLM 推理引擎之一，llama.cpp 的推理性能提升和数值一致性修复直接惠及本地与边缘部署用户。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10369",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10369",
+        "published_at": "2026-08-12T04:52:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "d78f3bc9e07bf334"
+      ],
+      "category": "research",
+      "title_zh": "VAKRA：覆盖 8000+ 可执行 API 的企业智能体多跳推理基准",
+      "summary_zh": "新基准涵盖 62 个领域、8,000 多个可执行 API，通过重放预测调用验证正确性；测试发现最佳模型在单跳端到端任务上仅 70.4%，组合 API 上降至 50-51%，策略约束的不可回答问题上低至 2.4%。",
+      "why_it_matters_zh": "首个将 API 交互与检索结合评估的基准，凸显企业智能体在语言中介推理与工具使用策略上的严重短板。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "VAKRA: Evaluating Multi-Hop Reasoning Across APIs and Retrieval Under Tool-Use Policies",
+        "url": "https://arxiv.org/abs/2608.12282v1",
+        "published_at": "2026-08-12T17:27:27Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "1d432e820cd8f468"
+      ],
+      "category": "models",
+      "title_zh": "Liquid AI 发布 LFM2.5-VL-3B 边缘视觉模型",
+      "summary_zh": "Liquid AI 介绍了 LFM2.5-VL-3B，一款面向边缘场景、更小更快的视觉语言模型。",
+      "why_it_matters_zh": "边缘多模态模型有助于在端侧设备上实现视觉理解，Liquid AI 的高效架构路线为部署提供了新选择。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "LFM2.5-VL-3B for Better and Faster Vision Capabilities for the Edge",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b",
+        "published_at": "2026-08-12T14:00:51Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "874b5b1418dcf54e"
+      ],
+      "category": "open-source",
+      "title_zh": "OlmoEarth 推出自定义嵌入导出功能",
+      "summary_zh": "AI2 在 OlmoEarth Studio 中新增自定义嵌入导出，用户可将地球观测数据生成的嵌入导出用于下游分析。",
+      "why_it_matters_zh": "为地理空间与遥感领域的 AI 工作流提供了更灵活的基础设施，方便研究者复用 OlmoEarth 的表示学习能力。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis",
+        "url": "https://huggingface.co/blog/allenai/olmoearth-embeddings",
+        "published_at": "2026-08-12T16:14:36Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 162,
+    "normalized": 162,
+    "filtered": 131,
+    "ai_candidates": 30,
+    "prompt_chars": 23782,
+    "estimated_input_tokens": 5945,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
