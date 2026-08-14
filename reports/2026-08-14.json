@@ -1,0 +1,172 @@
+{
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14T11:47:03.551587Z",
+  "run_id": "2026-08-14-518905ed",
+  "daily_summary_zh": "今日AI领域以学术与开源进展为主：Intern-S2-Preview科学智能体基础模型、Vero仓库级形式化验证基准、LittleLearner受控课程模型、MARC临床多智能体框架、AaLLM模拟电路设计等多项研究发布；同时Hugging Face与亚马逊推出机器人数据闭环方案，并公开ICML 2200篇论文的大规模复现经验；推理优化、量子学习优势等成果也值得关注。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "fd3f5696c71a07e1"
+      ],
+      "category": "models",
+      "title_zh": "Intern-S2-Preview：面向科学研究的智能体基础模型",
+      "summary_zh": "Intern-S2-Preview是一系列科学智能体基础模型，支持多模态科学理解、推理、生成和长周期任务。训练流程包括科学多模态预训练、统一后训练、多任务强化学习、黑盒与白盒智能体强化学习以及在线蒸馏；架构上，397B版本扩展了时间序列建模能力。",
+      "why_it_matters_zh": "该工作展示了将多模态感知与长周期智能体决策相结合的科学AI方向，其训练稳定性和效率优化方法对构建科研智能体具有参考价值。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Intern-S2-Preview: Scientific Agentic Foundation Model",
+        "url": "https://arxiv.org/abs/2608.13505v1",
+        "published_at": "2026-08-13T17:31:28Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "29c9d556467f9b7b"
+      ],
+      "category": "research",
+      "title_zh": "Vero：首个仓库级形式化验证代码生成基准",
+      "summary_zh": "Vero包含43个来自真实仓库的多模块实例，覆盖Python、Dafny、Verus、Coq和Lean 4，要求AI智能体同时生成实现和机器可验证的证明，支持仅证明与代码+证明两种评测模式。",
+      "why_it_matters_zh": "该基准将AI编程验证从单函数层面扩展到多模块代码库层面，推动可信任AI生成软件的研究。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
+        "url": "https://arxiv.org/abs/2608.13522v1",
+        "published_at": "2026-08-13T17:41:27Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "173292f52ce7fde1"
+      ],
+      "category": "research",
+      "title_zh": "单量子比特实现指数级量子学习优势",
+      "summary_zh": "研究发现将单个可控量子比特耦合到常规传感器，可指数级减少学习经典信号所需的测量次数，包括傅里叶系数、时变信号时间相关性等任务。在超导腔-量子比特架构实验中展示了10^7倍的测量数降低，并可改善弱信号暗物质探测与无线通信仿真的性能。",
+      "why_it_matters_zh": "该成果在极简量子硬件资源下实现了可验证的量子优势，为量子增强感知和科学发现提供了实用路径。",
+      "importance_score": 81.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Exponential quantum advantage for learning signals with a single qubit",
+        "url": "https://arxiv.org/abs/2608.13521v1",
+        "published_at": "2026-08-13T17:40:39Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "514f40fb21a46851"
+      ],
+      "category": "models",
+      "title_zh": "LittleLearner：在受控课程知识暴露下训练的语言模型",
+      "summary_zh": "研究构建了面向美国小学五年级以下教学内容的880亿token预训练语料库LITTLECURRICULUM，并从头训练了5B参数的LITTLELEARNER模型。该模型具备开放域语言能力，同时知识边界可映射到可解释的课程指南；实验显示后训练和上下文学习能更好利用已有知识，但不会提升超出范围的能力。",
+      "why_it_matters_zh": "该工作为研究模型知识获取、表示与边界提供了受控沙盒，有助于理解训练数据组成对模型能力的影响。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+        "url": "https://arxiv.org/abs/2608.13545v1",
+        "published_at": "2026-08-13T17:56:12Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "bf1afbaf36658548"
+      ],
+      "category": "open-source",
+      "title_zh": "Hugging Face与亚马逊联合推出Strands Agents：机器人数据记录-训练-部署一体化",
+      "summary_zh": "Hugging Face博客介绍了Strands Agents与LeRobot及Hugging Face Storage Buckets的集成，支持在同一个地方完成机器人数据记录、训练和部署，构建流式数据闭环。",
+      "why_it_matters_zh": "该方案降低了具身智能数据管理门槛，推动开源机器人学习生态与云存储基础设施的结合。",
+      "importance_score": 77.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets",
+        "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+        "published_at": "2026-08-13T17:16:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-14",
+      "candidate_ids": [
+        "59158c27f5e94bbd"
+      ],
+      "category": "research",
+      "title_zh": "Hugging Face公开ICML 2026大规模复现经验",
+      "summary_zh": "Hugging Face博客总结了从ICML 2026复现2200篇论文过程中获得的经验与教训，涉及可复现性、基准一致性等开放科学议题。",
+      "why_it_matters_zh": "大规模复现工作为衡量AI研究可复现性提供了重要参考，有助于推动更透明、可验证的学术生态。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "What We Learned by Reproducing 2,200 papers from ICML",
+        "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
+        "published_at": "2026-08-13T00:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 166,
+    "normalized": 166,
+    "filtered": 136,
+    "ai_candidates": 30,
+    "prompt_chars": 26427,
+    "estimated_input_tokens": 6606,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
