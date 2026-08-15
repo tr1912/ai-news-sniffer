@@ -1,0 +1,172 @@
+{
+  "date": "2026-08-15",
+  "generated_at": "2026-08-15T11:23:20.902612Z",
+  "run_id": "2026-08-15-a8509503",
+  "daily_summary_zh": "今日 AI 动态以开源与科研为主：llama.cpp 新增 MiniMax-Text-01/M1 支持；Hugging Face 发布夏季开源模型观察；多篇论文分别在预训练数据影响、人形运动跟踪基准、掩码扩散调度、三维密度泛函学习、方程发现与鲁棒学习理论等方面取得进展。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "381ffad10b343d17"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10437：支持 MiniMax-Text-01 与 MiniMax-M1",
+      "summary_zh": "llama.cpp 在 b10437 版本中加入 MiniMaxText01ForCausalLM 和 MiniMaxM1ForCausalLM 的支持，包括日志掩码图输入、循环状态管理、转换脚本和 Jinja 聊天模板，并优化了 MiniMax-Text-01 的图实现，移除不必要的转置与内存操作。",
+      "why_it_matters_zh": "作为最流行的本地推理引擎之一，llama.cpp 对新模型系列的快速适配直接影响开源模型在消费级硬件上的可用性，也延续了 MiniMax 等新架构进入开源生态的速度。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10437",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10437",
+        "published_at": "2026-08-15T05:24:03Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "1e04f20aad294f38"
+      ],
+      "category": "open-source",
+      "title_zh": "Hugging Face 发布 2026 夏季开源模型现状观察",
+      "summary_zh": "Hugging Face 官方博客发布《State of Open Models: Summer 2026 Observations》，总结 2026 年夏季开源模型在模型能力、开放权重、社区工具和生态发展等方面的最新观察。",
+      "why_it_matters_zh": "作为开源模型社区的核心平台，Hugging Face 的季度观察是判断开源与闭源模型竞争格局、开放权重趋势及开发者生态的重要参考。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "State of Open Models: Summer 2026 Observations",
+        "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
+        "published_at": "2026-08-14T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "595b150c45d0d018"
+      ],
+      "category": "research",
+      "title_zh": "新方法度量预训练中训练数据影响，揭示文学与 STEM 数据的阶段性转变",
+      "summary_zh": "论文提出一种无需下游任务或验证集的数据影响度量：以样本梯度更新缩小与最终参数平方距离的程度来衡量影响力，并在 Pythia/PolyPythia 的 18 种配置中发现早期文学相关数据影响力更强、后期 STEM 数据影响力更强。",
+      "why_it_matters_zh": "该工作为理解大模型预训练中不同语料的作用提供了更通用的轨迹级视角，可能改进数据配比和训练策略。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Measuring Task-Agnostic Training Data Influence Across Language Model Pretraining",
+        "url": "https://arxiv.org/abs/2608.13515v1",
+        "published_at": "2026-08-13T17:36:49Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "5f9608c9ac9a7d9a"
+      ],
+      "category": "research",
+      "title_zh": "等变学习三维经典密度泛函，单模型可跨温度与体系迁移",
+      "summary_zh": "论文展示可直接从三维平衡密度场学习经典密度泛函理论中的超额自由能泛函，保持空间对称性和变分一致性，无需自由能或化学势标签；训练出的泛函可迁移至不同温度、体系尺寸和统计系综，并预测结构因子、状态方程、液汽共存和界面变宽等未作为训练目标的性质。",
+      "why_it_matters_zh": "这为液体和复杂三维几何（如胶体间溶剂桥、螺旋孔吸附）提供可迁移的变分描述，减少逐状态重复模拟，代表 AI for Science 的重要进展。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Equivariant learning of a transferable three-dimensional classical density functional",
+        "url": "https://arxiv.org/abs/2608.13506v1",
+        "published_at": "2026-08-13T17:32:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "33ce007937ad1d91"
+      ],
+      "category": "research",
+      "title_zh": "新基准 HumanTracker 提出人类对齐的人形运动跟踪评估",
+      "summary_zh": "研究提出 HumanTracker 基准，包含约 153 小时专业表演者的光学运动轨迹，分为四类运动族并带文本标签；同时提出 HumanScore 指标，基于 12K 运动对（24K 运动）训练，能比传统 kinematic 指标更好地预测人类偏好，并揭示步滑、触地时机错误等接触与稳定性问题。",
+      "why_it_matters_zh": "人形机器人遥操作和全身模仿需要更贴近人类感知的评估方法，HumanTracker 为接触丰富、长时程任务提供了可扩展的评测体系。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
+        "url": "https://arxiv.org/abs/2608.13555v1",
+        "published_at": "2026-08-13T17:59:40Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "bccf729974c1d872"
+      ],
+      "category": "research",
+      "title_zh": "Bagging 结合鲁棒 ERM 以线性样本复杂度学习 VC 类",
+      "summary_zh": "论文证明 VC 类可用复杂度线性于 VC 维的样本量进行对抗鲁棒学习，相比此前指数级上界是指数级改进；算法在 O(d*)（d* 为对偶 VC 维）个 bootstrap 样本上计算鲁棒 ERM 并多数投票，同时给出调用 RERM 次数下界 Ω(d*)。",
+      "why_it_matters_zh": "这是对抗鲁棒学习理论的重要突破，且算法非常简单，经典 bagging 就足够，可能对鲁棒机器学习实践有实际启发。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Bagging Robustly Learns VC Classes with Linear Sample Complexity",
+        "url": "https://arxiv.org/abs/2608.13514v1",
+        "published_at": "2026-08-13T17:36:49Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 164,
+    "normalized": 164,
+    "filtered": 111,
+    "ai_candidates": 30,
+    "prompt_chars": 15757,
+    "estimated_input_tokens": 3939,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
