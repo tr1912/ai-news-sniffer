@@ -1,0 +1,134 @@
+{
+  "date": "2026-08-16",
+  "generated_at": "2026-08-16T11:22:55.583552Z",
+  "run_id": "2026-08-16-b452a060",
+  "daily_summary_zh": "今日AI值得关注：llama.cpp 发布 b10452 版本，改进聊天内容支持；arXiv 出现三篇新论文，涵盖对齐新范式（合成人格预训练）、恶意软件概念漂移检测和 Langevin 采样理论。",
+  "events": [
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "edd2d0b4d4e5000a"
+      ],
+      "category": "research",
+      "title_zh": "新研究提出“合成人格预训练”：从 token 零开始对齐模型价值观",
+      "summary_zh": "arXiv 论文提出 Synthetic Persona Pretraining (SPP)，在预训练阶段为文档标注基于价值宪法的一人称反思，通过标准交叉熵损失共同学习，使模型从预训练第一步就安装目标助手人格，随后用对话数据完成“人格绑定”。在 3B 参数、500B token 规模上，该方法提升了宪法遵循和越狱鲁棒性，降低了错位率。",
+      "why_it_matters_zh": "传统对齐在预训练后附加，被称为“薄覆盖”。SPP 尝试从预训练内部树立价值观，为提升 AI 安全性和一致性提供了全新范式，但其在大规模模型上的可扩展性仍需验证。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Synthetic Persona Pretraining: Alignment from Token Zero",
+        "url": "https://arxiv.org/abs/2608.13482v1",
+        "published_at": "2026-08-13T17:12:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "40d5d4762b04d425"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b10452 发布，重构聊天内容支持逻辑",
+      "summary_zh": "llama.cpp 发布 b10452 版本，主要重构 supports_string_content / supports_typed_content 的处理逻辑，优化聊天输入归一化，并新增跳过测试，同步提供 macOS、Linux、iOS 等多平台二进制包。",
+      "why_it_matters_zh": "llama.cpp 是本地大模型推理最流行的开源项目之一，本次更新提升了模型聊天接口对多类型内容（如结构化输出）的兼容性，对基于 llama.cpp 的本地应用开发者有直接价值。",
+      "importance_score": 55.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10452",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10452",
+        "published_at": "2026-08-16T11:21:52Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "7657da292f66aeae"
+      ],
+      "category": "research",
+      "title_zh": "恶意软件分类中的概念漂移检测与自适应重训研究",
+      "summary_zh": "该研究比较了基于 OCSVM 的新颖检测方法和基于 Minibatch K-Means 的既有技术，用于识别恶意软件分类模型的概念漂移。作者在四种学习模型（多层感知机、随机森林、SVM、XGBoost）上测试了静态、周期性重训和漂移感知三种场景，验证了漂移感知策略的有效性。",
+      "why_it_matters_zh": "恶意软件不断变异导致模型性能持续衰减，自动化的漂移检测与重训机制对实际安全系统至关重要，该研究为部署鲁棒防御模型提供了具体参考。",
+      "importance_score": 55.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Concept Drift Detection and Adaptive Retraining of Malware Classification Models",
+        "url": "https://arxiv.org/abs/2608.13465v1",
+        "published_at": "2026-08-13T16:46:56Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "167344a8e39928a7"
+      ],
+      "category": "research",
+      "title_zh": "Moreau-Yosida 非平滑 Langevin 采样的活跃迹复杂度界限",
+      "summary_zh": "论文针对非光滑复合目标的 MYULA 算法，证明了其离散化误差由‘参考活跃迹’控制，而非全局曲率，并给出迭代复杂度上界。这一理论结果改进了对强凸非光滑目标上 Langevin 采样效率的刻画。",
+      "why_it_matters_zh": "为贝叶斯采样和非光滑优化提供了新的理论工具，对设计高效采样算法和推理方法有指导意义，推动了机器学习理论的前沿。",
+      "importance_score": 50.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Active-Trace Complexity Bounds for Moreau--Yosida Unadjusted Langevin Sampling",
+        "url": "https://arxiv.org/abs/2608.13467v1",
+        "published_at": "2026-08-13T16:47:41Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source vllm-releases failed: SourceFetchError: vllm-releases: GitHub fetch failed",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 157,
+    "normalized": 157,
+    "filtered": 82,
+    "ai_candidates": 30,
+    "prompt_chars": 7906,
+    "estimated_input_tokens": 1976,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "vllm-releases",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

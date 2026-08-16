@@ -1,0 +1,872 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 157,
+  "normalized_count": 157,
+  "filtered_count": 82,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10452",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10452",
+        "published_at": "2026-08-16T11:21:52Z",
+        "fetched_at": "2026-08-16T11:23:39.377632Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nchat: refactor handling supports_string_content / supports_typed_content (#27130)\n\n* better supports_string_content cap detect\n\n* test: add \"skip\"\n\n* messages_inp_normalizer\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10452/llama-b10452-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10452/llama-b10452-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10452/llama-b10452-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10452/llama-b10452-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10452/llama-b10452-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10452/llama-b10452-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10452/llama",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 371305663
+        },
+        "id": "40d5d4762b04d425",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10452",
+        "normalized_title": "llama cpp releases b10452",
+        "fingerprint": "40d5d4762b04d425c477ffb4b2372feacad0db96bce603ca0a9bbad95ed119c2",
+        "rule_score": 56.53644444444444
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "WorkSwarm：引领办公智能体新范式，让AI从一个助手，进化为一支与你并肩作战的团队",
+        "url": "https://www.qbitai.com/2026/08/473972.html",
+        "published_at": "2026-08-16T05:37:39Z",
+        "fetched_at": "2026-08-16T11:23:42.729199Z",
+        "language": "unknown",
+        "excerpt": "背后是四项关键能力",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "一水",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "789b69364668df91",
+        "canonical_url": "https://www.qbitai.com/2026/08/473972.html",
+        "normalized_title": "workswarm 引领办公智能体新范式 让ai从一个助手 进化为一支与你并肩作战的团队",
+        "fingerprint": "789b69364668df91573b8fba53cc3de0ebc6d90b00559458b94ee98935286d94",
+        "rule_score": 52.96275
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic shares more details about how Claude’s new watermarks will work",
+        "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
+        "published_at": "2026-08-15T18:58:39Z",
+        "fetched_at": "2026-08-16T11:23:42.848843Z",
+        "language": "unknown",
+        "excerpt": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7e2b9f3f7bde0d3d",
+        "canonical_url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work",
+        "normalized_title": "anthropic shares more details about how claude s new watermarks will work",
+        "fingerprint": "7e2b9f3f7bde0d3dfa07796d5f65b4278b5183c5041e6fa0627e1f48d8e2aecb",
+        "rule_score": 50.89775
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "牛来！A社营收暴涨1400%，最新季度入账115亿美元",
+        "url": "https://www.qbitai.com/2026/08/473947.html",
+        "published_at": "2026-08-16T05:28:42Z",
+        "fetched_at": "2026-08-16T11:23:42.729245Z",
+        "language": "unknown",
+        "excerpt": "将超越马斯克的SpaceX，成为史上上市估值最高的IPO。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "henry",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "66407d3b35daf003",
+        "canonical_url": "https://www.qbitai.com/2026/08/473947.html",
+        "normalized_title": "牛来 a社营收暴涨1400 最新季度入账115亿美元",
+        "fingerprint": "66407d3b35daf00350350ee5b7f0d95ab2877e180f4fa3f4dd03e9414f16504b",
+        "rule_score": 48.947833333333335
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Woman claims her stepfather used Grok to transform childhood photo into explicit imagery",
+        "url": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/",
+        "published_at": "2026-08-15T21:29:19Z",
+        "fetched_at": "2026-08-16T11:23:42.848802Z",
+        "language": "unknown",
+        "excerpt": "The woman claimed that AI tools are \"taking everyday life and turning it into child sexual abuse.\"",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "aea803acf201311e",
+        "canonical_url": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery",
+        "normalized_title": "woman claims her stepfather used grok to transform childhood photo into explicit imagery",
+        "fingerprint": "aea803acf201311e4ff1ff07bae92b1783efcd5d3534321e4d6c9d041ea035d9",
+        "rule_score": 47.14886111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "SpaceX officially closes its Cursor acquisition",
+        "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
+        "published_at": "2026-08-15T16:30:00Z",
+        "fetched_at": "2026-08-16T11:23:42.848858Z",
+        "language": "unknown",
+        "excerpt": "AI coding startup Cursor is now officially a part of SpaceX.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bdfcecc2c52a5bf5",
+        "canonical_url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition",
+        "normalized_title": "spacex officially closes its cursor acquisition",
+        "fingerprint": "bdfcecc2c52a5bf50a37c9fd97eb972c8fdbf0bd3c4956511ab4f4d8f8969d18",
+        "rule_score": 46.65
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Chestnut – eGPU dock with open-source firmware",
+        "url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/",
+        "published_at": "2026-08-13T22:01:04Z",
+        "fetched_at": "2026-08-16T11:23:43.756052Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "txrx0000",
+        "upstream_urls": [
+          "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49292385,
+          "score": 17
+        },
+        "id": "44a54a131323a307",
+        "canonical_url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060",
+        "normalized_title": "chestnut egpu dock with open source firmware",
+        "fingerprint": "44a54a131323a30702c8be8b999dc02aaf6e821dfb5fba81df5916f03310a22e",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Synthetic Persona Pretraining: Alignment from Token Zero",
+        "url": "https://arxiv.org/abs/2608.13482v1",
+        "published_at": "2026-08-13T17:12:04Z",
+        "fetched_at": "2026-08-16T11:23:12.343251Z",
+        "language": "unknown",
+        "excerpt": "As language-model-based AI is increasingly deployed in autonomous settings, aligning its goals and values with those of humans becomes critical. Today, alignment, and the assistant identity itself, are typically introduced only after pretraining, once behavioral priors are already established. This can make values a thin overlay, rather than deeply rooted, and facilitate subsequent misalignment. Pursuing a different paradigm, we introduce Synthetic Persona Pretraining (SPP), which installs the desired assistant persona from token zero in pretraining. First, we annotate pretraining documents with value-aligned first-person reflections derived from a normative value constitution. Second, we pretrain via the standard cross-entropy loss on standard pretraining documents as well as their reflections, which installs the desired persona among a multitude of other personas. Finally, we post-train on user-assistant dialogue data, which binds this desired persona to the assistant identity, a process we call persona binding. By pretraining models up to 3B parameters on 500B tokens, we show that SPP improves constitution following and jailbreak robustness, and reduces the misalignment rate in ",
+        "categories": [
+          "research"
+        ],
+        "author": "Robert West",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "edd2d0b4d4e5000a",
+        "canonical_url": "https://arxiv.org/abs/2608.13482v1",
+        "normalized_title": "synthetic persona pretraining alignment from token zero",
+        "fingerprint": "edd2d0b4d4e5000ae79556eaee89cbc9eb784625f7012e0318ee53f281b5a5b7",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Concept Drift Detection and Adaptive Retraining of Malware Classification Models",
+        "url": "https://arxiv.org/abs/2608.13465v1",
+        "published_at": "2026-08-13T16:46:56Z",
+        "fetched_at": "2026-08-16T11:23:12.343291Z",
+        "language": "unknown",
+        "excerpt": "Concept drift refers to changes over time in the statistical properties of data, as compared to the data that was used to train a learning model. Machine learning models for malware detection or classification are particularly susceptible to performance degradation caused by concept drift, as attackers constantly modify existing malware. In this chapter, we analyze two machine learning-based approaches to automated concept drift detection-a novel approach based on One-Class Support Vector Machines (OCSVM) and a previously-studied technique based on Minibatch K-Means (MK-Means). For comparison we also consider Maximum Mean Discrepancy (MMD), a statistical technique for detecting changes in multidimensional data. We conduct an extensive series of experiments comparing the effectiveness of four learning models, namely, Multilayer Perceptron, Random Forest, Support Vector Machines, and eXtreme Gradient Boosting. For each of these models, we consider three distinct scenarios: A static scenario where no model retraining occurs, a periodic scenario where models are constantly retrained irrespective of concept drift, and a drift-aware scenario where models are only retrained when concept d",
+        "categories": [
+          "research"
+        ],
+        "author": "Mark Stamp",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7657da292f66aeae",
+        "canonical_url": "https://arxiv.org/abs/2608.13465v1",
+        "normalized_title": "concept drift detection and adaptive retraining of malware classification models",
+        "fingerprint": "7657da292f66aeae973ecbe47bea98cad142ea747264168fb734057d2e6f23fe",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Writer introduces new AI model and upgraded harness to contain token costs",
+        "url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/",
+        "published_at": "2026-08-13T21:13:24Z",
+        "fetched_at": "2026-08-16T11:23:42.848925Z",
+        "language": "unknown",
+        "excerpt": "Built as a post-training variation on Z.ai's open source model GLM-5.2, Writer says the new system should provide deployment-ready capabilities at a much lower price.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Russell Brandom",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "aaa71ceeb4b7fa1e",
+        "canonical_url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs",
+        "normalized_title": "writer introduces new ai model and upgraded harness to contain token costs",
+        "fingerprint": "aaa71ceeb4b7fa1ef8c80ac4795ac5dd0eb2484223021ce91e5a6fd3c6b14b5e",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $190B valuation.",
+        "url": "https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/",
+        "published_at": "2026-08-13T20:14:39Z",
+        "fetched_at": "2026-08-16T11:23:42.848936Z",
+        "language": "unknown",
+        "excerpt": "AI is expensive, Ali Ghodsi tells TechCrunch. With so many investors wanting into his latest round, he said yes to more than planned.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Julie Bort",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "58f7833b07c47362",
+        "canonical_url": "https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation",
+        "normalized_title": "databricks wanted to raise 1b investors wanted 15b it settled on 5b at a 190b valuation",
+        "fingerprint": "58f7833b07c47362b077f3eab0719de9071f26c819958c9450b79103256b7710",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
+        "url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
+        "published_at": "2026-08-15T13:43:46Z",
+        "fetched_at": "2026-08-16T11:23:46.300944Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "scresswell",
+        "upstream_urls": [
+          "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49310495,
+          "score": 60
+        },
+        "id": "fe5dce6148d405ea",
+        "canonical_url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
+        "normalized_title": "yadda 3 0 0 bdd in the age of ai agents",
+        "fingerprint": "fe5dce6148d405ea2f59ed0ceb9bb7186930b5b2c202e5ac0c1e63ee9b0482d1",
+        "rule_score": 43.37294444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Court Rejects Fair Use Claim, Orders YouTube to Unmask Anime Recap Channels",
+        "url": "https://torrentfreak.com/court-rejects-fair-use-claim-orders-youtube-to-unmask-anime-recap-channels/",
+        "published_at": "2026-08-16T08:11:13Z",
+        "fetched_at": "2026-08-16T11:23:45.400310Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gslin",
+        "upstream_urls": [
+          "https://torrentfreak.com/court-rejects-fair-use-claim-orders-youtube-to-unmask-anime-recap-channels/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49317953,
+          "score": 7
+        },
+        "id": "16ef1ed23865b067",
+        "canonical_url": "https://torrentfreak.com/court-rejects-fair-use-claim-orders-youtube-to-unmask-anime-recap-channels",
+        "normalized_title": "court rejects fair use claim orders youtube to unmask anime recap channels",
+        "fingerprint": "16ef1ed23865b06721fadc93222c09362192bffffcc65a42034e547eb7b18a4c",
+        "rule_score": 41.218694444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "What happens when an LLM never sees material beyond fifth grade?",
+        "url": "https://littlelearner-ll.github.io/",
+        "published_at": "2026-08-16T07:37:53Z",
+        "fetched_at": "2026-08-16T11:23:43.436037Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "porridgeraisin",
+        "upstream_urls": [
+          "https://littlelearner-ll.github.io/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49317760,
+          "score": 139
+        },
+        "id": "f402c2f29104b443",
+        "canonical_url": "https://littlelearner-ll.github.io/",
+        "normalized_title": "what happens when an llm never sees material beyond fifth grade",
+        "fingerprint": "f402c2f29104b443835682ce31290ab1bea6fda6aed421b2803e57ee8d383e5f",
+        "rule_score": 41.16313888888889
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Active-Trace Complexity Bounds for Moreau--Yosida Unadjusted Langevin Sampling",
+        "url": "https://arxiv.org/abs/2608.13467v1",
+        "published_at": "2026-08-13T16:47:41Z",
+        "fetched_at": "2026-08-16T11:23:12.343282Z",
+        "language": "unknown",
+        "excerpt": "We study the Moreau--Yosida unadjusted Langevin algorithm (MYULA) for the nonsmooth composite target \\[ π(dx)\\propto \\exp\\{-f(x)-g(x)\\}\\,dx, \\qquad x\\in\\mathbb R^d, \\] where \\(f\\) is \\(m\\)-strongly convex with \\(L_f\\)-Lipschitz gradient and \\(g\\) is convex and \\(G\\)-Lipschitz. Let \\(g_λ\\) be the Moreau envelope of \\(g\\), \\(π_λ\\) the corresponding smoothed target, and \\(a_λ=\\operatorname{tr}H_λ\\), where \\(H_λ\\) is the a.e./weak Hessian of \\(g_λ\\). We show that the leading MYULA discretization error is controlled by the reference active trace \\(B_{\\mathrm{ref}}\\), the average of \\(a_λ\\) along the heat substep of one MYULA update started from \\(π_λ\\), rather than by the global curvature bound \\(d/λ\\). If \\(M_λ\\) is an a.e. upper bound for \\(a_λ\\), then, up to logarithmic factors, \\[ N \\lesssim \\frac{1}{m} \\left[ L_f + \\frac{ τ_f+G^2+B_{\\mathrm{ref}} }{ \\varepsilon_{\\mathrm{alg}}^2 } + \\frac{M_λ}{\\varepsilon_{\\mathrm{alg}}} \\right], \\qquad τ_f:= \\sup_x\\operatorname{tr}\\nabla^2 f(x), \\] iterations suffice to ensure \\(\\sqrt m\\,W_2(μ_N,π_λ)\\leq\\varepsilon_{\\mathrm{alg}}\\), where \\(μ_N\\) is the law of the \\(N\\)-th iterate and \\(W_2\\) is the quadratic Wasserstein distance. We also prove the",
+        "categories": [
+          "research"
+        ],
+        "author": "Zhihua Zhang",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "167344a8e39928a7",
+        "canonical_url": "https://arxiv.org/abs/2608.13467v1",
+        "normalized_title": "active trace complexity bounds for moreau yosida unadjusted langevin sampling",
+        "fingerprint": "167344a8e39928a70435c13e8bbfe97ec66eb6d3c641e91c4277851d5a7b8799",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Health benefits of Tai Chi",
+        "url": "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi",
+        "published_at": "2026-08-16T05:56:14Z",
+        "fetched_at": "2026-08-16T11:23:46.687319Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "helloplanets",
+        "upstream_urls": [
+          "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi"
+        ],
+        "raw_metadata": {
+          "hn_id": 49317279,
+          "score": 13
+        },
+        "id": "9db67af31e7bc343",
+        "canonical_url": "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi",
+        "normalized_title": "health benefits of tai chi",
+        "fingerprint": "9db67af31e7bc343eeda6515b7c3aa3dd567788bbd7a6edac30d71291f98ff91",
+        "rule_score": 40.993722222222225
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Patterns and problems in emerging multi-agent systems",
+        "url": "https://www.anthropic.com/research/multiagent-systems",
+        "published_at": "2026-08-16T02:12:53Z",
+        "fetched_at": "2026-08-16T11:23:43.206902Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "maxutility",
+        "upstream_urls": [
+          "https://www.anthropic.com/research/multiagent-systems"
+        ],
+        "raw_metadata": {
+          "hn_id": 49316271,
+          "score": 105
+        },
+        "id": "5bfebeebe3a6c952",
+        "canonical_url": "https://www.anthropic.com/research/multiagent-systems",
+        "normalized_title": "patterns and problems in emerging multi agent systems",
+        "fingerprint": "5bfebeebe3a6c952d87ce4855ac64535a32379b79c86767b665757170934a1e6",
+        "rule_score": 40.62147222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: I built a native app for coding agents with Rust and GPUI",
+        "url": "https://waku.sh/",
+        "published_at": "2026-08-16T00:38:44Z",
+        "fetched_at": "2026-08-16T11:23:46.247933Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "0x142857",
+        "upstream_urls": [
+          "https://waku.sh/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49315709,
+          "score": 30
+        },
+        "id": "fda93c485d7b78b2",
+        "canonical_url": "https://waku.sh/",
+        "normalized_title": "show hn i built a native app for coding agents with rust and gpui",
+        "fingerprint": "fda93c485d7b78b23632573d6915e96a7b3da26955521f9b4acedd325a2bbca4",
+        "rule_score": 40.464555555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
+        "url": "https://arxiv.org/abs/2608.13122",
+        "published_at": "2026-08-15T22:41:51Z",
+        "fetched_at": "2026-08-16T11:23:44.479242Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Jimmc414",
+        "upstream_urls": [
+          "https://arxiv.org/abs/2608.13122"
+        ],
+        "raw_metadata": {
+          "hn_id": 49314967,
+          "score": 37
+        },
+        "id": "a65937a754a6d417",
+        "canonical_url": "https://arxiv.org/abs/2608.13122",
+        "normalized_title": "ai assisted gpu porting of a 250k line legacy weather simulation code",
+        "fingerprint": "a65937a754a6d417e6f744c3b7a5b35b68bdc0ddc23aa6a7e16257f7a1d66cc7",
+        "rule_score": 40.26975
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI in drug discovery – what it is, where we stand and the path forward",
+        "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
+        "published_at": "2026-08-15T19:12:53Z",
+        "fetched_at": "2026-08-16T11:23:43.809782Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "AnodicElegy",
+        "upstream_urls": [
+          "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really"
+        ],
+        "raw_metadata": {
+          "hn_id": 49313367,
+          "score": 146
+        },
+        "id": "598f4926ffff3765",
+        "canonical_url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
+        "normalized_title": "ai in drug discovery what it is where we stand and the path forward",
+        "fingerprint": "598f4926ffff3765f778307936566be42fd473ffc3a1138c38f5e4a5d6c53347",
+        "rule_score": 39.92147222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI has access to a vastly larger working memory than the human brain",
+        "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
+        "published_at": "2026-08-15T18:13:02Z",
+        "fetched_at": "2026-08-16T11:23:44.296785Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rzk",
+        "upstream_urls": [
+          "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians"
+        ],
+        "raw_metadata": {
+          "hn_id": 49312845,
+          "score": 509
+        },
+        "id": "ca4887d04adea51d",
+        "canonical_url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
+        "normalized_title": "ai has access to a vastly larger working memory than the human brain",
+        "fingerprint": "ca4887d04adea51d2d4ea2edd1853c1ba76f518a61876742445f6c343a032759",
+        "rule_score": 39.82172222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I Remain a Skeptic",
+        "url": "https://blog.jsbarretto.com/post/i-remain-a-skeptic",
+        "published_at": "2026-08-15T16:42:58Z",
+        "fetched_at": "2026-08-16T11:23:47.712871Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "lproven",
+        "upstream_urls": [
+          "https://blog.jsbarretto.com/post/i-remain-a-skeptic"
+        ],
+        "raw_metadata": {
+          "hn_id": 49312053,
+          "score": 113
+        },
+        "id": "df7ea2d3897b1ac1",
+        "canonical_url": "https://blog.jsbarretto.com/post/i-remain-a-skeptic",
+        "normalized_title": "i remain a skeptic",
+        "fingerprint": "df7ea2d3897b1ac1e6bb7f78c53a24bec933fb3328497edb6988b7cf7c4f50f2",
+        "rule_score": 39.67161111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A controversial Alzheimer's surgery is said to reverse symptoms",
+        "url": "https://www.nature.com/articles/d41586-026-02448-x",
+        "published_at": "2026-08-15T16:38:34Z",
+        "fetched_at": "2026-08-16T11:23:45.906014Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jeffreyrogers",
+        "upstream_urls": [
+          "https://www.nature.com/articles/d41586-026-02448-x"
+        ],
+        "raw_metadata": {
+          "hn_id": 49312008,
+          "score": 176
+        },
+        "id": "4177be99984aefd8",
+        "canonical_url": "https://www.nature.com/articles/d41586-026-02448-x",
+        "normalized_title": "a controversial alzheimer s surgery is said to reverse symptoms",
+        "fingerprint": "4177be99984aefd82b203723bd98650e89db0422883278e0289207471d607d7e",
+        "rule_score": 39.66427777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Working with AI feels more like leadership than coding",
+        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
+        "published_at": "2026-08-15T10:39:41Z",
+        "fetched_at": "2026-08-16T11:23:45.561455Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "allenb",
+        "upstream_urls": [
+          "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49309451,
+          "score": 302
+        },
+        "id": "98e432df5debf498",
+        "canonical_url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership",
+        "normalized_title": "working with ai feels more like leadership than coding",
+        "fingerprint": "98e432df5debf49890ba553f35b62ce4ef85e03e61b7f79dd0212e118106d625",
+        "rule_score": 39.06613888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
+        "published_at": "2026-08-15T04:42:07Z",
+        "fetched_at": "2026-08-16T11:23:45.346356Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "chatchan",
+        "upstream_urls": [
+          "https://chenxiachan.github.io/thoughtdag/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49307700,
+          "score": 122
+        },
+        "id": "8f14cc7c092eeb22",
+        "canonical_url": "https://chenxiachan.github.io/thoughtdag",
+        "normalized_title": "show hn thoughtdag an editable context graph for llm conversations",
+        "fingerprint": "8f14cc7c092eeb22f56786343604f32633b55a07de4baa9423967f34733b96d6",
+        "rule_score": 38.470194444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Deltix – AI Driven Testing",
+        "url": "https://app.deltix.ai/",
+        "published_at": "2026-08-15T02:42:14Z",
+        "fetched_at": "2026-08-16T11:23:48.633923Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "oneounceman",
+        "upstream_urls": [
+          "https://app.deltix.ai/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49307099,
+          "score": 51
+        },
+        "id": "91cd78326985cc42",
+        "canonical_url": "https://app.deltix.ai/",
+        "normalized_title": "show hn deltix ai driven testing",
+        "fingerprint": "91cd78326985cc42eae0c761feed913a4659e751b57f24b9beadd531a63c1ae5",
+        "rule_score": 38.27038888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Mole – Deep research agent for your terminal",
+        "url": "https://github.com/lajosdeme/mole",
+        "published_at": "2026-08-14T18:52:48Z",
+        "fetched_at": "2026-08-16T11:23:47.926680Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "lajosdeme",
+        "upstream_urls": [
+          "https://github.com/lajosdeme/mole"
+        ],
+        "raw_metadata": {
+          "hn_id": 49303046,
+          "score": 97
+        },
+        "id": "f8bd679307c4621b",
+        "canonical_url": "https://github.com/lajosdeme/mole",
+        "normalized_title": "show hn mole deep research agent for your terminal",
+        "fingerprint": "f8bd679307c4621bf3edcc215ba8105a23d7e0257da6575b4df9bea39e3063d7",
+        "rule_score": 37.488
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Google is making private AI practical with homomorphic encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "published_at": "2026-08-14T15:43:10Z",
+        "fetched_at": "2026-08-16T11:23:47.281211Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "u1hcw9nx",
+        "upstream_urls": [
+          "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49300314,
+          "score": 488
+        },
+        "id": "34826683bb031789",
+        "canonical_url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption",
+        "normalized_title": "google is making private ai practical with homomorphic encryption",
+        "fingerprint": "34826683bb03178912c4d8ceb29fca51f0605eb372ddc20d08ca2b279e4f2fec",
+        "rule_score": 37.17194444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Growth of CVEs fixed in Postgres looks exponential",
+        "url": "https://twitter.com/samokhvalov/status/2088870235705319924",
+        "published_at": "2026-08-16T07:30:03Z",
+        "fetched_at": "2026-08-16T11:23:48.357315Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "samokhvalov",
+        "upstream_urls": [
+          "https://twitter.com/samokhvalov/status/2088870235705319924"
+        ],
+        "raw_metadata": {
+          "hn_id": 49317713,
+          "score": 3
+        },
+        "id": "3be1c80e51cdb095",
+        "canonical_url": "https://twitter.com/samokhvalov/status/2088870235705319924",
+        "normalized_title": "growth of cves fixed in postgres looks exponential",
+        "fingerprint": "3be1c80e51cdb095d80a004be70d522439962ba8c4199d72355e0b4ec24805d5",
+        "rule_score": 37.150083333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Falstad Math and Physics Simulations",
+        "url": "https://www.falstad.com/mathphysics.html",
+        "published_at": "2026-08-16T04:19:32Z",
+        "fetched_at": "2026-08-16T11:23:43.972973Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pykello",
+        "upstream_urls": [
+          "https://www.falstad.com/mathphysics.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49316872,
+          "score": 23
+        },
+        "id": "2a8919c2cfd789e1",
+        "canonical_url": "https://www.falstad.com/mathphysics.html",
+        "normalized_title": "falstad math and physics simulations",
+        "fingerprint": "2a8919c2cfd789e1ba92bea47d6209ffd8b061871faaa44535b576aef2e5c207",
+        "rule_score": 36.83255555555556
+      }
+    ],
+    "prompt_chars": 7906,
+    "estimated_input_tokens": 1976
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "vllm-releases": "SourceFetchError: vllm-releases: GitHub fetch failed",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
