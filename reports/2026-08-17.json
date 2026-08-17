@@ -1,0 +1,152 @@
+{
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T11:29:12.631420Z",
+  "run_id": "2026-08-17-0023ec08",
+  "daily_summary_zh": "今日AI领域以多项高质量研究为主：Twin在ARC-AGI-3上以97.8%通关率展示测试时世界模型潜力；llama.cpp b10456大幅提升SYCL量化性能；Power Sampling的悖论、Rollplex的VLM RL后训练优化、PACE-Bench物理自适应基准等也备受关注。另有YOPO、Marionette、TIP、optstop、SheetCompass、Wyvern、跨会话状态交接等研究值得关注。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "38d5e39960706d83"
+      ],
+      "category": "research",
+      "title_zh": "Twin：测试时数字孪生系统在ARC-AGI-3上97.8%通关率",
+      "summary_zh": "提出Test-time World-model Inference (Twin)系统，让前沿编码智能体编写可执行世界模型以完成ARC-AGI-3等持续学习任务。该系统仅通过模拟与交互推断游戏规则和目标，在孪生世界模型中进行回放验证，几乎全部关卡恢复真实转移：179/183关卡通过（97.8%），其中多数关卡的动作效率优于人类玩家。",
+      "why_it_matters_zh": "展示了让模型通过编写并验证世界模型来逼近系统2推理的路径，对智能体持续学习和泛化有标杆意义。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Twin: Playing an Unknown Game with a Test-Time Digital Twin",
+        "url": "https://arxiv.org/abs/2608.14490v1",
+        "published_at": "2026-08-14T17:06:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "7be9ec0801142749"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b10456发布：SYCL量化拷贝kernel大幅提速",
+      "summary_zh": "修复SYCL后端量化cpy kernel的线程/块数量，使其与量化大小成比例。在Arc 70上q4_0->f32路径吞吐从20.21 GB/s提升到158.19 GB/s，其余量化路线性能基本持平。",
+      "why_it_matters_zh": "作为主流本地推理引擎，这次性能修复让Intel/AMD GPU上的量化转换效率大幅改善，惠及开源部署生态。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10456",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10456",
+        "published_at": "2026-08-17T06:29:29Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "68efec71e1e38ecc"
+      ],
+      "category": "research",
+      "title_zh": "Power Sampling悖论：更多正确概率质量反而降低下游推理准确率",
+      "summary_zh": "发现Power Sampling将更多概率质量集中于正确轨迹，却可能使self-consistency等下游推理准确率下降最多18.5个百分点。归因于固定指数导致不同问题的分布变化幅度不匹配，以及全局锐化丢失广泛推理路径支持。提出变形控制、保支撑的Power变体。",
+      "why_it_matters_zh": "对推理时采样和scaling方法有警示意义，提示概率质量与推理多样性之间的张力需要重新平衡。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "More Correct Mass, Worse Answers: Why Power Sampling Can Fail and How to Fix It",
+        "url": "https://arxiv.org/abs/2608.14420v1",
+        "published_at": "2026-08-14T16:01:10Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "283d26a13772bb88"
+      ],
+      "category": "research",
+      "title_zh": "Rollplex：跨阶段GPU空间共享，优化VLM强化学习后训练",
+      "summary_zh": "针对VLM RL后训练中rollout、参考打分、actor训练严格串行导致的GPU浪费，提出将参考/训练阶段的prefix计算移入rollout解码窗口的运行时。解决Qwen2.5-VL-32B朴素共置需约165GiB/GPU、TP度与权重布局偏好不同等问题。",
+      "why_it_matters_zh": "VLM后训练正成为具身智能重要环节，Rollplex在不破坏on-policy语义下提升GPU利用率，降低训练成本。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training",
+        "url": "https://arxiv.org/abs/2608.14498v1",
+        "published_at": "2026-08-14T17:13:34Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "05628ec4a17a3adf"
+      ],
+      "category": "research",
+      "title_zh": "PACE-Bench：动态环境下的物理自适应代码进化基准",
+      "summary_zh": "提出含144个源到目标适配对、覆盖6个物理域的模拟器基准，测试智能体在环境变化后用诊断性沙箱反馈迭代修改代码的能力。十种自进化方法中，Reflexion+Qwen3-14B仅通过35.9%，GPT-5.5在Statics子集达66.7%，远未饱和。",
+      "why_it_matters_zh": "为自进化智能体在环境迁移/恢复场景提供标准化评测，揭示基于模拟器反馈的反思比未经验证的自修订更可靠。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "PACE-Bench: Benchmarking Physics Adaptation via Code Evolution in Dynamic Environments",
+        "url": "https://arxiv.org/abs/2608.14441v1",
+        "published_at": "2026-08-14T16:25:43Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 138,
+    "normalized": 138,
+    "filtered": 107,
+    "ai_candidates": 30,
+    "prompt_chars": 24798,
+    "estimated_input_tokens": 6199,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
