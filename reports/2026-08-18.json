@@ -1,0 +1,181 @@
+{
+  "date": "2026-08-18",
+  "generated_at": "2026-08-18T11:28:37.838026Z",
+  "run_id": "2026-08-18-083d5897",
+  "daily_summary_zh": "今日 AI 高信号动态集中于研究与开源：安全审计方面出现“模型催眠”、合规检测规则盲区与状态语义注入等新论文；具身智能方向有神经符号智能体、BATON、HAF、CaliBench 等进展；推理与基础设施方面，llama.cpp 双版本发布，Hugging Face 展示调度顺序对 GPU 利用率的关键影响。整体上，模型评估、安全与机器人可控执行是当天主线。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "21f162759b91502b"
+      ],
+      "category": "research",
+      "title_zh": "研究发现“模型催眠”：细微提示可被系统性组合以强控AI行为",
+      "summary_zh": "一项 arXiv 研究提出“模型催眠”现象：提示中单独很弱、看似无关的线索（如同义改写、拼写错误）可被系统组合起来，强烈控制模型行为。该现象在不同模型家族与规模上出现，包括前沿推理模型，且催眠式提示可在模型间迁移。",
+      "why_it_matters_zh": "催眠式提示的隐蔽性使其成为 AI 安全与可解释性的重要挑战，也为对抗性控制、越狱防护和可解释性研究带来新课题。",
+      "importance_score": 87.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Model Hypnosis: Strong control of AI via additive subliminal effects",
+        "url": "https://arxiv.org/abs/2608.16834v1",
+        "published_at": "2026-08-17T17:20:10Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "de66d1db995da44e"
+      ],
+      "category": "research",
+      "title_zh": "审计发现合规检测器普遍存在“规则盲区”：删改规则不影响判定",
+      "summary_zh": "论文审计了部署中的合规监控检测器，发现删除、置换或替换监管规则后，所有被测防护模型与激活探针的检测准确率几乎不变，作者称之为“规则盲区”。研究用跨两个规则与两个场景的基准验证了这一失败，并提出无需训练的 Internal Compliance Score（ICS）用于规模化审计。",
+      "why_it_matters_zh": "合规监控若依赖场景表面特征而非规则本身，法规审计与平台治理可能形同虚设；该研究首次系统证明这一盲区，并提供可扩展的审计检测方法。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "What Do Compliance Detectors Read? An Audit of Activation Probes and Guard Models",
+        "url": "https://arxiv.org/abs/2608.16852v1",
+        "published_at": "2026-08-17T17:37:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "881dd24692939082"
+      ],
+      "category": "research",
+      "title_zh": "GEO-Flag：检测和度量面向生成式引擎优化的网页内容",
+      "summary_zh": "论文引入 GEOFlagBench，包含 3,200 个网页、400 个查询、四个领域和八个 GEO 优化器家族，用于系统评估现有 GEO 检测方法；并提出 Intervention-Paired Training（IPT），训练对 GEO 干预更鲁棒的检测器。",
+      "why_it_matters_zh": "生成式搜索引擎会把优化内容直接合成进答案，使低权威乃至虚假信息看似有理有据；系统化检测是维护生成搜索内容可信度的基础。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "GEO-Flag: Detecting and Measuring GEO-Optimized Web Content",
+        "url": "https://arxiv.org/abs/2608.16824v1",
+        "published_at": "2026-08-17T17:12:11Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "d0c1e360f5fe1e33"
+      ],
+      "category": "research",
+      "title_zh": "神经符号具身智能体：用约束符号规划保障任务可执行",
+      "summary_zh": "论文提出一种神经符号智能体，将长程家务任务分解为任务导向的视觉探索与约束符号规划：视觉语言模型获取谓词与实例绑定，PDDL 转移模型限制解码并配合蒙特卡洛树搜索。在 VirtualHome 与 ALFWorld 上，4B-27B 开源模型成功率超过 90%。",
+      "why_it_matters_zh": "该方法让 LLM 生成的计划在符号模型下可执行，解决语言/视觉模型计划不可落地的问题，对机器人具身智能方向有较强实用性。",
+      "importance_score": 81.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Neurosymbolic Embodied Agents",
+        "url": "https://arxiv.org/abs/2608.16794v1",
+        "published_at": "2026-08-17T16:50:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "7801bd1033919856"
+      ],
+      "category": "infrastructure",
+      "title_zh": "Hugging Face 博客：同一集群仅改变调度顺序，利用率提升 33 个百分点",
+      "summary_zh": "Hugging Face 官方博客文章展示 GPU 集群管理实验：在相同集群条件下，仅改变作业调度顺序就将集群利用率提升了 33 个百分点，说明调度顺序对资源利用效果有显著影响。",
+      "why_it_matters_zh": "大模型训练与推理集群利用率直接决定算力成本；该结果对 GPU 调度策略和集群基础设施优化有重要参考价值。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Same Cluster, 33 Points More Utilization: What Changed Was the Order",
+        "url": "https://huggingface.co/blog/Dharma-AI/gpu-management-pt2",
+        "published_at": "2026-08-17T19:46:21Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "d49b1c229d49665e",
+        "2d7c5dcccf81d7e7"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10488 与 v0.1.2：OpenVINO 2026.3 等更新",
+      "summary_zh": "llama.cpp 发布两个新版本。b10488 更新 OpenVINO 至 2026.3、调整设备驱动并跳过 Nemotron-H 回滚测试；v0.1.2 同步 ggml 0.20.2、修复 xcframework/CMake 构建，并包含 CUDA 优化及多模态输入哈希等改进。",
+      "why_it_matters_zh": "llama.cpp 是本地 LLM 推理常用的开源项目，新版本带来 OpenVINO 后端更新、构建修复与 CUDA 优化，直接惠及大量本地部署与开发者。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10488",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10488",
+        "published_at": "2026-08-18T11:05:53Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: v0.1.2",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.1.2",
+          "published_at": "2026-08-18T10:23:10Z"
+        }
+      ]
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 154,
+    "normalized": 154,
+    "filtered": 133,
+    "ai_candidates": 30,
+    "prompt_chars": 26458,
+    "estimated_input_tokens": 6614,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
