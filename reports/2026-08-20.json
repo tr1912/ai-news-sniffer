@@ -1,0 +1,232 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20T11:29:36.488777Z",
+  "run_id": "2026-08-20-7cab882f",
+  "daily_summary_zh": "今日 AI 领域进展集中在开源推理、量化模型、开发者工具与前沿研究。llama.cpp 新增 Granite SWA 模型支持；Liquid AI 发布量化感知蒸馏检查点；NVIDIA 更新 Holoscan、SkillEvaluator 与 FLARE 等开发者工具；多篇研究论文聚焦多教师蒸馏、长上下文推理、幻觉抑制、分布式推理与多智能体安全。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "b8d261a9f7d1ccfb"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b10514 发布，新增 Granite SWA 模型支持",
+      "summary_zh": "llama.cpp 发布 b10514，加入 GraniteSWAForCausalLM 与 GraniteMoeSWAForCausalLM 的转换和运行时支持，并引入 rope_pattern 数组的转换基础设施，修复 SWA 模式逻辑与非 rope 层支持。",
+      "why_it_matters_zh": "llama.cpp 是最广泛使用的开源 LLM 推理引擎之一，此次更新降低 IBM Granite 等新架构模型的本地部署门槛，推动开源推理生态持续扩展。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10514",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10514",
+        "published_at": "2026-08-20T11:17:28Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "7a585f9d98cb7d90"
+      ],
+      "category": "models",
+      "title_zh": "Liquid AI 发布 LFM2.5 Q4_0 量化感知蒸馏检查点",
+      "summary_zh": "Liquid AI 在 Hugging Face 发布 LFM2.5 的 Q4_0 量化感知蒸馏检查点，该检查点来自针对量化部署优化的蒸馏流程。",
+      "why_it_matters_zh": "量化感知蒸馏可在低比特部署下减缓精度损失，为在资源受限环境运行高性能模型提供了更实用的开源方案。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "LFM2.5 Q4\\_0 Checkpoints from Quantization-Aware Distillation",
+        "url": "https://huggingface.co/blog/LiquidAI/qad",
+        "published_at": "2026-08-19T13:48:49Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "c1c7ecf1da44cd68"
+      ],
+      "category": "research",
+      "title_zh": "SPADE：自适应合成可执行环境中的自我对弈框架",
+      "summary_zh": "SPADE 提出一种自我对弈强化学习框架，让同一个 LLM 同时扮演 Environment Designer（以可执行代码编写 Gym 风格训练环境）和 Reasoning Agent（在其中学习），并通过智能体在有无特权提示下的奖励差距来优化环境设计。",
+      "why_it_matters_zh": "该方法让智能体持续生成多样化、自适应且处于能力边缘的训练环境，为突破静态目标分布限制、实现持续自我改进提供了新路径。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
+        "url": "https://arxiv.org/abs/2608.19197v1",
+        "published_at": "2026-08-19T17:58:56Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "96cc01cd0c6692aa"
+      ],
+      "category": "research",
+      "title_zh": "Open-MOPD：诊断并修复多教师同策略蒸馏中的能力失衡",
+      "summary_zh": "Open-MOPD 在 SmolLM3-3B-Base 上建立受控多教师同策略蒸馏基准，发现标准 M-OPD 仅能捕获 35.6% 的可用提升空间，并指出问题来自 token 级优化预算的严重错配，而非梯度冲突。",
+      "why_it_matters_zh": "该工作揭示了多领域专家整合为通用学生模型时的优化动力学问题，并提供可复现的基准，有助于改进多教师强化学习蒸馏实践。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Open-MOPD: Diagnosing and Fixing Capability Imbalance in Multi-Teacher On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2608.19098v1",
+        "published_at": "2026-08-19T16:50:39Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "6ed91e30602e76b9"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA Holoscan 开发体验升级：CLI、Skills 与 AI 编码智能体",
+      "summary_zh": "NVIDIA 发布博客介绍如何用 CLI、Skills 和 AI 编码智能体开发 Holoscan 应用；Holoscan 是面向医疗影像、机器人等实时边缘 AI 应用的平台，HoloHub 为其配套仓库。",
+      "why_it_matters_zh": "这些工具降低了构建边缘实时 AI 应用的门槛，让开发者能够更快地在医疗、机器人等垂直场景中落地 Holoscan。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Developing NVIDIA Holoscan Applications with CLI, Skills, and AI Coding Agents",
+        "url": "https://developer.nvidia.com/blog/developing-nvidia-holoscan-applications-with-cli-skills-and-ai-coding-agents/",
+        "published_at": "2026-08-19T22:22:37Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "18b35cf2911dc419"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA SkillEvaluator 评估 AI 智能体技能表现",
+      "summary_zh": "NVIDIA 发布 SkillEvaluator，用于评估 AI 智能体的技能表现，帮助开发者衡量智能体在获取上下文和执行任务中的效率与准确性。",
+      "why_it_matters_zh": "智能体性能高度依赖上下文质量，SkillEvaluator 提供了标准化评估手段，有助于提升智能体应用的可靠性和可调试性。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Evaluating AI Agent Skill Performance with NVIDIA SkillEvaluator",
+        "url": "https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator/",
+        "published_at": "2026-08-19T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "9c106b4737645ce2"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA FLARE 构建联邦多模态 AI 工作流",
+      "summary_zh": "NVIDIA 发布博客介绍如何使用 NVIDIA FLARE 构建联邦多模态 AI 工作流，支持在分布式数据上训练视觉语言模型，涵盖视觉问答、图像描述和图文推理等任务。",
+      "why_it_matters_zh": "联邦多模态工作流让数据不出域即可协同训练，兼顾隐私保护和跨机构数据利用，对医疗、制造等敏感行业尤其重要。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Building Federated Multimodal AI Workflows with NVIDIA FLARE",
+        "url": "https://developer.nvidia.com/blog/building-federated-multimodal-ai-workflows-with-nvidia-flare/",
+        "published_at": "2026-08-19T17:50:47Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "b32db6a33deeea54"
+      ],
+      "category": "research",
+      "title_zh": "GC-OPD：面向长上下文推理的组校准同策略蒸馏",
+      "summary_zh": "GC-OPD 针对长上下文任务中教师 token 级评分与验证器奖励不一致的问题，在每组 rollout 内分别归一化验证器奖励与轨迹级 OPD 分数，用其差值作为教师-验证器不一致残差，并通过相对优势分配进行 token 级信用分配。",
+      "why_it_matters_zh": "该方法缓解了长上下文推理中蒸馏信号错位问题，为提升智能体在长时间跨文档证据聚合任务上的表现提供了新思路。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
+        "url": "https://arxiv.org/abs/2608.19181v1",
+        "published_at": "2026-08-19T17:54:58Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "0a67479fd204bfeb"
+      ],
+      "category": "research",
+      "title_zh": "ReWEIGH：降低 LVLM 幻觉的无训练解码干预",
+      "summary_zh": "ReWEIGH 是一种无需训练的解码干预方法，通过聚合视觉 token 的序数证据，并与无标注图像上估计的 token 特定参考比较，仅对低于参考的候选施加有界惩罚。在四个 7B 视觉语言模型上，物体提及幻觉最多减少 21.3%。",
+      "why_it_matters_zh": "该工作为缓解大视觉语言模型幻觉提供了轻量且通用的推理时方案，无需重新训练即可提升生成可信度。",
+      "importance_score": 63.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "ReWEIGH the Evidence: Calibrating Token-Level Ordinal Visual Evidence to Mitigate Hallucinations in Large Vision-Language Models",
+        "url": "https://arxiv.org/abs/2608.19075v1",
+        "published_at": "2026-08-19T16:23:56Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 156,
+    "normalized": 156,
+    "filtered": 130,
+    "ai_candidates": 30,
+    "prompt_chars": 18637,
+    "estimated_input_tokens": 4659,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

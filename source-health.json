@@ -4,62 +4,62 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "anthropic-news": {
     "source_id": "anthropic-news",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: anthropic-news: no dated article records found"
   },
   "arxiv-ai": {
     "source_id": "arxiv-ai",
-    "consecutive_failures": 1,
+    "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-18T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
-    "last_error": "SourceFetchError: arxiv-ai: RSS fetch failed"
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
+    "last_error": null
   },
   "cohere-blog": {
     "source_id": "cohere-blog",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: cohere-blog: no dated article records found"
   },
   "deepmind-news": {
     "source_id": "deepmind-news",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: deepmind-news: no dated article records found"
   },
   "deepseek-updates": {
     "source_id": "deepseek-updates",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: deepseek-updates: no dated article records found"
   },
   "google-research": {
     "source_id": "google-research",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: google-research: no dated article records found"
   },
   "hacker-news": {
@@ -67,17 +67,17 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "hf-daily-papers": {
     "source_id": "hf-daily-papers",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: hf-daily-papers: no dated article records found"
   },
   "huggingface-blog": {
@@ -85,17 +85,17 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "jiqizhixin": {
     "source_id": "jiqizhixin",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: jiqizhixin: no dated article records found"
   },
   "kimi-platform-blog": {
@@ -103,8 +103,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": true,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "llama-cpp-releases": {
@@ -112,44 +112,44 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "meta-ai-blog": {
     "source_id": "meta-ai-blog",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceFetchError: meta-ai-blog: HTML fetch failed"
   },
   "microsoft-research": {
     "source_id": "microsoft-research",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: microsoft-research: no dated article records found"
   },
   "minimax-news": {
     "source_id": "minimax-news",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: minimax-news: no dated article records found"
   },
   "mistral-news": {
     "source_id": "mistral-news",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: mistral-news: no dated article records found"
   },
   "nvidia-genai": {
@@ -157,17 +157,17 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "openai-news": {
     "source_id": "openai-news",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceFetchError: openai-news: HTML fetch failed"
   },
   "qbitai": {
@@ -175,17 +175,17 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": true,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "qwen-blog": {
     "source_id": "qwen-blog",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceParseError: qwen-blog: no dated article records found"
   },
   "techcrunch-ai": {
@@ -193,8 +193,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "transformers-releases": {
@@ -202,8 +202,8 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "vllm-releases": {
@@ -211,17 +211,17 @@
     "consecutive_failures": 0,
     "degraded": false,
     "auto_paused": false,
-    "last_success_at": "2026-08-19T16:00:00Z",
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_success_at": "2026-08-20T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": null
   },
   "zhipu-research": {
     "source_id": "zhipu-research",
-    "consecutive_failures": 32,
+    "consecutive_failures": 33,
     "degraded": true,
     "auto_paused": true,
     "last_success_at": null,
-    "last_attempt_at": "2026-08-19T16:00:00Z",
+    "last_attempt_at": "2026-08-20T16:00:00Z",
     "last_error": "SourceFetchError: zhipu-research: HTML fetch failed"
   }
 }
