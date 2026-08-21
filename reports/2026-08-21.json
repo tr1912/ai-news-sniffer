@@ -1,0 +1,172 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21T11:29:49.916529Z",
+  "run_id": "2026-08-21-98878ca3",
+  "daily_summary_zh": "今日AI动态以模型效率、评测基准与Agent能力研究为主线。Liquid AI发布LFM2.5-DSpark，实现最高3.2倍推理加速；llama.cpp更新加入LFM2/LFM2MOE张量切分；Daedalus-150M验证了面向CPU推理的混合架构。研究方面，AI4AI-Bench首次将递归自我改进中的算法设计能力独立成基准，多个新基准分别聚焦合同审查、法律咨询信息不足、概念级遗忘、规则约束空间规划；同时多项工作探索自适应推理、工具使用中期训练、模型路由、技能迁移、任务模型归纳与自改进审计。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "2808d4759adf351a"
+      ],
+      "category": "benchmarks",
+      "title_zh": "AI4AI-Bench：首个衡量LLM智能体设计训练算法的递归自我改进基准",
+      "summary_zh": "AI4AI-Bench包含10个冻结的研究代码仓库，覆盖10类训练算法族。每个任务中，智能体需在4小时内用一块B300改写训练算法，随后代码从零重跑至多12小时，由隐藏的固定评估器与仓库原始算法比较。10个不可公度的指标被映射到统一尺度（0为无信息模型，0.1为仓库自带算法），以单独隔离“智能体能否设计训练算法”的能力。",
+      "why_it_matters_zh": "递归自我改进的关键在于智能体能改进产生AI的训练流程本身，而此前没有基准能独立衡量这一能力；AI4AI-Bench为RSI可行性提供了首个可重复的评估协议。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+        "url": "https://arxiv.org/abs/2608.20318v1",
+        "published_at": "2026-08-20T17:56:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "a821cbaafb48c09c"
+      ],
+      "category": "models",
+      "title_zh": "Liquid AI发布LFM2.5-DSpark：官方称推理速度最高提升3.2倍",
+      "summary_zh": "Hugging Face官方博客发布LFM2.5-DSpark，宣称相比基线可将推理速度提升最多3.2倍。博客聚焦该模型在推理效率上的优化。",
+      "why_it_matters_zh": "推理速度直接影响部署成本与用户体验，LFM2.5-DSpark是模型推理效率优化的重要进展。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Up to 3.2x Faster Inference with LFM2.5-DSpark",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm25-dspark",
+        "published_at": "2026-08-20T16:52:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "528bdf775a50dec6"
+      ],
+      "category": "models",
+      "title_zh": "Daedalus-150M：为CPU推理从零设计的卷积-注意力混合小模型",
+      "summary_zh": "Daedalus-150M以单用户、单token生成、4bit权重的普通CPU推理为目标设计架构，18层中只有6层保留全注意力，其余12层使用短卷积，避免三分之二网络反复读取增长中的缓存。模型在59.9B token上从零训练，五任务基准得分47.31（训练前设定基线42.20），超越GPT-2 124M、Pythia-160M等；与同规模全注意力模型相比，4bit文件小6.3%，解码快1.76倍。",
+      "why_it_matters_zh": "端侧CPU推理需要为部署约束重新设计架构，而不是先训大模型再压缩；Daedalus展示了“目标优先”路线的有效性。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Daedalus-150M: A Convolution-Attention Hybrid Designed for CPU Inference",
+        "url": "https://arxiv.org/abs/2608.20210v1",
+        "published_at": "2026-08-20T16:09:43Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "5b3c85cc158b59df"
+      ],
+      "category": "research",
+      "title_zh": "MidTool：面向智能体工具使用的中期训练数据合成管线",
+      "summary_zh": "论文提出MidTool，一个开放的工具使用中期训练语料构建流程，融合大规模网页、PDF、代码数据与来自真实工具API、MCP技能和文档工作流的合成监督，训练模型识别工具能力、从上下文提取参数、组合调用流程并从信息不全中恢复。基于Qwen3-4B/8B的中期训练在BFCL、tau2-Bench、MCP Universe上一致优于基线。",
+      "why_it_matters_zh": "工具使用是智能体能力的基石；MidTool给出了可复现的中期训练数据配方，并证明其对多类工具使用评测的稳定收益。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MidTool: Mid-training Data Synthesis for Agentic Tool Use",
+        "url": "https://arxiv.org/abs/2608.20314v1",
+        "published_at": "2026-08-20T17:53:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "5e7e74f392bf19c4"
+      ],
+      "category": "research",
+      "title_zh": "Pandora's Router：将模型路由中的价值估计成本建模为潘多拉盒子问题",
+      "summary_zh": "论文将异构AI模型系统的查询路由建模为经典Pandora's Box问题：估计每个专业模型的期望价值有成本，廉价估计器快但有噪声，昂贵估计器准但成本高。集中式Pandora's Router与去中心化Pandora's Bidder分别给出是否值得继续细化估计的决策，并在多LLM基准、检索增强专家等三个领域验证。",
+      "why_it_matters_zh": "模型路由是降低推理成本、提升输出质量的核心工程手段；该工作为“何时值得花钱做更准评估”提供了理论指导。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Pandora's AI Model Routing Box: Efficient Allocation with Costly Value Estimation",
+        "url": "https://arxiv.org/abs/2608.20316v1",
+        "published_at": "2026-08-20T17:54:37Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "2fb6c1f065243f17"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp发布b10549：启用LFM2/LFM2MOE张量切分",
+      "summary_zh": "llama.cpp发布b10549版本，启用了LFM2/LFM2MOE的张量切分（tensor split），并同步提供macOS、Linux、iOS等平台构建；该提交由deepseek-v4-flash辅助完成。",
+      "why_it_matters_zh": "llama.cpp是本地推理最常用的开源项目之一，对新一代模型架构的及时支持直接影响开发者社区的本地部署与多卡切分体验。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10549",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10549",
+        "published_at": "2026-08-21T09:23:07Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 175,
+    "normalized": 175,
+    "filtered": 140,
+    "ai_candidates": 30,
+    "prompt_chars": 27363,
+    "estimated_input_tokens": 6840,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
