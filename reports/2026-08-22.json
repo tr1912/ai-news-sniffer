@@ -1,0 +1,190 @@
+{
+  "date": "2026-08-22",
+  "generated_at": "2026-08-22T11:23:17.549829Z",
+  "run_id": "2026-08-22-78a2549a",
+  "daily_summary_zh": "今日 AI 领域聚焦 NVIDIA 在智能体架构、世界模型、推荐系统与安全层面的密集发布；llama.cpp 开启稳定版语义化版本管理；Hugging Face 关注语音识别基准优化。NVIDIA AVO 在 ARC-AGI-3 上达到 100% 引发对同源智能体框架价值的讨论。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "98aba5deab842eb6",
+        "e2e0995c9809e19c"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA AVO 在 ARC-AGI-3 达到 100%，展示面向长时程自主智能体的通用架构",
+      "summary_zh": "NVIDIA 官方博客宣布其 AVO 架构在 ARC-AGI-3 基准上达到 100% 准确率，强调智能体外层系统（harness）对模型能力的放大作用。TechCrunch 进一步分析指出，该结果说明即使基础模型并非最强，通过 harness 设计和微调也可实现高水平的长时程自主任务表现，且能有效防止智能体失控。",
+      "why_it_matters_zh": "该成果将行业注意力从单一基础模型转向智能体架构设计，表明 AI 智能体的能力上限越来越取决于外围系统而非仅依赖模型本身，对未来智能体栈的构建方式和安全设计具有重要指导意义。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA AVO Reaches 100% on ARC-AGI-3, Demonstrating a Frontier-Level General-Purpose Architecture for Long-Horizon Autonomous Agents",
+        "url": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/",
+        "published_at": "2026-08-21T13:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "Nvidia just showed that the harness, not the AI model, is now the real hero",
+          "url": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
+          "published_at": "2026-08-21T19:43:39Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "2fad7fe69e1c51b6",
+        "44b3e0cafdca389f"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v0.2.0 稳定版并更新夜间构建 b10581",
+      "summary_zh": "llama.cpp 发布 v0.2.0 稳定版，开始对 ggml-org 项目采用语义化版本管理，vX.Y.Z 标签代表稳定版本，b[NUM] 标签继续作为夜间/开发版本。同期发布的 b10581 夜间构建新增了对 BailingMoe3 模型中 DSpark 的支持。",
+      "why_it_matters_zh": "语义化版本管理解决了下游项目与用户选择 llama.cpp/ggml 分发版本的困惑，提升了开源推理生态的稳定性和可维护性，同时新模型支持体现了 llama.cpp 持续快速迭代的能力。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v0.2.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.2.0",
+        "published_at": "2026-08-21T18:32:48Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b10581",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10581",
+          "published_at": "2026-08-22T10:13:08Z"
+        }
+      ]
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "e255f71e354d5934"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Cosmos 3 Edge 后训练指南，面向端侧机器人控制",
+      "summary_zh": "NVIDIA 官方博客介绍如何对 Cosmos 3 Edge 世界模型进行后训练，以适配机器人的传感器、环境和任务，使其能在机载计算硬件上运行，提升端侧机器人控制策略的泛化能力。",
+      "why_it_matters_zh": "端侧部署世界模型是机器人从实验室走向实际场景的关键一步，该后训练方法降低了定制化部署门槛，为开发者在资源受限的机器人硬件上构建自适应控制策略提供了可操作路径。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control",
+        "url": "https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/",
+        "published_at": "2026-08-19T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "fd2e8169000f4134"
+      ],
+      "category": "research",
+      "title_zh": "Hugging Face 提出语音识别基准优化测量方法",
+      "summary_zh": "Hugging Face 官方博客发布文章《Measuring benchmark optimization in speech recognition》，针对语音识别领域基准测试的优化现象提出测量方法，以帮助研究者识别模型在公开基准上的表现是否经过了针对性的优化。",
+      "why_it_matters_zh": "基准测试的可信度直接关系到模型评测与学术研究的公正性，该方法为语音识别社区提供了识别基准过拟合和“刷榜”行为的工具，有助于推动更严谨的模型对比。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Measuring benchmark optimization in speech recognition",
+        "url": "https://huggingface.co/blog/asr-benchmark-optimization",
+        "published_at": "2026-08-21T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "cb3fe8c66da989a1"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 探讨生成式推荐系统如何重构大规模 RecSys",
+      "summary_zh": "NVIDIA 官方博客发布文章《How Generative Recommenders Are Redefining RecSys at Scale》，分析生成式推荐系统在训练和推理规模上的变革，阐述了这一范式对消费互联网大规模推荐系统的影响。",
+      "why_it_matters_zh": "推荐系统是互联网业务的核心基础设施之一，生成式方法有望改变传统 RecSys 的训练与部署模式，对消费互联网公司的技术路线选择具有战略参考价值。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "How Generative Recommenders Are Redefining RecSys at Scale",
+        "url": "https://developer.nvidia.com/blog/how-generative-recommenders-are-redefining-recsys-at-scale/",
+        "published_at": "2026-08-20T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "04e95e2bc5c04a88"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 阐述 AI 智能体栈中的安全定位",
+      "summary_zh": "NVIDIA 官方博客讨论了在 AI 智能体日益强大并执行更长周期任务时，如何将安全与信任构建到智能体应用堆栈中，并给出了智能体栈的安全架构参考。",
+      "why_it_matters_zh": "随着智能体自主能力和任务范围的扩展，安全机制不再只是附加组件，而成为智能体应用能否规模化落地的关键约束。该文章为开发者提供了在智能体栈中集成安全设计的系统视角。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Where Security Fits in an AI Agent Stack",
+        "url": "https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/",
+        "published_at": "2026-08-21T13:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 184,
+    "normalized": 184,
+    "filtered": 123,
+    "ai_candidates": 30,
+    "prompt_chars": 18853,
+    "estimated_input_tokens": 4713,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
