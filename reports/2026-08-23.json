@@ -1,0 +1,112 @@
+{
+  "date": "2026-08-23",
+  "generated_at": "2026-08-23T11:23:12.662351Z",
+  "run_id": "2026-08-23-eeb6645d",
+  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 b10590 版本；深度 ReLU 网络的非参数回归迁移学习框架；机器学习生成代理波形加速引力波参数估计。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "f1395f0563d42044"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10590 版本",
+      "summary_zh": "llama.cpp 发布 b10590 版本，主要更新为将 subprocess.h 依赖更新至 #27409，并同步提供 macOS Apple Silicon/Intel、iOS、Ubuntu x64/arm64/s390x 及 Vulkan 等平台的二进制构建产物。",
+      "why_it_matters_zh": "llama.cpp 是本地与开源大模型推理生态的核心工具之一，持续发布更新为开发者提供跨平台、跨后端的模型运行基础，维护了开源部署链路的活跃度。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10590",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10590",
+        "published_at": "2026-08-23T08:20:51Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "6084ed1f5b53ea03"
+      ],
+      "category": "research",
+      "title_zh": "深度 ReLU 网络的非参数回归迁移学习框架",
+      "summary_zh": "论文提出一种两阶段偏移学习的迁移学习框架：第一阶段合并所有组数据估计总体均值函数，第二阶段估计每组偏移，最终加和得到各组估计器。用深度 ReLU 网络实例化后，在高维层次组合模型下给出显式收敛速率，证明可克服维度灾难，并通过模拟与真实数据实验验证有效性。",
+      "why_it_matters_zh": "该研究为深度网络迁移学习提供了较一般的 L2 误差界，给出了共享结构与组间偏移模型下正向迁移的条件，对多源数据场景下的迁移学习理论与应用具有参考价值。",
+      "importance_score": 52.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Transfer Learning in Nonparametric Regression with Deep ReLU Networks",
+        "url": "https://arxiv.org/abs/2608.20255v1",
+        "published_at": "2026-08-20T16:53:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "db8ec4921f5b9521"
+      ],
+      "category": "research",
+      "title_zh": "机器学习生成代理波形加速引力波参数估计",
+      "summary_zh": "论文提出两阶段确定性条件自编码器用于生成 SEOBNRv4 四参数代理波形：第一阶段生成振幅与相位序列，第二阶段校准残差。模型与目标极化波形的中位失配约 10^-2，校准后的振幅/相位序列余弦距离误差约 10^-6，旨在降低未来第三代引力波探测器参数估计的计算成本。",
+      "why_it_matters_zh": "随着下一代探测器预期产生海量引力波事件，参数估计算力需求将极高；该工作为快速生成理论波形提供了可行的机器学习路线，有望显著加速引力波数据分析流程。",
+      "importance_score": 50.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Gravitational-wave parameter estimation with machine-learning generated surrogate waveforms",
+        "url": "https://arxiv.org/abs/2608.20222v1",
+        "published_at": "2026-08-20T16:20:55Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 180,
+    "normalized": 180,
+    "filtered": 106,
+    "ai_candidates": 30,
+    "prompt_chars": 7335,
+    "estimated_input_tokens": 1833,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

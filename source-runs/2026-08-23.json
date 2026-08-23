@@ -1,0 +1,825 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 180,
+  "normalized_count": 180,
+  "filtered_count": 106,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
+        "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+        "published_at": "2026-08-22T19:00:00Z",
+        "fetched_at": "2026-08-23T11:23:37.258537Z",
+        "language": "unknown",
+        "excerpt": "Built by DeepMind alumni, British AI lab Inherent released Faraday, an AI agent whose ability to replicate scientific papers could be a stepping stone for innovation.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anna Heim",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3c744cf4252240df",
+        "canonical_url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research",
+        "normalized_title": "inherent founded by deepmind alumni says its ai teammate just outperformed anthropic and openai at replicating research",
+        "fingerprint": "3c744cf4252240dfc9208ce4fdc8bfd60d7af1bf992e686a0a2e56d7851391c8",
+        "rule_score": 62.9
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的",
+        "url": "https://www.qbitai.com/2026/08/478191.html",
+        "published_at": "2026-08-23T09:56:12Z",
+        "fetched_at": "2026-08-23T11:23:37.196752Z",
+        "language": "unknown",
+        "excerpt": "Tokenizer、视频编码、API报错全扒一遍",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1ce4e7e4d0f3051a",
+        "canonical_url": "https://www.qbitai.com/2026/08/478191.html",
+        "normalized_title": "匿名牛来大模型被扒出智谱血缘 也有人怀疑cursor拿开源glm训的",
+        "fingerprint": "1ce4e7e4d0f3051af3a1285554094660091abcad67e2087fcdcaec7eef16d943",
+        "rule_score": 57.39366666666667
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10590",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10590",
+        "published_at": "2026-08-23T08:20:51Z",
+        "fetched_at": "2026-08-23T11:23:32.367242Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nvendor : update subprocess.h (#27409)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/42402532>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10590/llama-b10590-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10590/llama-b10590-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10590/llama-b10590-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10590/llama-b10590-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10590/llama-b10590-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10590/llama-b10590-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10590/llama-b10590-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu arm64",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 375153983
+        },
+        "id": "f1395f0563d42044",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10590",
+        "normalized_title": "llama cpp releases b10590",
+        "fingerprint": "f1395f0563d4204447ab81f1e33b819a3b6fbd0b1bb83c6110f2d929edc765d6",
+        "rule_score": 56.23475
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "英伟达AI服务器将涨价15%！1GW数据中心成本激增50亿美元",
+        "url": "https://www.qbitai.com/2026/08/478164.html",
+        "published_at": "2026-08-23T09:51:49Z",
+        "fetched_at": "2026-08-23T11:23:37.196809Z",
+        "language": "unknown",
+        "excerpt": "内存成本飙升逼涨硬件",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5183ef406b6314ff",
+        "canonical_url": "https://www.qbitai.com/2026/08/478164.html",
+        "normalized_title": "英伟达ai服务器将涨价15 1gw数据中心成本激增50亿美元",
+        "fingerprint": "5183ef406b6314ffcbf035d4a6990642b724c14fd4d11da2cbe028979f802502",
+        "rule_score": 53.386361111111114
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "魔法原子亮相WRC 2026，三大场景解决方案实景展示物理AI真·上岗",
+        "url": "https://www.qbitai.com/2026/08/477155.html",
+        "published_at": "2026-08-22T14:11:20Z",
+        "fetched_at": "2026-08-23T11:23:37.196890Z",
+        "language": "unknown",
+        "excerpt": "一脑驱动多形落地",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2ae8d03585b2da0a",
+        "canonical_url": "https://www.qbitai.com/2026/08/477155.html",
+        "normalized_title": "魔法原子亮相wrc 2026 三大场景解决方案实景展示物理ai真 上岗",
+        "fingerprint": "2ae8d03585b2da0adcdd4a6c9ea6b9a68d1919f5bd469a2b6864cb3ba820e1b1",
+        "rule_score": 51.41888888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "OpenAI says California should strengthen its AI safety bill",
+        "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+        "published_at": "2026-08-22T16:30:34Z",
+        "fetched_at": "2026-08-23T11:23:37.258552Z",
+        "language": "unknown",
+        "excerpt": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e7f8b21cf9d54818",
+        "canonical_url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill",
+        "normalized_title": "openai says california should strengthen its ai safety bill",
+        "fingerprint": "e7f8b21cf9d5481869291b918d75b25d322946aae2496ae5e824ac10f272a34e",
+        "rule_score": 50.65094444444444
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "全球首次！机器人迎战网球运动员，极限救球，摔倒光速弹起",
+        "url": "https://www.qbitai.com/2026/08/478093.html",
+        "published_at": "2026-08-23T09:45:27Z",
+        "fetched_at": "2026-08-23T11:23:37.196823Z",
+        "language": "unknown",
+        "excerpt": "AstraTennis时刻背后的硬核技术",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d374bacf91ee3aa8",
+        "canonical_url": "https://www.qbitai.com/2026/08/478093.html",
+        "normalized_title": "全球首次 机器人迎战网球运动员 极限救球 摔倒光速弹起",
+        "fingerprint": "d374bacf91ee3aa87a0e2eb5172de21a29b26d3e356f1d9301a44279add26233",
+        "rule_score": 49.37575
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "不做硅谷follower：几个读博的年轻人，押注双足人形的一体化大脑",
+        "url": "https://www.qbitai.com/2026/08/478020.html",
+        "published_at": "2026-08-23T09:29:59Z",
+        "fetched_at": "2026-08-23T11:23:37.196835Z",
+        "language": "unknown",
+        "excerpt": "机器人开卡丁车连续过弯，一镜到底全自主",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2cff6fba6d216742",
+        "canonical_url": "https://www.qbitai.com/2026/08/478020.html",
+        "normalized_title": "不做硅谷follower 几个读博的年轻人 押注双足人形的一体化大脑",
+        "fingerprint": "2cff6fba6d216742bb249cc4cdd5c2721fe3ef07d385de5c04a22ad0d055a2cd",
+        "rule_score": 49.34997222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "你的第一个个人机器人开启预订！上纬新材拉开家庭机器人消费时代序幕",
+        "url": "https://www.qbitai.com/2026/08/478017.html",
+        "published_at": "2026-08-23T07:17:41Z",
+        "fetched_at": "2026-08-23T11:23:37.196846Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ea83b647a4477e9a",
+        "canonical_url": "https://www.qbitai.com/2026/08/478017.html",
+        "normalized_title": "你的第一个个人机器人开启预订 上纬新材拉开家庭机器人消费时代序幕",
+        "fingerprint": "ea83b647a4477e9ac73b76f64a13edc99ba1ded474dfcf15d33312c17cf10bb5",
+        "rule_score": 49.12947222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "从世界模型到现实生产力，无界动力深度参与WRC主论坛及多场同期活动",
+        "url": "https://www.qbitai.com/2026/08/478007.html",
+        "published_at": "2026-08-23T07:12:22Z",
+        "fetched_at": "2026-08-23T11:23:37.196857Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "901706d50be854ca",
+        "canonical_url": "https://www.qbitai.com/2026/08/478007.html",
+        "normalized_title": "从世界模型到现实生产力 无界动力深度参与wrc主论坛及多场同期活动",
+        "fingerprint": "901706d50be854ca419a72fee5019f38027ffdf69a3071b457a17ad1e054b313",
+        "rule_score": 49.12061111111111
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "不是Demo！优必选把客户产线1:1搬进WRC，解锁具身智能真落地路径",
+        "url": "https://www.qbitai.com/2026/08/477253.html",
+        "published_at": "2026-08-22T14:46:43Z",
+        "fetched_at": "2026-08-23T11:23:37.196868Z",
+        "language": "unknown",
+        "excerpt": "端侧部署解决了具身大脑能否装进身体的问题。那么，同一个「大脑」，如何快速适配工业、商用和家庭三类机器人呢？",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "田, 晏林",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d4c7a7e0b2d58c88",
+        "canonical_url": "https://www.qbitai.com/2026/08/477253.html",
+        "normalized_title": "不是demo 优必选把客户产线1 1搬进wrc 解锁具身智能真落地路径",
+        "fingerprint": "d4c7a7e0b2d58c88812cedc88ae5a3290f7e91616b0a0ed816992cceabc012cd",
+        "rule_score": 47.47786111111111
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "伽利略机器人首发“陆行具身系统”，打通轮车足底层技术壁垒",
+        "url": "https://www.qbitai.com/2026/08/477246.html",
+        "published_at": "2026-08-22T14:19:39Z",
+        "fetched_at": "2026-08-23T11:23:37.196879Z",
+        "language": "unknown",
+        "excerpt": "直击WRC",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "46015c0d0ee6c502",
+        "canonical_url": "https://www.qbitai.com/2026/08/477246.html",
+        "normalized_title": "伽利略机器人首发 陆行具身系统 打通轮车足底层技术壁垒",
+        "fingerprint": "46015c0d0ee6c5022d23c2a33541f84535161dfee443c808d3a9ead96058b069",
+        "rule_score": 47.43275
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "00后清华博士生创业“神经接口”：把人类肌肉反应炼成Token",
+        "url": "https://www.qbitai.com/2026/08/477094.html",
+        "published_at": "2026-08-22T13:56:00Z",
+        "fetched_at": "2026-08-23T11:23:37.196900Z",
+        "language": "unknown",
+        "excerpt": "采集，从一条腕带开始",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3a5ad428f24464a9",
+        "canonical_url": "https://www.qbitai.com/2026/08/477094.html",
+        "normalized_title": "00后清华博士生创业 神经接口 把人类肌肉反应炼成token",
+        "fingerprint": "3a5ad428f24464a9ccd9ba2b848c737f8f4ec99de7a046676bd511b2d8463f2e",
+        "rule_score": 47.39333333333333
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Harvard’s $699 startup bootcamp offers AI avatars of its instructors",
+        "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+        "published_at": "2026-08-22T21:46:56Z",
+        "fetched_at": "2026-08-23T11:23:37.258496Z",
+        "language": "unknown",
+        "excerpt": "In the HBS Foundry program, AI avatars provide feedback during practice pitches and board meetings.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1e15e4341c1958f4",
+        "canonical_url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors",
+        "normalized_title": "harvard s 699 startup bootcamp offers ai avatars of its instructors",
+        "fingerprint": "1e15e4341c1958f46e193dfdfec429d028255b823ed88792ef1cfc1d0987e1a4",
+        "rule_score": 47.178222222222225
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Frontier AI labs still won’t say how they’d contain a rogue model",
+        "url": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
+        "published_at": "2026-08-22T16:00:00Z",
+        "fetched_at": "2026-08-23T11:23:37.258564Z",
+        "language": "unknown",
+        "excerpt": "A new study finds leading AI labs have few publicly documented plans for containing rogue models, raising questions about preparedness as AI systems increasingly demonstrate unexpected and potentially dangerous behavior.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "15d92dc9f00027ec",
+        "canonical_url": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model",
+        "normalized_title": "frontier ai labs still won t say how they d contain a rogue model",
+        "fingerprint": "15d92dc9f00027ec0b155a368e36006c940655c4ed530616c5eb6db7c76f814e",
+        "rule_score": 46.6
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Firefox 155 and beyond will be released in a two-week cadence",
+        "url": "https://support.mozilla.org/en-US/kb/firefox-enterprise-154-release-notes",
+        "published_at": "2026-08-23T05:50:14Z",
+        "fetched_at": "2026-08-23T11:23:40.631269Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Throwthrowbob",
+        "upstream_urls": [
+          "https://support.mozilla.org/en-US/kb/firefox-enterprise-154-release-notes"
+        ],
+        "raw_metadata": {
+          "hn_id": 49406329,
+          "score": 14
+        },
+        "id": "13a7ad4404320ec0",
+        "canonical_url": "https://support.mozilla.org/en-US/kb/firefox-enterprise-154-release-notes",
+        "normalized_title": "firefox 155 and beyond will be released in a two week cadence",
+        "fingerprint": "13a7ad4404320ec0b15d1e12d41190f7401f84bd394f66d33b149e498e5573f7",
+        "rule_score": 44.98372222222222
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
+        "url": "https://techcrunch.com/2026/08/20/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
+        "published_at": "2026-08-20T18:20:35Z",
+        "fetched_at": "2026-08-23T11:23:37.258702Z",
+        "language": "unknown",
+        "excerpt": "Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lauren Forristal",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c37d4194ada8cd93",
+        "canonical_url": "https://techcrunch.com/2026/08/20/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule",
+        "normalized_title": "linkdaze s smart calendar is built to run a household not just track a schedule",
+        "fingerprint": "c37d4194ada8cd9332a9a110e015a20c55b9b002244ac646fd9736690f615031",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta brings Pocket, an app that lets you vibe-code and share games, to US users",
+        "url": "https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/",
+        "published_at": "2026-08-20T16:07:26Z",
+        "fetched_at": "2026-08-23T11:23:37.258742Z",
+        "language": "unknown",
+        "excerpt": "Meta is bringing Pocket, its experimental AI-powered app for creating and sharing interactive games, to users across the U.S. after quietly testing it in Brazil.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "381169496e4f44bd",
+        "canonical_url": "https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users",
+        "normalized_title": "meta brings pocket an app that lets you vibe code and share games to us users",
+        "fingerprint": "381169496e4f44bde4290125feed7f799d788426def5ad25cc1ca12ece8dbc62",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+        "url": "https://ozbrain.com/",
+        "published_at": "2026-08-21T23:09:06Z",
+        "fetched_at": "2026-08-23T11:23:40.217065Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dariusmonsef",
+        "upstream_urls": [
+          "https://ozbrain.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49394827,
+          "score": 84
+        },
+        "id": "72d4e7a7f50ad61a",
+        "canonical_url": "https://ozbrain.com/",
+        "normalized_title": "show hn ozbrain a shared brain for knowledge between agents and your team",
+        "fingerprint": "72d4e7a7f50ad61adda42d5f4afde8f5813f059b0bc510689b6f0cbd60a1a3f1",
+        "rule_score": 41.915166666666664
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The lost airports of SimCity 3000 (2002)",
+        "url": "https://web.archive.org/web/20021204030618/http://www.sc3000.com/knowledge/showarticle.cfm?id=0910&openItemID=",
+        "published_at": "2026-08-23T08:39:23Z",
+        "fetched_at": "2026-08-23T11:23:40.388018Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Lammy",
+        "upstream_urls": [
+          "https://web.archive.org/web/20021204030618/http://www.sc3000.com/knowledge/showarticle.cfm?id=0910&openItemID="
+        ],
+        "raw_metadata": {
+          "hn_id": 49407100,
+          "score": 3
+        },
+        "id": "a05d9501dc3d5ce3",
+        "canonical_url": "https://web.archive.org/web/20021204030618/http://www.sc3000.com/knowledge/showarticle.cfm?id=0910&openItemID=",
+        "normalized_title": "the lost airports of simcity 3000 2002",
+        "fingerprint": "a05d9501dc3d5ce3faa11d9ff2c7fb3b1bdbb82bf70dc19396f105531e4433ec",
+        "rule_score": 41.26563888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nobody Explained the Schrödinger Equation Like This [video]",
+        "url": "https://www.youtube.com/watch?v=X-q2eZVhff8",
+        "published_at": "2026-08-23T08:29:55Z",
+        "fetched_at": "2026-08-23T11:23:39.595712Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "peter_d_sherman",
+        "upstream_urls": [
+          "https://www.youtube.com/watch?v=X-q2eZVhff8"
+        ],
+        "raw_metadata": {
+          "hn_id": 49407052,
+          "score": 6
+        },
+        "id": "99a58915f9dd1dda",
+        "canonical_url": "https://www.youtube.com/watch?v=X-q2eZVhff8",
+        "normalized_title": "nobody explained the schrödinger equation like this video",
+        "fingerprint": "99a58915f9dd1dda49a046160d397c6bfeee95cb75a791ec83dfa921b9e86c12",
+        "rule_score": 41.24986111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Steve French (SMB3/CIFSFS Linux kernel maintainer) has died",
+        "url": "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change",
+        "published_at": "2026-08-23T07:27:51Z",
+        "fetched_at": "2026-08-23T11:23:39.355323Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "starkparker",
+        "upstream_urls": [
+          "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change"
+        ],
+        "raw_metadata": {
+          "hn_id": 49406751,
+          "score": 14
+        },
+        "id": "b6e541dbbc68e626",
+        "canonical_url": "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change",
+        "normalized_title": "steve french smb3 cifsfs linux kernel maintainer has died",
+        "fingerprint": "b6e541dbbc68e6263e71533926c20dac4b274419e7201c852e8378af712966d8",
+        "rule_score": 41.14641666666667
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Transfer Learning in Nonparametric Regression with Deep ReLU Networks",
+        "url": "https://arxiv.org/abs/2608.20255v1",
+        "published_at": "2026-08-20T16:53:00Z",
+        "fetched_at": "2026-08-23T11:23:30.523474Z",
+        "language": "unknown",
+        "excerpt": "This paper develops a general transfer learning framework for nonparametric regression with data consisting of multiple groups. Under the assumption that groups share a common structure along with group-specific deviations in additive form, the proposed method employs a two-stage offset learning procedure: the first stage pools data from all groups to estimate an overall mean function, and the second stage estimates offsets for each group, yielding final group-level estimators through additive combination. Upper bounds on the $\\mathcal L_2$ error are established for the proposed framework, covering a broad class of nonparametric estimators under mild complexity and noise conditions. When instantiated with deep ReLU networks, explicit convergence rates are derived under hierarchical composition models, demonstrating the ability to overcome the curse of dimensionality. Conditions that enable positive transfer with faster rates are considered, including learning with simpler functions and data augmentation through pooling samples across groups. Various simulations and real-data experiments further validate the effectiveness of the proposed method.",
+        "categories": [
+          "research"
+        ],
+        "author": "Oscar Hernan Madrid Padilla",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6084ed1f5b53ea03",
+        "canonical_url": "https://arxiv.org/abs/2608.20255v1",
+        "normalized_title": "transfer learning in nonparametric regression with deep relu networks",
+        "fingerprint": "6084ed1f5b53ea036035741e143f9aac54a77840d2be7fa5793a044423f7555c",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Gravitational-wave parameter estimation with machine-learning generated surrogate waveforms",
+        "url": "https://arxiv.org/abs/2608.20222v1",
+        "published_at": "2026-08-20T16:20:55Z",
+        "fetched_at": "2026-08-23T11:23:30.523525Z",
+        "language": "unknown",
+        "excerpt": "The worldwide network of gravitational-wave detectors have detected more than 350 binary coalescence events till date. Future third-generation detectors, like Einstein telescope, are expected to detect orders-of-magnitude more signals from sources with more complicated characteristics, including eccentric orbits and high-mass ratio binaries. It is well-established that the computational cost of parameter estimation for signals from these kinds of sources will be extremely high. In particular, the process could be sped-up if generating theoretical waveform predictions, used for likelihood calculation becomes faster. Recently, various machine-learning techniques has been proposed to this end. In this work, we propose a two-stage deterministic conditional-autoencoder model for generating four-parameter SEOBNRv4 waveforms. The first-stage of the model generates amplitude and phase series of the waveform, while the second-stage calibrates the residual error in the predictions. Our model achieves a median mismatch of around $10^{-2}$ with the target polarization waveforms, while the calibrated amplitude/phase series achieve $10^{-6}$ level cosine distance error. We then propose a wavefor",
+        "categories": [
+          "research"
+        ],
+        "author": "Kipp Cannon",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "db8ec4921f5b9521",
+        "canonical_url": "https://arxiv.org/abs/2608.20222v1",
+        "normalized_title": "gravitational wave parameter estimation with machine learning generated surrogate waveforms",
+        "fingerprint": "db8ec4921f5b9521e651a952999be00e370e2c429ac18f213720364916811b5e",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Software Engineering in the Agentic Era",
+        "url": "https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/",
+        "published_at": "2026-08-23T00:20:21Z",
+        "fetched_at": "2026-08-23T11:23:39.527281Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "silverpiranha",
+        "upstream_urls": [
+          "https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49405117,
+          "score": 22
+        },
+        "id": "4a11077c15872643",
+        "canonical_url": "https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns",
+        "normalized_title": "software engineering in the agentic era",
+        "fingerprint": "4a11077c158726439fb03c8072941444a6f2fa3569d72d910a3681085543f304",
+        "rule_score": 40.43391666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "ChatGPT can now send texts for you with new Apple Messages plug-in",
+        "url": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/",
+        "published_at": "2026-08-20T22:09:51Z",
+        "fetched_at": "2026-08-23T11:23:37.258646Z",
+        "language": "unknown",
+        "excerpt": "Ever wanted someone else to do your texting for you? ChatGPT is being offered up as an automated text scribe via a new Apple Messages integration.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lucas Ropek",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "957ce65488de19ac",
+        "canonical_url": "https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin",
+        "normalized_title": "chatgpt can now send texts for you with new apple messages plug in",
+        "fingerprint": "957ce65488de19ac04a31b2dc80ccf4e2ce259ff090a6972b8b3b9f07cc3bd04",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "OK, can we actually cool data centers with our pee?",
+        "url": "https://techcrunch.com/2026/08/20/ok-can-we-actually-cool-data-centers-with-our-pee/",
+        "published_at": "2026-08-20T20:53:13Z",
+        "fetched_at": "2026-08-23T11:23:37.258671Z",
+        "language": "unknown",
+        "excerpt": "Jason Kelce joked that people should cool data centers with their pee, rather than potable water -- but his suggestion is not completely ludicrous.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Amanda Silberling",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c177a3511ae14f31",
+        "canonical_url": "https://techcrunch.com/2026/08/20/ok-can-we-actually-cool-data-centers-with-our-pee",
+        "normalized_title": "ok can we actually cool data centers with our pee",
+        "fingerprint": "c177a3511ae14f3133cbe78115ebafbb5cdafabdc05d7659811f0222636ab14d",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Grok keeps sending gibberish responses to users",
+        "url": "https://techcrunch.com/2026/08/20/grok-keeps-sending-gibberish-responses-to-users/",
+        "published_at": "2026-08-20T17:32:16Z",
+        "fetched_at": "2026-08-23T11:23:37.258712Z",
+        "language": "unknown",
+        "excerpt": "Affected users told TechCrunch they were using Grok Lite, and noticed the issues as early as Wednesday morning.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Russell Brandom",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a30e584973947b2e",
+        "canonical_url": "https://techcrunch.com/2026/08/20/grok-keeps-sending-gibberish-responses-to-users",
+        "normalized_title": "grok keeps sending gibberish responses to users",
+        "fingerprint": "a30e584973947b2e68cb3e2bdae5256468c7055ba992d5d05a442207aaae8648",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why your local LLM feels dumber than it is",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "published_at": "2026-08-22T18:14:16Z",
+        "fetched_at": "2026-08-23T11:23:37.614236Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "felineflock",
+        "upstream_urls": [
+          "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917"
+        ],
+        "raw_metadata": {
+          "hn_id": 49402232,
+          "score": 373
+        },
+        "id": "e4efb2a87140e2c9",
+        "canonical_url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "normalized_title": "why your local llm feels dumber than it is",
+        "fingerprint": "e4efb2a87140e2c99b1a22b904c2ac628e082d5db7d9d25164705e2559a066a5",
+        "rule_score": 39.82377777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
+        "url": "https://twitter.com/argofowl/status/2091150597374537729",
+        "published_at": "2026-08-22T16:58:49Z",
+        "fetched_at": "2026-08-23T11:23:39.767515Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "matthieu_bl",
+        "upstream_urls": [
+          "https://twitter.com/argofowl/status/2091150597374537729"
+        ],
+        "raw_metadata": {
+          "hn_id": 49401549,
+          "score": 193
+        },
+        "id": "1025ec84466bce2d",
+        "canonical_url": "https://twitter.com/argofowl/status/2091150597374537729",
+        "normalized_title": "anthropic appears to be a b testing reduced effort levels in claude code",
+        "fingerprint": "1025ec84466bce2dfb613541f5a06e19776eab51579b5728923bfa60ca5b1c21",
+        "rule_score": 39.69802777777778
+      }
+    ],
+    "prompt_chars": 7335,
+    "estimated_input_tokens": 1833
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
