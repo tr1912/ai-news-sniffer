@@ -1,0 +1,152 @@
+{
+  "date": "2026-08-24",
+  "generated_at": "2026-08-24T11:31:58.758648Z",
+  "run_id": "2026-08-24-879b14b4",
+  "daily_summary_zh": "今日值得关注的进展以 AI 前沿研究和技术开源为主：测试时训练、思维链压缩、安全对齐、自精炼容量分配等方向都有新论文；本地推理引擎 llama.cpp 发布版本更新；另有面向专利、心理咨询、ASR、生命科学等场景的专门研究。媒体侧传闻的 Ox Alpha 等事件因缺乏官方或独立信源未纳入。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "2b054edfe98de69b"
+      ],
+      "category": "research",
+      "title_zh": "E²-TTT：兼具表达力与硬件效率的测试时训练方法",
+      "summary_zh": "论文提出 E²-TTT（Expressive and Efficient Test-Time Training），在标准 chunk-start 权重梯度近似下推导出闭式状态转移，精确复现逐 token 循环的 chunk-end 快权重和动量状态，从而支持全并行化的 chunk 级训练。研究人员从零训练了最高 1.3B 参数的模型，在语言建模上与 TTT 和混合注意力基线相当，在上下文检索上更优；在 passkey 测试中，即使上下文长度达到训练长度的 8 倍仍保持 90% 以上准确率，并匹配高效 chunk 方法的吞吐。",
+      "why_it_matters_zh": "在保持 TTT 表达力的同时提升硬件效率，是长上下文推理实用化的重要一步。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Rethinking Expressivity and Efficiency in Test-Time Training",
+        "url": "https://arxiv.org/abs/2608.21308v1",
+        "published_at": "2026-08-21T17:12:28Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "36c9bc78cf4e968c"
+      ],
+      "category": "research",
+      "title_zh": "CLEAR：连续潜空间适配器路由改善大模型安全-效用权衡",
+      "summary_zh": "论文提出 CLEAR（Continuous Latent Adapter Routing），用轻量 hidden-state 门控制安全低秩适配器的激活强度，在冻结主干上按需调整安全行为。在 Llama-3-8B-Instruct 上，CLEAR 将 HarmBench 攻击成功率从 32.3% 降到 0.5%，同时在 GSM8K 上比全局 SFT 或 LoRA 最多高 7.1 个百分点。",
+      "why_it_matters_zh": "在安全对齐中实现更好的安全-效用权衡，避免一刀切微调损害通用能力。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment",
+        "url": "https://arxiv.org/abs/2608.21278v1",
+        "published_at": "2026-08-21T16:36:10Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "5b004c7b6af88966"
+      ],
+      "category": "research",
+      "title_zh": "记忆增强压缩：让思维链压缩不损失推理质量",
+      "summary_zh": "论文提出 Memory-Augmented Compression，一种无需训练的框架，从历史推理轨迹构造可复用记忆，并在 prefill 侧作为脚手架检索。实验显示，相比 Chain-of-Draft，它在 GSM8K、MATH、BBH、MMLU-Sci 上分别带来 21.4、28.0、29.5 和 6.61 个百分点的准确率提升，同时相比标准 CoT 获得 1.14–1.49 倍延迟加速。",
+      "why_it_matters_zh": "为 CoT 压缩导致的逻辑断裂提供了补偿机制，兼顾推理质量与延迟，对推理成本敏感的应用尤其有价值。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Memory Augmentation Unlocks Efficient Chain-of-Thought Reasoning",
+        "url": "https://arxiv.org/abs/2608.21265v1",
+        "published_at": "2026-08-21T16:22:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "8fc10256c1efc32f"
+      ],
+      "category": "research",
+      "title_zh": "AI 驱动的可验证全链路：一个人五周完成 RISC-V 处理器流片",
+      "summary_zh": "论文报告一位研究者在五周内，仅借助消费级 AI 订阅和小型 AI agent 群，将应用代码经验证编译器与执行器，完成 RISC-V 处理器并流片；全程无人类编写 RTL，也没有任何证明经过人工审查。其 Salt 方法以 Lean 4 内核和 SAT 检查的等价性作为可验证边界，并公开了定理来源、token 计量、人工时间和错误登记簿。",
+      "why_it_matters_zh": "展示生成式 AI 与机器验证结合后，形式验证成本大幅降低，让单人安全指挥大规模自主机器工作成为可能。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AI with Authority, from Application to Silicon",
+        "url": "https://arxiv.org/abs/2608.21356v1",
+        "published_at": "2026-08-21T17:59:16Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "bc0e8c7f3c196a1b"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10605：Mamba-2 投影改为 GEMM 调度",
+      "summary_zh": "llama.cpp 发布 b10605 版本，主要变更是在 Mamba-2 实现中将 in/out 投影展平，从而调度 GEMM 而非 GEMV（PR #27513），并移除冗余输出 reshape；同步提供 macOS、Linux、iOS 等多平台二进制。",
+      "why_it_matters_zh": "作为最流行的本地 LLM 推理引擎之一，持续优化算子调度可提升端侧和自托管推理效率。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10605",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10605",
+        "published_at": "2026-08-24T08:57:22Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 163,
+    "normalized": 163,
+    "filtered": 128,
+    "ai_candidates": 30,
+    "prompt_chars": 22689,
+    "estimated_input_tokens": 5672,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
