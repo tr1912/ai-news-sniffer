@@ -1,0 +1,195 @@
+{
+  "date": "2026-08-25",
+  "generated_at": "2026-08-25T11:31:20.145502Z",
+  "run_id": "2026-08-25-3f824966",
+  "daily_summary_zh": "今日AI领域，NVIDIA发布Vera Rubin平台系列技术文章，展示其在Agentic AI性能功耗比、Vera CPU与Groq 3 LPX方面的进展；开源推理框架llama.cpp发布0.3.0版。研究方面，Prime Agent将ARC-AGI-3成绩提升至95.5%，SRPO提出高效的自我反思策略优化，Gradio官方上线AI工作流指南，同时还有SWE Refactor Bench、EarthVerse、安全方向惩罚、InjecMEM等领域的重要论文发布。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "2ef39b898226483d",
+        "b0a127f9465eb301",
+        "1b1420ccdc274cba"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA Vera Rubin平台多项Agentic AI新进展：性能功耗比、Vera CPU与Groq 3 LPX",
+      "summary_zh": "NVIDIA官方博客发布三篇文章，介绍Vera Rubin平台为Agentic AI带来的新能力：Vera Rubin和Blackwell在每瓦特性能上为智能体AI树立新标准；Vera CPU解决AI集群的编排和成本效率挑战；Groq 3 LPX作为交互式推理加速器，在Vera Rubin平台上实现超长上下文下的超快交互。",
+      "why_it_matters_zh": "NVIDIA新一代平台针对智能体多步推理、工具调用和子智能体协调等场景优化，从GPU、CPU到加速器全面升级，有望推动AI工厂从功率和资本到完成任务的整体效率提升。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA Vera Rubin and Blackwell Set a New Standard for Agentic AI Performance per Watt",
+        "url": "https://developer.nvidia.com/blog/nvidia-vera-rubin-and-blackwell-set-a-new-standard-for-agentic-ai-performance-per-watt/",
+        "published_at": "2026-08-24T15:00:05Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "78ddba5357143aee",
+        "ce76316b66d400db"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v0.3.0：多模态模型、MTP支持与张量切分增强",
+      "summary_zh": "llama.cpp 0.3.0正式发布，带来dots3-note多模态模型（含DSA-ISWA KV cache）、GLM-4.5-Air的MTP支持、DeepSeek 4的张量切分与多序列回滚修复；ggml升级至v0.22.0，服务端新增LLAMA_SERVER_SLOTS_N_DIFF调试开关，Web UI支持标签页聊天导航。",
+      "why_it_matters_zh": "作为最流行的本地LLM推理框架之一，llama.cpp的新版本持续增强多模态和新模型适配，为开发者在消费级硬件上运行前沿模型提供更强大的工具。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v0.3.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.3.0",
+        "published_at": "2026-08-25T10:22:58Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "26a7a2d416c7b5cf"
+      ],
+      "category": "research",
+      "title_zh": "Prime Agent：自改进RLM长程智能体开源框架，ARC-AGI-3成绩大幅提升",
+      "summary_zh": "arXiv论文发布Prime Agent，一个用于长程评估和编码智能体工作流的开源harness。它通过持久IPython REPL和Continual Harness保留历史、记忆、技能和子智能体规范，支持递归子智能体直接通信和人类管理会话。在ARC-AGI-3 RHAE Best@1上从30%提升至95.5%，并在长上下文编码、GPU内核生成等任务上匹配或超越现有框架。",
+      "why_it_matters_zh": "该框架将执行、恢复、验证和资源核算标准化，把harness失败与模型失败隔离，为测量智能体真实上限能力提供了新范式。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Prime Agent: A Self-Improving RLM Harness",
+        "url": "https://arxiv.org/abs/2608.23552v1",
+        "published_at": "2026-08-24T17:54:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "ba19505f28b56940"
+      ],
+      "category": "research",
+      "title_zh": "SRPO：自反思策略优化，用8% FLOPs实现长程推理SOTA",
+      "summary_zh": "论文提出Self-Reflective Policy Optimization (SRPO)，让LLM分析自身轨迹、合成错误为反思补丁，并使用反思条件化教师评分作为密集token级训练信号。基于Qwen3-8B，SRPO在AIME'24上达到73.3%，仅使用scaled SFT的8%计算量，并显著提升WebShop、ALFWorld和SWE-Bench-Lite成功率。",
+      "why_it_matters_zh": "SRPO无需外部critic或更大教师模型，将稀疏终局奖励转化为密集训练信号，显著提升长程推理后训练的数据和计算效率。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "SRPO: Self-Reflective Policy Optimization for Long-Horizon Reasoning",
+        "url": "https://arxiv.org/abs/2608.23493v1",
+        "published_at": "2026-08-24T16:55:09Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "34676a680fb69b6c"
+      ],
+      "category": "developer-tools",
+      "title_zh": "Hugging Face发布Gradio AI工作流构建指南",
+      "summary_zh": "Hugging Face官方博客发布“Wire It, Run It, Deploy It: AI Workflows in Gradio”，介绍如何使用Gradio构建、运行和部署AI工作流应用。",
+      "why_it_matters_zh": "Gradio是广泛使用的AI应用快速开发框架，官方指南帮助开发者用低门槛方式将模型封装为可交互、可部署的AI工作流，促进AI应用落地。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Wire It, Run It, Deploy It: AI Workflows in Gradio",
+        "url": "https://huggingface.co/blog/gradio-workflow-guide",
+        "published_at": "2026-08-25T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "a4b6d27d9879cb3a"
+      ],
+      "category": "research",
+      "title_zh": "SWE Refactor Bench：编码智能体在仓库级迁移上成功率仅5.4%",
+      "summary_zh": "论文发布SWE Refactor Bench，包含20个全仓库迁移任务和4类技术债，用迁移审计、行为测试和智能体验证三阶段评估。在8个前沿模型、520次运行中，仅28次（5.4%）通过全部阶段，13个任务无任何解决方案，最佳模型claude-opus-5也表现有限。",
+      "why_it_matters_zh": "该基准暴露了现有编码智能体评估忽视迁移真实性的“盲目性”，说明仓库级技术债迁移仍是极具挑战的长期任务，为编码智能体研究提供更严苛的测试。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration?",
+        "url": "https://arxiv.org/abs/2608.23564v1",
+        "published_at": "2026-08-24T17:59:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "607b9e1d36aceb9c"
+      ],
+      "category": "research",
+      "title_zh": "EarthVerse：面向地球系统与自然灾害的科学智能体基准",
+      "summary_zh": "论文推出EarthVerse基准，包含405个可复现任务、199个事件和19个灾害类别，评估科学智能体在证据访问、工具选择、记忆、推理等方面的能力。25个系统的最佳平均准确率为84.65%，但最高Strict@95仅34.81%，显示科学智能体仍有巨大提升空间。",
+      "why_it_matters_zh": "EarthVerse提供可执行真值和过程化评分，推动AI在地球科学与灾害应急中的可信、可验证应用，为科学智能体提供标准化评测。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
+        "url": "https://arxiv.org/abs/2608.23525v1",
+        "published_at": "2026-08-24T17:29:16Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 179,
+    "normalized": 179,
+    "filtered": 151,
+    "ai_candidates": 30,
+    "prompt_chars": 23222,
+    "estimated_input_tokens": 5805,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
