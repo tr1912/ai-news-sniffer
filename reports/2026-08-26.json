@@ -1,0 +1,261 @@
+{
+  "date": "2026-08-26",
+  "generated_at": "2026-08-26T11:33:13.384368Z",
+  "run_id": "2026-08-26-65bb3b92",
+  "daily_summary_zh": "今日AI动态以推理基础设施和Agent安全为主线：vLLM v0.28.0、llama.cpp与NVIDIA Dynamo更新相继落地，OpenAI自研Jalapeño芯片的推理基准被独立媒体曝光；IBM Granite 4.2技术说明发布，LAION公开千万小时视频数据集。研究方面，StepGuard步骤级Agent护栏、BrowserForge网页Agent数据引擎、Recuris长程Agent记忆、医学思维链扰动审计以及金融长上下文“检索-整合鸿沟”等成果集中出现。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "2736a1ecb4b01737"
+      ],
+      "category": "open-source",
+      "title_zh": "vLLM v0.28.0发布：为Kimi-K3与DeepSeek V4带来深度推理优化",
+      "summary_zh": "vLLM v0.28.0包含584个提交、来自270位贡献者。重点包括：为Kimi-K3引入Decode Context Parallel、融合FlashKDA kernel、自适应投机token预算以及共享专家分片（每GPU节省约17 GiB内存）；DeepSeek V4的稀疏MLA在普通解码、MTP和DSpark投机解码上端到端可用，并支持AMD Quark NVFP4及ROCm gfx11/gfx950。",
+      "why_it_matters_zh": "vLLM是开源LLM推理的关键基础设施，此次更新直接降低前沿开源模型的部署成本与延迟，尤其利好长上下文和深度推理场景。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "title": "vLLM Releases: v0.28.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+        "published_at": "2026-08-26T09:46:30Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "c2b69efa702300ad",
+        "8705014e42e2ee28"
+      ],
+      "category": "products",
+      "title_zh": "OpenAI Jalapeño芯片基准测试：面向大规模快速推理的高吞吐、高能效设计",
+      "summary_zh": "TechCrunch与量子位报道，OpenAI自研推理芯片Jalapeño在SemiAnalysis InferenceX基准上实现了比当前可用SOTA方案更高的每用户token数和单位千瓦吞吐量，专为大规模快速推理设计。",
+      "why_it_matters_zh": "这是OpenAI自研芯片路线的重要信号，若规模化落地，可能影响英伟达在AI推理市场的供给格局，并降低OpenAI自身的推理成本。",
+      "importance_score": 88.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "title": "OpenAI’s Jalapeño chip is built for fast inference at scale, benchmarks show",
+        "url": "https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/",
+        "published_at": "2026-08-25T14:22:04Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "qbitai",
+          "source_name": "量子位",
+          "title": "OpenAI「辣椒芯」干翻英伟达！老黄股价不跌反涨",
+          "url": "https://www.qbitai.com/2026/08/479320.html",
+          "published_at": "2026-08-26T01:24:47Z"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "7ce32412dcc6bf7f"
+      ],
+      "category": "research",
+      "title_zh": "StepGuard：为LLM Agent提供步骤级安全护栏，平均攻击成功率降低77.3%",
+      "summary_zh": "StepGuard是步骤级guard模型，能在工具动作执行前审计轨迹；配套StepGen自动数据引擎生成安全/不安全轨迹，Balance-GRPO动态平衡安全与效用。在AgentDojo和AgentDyn上，相较无护栏设置平均攻击成功率降低77.3%，平均utility仅下降2.8个百分点，效果与GPT-5.4相当。",
+      "why_it_matters_zh": "LLM Agent的工具调用带来文件修改、信息泄露等风险；步骤级预执行监控比事后轨迹审计更实用，是Agent安全落地的重要进展。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "StepGuard: Learning Step-Level Guardrails with Scalable Supervision and Safety-Utility Balancing",
+        "url": "https://arxiv.org/abs/2608.24777v1",
+        "published_at": "2026-08-25T16:17:27Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "8dae5b3ce918f722"
+      ],
+      "category": "research",
+      "title_zh": "LAION发布1000万小时开放视频数据集LAION-BVD",
+      "summary_zh": "LAION-BVD从CommonCrawl收集13亿条平台视频URL，下载8000万段视频，总时长1000万小时，覆盖视频、音频、图像模态，并为片段合成视频与音频描述。使用该数据训练的模型在视频-文本、音频-文本基准上表现有竞争力，规模增大时持续提升。",
+      "why_it_matters_zh": "开放多模态视频数据长期稀缺，该数据集规模空前，可显著推动视频/音频基础模型研究与可复现性。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+        "url": "https://arxiv.org/abs/2608.24845v1",
+        "published_at": "2026-08-25T17:34:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "d4dd24769a830c78"
+      ],
+      "category": "research",
+      "title_zh": "BrowserForge：通过并行浏览器沙箱规模化生成网页Agent训练数据",
+      "summary_zh": "BrowserForge在开放网络上并行驱动大量浏览器沙箱，面向数十万真实网站生成可验证的网页交互轨迹；采用开放网页数据源、沙箱集群管理和Proposer-Solver双Agent循环，并用规则+模型清洗流水线处理失败轨迹。",
+      "why_it_matters_zh": "像素级网页Agent训练受限于高质量轨迹数据稀缺；该框架可规模化生产跨站数据，是网页Agent迈向通用化的重要基建。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
+        "url": "https://arxiv.org/abs/2608.24848v1",
+        "published_at": "2026-08-25T17:35:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "b318428f5b4d6374"
+      ],
+      "category": "research",
+      "title_zh": "医学思维链扰动审计：模型诊断正确但推理文本常与答案脱钩",
+      "summary_zh": "研究用30种临床动机算子对14个LLM在4个医学QA基准上做扰动审计，三类独立检验收敛：临床相关破坏性编辑下Chain-Decoupling Rate（CDR）达72.9%，即思维链未登记编辑且答案未翻转；损坏思维链不影响准确率；移除CoT提示也不降低准确率。两位认证医生复核197题，98.5%保留gold答案合理。",
+      "why_it_matters_zh": "临床医生会阅读CoT作为推理证据，但该审计表明可见推理往往不能反映模型真实决策；对医疗AI的可解释性与责任归属提出重要质疑。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Right Diagnoses, Decorative Reasoning:A Perturbation Audit of Medical Chain-of-Thought",
+        "url": "https://arxiv.org/abs/2608.24790v1",
+        "published_at": "2026-08-25T16:37:39Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "00b7e3315163c2aa"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA Dynamo推出Shadow Engine Recovery，LLM推理故障可在数秒内恢复",
+      "summary_zh": "NVIDIA官方博客介绍了Dynamo中的Shadow Engine Recovery机制。当LLM引擎进程失败时，传统冷重启需要从存储加载权重并编译kernel；新机制可在数秒内恢复推理容量。",
+      "why_it_matters_zh": "推理集群的故障恢复速度直接影响可用性和成本；秒级恢复可显著减少大规模部署中的宕机与冷启动开销。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Restore LLM Inference Capacity in Seconds with Shadow Engine Recovery in NVIDIA Dynamo",
+        "url": "https://developer.nvidia.com/blog/restore-llm-inference-capacity-in-seconds-with-shadow-engine-recovery-in-nvidia-dynamo/",
+        "published_at": "2026-08-25T20:57:54Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "3a89e47e382fa701"
+      ],
+      "category": "models",
+      "title_zh": "IBM发布Granite 4.2技术解析：披露新一代LLM构建方法",
+      "summary_zh": "Hugging Face官方博客发布IBM Granite 4.2介绍，说明该系列LLM的构建方法。具体架构与数据细节以该官方博客为准。",
+      "why_it_matters_zh": "Granite是IBM面向企业场景的LLM系列，技术细节的公开有助于企业评估与部署，也反映企业级模型迭代的持续加速。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Granite 4.2 LLMs: How They're Built",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
+        "published_at": "2026-08-25T15:14:14Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "1b91e8d399c99b10"
+      ],
+      "category": "models",
+      "title_zh": "Quantization-Aware Healing：4-bit量化模型性能反超全精度原版",
+      "summary_zh": "Hugging Face官方博客发布Multiverse Computing CAI的Quantization-Aware Healing方法，展示了一个压缩后的4-bit模型在性能上超过其全精度原版。",
+      "why_it_matters_zh": "量化通常以精度损失为代价；若该技术可复现，将显著降低模型推理内存与算力门槛，同时维持甚至提升质量，对端侧部署很有价值。",
+      "importance_score": 77.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing",
+        "published_at": "2026-08-25T11:39:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-14",
+      "candidate_ids": [
+        "84b0969d53de2c96"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b10635发布：解锁Pascal架构MoE的mmq优化",
+      "summary_zh": "llama.cpp b10635为CUDA后端解除sm_60（Pascal）上MoE的mmq限制，并为较老的Pascal非dp4a设备调整Q2_K/Q4_K/Q5_K/Q6_K的occupancy。",
+      "why_it_matters_zh": "体现了llama.cpp对老旧GPU兼容性的持续维护，使本地LLM推理在更多边缘设备上可用。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10635",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10635",
+        "published_at": "2026-08-26T11:32:54Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 188,
+    "normalized": 188,
+    "filtered": 156,
+    "ai_candidates": 30,
+    "prompt_chars": 24368,
+    "estimated_input_tokens": 6092,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
