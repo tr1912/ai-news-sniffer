@@ -1,19 +1,19 @@
 {
   "date": "2026-08-29",
-  "generated_at": "2026-08-28T21:20:05.209373Z",
-  "run_id": "2026-08-29-30208384",
-  "daily_summary_zh": "今日AI动态聚焦低门槛预训练、跨具身世界模型、开源推理工具与多项大模型训练/评测研究。Puro-2B 以不到6.9K美元成本在消费级GPU上预训练逼近Qwen2.5-1.5B，llama.cpp发布新版本，Open ASR榜单首次纳入南半球语言；同时多篇研究在测试时优化、代码智能体数据筛选、红队安全、语音隐私和可审计临床模型等方向取得进展。",
+  "generated_at": "2026-08-29T15:32:35.950018Z",
+  "run_id": "2026-08-29-61913299",
+  "daily_summary_zh": "今日要闻集中于大模型预训练降本、跨具身世界模型、推理时优化、代码智能体与评测基准等方向。Puro-2B展示了在消费级RTX 5090上以不到6900美元完成预训练的可行性；CLAP提出跨具身动作条件视频世界模型；TTPO、CritICL等工作在推理时效率与弱到强泛化上取得进展；Hugging Face Open ASR排行榜新增首个全球南方语言；llama.cpp发布新版本。整体呈现高效、开放、低成本化趋势。",
   "events": [
     {
       "id": "event-1",
       "candidate_ids": [
         "a5e41c52c7ed36ef"
       ],
-      "category": "models",
-      "title_zh": "Puro-2B：用不到6900美元在RTX 5090上从零预训练的语言模型",
-      "summary_zh": "Puro-2B 提出了一个开放预训练方案，在消费级 RTX 5090 GPU 上用 FP8 精度从零训练，最高 1.4T tokens，计算成本不到 6,900 美元，性能接近 Qwen2.5-1.5B。该方案融合了硬件选择、低精度训练、hyperball 优化、课程模型平均和数据配比。",
-      "why_it_matters_zh": "大幅降低了语言模型预训练的门槛，让学术界和开源社区也能以低成本训练自己的模型，并提供了可复现的开放配方。",
-      "importance_score": 90.0,
+      "category": "research",
+      "title_zh": "Puro-2B：在RTX 5090上以不到6900美元训练的开源预训练配方",
+      "summary_zh": "论文提出一套开源、硬件可及的预训练配方，基于该配方在消费级RTX 5090上以FP8精度从零训练了Puro-2B模型系列，最多使用1.4万亿tokens。最佳模型计算成本低于6900美元，在论文评估协议下接近Qwen2.5-1.5B性能。",
+      "why_it_matters_zh": "大幅降低语言模型预训练的资金门槛，让学术与开源社区也能负担从零训练，是开源预训练民主化的重要一步。",
+      "importance_score": 92.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -30,10 +30,10 @@
         "4efeaffe7855d87b"
       ],
       "category": "research",
-      "title_zh": "CLAP：跨具身视频世界模型作为零样本物理模拟器",
-      "summary_zh": "CLAP 提出跨具身动作条件视频生成框架，可在人类与机器人等异构视频上训练，统一端末执行器位姿、语言指令和隐动作，并通过课程式跨具身学习实现零样本物理模拟。",
-      "why_it_matters_zh": "突破了视频世界模型受限于单一机器人具身的限制，能够利用海量异构视频学习通用物理规律，对机器人学习和视频生成都有重要意义。",
-      "importance_score": 85.0,
+      "title_zh": "CLAP：跨具身视频世界模型可作为零样本物理模拟器",
+      "summary_zh": "CLAP提出一种跨具身动作条件视频生成框架，可在大规模互联网人类与机器人视频上训练。它通过末端执行器位姿、语言指令和潜在动作统一异构动作空间，并采用课程式跨具身学习，先学习通用物理先验，再迁移到具体动作空间。",
+      "why_it_matters_zh": "打破视频世界模型只能针对单一机器人本体训练的限制，利用海量异构视频学习通用物理规律，有望成为机器人零样本物理模拟器。",
+      "importance_score": 88.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -47,33 +47,13 @@
     {
       "id": "event-3",
       "candidate_ids": [
-        "9845e7b3aabc0155"
-      ],
-      "category": "open-source",
-      "title_zh": "llama.cpp 发布 b10679，新增 tensor 懒读取基准选项",
-      "summary_zh": "llama.cpp 发布新版本 b10679，新增 --tensor-read-lazy 基准选项，并提供了 macOS、Linux、iOS 等多平台构建包。",
-      "why_it_matters_zh": "llama.cpp 是本地大模型推理最重要的开源项目之一，持续更新直接影响大量本地部署和开发者的推理体验。",
-      "importance_score": 80.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "llama-cpp-releases",
-        "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b10679",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10679",
-        "published_at": "2026-08-28T19:23:12Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-5",
-      "candidate_ids": [
         "9fbc4444915d08a3"
       ],
       "category": "research",
-      "title_zh": "TTPO：无标签测试时策略优化方法",
-      "summary_zh": "TTPO 提出不对称目标，将一致轨迹通过 OPSD 蒸馏、分歧轨迹通过分组 RL 惩罚，并在 token 级细化，在无标签情况下匹配有标签监督的 OPSD 性能，适用于五个竞赛级数学基准。",
-      "why_it_matters_zh": "在数学推理后训练中摆脱了对真值标签的依赖，为测试时训练和自监督强化学习提供了新思路。",
-      "importance_score": 75.0,
+      "title_zh": "TTPO：无需标签的测试时策略优化，匹配有监督OPSD",
+      "summary_zh": "TTPO提出一种非对称目标，对与多数投票伪标签一致的rollout用OPSD蒸馏，对不一致的rollout用Grouped RL惩罚，并通过token级选择细化。在无任何标签的情况下，TTPO在五个竞赛级数学基准上匹配了有标签监督的OPSD。",
+      "why_it_matters_zh": "将测试时训练引入数学推理后训练，降低了模型持续提升对人工标签的依赖，为自监督策略优化提供了更稳健的路径。",
+      "importance_score": 85.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -85,35 +65,35 @@
       "related_sources": []
     },
     {
-      "id": "event-6",
+      "id": "event-4",
       "candidate_ids": [
-        "73748bc03d3f0c5b"
+        "6e73a8438ced02e2"
       ],
       "category": "research",
-      "title_zh": "SWE-Prime：更少轨迹、更好性能的代码智能体数据筛选",
-      "summary_zh": "SWE-Prime 提出多粒度两阶段 SFT 数据选择方法，先在轨迹级按过程质量、结果质量和代表性筛选，再在段级按贡献、可学习性和风险筛选，从而减少低质量轨迹带来的噪声监督。",
-      "why_it_matters_zh": "说明成功轨迹并不等于高质量监督，优化数据选择可显著提升大模型解决真实软件问题的能力。",
-      "importance_score": 74.0,
+      "title_zh": "CritICL：利用小模型失败模式实现推理时弱到强泛化",
+      "summary_zh": "CritICL观察到同一模型族内LLM失败模式随规模具有结构化模式，利用较弱模型产生的失败模式构造基于批判的上下文示例。动态版本可自适应预测针对输入的失败模式，静态版本提供稳定指导。实验优于标准上下文学习，并以更少生成次数取得与测试时缩放方法相当或更好的性能。",
+      "why_it_matters_zh": "在保持推理效率的同时增强LLM推理能力，避免对重复生成或外部验证的过度依赖，为推理时扩展提供了轻量替代方案。",
+      "importance_score": 82.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
         "source_name": "arXiv AI",
-        "title": "SWE-Prime: Fewer Trajectories, Better Performance",
-        "url": "https://arxiv.org/abs/2608.27449v1",
-        "published_at": "2026-08-27T17:58:10Z"
+        "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+        "url": "https://arxiv.org/abs/2608.27455v1",
+        "published_at": "2026-08-27T17:59:30Z"
       },
       "related_sources": []
     },
     {
-      "id": "event-4",
+      "id": "event-5",
       "candidate_ids": [
         "a7b1f1b1ace611a0"
       ],
-      "category": "open-source",
-      "title_zh": "Open ASR 榜单首次加入南半球语言",
-      "summary_zh": "Hugging Face 的 Open ASR Leaderboard 新增首个全球南方语言，扩展了语音识别评测的非英语覆盖范围。",
-      "why_it_matters_zh": "这有助于推动语音识别技术向更多语言和地区普及，减少对高资源语言的偏斜，促进全球南方的开源语音社区发展。",
-      "importance_score": 70.0,
+      "category": "models",
+      "title_zh": "Open ASR排行榜首次新增全球南方语言",
+      "summary_zh": "Hugging Face的Open ASR Leaderboard新增首个全球南方语言，扩大了自动语音识别开源基准覆盖的语言范围。",
+      "why_it_matters_zh": "语音评测长期偏向少数高资源语言，新增全球南方语言有助于推动多语言开源语音模型发展，让AI更普惠。",
+      "importance_score": 82.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "huggingface-blog",
@@ -123,50 +103,40 @@
         "published_at": "2026-08-28T00:00:00Z"
       },
       "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "1993bb788eac1229"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp发布b10683版本",
+      "summary_zh": "llama.cpp发布b10683，主要包含Vulkan后端fastdiv函数去重与小除数优化，并提供macOS、Linux、iOS等平台的预编译二进制。",
+      "why_it_matters_zh": "llama.cpp是本地推理最广泛使用的开源引擎之一，持续的小步迭代保障了社区在多种硬件上的易用性与性能。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10683",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10683",
+        "published_at": "2026-08-29T15:25:27Z"
+      },
+      "related_sources": []
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 186,
-    "normalized": 186,
-    "filtered": 148,
+    "enabled": 9,
+    "fetched": 160,
+    "normalized": 160,
+    "filtered": 123,
     "ai_candidates": 30,
-    "prompt_chars": 22401,
-    "estimated_input_tokens": 5600,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 26302,
+    "estimated_input_tokens": 6575,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }

@@ -1321,8 +1321,8 @@
   },
   {
     "domain": "arxiv.org",
-    "sample_url": "https://arxiv.org/abs/2608.27454",
-    "sample_title": "Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+    "sample_url": "https://arxiv.org/abs/2608.23041",
+    "sample_title": "AutoSaddler: Automatic Harness Optimization",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
@@ -1370,6 +1370,21 @@
     "sample_title": "Field measurements of neighborhood-scale air temperature impacts of data centers",
     "first_seen_at": "2026-08-19T16:00:00Z",
     "last_seen_at": "2026-08-19T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "assetmanagementcompany.net",
+    "sample_url": "https://assetmanagementcompany.net/",
+    "sample_title": "Show HN: AMC Stocks Hub – asset-manager profiles, 13F holdings, and co-holdings",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -1445,6 +1460,21 @@
     "sample_title": "Show HN: Axtary – Content Authorization for AI Agents",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-07-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "azmirror.com",
+    "sample_url": "https://azmirror.com/2026/08/28/9th-circuit-sides-with-states-in-kalshi-gambling-fight-potentially-reviving-arizonas-prosecution/",
+    "sample_title": "9th Circuit sides with states in Kalshi gambling fight",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2056,8 +2086,8 @@
   },
   {
     "domain": "blog.google",
-    "sample_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
-    "sample_title": "Gemini Omni 1.1 Flash",
+    "sample_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+    "sample_title": "Gemini-3.5-Transcribe",
     "first_seen_at": "2026-07-24T16:00:00Z",
     "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
@@ -3376,10 +3406,10 @@
   },
   {
     "domain": "chipsandcheese.com",
-    "sample_url": "https://chipsandcheese.com/p/hot-chips-2026-fujitsus-monaka-cpu",
-    "sample_title": "Hot Chips 2026: Fujitsu's Monaka CPU",
+    "sample_url": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
+    "sample_title": "Samsung's Processing-in-Memory (PIM)",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-08-26T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -6331,10 +6361,10 @@
   },
   {
     "domain": "gizmodo.com",
-    "sample_url": "https://gizmodo.com/a-feature-that-makes-your-phone-data-self-destruct-in-authorities-hands-may-soon-have-its-day-in-court-2000790831",
-    "sample_title": "The US is charging an American citizen for wiping his phone at the border",
+    "sample_url": "https://gizmodo.com/study-links-listening-to-live-metal-with-an-improved-tolerance-for-pain-cold-relentless-pain-2000804514",
+    "sample_title": "Study links listening to live metal improves tolerance for pain, cold",
     "first_seen_at": "2026-07-27T16:00:00Z",
-    "last_seen_at": "2026-07-27T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -6585,6 +6615,21 @@
     "enabled": false
   },
   {
+    "domain": "groverlab.org",
+    "sample_url": "https://groverlab.org/hnbfpr/2026-08-26-ai-counterfeit-cosmetics.html",
+    "sample_title": "Identifying fake cosmetics using AI",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "gruhn.me",
     "sample_url": "https://gruhn.me/blog/2026-08-13/",
     "sample_title": "NP-overrated",
@@ -6800,6 +6845,21 @@
     "sample_title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
     "first_seen_at": "2026-08-15T16:00:00Z",
     "last_seen_at": "2026-08-15T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "haz.ee",
+    "sample_url": "https://haz.ee/posts/aetheryte-radio.html",
+    "sample_title": "Creating the Aetheryte Radio",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -9091,10 +9151,10 @@
   },
   {
     "domain": "lwn.net",
-    "sample_url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814/",
-    "sample_title": "An ongoing 3D-printer AGPL violation",
+    "sample_url": "https://lwn.net/Articles/1091231/",
+    "sample_title": "Debian votes to allow \"responsible use of generative AI\"",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-08-28T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -11325,6 +11385,21 @@
     "enabled": false
   },
   {
+    "domain": "parowozowniawolsztyn.pl",
+    "sample_url": "https://parowozowniawolsztyn.pl/?page_id=2141",
+    "sample_title": "Europe's last regular standard-gauge steam passenger service",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "patentsgazette.uspto.gov",
     "sample_url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
     "sample_title": "Mistral Patent for “Code implemented tool calls”",
@@ -12200,6 +12275,21 @@
     "sample_title": "Lightweight Spring Boot Monitoring Without Prometheus and Grafana",
     "first_seen_at": "2026-07-29T16:00:00Z",
     "last_seen_at": "2026-07-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "pwning.systems",
+    "sample_url": "https://pwning.systems/posts/llm-memory-program-analysis/",
+    "sample_title": "I accidentally turned LLM memory into program analysis",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -14295,6 +14385,21 @@
     "enabled": false
   },
   {
+    "domain": "store.steampowered.com",
+    "sample_url": "https://store.steampowered.com/news/app/1675200/view/689767056035283412",
+    "sample_title": "SteamOS 3.9.0 Preview",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "stories.tamu.edu",
     "sample_url": "https://stories.tamu.edu/news/2026/08/13/doomscrolling-at-work-wastes-time-but-the-real-cost-is-what-happens-after/",
     "sample_title": "Doomscrolling at work wastes time, but the real cost is what happens after",
@@ -14746,10 +14851,10 @@
   },
   {
     "domain": "technicshistory.com",
-    "sample_url": "https://technicshistory.com/2026/07/24/the-ibm-pc-part-1-arrival/",
-    "sample_title": "The IBM PC, Part 1: Arrival",
+    "sample_url": "https://technicshistory.com/2026/08/29/the-ibm-pc-part-2-tsunami/",
+    "sample_title": "The IBM PC, Part 2: Tsunami",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-07-24T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -15691,10 +15796,10 @@
   },
   {
     "domain": "uecker.codeberg.page",
-    "sample_url": "https://uecker.codeberg.page/2026-07-14.html",
-    "sample_title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
+    "sample_url": "https://uecker.codeberg.page/2026-08-29.html",
+    "sample_title": "Indirect Calling of Nested Functions on GCC Without Executable Stack",
     "first_seen_at": "2026-08-15T16:00:00Z",
-    "last_seen_at": "2026-08-17T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -16831,10 +16936,10 @@
   },
   {
     "domain": "www.bbc.com",
-    "sample_url": "https://www.bbc.com/sport/football/articles/cx2zl5kwlxjo",
-    "sample_title": "Uefa pursuing criminal legal action against Infantino",
+    "sample_url": "https://www.bbc.com/news/articles/cn45vdxyvvlo",
+    "sample_title": "Iceland votes on whether to restart talks on joining EU",
     "first_seen_at": "2026-07-26T16:00:00Z",
-    "last_seen_at": "2026-08-28T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -19036,8 +19141,8 @@
   },
   {
     "domain": "www.inventati.org",
-    "sample_url": "https://www.inventati.org/",
-    "sample_title": "U.S. sanctions against the A/I Collective",
+    "sample_url": "https://www.inventati.org/who/manifesto",
+    "sample_title": "Autistici/inventati: Manifesto – who we are and what do we want (2002)",
     "first_seen_at": "2026-08-29T16:00:00Z",
     "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
@@ -19265,6 +19370,21 @@
     "sample_title": "The Vietnam Binh Chau (Chau Tan) Late Tang Wreck",
     "first_seen_at": "2026-08-19T16:00:00Z",
     "last_seen_at": "2026-08-20T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.kumander.org",
+    "sample_url": "https://www.kumander.org/",
+    "sample_title": "Kumander Linux – A Linux Distro with a Windows 7 Desktop",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -19815,6 +19935,21 @@
     "enabled": false
   },
   {
+    "domain": "www.minneapolisfed.org",
+    "sample_url": "https://www.minneapolisfed.org/article/2026/initially-delayed-the-pass-through-of-tariffs-to-consumer-prices-has-arrived",
+    "sample_title": "Initially delayed, the pass-through of tariffs to consumer prices has arrived",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.mixedbread.com",
     "sample_url": "https://www.mixedbread.com/blog/toast-1",
     "sample_title": "Introducing Toast 1",
@@ -20266,8 +20401,8 @@
   },
   {
     "domain": "www.nytimes.com",
-    "sample_url": "https://www.nytimes.com/2026/08/26/climate/army-miniature-nuclear-reactors.html",
-    "sample_title": "Army Awards $2.2B for 'Microreactors' On U.S. Bases",
+    "sample_url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
+    "sample_title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
@@ -20417,7 +20552,7 @@
   {
     "domain": "www.osnews.com",
     "sample_url": "https://www.osnews.com/story/145883/easyeffects-should-be-part-of-every-linux-distribution-and-desktop-environment-to-massively-improve-laptop-speaker-sound-quality/",
-    "sample_title": "EasyEffects can massively improve laptop speaker sound quality",
+    "sample_title": "EasyEffects can improve laptop speaker sound quality",
     "first_seen_at": "2026-07-26T16:00:00Z",
     "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
@@ -22280,6 +22415,21 @@
     "sample_title": "Facing 474 GW of interconnection requests, Texas hits pause on data centers",
     "first_seen_at": "2026-08-08T16:00:00Z",
     "last_seen_at": "2026-08-08T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.vectorian.be",
+    "sample_url": "https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer/",
+    "sample_title": "Does the Sumerian King List Align with Paleoclimate Events?",
+    "first_seen_at": "2026-08-29T16:00:00Z",
+    "last_seen_at": "2026-08-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
