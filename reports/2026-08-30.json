@@ -1,0 +1,152 @@
+{
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T15:14:59.027665Z",
+  "run_id": "2026-08-30-de511e9c",
+  "daily_summary_zh": "今日 AI 领域以学术研究为主：arXiv 发布多项关于视频预训练、RLVR 能力融合、AI 模型安全扫描器评估、脓毒症严重度建模、token 级广告、AI 文本检测等新成果；开源推理引擎 llama.cpp 发布 b10698 版本。其他企业应用与医疗 AI 研究也有更新。",
+  "events": [
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "16ca536237abf317"
+      ],
+      "category": "research",
+      "title_zh": "LeVJEPA：去掉启发式的高效视频预训练",
+      "summary_zh": "LeVJEPA 是第一个在 LeJEPA 无坍缩目标下训练的视频编码器，不需要 EMA 目标编码器、stop-gradient 或容量受限预测器，架构仅含编码器和投影器。在相同数据和 epoch 下，以 5.6 到 20.8 倍更少的预训练计算量达到或超过 V-JEPA 2（ViT-S/B/L）。",
+      "why_it_matters_zh": "视频自监督预训练通常计算成本极高，LeVJEPA 显著降低计算需求并保持精度，可能推动视频基础模型的普及。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics",
+        "url": "https://arxiv.org/abs/2608.27395v1",
+        "published_at": "2026-08-27T17:26:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "08f5ceb1863ff271"
+      ],
+      "category": "research",
+      "title_zh": "无需逐小时标注的连续脓毒症严重程度评分两中心研究",
+      "summary_zh": "研究者利用马萨诸塞州和佐治亚州两个医疗系统共 29,116 和 7,691 名成人脓毒症患者数据，基于 43 项常规记录变量和 72 小时治疗窗口，以死亡率为排序信号训练连续脓毒症指数。非幸存者评分在 0-10 量表上比幸存者高 1.19-1.64 分。",
+      "why_it_matters_zh": "现有脓毒症严重度指数基于几十年前的固定变量和权重，新方法直接从患者轨迹学习，可能改善临床风险分层和恶化预警。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Learning a Continuous Sepsis Severity Score Without Hour-by-Hour Supervision: A Two-Site Retrospective Study",
+        "url": "https://arxiv.org/abs/2608.27421v1",
+        "published_at": "2026-08-27T17:46:21Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "b4de22d3f4f314f2"
+      ],
+      "category": "research",
+      "title_zh": "AI 模型安全扫描器评估：覆盖率和故障恢复超越 F1 指标",
+      "summary_zh": "一项研究使用 170 个 Pickle/PyTorch 工件（145 个变种家族）的基准，评估 ModelScan、ModelAudit 和 Fickling 三个 AI 模型安全扫描器，区分覆盖率和确定性安全判定。ModelAudit 对所有 135 个有标签家族给出确定性判定，Fickling 为 81.5%，ModelScan 为 49.6%；ModelScan 在有判定时精确率/召回率/F1 均为 100%。",
+      "why_it_matters_zh": "随着 AI 模型供应链攻击风险上升，安全扫描器的真实能力需要更合理的评估方式，该研究为选择和使用这些工具提供了实证依据。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Beyond F1: Evaluating Coverage and Failure Recovery in AI Model Security Scanners",
+        "url": "https://arxiv.org/abs/2608.27424v1",
+        "published_at": "2026-08-27T17:49:28Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "053691aa219880de"
+      ],
+      "category": "research",
+      "title_zh": "跨领域 RLVR 能力整合：三种融合范式的比较",
+      "summary_zh": "论文系统比较合并专家任务向量（Merge）、混合专家数据集（Mix RL）和多教师同策略蒸馏（MOPD）三种 RLVR 能力融合范式。三者在平均性能上相差不超过 1.4 分，但单一基准上最大差距达 8.6 分，并揭示了各自的训练约束和领域相关模式。",
+      "why_it_matters_zh": "为需要同时覆盖多种可验证奖励能力的 LLM 训练提供了实用选型指南，避免盲目选择融合策略。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms",
+        "url": "https://arxiv.org/abs/2608.27409v1",
+        "published_at": "2026-08-27T17:38:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "13db2d143890fcaa"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10698 版本",
+      "summary_zh": "llama.cpp 发布 b10698 版本，包含对 Apple RDMA 在 teardown 时错误输出的修复（#27908），并提供 macOS、Linux、iOS 等多平台预编译二进制。",
+      "why_it_matters_zh": "llama.cpp 是最流行的本地 LLM 推理引擎之一，其持续更新影响本地部署生态的稳定性和可用性。",
+      "importance_score": 55.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10698",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10698",
+        "published_at": "2026-08-30T14:47:27Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 155,
+    "normalized": 155,
+    "filtered": 92,
+    "ai_candidates": 30,
+    "prompt_chars": 17296,
+    "estimated_input_tokens": 4324,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

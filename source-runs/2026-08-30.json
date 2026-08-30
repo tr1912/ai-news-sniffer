@@ -1,0 +1,812 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 155,
+  "normalized_count": 155,
+  "filtered_count": 92,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10698",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10698",
+        "published_at": "2026-08-30T14:47:27Z",
+        "fetched_at": "2026-08-30T15:15:18.624535Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nrpc: fix apple rdma error spew on teardown (#27908)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/43970664>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10698/llama-b10698-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10698/llama-b10698-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10698/llama-b10698-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10698/llama-b10698-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10698/llama-b10698-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10698/llama-b10698-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10698/llama-b10698-bin-ubuntu-vulkan-x64.tar.gz)\n-",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 379310681
+        },
+        "id": "13db2d143890fcaa",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10698",
+        "normalized_title": "llama cpp releases b10698",
+        "fingerprint": "13db2d143890fcaa8f991621ba6d3709bbfc4116b0a43451f26eb5d9172ff3c3",
+        "rule_score": 56.879083333333334
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "20ms把PDF变成Markdown！开源OCR神器快了近300倍",
+        "url": "https://www.qbitai.com/2026/08/481075.html",
+        "published_at": "2026-08-29T12:26:49Z",
+        "fetched_at": "2026-08-30T15:15:22.660802Z",
+        "language": "unknown",
+        "excerpt": "3秒可处理200份PDF",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bcbce5877307f0fe",
+        "canonical_url": "https://www.qbitai.com/2026/08/481075.html",
+        "normalized_title": "20ms把pdf变成markdown 开源ocr神器快了近300倍",
+        "fingerprint": "bcbce5877307f0fe049a8fb349858fc8155c0cf73f87808a3953eff0636e448a",
+        "rule_score": 55.24469444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Open Oscar Server: open-source server compatible with AIM and ICQ clients",
+        "url": "https://github.com/mk6i/open-oscar-server",
+        "published_at": "2026-08-30T00:33:35Z",
+        "fetched_at": "2026-08-30T15:15:24.412709Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gregsadetsky",
+        "upstream_urls": [
+          "https://github.com/mk6i/open-oscar-server"
+        ],
+        "raw_metadata": {
+          "hn_id": 49494571,
+          "score": 51
+        },
+        "id": "cbcb3e534104661a",
+        "canonical_url": "https://github.com/mk6i/open-oscar-server",
+        "normalized_title": "open oscar server open source server compatible with aim and icq clients",
+        "fingerprint": "cbcb3e534104661ae28192b2836d4c2b076a3aca243ae8427fda1701bacf3894",
+        "rule_score": 52.45597222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "AI本地部署不如官方版的元凶找到了：734个依赖包，每一个都可能坑",
+        "url": "https://www.qbitai.com/2026/08/481372.html",
+        "published_at": "2026-08-29T13:11:08Z",
+        "fetched_at": "2026-08-30T15:15:22.660718Z",
+        "language": "unknown",
+        "excerpt": "推理软件栈的微小差异，就能改变输出token",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1a878b6299ea4352",
+        "canonical_url": "https://www.qbitai.com/2026/08/481372.html",
+        "normalized_title": "ai本地部署不如官方版的元凶找到了 734个依赖包 每一个都可能坑",
+        "fingerprint": "1a878b6299ea4352671b6b3777188053a2926df274b5ce358176a60ffb6da6bc",
+        "rule_score": 51.318555555555555
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "去年归国的徐梦迪，成了清华姚班班主任",
+        "url": "https://www.qbitai.com/2026/08/481318.html",
+        "published_at": "2026-08-29T13:01:34Z",
+        "fetched_at": "2026-08-30T15:15:22.660768Z",
+        "language": "unknown",
+        "excerpt": "本科读车辆工程，如今教AI第一班",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4696c3de51f5acf5",
+        "canonical_url": "https://www.qbitai.com/2026/08/481318.html",
+        "normalized_title": "去年归国的徐梦迪 成了清华姚班班主任",
+        "fingerprint": "4696c3de51f5acf50ea8092f39bdff2b76af86015a6269f415461f3e4be6862a",
+        "rule_score": 51.30261111111111
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "Claude开始训练Claude！4美元一小时，跑赢150美元人类研究员",
+        "url": "https://www.qbitai.com/2026/08/481223.html",
+        "published_at": "2026-08-29T12:50:31Z",
+        "fetched_at": "2026-08-30T15:15:22.660784Z",
+        "language": "unknown",
+        "excerpt": "AI「自进化」，越来越近了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "59d085b0fdcbcde3",
+        "canonical_url": "https://www.qbitai.com/2026/08/481223.html",
+        "normalized_title": "claude开始训练claude 4美元一小时 跑赢150美元人类研究员",
+        "fingerprint": "59d085b0fdcbcde37d14da84e28b8f74ccf09ce9494aaadaedde48de1830a8d8",
+        "rule_score": 51.284194444444445
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "32GB大显存加持，英特尔锐炫Pro B70搞定AI漫剧创作",
+        "url": "https://www.qbitai.com/2026/08/480787.html",
+        "published_at": "2026-08-29T11:35:57Z",
+        "fetched_at": "2026-08-30T15:15:22.660843Z",
+        "language": "unknown",
+        "excerpt": "从剧本到成片",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "101d88e4b020fc9a",
+        "canonical_url": "https://www.qbitai.com/2026/08/480787.html",
+        "normalized_title": "32gb大显存加持 英特尔锐炫pro b70搞定ai漫剧创作",
+        "fingerprint": "101d88e4b020fc9a7568d428e92f948cb327aa821680354bdd97aff00877c9af",
+        "rule_score": 51.15991666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft",
+        "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+        "published_at": "2026-08-29T18:41:59Z",
+        "fetched_at": "2026-08-30T15:15:22.775324Z",
+        "language": "unknown",
+        "excerpt": "This latest lawsuit is particularly broad and homes in on accusations of illegal piracy.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kirsten Korosec",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e98e3c71b5fa4971",
+        "canonical_url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft",
+        "normalized_title": "sony music warner sue anthropic alleging a brazen campaign of intellectual property theft",
+        "fingerprint": "e98e3c71b5fa49710bba84dc4b4460a285e2a0de21e86bbce5aed0b8bf8a04a6",
+        "rule_score": 50.86997222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "Coding不再是程序员专属！阿里Qoder这波有点绝",
+        "url": "https://www.qbitai.com/2026/08/480940.html",
+        "published_at": "2026-08-29T12:11:37Z",
+        "fetched_at": "2026-08-30T15:15:22.660813Z",
+        "language": "unknown",
+        "excerpt": "Coding正在变成Al世界的数字执行力",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "闻乐",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "27c2a9b59c84872a",
+        "canonical_url": "https://www.qbitai.com/2026/08/480940.html",
+        "normalized_title": "coding不再是程序员专属 阿里qoder这波有点绝",
+        "fingerprint": "27c2a9b59c84872a4530c03da798f47529c614fc594b62b0ac2e681dd6abd863",
+        "rule_score": 47.21936111111111
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "OpenClaw：红过，爱过，散了",
+        "url": "https://www.qbitai.com/2026/08/480855.html",
+        "published_at": "2026-08-29T12:00:51Z",
+        "fetched_at": "2026-08-30T15:15:22.660832Z",
+        "language": "unknown",
+        "excerpt": "龙虾退潮，Harness上位",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "梦瑶",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "fa3857c23bad22fb",
+        "canonical_url": "https://www.qbitai.com/2026/08/480855.html",
+        "normalized_title": "openclaw 红过 爱过 散了",
+        "fingerprint": "fa3857c23bad22fb886656c62a5febb847d84cd42eb36a344ba772bb77abb99f",
+        "rule_score": 47.20141666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "“We’re not doing 30 bets a year”: Vijay Pande on betting small after running $4 billion at a16z",
+        "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
+        "published_at": "2026-08-29T17:36:47Z",
+        "fetched_at": "2026-08-30T15:15:22.775364Z",
+        "language": "unknown",
+        "excerpt": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-off ones) are what will actually let AI transform medicine.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Connie Loizos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5eb2a07613c553e5",
+        "canonical_url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z",
+        "normalized_title": "we re not doing 30 bets a year vijay pande on betting small after running 4 billion at a16z",
+        "fingerprint": "5eb2a07613c553e5813aec40ba92b689570b29507b24035214f71b2f76176b7a",
+        "rule_score": 46.76130555555555
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Beyond F1: Evaluating Coverage and Failure Recovery in AI Model Security Scanners",
+        "url": "https://arxiv.org/abs/2608.27424v1",
+        "published_at": "2026-08-27T17:49:28Z",
+        "fetched_at": "2026-08-30T15:15:16.919383Z",
+        "language": "unknown",
+        "excerpt": "Static scanners are increasingly used to identify executable or otherwise unsafe content in machine- learning artifacts, yet conventional evaluation metrics characterize only cases where a scanner yields a usable security judgment. We evaluate ModelScan, ModelAudit, and Fickling using a controlled, artifact-backed benchmark on a synthetic corpus of 170 Pickle and PyTorch focused artifacts across 145 specimen families, 135 of which have binary security ground truth and 10 of which are intentionally malformed without labels. We explicitly distinguish non-N/A coverage, analysis completion, definitive security decisions, non-security findings, and unsupported outcomes. On labeled families, ModelAudit produced definitive security decisions for all 135 families (100%), Fickling for 110 (81.5%), and ModelScan for 67 (49.6%). Conditional on making a definitive judgment, ModelScan achieved 100% precision, recall, and F1. Fickling identified no unique true- positive families beyond those found by the combination of ModelAudit and ModelScan. Furthermore, for the 48 malicious families where ModelScan failed to complete its analysis, both ModelAudit and Fickling generated detections consistent ",
+        "categories": [
+          "research"
+        ],
+        "author": "Indranil Sanyal",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b4de22d3f4f314f2",
+        "canonical_url": "https://arxiv.org/abs/2608.27424v1",
+        "normalized_title": "beyond f1 evaluating coverage and failure recovery in ai model security scanners",
+        "fingerprint": "b4de22d3f4f314f2d2dea629a6ac0b2e8619e3d4d7aa0c84453efdd43377270c",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Learning a Continuous Sepsis Severity Score Without Hour-by-Hour Supervision: A Two-Site Retrospective Study",
+        "url": "https://arxiv.org/abs/2608.27421v1",
+        "published_at": "2026-08-27T17:46:21Z",
+        "fetched_at": "2026-08-30T15:15:16.919394Z",
+        "language": "unknown",
+        "excerpt": "Currently used sepsis severity indices rely on fixed variables and weights established decades ago, which are coarsely discretized and calibrated to a cohort that no longer reflects contemporary critical care. No alternative learned directly from patient trajectories is in routine use. We conducted a retrospective two-cohort study on a total of 29,116 and 7,691 adult patients meeting Sepsis-3 criteria from two hospital systems in Massachusetts and Georgie, respectively.\n  We developed a sepsis index using 43 routinely charted variables over a 72-hour treatment window. Unlike previous studies, we use mortality as a treatment-level ranking signal rather than a per-state target, allowing credit to be redistributed non-uniformly across timesteps. Evaluation was done on a permanent 20% test holdout, using clinical vignettes and Spearman correlation. Uncertainty intervals were obtained by bootstrap resampling of whole patients. Under this ranking scheme, non-survivors scored 1.19-1.64 points higher than survivors on a 0-10 scale within all strata of baseline SOFA-2, with similar results stratifying within lactate, mean arterial pressure (MAP), and creatinine. Within-patient change in the",
+        "categories": [
+          "research"
+        ],
+        "author": "Rishikesan Kamaleswaran",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "08f5ceb1863ff271",
+        "canonical_url": "https://arxiv.org/abs/2608.27421v1",
+        "normalized_title": "learning a continuous sepsis severity score without hour by hour supervision a two site retrospective study",
+        "fingerprint": "08f5ceb1863ff27187ae46ff9b71f51cd2d1266a45b7c3eb04ac052fd370337a",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms",
+        "url": "https://arxiv.org/abs/2608.27409v1",
+        "published_at": "2026-08-27T17:38:04Z",
+        "fetched_at": "2026-08-30T15:15:16.919426Z",
+        "language": "unknown",
+        "excerpt": "Reinforcement learning with verifiable rewards (RLVR) improves specific capabilities of large language models, but covering multiple capabilities often involves training separate domain experts and subsequently consolidating them. We organize three fusion paradigms by the artefacts they reuse: Merge combines expert task vectors, Mix RL pools their datasets, and multi-teacher on-policy distillation (MOPD) uses both. Because they have largely been studied in isolation, how they compare and how to choose among them remain unclear. We compare all three using shared experts and data across model scales and a multi-domain benchmark suite. Although their average performance differs by at most 1.4 points, the gap reaches 8.6 points on a single benchmark, with domain-level variation tracking cross-domain relations visible in task-vector geometry. Training dynamics expose distinct constraints: Mix RL depends on domain mixture proportions, MOPD remains bounded by its teachers, and Merge compresses all expert updates into one. All three improve single-sample accuracy without measurable gains in solution coverage or losses in held-out capabilities. These results yield a practical guideline: use",
+        "categories": [
+          "research"
+        ],
+        "author": "Yanghua Xiao",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "053691aa219880de",
+        "canonical_url": "https://arxiv.org/abs/2608.27409v1",
+        "normalized_title": "consolidating rlvr capabilities across domains a deep dive into fusion paradigms",
+        "fingerprint": "053691aa219880de06180f86a4983f988e5c75fc8a26c229d6603c2e84683e2f",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "LeVJEPA: Efficient & Scalable Video Pretraining without the Heuristics",
+        "url": "https://arxiv.org/abs/2608.27395v1",
+        "published_at": "2026-08-27T17:26:24Z",
+        "fetched_at": "2026-08-30T15:15:16.919467Z",
+        "language": "unknown",
+        "excerpt": "Video carries the temporal structure of the physical world, yet learning representations from it has remained computationally expensive: prevailing self-supervised methods either prevent representation collapse through architectural asymmetries, coupling an exponential-moving-average target encoder, a stop-gradient, and a capacity-limited predictor, or circumvent it by reconstructing masked content in pixel space. We introduce LeVJEPA, the first video encoder trained under LeJEPA's collapse-free objective, which dispenses with both. A single encoder is trained with an invariance loss over global and local views of a clip, regularized by SIGReg, which excludes collapse with a provable guarantee. The architecture reduces to an encoder and a projector, and the objective to a single hyperparameter. This formulation admits two properties. First, the cost of pretraining is governed by the number of tokens the encoder observes; uniform random token dropping renders this number small while simultaneously improving downstream accuracy. At matched epochs on identical data, LeVJEPA matches or surpasses V-JEPA 2 across ViT-S/B/L at 5.6 to 20.8x less pretraining compute, and at matched total FL",
+        "categories": [
+          "research"
+        ],
+        "author": "Florian Buettner",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "16ca536237abf317",
+        "canonical_url": "https://arxiv.org/abs/2608.27395v1",
+        "normalized_title": "levjepa efficient scalable video pretraining without the heuristics",
+        "fingerprint": "16ca536237abf31716df78d6704c7a70bd274e0df9a7e1bf6e32f1fe9eb94da5",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Property-Specific Recoverability from Contact PPG to Camera rPPG under Heterogeneous Observation Conditions",
+        "url": "https://arxiv.org/abs/2608.27392v1",
+        "published_at": "2026-08-27T17:23:14Z",
+        "fetched_at": "2026-08-30T15:15:16.919487Z",
+        "language": "unknown",
+        "excerpt": "Camera-derived remote photoplethysmography (rPPG) is commonly validated through endpoint accuracy, but endpoint performance does not establish whether other physiological properties of source contact photoplethysmography (PPG) remain preserved recording by recording. We evaluated property-specific PPG-to-rPPG recoverability on 655 recordings from the Multi-Domain Mobile Video Physiology Dataset using CHROM as a fixed camera-rPPG observation pathway. The pathway reproduced the published CHROM correlation regime, with heart-rate MAE of 15.26 bpm and Pearson correlation of 0.0801. Matched-versus-shuffled validation revealed modest recording-specific autocorrelation correspondence, while spectral and recurrence-rate measures showed little matched discrimination. Maximal Lyapunov exponents showed essentially no recording-specific PPG-to-rPPG correspondence, with correlation of 0.0231 and permutation p-value of 0.5584, despite population-level overlap. Endpoint discrepancy exhibited Fitzpatrick-associated heterogeneity after adjustment for lighting and motion, including a Fitzpatrick VI versus III contrast of 9.32 bpm, while dynamical discrepancy showed no corresponding gradient. Aggrega",
+        "categories": [
+          "research"
+        ],
+        "author": "Farouk Ganiyu-Adewumi",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b86dc746419a4c10",
+        "canonical_url": "https://arxiv.org/abs/2608.27392v1",
+        "normalized_title": "property specific recoverability from contact ppg to camera rppg under heterogeneous observation conditions",
+        "fingerprint": "b86dc746419a4c10a534e0d82086c7397f3016d637afec245dc41f5863033f48",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Token-Level Advertising",
+        "url": "https://arxiv.org/abs/2608.27382v1",
+        "published_at": "2026-08-27T17:18:27Z",
+        "fetched_at": "2026-08-30T15:15:16.919508Z",
+        "language": "unknown",
+        "excerpt": "Generative AI is transforming how people access information, challenging traditional advertising mechanisms built around predefined slots. Towards generation-native advertising, we propose the Latent Advertiser Mixture Auction (LAMA), a token-level advertising mechanism that embeds advertiser influence directly into the generation process. Advertisers report local continuation values that induce advertiser-specific next-token policies, from which the platform decodes through a latent mixture while updating an allocation posterior. We show that LAMA satisfies Markov DSIC and IR, and achieves near-optimal KL-regularized welfare. We further develop a learning-based implementation that reconstructs the required reports online from learned local advantages and root values. Proof-of-concept experiments on real-world commercial-search query splits show that LAMA improves platform welfare and revenue while maintaining user-facing response quality, providing initial evidence for the feasibility of generation-native advertising.",
+        "categories": [
+          "research"
+        ],
+        "author": "Qi Qi",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6c1c3018ce3aee79",
+        "canonical_url": "https://arxiv.org/abs/2608.27382v1",
+        "normalized_title": "token level advertising",
+        "fingerprint": "6c1c3018ce3aee79ce2ab01d48433e5bb204f1c7bd779b755f151adab0870792",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "D2C-Routing: Dimension-to-Composition Evidence Routing for Mixed-Origin AI-Generated Text Detection",
+        "url": "https://arxiv.org/abs/2608.27380v1",
+        "published_at": "2026-08-27T17:17:27Z",
+        "fetched_at": "2026-08-30T15:15:16.919518Z",
+        "language": "unknown",
+        "excerpt": "AI-generated text detection is commonly framed as a binary document-level judgment about whether a text is human-written or machine-generated. This framing breaks down for mixed-origin writing, where content origin and expression origin may differ. We cast mixed-origin detection as dimension-to-composition source attribution, inferring content origin and expression origin before composing them into four collaboration types. We propose Dimension-to-Composition Routing (D2C-Routing), which routes content-side and expression-side evidence to supervised dimension heads before a learned gated composition layer predicts the final label. On MixD2C, a reconstructed split derived from the HART mixed-origin benchmark, our disclosed D2C-Routing-based detector system reaches 0.8603 four-way Avg TPR@1%FPR, 6.5 points above the same-split RACE-local rerun. Core ablations support the routing design, while error analysis shows that distinguishing AI-content/human-expression from fully AI-generated text remains the hardest boundary. Code is available at https://github.com/bystander563/d2c-routing-artifact.",
+        "categories": [
+          "research"
+        ],
+        "author": "Fuzhen Zhuang",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3cac6b532b25b286",
+        "canonical_url": "https://arxiv.org/abs/2608.27380v1",
+        "normalized_title": "d2c routing dimension to composition evidence routing for mixed origin ai generated text detection",
+        "fingerprint": "3cac6b532b25b286279fc8e93aa0ecf4048e421028b3cd98c94470355c9f7978",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Successive Capacity Growth: Task-Complexity-Driven Width and Depth Expansion for Vision Transformer Encoders in JEPA World Models",
+        "url": "https://arxiv.org/abs/2608.27367v1",
+        "published_at": "2026-08-27T17:04:57Z",
+        "fetched_at": "2026-08-30T15:15:16.919550Z",
+        "language": "unknown",
+        "excerpt": "Joint-Embedding Predictive Architectures (JEPAs) for world modeling typically employ fixed-size Vision Transformer encoders that are over-provisioned for simple tasks and under-provisioned for complex ones, with significant redundancy across attention heads. We propose Successive Capacity Growth (SCG), a method that starts from a minimal encoder (1 head, 2 layers, 283K parameters) and grows incrementally in width (adding attention heads for low-level semantic capacity) or depth (adding transformer blocks for higher-order semantic abstraction), driven by a task-agnostic test-and-verify mechanism that exploits function-preserving expansion to safely trial architectural changes and roll back if they do not improve prediction loss. The Sketched Isotropic Gaussian Regularizer (SIGReg) ensures that all learned semantic dimensions remain statistically independent and aligned with the predictive objective, preventing collapse even as the architecture grows. On a 60-dimensional multi-object dynamics task, SCG naturally triggers depth expansion, improving prediction loss by 20.3% over the fixed small baseline with 56 times greater parameter efficiency than scaling to the fixed large model; o",
+        "categories": [
+          "research"
+        ],
+        "author": "Frederik Berenz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ec829399b672d798",
+        "canonical_url": "https://arxiv.org/abs/2608.27367v1",
+        "normalized_title": "successive capacity growth task complexity driven width and depth expansion for vision transformer encoders in jepa world models",
+        "fingerprint": "ec829399b672d798497ca04a39252e8746eac28f599eee4a8a29dbad47ab31bb",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Stageboost: Recommending Signals Based on Counterfactual Estimation",
+        "url": "https://arxiv.org/abs/2608.27366v1",
+        "published_at": "2026-08-27T17:04:45Z",
+        "fetched_at": "2026-08-30T15:15:16.919560Z",
+        "language": "unknown",
+        "excerpt": "Signals are short textual or visual snippets displayed on the eBay View-Item (VI) page, providing additional, contextual information for users about the viewed item. The aim of displaying these signals is to facilitate intelligent purchase and to incentivize engagement. In this paper, we present a 2 stage xgboost based model that optimally populates the VI page with signals. This approach has shown a 0.08% lift in overall GMB (Gross Merchandise Bought) and 0.58% increase in Parts and Accessories GMB, primarily due to increase in conversion of high average price items in online experimentation.",
+        "categories": [
+          "research"
+        ],
+        "author": "Yuri Brovman",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "edce4b52898f123b",
+        "canonical_url": "https://arxiv.org/abs/2608.27366v1",
+        "normalized_title": "stageboost recommending signals based on counterfactual estimation",
+        "fingerprint": "edce4b52898f123ba77deeb287cb41530f6cc8d5ded294fa2349a629adffdc52",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "KnockGS:interaction-Grounded Calibrationof Physical Gaussian Representations",
+        "url": "https://arxiv.org/abs/2608.27365v1",
+        "published_at": "2026-08-27T17:03:38Z",
+        "fetched_at": "2026-08-30T15:15:16.919570Z",
+        "language": "unknown",
+        "excerpt": "Physics-integrated 3D Gaussian representations now allow reconstructed deformable objects to be simulated and rendered under explicit material models. Existing pipelines, however, assume that material parameters are known or manually specified, limiting their applicability when these parameters must be inferred from observed object dynamics. We propose KnockGS, an interaction-response PhysicalGS framework that estimates the elasticity and density scales of a 3D Gaussian object from its dynamics under a known applied force. Rather than treating physical simulation only as a forward process, we turn the force-induced response into a calibration signal: temporal response features are xtracted from the observed dynamics, the two material scales are estimated from those features, and the estimate is then frozen and written back into the same simulator so that it can be tested on an interaction it was never fitted to.We evaluate the framework on both parameter recovery and response-level fidelity. The estimated scales are compared against hidden ground truth, and the re-simulated object is measured against the target using 3D particle trajectories, response-curve statistics, and rendered",
+        "categories": [
+          "research"
+        ],
+        "author": "Haibao Yu",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4e8b86c499e57ed1",
+        "canonical_url": "https://arxiv.org/abs/2608.27365v1",
+        "normalized_title": "knockgs interaction grounded calibrationof physical gaussian representations",
+        "fingerprint": "4e8b86c499e57ed145b53b69be7882e6f0c6d443ac814af48a1c69bb4b63ec51",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Sophistication in GenAI Use: Field Evidence from a Large Firm",
+        "url": "https://arxiv.org/abs/2608.27364v1",
+        "published_at": "2026-08-27T17:03:10Z",
+        "fetched_at": "2026-08-30T15:15:16.919580Z",
+        "language": "unknown",
+        "excerpt": "We study how sophistication in generative AI (genAI) use varies among the back-office workforce of a large firm. Using proprietary data, we observe 713,564 employee prompts and their corresponding large language model responses from nearly 4,000 back-office employees across 15 functional areas over eight months in 2025. We document three main findings. First, senior employees exhibit more sophisticated genAI use, consistent with domain expertise complementing genAI capabilities. Second, sophistication varies considerably across functions and is highest in Strategy, Digital Innovation, and Project Management, three groups that share a focus on firmwide strategic initiatives and organizational change. Third, we observe neither improvements in sophistication over time nor lasting improvements following formal AI training, suggesting that sophisticated use can be difficult to change. Together, our study provides measures of and insights into sophisticated genAI use that managers can use to improve outcomes and that researchers can use in future research.",
+        "categories": [
+          "research"
+        ],
+        "author": "Jaime J. Schmidt",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "12afecadf80e2ce2",
+        "canonical_url": "https://arxiv.org/abs/2608.27364v1",
+        "normalized_title": "sophistication in genai use field evidence from a large firm",
+        "fingerprint": "12afecadf80e2ce2f0ce8b5f9195f53635c9e477a1d8128ce23bf0d47e9a4a34",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Domain-Driven Agents",
+        "url": "https://coldtake.dev/blog/domain-driven-agents",
+        "published_at": "2026-08-29T19:28:28Z",
+        "fetched_at": "2026-08-30T15:15:25.116996Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "AlarQ",
+        "upstream_urls": [
+          "https://coldtake.dev/blog/domain-driven-agents"
+        ],
+        "raw_metadata": {
+          "hn_id": 49492584,
+          "score": 88
+        },
+        "id": "4f9015b46c395262",
+        "canonical_url": "https://coldtake.dev/blog/domain-driven-agents",
+        "normalized_title": "domain driven agents",
+        "fingerprint": "4f9015b46c3952624d834301496c002eaeedd210a3381a67789b2fc733f17706",
+        "rule_score": 43.94744444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "No AI Fridays",
+        "url": "https://noaifridays.com/",
+        "published_at": "2026-08-30T12:31:05Z",
+        "fetched_at": "2026-08-30T15:15:22.993381Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "xendo",
+        "upstream_urls": [
+          "https://noaifridays.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49498095,
+          "score": 107
+        },
+        "id": "971d3d5491c82daa",
+        "canonical_url": "https://noaifridays.com/",
+        "normalized_title": "no ai fridays",
+        "fingerprint": "971d3d5491c82daa6c518304accd370b0acb1cb30f2a491abd61359893d0a0bd",
+        "rule_score": 41.651805555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
+        "url": "https://www.nature.com/articles/s41562-026-02550-0",
+        "published_at": "2026-08-30T12:12:56Z",
+        "fetched_at": "2026-08-30T15:15:24.611732Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Anon84",
+        "upstream_urls": [
+          "https://www.nature.com/articles/s41562-026-02550-0"
+        ],
+        "raw_metadata": {
+          "hn_id": 49497996,
+          "score": 7
+        },
+        "id": "9406af6a05ea5929",
+        "canonical_url": "https://www.nature.com/articles/s41562-026-02550-0",
+        "normalized_title": "the shrinking landscape of linguistic diversity in the age of llms",
+        "fingerprint": "9406af6a05ea592911b9fc3e17b242ab6d9530bbbc485e49c40d995693ff3e8e",
+        "rule_score": 41.62155555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "LLM usage in Debian neither endorsed nor prohibited",
+        "url": "https://www.debian.org/vote/2026/vote_002#texte",
+        "published_at": "2026-08-30T11:52:38Z",
+        "fetched_at": "2026-08-30T15:15:26.402765Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "birdculture",
+        "upstream_urls": [
+          "https://www.debian.org/vote/2026/vote_002#texte"
+        ],
+        "raw_metadata": {
+          "hn_id": 49497883,
+          "score": 6
+        },
+        "id": "f810f8a593559d84",
+        "canonical_url": "https://www.debian.org/vote/2026/vote_002",
+        "normalized_title": "llm usage in debian neither endorsed nor prohibited",
+        "fingerprint": "f810f8a593559d84e004e8cd0407dcbb79dfedfe332b3e09f921529b3291d200",
+        "rule_score": 41.587722222222226
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Fair Work Commission condemns 'plain wrong' AI legal advice",
+        "url": "https://www.abc.net.au/news/2026-08-29/fair-work-commission-condemns-ai-legal-advice/107089766",
+        "published_at": "2026-08-30T10:20:11Z",
+        "fetched_at": "2026-08-30T15:15:24.104128Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "martyvis",
+        "upstream_urls": [
+          "https://www.abc.net.au/news/2026-08-29/fair-work-commission-condemns-ai-legal-advice/107089766"
+        ],
+        "raw_metadata": {
+          "hn_id": 49497357,
+          "score": 48
+        },
+        "id": "243f1eb720688b4e",
+        "canonical_url": "https://www.abc.net.au/news/2026-08-29/fair-work-commission-condemns-ai-legal-advice/107089766",
+        "normalized_title": "fair work commission condemns plain wrong ai legal advice",
+        "fingerprint": "243f1eb720688b4e66e3419bf501e1cbabfe2f167232b404542e1af9c9eb6ab0",
+        "rule_score": 41.433638888888886
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
+        "url": "https://arxiv.org/abs/1804.07389",
+        "published_at": "2026-08-30T08:23:26Z",
+        "fetched_at": "2026-08-30T15:15:23.163295Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "joebig",
+        "upstream_urls": [
+          "https://arxiv.org/abs/1804.07389"
+        ],
+        "raw_metadata": {
+          "hn_id": 49496782,
+          "score": 145
+        },
+        "id": "4ec05e91f8a83f37",
+        "canonical_url": "https://arxiv.org/abs/1804.07389",
+        "normalized_title": "longest straight line paths on water or land on the earth 2018",
+        "fingerprint": "4ec05e91f8a83f37dc7783e06e333a96a92f086f72b364b174d7597f54d20566",
+        "rule_score": 41.23905555555555
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Universality and sharp thresholds for ellipsoid fitting",
+        "url": "https://arxiv.org/abs/2608.27372v1",
+        "published_at": "2026-08-27T17:09:38Z",
+        "fetched_at": "2026-08-30T15:15:16.919529Z",
+        "language": "unknown",
+        "excerpt": "We establish a sharp phase transition for fitting random vectors by an ellipsoid. The random vectors have independent subgaussian coordinates with mean zero, variance one, and a common fourth moment, and the number of vectors is proportional to the square of the dimension. We identify an explicit satisfiability threshold such that, with high probability, a positive definite ellipsoid passes through every data point below the threshold, whereas no positive semidefinite fit exists above it. We also determine the optimal squared fitting error throughout the unsatisfiable regime. In particular, the threshold depends on the coordinate distributions only through their common fourth moment, revealing a fourth moment universality phenomenon. For standard Gaussian data the threshold is $1/4$, resolving the ellipsoid fitting conjecture.",
+        "categories": [
+          "research"
+        ],
+        "author": "Youngtak Sohn",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2ecee56128b9c31c",
+        "canonical_url": "https://arxiv.org/abs/2608.27372v1",
+        "normalized_title": "universality and sharp thresholds for ellipsoid fitting",
+        "fingerprint": "2ecee56128b9c31cfb3234427df5c1f0eafc8b868413eb34bbd8f7b58b5f8356",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The Internet Archive's Vintage AI Collection",
+        "url": "https://archive.org/details/vintageai",
+        "published_at": "2026-08-30T05:00:51Z",
+        "fetched_at": "2026-08-30T15:15:26.335921Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "OuterVale",
+        "upstream_urls": [
+          "https://archive.org/details/vintageai"
+        ],
+        "raw_metadata": {
+          "hn_id": 49495845,
+          "score": 22
+        },
+        "id": "5c1371a165632a8d",
+        "canonical_url": "https://archive.org/details/vintageai",
+        "normalized_title": "the internet archive s vintage ai collection",
+        "fingerprint": "5c1371a165632a8d87c9c9471191dbba3c250c8addf89dd207b19ad4a0a2a10b",
+        "rule_score": 40.90141666666667
+      }
+    ],
+    "prompt_chars": 17296,
+    "estimated_input_tokens": 4324
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
