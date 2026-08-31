@@ -1,0 +1,92 @@
+{
+  "date": "2026-09-01",
+  "generated_at": "2026-08-31T17:57:00.656437Z",
+  "run_id": "2026-09-01-0fa185e9",
+  "daily_summary_zh": "今日AI领域动态：NVIDIA 将 BioNeMo NIM 蛋白质结构预测微服务整合进 Claude Science；llama.cpp b10724 发布：KV 缓存恢复性能大幅提升。",
+  "events": [
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "f5c91f6f08fea91e"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 将 BioNeMo NIM 蛋白质结构预测微服务整合进 Claude Science",
+      "summary_zh": "NVIDIA 发布博客，介绍如何在 Claude Science 中运行 BioNeMo NIM 微服务进行蛋白质结构预测，使 AI 智能体可读取论文、提出假设并调用模型推进科研实验排序。",
+      "why_it_matters_zh": "这是专业化科学模型接入通用 AI Agent 工作流的落地案例，展示了 NIM 微服务在科学智能体生态中的可组合性，有助于加速蛋白质等领域的 AI 驱动科研自动化。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Run NVIDIA BioNeMo NIM Microservices for Protein Structure Prediction in Claude Science",
+        "url": "https://developer.nvidia.com/blog/run-nvidia-bionemo-nim-microservices-for-protein-structure-prediction-in-claude-science/",
+        "published_at": "2026-08-31T16:30:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "d37022b87e4a105d"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b10724 发布：KV 缓存恢复性能大幅提升",
+      "summary_zh": "llama.cpp 发布 b10724，针对非连续 KV 单元的恢复流程进行优化，将批量状态恢复改为按连续区段读取。在 42,603 个 KV cell 的恢复场景中，复制次数从 1,363,616 次降至 224 次，恢复时间从 25-63 秒缩短至约 221-424 毫秒。",
+      "why_it_matters_zh": "KV 缓存恢复是 prompt-cache 等生产场景的关键路径，这项优化可显著加速长上下文恢复，对本地推理与缓存复用具有直接价值。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10724",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10724",
+        "published_at": "2026-08-31T17:26:21Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 124,
+    "normalized": 124,
+    "filtered": 95,
+    "ai_candidates": 30,
+    "prompt_chars": 7003,
+    "estimated_input_tokens": 1750,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

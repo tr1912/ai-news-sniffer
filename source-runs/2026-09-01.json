@@ -1,0 +1,846 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 124,
+  "normalized_count": 124,
+  "filtered_count": 95,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10724",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10724",
+        "published_at": "2026-08-31T17:26:21Z",
+        "fetched_at": "2026-08-31T17:57:21.868135Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nkv-cache : optimize restoring non-contiguous cells (#27991)\n\n* kv cache : batch state restore scatter reads per contiguous run\n\nWhen restoring state into non-contiguous destination cells (e.g. a\nprompt-cache snapshot into a fragmented ring), state_read_data issued\none small copy per KV cell - ~1.4M copies of a few KiB each for a\n40k+ token restore, taking 25-63 s on the CUDA backend.\n\nThe snapshot stores cell rows in cell order, so a maximal run of\nconsecutive destination indices maps to one contiguous block and can\nbe restored with a single copy. Precompute the runs once and use them\nin all three scatter loops (K, V, transposed V). Byte-identical.\n\nThe on-device reader copies with a byte cursor when the read and\nwrite chunking differs, so the batched reads are safe for it as well.\nBatching makes equal tensor counts with a different split reachable\n(save ranges [2,1] vs restore runs [1,2]); the next commit teaches the\nreader's 1:1 path to fall back to the byte cursor in that case.\n\nVerified in a production setup: 1,363,616 copies / 25-63 s -> 224\ncopies / 221-424 ms for the same restores (42,603 cells, 4 runs).\n\nAssisted-by: Claude Code (unsloth/qwen3.8-27b)\n\n* cont",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 379932998
+        },
+        "id": "d37022b87e4a105d",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10724",
+        "normalized_title": "llama cpp releases b10724",
+        "fingerprint": "d37022b87e4a105d02b6a6e707498e8a79a304f697d8d4eb2e985d1311b2c7e0",
+        "rule_score": 54.743916666666664
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "「GPT-6」灰测demo刷屏！周四发布在即",
+        "url": "https://www.qbitai.com/2026/08/481893.html",
+        "published_at": "2026-08-31T04:47:26Z",
+        "fetched_at": "2026-08-31T17:57:26.047676Z",
+        "language": "unknown",
+        "excerpt": "核弹爆炸",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "Jay",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "61a4857a26ec79b4",
+        "canonical_url": "https://www.qbitai.com/2026/08/481893.html",
+        "normalized_title": "gpt 6 灰测demo刷屏 周四发布在即",
+        "fingerprint": "61a4857a26ec79b467ea01459c716e27c9eb8faf4f90633d8dcebd2bdd20992c",
+        "rule_score": 54.479055555555554
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "OpenAI买几万台Mac搞强化训练！英伟达的活被苹果抢了",
+        "url": "https://www.qbitai.com/2026/08/481759.html",
+        "published_at": "2026-08-31T03:24:34Z",
+        "fetched_at": "2026-08-31T17:57:26.047686Z",
+        "language": "unknown",
+        "excerpt": "什么样的AI业务，英伟达GPU和谷歌TPU搞不定，非得用Mac",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "梦晨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "34a9a1cd84296e11",
+        "canonical_url": "https://www.qbitai.com/2026/08/481759.html",
+        "normalized_title": "openai买几万台mac搞强化训练 英伟达的活被苹果抢了",
+        "fingerprint": "34a9a1cd84296e11cda83260783dfa419128b71796ad0670104d3edc60e53861",
+        "rule_score": 54.340944444444446
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Run NVIDIA BioNeMo NIM Microservices for Protein Structure Prediction in Claude Science",
+        "url": "https://developer.nvidia.com/blog/run-nvidia-bionemo-nim-microservices-for-protein-structure-prediction-in-claude-science/",
+        "published_at": "2026-08-31T16:30:00Z",
+        "fetched_at": "2026-08-31T17:57:12.944116Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"A picture of a protein molecule.\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"431\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/08/AdobeStock_842772489-e1787092703768-768x431.webp\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"\" width=\"768\" />Agentic AI is changing how research is done. AI scientists can read papers, propose hypotheses, call models, and determine which experiments to prioritize next....",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Michelle Horton",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f5c91f6f08fea91e",
+        "canonical_url": "https://developer.nvidia.com/blog/run-nvidia-bionemo-nim-microservices-for-protein-structure-prediction-in-claude-science",
+        "normalized_title": "run nvidia bionemo nim microservices for protein structure prediction in claude science",
+        "fingerprint": "f5c91f6f08fea91e36a5a6d5e48d0c0b75efa843b9c6a6542b58234f7cec16d4",
+        "rule_score": 52.65
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10699",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10699",
+        "published_at": "2026-08-30T18:07:35Z",
+        "fetched_at": "2026-08-31T17:57:21.868339Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nggml : add ggml_backend_op_alloc_size_may_expand, use it in RPC (#27960)\n\nsome backends (Metal, SYCL, WebGPU) require additional memory for\nfleeting data for certain ops, which is reflected in their\nget_alloc_size implementations.\n\nadd ggml_backend_op_alloc_size_may_expand() to the backend utils,\nlisting these ops, and assert in ggml_backend_buft_get_alloc_size\nthat a backend expanding the alloc size of a compute op only does so\nfor ops listed in the helper.\n\nuse the helper in the RPC backend to decide whether to query the\nremote server for the actual alloc size, instead of a hardcoded list.\n\nAssisted-by: pi:llama.cpp/Qwen3.8-27B\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/43988177>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10699/llama-b10699-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10699/llama-b10699-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 379361195
+        },
+        "id": "55edc0054fa57d78",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10699",
+        "normalized_title": "llama cpp releases b10699",
+        "fingerprint": "55edc0054fa57d7828e137922a763162fa5134022b148a538594531703116801",
+        "rule_score": 52.41263888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "VC疯了！200万现金冠军奖，又花4000万造了一座AI「创业乌托邦」",
+        "url": "https://www.qbitai.com/2026/08/481928.html",
+        "published_at": "2026-08-31T13:20:29Z",
+        "fetched_at": "2026-08-31T17:57:26.047610Z",
+        "language": "unknown",
+        "excerpt": "划重点：这次不是你挨家敲门，是VC排队来看你。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "田, 晏林",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bb8be51ce55d9204",
+        "canonical_url": "https://www.qbitai.com/2026/08/481928.html",
+        "normalized_title": "vc疯了 200万现金冠军奖 又花4000万造了一座ai 创业乌托邦",
+        "fingerprint": "bb8be51ce55d920436223736f213bf9ad685f55c4375d9ce9dfde7915f20b98d",
+        "rule_score": 51.33413888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "范式与华为达成重磅算力战略合作，成为首批拥抱国产最高端算力底座的AI企业",
+        "url": "https://www.qbitai.com/2026/08/481919.html",
+        "published_at": "2026-08-31T07:34:02Z",
+        "fetched_at": "2026-08-31T17:57:26.047667Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6419030ad4fd85b2",
+        "canonical_url": "https://www.qbitai.com/2026/08/481919.html",
+        "normalized_title": "范式与华为达成重磅算力战略合作 成为首批拥抱国产最高端算力底座的ai企业",
+        "fingerprint": "6419030ad4fd85b27bb3e35c5644d5e797b01b7489423a75cca1fb76ece06db0",
+        "rule_score": 50.75672222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "AQuA：让量化研究 Agent 持续进化，也让回测结果经得起检验",
+        "url": "https://www.qbitai.com/2026/08/481475.html",
+        "published_at": "2026-08-31T03:01:29Z",
+        "fetched_at": "2026-08-31T17:57:26.047702Z",
+        "language": "unknown",
+        "excerpt": "自主研究系统的上限，不只取决于模型有多聪明，也取决于系统能否分辨什么是新证据，什么只是一次偶然的高分。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a3d9490da8eae3e4",
+        "canonical_url": "https://www.qbitai.com/2026/08/481475.html",
+        "normalized_title": "aqua 让量化研究 agent 持续进化 也让回测结果经得起检验",
+        "fingerprint": "a3d9490da8eae3e479ef5810f4386cd7882965fc602bca391c75781087ae46f0",
+        "rule_score": 50.30247222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "ravynOS: Pre-alpha open-source OS based on Darwin, FreeBSD, Apple open-source",
+        "url": "https://ravynos.com/",
+        "published_at": "2026-08-31T16:19:36Z",
+        "fetched_at": "2026-08-31T17:57:26.397272Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Bluestein",
+        "upstream_urls": [
+          "https://ravynos.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49511534,
+          "score": 57
+        },
+        "id": "10e611d8347d6c22",
+        "canonical_url": "https://ravynos.com/",
+        "normalized_title": "ravynos pre alpha open source os based on darwin freebsd apple open source",
+        "fingerprint": "10e611d8347d6c22542d1617339089ac49f17c0b95850d78a277a591981de75b",
+        "rule_score": 47.632666666666665
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+        "url": "https://usealmanac.com/",
+        "published_at": "2026-08-31T15:34:34Z",
+        "fetched_at": "2026-08-31T17:57:26.486765Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "kushagrchitkar",
+        "upstream_urls": [
+          "https://usealmanac.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49511007,
+          "score": 21
+        },
+        "id": "7c591cb6dd443284",
+        "canonical_url": "https://usealmanac.com/",
+        "normalized_title": "launch hn almanac yc s26 ai that knows your company",
+        "fingerprint": "7c591cb6dd443284f1c740db6a667b963dd2e2a82788e3d6bd289ca2ce36506c",
+        "rule_score": 47.557611111111115
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Floe – an open-source plugin for sample libraries – CLAP/VST3/AU",
+        "url": "https://floe.audio/",
+        "published_at": "2026-08-31T10:11:39Z",
+        "fetched_at": "2026-08-31T17:57:27.305736Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "windell",
+        "upstream_urls": [
+          "https://floe.audio/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49507908,
+          "score": 10
+        },
+        "id": "87d13e9e5364e735",
+        "canonical_url": "https://floe.audio/",
+        "normalized_title": "show hn floe an open source plugin for sample libraries clap vst3 au",
+        "fingerprint": "87d13e9e5364e735355b56dc831fbe34c667d768c4808ca9346f4dc4c356a61a",
+        "rule_score": 47.019416666666665
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenShot 4.0 – Open-source video editor",
+        "url": "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/",
+        "published_at": "2026-08-31T09:59:05Z",
+        "fetched_at": "2026-08-31T17:57:26.809672Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "metrofun",
+        "upstream_urls": [
+          "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49507822,
+          "score": 436
+        },
+        "id": "c1b1a1b2cc1e0d8d",
+        "canonical_url": "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before",
+        "normalized_title": "openshot 4 0 open source video editor",
+        "fingerprint": "c1b1a1b2cc1e0d8dd9b8630befa1e16082d6e9a51c3811807b9d29a584097535",
+        "rule_score": 46.99847222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "滴滴自动驾驶新一代车型开启载客测试服务",
+        "url": "https://www.qbitai.com/2026/08/481923.html",
+        "published_at": "2026-08-31T07:53:12Z",
+        "fetched_at": "2026-08-31T17:57:26.047655Z",
+        "language": "unknown",
+        "excerpt": "近期，滴滴自动驾驶新一代 Robotaxi R2正式开启无人载客测试服务",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3dfa8fda72abbac4",
+        "canonical_url": "https://www.qbitai.com/2026/08/481923.html",
+        "normalized_title": "滴滴自动驾驶新一代车型开启载客测试服务",
+        "fingerprint": "3dfa8fda72abbac49e9b427d77e2eb57ae2ee62870fcad7430761f09c1f14097",
+        "rule_score": 46.788666666666664
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
+        "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
+        "published_at": "2026-08-31T16:00:00Z",
+        "fetched_at": "2026-08-31T17:57:26.098608Z",
+        "language": "unknown",
+        "excerpt": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kate Park",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "adc65c36f17619d3",
+        "canonical_url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation",
+        "normalized_title": "clipto uses ai to search terabytes of video and is now valued at 250m",
+        "fingerprint": "adc65c36f17619d386c7862c61f27fcc2a453fd1e2cc84e44b6bd2309038dd4a",
+        "rule_score": 46.6
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip buildout",
+        "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
+        "published_at": "2026-08-31T15:15:25Z",
+        "fetched_at": "2026-08-31T17:57:26.098652Z",
+        "language": "unknown",
+        "excerpt": "Nvidia invests $3.5 billion into Taiwanese chipmaker MediaTek. The deal shows how Nvidia plans to stay essential to AI infrastructure as Big Tech begins to build its own AI chips.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ddb8dbe3f8ab1bf4",
+        "canonical_url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout",
+        "normalized_title": "nvidia s 3 5b mediatek bet reveals its plan for tackling big tech s ai chip buildout",
+        "fingerprint": "ddb8dbe3f8ab1bf4d79cf2e778d39d271cf6e183483f5d5da1314d45fa6c0f8d",
+        "rule_score": 46.52569444444445
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "全国第三，公司第二，“初创黑马”灵犀智涌用ROSS Harness把机器人送进工业具身智能第一梯队",
+        "url": "https://www.qbitai.com/2026/08/481750.html",
+        "published_at": "2026-08-31T03:11:46Z",
+        "fetched_at": "2026-08-31T17:57:26.047694Z",
+        "language": "unknown",
+        "excerpt": "灵犀智涌用一台由Demo级本体组装而成的机器人，成为工业场景赛除行业头部企业外唯一获奖的机器人公司。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "93499efd11900155",
+        "canonical_url": "https://www.qbitai.com/2026/08/481750.html",
+        "normalized_title": "全国第三 公司第二 初创黑马 灵犀智涌用ross harness把机器人送进工业具身智能第一梯队",
+        "fingerprint": "93499efd119001550d6ce169a0d99b422d18a1d3fa7b1130748d3ae0b6660b67",
+        "rule_score": 46.31961111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Haiku R1/beta6 has been released",
+        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
+        "published_at": "2026-08-30T16:01:10Z",
+        "fetched_at": "2026-08-31T17:57:29.524283Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "metrofun",
+        "upstream_urls": [
+          "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6"
+        ],
+        "raw_metadata": {
+          "hn_id": 49499867,
+          "score": 354
+        },
+        "id": "a9ce4f2f7e3e8d7d",
+        "canonical_url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
+        "normalized_title": "haiku r1 beta6 has been released",
+        "fingerprint": "a9ce4f2f7e3e8d7df3d1a92b6f8f84a1a694d2391324ba7ec4e4592ddf355ad2",
+        "rule_score": 45.20194444444444
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
+        "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+        "published_at": "2026-08-30T15:00:00Z",
+        "fetched_at": "2026-08-31T17:57:26.098691Z",
+        "language": "unknown",
+        "excerpt": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kate Park",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "978f047b14e423c7",
+        "canonical_url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining",
+        "normalized_title": "caterpillar is bringing to ai deployment what it learned from automating mining",
+        "fingerprint": "978f047b14e423c79e43e42a166abca3caf85f827d78db6ade9a14893b4b86e9",
+        "rule_score": 44.1
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "At TechBBQ, Europe’s AI conversations kept coming back to: Who’s actually in control?",
+        "url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control/",
+        "published_at": "2026-08-29T17:51:10Z",
+        "fetched_at": "2026-08-31T17:57:26.098708Z",
+        "language": "unknown",
+        "excerpt": "Investors, founders, and operators from across Europe arrived for the annual Nordic TechBBQ conference to talk about how humans can have agency over AI.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Dominic-Madori Davis",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "806a203dbbf87397",
+        "canonical_url": "https://techcrunch.com/2026/08/29/at-techbbq-europes-ai-conversations-kept-coming-back-to-whos-actually-in-control",
+        "normalized_title": "at techbbq europe s ai conversations kept coming back to who s actually in control",
+        "fingerprint": "806a203dbbf87397bdd4f15ab2ee0adf85acbbac00efcfaeb0e4be6a8d39407f",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "‘We’re not doing 30 bets a year’: Vijay Pande on betting small after running $4B at a16z",
+        "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
+        "published_at": "2026-08-29T17:36:47Z",
+        "fetched_at": "2026-08-31T17:57:26.098716Z",
+        "language": "unknown",
+        "excerpt": "Vijay Pande — who left a16z's roughly $4 billion biotech practice last year to start the much smaller, AI-native VZVC — talks about why biology is finally shifting from a \"discovery\" science to an \"engineering\" one, why clinical trials are still brutally expensive, and why he thinks open, shared datasets (not walled-off ones) are what will actually let AI transform medicine.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Connie Loizos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4ac751bec5bd8b79",
+        "canonical_url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z",
+        "normalized_title": "we re not doing 30 bets a year vijay pande on betting small after running 4b at a16z",
+        "fingerprint": "4ac751bec5bd8b791dc06deea96668905b33f2a5c3bdd087def59590dacfa306",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Konrad Zuse Museum shutting down due to lack of funding",
+        "url": "https://www.heise.de/en/news/Zuse-Computer-Museum-ZCOM-in-Hoyerswerda-faces-closure-11344513.html",
+        "published_at": "2026-08-31T16:52:35Z",
+        "fetched_at": "2026-08-31T17:57:26.720367Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "virtualritz",
+        "upstream_urls": [
+          "https://www.heise.de/en/news/Zuse-Computer-Museum-ZCOM-in-Hoyerswerda-faces-closure-11344513.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49511917,
+          "score": 60
+        },
+        "id": "fe8da93958a89720",
+        "canonical_url": "https://www.heise.de/en/news/Zuse-Computer-Museum-ZCOM-in-Hoyerswerda-faces-closure-11344513.html",
+        "normalized_title": "konrad zuse museum shutting down due to lack of funding",
+        "fingerprint": "fe8da93958a897202375da4412a346085857ddc6b06ad5ed7ecb902bb28f1e29",
+        "rule_score": 43.68763888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic legal fight with Pentagon shows shifting politics of AI",
+        "url": "https://www.bloomberg.com/news/newsletters/2026-08-31/anthropic-legal-fight-with-pentagon-shows-shifting-politics-of-ai",
+        "published_at": "2026-08-31T16:52:24Z",
+        "fetched_at": "2026-08-31T17:57:28.667196Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rndsignals",
+        "upstream_urls": [
+          "https://www.bloomberg.com/news/newsletters/2026-08-31/anthropic-legal-fight-with-pentagon-shows-shifting-politics-of-ai"
+        ],
+        "raw_metadata": {
+          "hn_id": 49511912,
+          "score": 8
+        },
+        "id": "28cd7a33e66a0b93",
+        "canonical_url": "https://www.bloomberg.com/news/newsletters/2026-08-31/anthropic-legal-fight-with-pentagon-shows-shifting-politics-of-ai",
+        "normalized_title": "anthropic legal fight with pentagon shows shifting politics of ai",
+        "fingerprint": "28cd7a33e66a0b937c9b8f780c788a2671a05eeb09f0b165793ec357d3654d83",
+        "rule_score": 43.687333333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Apple Is Suddenly an AI Infra Stock as OpenAI Buys 10k+ Macs",
+        "url": "https://247wallst.com/investing/2026/08/31/apple-is-suddenly-an-ai-infrastructure-stock-as-openai-buys-macs-by-the-tens-of-thousands/",
+        "published_at": "2026-08-31T16:44:15Z",
+        "fetched_at": "2026-08-31T17:57:28.892806Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "prabal97",
+        "upstream_urls": [
+          "https://247wallst.com/investing/2026/08/31/apple-is-suddenly-an-ai-infrastructure-stock-as-openai-buys-macs-by-the-tens-of-thousands/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49511824,
+          "score": 13
+        },
+        "id": "54ab408ff7c85617",
+        "canonical_url": "https://247wallst.com/investing/2026/08/31/apple-is-suddenly-an-ai-infrastructure-stock-as-openai-buys-macs-by-the-tens-of-thousands",
+        "normalized_title": "apple is suddenly an ai infra stock as openai buys 10k macs",
+        "fingerprint": "54ab408ff7c85617dc4b089d7aff3850aded5fe7f52a86dc58269bce61162af8",
+        "rule_score": 43.67375
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Launch HN: Hebbian Robotics (YC S26) – Build scalable robotics data pipelines",
+        "url": "https://github.com/Hebbian-Robotics/hflow",
+        "published_at": "2026-08-31T15:02:41Z",
+        "fetched_at": "2026-08-31T17:57:26.666813Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "kstonekuan",
+        "upstream_urls": [
+          "https://github.com/Hebbian-Robotics/hflow"
+        ],
+        "raw_metadata": {
+          "hn_id": 49510632,
+          "score": 24
+        },
+        "id": "b09fe78c93f8e47b",
+        "canonical_url": "https://github.com/Hebbian-Robotics/hflow",
+        "normalized_title": "launch hn hebbian robotics yc s26 build scalable robotics data pipelines",
+        "fingerprint": "b09fe78c93f8e47be4ca4dfd5ada675f9fd1cab2c75f98fdd42061ed9c083d29",
+        "rule_score": 43.50447222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "ChatGPT to face tougher regulation in the EU",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+        "published_at": "2026-08-31T14:52:44Z",
+        "fetched_at": "2026-08-31T17:57:29.029439Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dataking",
+        "upstream_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa"
+        ],
+        "raw_metadata": {
+          "hn_id": 49510517,
+          "score": 19
+        },
+        "id": "2fe1805542571747",
+        "canonical_url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+        "normalized_title": "chatgpt to face tougher regulation in the eu",
+        "fingerprint": "2fe1805542571747e4ddc0144165c741da6f8a9b24c1eaa2b16fc6d8418c6f73",
+        "rule_score": 43.48788888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meeting note-taker Circleback adds a free tier to attract more customers",
+        "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
+        "published_at": "2026-08-31T12:56:46Z",
+        "fetched_at": "2026-08-31T17:57:26.098664Z",
+        "language": "unknown",
+        "excerpt": "Circleback is also introducing new pricing plans starting from $14 per month.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "39cd4f13df925cea",
+        "canonical_url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers",
+        "normalized_title": "meeting note taker circleback adds a free tier to attract more customers",
+        "fingerprint": "39cd4f13df925ceaffbf629da98e3b92f97113e755de3d4628f5d60440611a76",
+        "rule_score": 42.29461111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "The US is building barriers around drones and robots, but China has scale to get around them",
+        "url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/",
+        "published_at": "2026-08-31T02:34:00Z",
+        "fetched_at": "2026-08-31T17:57:26.098674Z",
+        "language": "unknown",
+        "excerpt": "The U.S. is shutting out more foreign-made drones and robots. China’s scale means the global competition may simply move elsewhere.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kate Park",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "8bc085e56ae86453",
+        "canonical_url": "https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale",
+        "normalized_title": "the us is building barriers around drones and robots but china has scale to get around them",
+        "fingerprint": "8bc085e56ae8645380757f364efacdd2b25dbbfcc295dcf4b0cdf74be1e3f018",
+        "rule_score": 41.25666666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Musk’s faster path to more gas turbines comes with pollution problem",
+        "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+        "published_at": "2026-08-30T16:54:25Z",
+        "fetched_at": "2026-08-31T17:57:26.098683Z",
+        "language": "unknown",
+        "excerpt": "Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's a bet on a fuel source that's already triggering lawsuits and health studies everywhere his (and others') turbines have gone in.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Connie Loizos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "530b2a3a8532e043",
+        "canonical_url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem",
+        "normalized_title": "musk s faster path to more gas turbines comes with pollution problem",
+        "fingerprint": "530b2a3a8532e04341812f7f2473efb4be91360483afaa14c89ff7cc0434b209",
+        "rule_score": 40.29069444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "How much of a problem is AI's water use?",
+        "url": "https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use",
+        "published_at": "2026-08-31T17:16:52Z",
+        "fetched_at": "2026-08-31T17:57:28.576792Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "knowablemag",
+        "upstream_urls": [
+          "https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use"
+        ],
+        "raw_metadata": {
+          "hn_id": 49512228,
+          "score": 6
+        },
+        "id": "02eeae32addff113",
+        "canonical_url": "https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use",
+        "normalized_title": "how much of a problem is ai s water use",
+        "fingerprint": "02eeae32addff11362466e34aaf01de09eb7abe4bd1413500c306ca964d8c8a8",
+        "rule_score": 39.72811111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Wildfire Survivors Push Back Against Newsom-Led Utility Bailout",
+        "url": "https://prospect.org/2026/08/28/wildfire-survivors-push-back-against-newsom-led-utility-bailout/",
+        "published_at": "2026-08-31T16:31:35Z",
+        "fetched_at": "2026-08-31T17:57:29.569478Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "hn_acker",
+        "upstream_urls": [
+          "https://prospect.org/2026/08/28/wildfire-survivors-push-back-against-newsom-led-utility-bailout/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49511664,
+          "score": 17
+        },
+        "id": "22c18c305151e061",
+        "canonical_url": "https://prospect.org/2026/08/28/wildfire-survivors-push-back-against-newsom-led-utility-bailout",
+        "normalized_title": "wildfire survivors push back against newsom led utility bailout",
+        "fingerprint": "22c18c305151e0613079f256c217cc6a4b838ac26d4133c53236dcd7e8918352",
+        "rule_score": 39.65263888888889
+      }
+    ],
+    "prompt_chars": 7003,
+    "estimated_input_tokens": 1750
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
