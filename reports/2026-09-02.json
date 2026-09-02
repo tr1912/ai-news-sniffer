@@ -1,0 +1,241 @@
+{
+  "date": "2026-09-02",
+  "generated_at": "2026-09-02T15:01:11.289845Z",
+  "run_id": "2026-09-02-fe744539",
+  "daily_summary_zh": "今日要闻：Anthropic发布Fable 5.1，以更低成本与更低误拒率更新前沿模型产品；IBM与NVIDIA分别推出时间序列模型集成和基于Nemotron的智能体安全方案；llama.cpp更新修复Qwen3-TTS推理。研究侧围绕推理经济性与评测可信度：文档理解MoE、量化损伤分配、中阶段蒸馏、LLM裁判机制与检索表面形式偏差等论文集中出现，并新增面向动态Agent生命周期的CordisBench基准。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "bb6d0621444f6c0f",
+        "74a732107c06c5c1"
+      ],
+      "category": "models",
+      "title_zh": "Anthropic发布Fable 5.1：多项基准领先、最高降价45%并降低误拒",
+      "summary_zh": "Anthropic于9月1日发布Claude系Fable 5.1。量子位报道称，该模型在8项评测中领先，最高降价45%，并加入反蒸馏机制；TechCrunch报道则指出，这次更新降低token成本，同时缓解安全防护带来的误拒问题。",
+      "why_it_matters_zh": "前沿模型同步优化性能、推理成本和安全限制，直接影响API用户的实际使用成本与误伤体验；反蒸馏机制也回应了模型能力被廉价复制的问题。",
+      "importance_score": 90.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "title": "Anthropic’s new Fable release is cheaper, less restrictive",
+        "url": "https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/",
+        "published_at": "2026-09-01T19:39:22Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "qbitai",
+          "source_name": "量子位",
+          "title": "Claude最强Fable 5.1发布！8项屠榜，最高降价45%，反蒸馏机制上线",
+          "url": "https://www.qbitai.com/2026/09/482652.html",
+          "published_at": "2026-09-02T02:18:12Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "5edbd9e67b5dc1d0"
+      ],
+      "category": "research",
+      "title_zh": "面向文档理解的MoE VLM：单卡H100部署，成本较人工标注降逾80%",
+      "summary_zh": "论文报告一个已部署的文档理解系统：采用35B总参数、3B激活的MoE VLM，结合内部生产数据与开放文档，经Difficulty-Aware数据管线筛选后微调。系统可在单张H100上运行，并能通过prompt方式服务多种工作流。质量调整后的成本分析显示，其期望成本比人工标注低80%以上，比最佳开源基线低50%以上，更大的基线模型经济上不可行。",
+      "why_it_matters_zh": "受监管行业长期依赖定制OCR与封闭数据，且开源模型质量达标后服务成本仍可能高于人工；该工作展示小激活MoE与数据筛选可在高精度要求下真正替代人工作业。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Closing Cost-Quality Gap in Document VLMs: Difficulty-Aware Data Curation and Quality-Adjusted Deployment Economics",
+        "url": "https://arxiv.org/abs/2609.01575v1",
+        "published_at": "2026-09-01T17:40:29Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "2078d45064a0bbb8"
+      ],
+      "category": "research",
+      "title_zh": "研究揭示LLM量化损伤本质：精度预算应全局分配而非局部修复",
+      "summary_zh": "论文以因果混合精度干预为ground truth，检查9个开源模型后发现，量化损伤在大多数模型中分散在大量层，而非集中在所谓任务电路或权重统计异常层。在匹配的精度预算下，全局细化量化粒度比局部修复最可恢复层在8个支持group-128的模型上高21-52分；Qwen3-8B是少数损伤高度集中、可用局部修复的例外。",
+      "why_it_matters_zh": "量化是降低大模型推理成本的关键手段，但“哪些层最需要高精度”的直觉并不成立；该结果提示应把额外精度预算花在更细的全局粒度上，而非定向修复少数层。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "The Structure of Quantization Damage in LLMs: Why the Next Bit Should Be Spent Globally",
+        "url": "https://arxiv.org/abs/2609.01587v1",
+        "published_at": "2026-09-01T17:53:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "27ea0426cc93dc24"
+      ],
+      "category": "research",
+      "title_zh": "生产流量驱动的企业自托管LLM：分轴GRPO专家加SLERP合并胜过7倍大模型",
+      "summary_zh": "面对数据驻留限制，企业将200多个内部应用的流量整合到一个自托管模型上，按指令遵循、函数调用和内部任务分布三个轴分别训练GRPO专家，再用两阶段SLERP合并以避免跨域奖励干扰。在非推理模式下，该方法在内部Arena上以69.6对65.8超过约7倍参数的基线模型，指令遵循与函数调用指标也更高。",
+      "why_it_matters_zh": "GPU资源碎片化是企业自托管AI的实际痛点；这一“先分轴训练、再参数合并”的配方，为受合规约束的企业用单模型替代多模型服务提供了可复用的工程路径。",
+      "importance_score": 77.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "From Production Traffic to Post-Training: Building a Self-Hosted LLM That Covers the Corporate Request Mix",
+        "url": "https://arxiv.org/abs/2609.01572v1",
+        "published_at": "2026-09-01T17:39:26Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "19361dc2951b54c1"
+      ],
+      "category": "research",
+      "title_zh": "AllenAI发布BenchMIRT：追问LLM基准到底在衡量什么",
+      "summary_zh": "AllenAI通过Hugging Face博客介绍BenchMIRT，直接追问当前LLM基准实际测量的是什么。文章面向模型评测流程本身，讨论基准能力归因与评测有效性。",
+      "why_it_matters_zh": "LLM排行榜分数常被视作能力上限，但题目可能受污染或测量到与任务不一致的隐变量；对基准进行元分析有助于建立更可信的模型比较与选型标准。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+        "url": "https://huggingface.co/blog/allenai/benchmirt",
+        "published_at": "2026-09-01T21:39:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "6e16c9e52e799f8a"
+      ],
+      "category": "research",
+      "title_zh": "机制研究打开LLM裁判黑箱：Themis与Prometheus采用相似两阶段打分流程",
+      "summary_zh": "研究对Themis（Llama-3-8B）和Prometheus（Mistral-7B）两个开源评估模型进行因果追踪、logit-lens与注意力头消融。两类模型都呈现结构化两阶段流程：第15层之前，注意力负责局部错误比较并将结果路由到末尾位置；第15层之后，MLP级联整合信号并写出评分，决策在残差流后段清晰固化。",
+      "why_it_matters_zh": "LLM-as-a-Judge已被广泛用于自动评测和训练信号，但其内部如何形成评分仍不透明；理解打分机制有助于发现系统偏差并提高AI评测可信度。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
+        "url": "https://arxiv.org/abs/2609.01604v1",
+        "published_at": "2026-09-01T17:59:49Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "242344a37b8b77ca"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA展示基于Nemotron的自适应智能体网络安全系统",
+      "summary_zh": "NVIDIA开发者博客发文介绍如何用Nemotron构建自适应agentic网络安全系统。文章指出AI正在改变安全攻防节奏，智能体系统可以协调工作并在长时间跨度上追求复杂目标，安全团队已开始采用这类架构。",
+      "why_it_matters_zh": "安全运营正从单一告警响应转向多步、长周期自主协同，NVIDIA给出官方参考实现，有助于企业将大模型安全能力落到实际防护流程中。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Building an Adaptive Agentic Cybersecurity System with NVIDIA Nemotron",
+        "url": "https://developer.nvidia.com/blog/building-an-adaptive-agentic-cybersecurity-system-with-nvidia-nemotron/",
+        "published_at": "2026-09-01T17:00:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "6952bcc6dd68c636"
+      ],
+      "category": "models",
+      "title_zh": "IBM时间序列模型接入Confluent，实现实时流数据智能推理",
+      "summary_zh": "IBM Research在Hugging Face发布技术说明，介绍IBM时间序列模型与Confluent的集成方式，使实时流环境可直接使用时间序列模型进行推理与分析。",
+      "why_it_matters_zh": "时序预测要产生业务价值，必须与实时数据基础设施打通；官方集成降低了从流式数据到AI决策之间的工程成本和延迟。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Real-Time Intelligence with IBM Time Series Models on Confluent",
+        "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
+        "published_at": "2026-09-02T13:49:14Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "dee7a501d1e69761"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b10760修复Qwen3-TTS多模态推理问题",
+      "summary_zh": "llama.cpp发布b10760版本，针对mtmd后端修复Qwen3-tts-0.6b：0.6B checkpoint不包含projection权重时，加载器与图执行统一回退到identity；同时将code predictor的ffn_down保持在F32，避免FFN中间激活超过F16上限导致inf/NaN。",
+      "why_it_matters_zh": "本地TTS与多模态推理越来越依赖llama.cpp这类开源运行时，这类小而关键的稳定性修复直接决定边缘设备上的可用性。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10760",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10760",
+        "published_at": "2026-09-02T11:14:51Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 184,
+    "normalized": 184,
+    "filtered": 147,
+    "ai_candidates": 30,
+    "prompt_chars": 23585,
+    "estimated_input_tokens": 5896,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
