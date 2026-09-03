@@ -1,0 +1,232 @@
+{
+  "date": "2026-09-03",
+  "generated_at": "2026-09-03T14:55:10.356188Z",
+  "run_id": "2026-09-03-5f5a7ba5",
+  "daily_summary_zh": "今日 AI 亮点集中在推理与编程能力突破、低比特预训练、GPU 求解与推理加速，以及智能体安全和对齐研究。IOI 2026 上编程竞赛模型首次超越人类最高分，FP4 预训练与 ODE 梯度求解库带来工程效率提升；llama.cpp、NVIDIA 与 Hugging Face 也发布了多项开发者侧更新。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "ab9746f950b72933"
+      ],
+      "category": "models",
+      "title_zh": "后训练编程竞赛模型在 IOI 2026 首次超越人类最高分",
+      "summary_zh": "论文提出结合 22,000 道精选题、合成推理轨迹、SFT 与 RL 的端到端编程竞赛模型，并引入 GenCorrect 测试时计算策略。Nano-CC 经后训练后 IOI 2025 得分从 130 提升至 291，配合 GenCorrect 达到 468，超过金牌线 438.3；专为 IOI 2026 构建的 Ultra-CC 系统在人类同等时间、联网与提交限制下取得 535.4/600，超过金牌线 361.12 与人类最高分 498.27。",
+      "why_it_matters_zh": "这是论文所称首个在符合真实竞赛约束下总分超过最高分人类选手的 AI 系统，标志着竞争性编程推理与代码生成能力进入新阶段。",
+      "importance_score": 93.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+        "url": "https://arxiv.org/abs/2609.02849v1",
+        "published_at": "2026-09-02T17:33:37Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "64d57af4b67e4101"
+      ],
+      "category": "infrastructure",
+      "title_zh": "UE5M3 FP4 块缩放实现更稳定的语言模型预训练",
+      "summary_zh": "论文将 E2M1 FP4 载荷与无符号 E5M3 块缩放配对，采用周期性张量缩放、反向梯度选择性随机舍入，并省略随机 Hadamard 变换与 BF16 末层豁免。用近 190B tokens 预训练 Nemotron-H 8B，最终训练损失与验证损失均优于 Transformer Engine 的 FP4 配方；联合移除 RHT 与 BF16 末层豁免的原生执行消融使模型主体 token 吞吐提升 21.2%。",
+      "why_it_matters_zh": "低比特预训练是降低大模型训练与推理成本的关键路径，该工作展示了一条比现有 FP4 配方更简单且更稳定的端到端方案。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "UE5M3 FP4 Block Scaling for Stable Language Model Pretraining",
+        "url": "https://arxiv.org/abs/2609.02846v1",
+        "published_at": "2026-09-02T17:32:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "f6a640dcdbd22204"
+      ],
+      "category": "open-source",
+      "title_zh": "GRADSOLVE：面向 GPU 的 ODE 集成精确梯度开源 JAX 库",
+      "summary_zh": "GRADSOLVE 是一个开源 JAX 库，用于在 NVIDIA GPU 上求解低维 ODE 集成并进行反向模式求导。它记录自适应求解器接受的步进并微分这些步进的固定步长重放，返回与 Diffrax 默认一致的精确离散伴随梯度，且比自适应循环更廉价；支持在同一记录网格上多次求导，保留 Diffrax 回退，并支持显式与 Rosenbrock 积分器。",
+      "why_it_matters_zh": "ODE 参数反演广泛存在于科学与工程中，该库填补了 GPU 上快速前向求解与快速反向求导无法兼得的工具空白。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "GRADSOLVE: fast exact gradients for ODE ensembles on GPUs",
+        "url": "https://arxiv.org/abs/2609.02876v1",
+        "published_at": "2026-09-02T17:56:10Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "be2acd017f70ad07"
+      ],
+      "category": "research",
+      "title_zh": "EarlyEval：用早期结果预测降低智能体评测成本",
+      "summary_zh": "EarlyEval 训练一对 LightGBM 成功/失败分类器，利用行为、文本与参考解特征在置信度阈值达标时提前终止智能体运行。在 SWE-bench Verified、TerminalBench 和 Toolathlon 上，可消除 13%-26% 的智能体步骤，最多节省 44.1% 输入 tokens 和 29.4% 输出 tokens，预测准确率为 89%-97%。",
+      "why_it_matters_zh": "前沿模型在 agentic benchmark 上的单次评测成本可高达数百至上千美元，EarlyEval 在不缩减评测任务的前提下按任务内部提前止损，为迭代开发提供更便宜的评测路径。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction",
+        "url": "https://arxiv.org/abs/2609.02783v1",
+        "published_at": "2026-09-02T16:15:18Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "824432cbe4088d89"
+      ],
+      "category": "models",
+      "title_zh": "NeoMME：高效原生多模态多语言编码器",
+      "summary_zh": "Hugging Face 官方博客发布 NeoMME，定位为高效 Multimodal-native、Multilingual Encoder，强调原生多模态与多语言表征能力。",
+      "why_it_matters_zh": "多模态多语言编码器是检索、分类与表示学习等任务的基础组件，官方发布的开放选项有助于多语言多模态生态的工程落地。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder",
+        "url": "https://huggingface.co/blog/Hcompany/neomme",
+        "published_at": "2026-09-03T13:13:48Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "86d13894d18f4f84"
+      ],
+      "category": "models",
+      "title_zh": "用 100 步 GRPO 微调 350M 模型以生成更好结构化输出",
+      "summary_zh": "Hugging Face 官方博客展示了使用 TRL 与 GRPO，仅用约 100 步微调一个 350M 参数模型，使其输出更优质的结构化结果，提供低成本获得良好结构化生成能力的训练示例。",
+      "why_it_matters_zh": "结构化输出是工具调用与智能体工作流的关键能力，该示例降低了小团队用 GRPO 做后训练的实验成本。",
+      "importance_score": 69.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps",
+        "url": "https://huggingface.co/blog/grpo-with-trl-ifstruct",
+        "published_at": "2026-09-03T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "ba0b1091b5a12f75"
+      ],
+      "category": "inference",
+      "title_zh": "llama.cpp 发布 b10786",
+      "summary_zh": "llama.cpp 发布 b10786，包含 mtmd 中 const 向 preproc class 传播等改动，并同步提供 macOS Apple Silicon、Intel、iOS、Linux 等平台的 CPU/Vulkan 等二进制版本。",
+      "why_it_matters_zh": "llama.cpp 是本地与边缘 LLM 推理最常用的开源引擎之一，其持续高频发布直接影响大量自托管与端侧部署方案。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10786",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10786",
+        "published_at": "2026-09-03T12:44:27Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "52c9ddc50d0bd2d6"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 谈如何用投机解码协同设计更快 LLM 推理",
+      "summary_zh": "NVIDIA 官方博客“AI model co-design”系列第三篇探讨使用投机解码来加速 LLM 推理，同时保持准确率，并介绍模型与推理栈协同设计的思路。",
+      "why_it_matters_zh": "投机解码是降低 LLM 推理延迟与算力成本的重要工程手段，NVIDIA 作为主流加速器厂商提供官方实践参考，有较强的部署指导价值。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Co-Designing AI Models Using Speculative Decoding for Faster LLM Inference",
+        "url": "https://developer.nvidia.com/blog/co-designing-ai-models-using-speculative-decoding-for-faster-llm-inference/",
+        "published_at": "2026-09-02T16:04:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "92dbd28673ba255c"
+      ],
+      "category": "developer-tools",
+      "title_zh": "为编程智能体提供可自主掌控的记忆",
+      "summary_zh": "Hugging Face 官方博客发布主题为“Give Your Coding Agents a Memory You Own”的文章，介绍为编程智能体提供可由用户拥有和掌控的记忆能力。",
+      "why_it_matters_zh": "长期记忆是编程智能体提升协作效率的关键，由开发者 Own 的记忆方案更利于隐私、可控性与可审计性。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Give Your Coding Agents a Memory You Own",
+        "url": "https://huggingface.co/blog/funes",
+        "published_at": "2026-09-03T00:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 187,
+    "normalized": 187,
+    "filtered": 147,
+    "ai_candidates": 30,
+    "prompt_chars": 27816,
+    "estimated_input_tokens": 6954,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
