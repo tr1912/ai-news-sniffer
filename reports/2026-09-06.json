@@ -1,0 +1,152 @@
+{
+  "date": "2026-09-06",
+  "generated_at": "2026-09-06T14:01:56.201051Z",
+  "run_id": "2026-09-06-83af2dd4",
+  "daily_summary_zh": "今日可信来源动态集中在开源工具与学术预印本：llama.cpp 两天内发布 b10796 与 b10825 两个维护版本，前者修复 MoE 分层专家数校验问题，后者修正 grammar 最大重复阈值；arXiv 还上线了关于连续时间循环网络前瞻编码、机器人视觉-语言抓取、以及一般博弈低遗憾算法的三篇研究。商业传闻和社区单一信源话题因缺少官方来源或双独立媒体互证，本次未入选。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "0043f20863d0e4ff"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10796：为 MoE 模型加载新增 n_expert_used_max 校验",
+      "summary_zh": "llama.cpp 发布 b10796 版本，新增 n_expert_used_max 函数，用于在加载每层可配置不同专家数的 MoE 模型（如 NVIDIA Nemotron-3-Puzzle 类模型）时，修正专家层校验以及此前可能触发的 GGML_ASSERT 失败问题。",
+      "why_it_matters_zh": "MoE 模型正在向分层、动态专家数量演进，llama.cpp 及时补齐这类模型的加载校验，有助于本地推理社区顺畅运行新一代稀疏模型。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10796",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10796",
+        "published_at": "2026-09-04T05:31:09Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "a3215f4cd972f2c9"
+      ],
+      "category": "research",
+      "title_zh": "研究：Prospective Coding 可改善深层连续时间循环网络学习",
+      "summary_zh": "该论文提出 Recursive Quadrature Filters（RQF）作为对角状态空间模型的特例，并通过无参数两抽头前瞻更新为每一层提供自底向上的前瞻输入，缓解深层连续时间 RNN 的深度依赖梯度衰减；在 RQF、S5 与 ORGaNICs 上验证，使用完整 BPTT 与空间-only BPTT 均达到或优于对照模型。",
+      "why_it_matters_zh": "为脑启发连续时间网络和状态空间模型提供了一种轻量训练干预，可能在长序列建模与节能循环架构中带来更稳定的深层学习。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Prospective Coding Improves Learning in Deep Continuous-Time Recurrent Networks",
+        "url": "https://arxiv.org/abs/2609.04134v1",
+        "published_at": "2026-09-03T17:30:11Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "1e7dc56f725b9dcd"
+      ],
+      "category": "research",
+      "title_zh": "研究：AdaRoboVLG 用组合式先验实现自适应视觉-语言抓取",
+      "summary_zh": "论文提出任务自适应视觉-语言-抓取框架 AdaRoboVLG：基础策略通过运动学映射与力闭合稳定性估计生成和评估物理可行的抓取候选；空间、认知和时间等组合先验被集成进抓取过程，无需重新训练底层策略即可适配任务，并在仿真与真实机器人实验中验证了跨手部泛化与联合先验功能抓取。",
+      "why_it_matters_zh": "相比将基础模型与端到端抓取策略紧耦合的现有方法，该框架更强调模块化与可迁移性，为真实世界中的泛化机器人操作提供了实用路线。",
+      "importance_score": 54.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Adaptive Vision-Language Grasping via Composable Foundation Priors and Generalizable Grasp Synthesis",
+        "url": "https://arxiv.org/abs/2609.04096v1",
+        "published_at": "2026-09-03T17:03:11Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "5d808b9a187628fe"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10825：修复 grammar 最大重复阈值问题",
+      "summary_zh": "llama.cpp 发布 b10825，修复 grammar 中最大重复次数阈值相关的问题（#28469），并同步更新各平台预编译产物。",
+      "why_it_matters_zh": "constrained decoding 与函数调用等场景依赖 grammar 的稳定执行，该补丁能降低结构化生成时的边界错误。",
+      "importance_score": 52.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10825",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10825",
+        "published_at": "2026-09-06T13:22:26Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "184f6bc39517189a"
+      ],
+      "category": "research",
+      "title_zh": "研究：HOOD 算法在一般博弈中实现常数遗憾",
+      "summary_zh": "论文提出高阶乐观折扣算法 HOOD，将带折扣的（N+1）阶预测器与熵正则的乐观 FTRL 结合，并作用于提升后的策略空间；当 N 人普通形式博弈中每位玩家最多 K 个动作时，可对每个玩家保证 O(N^3 log^2 K) 的个体遗憾，且该界在时间范围上一致成立。",
+      "why_it_matters_zh": "这是多智能体学习理论在一般博弈收敛性上的重要进展，为无耦合学习算法获得常数遗憾提供了新的通用框架，并可能与多智能体 RL 和博弈求解实践结合。",
+      "importance_score": 51.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Constant regret in general games via higher-order optimism",
+        "url": "https://arxiv.org/abs/2609.04113v1",
+        "published_at": "2026-09-03T17:16:13Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 151,
+    "normalized": 151,
+    "filtered": 82,
+    "ai_candidates": 30,
+    "prompt_chars": 9168,
+    "estimated_input_tokens": 2292,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

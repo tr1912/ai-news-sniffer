@@ -1,0 +1,850 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 151,
+  "normalized_count": 151,
+  "filtered_count": 82,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10825",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10825",
+        "published_at": "2026-09-06T13:22:26Z",
+        "fetched_at": "2026-09-06T14:02:17.476643Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\ngrammar : fix max repetition threshold (#28469)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/45568343>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10825/llama-b10825-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10825/llama-b10825-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10825/llama-b10825-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10825/llama-b10825-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10825/llama-b10825-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10825/llama-b10825-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10825/llama-b10825-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ub",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 383591904
+        },
+        "id": "5d808b9a187628fe",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10825",
+        "normalized_title": "llama cpp releases b10825",
+        "fingerprint": "5d808b9a187628fe77fc181610d9525af5da44825978684a0096ab1d2d90b3d1",
+        "rule_score": 56.73738888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
+        "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
+        "published_at": "2026-09-05T18:05:27Z",
+        "fetched_at": "2026-09-06T14:02:21.822791Z",
+        "language": "unknown",
+        "excerpt": "OpenAI acknowledged its role in a recently reported incident where AI agents took over a German wiki forum.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0cd8774bd4f557f8",
+        "canonical_url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure",
+        "normalized_title": "openai confirms wiki incident says it s working on a framework for more disclosure",
+        "fingerprint": "0cd8774bd4f557f8613acf108cc9a6755d96cad0d4241253db86403c1c638466",
+        "rule_score": 54.809083333333334
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "B站首届AI创造公开赛收官，超八成参赛者为一人团队",
+        "url": "https://www.qbitai.com/2026/09/484890.html",
+        "published_at": "2026-09-06T04:40:15Z",
+        "fetched_at": "2026-09-06T14:02:21.719883Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "177a2086bdfc955b",
+        "canonical_url": "https://www.qbitai.com/2026/09/484890.html",
+        "normalized_title": "b站首届ai创造公开赛收官 超八成参赛者为一人团队",
+        "fingerprint": "177a2086bdfc955bf5d3b53942791abee48e477ae337a21de450eb73c67481e7",
+        "rule_score": 52.86708333333333
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10796",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10796",
+        "published_at": "2026-09-04T05:31:09Z",
+        "fetched_at": "2026-09-06T14:02:17.476789Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nsrc : add n_expert_used_max function (#28323)\n\n* src : add n_expert_used_max function\n\nWith Commit c61b98b875eaa5e654a3f5c73b34c310d2c6ab4c (\"model: add\nNVIDIA Nemotron-3-Puzzle-75B-A9B (NemotronHPuzzle) support (#25444)\") it\nis now possible for each layer to have a specific number of experts but\nthere are a few checks that need to be updated to handle this upon model\nloading. For example:\n```console\nllama_model_load: error loading model: model has expert layers but no expert layers are used\n```\nAnd later:\n```console\n/llama.cpp/src/llama-model-loader.cpp:955: GGML_ASSERT(n_ids_used > 0) failed\n```\n\nThis commit adds the n_expert_used_max function so that these checks\ncan use it.\n\nRefs: https://github.com/ggml-org/llama.cpp/pull/25444#issuecomment-5524976031\n\n* src : use hparams.n_expert_used_max in llama_model_base::load_hparams\n\n* src : use 0 as initial value for n_expert_used_max\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/45169265>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10796/llama-b10796-bin-macos-arm64.tar.gz)\n- macOS App",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 382500120
+        },
+        "id": "0043f20863d0e4ff",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10796",
+        "normalized_title": "llama cpp releases b10796",
+        "fingerprint": "0043f20863d0e4ffe19f5c7fb763de4fa96a104db4740a3daa7c39513aa3996f",
+        "rule_score": 52.0
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "押中SpaceX的硅谷老将，把票投给了一家中国世界模型公司",
+        "url": "https://www.qbitai.com/2026/09/484683.html",
+        "published_at": "2026-09-05T14:46:15Z",
+        "fetched_at": "2026-09-06T14:02:21.719915Z",
+        "language": "unknown",
+        "excerpt": "当AI开始“预演”一场暴雨",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "59ff5adaaa40758f",
+        "canonical_url": "https://www.qbitai.com/2026/09/484683.html",
+        "normalized_title": "押中spacex的硅谷老将 把票投给了一家中国世界模型公司",
+        "fingerprint": "59ff5adaaa40758ffd544a2f4be707ead07b1648ed5061f54241539f092893c7",
+        "rule_score": 51.47708333333333
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
+        "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+        "published_at": "2026-09-05T22:49:55Z",
+        "fetched_at": "2026-09-06T14:02:21.822733Z",
+        "language": "unknown",
+        "excerpt": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2271a1232b9ab097",
+        "canonical_url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft",
+        "normalized_title": "seattle times and newsday are the latest publications to sue openai and microsoft",
+        "fingerprint": "2271a1232b9ab0974503b354d70f20aca7c621d80f72245a2c0b5346403fc521",
+        "rule_score": 51.28319444444445
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "具身ICL来了创业玩家！上下文成Scaling新赛道",
+        "url": "https://www.qbitai.com/2026/09/484897.html",
+        "published_at": "2026-09-06T11:44:21Z",
+        "fetched_at": "2026-09-06T14:02:21.719821Z",
+        "language": "unknown",
+        "excerpt": "让机器人学会利用更长的多模态Context",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "梦晨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "16dcc8ddebcbe361",
+        "canonical_url": "https://www.qbitai.com/2026/09/484897.html",
+        "normalized_title": "具身icl来了创业玩家 上下文成scaling新赛道",
+        "fingerprint": "16dcc8ddebcbe3611fc3e58961fb791205533dc9fe77b08ddc249ed7940d6c58",
+        "rule_score": 49.57391666666667
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "GPT-6带火循环Transformer，阿里早已布局",
+        "url": "https://www.qbitai.com/2026/09/484726.html",
+        "published_at": "2026-09-05T15:07:08Z",
+        "fetched_at": "2026-09-06T14:02:21.719901Z",
+        "language": "unknown",
+        "excerpt": "手握两篇顶会论文",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "一水",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e04c23653e759c7d",
+        "canonical_url": "https://www.qbitai.com/2026/09/484726.html",
+        "normalized_title": "gpt 6带火循环transformer 阿里早已布局",
+        "fingerprint": "e04c23653e759c7d158e167afcea35fe218f87a200a7dce0eb94606fa3a7bbe7",
+        "rule_score": 47.51188888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Hikers rescued after using Google Gemini for planning",
+        "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+        "published_at": "2026-09-05T19:35:24Z",
+        "fetched_at": "2026-09-06T14:02:21.822778Z",
+        "language": "unknown",
+        "excerpt": "The sheriff’s office said the hikers “were advised by Gemini to bring far less food and water than their group required.\"",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "69fa0be89855a505",
+        "canonical_url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning",
+        "normalized_title": "hikers rescued after using google gemini for planning",
+        "fingerprint": "69fa0be89855a505e78d74950d97054134f253ba69b62e68d50db13365bc9f7d",
+        "rule_score": 46.959
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Prospective Coding Improves Learning in Deep Continuous-Time Recurrent Networks",
+        "url": "https://arxiv.org/abs/2609.04134v1",
+        "published_at": "2026-09-03T17:30:11Z",
+        "fetched_at": "2026-09-06T14:02:15.647588Z",
+        "language": "unknown",
+        "excerpt": "Temporal integration gives continuous-time recurrent networks memory, but in deep stacks it also delays bottom-up signals and attenuates top-down errors. We develop Recursive Quadrature Filters (RQFs), biologically motivated complex-valued temporal filters that are a special case of diagonal state-space models (SSMs), and ask whether this failure mode can be addressed by making each layer's bottom-up input prospective. Starting from an energy model, we derive the RQF dynamics and show that each RQF is a band-pass filter whose learnable parameters control its tuning frequency and bandwidth. We then make each layer's bottom-up input prospective using a parameter-free two-tap update that leaves the recurrent transition and parallel scan unchanged. We extend this correction to general diagonal SSMs and show that it mitigates depth-dependent gradient attenuation when temporal gradients are truncated, i.e., spatial-only backpropagation. We evaluate the intervention in RQFs, S5, and ORGaNICs (a nonlinear gated RNN) trained using full backpropagation through time (BPTT) and spatial-only backpropagation. Under full BPTT, prospective variants match or outperform their non-prospective control",
+        "categories": [
+          "research"
+        ],
+        "author": "David J. Heeger",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a3215f4cd972f2c9",
+        "canonical_url": "https://arxiv.org/abs/2609.04134v1",
+        "normalized_title": "prospective coding improves learning in deep continuous time recurrent networks",
+        "fingerprint": "a3215f4cd972f2c98d88dcd763ef108cb2c8e59dbc313ab5e07f543986ad68d8",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Adaptive Vision-Language Grasping via Composable Foundation Priors and Generalizable Grasp Synthesis",
+        "url": "https://arxiv.org/abs/2609.04096v1",
+        "published_at": "2026-09-03T17:03:11Z",
+        "fetched_at": "2026-09-06T14:02:15.647654Z",
+        "language": "unknown",
+        "excerpt": "This paper proposes AdaRoboVLG, a task-adaptive Vision-Language-Grasp (VLG) framework that supports generalizable grasp synthesis across different robotic hands. Unlike existing VLG methods that tightly couple foundation models with end-to-end grasp policies, AdaRoboVLG learns an efficient generalizable base policy that generates and evaluates physically feasible grasp candidates through explicit kinematic mapping and force-closure-based stability estimation, while offloading task-dependent understanding to specialized foundation-model modules. These modules provide composable priors that are integrated into the grasp synthesis process, enabling contextually adaptive grasp synthesis without retraining the underlying grasp policy. Through extensive simulation and real-world experiments, we demonstrate that (i) the base policy exhibits efficient learning and strong cross-hand generalization, (ii) the framework effectively incorporates spatial, cognitive, and temporal priors to address three representative grasping challenges without compromising grasp synthesis performance compared to state-of-the-art methods, and (iii) these priors can operate jointly to enable functional grasping i",
+        "categories": [
+          "research"
+        ],
+        "author": "Xinggang Wang",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1e7dc56f725b9dcd",
+        "canonical_url": "https://arxiv.org/abs/2609.04096v1",
+        "normalized_title": "adaptive vision language grasping via composable foundation priors and generalizable grasp synthesis",
+        "fingerprint": "1e7dc56f725b9dcd346fb74f8f58ad8909ab6cda9ab0636f40c5bfd7d3de4dfe",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OKF Agent Memory – Git-native persistent memory for AI coding agents",
+        "url": "https://github.com/okf-memory/okf-agent-memory",
+        "published_at": "2026-09-05T22:15:52Z",
+        "fetched_at": "2026-09-06T14:02:24.468732Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "okf_memory",
+        "upstream_urls": [
+          "https://github.com/okf-memory/okf-agent-memory"
+        ],
+        "raw_metadata": {
+          "hn_id": 49581240,
+          "score": 71
+        },
+        "id": "8840a939041fa499",
+        "canonical_url": "https://github.com/okf-memory/okf-agent-memory",
+        "normalized_title": "okf agent memory git native persistent memory for ai coding agents",
+        "fingerprint": "8840a939041fa499bbc2d99f6d5ac7f0f3dc007a41e31e6efac457918d1826b5",
+        "rule_score": 44.226444444444446
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Isar Aerospace launch into orbit [video]",
+        "url": "https://www.youtube.com/watch?v=Ss1DUqLjecc",
+        "published_at": "2026-09-05T20:25:30Z",
+        "fetched_at": "2026-09-06T14:02:25.491252Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "stefan_",
+        "upstream_urls": [
+          "https://www.youtube.com/watch?v=Ss1DUqLjecc"
+        ],
+        "raw_metadata": {
+          "hn_id": 49580325,
+          "score": 104
+        },
+        "id": "6e71eb48a4d800f6",
+        "canonical_url": "https://www.youtube.com/watch?v=Ss1DUqLjecc",
+        "normalized_title": "isar aerospace launch into orbit video",
+        "fingerprint": "6e71eb48a4d800f66cd320940d138334a5efdd6e57cca3d88acf3d1351d3e64f",
+        "rule_score": 44.0425
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Crusoe reportedly raises $3B at a  $30B valuation",
+        "url": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/",
+        "published_at": "2026-09-04T00:48:42Z",
+        "fetched_at": "2026-09-06T14:02:21.822913Z",
+        "language": "unknown",
+        "excerpt": "The round came together after the data center developer reportedly secured a $13 billion contract with Jane Street.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Marina Temkin",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "db29c0db77aae1fe",
+        "canonical_url": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation",
+        "normalized_title": "crusoe reportedly raises 3b at a 30b valuation",
+        "fingerprint": "db29c0db77aae1fe7c04fde3736b8d1d6bc2d4e72dd811609b0c985faf65c932",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Abliteration.ai is making a business out of removing AI guardrails",
+        "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+        "published_at": "2026-09-03T18:37:57Z",
+        "fetched_at": "2026-09-06T14:02:21.822934Z",
+        "language": "unknown",
+        "excerpt": "Abliteration.AI is making powerful AI models without guardrails easier to access, arguing that giving defenders the same tools as bad actors could ultimately improve cybersecurity.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d776215bd346b9e4",
+        "canonical_url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails",
+        "normalized_title": "abliteration ai is making a business out of removing ai guardrails",
+        "fingerprint": "d776215bd346b9e4c5f258deceac9fe368ecc9f6225b35516ad04467ee87948b",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Ollie is betting its focus on privacy can help it win the AI assistant race",
+        "url": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/",
+        "published_at": "2026-09-03T16:09:01Z",
+        "fetched_at": "2026-09-06T14:02:21.822964Z",
+        "language": "unknown",
+        "excerpt": "The family-focused AI assistant wants access to the details of your everyday life, but says it won’t use that data to train AI models or share it with others.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d4945cb3b4ddcffb",
+        "canonical_url": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race",
+        "normalized_title": "ollie is betting its focus on privacy can help it win the ai assistant race",
+        "fingerprint": "d4945cb3b4ddcffb0913841d64b40554805b7040a3605728f92c01585faa4247",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Don't Use a gmail.com Address",
+        "url": "https://crookedtimber.org/2026/09/03/dont-use-a-gmail-com-address/",
+        "published_at": "2026-09-06T11:50:24Z",
+        "fetched_at": "2026-09-06T14:02:23.825650Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jruohonen",
+        "upstream_urls": [
+          "https://crookedtimber.org/2026/09/03/dont-use-a-gmail-com-address/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49585594,
+          "score": 37
+        },
+        "id": "89ede6397530e1e4",
+        "canonical_url": "https://crookedtimber.org/2026/09/03/dont-use-a-gmail-com-address",
+        "normalized_title": "don t use a gmail com address",
+        "fingerprint": "89ede6397530e1e4d9b50adbe751409f97eb86a05674ca30978fe4fd077638e0",
+        "rule_score": 41.584
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Constant regret in general games via higher-order optimism",
+        "url": "https://arxiv.org/abs/2609.04113v1",
+        "published_at": "2026-09-03T17:16:13Z",
+        "fetched_at": "2026-09-06T14:02:15.647616Z",
+        "language": "unknown",
+        "excerpt": "We introduce an uncoupled learning algorithm which, when employed by all players of an arbitrary $N$-player normal form game with up to $K$ actions per player, guarantees $O(N^3\\log^2 K)$ individual regret, uniformly over the horizon of play. The proposed algorithm - which we call higher-order optimism with discounting (HOOD) is a variant of optimistic follow-the-regularized-leader (OptFTRL) that combines a discounted $(N+1)$-th order predictor with entropic regularization over a suitable \"lifting\" of the game's strategy space. This combination of ingredients is purposefully designed to dampen large oscillations of the induced sequence of play in a controlled manner, removing in this way a key stumbling block of previous attempts to achieve constant regret in general games. Our approach bears several striking similarities to the concurrent - and completely independent - work of Liu, Farina, and Ozdaglar (arXiv:2608.31166), who very recently derived an $O(N^{21}\\log^{4} K)$ regret bound through the use of higher-order optimism and an exponential moving average estimator.",
+        "categories": [
+          "research"
+        ],
+        "author": "Panayotis Mertikopoulos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "184f6bc39517189a",
+        "canonical_url": "https://arxiv.org/abs/2609.04113v1",
+        "normalized_title": "constant regret in general games via higher order optimism",
+        "fingerprint": "184f6bc39517189a324cf61364bbb8a7140158a6febb49106f060695f076c4f5",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI, Tools and Transformation",
+        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
+        "published_at": "2026-09-06T02:12:46Z",
+        "fetched_at": "2026-09-06T14:02:22.683095Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "firexcy",
+        "upstream_urls": [
+          "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation"
+        ],
+        "raw_metadata": {
+          "hn_id": 49582656,
+          "score": 99
+        },
+        "id": "2b33dfafb536bdbf",
+        "canonical_url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
+        "normalized_title": "ai tools and transformation",
+        "fingerprint": "2b33dfafb536bdbf5b50c7e7b1c308fae1ef5a72e51db70de55ae298cbbcbc37",
+        "rule_score": 40.62127777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Chrome again exempts Google from user site data settings",
+        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
+        "published_at": "2026-09-05T23:39:47Z",
+        "fetched_at": "2026-09-06T14:02:22.945318Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ExMachina73",
+        "upstream_urls": [
+          "https://lapcatsoftware.com/articles/2026/9/1.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49581870,
+          "score": 481
+        },
+        "id": "eff3d732f101e9e7",
+        "canonical_url": "https://lapcatsoftware.com/articles/2026/9/1.html",
+        "normalized_title": "chrome again exempts google from user site data settings",
+        "fingerprint": "eff3d732f101e9e70327f66a93661a700f68fcda7ccf94e927a6b8847f8246f1",
+        "rule_score": 40.366305555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
+        "published_at": "2026-09-05T20:02:35Z",
+        "fetched_at": "2026-09-06T14:02:23.116329Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "canjobear",
+        "upstream_urls": [
+          "https://arxiv.org/abs/2609.03344"
+        ],
+        "raw_metadata": {
+          "hn_id": 49580164,
+          "score": 319
+        },
+        "id": "5071faf7e92d0d4c",
+        "canonical_url": "https://arxiv.org/abs/2609.03344",
+        "normalized_title": "llms as a cognitive virus",
+        "fingerprint": "5071faf7e92d0d4c3c1094ea978a1ec861e9ccab29739debe5bb8c7510b7903a",
+        "rule_score": 40.004305555555554
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Less than 24 hours to apply for your TechCrunch Disrupt 2026 Side Event",
+        "url": "https://techcrunch.com/2026/09/04/less-than-24-hours-to-apply-for-your-techcrunch-disrupt-2026-side-event/",
+        "published_at": "2026-09-04T14:00:00Z",
+        "fetched_at": "2026-09-06T14:02:21.822891Z",
+        "language": "unknown",
+        "excerpt": "Less than 24 hours left to apply to host a Side Event during TechCrunch Disrupt 2026 and make your mark in the Silicon Valley scene. Apply before the application closes tonight at midnight PT.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "715af7f8e207a51a",
+        "canonical_url": "https://techcrunch.com/2026/09/04/less-than-24-hours-to-apply-for-your-techcrunch-disrupt-2026-side-event",
+        "normalized_title": "less than 24 hours to apply for your techcrunch disrupt 2026 side event",
+        "fingerprint": "715af7f8e207a51a79de4103cdccfe7f4520c0c480927f298beb30e3629b5986",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
+        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+        "published_at": "2026-09-05T13:31:05Z",
+        "fetched_at": "2026-09-06T14:02:23.287461Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "torutofu",
+        "upstream_urls": [
+          "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49576343,
+          "score": 189
+        },
+        "id": "73483143fd869e03",
+        "canonical_url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory",
+        "normalized_title": "visualizing rust s vtables how dyn trait works in memory",
+        "fingerprint": "73483143fd869e03c9d751a33d17de183b80c96c468f7886d5f79020be0488f0",
+        "rule_score": 39.35180555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI handles incidents, engineers lose touch with their systems",
+        "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
+        "published_at": "2026-09-05T07:52:50Z",
+        "fetched_at": "2026-09-06T14:02:24.641179Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sylvainkalache",
+        "upstream_urls": [
+          "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems"
+        ],
+        "raw_metadata": {
+          "hn_id": 49574167,
+          "score": 389
+        },
+        "id": "e6cc7484f10111bc",
+        "canonical_url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
+        "normalized_title": "ai handles incidents engineers lose touch with their systems",
+        "fingerprint": "e6cc7484f10111bc5ab1576275ae011465db4063af4b57a0750b8b68f82da2ef",
+        "rule_score": 38.78805555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic & friends caught paying religious NGO's 3.3M for propaganda",
+        "url": "https://www.effort.news/revelation",
+        "published_at": "2026-09-05T06:31:31Z",
+        "fetched_at": "2026-09-06T14:02:25.621055Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "nullbio",
+        "upstream_urls": [
+          "https://www.effort.news/revelation"
+        ],
+        "raw_metadata": {
+          "hn_id": 49573677,
+          "score": 51
+        },
+        "id": "6a47122bc8cf5c87",
+        "canonical_url": "https://www.effort.news/revelation",
+        "normalized_title": "anthropic friends caught paying religious ngo s 3 3m for propaganda",
+        "fingerprint": "6a47122bc8cf5c87234c897ea4dc3cf6c901dc8895f9f6a428a5b257928d0cc3",
+        "rule_score": 38.65252777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The many mysteries and lessons of the Bayeux tapestry",
+        "url": "https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry",
+        "published_at": "2026-09-06T13:38:07Z",
+        "fetched_at": "2026-09-06T14:02:22.166947Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "andsoitis",
+        "upstream_urls": [
+          "https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry"
+        ],
+        "raw_metadata": {
+          "hn_id": 49586435,
+          "score": 5
+        },
+        "id": "43c3f626298172f9",
+        "canonical_url": "https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry",
+        "normalized_title": "the many mysteries and lessons of the bayeux tapestry",
+        "fingerprint": "43c3f626298172f99d674644e3756e933748a03a6250fa01999a16e2b8e6f906",
+        "rule_score": 37.76352777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Schemy Lisp En DOS",
+        "url": "https://sled.neocities.org/",
+        "published_at": "2026-09-06T12:58:54Z",
+        "fetched_at": "2026-09-06T14:02:23.244346Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "AlexeyBrin",
+        "upstream_urls": [
+          "https://sled.neocities.org/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49586139,
+          "score": 7
+        },
+        "id": "aa83fce1987bfeb1",
+        "canonical_url": "https://sled.neocities.org/",
+        "normalized_title": "schemy lisp en dos",
+        "fingerprint": "aa83fce1987bfeb15a741a12d3702a399efc2ea32a74249c2100be6829f71bf8",
+        "rule_score": 37.698166666666665
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "2026 Hugo Awards",
+        "url": "https://www.thehugoawards.org/",
+        "published_at": "2026-09-06T12:41:59Z",
+        "fetched_at": "2026-09-06T14:02:22.987666Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "signa11",
+        "upstream_urls": [
+          "https://www.thehugoawards.org/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49586005,
+          "score": 8
+        },
+        "id": "4bb23460025bbece",
+        "canonical_url": "https://www.thehugoawards.org/",
+        "normalized_title": "2026 hugo awards",
+        "fingerprint": "4bb23460025bbece0588abb5754553366ef575aa416924225f9dedab0e88cbaa",
+        "rule_score": 37.66997222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The pencil case model of creativity",
+        "url": "https://dub.uu.nl/en/column/pencil-case-model-creativity",
+        "published_at": "2026-09-06T12:05:34Z",
+        "fetched_at": "2026-09-06T14:02:22.466955Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jruohonen",
+        "upstream_urls": [
+          "https://dub.uu.nl/en/column/pencil-case-model-creativity"
+        ],
+        "raw_metadata": {
+          "hn_id": 49585703,
+          "score": 20
+        },
+        "id": "c5b35749b2c232b4",
+        "canonical_url": "https://dub.uu.nl/en/column/pencil-case-model-creativity",
+        "normalized_title": "the pencil case model of creativity",
+        "fingerprint": "c5b35749b2c232b4207dd7f41c898ae4210be6f1103ad140c8d10cc8801a26c4",
+        "rule_score": 37.60927777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Intellectual Fly Is Open",
+        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "published_at": "2026-09-06T11:56:43Z",
+        "fetched_at": "2026-09-06T14:02:22.023305Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "cyb0rg0",
+        "upstream_urls": [
+          "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49585644,
+          "score": 146
+        },
+        "id": "e5912101f81058d0",
+        "canonical_url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open",
+        "normalized_title": "intellectual fly is open",
+        "fingerprint": "e5912101f81058d089b1ea94143a90509d99914d88e96ef7b1e50bca24ca722c",
+        "rule_score": 37.59452777777778
+      }
+    ],
+    "prompt_chars": 9168,
+    "estimated_input_tokens": 2292
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
