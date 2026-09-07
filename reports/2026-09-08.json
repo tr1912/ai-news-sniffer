@@ -1,0 +1,74 @@
+{
+  "date": "2026-09-08",
+  "generated_at": "2026-09-07T16:19:34.106887Z",
+  "run_id": "2026-09-08-03affe17",
+  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 b10840：CUDA 量化推理与 DGX Spark 优化。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "ae3d500ca05c285d"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10840：CUDA 量化推理与 DGX Spark 优化",
+      "summary_zh": "llama.cpp 官方发布 b10840，引入 CUDA 上 Q4_K/Q5_K 的 branchless 解包以加速 mmvq，避免 batch size 大于 1 时重复执行 scale unpack，并针对 DGX Spark 增加 mmvq L2 prefetch 等优化。",
+      "why_it_matters_zh": "这是面向本地与边缘推理的后端性能优化，可提升 CUDA 量化模型在批量场景下的运行效率，也再次体现开源推理生态对特定硬件的持续深耕。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10840",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10840",
+        "published_at": "2026-09-07T14:31:44Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qbitai failed: SourceFetchError: qbitai: RSS fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 84,
+    "normalized": 84,
+    "filtered": 62,
+    "ai_candidates": 30,
+    "prompt_chars": 3809,
+    "estimated_input_tokens": 952,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qbitai",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
