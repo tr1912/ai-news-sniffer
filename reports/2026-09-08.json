@@ -1,74 +1,62 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-07T16:19:34.106887Z",
-  "run_id": "2026-09-08-03affe17",
-  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 b10840：CUDA 量化推理与 DGX Spark 优化。",
+  "generated_at": "2026-09-08T14:59:44.298239Z",
+  "run_id": "2026-09-08-591e1cc8",
+  "daily_summary_zh": "今日AI领域动态：Hugging Face 博客：安全拒答应针对话题子集而非整个话题；llama.cpp 发布 b10864：改进混合/循环模型检查点恢复。",
   "events": [
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "662e59866bce61eb"
+      ],
+      "category": "research",
+      "title_zh": "Hugging Face 博客：安全拒答应针对话题子集而非整个话题",
+      "summary_zh": "Hugging Face 博客发布题为《Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic》的文章，关注模型安全拒答的粒度问题：模型应在话题内准确识别并拒绝需要限制的部分，而不是对整个话题一刀切地拒绝。",
+      "why_it_matters_zh": "安全拒答粒度直接影响模型的可用性与安全边界。过粗的拒答会抑制合法内容，过细则可能留下越狱空间；文章提出的“为谁的安全”视角提醒研究者和开发者，安全对齐需要明确保护对象与上下文，对评测设计和策略制定有参考意义。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+        "published_at": "2026-09-08T14:23:07Z"
+      },
+      "related_sources": []
+    },
     {
       "id": "event-1",
       "candidate_ids": [
-        "ae3d500ca05c285d"
+        "d9a7fc37199266bd"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp 发布 b10840：CUDA 量化推理与 DGX Spark 优化",
-      "summary_zh": "llama.cpp 官方发布 b10840，引入 CUDA 上 Q4_K/Q5_K 的 branchless 解包以加速 mmvq，避免 batch size 大于 1 时重复执行 scale unpack，并针对 DGX Spark 增加 mmvq L2 prefetch 等优化。",
-      "why_it_matters_zh": "这是面向本地与边缘推理的后端性能优化，可提升 CUDA 量化模型在批量场景下的运行效率，也再次体现开源推理生态对特定硬件的持续深耕。",
-      "importance_score": 72.0,
+      "title_zh": "llama.cpp 发布 b10864：改进混合/循环模型检查点恢复",
+      "summary_zh": "llama.cpp 发布 b10864，调整 create_checkpoint() 的 spacing eviction 逻辑：只有当检查点列表已达到 n_ctx_checkpoints 上限时，才按 checkpoint_min_step 间距淘汰旧检查点；若新检查点与现有检查点处于相同 token 位置，则替换而非追加重复项。此前短于 checkpoint_min_step 的提示会在下一个请求时丢失 n_tokens - 4 处检查点，导致混合/循环模型重新 prefill。",
+      "why_it_matters_zh": "该修复解决了短提示场景下检查点被过早剔除的问题，让混合/循环模型在连续请求中能稳定从接近当前位置的检查点恢复，减少不必要的重复计算，对 llama.cpp server 的实际部署有直接价值。",
+      "importance_score": 60.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
         "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b10840",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10840",
-        "published_at": "2026-09-07T14:31:44Z"
+        "title": "llama.cpp Releases: b10864",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10864",
+        "published_at": "2026-09-08T14:31:22Z"
       },
       "related_sources": []
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qbitai failed: SourceFetchError: qbitai: RSS fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 84,
-    "normalized": 84,
-    "filtered": 62,
+    "enabled": 9,
+    "fetched": 110,
+    "normalized": 110,
+    "filtered": 78,
     "ai_candidates": 30,
-    "prompt_chars": 3809,
-    "estimated_input_tokens": 952,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qbitai",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 4103,
+    "estimated_input_tokens": 1025,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }
