@@ -1,0 +1,212 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T14:55:20.684120Z",
+  "run_id": "2026-09-10-8113b3be",
+  "daily_summary_zh": "今日精选 13 个事件，聚焦开源模型与工具链、多模态推理基础设施、跨设备与具身智能体、长上下文与记忆管理、企业 AI 评估和代码自动化。Transformers v5.17.0 引入 780B MoE 模型 HYV4；IBM 发布商业友好许可的时间序列基础模型；NVIDIA 分析多模态服务 EPD 解耦。研究侧关注跨设备 GUI Agent、VLM 机器人控制、LLM 记忆生命周期、长上下文卷积记忆、语言内推理、LLM 反学习和研究想法可实现性等方向。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "46e36f4708e75301"
+      ],
+      "category": "models",
+      "title_zh": "Transformers 发布 v5.17.0，新增 780B MoE 模型 HYV4",
+      "summary_zh": "Hugging Face Transformers 发布 v5.17.0，新增 HYV4-Preview：780B 参数 MoE 语言模型，每 token 激活 49B 参数，每层 256 个路由专家加 1 个共享专家，每 token 路由到 8 个专家，上下文窗口 1M。架构结合多头潜在注意力（MLA）、DeepSeek 稀疏注意力（DSA）、可学习 attention sinks 和独立超连接（iHC）等。",
+      "why_it_matters_zh": "超大规模开源 MoE 模型进入主流工具链，将推动长上下文、稀疏注意力和低激活推理的开发者生态，降低使用前沿架构的门槛。",
+      "importance_score": 93.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "transformers-releases",
+        "source_name": "Transformers Releases",
+        "title": "Transformers Releases: Release 5.17.0",
+        "url": "https://github.com/huggingface/transformers/releases/tag/v5.17.0",
+        "published_at": "2026-09-09T15:42:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "41f9017cf79f83b5"
+      ],
+      "category": "research",
+      "title_zh": "JarvisGUI：跨设备 GUI 智能体动态任务组合基准",
+      "summary_zh": "论文提出 JarvisGUI，一个动态基准，评估 GUI 智能体在 Android、Windows、Ubuntu 等异构平台上的跨设备工作流。它将 GUI 任务形式化为轻量类型系统下的输入输出变换，支持自动组合多步跨设备流程并统一评估。结果显示，当前 SOTA 开源 GUI 智能体在状态传递意识、跨平台上下文推理和长程依赖管理上存在明显困难。",
+      "why_it_matters_zh": "真实 GUI 使用常跨设备，现有基准多限于单设备静态任务，该工作揭示智能体真实可用性差距，为跨端自动化提供更严格评估。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "JarvisGUI: Towards Cross-Device GUI Agents with Dynamic Task Composition",
+        "url": "https://arxiv.org/abs/2609.10451v1",
+        "published_at": "2026-09-09T16:59:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "3127596f20c0a539"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 详解多模态模型服务中的 EPD 解耦",
+      "summary_zh": "NVIDIA 开发者博客分析何时使用编码-预填充-解码（Encode-Prefill-Decode，EPD）解耦来加速多模态模型服务，将视觉编码阶段与预填充等阶段分离。",
+      "why_it_matters_zh": "多模态推理成本高，EPD 解耦可优化资源分配和吞吐，对生产环境部署多模态模型具有直接工程价值。",
+      "importance_score": 81.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving",
+        "url": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
+        "published_at": "2026-09-09T20:31:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "82c17f758f4b65d3"
+      ],
+      "category": "models",
+      "title_zh": "IBM 发布 SOTA 时间序列模型 Granite Time Series PatchTST-FM-r2",
+      "summary_zh": "IBM 在 Hugging Face 博客发布 Granite Time Series PatchTST-FM-r2 模型，称其达到 SOTA，并采用商业友好许可证。",
+      "why_it_matters_zh": "商业友好许可的 SOTA 时间序列基础模型有助于企业将预测能力集成到产品中，降低合规与授权门槛。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+        "url": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
+        "published_at": "2026-09-09T15:36:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "949fa21b6923ed1d"
+      ],
+      "category": "research",
+      "title_zh": "Show-Harness：用语义接口让 VLM 智能体控制机器人",
+      "summary_zh": "论文提出 Show-Harness，一种具身 Harness，通过紧凑的离散语义动作单元让 VLM 的意图连接到机器人动作，由具体 embodiment 解释器确定性地落地为本地动作。它支持直接使用闭源前沿 VLM 进行零样本机器人控制，也可用少量 GPU 小时微调小规模开源 VLM。作者还开发 GUMI，将同一语义动作空间扩展到基于 GUI 的演示收集。",
+      "why_it_matters_zh": "该工作降低 VLM 到机器人控制的适配成本，推动通用模型在具身智能中的零样本和低成本部署。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+        "url": "https://arxiv.org/abs/2609.10522v1",
+        "published_at": "2026-09-09T17:53:38Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "984fece0d9090a7e"
+      ],
+      "category": "research",
+      "title_zh": "Fortunate Recall：LLM 记忆生命周期管理新框架",
+      "summary_zh": "论文提出 Fortunate Recall，一种可组合策略层，将个人事实分类到 10+1 行为本体，并按类别应用差异化时间衰减、槽位键替代、事件时间有效性和类别感知检索路由。其实现 FR-Bank 在 LifecycleBench 上达到 76.9% 通过率，优于 Mem0、A-MEM、Memory-R1、MemoryOS 的 61%–70.5%，在 LongMemEval-S 上达到 75.2%。",
+      "why_it_matters_zh": "现有 LLM 记忆系统常无限增长且检索精度下降，该工作将生命周期策略引入记忆管理，有助于长期个性化与一致性。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Fortunate Recall: Ontology-Driven Memory Lifecycle Management for Persistent Coherence in LLMs",
+        "url": "https://arxiv.org/abs/2609.10413v1",
+        "published_at": "2026-09-09T16:31:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "9a2a97df17ee10de"
+      ],
+      "category": "research",
+      "title_zh": "多语言数据混合提升语言内推理泛化",
+      "summary_zh": "论文从数据角度研究 SFT 的数据构成与调度如何优化推理泛化，构建 3.35B 模型 Tiny Aya L2-Thinker，在 60 种语言、6 个基准上实现超过 93% 的 L2 推理率，覆盖数学、常识推理、指令跟随、开放生成和文化推理，同时保持较强性能。",
+      "why_it_matters_zh": "当前推理模型以英语为中心，该工作推动模型按用户提示语言进行推理，提升非英语用户可用性并减少语义损失。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Building Multilingual Bridges: Data Mixing as the Pillar of Generalization for In-Language Reasoning",
+        "url": "https://arxiv.org/abs/2609.10445v1",
+        "published_at": "2026-09-09T16:56:25Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "49ee73996a5e9286"
+      ],
+      "category": "developer-tools",
+      "title_zh": "Hugging Face 展示用 Gradio Workflow 重建 AUTOMATIC1111",
+      "summary_zh": "Hugging Face 博客发布文章，介绍使用 Gradio Workflow 重建 AUTOMATIC1111 的方案。",
+      "why_it_matters_zh": "将流行 AI 绘图前端与 Gradio 工作流结合，为开发者构建可定制 AI 应用界面与自动化流程提供实践参考。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Rebuilding AUTOMATIC1111 with Gradio Workflow",
+        "url": "https://huggingface.co/blog/gradio-workflow-1111",
+        "published_at": "2026-09-10T00:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 181,
+    "normalized": 181,
+    "filtered": 146,
+    "ai_candidates": 30,
+    "prompt_chars": 23235,
+    "estimated_input_tokens": 5808,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
