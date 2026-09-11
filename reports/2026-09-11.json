@@ -1,0 +1,161 @@
+{
+  "date": "2026-09-11",
+  "generated_at": "2026-09-11T14:54:52.570514Z",
+  "run_id": "2026-09-11-42a98e83",
+  "daily_summary_zh": "今日候选池以arXiv研究论文和llama.cpp开源发布为主，重大产品与商业新闻因缺乏多源交叉验证未纳入。本期聚焦本地推理框架更新、GPU算法加速、智能体对齐、拓扑推理基准、幻觉检测和递归自我改进等方向。",
+  "events": [
+    {
+      "id": "event-llamacpp",
+      "candidate_ids": [
+        "480ef41d2b8a3ce9",
+        "fc0f03f53cfa183b"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10909 与 b10888：Metal 融合表重构与 Vulkan 调试标签",
+      "summary_zh": "llama.cpp 连续发布两个版本。b10909 将 Metal 后端的融合模式重构为单一融合表，供图优化器和算子编码器共用，并修复了绝对输出索引问题；b10888 为 Vulkan 后端增加了供 GPU 性能分析器使用的命令缓冲区调试标签。",
+      "why_it_matters_zh": "作为最主流的本地推理框架之一，这些改进提升了 Metal 后端的优化可维护性，并改善了 Vulkan 后端的性能分析体验，对端侧和开发者生态有直接帮助。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10909",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10909",
+        "published_at": "2026-09-11T12:13:16Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b10888",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10888",
+          "published_at": "2026-09-10T09:39:23Z"
+        }
+      ]
+    },
+    {
+      "id": "event-gpu-cfr",
+      "candidate_ids": [
+        "14ee8a7cb8ba5e2e"
+      ],
+      "category": "research",
+      "title_zh": "GPU-CFR：通过静态数据流与 CUDA Graph 重放实现 80 倍加速的反事实遗憾最小化",
+      "summary_zh": "论文提出 GPU-CFR，将固定游戏编译为静态数据流，预计算索引并按深度层级批量执行，使用 CUDA Graph 记录并重放每次迭代。在 A100 上，该方法将框架操作数量最多减少 18.1 倍，相比此前 GPU 实现实现最高 80 倍加速，首次让 CFR 在 GPU 上显著快于 CPU。",
+      "why_it_matters_zh": "CFR 是博弈论和强化学习中的重要算法，此前 GPU 实现因内核启动开销而落后于 CPU。该工作展示了编译器思路与 CUDA Graph 结合在大规模数值工作负载上的潜力，可能推动更多 CPU 优势算法迁移到 GPU。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "GPU-CFR: 80x Faster Counterfactual Regret Minimization by Compiling the Game to Static Dataflow and CUDA Graph Replay",
+        "url": "https://arxiv.org/abs/2609.11923v1",
+        "published_at": "2026-09-10T17:58:14Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-artificial-id",
+      "candidate_ids": [
+        "1a3bca58ad1cdd71"
+      ],
+      "category": "research",
+      "title_zh": "Artificial Id：智能体AI中的驱动力与持续对齐",
+      "summary_zh": "论文提出“人工本我”（artificial id）概念，为智能体引入自适应内部驱动力，以决定行为应继续、停止还是改变。在微型虚拟培养皿实验中，一个极小的控制器在无任务特定行为目标的情况下通过差异化持续性发展出控制能力，同时也可能持续意外或错位行为。",
+      "why_it_matters_zh": "随着智能体从有限任务执行转向跨任务持续运行，如何控制其行为成为核心问题。该研究探索了不依赖外部硬编码规则的自适应方向性，为持续对齐和智能体安全提供了新视角。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Artificial Id: Drive and Persistent Alignment in Agentic AI",
+        "url": "https://arxiv.org/abs/2609.11911v1",
+        "published_at": "2026-09-10T17:56:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-rsi",
+      "candidate_ids": [
+        "1988390f954c0e04"
+      ],
+      "category": "research",
+      "title_zh": "人类建造的最后一个AI：迈向真正的递归自我改进",
+      "summary_zh": "论文讨论递归自我改进（RSI），提出从改进执行自主、改进策略自主、经验获取自主、环境适应自主到递归元改进的发展路线图，并结合科学发现、具身智能、软件工程等场景分析不同需求与挑战。",
+      "why_it_matters_zh": "RSI 被视为通用人工智能的关键里程碑，也带来重大安全与治理议题。该论文系统梳理了 RSI 的能力层级和实际系统挑战，为后续研究和政策讨论提供了框架。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+        "url": "https://arxiv.org/abs/2609.11873v1",
+        "published_at": "2026-09-10T17:44:23Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-mindtopo",
+      "candidate_ids": [
+        "49fdeb8ba586f163"
+      ],
+      "category": "research",
+      "title_zh": "MindTopo：基础模型能否在拓扑空间中推理？",
+      "summary_zh": "论文提出 MindTopo 基准，从连续性、分离性、顺序、包围和纽结五个拓扑性质评估多模态大模型的拓扑直觉，包含 11,030 个实例、13 类程序生成任务。测试 14 个 MLLM 发现，所有模型在推理任务上优于规划任务，且最佳模型仍远低于人类水平。",
+      "why_it_matters_zh": "空间推理不仅依赖度量信息，也依赖拓扑关系。MindTopo 填补了基础模型在拓扑推理评估上的空白，揭示了当前多模态模型在需要不变性理解的场景中仍有明显短板。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
+        "url": "https://arxiv.org/abs/2609.11900v1",
+        "published_at": "2026-09-10T17:54:32Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 179,
+    "normalized": 179,
+    "filtered": 136,
+    "ai_candidates": 30,
+    "prompt_chars": 24149,
+    "estimated_input_tokens": 6037,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
