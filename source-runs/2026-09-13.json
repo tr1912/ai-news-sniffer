@@ -1,0 +1,872 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 129,
+  "normalized_count": 129,
+  "filtered_count": 83,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "OpenAI年内不上市了！奥特曼支持对手Dario呼吁：AI该踩刹车了",
+        "url": "https://www.qbitai.com/2026/09/488380.html",
+        "published_at": "2026-09-13T03:13:00Z",
+        "fetched_at": "2026-09-13T14:51:34.176435Z",
+        "language": "unknown",
+        "excerpt": "RSI太危险，得管！",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "克雷西",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "50c2f4bd36e0aac6",
+        "canonical_url": "https://www.qbitai.com/2026/09/488380.html",
+        "normalized_title": "openai年内不上市了 奥特曼支持对手dario呼吁 ai该踩刹车了",
+        "fingerprint": "50c2f4bd36e0aac69490634af61ee71eb787c398d0c049447a80b3bffd0a4e71",
+        "rule_score": 56.721666666666664
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10941",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10941",
+        "published_at": "2026-09-13T10:34:11Z",
+        "fetched_at": "2026-09-13T14:51:28.251298Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\ntests : reduce FA test sizes (#28842)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/47152933>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10941/llama-b10941-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10941/llama-b10941-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10941/llama-b10941-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10941/llama-b10941-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10941/llama-b10941-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10941/llama-b10941-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10941/llama-b10941-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu arm64",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 387865432
+        },
+        "id": "5801c1d5cbffc990",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10941",
+        "normalized_title": "llama cpp releases b10941",
+        "fingerprint": "5801c1d5cbffc9907b95e294e180f8846e7893242954b1405c2d2d2c69be4754",
+        "rule_score": 56.45697222222222
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic CEO outlines plan to slow AI development",
+        "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+        "published_at": "2026-09-12T19:34:44Z",
+        "fetched_at": "2026-09-13T14:51:34.360730Z",
+        "language": "unknown",
+        "excerpt": "Anthropic's Dario Amodei and OpenAI's Sam Altman seem to agree that it's time to \"pace the frontier.\" What would that actually look like?",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "12c0fba248d5f0ea",
+        "canonical_url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier",
+        "normalized_title": "anthropic ceo outlines plan to slow ai development",
+        "fingerprint": "12c0fba248d5f0eaf722a280c722a5f214be7c807ddeefead0ea65309023cc75",
+        "rule_score": 54.95788888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "今年外滩最特别Agent：能干活，能陪聊，还会朋友圈拉黑你",
+        "url": "https://www.qbitai.com/2026/09/488447.html",
+        "published_at": "2026-09-13T06:40:25Z",
+        "fetched_at": "2026-09-13T14:51:34.176428Z",
+        "language": "unknown",
+        "excerpt": "Agent的下一步是关系型生产力",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "鹭羽",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bad98e2aecea9c99",
+        "canonical_url": "https://www.qbitai.com/2026/09/488447.html",
+        "normalized_title": "今年外滩最特别agent 能干活 能陪聊 还会朋友圈拉黑你",
+        "fingerprint": "bad98e2aecea9c998915865b992c9856dee5f86478f3ab1b28a920b350f4d53b",
+        "rule_score": 53.06736111111111
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "2000+真实场景搬进仿真！一个导航模型零样本“通吃”四种机器人本体",
+        "url": "https://www.qbitai.com/2026/09/488672.html",
+        "published_at": "2026-09-13T07:38:20Z",
+        "fetched_at": "2026-09-13T14:51:34.176373Z",
+        "language": "unknown",
+        "excerpt": "亮源新创的Physical Al路线清晰了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "允中",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "931826507c20a316",
+        "canonical_url": "https://www.qbitai.com/2026/09/488672.html",
+        "normalized_title": "2000 真实场景搬进仿真 一个导航模型零样本 通吃 四种机器人本体",
+        "fingerprint": "931826507c20a3162f9cb53f6ffcbf1bef1e08fe4038192490e493bb4027a691",
+        "rule_score": 49.16388888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "GitHub三榜第一背后，一个“专升本”工程师的十年",
+        "url": "https://www.qbitai.com/2026/09/488519.html",
+        "published_at": "2026-09-13T07:20:19Z",
+        "fetched_at": "2026-09-13T14:51:34.176419Z",
+        "language": "unknown",
+        "excerpt": "出身寒微不是耻辱，放弃自己才是。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e6d89d74b11914b6",
+        "canonical_url": "https://www.qbitai.com/2026/09/488519.html",
+        "normalized_title": "github三榜第一背后 一个 专升本 工程师的十年",
+        "fingerprint": "e6d89d74b11914b61fd23ae0192bc2ac8ce31055bc424498373faad9f1fb81a1",
+        "rule_score": 49.13386111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic CEO says AI swarm could 'take over the Internet' in 6-12 months",
+        "url": "https://venturebeat.com/security/anthropic-ceo-says-ai-swarm-could-take-over-the-entire-internet-in-6-12-months-commits-to-ai-slowdown-plan",
+        "published_at": "2026-09-13T03:25:32Z",
+        "fetched_at": "2026-09-13T14:51:40.457409Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pseudolus",
+        "upstream_urls": [
+          "https://venturebeat.com/security/anthropic-ceo-says-ai-swarm-could-take-over-the-entire-internet-in-6-12-months-commits-to-ai-slowdown-plan"
+        ],
+        "raw_metadata": {
+          "hn_id": 49679685,
+          "score": 39
+        },
+        "id": "ea6db311ad8664d7",
+        "canonical_url": "https://venturebeat.com/security/anthropic-ceo-says-ai-swarm-could-take-over-the-entire-internet-in-6-12-months-commits-to-ai-slowdown-plan",
+        "normalized_title": "anthropic ceo says ai swarm could take over the internet in 6 12 months",
+        "fingerprint": "ea6db311ad8664d75376f8c27a731d6b9367ff188b8f342ce7d541157790250c",
+        "rule_score": 44.742555555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why are AI agents lying, cheating and coordinating?",
+        "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
+        "published_at": "2026-09-13T01:22:31Z",
+        "fetched_at": "2026-09-13T14:51:34.776540Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jonifico",
+        "upstream_urls": [
+          "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating"
+        ],
+        "raw_metadata": {
+          "hn_id": 49678969,
+          "score": 400
+        },
+        "id": "0a0b226a06b05827",
+        "canonical_url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
+        "normalized_title": "why are ai agents lying cheating and coordinating",
+        "fingerprint": "0a0b226a06b05827384fb5c0c38c4685bbb8986a830e90ca49c0dce8baf87cb8",
+        "rule_score": 44.537527777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AgentsDock: An IDE designed for agentic AI research",
+        "url": "https://agentsdock.net/",
+        "published_at": "2026-09-12T23:45:58Z",
+        "fetched_at": "2026-09-13T14:51:38.082253Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ZihuiGeorgia",
+        "upstream_urls": [
+          "https://agentsdock.net/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49678435,
+          "score": 74
+        },
+        "id": "40a4411e350f1706",
+        "canonical_url": "https://agentsdock.net/",
+        "normalized_title": "agentsdock an ide designed for agentic ai research",
+        "fingerprint": "40a4411e350f170633cce5336c70b16cc398ef6d0a79b7bc1ae92d9db85be075",
+        "rule_score": 44.37661111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A full-duplex AI phone agent that listens while speaking",
+        "url": "https://www.famulor.io/",
+        "published_at": "2026-09-12T22:42:43Z",
+        "fetched_at": "2026-09-13T14:51:40.603336Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "imankoma",
+        "upstream_urls": [
+          "https://www.famulor.io/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49677986,
+          "score": 8
+        },
+        "id": "53ab6e95af512bc8",
+        "canonical_url": "https://www.famulor.io/",
+        "normalized_title": "a full duplex ai phone agent that listens while speaking",
+        "fingerprint": "53ab6e95af512bc8bf1fc95737e29ede923daab25c75c025fbee592114708ea1",
+        "rule_score": 44.27119444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI's Sam Altman says it would be 'ill-advised' to go public in 2026",
+        "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+        "published_at": "2026-09-12T20:28:29Z",
+        "fetched_at": "2026-09-13T14:51:41.078539Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "humanlion87",
+        "upstream_urls": [
+          "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49676849,
+          "score": 93
+        },
+        "id": "6a85747eac1bb277",
+        "canonical_url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026",
+        "normalized_title": "openai s sam altman says it would be ill advised to go public in 2026",
+        "fingerprint": "6a85747eac1bb277f057cb60dc567e5ff8394fc11bd8d17ce7af8c2c97fb3bfb",
+        "rule_score": 44.047472222222225
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
+        "url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+        "published_at": "2026-09-10T21:51:59Z",
+        "fetched_at": "2026-09-13T14:51:34.360803Z",
+        "language": "unknown",
+        "excerpt": "Nvidia has its finger in every pie, and sees another year of plenty in its future, Jensen Huang says. But, he insists, its deals are not circular.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Julie Bort",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "554e5dd7dbe1a961",
+        "canonical_url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year",
+        "normalized_title": "jensen huang explains why nvidia will grow an astounding 70 next year",
+        "fingerprint": "554e5dd7dbe1a961f0737e688651cdf2a0baa4feb582b8dd49c7f14ca3316326",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "India’s Pocket FM doubles revenue run rate to $500M as AI powers 93% of audio content",
+        "url": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content/",
+        "published_at": "2026-09-10T17:45:00Z",
+        "fetched_at": "2026-09-13T14:51:34.360840Z",
+        "language": "unknown",
+        "excerpt": "Pocket FM uses AI to produce 99% of its new content, helping make content production about 80 times cheaper.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Jagmeet Singh",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ab460e88861d2297",
+        "canonical_url": "https://techcrunch.com/2026/09/10/indias-pocket-fm-doubles-revenue-run-rate-to-500m-as-ai-powers-93-of-audio-content",
+        "normalized_title": "india s pocket fm doubles revenue run rate to 500m as ai powers 93 of audio content",
+        "fingerprint": "ab460e88861d2297d5f047af0ac79e8e49f6f8d4869424d0b2d2c0c6b3c80987",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The worst spam emails: iLands AI agent hustle",
+        "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
+        "published_at": "2026-09-12T11:13:38Z",
+        "fetched_at": "2026-09-13T14:51:39.592638Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ColinWright",
+        "upstream_urls": [
+          "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49671159,
+          "score": 115
+        },
+        "id": "519b60a0956914cc",
+        "canonical_url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang",
+        "normalized_title": "the worst spam emails ilands ai agent hustle",
+        "fingerprint": "519b60a0956914ccdd7fbbc3bbe4317aebd23042a26e53e47d4b681b4dcd569d",
+        "rule_score": 43.12272222222222
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "How Full-Stack NIM Optimizations Deliver 2.5x More Users on Nemotron 3 Ultra",
+        "url": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra/",
+        "published_at": "2026-09-10T16:55:32Z",
+        "fetched_at": "2026-09-13T14:51:16.784985Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/09/image4_1480x833-768x432.jpg\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"image4_1480x833\" width=\"768\" />Deploying a large language model is only the first step toward production-ready serving. Production teams also need to serve as many concurrent users as...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Elizabeth Goodman",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f357095d8799ee75",
+        "canonical_url": "https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra",
+        "normalized_title": "how full stack nim optimizations deliver 2 5x more users on nemotron 3 ultra",
+        "fingerprint": "f357095d8799ee75d605688153f4574e02dcc222f156830544fddf32e6c6c847",
+        "rule_score": 42.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Houthis Used Claude Code to Develop Missile Guidance Software: Anthropic",
+        "url": "https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
+        "published_at": "2026-09-13T14:15:40Z",
+        "fetched_at": "2026-09-13T14:51:35.705443Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "delichon",
+        "upstream_urls": [
+          "https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo"
+        ],
+        "raw_metadata": {
+          "hn_id": 49684266,
+          "score": 4
+        },
+        "id": "ce5804b90e9b67ae",
+        "canonical_url": "https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
+        "normalized_title": "houthis used claude code to develop missile guidance software anthropic",
+        "fingerprint": "ce5804b90e9b67aee80cb001806544aa2ecc35ef811574ed8110e7cc823e219f",
+        "rule_score": 41.82611111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI models don't kill people – people kill people",
+        "url": "https://www.theregister.com/ai-and-ml/2026/09/09/ai-models-dont-kill-people-people-kill-people/5295368",
+        "published_at": "2026-09-13T13:33:34Z",
+        "fetched_at": "2026-09-13T14:51:35.198542Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Bender",
+        "upstream_urls": [
+          "https://www.theregister.com/ai-and-ml/2026/09/09/ai-models-dont-kill-people-people-kill-people/5295368"
+        ],
+        "raw_metadata": {
+          "hn_id": 49683834,
+          "score": 22
+        },
+        "id": "59e9e9da54391609",
+        "canonical_url": "https://www.theregister.com/ai-and-ml/2026/09/09/ai-models-dont-kill-people-people-kill-people/5295368",
+        "normalized_title": "ai models don t kill people people kill people",
+        "fingerprint": "59e9e9da543916090dd8994552809cbdbb7ac23580397245c7addb8cd59c3bc8",
+        "rule_score": 41.755944444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "First Naval Drone Duel Results in Ukrainian Success",
+        "url": "https://www.navalnews.com/naval-news/2026/09/worlds-first-naval-drone-duel-results-in-ukrainian-success/",
+        "published_at": "2026-09-13T11:58:06Z",
+        "fetched_at": "2026-09-13T14:51:39.701463Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "1970-01-01",
+        "upstream_urls": [
+          "https://www.navalnews.com/naval-news/2026/09/worlds-first-naval-drone-duel-results-in-ukrainian-success/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49683009,
+          "score": 5
+        },
+        "id": "81eaf80983a4f997",
+        "canonical_url": "https://www.navalnews.com/naval-news/2026/09/worlds-first-naval-drone-duel-results-in-ukrainian-success",
+        "normalized_title": "first naval drone duel results in ukrainian success",
+        "fingerprint": "81eaf80983a4f9972551870410087ecbd397eaf1a20e2e91ad293fcaa4db4925",
+        "rule_score": 41.596833333333336
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "GrapheneOS' rewritten Messages app is released",
+        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
+        "published_at": "2026-09-11T18:50:36Z",
+        "fetched_at": "2026-09-13T14:51:40.887001Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "microtonal",
+        "upstream_urls": [
+          "https://github.com/GrapheneOS/Messaging/releases/tag/13"
+        ],
+        "raw_metadata": {
+          "hn_id": 49663373,
+          "score": 320
+        },
+        "id": "fc1ee1c0b28ad9c4",
+        "canonical_url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
+        "normalized_title": "grapheneos rewritten messages app is released",
+        "fingerprint": "fc1ee1c0b28ad9c4c81090db72bc2fc8267dbd505f007ef8f81f5a3a64eec8d1",
+        "rule_score": 41.48433333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why So Many AI Researchers Think the Machines Could Kill Everyone",
+        "url": "https://www.wired.com/story/why-so-many-ai-researchers-think-the-machines-could-kill-everyone/",
+        "published_at": "2026-09-13T07:02:40Z",
+        "fetched_at": "2026-09-13T14:51:41.361896Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "joozio",
+        "upstream_urls": [
+          "https://www.wired.com/story/why-so-many-ai-researchers-think-the-machines-could-kill-everyone/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49680858,
+          "score": 19
+        },
+        "id": "4a28075312db0b2c",
+        "canonical_url": "https://www.wired.com/story/why-so-many-ai-researchers-think-the-machines-could-kill-everyone",
+        "normalized_title": "why so many ai researchers think the machines could kill everyone",
+        "fingerprint": "4a28075312db0b2c06db26fb907f14ef0d95da85a9641d82dfabc7bc5c84f04a",
+        "rule_score": 41.10444444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "JWST finds extreme star-forming galaxies masquerading as faint quasars",
+        "url": "https://phys.org/news/2026-09-jwst-extreme-star-galaxies-masquerading.html",
+        "published_at": "2026-09-13T03:39:19Z",
+        "fetched_at": "2026-09-13T14:51:40.505379Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "wglb",
+        "upstream_urls": [
+          "https://phys.org/news/2026-09-jwst-extreme-star-galaxies-masquerading.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49679765,
+          "score": 6
+        },
+        "id": "9491671220ffc062",
+        "canonical_url": "https://phys.org/news/2026-09-jwst-extreme-star-galaxies-masquerading.html",
+        "normalized_title": "jwst finds extreme star forming galaxies masquerading as faint quasars",
+        "fingerprint": "9491671220ffc062a0dd864d5bbd016db207ea78abd78d2a72380a6ef46cafe2",
+        "rule_score": 40.76552777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "One week left to book your exhibit table at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/11/one-week-left-to-book-your-exhibit-table-at-techcrunch-disrupt-2026/",
+        "published_at": "2026-09-11T20:33:18Z",
+        "fetched_at": "2026-09-13T14:51:34.360759Z",
+        "language": "unknown",
+        "excerpt": "Only one week left to secure your exhibit table. Tables are limited and can sell out before the September 18 deadline.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "34abb3e7dba3b861",
+        "canonical_url": "https://techcrunch.com/2026/09/11/one-week-left-to-book-your-exhibit-table-at-techcrunch-disrupt-2026",
+        "normalized_title": "one week left to book your exhibit table at techcrunch disrupt 2026",
+        "fingerprint": "34abb3e7dba3b8618878ee00af8517cc379369d9f5c09771fe9f8ce0799c7759",
+        "rule_score": 40.6555
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Final, final, final call for TechCrunch Disrupt 2026 Side Events",
+        "url": "https://techcrunch.com/2026/09/11/final-final-final-call-for-techcrunch-disrupt-2026-side-events/",
+        "published_at": "2026-09-11T20:30:17Z",
+        "fetched_at": "2026-09-13T14:51:34.360765Z",
+        "language": "unknown",
+        "excerpt": "The absolute last chance to apply to host an official Side Event during TechCrunch Disrupt 2026 is tonight, September 11, at 11:59 p.m. PT.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f392188753679cb7",
+        "canonical_url": "https://techcrunch.com/2026/09/11/final-final-final-call-for-techcrunch-disrupt-2026-side-events",
+        "normalized_title": "final final final call for techcrunch disrupt 2026 side events",
+        "fingerprint": "f392188753679cb75e9dab5b2efa836564ac65905b3e0a6a433757011a5f038b",
+        "rule_score": 40.65047222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Everyone should slow down AI development except for me",
+        "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
+        "published_at": "2026-09-13T00:30:44Z",
+        "fetched_at": "2026-09-13T14:51:35.799178Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "xena",
+        "upstream_urls": [
+          "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49678683,
+          "score": 630
+        },
+        "id": "556564edcdf1ea00",
+        "canonical_url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me",
+        "normalized_title": "everyone should slow down ai development except for me",
+        "fingerprint": "556564edcdf1ea00b35e3a0efc3f35ae6a6e4a4e27b41e050116ed19788316ce",
+        "rule_score": 40.45122222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio",
+        "url": "https://github.com/FeralFirmware/TailTalk/",
+        "published_at": "2026-09-12T23:43:31Z",
+        "fetched_at": "2026-09-13T14:51:34.730664Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "zdw",
+        "upstream_urls": [
+          "https://github.com/FeralFirmware/TailTalk/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49678423,
+          "score": 24
+        },
+        "id": "f05b9588e98d5d4f",
+        "canonical_url": "https://github.com/FeralFirmware/TailTalk",
+        "normalized_title": "tailtalk a modern async user space appletalk stack with rust and tokio",
+        "fingerprint": "f05b9588e98d5d4f9ca8501eb0c1780972dfd98ad5cd944a7eb5ce5aff89002f",
+        "rule_score": 40.372527777777776
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+        "url": "https://withspecific.com/benchmarks/real-swe",
+        "published_at": "2026-09-12T20:25:48Z",
+        "fetched_at": "2026-09-13T14:51:38.922076Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "theanonymousone",
+        "upstream_urls": [
+          "https://withspecific.com/benchmarks/real-swe"
+        ],
+        "raw_metadata": {
+          "hn_id": 49676820,
+          "score": 251
+        },
+        "id": "4a2e27a109fcc379",
+        "canonical_url": "https://withspecific.com/benchmarks/real-swe",
+        "normalized_title": "real swe benchmarking ai models on private real world enterprise codebases",
+        "fingerprint": "4a2e27a109fcc3792c5c6bb1673eb2739bf16cf8586ca56870b020d1e1f3cc6c",
+        "rule_score": 40.043
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his",
+        "url": "https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/",
+        "published_at": "2026-09-10T21:35:00Z",
+        "fetched_at": "2026-09-13T14:51:34.360809Z",
+        "language": "unknown",
+        "excerpt": "Mark Wahlberg joins Bruce K. Lee at Disrupt to discuss investing, entrepreneurship, healthcare, wellness, and building businesses.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9cace2c0568b7803",
+        "canonical_url": "https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026",
+        "normalized_title": "mark wahlberg is coming to techcrunch disrupt 2026 and he wants to talk about your work not his",
+        "fingerprint": "9cace2c0568b780345c5972f4701ad184a5a6f5528c74a787423538c50d913c3",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nvidia is the central bank of AI",
+        "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+        "published_at": "2026-09-12T15:08:27Z",
+        "fetched_at": "2026-09-13T14:51:35.606924Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "tolugenius",
+        "upstream_urls": [
+          "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai"
+        ],
+        "raw_metadata": {
+          "hn_id": 49673098,
+          "score": 522
+        },
+        "id": "78fd06ffcb8fa821",
+        "canonical_url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+        "normalized_title": "nvidia is the central bank of ai",
+        "fingerprint": "78fd06ffcb8fa821c0dd7faf04198ba7a2ca4a858915b76a5c250ad6a654d5da",
+        "rule_score": 39.51408333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "How Trail of Bits helps verify the integrity of Signal chats",
+        "url": "https://blog.trailofbits.com/2026/08/11/how-trail-of-bits-helps-verify-the-integrity-of-your-signal-chats/",
+        "published_at": "2026-09-12T11:27:55Z",
+        "fetched_at": "2026-09-13T14:51:40.934011Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dgroshev",
+        "upstream_urls": [
+          "https://blog.trailofbits.com/2026/08/11/how-trail-of-bits-helps-verify-the-integrity-of-your-signal-chats/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49671237,
+          "score": 71
+        },
+        "id": "cdc6266a7cdee2bf",
+        "canonical_url": "https://blog.trailofbits.com/2026/08/11/how-trail-of-bits-helps-verify-the-integrity-of-your-signal-chats",
+        "normalized_title": "how trail of bits helps verify the integrity of signal chats",
+        "fingerprint": "cdc6266a7cdee2bf8eaa06f3bc5b96b45a42cf4521963f266190cea8e45131d9",
+        "rule_score": 39.14652777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Key symbols we lost to time, pt. 1: The PC side",
+        "url": "https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-1-the-pc-side/",
+        "published_at": "2026-09-13T14:00:44Z",
+        "fetched_at": "2026-09-13T14:51:36.272792Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "leephillips",
+        "upstream_urls": [
+          "https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-1-the-pc-side/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49684101,
+          "score": 4
+        },
+        "id": "1f3cc6836a7851d5",
+        "canonical_url": "https://unsung.aresluna.org/key-symbols-we-lost-to-time-pt-1-the-pc-side",
+        "normalized_title": "key symbols we lost to time pt 1 the pc side",
+        "fingerprint": "1f3cc6836a7851d58be522bb6c179c4ad9e73563f9f2cce21d12ff62e00261e4",
+        "rule_score": 37.80122222222222
+      }
+    ],
+    "prompt_chars": 4967,
+    "estimated_input_tokens": 1241
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "arxiv-ai": "SourceFetchError: arxiv-ai: RSS fetch failed",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
