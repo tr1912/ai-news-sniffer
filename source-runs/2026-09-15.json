@@ -1,0 +1,843 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 123,
+  "normalized_count": 123,
+  "filtered_count": 103,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "中国物理AI大突破：PhysBrain 1.5登顶全球开源榜一，空间智能与GPT-6 Astra并驾齐驱",
+        "url": "https://www.qbitai.com/2026/09/488725.html",
+        "published_at": "2026-09-14T03:18:42Z",
+        "fetched_at": "2026-09-14T16:51:10.066759Z",
+        "language": "unknown",
+        "excerpt": "这家中国公司，刚跑完了物理闭环里最难的一段路",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "允中",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d5fb2a62e905eb68",
+        "canonical_url": "https://www.qbitai.com/2026/09/488725.html",
+        "normalized_title": "中国物理ai大突破 physbrain 1 5登顶全球开源榜一 空间智能与gpt 6 astra并驾齐驱",
+        "fingerprint": "d5fb2a62e905eb6815a7fe8176fc92a3f2869473a6195e08093b7fa85a55aff3",
+        "rule_score": 66.33116666666666
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "AI开始改进“改进自己的方法”，RSI进入平方时代丨MetaRSI",
+        "url": "https://www.qbitai.com/2026/09/488832.html",
+        "published_at": "2026-09-14T03:45:46Z",
+        "fetched_at": "2026-09-14T16:51:10.066748Z",
+        "language": "unknown",
+        "excerpt": "小模型突破瓶颈，旗舰模型打开新空间",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "思邈",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2ddb556c6fc0dc64",
+        "canonical_url": "https://www.qbitai.com/2026/09/488832.html",
+        "normalized_title": "ai开始改进 改进自己的方法 rsi进入平方时代丨metarsi",
+        "fingerprint": "2ddb556c6fc0dc643bbcce88b8db100b39706d7f4ba8466e585221786d34bf94",
+        "rule_score": 58.37627777777778
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b10964",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10964",
+        "published_at": "2026-09-14T15:28:07Z",
+        "fetched_at": "2026-09-14T16:51:04.919474Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nllama.cpp : bump version to 0.4.1 (#28900)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/47376843>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b10964/llama-b10964-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b10964/llama-b10964-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b10964/llama-b10964-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10964/llama-b10964-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10964/llama-b10964-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b10964/llama-b10964-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b10964/llama-b10964-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu ",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 388506854
+        },
+        "id": "13c8d386f951cec3",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10964",
+        "normalized_title": "llama cpp releases b10964",
+        "fingerprint": "13c8d386f951cec3383a2ca53b784629b228b12ae6fe9888e71730dcd7e77637",
+        "rule_score": 54.54686111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "A Vinyl Bar in Shibuya is a startup offering fun music apps without any AI prompting",
+        "url": "https://techcrunch.com/2026/09/14/a-vinyl-bar-in-shibuya-is-a-startup-offering-fun-music-apps-without-any-ai-prompting/",
+        "published_at": "2026-09-14T13:55:00Z",
+        "fetched_at": "2026-09-14T16:51:10.097716Z",
+        "language": "unknown",
+        "excerpt": "Former Spotify exec's company releases experimental \"singles\" that involves users in music making.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "455cfe229980f802",
+        "canonical_url": "https://techcrunch.com/2026/09/14/a-vinyl-bar-in-shibuya-is-a-startup-offering-fun-music-apps-without-any-ai-prompting",
+        "normalized_title": "a vinyl bar in shibuya is a startup offering fun music apps without any ai prompting",
+        "fingerprint": "455cfe229980f8029c0d26bd29e8571b66e027beec8f29184792412e5205eb79",
+        "rule_score": 54.391666666666666
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Accelerating Dropless MoE Training in JAX with NVIDIA Transformer Engine",
+        "url": "https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine/",
+        "published_at": "2026-09-14T16:39:15Z",
+        "fetched_at": "2026-09-14T16:50:54.921683Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/08/green-cube-768x432.png\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"green-cube\" width=\"768\" />Mixture of experts (MoE) has become one of the defining architectural trends in large-scale AI model training. DeepSeek, Qwen, and Mixtral are examples of MoE...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Tanya Lenz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "38355196f6e36c2f",
+        "canonical_url": "https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine",
+        "normalized_title": "accelerating dropless moe training in jax with nvidia transformer engine",
+        "fingerprint": "38355196f6e36c2f25021b46d36222d5ea78bbaab8dd9372ea14612ff1639eba",
+        "rule_score": 52.665416666666665
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "全国唯一！商汤大装置临港AIDC获“算效+算电”双5A认证",
+        "url": "https://www.qbitai.com/2026/09/489106.html",
+        "published_at": "2026-09-14T09:46:40Z",
+        "fetched_at": "2026-09-14T16:51:10.066675Z",
+        "language": "unknown",
+        "excerpt": "业界首个5A算电协同认证",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "8afa429da2b3ebd5",
+        "canonical_url": "https://www.qbitai.com/2026/09/489106.html",
+        "normalized_title": "全国唯一 商汤大装置临港aidc获 算效 算电 双5a认证",
+        "fingerprint": "8afa429da2b3ebd5964624439a7f79cf52fd4846bb4c7421b65ed43c0663080c",
+        "rule_score": 50.977777777777774
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "分子之心QuantaMind登Science Advances，让AI给分子世界”拍电影”",
+        "url": "https://www.qbitai.com/2026/09/489023.html",
+        "published_at": "2026-09-14T08:17:22Z",
+        "fetched_at": "2026-09-14T16:51:10.066704Z",
+        "language": "unknown",
+        "excerpt": "AI 蛋白质设计迈入“动态时代”",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "780482d076878576",
+        "canonical_url": "https://www.qbitai.com/2026/09/489023.html",
+        "normalized_title": "分子之心quantamind登science advances 让ai给分子世界 拍电影",
+        "fingerprint": "780482d076878576772016c6dd441bba688d1a3b019a43250b4da7771c586ad9",
+        "rule_score": 50.828944444444446
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "端侧AI从「能跑」到「会进化」，元空智能跑进惠普预装",
+        "url": "https://www.qbitai.com/2026/09/488933.html",
+        "published_at": "2026-09-14T08:08:29Z",
+        "fetched_at": "2026-09-14T16:51:10.066716Z",
+        "language": "unknown",
+        "excerpt": "让模型和设备共同进化",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "梦瑶",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d6be2699b6907c5e",
+        "canonical_url": "https://www.qbitai.com/2026/09/488933.html",
+        "normalized_title": "端侧ai从 能跑 到 会进化 元空智能跑进惠普预装",
+        "fingerprint": "d6be2699b6907c5eeda567d9c3b9d8d672b1b5410d5f2f13aebfc416dba836df",
+        "rule_score": 50.81413888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "一年连融三轮，这家金融AI公司又拿下超3亿B轮",
+        "url": "https://www.qbitai.com/2026/09/488912.html",
+        "published_at": "2026-09-14T07:55:12Z",
+        "fetched_at": "2026-09-14T16:51:10.066727Z",
+        "language": "unknown",
+        "excerpt": "险资、券商与头部创投持续加码",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "思邈",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "733968b0b92bbc48",
+        "canonical_url": "https://www.qbitai.com/2026/09/488912.html",
+        "normalized_title": "一年连融三轮 这家金融ai公司又拿下超3亿b轮",
+        "fingerprint": "733968b0b92bbc48af85ce97d32cb930dbb93bf34bd495856f59366dd65eb770",
+        "rule_score": 50.792
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "2026崇礼论坛：一场未来智能生活与下一代AI创造者的盛会",
+        "url": "https://www.qbitai.com/2026/09/488875.html",
+        "published_at": "2026-09-14T06:20:36Z",
+        "fetched_at": "2026-09-14T16:51:10.066737Z",
+        "language": "unknown",
+        "excerpt": "共话AI时代的生活、影像与创造。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "66d20726c9b15026",
+        "canonical_url": "https://www.qbitai.com/2026/09/488875.html",
+        "normalized_title": "2026崇礼论坛 一场未来智能生活与下一代ai创造者的盛会",
+        "fingerprint": "66d20726c9b15026159b9ddc46676093cb0e515a6221456782af6d73402b4f8d",
+        "rule_score": 50.63433333333333
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?",
+        "url": "https://techcrunch.com/2026/09/14/only-at-techcrunch-disrupt-2026-what-happens-when-openai-ships-your-roadmap/",
+        "published_at": "2026-09-14T15:00:00Z",
+        "fetched_at": "2026-09-14T16:51:10.097667Z",
+        "language": "unknown",
+        "excerpt": "If you're building an AI company, the question isn't whether foundation models will continue to evolve. It's whether your company will continue creating value as they do. Don't miss this interactive session on the Builders Stage at TechCrunch Disrupt 2026.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "28597699e57fc8e8",
+        "canonical_url": "https://techcrunch.com/2026/09/14/only-at-techcrunch-disrupt-2026-what-happens-when-openai-ships-your-roadmap",
+        "normalized_title": "only at techcrunch disrupt 2026 what happens when openai ships your roadmap",
+        "fingerprint": "28597699e57fc8e8ed45cea16742ec4240ec850118d259b4a009397980495d77",
+        "rule_score": 50.5
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Open-source AI and open models reading list",
+        "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
+        "published_at": "2026-09-14T00:22:51Z",
+        "fetched_at": "2026-09-14T16:51:13.918268Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "simonpure",
+        "upstream_urls": [
+          "https://www.interconnects.ai/p/open-source-ai-reading-list"
+        ],
+        "raw_metadata": {
+          "hn_id": 49690260,
+          "score": 145
+        },
+        "id": "89b4dbd426e013c8",
+        "canonical_url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
+        "normalized_title": "open source ai and open models reading list",
+        "fingerprint": "89b4dbd426e013c875318ffc11eef75b5c55c37b1add60f7d450008096bbd4c3",
+        "rule_score": 50.03808333333333
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "首届蚂蚁灵波具身大模型挑战赛正式启动",
+        "url": "https://www.qbitai.com/2026/09/489105.html",
+        "published_at": "2026-09-14T09:47:07Z",
+        "fetched_at": "2026-09-14T16:51:10.066626Z",
+        "language": "unknown",
+        "excerpt": "通过这场大赛，蚂蚁灵波希望将 LingBot-VLA 进一步推向更广泛的开发者社区和高校科研社区",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0b931624ba203e99",
+        "canonical_url": "https://www.qbitai.com/2026/09/489105.html",
+        "normalized_title": "首届蚂蚁灵波具身大模型挑战赛正式启动",
+        "fingerprint": "0b931624ba203e99ccb195f76d31e3b4e63dfc66cbb3f7e82f88767299e770ce",
+        "rule_score": 46.97852777777778
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "探索RSI，生数新世界模型让机器人开始自我进化",
+        "url": "https://www.qbitai.com/2026/09/489037.html",
+        "published_at": "2026-09-14T09:36:28Z",
+        "fetched_at": "2026-09-14T16:51:10.066690Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "林, 方舟",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "155467152d1f0623",
+        "canonical_url": "https://www.qbitai.com/2026/09/489037.html",
+        "normalized_title": "探索rsi 生数新世界模型让机器人开始自我进化",
+        "fingerprint": "155467152d1f0623fd8e6b97b9b47e175437fcde36a94e50bd107aba72afa6b5",
+        "rule_score": 46.96077777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Microsoft’s new AI ‘code of conduct’ tells models not to hack systems or trick humans",
+        "url": "https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans/",
+        "published_at": "2026-09-14T16:27:53Z",
+        "fetched_at": "2026-09-14T16:51:10.097639Z",
+        "language": "unknown",
+        "excerpt": "The code of conduct lays out general principles that Microsoft AI models should uphold — supporting humans rather than replacing them, for instance, and accelerating human flourishing — as well as specific safety constraints meant to implement those principles.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Russell Brandom",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "28338ddd2ad600da",
+        "canonical_url": "https://techcrunch.com/2026/09/14/microsofts-new-ai-code-of-conduct-tells-models-not-to-hack-systems-or-trick-humans",
+        "normalized_title": "microsoft s new ai code of conduct tells models not to hack systems or trick humans",
+        "fingerprint": "28338ddd2ad600da4b1f0302aa84470d774c74e79b1aad24d3443fb9198dd3ce",
+        "rule_score": 46.64647222222222
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Hear how AI can engineer nature’s comeback at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/14/hear-how-ai-can-engineer-natures-comeback-at-techcrunch-disrupt-2026/",
+        "published_at": "2026-09-14T14:30:00Z",
+        "fetched_at": "2026-09-14T16:51:10.097694Z",
+        "language": "unknown",
+        "excerpt": "Not long ago, bringing an extinct species back to life belonged to science fiction. Today, it's the mission of a billion-dollar startup. Join the conversation with one of tech's most unconventional founders. Secure your Disrupt pass today.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2a91313027463224",
+        "canonical_url": "https://techcrunch.com/2026/09/14/hear-how-ai-can-engineer-natures-comeback-at-techcrunch-disrupt-2026",
+        "normalized_title": "hear how ai can engineer nature s comeback at techcrunch disrupt 2026",
+        "fingerprint": "2a91313027463224018467a5222f6174bc20c745d923b5791df5b1b31d406e78",
+        "rule_score": 46.45
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "奥特曼被骗！A社一脚油门冲刺IPO，募资叫板SpaceX",
+        "url": "https://www.qbitai.com/2026/09/488699.html",
+        "published_at": "2026-09-14T02:56:45Z",
+        "fetched_at": "2026-09-14T16:51:10.066769Z",
+        "language": "unknown",
+        "excerpt": "还是太嫩了啊Dario",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "Jay",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "634b71a024ab9125",
+        "canonical_url": "https://www.qbitai.com/2026/09/488699.html",
+        "normalized_title": "奥特曼被骗 a社一脚油门冲刺ipo 募资叫板spacex",
+        "fingerprint": "634b71a024ab91256ff0f40debc8b29146edf2d5c4066cd7fff45598b6d65922",
+        "rule_score": 46.294583333333335
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "What’s behind the AI industry’s latest warnings of doom?",
+        "url": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+        "published_at": "2026-09-13T19:40:15Z",
+        "fetched_at": "2026-09-14T16:51:10.097727Z",
+        "language": "unknown",
+        "excerpt": "On Equity, we discussed the AI industry's latest debate about whether it poses an existential threat to humanity.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c4b7f0c0e8ca6008",
+        "canonical_url": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom",
+        "normalized_title": "what s behind the ai industry s latest warnings of doom",
+        "fingerprint": "c4b7f0c0e8ca60085274104fd2a2d639dfdcba4e942445109eb81af895d8d963",
+        "rule_score": 44.567083333333336
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Obama urges Democrats to have a ‘clear plan’ for AI safeguards",
+        "url": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
+        "published_at": "2026-09-13T16:30:00Z",
+        "fetched_at": "2026-09-14T16:51:10.097737Z",
+        "language": "unknown",
+        "excerpt": "Obama recently said that Democrats need to make artificial intelligence one of their “central agendas” and “have a very clear plan” to address concerns around the technology’s economic impact and safety.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c6277184565770af",
+        "canonical_url": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards",
+        "normalized_title": "obama urges democrats to have a clear plan for ai safeguards",
+        "fingerprint": "c6277184565770af5fe68a38c70efccc6503c0abc8d4077617fc512ed3f2476c",
+        "rule_score": 44.25
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Hacking AI customer service agents",
+        "url": "https://www.intigriti.com/researchers/blog/hacking-tools/hacking-ai-customer-service-agents",
+        "published_at": "2026-09-14T16:26:03Z",
+        "fetched_at": "2026-09-14T16:51:10.357252Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "snikolaev",
+        "upstream_urls": [
+          "https://www.intigriti.com/researchers/blog/hacking-tools/hacking-ai-customer-service-agents"
+        ],
+        "raw_metadata": {
+          "hn_id": 49699526,
+          "score": 18
+        },
+        "id": "e9c927c94a560f76",
+        "canonical_url": "https://www.intigriti.com/researchers/blog/hacking-tools/hacking-ai-customer-service-agents",
+        "normalized_title": "hacking ai customer service agents",
+        "fingerprint": "e9c927c94a560f76910acf8fb53072f1d938ae574af8f84a2049311b33c253c0",
+        "rule_score": 43.64341666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Superhuman acquires YC-backed notetaker Fathom",
+        "url": "https://techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work/",
+        "published_at": "2026-09-14T15:59:59Z",
+        "fetched_at": "2026-09-14T16:51:13.878375Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "attitudeconditi",
+        "upstream_urls": [
+          "https://techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49699127,
+          "score": 4
+        },
+        "id": "c3e9dc91f791e075",
+        "canonical_url": "https://techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work",
+        "normalized_title": "superhuman acquires yc backed notetaker fathom",
+        "fingerprint": "c3e9dc91f791e0758dac142d9c898fba5e8735003702a7c39fef4c08309934e4",
+        "rule_score": 43.59997222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "ProGantt: Gantt charts your AI agent can read and write via MCP",
+        "url": "https://progantt.com/",
+        "published_at": "2026-09-14T15:48:32Z",
+        "fetched_at": "2026-09-14T16:51:11.687082Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "supermafete",
+        "upstream_urls": [
+          "https://progantt.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49698952,
+          "score": 4
+        },
+        "id": "343503b47947c199",
+        "canonical_url": "https://progantt.com/",
+        "normalized_title": "progantt gantt charts your ai agent can read and write via mcp",
+        "fingerprint": "343503b47947c199727e011a593bf5de65d2f838b71ccae7f7fadf53262cdf6f",
+        "rule_score": 43.580888888888886
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic tells investors it will be profitable for second straight quarter",
+        "url": "https://www.reuters.com/business/retail-consumer/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft-2026-09-13/",
+        "published_at": "2026-09-14T15:47:29Z",
+        "fetched_at": "2026-09-14T16:51:11.963821Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "alephnerd",
+        "upstream_urls": [
+          "https://www.reuters.com/business/retail-consumer/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft-2026-09-13/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49698936,
+          "score": 40
+        },
+        "id": "a057ec6883ac185f",
+        "canonical_url": "https://www.reuters.com/business/retail-consumer/anthropic-tells-investors-it-will-be-profitable-second-straight-quarter-ft-2026-09-13",
+        "normalized_title": "anthropic tells investors it will be profitable for second straight quarter",
+        "fingerprint": "a057ec6883ac185f4a720dc4792ee5c35c6371df5397cd03b2407dc298177ebd",
+        "rule_score": 43.57913888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Beijing hits back at Anthropic CEO's call to curb China's AI development",
+        "url": "https://apnews.com/article/china-anthropic-ai-us-amodei-3da458d2c078da3e60900728d59f1ae8",
+        "published_at": "2026-09-14T15:29:31Z",
+        "fetched_at": "2026-09-14T16:51:14.413424Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "djoldman",
+        "upstream_urls": [
+          "https://apnews.com/article/china-anthropic-ai-us-amodei-3da458d2c078da3e60900728d59f1ae8"
+        ],
+        "raw_metadata": {
+          "hn_id": 49698638,
+          "score": 7
+        },
+        "id": "2e29789e14e39168",
+        "canonical_url": "https://apnews.com/article/china-anthropic-ai-us-amodei-3da458d2c078da3e60900728d59f1ae8",
+        "normalized_title": "beijing hits back at anthropic ceo s call to curb china s ai development",
+        "fingerprint": "2e29789e14e39168826944e7fe8f19d1d61d7837994d5b027faa6cb535d0fd23",
+        "rule_score": 43.549194444444446
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Transitions.dev: UI transitions for AI agents",
+        "url": "https://transitions.dev/",
+        "published_at": "2026-09-14T15:18:58Z",
+        "fetched_at": "2026-09-14T16:51:11.575397Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "eustoria",
+        "upstream_urls": [
+          "https://transitions.dev/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49698443,
+          "score": 5
+        },
+        "id": "96849ccbe9462538",
+        "canonical_url": "https://transitions.dev/",
+        "normalized_title": "transitions dev ui transitions for ai agents",
+        "fingerprint": "96849ccbe9462538351f861def380f035ffa641c61b0561d7a56c12ce57f9909",
+        "rule_score": 43.53161111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Andon Labs Puts AI Agents in Charge of Real Businesses",
+        "url": "https://spectrum.ieee.org/andon-labs-agentic-ai-businesses",
+        "published_at": "2026-09-14T15:08:02Z",
+        "fetched_at": "2026-09-14T16:51:12.247116Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "samizdis",
+        "upstream_urls": [
+          "https://spectrum.ieee.org/andon-labs-agentic-ai-businesses"
+        ],
+        "raw_metadata": {
+          "hn_id": 49698217,
+          "score": 5
+        },
+        "id": "8f42e8d2eb080ac5",
+        "canonical_url": "https://spectrum.ieee.org/andon-labs-agentic-ai-businesses",
+        "normalized_title": "andon labs puts ai agents in charge of real businesses",
+        "fingerprint": "8f42e8d2eb080ac54b524da6c105fcb13755a168415f347e87607800f7457580",
+        "rule_score": 43.51338888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "One Gets Through – Missile Command, but you launch the missiles",
+        "url": "https://onegetsthrough.com/",
+        "published_at": "2026-09-14T14:53:55Z",
+        "fetched_at": "2026-09-14T16:51:12.440072Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Maxion",
+        "upstream_urls": [
+          "https://onegetsthrough.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49697965,
+          "score": 5
+        },
+        "id": "70cfebeb59b1af97",
+        "canonical_url": "https://onegetsthrough.com/",
+        "normalized_title": "one gets through missile command but you launch the missiles",
+        "fingerprint": "70cfebeb59b1af97211785508aef29c462e92eb8d6ad7a7bfba55e3dfcbf1d45",
+        "rule_score": 43.48986111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "RubyGems Open Source Supply Chain Security and OpenAI",
+        "url": "https://rietta.com/blog/rubygems-supply-chain-openai/",
+        "published_at": "2026-09-14T14:39:01Z",
+        "fetched_at": "2026-09-14T16:51:13.596142Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rietta",
+        "upstream_urls": [
+          "https://rietta.com/blog/rubygems-supply-chain-openai/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49697666,
+          "score": 42
+        },
+        "id": "247ae9e33538a59b",
+        "canonical_url": "https://rietta.com/blog/rubygems-supply-chain-openai",
+        "normalized_title": "rubygems open source supply chain security and openai",
+        "fingerprint": "247ae9e33538a59ba3b513ccd0dfa3aa662591511350ef37ab8164a643962636",
+        "rule_score": 43.46502777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: I built Otis, a minimal AI agent that runs local models out of the box",
+        "url": "https://triangllabs.ai/otis",
+        "published_at": "2026-09-14T12:58:32Z",
+        "fetched_at": "2026-09-14T16:51:12.824566Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "petrenk0n",
+        "upstream_urls": [
+          "https://triangllabs.ai/otis"
+        ],
+        "raw_metadata": {
+          "hn_id": 49696084,
+          "score": 8
+        },
+        "id": "0e8f7fa177c17a60",
+        "canonical_url": "https://triangllabs.ai/otis",
+        "normalized_title": "show hn i built otis a minimal ai agent that runs local models out of the box",
+        "fingerprint": "0e8f7fa177c17a60192688cd1cb8e18d725ac18474350a7270b8df5869c6d2b2",
+        "rule_score": 43.297555555555554
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "5 days left to exhibit at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/14/techcrunch-disrupt-2026-exhibit-table-deadline-5-days/",
+        "published_at": "2026-09-14T14:00:00Z",
+        "fetched_at": "2026-09-14T16:51:10.097705Z",
+        "language": "unknown",
+        "excerpt": "The last day to apply for an exhibit table at TechCrunch Disrupt 2026 on Sept 18. Just 5 days left. Secure your spot on the Expo Hall floor and put your business in front of 10,000+ founders, investors, and tech leaders.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c1c40dd7a2de96b4",
+        "canonical_url": "https://techcrunch.com/2026/09/14/techcrunch-disrupt-2026-exhibit-table-deadline-5-days",
+        "normalized_title": "5 days left to exhibit at techcrunch disrupt 2026",
+        "fingerprint": "c1c40dd7a2de96b4905894a0793b4b81ce73e19afa626b50117624e16aacba1d",
+        "rule_score": 42.4
+      }
+    ],
+    "prompt_chars": 5446,
+    "estimated_input_tokens": 1361
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "arxiv-ai": "SourceFetchError: arxiv-ai: RSS fetch failed",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}

@@ -1,0 +1,94 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-14T16:50:47.336247Z",
+  "run_id": "2026-09-15-416e553c",
+  "daily_summary_zh": "今日AI领域动态：英伟达在 JAX 中用 Transformer Engine 加速无丢弃 MoE 训练；llama.cpp 发布 b10964 构建，版本号升至 0.4.1。",
+  "events": [
+    {
+      "id": "event-nvidia-dropless-moe-jax",
+      "candidate_ids": [
+        "38355196f6e36c2f"
+      ],
+      "category": "infrastructure",
+      "title_zh": "英伟达在 JAX 中用 Transformer Engine 加速无丢弃 MoE 训练",
+      "summary_zh": "英伟达开发者博客介绍如何借助 NVIDIA Transformer Engine 在 JAX 中实现无丢弃（dropless）的 MoE 训练加速，并指出 MoE 已成为大规模模型训练的标志性架构趋势，DeepSeek、Qwen、Mixtral 均为代表。",
+      "why_it_matters_zh": "MoE 训练效率直接决定大模型的训练成本与吞吐，官方给出 dropless 方案的工程细节，对使用 JAX 栈的团队具有直接参考价值。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Accelerating Dropless MoE Training in JAX with NVIDIA Transformer Engine",
+        "url": "https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine/",
+        "published_at": "2026-09-14T16:39:15Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llamacpp-b10964",
+      "candidate_ids": [
+        "13c8d386f951cec3"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b10964 构建，版本号升至 0.4.1",
+      "summary_zh": "开源推理框架 llama.cpp 发布 b10964 构建，同时将版本号提升至 0.4.1，并提供 macOS Apple Silicon、macOS Intel、iOS XCFramework 以及 Ubuntu x64/arm64/s390x、Vulkan 等多平台构建产物。",
+      "why_it_matters_zh": "llama.cpp 是本地与端侧推理的事实标准之一，版本号进入 0.4.x 与多平台构建同步更新，直接影响开发者本地部署的可用性与稳定性。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b10964",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10964",
+        "published_at": "2026-09-14T15:28:07Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source arxiv-ai failed: SourceFetchError: arxiv-ai: RSS fetch failed",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 123,
+    "normalized": 123,
+    "filtered": 103,
+    "ai_candidates": 30,
+    "prompt_chars": 5446,
+    "estimated_input_tokens": 1361,
+    "failed_source_ids": [
+      "anthropic-news",
+      "arxiv-ai",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
