@@ -1,19 +1,48 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-14T16:50:47.336247Z",
-  "run_id": "2026-09-15-416e553c",
-  "daily_summary_zh": "今日AI领域动态：英伟达在 JAX 中用 Transformer Engine 加速无丢弃 MoE 训练；llama.cpp 发布 b10964 构建，版本号升至 0.4.1。",
+  "generated_at": "2026-09-15T15:28:56.913767Z",
+  "run_id": "2026-09-15-be904fd1",
+  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 v0.4.1 与 b10985：新增多款模型支持并修复 RPC 缓存；NVIDIA 介绍在 JAX 中用 Transformer Engine 加速 Dropless MoE 训练。",
   "events": [
     {
-      "id": "event-nvidia-dropless-moe-jax",
+      "id": "event-1",
+      "candidate_ids": [
+        "f404c430aa3c7ed1",
+        "e588e85e90b0adc4"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v0.4.1 与 b10985：新增多款模型支持并修复 RPC 缓存",
+      "summary_zh": "llama.cpp 发布 v0.4.1，新增 Maple 20B-A1B 三元 MoE（CPU）、腾讯 Hy 4（hy_v4）预览架构和 Spark2.5 支持，改进 JSON schema 处理、聊天解析、日志与服务端子进程管理，并将 ggml 升级至 v0.24.0；同时加入 Kimi-K3 循环状态回滚支持，修复 DeepSeek2、GLM-MoE 等模型的 MTP 上下文 KV 缓存分配问题，API 侧 llama_sampler_chain_n() 返回值由 int 改为 int32_t。随后的 b10985 构建把 RPC 哈希缓存限定为权重张量，避免多节点切分（如 Qwen3.8-Flash-Next）时把超过阈值的激活写入 worker 缓存目录（一天可达 1.4 TB）。",
+      "why_it_matters_zh": "作为最主流的本地推理项目，llama.cpp 的新架构支持决定新模型能否在消费级硬件上跑起来，RPC 权重缓存修复也直接影响多节点推理的磁盘与带宽成本。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v0.4.1",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.4.1",
+        "published_at": "2026-09-14T18:27:29Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b10985",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10985",
+          "published_at": "2026-09-15T14:19:41Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
       "candidate_ids": [
         "38355196f6e36c2f"
       ],
       "category": "infrastructure",
-      "title_zh": "英伟达在 JAX 中用 Transformer Engine 加速无丢弃 MoE 训练",
-      "summary_zh": "英伟达开发者博客介绍如何借助 NVIDIA Transformer Engine 在 JAX 中实现无丢弃（dropless）的 MoE 训练加速，并指出 MoE 已成为大规模模型训练的标志性架构趋势，DeepSeek、Qwen、Mixtral 均为代表。",
-      "why_it_matters_zh": "MoE 训练效率直接决定大模型的训练成本与吞吐，官方给出 dropless 方案的工程细节，对使用 JAX 栈的团队具有直接参考价值。",
-      "importance_score": 76.0,
+      "title_zh": "NVIDIA 介绍在 JAX 中用 Transformer Engine 加速 Dropless MoE 训练",
+      "summary_zh": "NVIDIA 开发者博客发布技术文章，讲解如何借助 NVIDIA Transformer Engine 在 JAX 中实现 Dropless MoE（不丢弃 token 的专家混合）训练加速，并指出 MoE 已成为 DeepSeek、Qwen、Mixtral 等大模型训练的典型架构。",
+      "why_it_matters_zh": "MoE 训练中的 token 丢弃与负载不均会直接损耗有效算力，这类官方工程方案为大规模稀疏模型训练效率提供了可复用路径。",
+      "importance_score": 70.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "nvidia-genai",
@@ -23,71 +52,23 @@
         "published_at": "2026-09-14T16:39:15Z"
       },
       "related_sources": []
-    },
-    {
-      "id": "event-llamacpp-b10964",
-      "candidate_ids": [
-        "13c8d386f951cec3"
-      ],
-      "category": "open-source",
-      "title_zh": "llama.cpp 发布 b10964 构建，版本号升至 0.4.1",
-      "summary_zh": "开源推理框架 llama.cpp 发布 b10964 构建，同时将版本号提升至 0.4.1，并提供 macOS Apple Silicon、macOS Intel、iOS XCFramework 以及 Ubuntu x64/arm64/s390x、Vulkan 等多平台构建产物。",
-      "why_it_matters_zh": "llama.cpp 是本地与端侧推理的事实标准之一，版本号进入 0.4.x 与多平台构建同步更新，直接影响开发者本地部署的可用性与稳定性。",
-      "importance_score": 56.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "llama-cpp-releases",
-        "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b10964",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10964",
-        "published_at": "2026-09-14T15:28:07Z"
-      },
-      "related_sources": []
     }
   ],
   "degraded": false,
   "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source arxiv-ai failed: SourceFetchError: arxiv-ai: RSS fetch failed",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+    "source arxiv-ai failed: SourceFetchError: arxiv-ai: RSS fetch failed"
   ],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 123,
-    "normalized": 123,
-    "filtered": 103,
+    "enabled": 9,
+    "fetched": 140,
+    "normalized": 140,
+    "filtered": 108,
     "ai_candidates": 30,
-    "prompt_chars": 5446,
-    "estimated_input_tokens": 1361,
+    "prompt_chars": 8529,
+    "estimated_input_tokens": 2132,
     "failed_source_ids": [
-      "anthropic-news",
-      "arxiv-ai",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
+      "arxiv-ai"
     ],
     "newly_auto_paused_source_ids": []
   }
