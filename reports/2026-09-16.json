@@ -1,0 +1,201 @@
+{
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T15:21:37.408453Z",
+  "run_id": "2026-09-16-35e55818",
+  "daily_summary_zh": "今日 AI 进展集中在本地长上下文推理、训练可审计性、编码智能体评测饱和、开源推理框架更新、服务栈智能体优化以及多智能体安全等方向。JustFit 将 200K Token 服务带入 24 GiB 笔记本；OPEN-1B 提出按位可复现训练；SWE-bench 分析显示头部编码智能体已难以区分；llama.cpp 更新 CUDA/HIP 访问模式与自动上下文适配；FlashVector 在 Unity 生产环境实现最高 2 倍吞吐提升；NVIDIA 介绍 Groq 3 LPX 确定性推理；此外，Hugging Face 博客关注 Agent 一致性，ScienceBuddy 探索科研智能体自改进，Fuse 提供可验证社会推理基准，多项研究推进 LLM 可解释性、多智能体治理与全双工对话评估。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "c71ffc11a5cbd9b1"
+      ],
+      "category": "inference",
+      "title_zh": "JustFit：24 GiB 笔记本上实现 200K Token 本地 LLM 服务",
+      "summary_zh": "该研究提出基于 MLX 的推理运行时 JustFit，结合 KVExec 压缩 KV 执行、PhaseSwap 组件驻留和 StateTrans 状态保留服务切换。在 24 GiB M4 Pro MacBook 上运行 Qwen3.8-27B MXFP4 时，三次独立运行完成 196,608 输入和 16,384 输出 token，将单请求上下文从 mlx-vlm 基线的 30,720 位置提升至 212,992（6.93 倍）；双请求运行合计保留 229,376 位置。32K 输入/64 输出探针达到 19.11 tokens/s，重复 32K+6K 工作负载中位峰值进程内存 16,374 MiB。集成运行时在 AIME 2026 中答对 29/30 题。",
+      "why_it_matters_zh": "该工作通过即时状态管理显著扩展了消费级设备上的长上下文服务能力，降低本地大模型推理的内存门槛，对端侧编码和推理应用有直接价值。",
+      "importance_score": 92.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management",
+        "url": "https://arxiv.org/abs/2609.17475v1",
+        "published_at": "2026-09-15T17:15:48Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "b5cbc4f07533f294"
+      ],
+      "category": "research",
+      "title_zh": "OPEN-1B：可完全审计的训练运行",
+      "summary_zh": "该研究提出“完全可审计”的模型透明层级，通过对训练非确定性来源施加确定顺序——包括 GPU kernel 归约、数据并行集群中的数据批次顺序、节点间/节点内集合通信——使大规模分布式训练的每一步都能在异构商用硬件上以按位确定性独立复现。作者指出，现有开源模型即使发布权重、数据和配方，也无法证明 checkpoint 确实由声明配方产生，可能留下未披露数据、注入偏见或后门的空间。",
+      "why_it_matters_zh": "可复现性是开源模型可信度的基础；该工作试图从机制上杜绝训练过程黑箱，对模型审计、合规和安全研究具有关键意义。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "OPEN-1B: A Fully Auditable Training Run",
+        "url": "https://arxiv.org/abs/2609.17380v1",
+        "published_at": "2026-09-15T16:23:08Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "36fee824b29d5885"
+      ],
+      "category": "research",
+      "title_zh": "编码智能体已趋同：SWE-bench 榜单无法区分头部系统",
+      "summary_zh": "该研究审计 254 份 SWE-bench 提交（不重新运行模型），发现在 Verified 分榜上，前两名均各解决 396/500 个实例；前十名共享 285 次成功和 51 次失败，仅 164 个实例能区分其表现。前沿解集的中位嵌套度为 0.935，高于按分数隐含的基线 0.774。分数还高度依赖模型-脚手架组合：同一模型不同脚手架的范围可达 29.8 个百分点，而前三十名分数差距仅 8.8 个百分点。对 29 对相邻 Verified 前三十名进行精确配对 McNemar 检验，在 α=0.05 下无一可区分；更大的 Test 分榜可区分 23 对中的 14 对。",
+      "why_it_matters_zh": "该分析表明当前编码智能体评测已饱和且统计上难以排序，呼吁社区转向更细粒度、更能反映实际差异的新评测维度。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Coding Agents Have Converged: Why the SWE-bench Leaderboard Can No Longer Order Its Top Entries, and What to Measure Instead",
+        "url": "https://arxiv.org/abs/2609.17394v1",
+        "published_at": "2026-09-15T16:29:12Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "71122cb83759aed1",
+        "6e1c016adb0cd1c0"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11002 与 b10999：改进 CUDA/HIP 并调整自动适配上下文长度",
+      "summary_zh": "llama.cpp 发布 b11002 和 b10999。b11002 改进了 im2col 的 CUDA/HIP 访问模式；b10999 修改了统一 KV 下自动适配的最大上下文长度。两个版本均提供 macOS、iOS、Linux 等多平台构建产物。",
+      "why_it_matters_zh": "llama.cpp 是本地推理生态的核心开源项目，持续优化 GPU 内核和上下文管理，直接影响端侧推理效率与长上下文可用性。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11002",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11002",
+        "published_at": "2026-09-16T14:38:34Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b10999",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b10999",
+          "published_at": "2026-09-16T12:31:41Z"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "0bb389ca74a07bb9"
+      ],
+      "category": "infrastructure",
+      "title_zh": "FlashVector：面向分层模型服务栈优化的智能体",
+      "summary_zh": "该研究提出 FlashVector，一个可扩展的智能体系统，将单 GPU kernel 优化范式推广到异构技术栈，覆盖 GPU kernel、ML 框架计算图、模型服务器和按需特征处理等层级。在 Unity Vector 广告平台部署后，模型服务器上实现最高 2 倍吞吐提升和 1.98 倍延迟加速，特征处理吞吐提升最高 1.6 倍。",
+      "why_it_matters_zh": "模型服务是生产推荐系统的主要成本来源；该工作展示智能体跨层联合优化真实服务栈的潜力，可显著降低大规模推理成本。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "FlashVector: Agent for Hierarchical Model Serving Stack Optimization",
+        "url": "https://arxiv.org/abs/2609.17391v1",
+        "published_at": "2026-09-15T16:27:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "d2e7cbb626e4b7e7"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA Groq 3 LPX 确定性执行在 Vera Rubin 上实现高能效高交互推理",
+      "summary_zh": "NVIDIA 介绍 Groq 3 LPX 确定性执行如何驱动 NVIDIA Vera Rubin 上的高能效、高交互性推理。文章指出，功耗是 AI 工厂的定义性约束，随着 AI 工作负载要求完整计算平台，每个组件都必须最大化效率。",
+      "why_it_matters_zh": "确定性执行和能效优化是下一代 AI 基础设施的关键方向，影响大规模推理的交互延迟与运营成本。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "How NVIDIA Groq 3 LPX Deterministic Execution Drives Power-Efficient High-Interactivity Inference on NVIDIA Vera Rubin",
+        "url": "https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-deterministic-execution-drives-power-efficient-high-interactivity-inference-on-nvidia-vera-rubin/",
+        "published_at": "2026-09-15T16:55:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "c6e03db8a4d8b0f7"
+      ],
+      "category": "research",
+      "title_zh": "你的 Agent 通过了任务，但它能再次做到吗？",
+      "summary_zh": "Hugging Face 博客介绍 IBM Research 的 ALTK-Evolve 一致性评估，关注智能体在重复执行同一任务时能否稳定复现成功，而不仅仅是单次任务通过率。文章标题即点出核心问题：Agent 一次成功不代表再次成功。",
+      "why_it_matters_zh": "智能体评估正从单次成功率转向一致性与可复现性，这对生产环境部署和可靠性保障至关重要。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Your Agent Aced the Task. Will It Do It Again?",
+        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-consistency",
+        "published_at": "2026-09-15T16:00:44Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 185,
+    "normalized": 185,
+    "filtered": 149,
+    "ai_candidates": 30,
+    "prompt_chars": 21370,
+    "estimated_input_tokens": 5342,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
