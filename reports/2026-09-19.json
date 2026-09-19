@@ -1,0 +1,132 @@
+{
+  "date": "2026-09-19",
+  "generated_at": "2026-09-19T14:13:27.158011Z",
+  "run_id": "2026-09-19-e719ce48",
+  "daily_summary_zh": "今日高信号事件集中在推理基础设施、开源工具与 AI 研究：NVIDIA 发布 AIPerf 推理基准测试工具，llama.cpp 发布 b11053 改进服务器启动日志；研究方面，编码智能体 Harness 设计实证研究与 FAMOS 稀疏观测 3D 关节建模值得关注。",
+  "events": [
+    {
+      "id": "event-nvidia-aiperf",
+      "candidate_ids": [
+        "f67baf961d50ff27"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 发布 AIPerf：大规模 LLM 推理基准测试工具",
+      "summary_zh": "NVIDIA 开发者博客介绍 AIPerf，用于在大规模部署中基准测试 LLM 推理性能，帮助开发者评估系统速度与效率。",
+      "why_it_matters_zh": "随着 LLM 推理规模化部署成为常态，标准化、可复现的基准测试工具对选型、优化和容量规划至关重要。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Benchmarking LLM Inference at Scale with AIPerf",
+        "url": "https://developer.nvidia.com/blog/benchmarking-llm-inference-at-scale-with-aiperf/",
+        "published_at": "2026-09-18T19:04:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-harness-design",
+      "candidate_ids": [
+        "fcdd6effe026dd23"
+      ],
+      "category": "research",
+      "title_zh": "研究：编码智能体的 Harness 设计实证研究",
+      "summary_zh": "论文在 SWE-Bench Verified 和 Terminal-Bench 2.1 上评估 176 种匹配设置，发现上下文管理在预算紧张时价值最大，规则化省略先于 LLM 摘要可带来最高效率，规划的作用随模型能力变化。",
+      "why_it_matters_zh": "该研究首次系统比较编码智能体 harness 各组件贡献，为构建更高效、可靠的自主编程智能体提供实证指导。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "An Empirical Study of Harness Design for Coding Agents",
+        "url": "https://arxiv.org/abs/2609.20804v1",
+        "published_at": "2026-09-17T17:58:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llama-cpp-b11053",
+      "candidate_ids": [
+        "3b2f3d4bbc31562d"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11053：改进服务器启动日志",
+      "summary_zh": "llama.cpp 发布新版本 b11053，主要改进服务器启动日志，显示每个模型的来源（预设、模型目录或缓存），并公开 Hugging Face 缓存目录访问接口。",
+      "why_it_matters_zh": "llama.cpp 是本地推理的核心开源项目，日志与缓存管理改进有助于开发者排查问题和提升部署体验。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11053",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11053",
+        "published_at": "2026-09-19T13:23:12Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-famos",
+      "candidate_ids": [
+        "89775e75021fdd06"
+      ],
+      "category": "research",
+      "title_zh": "FAMOS：从稀疏观测进行前馈 3D 关节建模",
+      "summary_zh": "论文提出 FAMOS，一种前馈模型，可从稀疏、无序的局部点云集合预测可移动部件分割和关节参数，支持可变数量输入，并在 PartNet-Mobility、ACD 和 ArtiCraft-10K 上取得一致提升。",
+      "why_it_matters_zh": "从稀疏单目观测理解关节物体对机器人、3D 内容生成和具身智能具有重要价值，FAMOS 无需类别级先验即可推广。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "FAMOS: Feed-Forward 3D Articulation Modeling from Sparse Observations",
+        "url": "https://arxiv.org/abs/2609.20817v1",
+        "published_at": "2026-09-17T17:59:40Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 181,
+    "normalized": 181,
+    "filtered": 126,
+    "ai_candidates": 30,
+    "prompt_chars": 8920,
+    "estimated_input_tokens": 2230,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
