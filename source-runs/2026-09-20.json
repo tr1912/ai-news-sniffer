@@ -1,0 +1,814 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 177,
+  "normalized_count": 177,
+  "filtered_count": 109,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "APUS 开源国内首批Jev跨平台复现：国产模型实现秒级决策",
+        "url": "https://www.qbitai.com/2026/09/492939.html",
+        "published_at": "2026-09-20T08:30:32Z",
+        "fetched_at": "2026-09-20T14:37:21.168141Z",
+        "language": "unknown",
+        "excerpt": "9月19日，中国人工智能企业APUS旗下 AI 实验室公布了全球最早一批针对Jev的独立开源复现成果",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a31b4f5cdbbd6445",
+        "canonical_url": "https://www.qbitai.com/2026/09/492939.html",
+        "normalized_title": "apus 开源国内首批jev跨平台复现 国产模型实现秒级决策",
+        "fingerprint": "a31b4f5cdbbd6445a43a4ea7bc6c69b783bb1eb136c701b13b961d17da5cf0f2",
+        "rule_score": 61.25088888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "《网络安全人才实战能力报告-AI赋能篇》正式发布，当AI进入业务深水区安全如何跟上",
+        "url": "https://www.qbitai.com/2026/09/492849.html",
+        "published_at": "2026-09-20T02:48:18Z",
+        "fetched_at": "2026-09-20T14:37:21.168177Z",
+        "language": "unknown",
+        "excerpt": "9月18日，在第一届中国网络空间安全大会上，《网络安全人才实战能力报告—AI赋能篇》正式发布",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f2dd6b92d03bda7c",
+        "canonical_url": "https://www.qbitai.com/2026/09/492849.html",
+        "normalized_title": "网络安全人才实战能力报告 ai赋能篇 正式发布 当ai进入业务深水区安全如何跟上",
+        "fingerprint": "f2dd6b92d03bda7cff6375229a290cf2e3618c1553d4a72739b81d0c67b52fba",
+        "rule_score": 60.6805
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "谷歌AI首次“越狱”：竟然自己破解密码入侵三家公司！",
+        "url": "https://www.qbitai.com/2026/09/492912.html",
+        "published_at": "2026-09-20T08:01:13Z",
+        "fetched_at": "2026-09-20T14:37:21.168155Z",
+        "language": "unknown",
+        "excerpt": "亚马逊云科技给企业安全用Agent打了个样",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "十三",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ce6c66bac44dbdb5",
+        "canonical_url": "https://www.qbitai.com/2026/09/492912.html",
+        "normalized_title": "谷歌ai首次 越狱 竟然自己破解密码入侵三家公司",
+        "fingerprint": "ce6c66bac44dbdb56ecf303ecf4a9c5c5b2adc85a9505965e8bbe45d70f0aebf",
+        "rule_score": 57.20202777777778
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11063",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11063",
+        "published_at": "2026-09-20T12:28:06Z",
+        "fetched_at": "2026-09-20T14:37:15.038517Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\ncommon/peg : handle invalid utf-8 sequences in the AST (#29161)\n\n* common/peg : handle invalid utf-8 sequences in the AST\n\n* cont : return maximal subpart per Unicode recommendations\n\n* cont : remove strict argument\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/48751230>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11063/llama-b11063-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11063/llama-b11063-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11063/llama-b11063-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11063/llama-b11063-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11063/llama-b11063-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11063/llama",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 392424398
+        },
+        "id": "e710babb64403527",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11063",
+        "normalized_title": "llama cpp releases b11063",
+        "fingerprint": "e710babb6440352784a7bf47b4313ce0c50e48262422349af6c5ec230f3ce51c",
+        "rule_score": 56.64683333333333
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "一张3090就能跑！全栈国产模型，把AI办公搬到企业本地",
+        "url": "https://www.qbitai.com/2026/09/492946.html",
+        "published_at": "2026-09-20T12:22:41Z",
+        "fetched_at": "2026-09-20T14:37:21.168091Z",
+        "language": "unknown",
+        "excerpt": "AI办公这块蛋糕，中国电信可能要先切走一块了。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "henry",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bb3326f77fb92c35",
+        "canonical_url": "https://www.qbitai.com/2026/09/492946.html",
+        "normalized_title": "一张3090就能跑 全栈国产模型 把ai办公搬到企业本地",
+        "fingerprint": "bb3326f77fb92c3526b20df2bd5b0249e91543c98d64ab2306d6203e7dda4083",
+        "rule_score": 53.63780555555556
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "预售价31.98万-38.98万元，腾势Z9S展车抵达全国166城334家门店",
+        "url": "https://www.qbitai.com/2026/09/492873.html",
+        "published_at": "2026-09-20T07:51:09Z",
+        "fetched_at": "2026-09-20T14:37:21.168166Z",
+        "language": "unknown",
+        "excerpt": "腾势Z9S迎来成都车展首秀",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f00325c2ffe9f860",
+        "canonical_url": "https://www.qbitai.com/2026/09/492873.html",
+        "normalized_title": "预售价31 98万 38 98万元 腾势z9s展车抵达全国166城334家门店",
+        "fingerprint": "f00325c2ffe9f86083fca0c36d161ef10df18cf6bd68b04320bbbf360b4df6cd",
+        "rule_score": 49.185249999999996
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "AI hallucination nearly triggers US military operation",
+        "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/",
+        "published_at": "2026-09-18T23:12:32Z",
+        "fetched_at": "2026-09-20T14:37:21.296954Z",
+        "language": "unknown",
+        "excerpt": "“It’s important for service members to understand the uncertainty inherent to LLMs,\" a GovAI research scholar warns.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Aditya Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3d1349a03b776cbe",
+        "canonical_url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation",
+        "normalized_title": "ai hallucination nearly triggers us military operation",
+        "fingerprint": "3d1349a03b776cbea368261eeb282a529143a1a6226c60aa500afc8ec96b95ed",
+        "rule_score": 48.92088888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Flock reportedly tries to shrink workforce with employee buyouts",
+        "url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+        "published_at": "2026-09-19T20:39:13Z",
+        "fetched_at": "2026-09-20T14:37:21.296816Z",
+        "language": "unknown",
+        "excerpt": "Without buyouts, Flock would \"almost certainly\" need to lay off staff.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d881cac4db3bb212",
+        "canonical_url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts",
+        "normalized_title": "flock reportedly tries to shrink workforce with employee buyouts",
+        "fingerprint": "d881cac4db3bb212b43795d4de0017d12b06f6e6ed9d49dd8bd2fbba6672df03",
+        "rule_score": 47.06536111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
+        "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+        "published_at": "2026-09-19T19:57:47Z",
+        "fetched_at": "2026-09-20T14:37:21.296846Z",
+        "language": "unknown",
+        "excerpt": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4a94840d830dcf88",
+        "canonical_url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force",
+        "normalized_title": "trump says it s time to rebrand ai with a new name and he s also creating an ai force",
+        "fingerprint": "4a94840d830dcf883b292956b9207e5bf18e60c1dd848beba5d65023709eff31",
+        "rule_score": 46.99630555555556
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Google’s Gemini is the latest AI model to hack other companies",
+        "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+        "published_at": "2026-09-19T17:30:00Z",
+        "fetched_at": "2026-09-20T14:37:21.296858Z",
+        "language": "unknown",
+        "excerpt": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b3e7264acb491113",
+        "canonical_url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies",
+        "normalized_title": "google s gemini is the latest ai model to hack other companies",
+        "fingerprint": "b3e7264acb491113c9d3604f6d171603d08e1733dfbec27d1727bc9a64a6029a",
+        "rule_score": 46.75
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Petlibro’s new AI-powered feeder is a game changer for multi-cat homes",
+        "url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+        "published_at": "2026-09-19T15:00:00Z",
+        "fetched_at": "2026-09-20T14:37:21.296869Z",
+        "language": "unknown",
+        "excerpt": "Petlibro's new Granary 2 smart feeders use a built-in scale and (on pricier models) an AI camera to track exactly how much your cat is eating and when — though the fanciest health-monitoring features will cost you an extra subscription.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lauren Forristal",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0bf655f8803fa88a",
+        "canonical_url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes",
+        "normalized_title": "petlibro s new ai powered feeder is a game changer for multi cat homes",
+        "fingerprint": "0bf655f8803fa88a9e2a748146bbe024e9ebe116e26fae7bf93f9ca0a9326d6b",
+        "rule_score": 46.5
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "AI safety conversations have gotten unbelievable",
+        "url": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/",
+        "published_at": "2026-09-19T15:00:00Z",
+        "fetched_at": "2026-09-20T14:37:21.296880Z",
+        "language": "unknown",
+        "excerpt": "This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Julie Bort",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9183e390d40a457e",
+        "canonical_url": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable",
+        "normalized_title": "ai safety conversations have gotten unbelievable",
+        "fingerprint": "9183e390d40a457eb0df4ff0c79fbcdd57abc6fec0c23e80a479b31c9bed79b1",
+        "rule_score": 46.5
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI and Microsoft knew they were starting a 'doom loop' for the web",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
+        "published_at": "2026-09-20T08:07:08Z",
+        "fetched_at": "2026-09-20T14:37:24.738898Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sbulaev",
+        "upstream_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero"
+        ],
+        "raw_metadata": {
+          "hn_id": 49773624,
+          "score": 26
+        },
+        "id": "e0f5c0c404f85f53",
+        "canonical_url": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
+        "normalized_title": "openai and microsoft knew they were starting a doom loop for the web",
+        "fingerprint": "e0f5c0c404f85f53b653d402e34ded1ae1fd40ad11a1d3f75198443300b034cc",
+        "rule_score": 45.211888888888886
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Unifying Models of Intergroup Hostility in Online Discourse",
+        "url": "https://arxiv.org/abs/2609.20808v1",
+        "published_at": "2026-09-17T17:58:25Z",
+        "fetched_at": "2026-09-20T14:37:13.728313Z",
+        "language": "unknown",
+        "excerpt": "Hostile rhetoric toward social groups can normalize exclusion and justify mistreatment, as well as contribute to rising polarization and political violence. Efforts to moderate hostile rhetoric in online speech draw on foundational theories in social and moral psychology, and political science. However, these theories were developed largely in parallel, often propose different and sometimes conflicting accounts of how hostility develops, and have rarely been tested against each other in real discourse. The result is a fragmented understanding of the rhetorical mechanisms of hostility, without a clear sense of how they appear, and relate to each other, in real-world discourse. Using 2.86 million posts from TikTok, Truth Social, and Twitter/X during the 2024 U.S. presidential election, we model the mechanisms of six foundational theories of intergroup hostility -- boundary construction, threat construction, scapegoating, negative evaluation, dehumanization, and action orientation -- within a common empirical framework to recover the broader organization of intergroup hostility rhetoric. Structurally, we find that boundary construction and threat construction anchor the system; tempor",
+        "categories": [
+          "research"
+        ],
+        "author": "Kristina Lerman",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "088adb1b436699f6",
+        "canonical_url": "https://arxiv.org/abs/2609.20808v1",
+        "normalized_title": "unifying models of intergroup hostility in online discourse",
+        "fingerprint": "088adb1b436699f69cd391e895b36ee35fe7fee77be2c47008c19aaa431782e0",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "JEPA-Anything: Learning Predictive Models across Different Worlds",
+        "url": "https://arxiv.org/abs/2609.20800v1",
+        "published_at": "2026-09-17T17:55:57Z",
+        "fetched_at": "2026-09-20T14:37:13.728344Z",
+        "language": "unknown",
+        "excerpt": "World modeling enables intelligence to anticipate consequences, guide interventions, and learn from interaction. Yet predictive models remain domain-specific: can a common learning principle support world modeling across radically different systems? We introduce JEPA-Anything, a domain-agnostic framework based on orthogonal predictive factorization (OPF). Extending joint-embedding predictive architectures, OPF decomposes latent targets into complementary factors, learns them through dedicated pathways, and recombines them within a shared predictive design. We evaluate JEPA-Anything across seven domains: vision, biology, clinical trajectories, control, molecular dynamics, physical fields, and weather. Experiments span representation learning, intervention prediction, out-of-distribution generalization, and long-horizon dynamics, including 10 matched dynamics tasks, forecasting of over 1,000 clinical events, and 100-step molecular rollouts across four systems. Against matched JEPA baselines, JEPA-Anything improves reported metrics on all 10 dynamics tasks and reduces single-intervention prediction error on Interventional Pong by 34.8%. It achieves the lowest one-step and 100-step mol",
+        "categories": [
+          "research"
+        ],
+        "author": "Ling Yang",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1193989306c9e066",
+        "canonical_url": "https://arxiv.org/abs/2609.20800v1",
+        "normalized_title": "jepa anything learning predictive models across different worlds",
+        "fingerprint": "1193989306c9e0665027e22533580a1955cc6cddf3fd97f6cf7dd0130abd26a2",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "GeoAAC: Geometry-Based Adaptive Action Chunking from Denoising Trajectories in VLA Policies",
+        "url": "https://arxiv.org/abs/2609.20776v1",
+        "published_at": "2026-09-17T17:48:07Z",
+        "fetched_at": "2026-09-20T14:37:13.728388Z",
+        "language": "unknown",
+        "excerpt": "Action chunking is widely used for action generation and execution in Vision-Language-Action (VLA) policies, yet existing approaches commonly use a fixed action horizon. During a rollout, different task stages may require different levels of action continuity, control precision, and closed-loop feedback, making a fixed horizon unable to accommodate changing control requirements. We propose \\textbf{GeoAAC}, a geometry-based adaptive action chunking method for flow-based VLA policies that adjusts the action horizon according to the reliability of the current action prediction. We show that the geometry of Flow Matching denoising trajectories provides process-level information for characterizing prediction reliability, with geometric variation across action prefixes remaining positively correlated with predictive uncertainty. GeoAAC uses this prefix-wise geometry to construct a horizon-wise geometric profile and adaptively determine the action horizon from a single generation without additional training. Experiments with GR00T N1.5 and π0.5 on LIBERO, LIBERO-Pro, RoboCasa365, and real-world manipulation tasks show consistent improvements over fixed-action-horizon baselines and existin",
+        "categories": [
+          "research"
+        ],
+        "author": "Yi Bin",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3f6f9085fbbb5ef3",
+        "canonical_url": "https://arxiv.org/abs/2609.20776v1",
+        "normalized_title": "geoaac geometry based adaptive action chunking from denoising trajectories in vla policies",
+        "fingerprint": "3f6f9085fbbb5ef3d85a46503c33e5e9b430b314033a4af4fffdfc6ff0ce90a7",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Calibrated RF-Fingerprinting Under Interference With Heterogeneous Transmission Protocols",
+        "url": "https://arxiv.org/abs/2609.20765v1",
+        "published_at": "2026-09-17T17:44:22Z",
+        "fetched_at": "2026-09-20T14:37:13.728408Z",
+        "language": "unknown",
+        "excerpt": "Radio Frequency(RF)-Fingerprinting is a spectrum monitoring technique that identifies specific transmitters based on hardware impairments imprinted within the emitted signal. Although widely researched, studies almost exclusively consider scenarios where only one transmitter is emitting at a time, limiting real world applicability. In this work, we further the study of RF-Fingerprinting by considering co-channel interference, with multiple emitted signals interfering with each other, overlapping in time and frequency. Specifically, we formulate this problem as a multi-label classification problem and employ a 1D convolutional neural network (CNN). Furthermore, the models are calibrated such that the confidence thresholds for the label probabilities are derived, with guarantees on the upper bound on the average number of False Negatives, providing a degree of confidence in not missing a true spectrum policy violation. The proposed method is validated using real world data from the POWDER 5G testbed on devices transmitting 802.11a(Wi-Fi), 4G LTE, and 5G NR waveforms. The results show accuracy as high as 97% and as low as 73% after calibration depending on channel conditions. Also cal",
+        "categories": [
+          "research"
+        ],
+        "author": "Lijun Qian",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "49c10806a00e7a72",
+        "canonical_url": "https://arxiv.org/abs/2609.20765v1",
+        "normalized_title": "calibrated rf fingerprinting under interference with heterogeneous transmission protocols",
+        "fingerprint": "49c10806a00e7a7209469ecc5991ec0039ef7eda3a8397682b8513cb83897178",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "OPTED: On-Policy Fine-Tuning for End-to-End Driving using a Render-Free Teacher",
+        "url": "https://arxiv.org/abs/2609.20756v1",
+        "published_at": "2026-09-17T17:41:51Z",
+        "fetched_at": "2026-09-20T14:37:13.728439Z",
+        "language": "unknown",
+        "excerpt": "As scaling pre-training data alone yields diminishing returns, post-training is becoming increasingly important across physical AI domains such as autonomous driving. End-to-end driving policies are pre-trained in open loop with behavior cloning on human demonstrations. However, compounding errors during closed-loop deployment can take the vehicle outside the training data distribution, increasing the risk of safety-critical incidents. Closed-loop post-training can mitigate this risk but requires costly simulation for sensor-based policies. We propose OPTED (on-policy fine-tuning for end-to-end driving) which decouples reinforcement learning from the post-training of the end-to-end policy: a privileged teacher is trained using RL on vectorized inputs (HD-map and bounding boxes). This teacher then provides supervision to the pre-trained student during closed-loop post-training. We apply OPTED to two camera-based models, TransFuser and VaVAM, and fine-tune them in AlpaSim, using neural reconstructions (3DGS) of real driving logs. Driving scores increase by factors of 1.6$\\times$ and 9.5$\\times$, respectively. In controlled experiments OPTED matches closed-loop performance with approx",
+        "categories": [
+          "research"
+        ],
+        "author": "Christos Sakaridis",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3da65027e6012f91",
+        "canonical_url": "https://arxiv.org/abs/2609.20756v1",
+        "normalized_title": "opted on policy fine tuning for end to end driving using a render free teacher",
+        "fingerprint": "3da65027e6012f915044a919b41d8ed34e35f7315fd82f258795fae4d60323dc",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Large Language Models as Falsifiers for Cyber-Physical Systems",
+        "url": "https://arxiv.org/abs/2609.20752v1",
+        "published_at": "2026-09-17T17:40:04Z",
+        "fetched_at": "2026-09-20T14:37:13.728460Z",
+        "language": "unknown",
+        "excerpt": "Falsification searches for counterexamples to formal specifications in cyber-physical systems (CPS). With specifications written in Signal Temporal Logic (STL), falsification can be formulated as a robustness optimization problem, traditionally tackled with black-box search algorithms. In parallel, large language models (LLMs) have recently emerged as surprisingly effective optimizers when coupled with iterative prompting. In this work, we connect these ideas and introduce LLM-Falsifier, an LLM-based approach that falsifies specifications by minimizing the STL robustness degree. Beyond generic prompt-based optimization, our key idea is to expose the LLM to semantic information that is natural for language models but absent from standard numerical optimizers, including natural-language input and output names, output trajectories, and critical-time witnesses for the minimum robustness value. These additions enable smarter and more sample-efficient robustness search. On the ARCH-COMP falsification benchmarks, LLM-Falsifier is shown to outperform existing falsification tools based on a range of optimization paradigms, from surrogate-based and Bayesian optimization to search-based testi",
+        "categories": [
+          "research"
+        ],
+        "author": "Stanley Bak",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5fe1fde218568b68",
+        "canonical_url": "https://arxiv.org/abs/2609.20752v1",
+        "normalized_title": "large language models as falsifiers for cyber physical systems",
+        "fingerprint": "5fe1fde218568b688f212c27c795e5981a2a5a14f2c059fb77a1ebca06b048fd",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "dQwen3.5: Hybrid-Attention Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2609.20751v1",
+        "published_at": "2026-09-17T17:39:46Z",
+        "fetched_at": "2026-09-20T14:37:13.728469Z",
+        "language": "unknown",
+        "excerpt": "Adapting a pretrained autoregressive (AR) model is a cost-efficient route to a diffusion language model (DLM). While nearly all such adaptations start from a full-attention transformer, AR modeling has shifted toward hybrid architectures that interleave attention and RNN layers. This creates an obstacle for adaptation: unlike attention, RNNs are structurally causal and nontrivial to bidirectionalize. Despite this mismatch, we investigate whether such backbones can become effective DLMs by adapting Qwen3.5 at 0.8B, 2B, 4B, and 9B scales, yielding the dQwen3.5 family. We find that hybrid backbones can be efficient starting points for adaptation: against a full-attention control, the hybrid reaches a given training loss in about half the tokens. Across scales, dQwen3.5 resembles full-attention DLMs in any-order decoding behavior and performs strongly under parallel decoding.",
+        "categories": [
+          "research"
+        ],
+        "author": "Sanjay Shakkottai",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9633f19e245b5967",
+        "canonical_url": "https://arxiv.org/abs/2609.20751v1",
+        "normalized_title": "dqwen3 5 hybrid attention diffusion language models",
+        "fingerprint": "9633f19e245b59675f5e54587f6adb9abec4304f07d0af123b3cb93886d97cd8",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "MILER: Semantic Mid-Level Representation for Sim-to-Real Reinforcement Learning in Unstructured Autonomous Driving",
+        "url": "https://arxiv.org/abs/2609.20747v1",
+        "published_at": "2026-09-17T17:35:22Z",
+        "fetched_at": "2026-09-20T14:37:13.728478Z",
+        "language": "unknown",
+        "excerpt": "Reinforcement learning constitutes a promising approach owing to its potential for superhuman performance and self-learned policies. However, its application to real-world autonomous driving remains scarce, particularly in unstructured environments, because of the challenges associated with sim-to-real transfer for unstructured environments. In this work, we present MILER, an end-to-end policy framework with zero-shot sim-to-real transfer. During offline training, we employ a custom semantic mid-level representation (MLR) simulator and train the policy network using reinforcement learning, with its control outputs applied directly to a bicycle model. During deployment on the real vehicle, camera and LiDAR data are processed by BEVFusion to generate a semantic bird's-eye-view representation consistent with that of the MLR simulator. The actions generated by the policy network are not applied directly to the real vehicle. Instead, we employ a trajectory-alignment strategy that enables zero-shot sim-to-real transfer of both perception and control. We extensively evaluate the proposed framework on a diverse test track comprising numerous challenges, including various obstacles, hairpin",
+        "categories": [
+          "research"
+        ],
+        "author": "Mirko Maehlisch",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7681e7fcca0df43f",
+        "canonical_url": "https://arxiv.org/abs/2609.20747v1",
+        "normalized_title": "miler semantic mid level representation for sim to real reinforcement learning in unstructured autonomous driving",
+        "fingerprint": "7681e7fcca0df43fb77e6172c3febca94d431980ac4873c0c5e0540346d21c30",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "6 days left to get ahead at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026/",
+        "published_at": "2026-09-20T14:00:00Z",
+        "fetched_at": "2026-09-20T14:37:21.296771Z",
+        "language": "unknown",
+        "excerpt": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "469690e2dad39a9f",
+        "canonical_url": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026",
+        "normalized_title": "6 days left to get ahead at techcrunch disrupt 2026",
+        "fingerprint": "469690e2dad39a9f3569de1d040366db3c29d1d259cc89627f70d5a49d56480f",
+        "rule_score": 44.8
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "PyPy v8.0.0 Release",
+        "url": "https://pypy.org/posts/2026/09/pypy-v800-release.html",
+        "published_at": "2026-09-19T22:40:42Z",
+        "fetched_at": "2026-09-20T14:37:23.299504Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "lumpa",
+        "upstream_urls": [
+          "https://pypy.org/posts/2026/09/pypy-v800-release.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49770701,
+          "score": 43
+        },
+        "id": "1f5f4ad74d095ea1",
+        "canonical_url": "https://pypy.org/posts/2026/09/pypy-v800-release.html",
+        "normalized_title": "pypy v8 0 0 release",
+        "fingerprint": "1f5f4ad74d095ea15ae24e8cd1863b7b8823cd608e929351783d018bc8e23841",
+        "rule_score": 44.267833333333336
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Prices go up in 7 days. Get your Disrupt ticket now.",
+        "url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+        "published_at": "2026-09-19T14:00:00Z",
+        "fetched_at": "2026-09-20T14:37:21.296891Z",
+        "language": "unknown",
+        "excerpt": "Current ticket pricing ends Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "dab5689b537cc0fd",
+        "canonical_url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now",
+        "normalized_title": "prices go up in 7 days get your disrupt ticket now",
+        "fingerprint": "dab5689b537cc0fdd997b064e0974dff31d91f209d78416f7a0e0898ec52529b",
+        "rule_score": 42.4
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Big Tech uses guarantees to keep $300B AI exposure off balance sheets",
+        "url": "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563",
+        "published_at": "2026-09-20T12:07:10Z",
+        "fetched_at": "2026-09-20T14:37:23.341203Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sbulaev",
+        "upstream_urls": [
+          "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563"
+        ],
+        "raw_metadata": {
+          "hn_id": 49774991,
+          "score": 17
+        },
+        "id": "4e77878c814f6521",
+        "canonical_url": "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563",
+        "normalized_title": "big tech uses guarantees to keep 300b ai exposure off balance sheets",
+        "fingerprint": "4e77878c814f6521764cd8d1cacfc044e9aa1e63fe6e0d019d025b33119a3fa3",
+        "rule_score": 41.61194444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "If AI coding is lowering your code quality, you're not managing quality right",
+        "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+        "published_at": "2026-09-20T11:37:10Z",
+        "fetched_at": "2026-09-20T14:37:23.928465Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "bucket2015",
+        "upstream_urls": [
+          "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code"
+        ],
+        "raw_metadata": {
+          "hn_id": 49774795,
+          "score": 56
+        },
+        "id": "696c85a5990f9503",
+        "canonical_url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+        "normalized_title": "if ai coding is lowering your code quality you re not managing quality right",
+        "fingerprint": "696c85a5990f95031f982a9295200ed2c2bb18c7bfbdb131342f682f1fe82dd6",
+        "rule_score": 41.56194444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Romanian Crime Rings Are Draining U.S. Welfare Accounts",
+        "url": "https://www.wsj.com/us-news/how-romanian-crime-rings-are-draining-u-s-welfare-accounts-c9750d32",
+        "published_at": "2026-09-20T11:24:15Z",
+        "fetched_at": "2026-09-20T14:37:23.768975Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "impish9208",
+        "upstream_urls": [
+          "https://www.wsj.com/us-news/how-romanian-crime-rings-are-draining-u-s-welfare-accounts-c9750d32"
+        ],
+        "raw_metadata": {
+          "hn_id": 49774703,
+          "score": 10
+        },
+        "id": "e7956335748f3828",
+        "canonical_url": "https://www.wsj.com/us-news/how-romanian-crime-rings-are-draining-u-s-welfare-accounts-c9750d32",
+        "normalized_title": "romanian crime rings are draining u s welfare accounts",
+        "fingerprint": "e7956335748f3828b74f18bd0bccd4c2144fa78145d4ae61f76a32b89ae26d45",
+        "rule_score": 41.540416666666665
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I'm Tired of the AI Tone",
+        "url": "https://sagivo.com/blog/im-tired-of-the-ai-tone",
+        "published_at": "2026-09-20T11:18:26Z",
+        "fetched_at": "2026-09-20T14:37:25.240079Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sagivo",
+        "upstream_urls": [
+          "https://sagivo.com/blog/im-tired-of-the-ai-tone"
+        ],
+        "raw_metadata": {
+          "hn_id": 49774665,
+          "score": 40
+        },
+        "id": "45928851eb60c0fa",
+        "canonical_url": "https://sagivo.com/blog/im-tired-of-the-ai-tone",
+        "normalized_title": "i m tired of the ai tone",
+        "fingerprint": "45928851eb60c0fa669f0147b0782a07e018e78d94d90eeed0d1ca6a72e7a24f",
+        "rule_score": 41.530722222222224
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI and the Destruction of the Creative Commons",
+        "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
+        "published_at": "2026-09-20T10:07:51Z",
+        "fetched_at": "2026-09-20T14:37:23.024520Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rakel_rakel",
+        "upstream_urls": [
+          "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49774329,
+          "score": 193
+        },
+        "id": "22d150107ba9f6a2",
+        "canonical_url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons",
+        "normalized_title": "ai and the destruction of the creative commons",
+        "fingerprint": "22d150107ba9f6a20712dc3038f59423136eb09b06611d9ffa624383ca592c38",
+        "rule_score": 41.41308333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Microsoft agentically ports Copilot runtime to Rust for $120K",
+        "url": "https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549",
+        "published_at": "2026-09-20T09:08:52Z",
+        "fetched_at": "2026-09-20T14:37:24.930962Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pjmlp",
+        "upstream_urls": [
+          "https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549"
+        ],
+        "raw_metadata": {
+          "hn_id": 49773998,
+          "score": 40
+        },
+        "id": "2d828088b2ecb2ac",
+        "canonical_url": "https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549",
+        "normalized_title": "microsoft agentically ports copilot runtime to rust for 120k",
+        "fingerprint": "2d828088b2ecb2ac7425cb6145cb51d23d819e36a92cddda90ea2d3235a9766a",
+        "rule_score": 41.31477777777778
+      }
+    ],
+    "prompt_chars": 14151,
+    "estimated_input_tokens": 3537
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
