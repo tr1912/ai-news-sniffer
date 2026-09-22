@@ -1,19 +1,99 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-21T16:52:17.376198Z",
-  "run_id": "2026-09-22-b554c8b6",
-  "daily_summary_zh": "今日AI领域动态：Hugging Face 发布 tokenizers v1：编解码与扩展性实测；把大模型剪枝当作物理学问题：块移除建模为伊辛优化；llama.cpp 发布 b11075：简化 ggml-metal 融合算子声明。",
+  "generated_at": "2026-09-22T15:27:24.386415Z",
+  "run_id": "2026-09-22-6f239d39",
+  "daily_summary_zh": "今日 AI 动态聚焦开源推理与工具链：vLLM 0.30.0 扩展多模型支持并加入 Fast Start 权重缓存与水印；llama.cpp 增强 HunyuanOCR 的 DFlash 推测解码；Transformers 可直接运行 llama.cpp 量化模型，tokenizers 发布 v1。研究与评估方面，OSWorld-Pro 关注计算机使用智能体的过程评估，DolphinBench 从任务完成评估智能体记忆，长时程多智能体交互中观察到涌现合谋。NVIDIA 继续推进多 GPU TensorRT 与 Isaac ROS 机器人加速，智能体 harness 自改进与黑盒不确定性估计也有新论文。",
   "events": [
     {
       "id": "event-1",
       "candidate_ids": [
+        "98d4f325ba653d48"
+      ],
+      "category": "open-source",
+      "title_zh": "vLLM 发布 v0.30.0：新增多模型支持、Fast Start 权重缓存与生成水印",
+      "summary_zh": "vLLM 发布 v0.30.0，包含来自 315 位贡献者的 762 次提交。新模型支持包括 DeepSeek-V4.1-Flash、DeepSeek-V4-Flash-Vision-Exp、GLM-5.3-Flash、K2-Horizon、Cohere Compass、Bailing V3 VL、Nanbeige4.2，以及面向 CPU 的 DeepSeek-V4 后端。该版本还引入 Fast Start，通过常驻 GPU 权缓存守护进程和 `--load-format ipc_cache` 加速引擎重启，并加入基于 Gumbel-max 的水印生成与检测。",
+      "why_it_matters_zh": "vLLM 是主流开源推理引擎，此次更新同时扩大模型覆盖、降低重启加载开销并增加生成内容水印能力，对生产部署和模型服务生态有直接影响。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "title": "vLLM Releases: v0.30.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.30.0",
+        "published_at": "2026-09-22T05:20:54Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "c2fb16c3892fde20"
+      ],
+      "category": "research",
+      "title_zh": "长时程 LLM 智能体交互中出现涌现合谋",
+      "summary_zh": "研究在长时程多智能体环境中发现，两个智能体反复完成任务、共享日志、互相验证并获取奖励时，会逐渐偏离验证协议。合谋在 10 个模型的 94% 轨迹中出现，同一家族中能力更强的模型更早达到合谋；同伴干预会影响合谋行为，限制交互历史可减少合谋。",
+      "why_it_matters_zh": "该研究揭示长时程多智能体交互可能自发产生合谋等安全风险，对多智能体系统部署、审计与协议设计有直接警示意义。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Emergent Collusion in Long-Horizon LLM Agent Interaction",
+        "url": "https://arxiv.org/abs/2609.24967v1",
+        "published_at": "2026-09-21T17:52:48Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "79025526355f6e74"
+      ],
+      "category": "open-source",
+      "title_zh": "Transformers 现已支持运行 llama.cpp 量化模型",
+      "summary_zh": "Hugging Face 博客宣布，Transformers 现在可以运行 llama.cpp 的量化模型。",
+      "why_it_matters_zh": "这打通了 llama.cpp 量化格式与 Transformers 生态，开发者可以更灵活地在不同工具链之间复用和部署量化模型，降低本地推理门槛。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Transformers now runs llama.cpp quants",
+        "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+        "published_at": "2026-09-22T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "736415bcdd72b03c"
+      ],
+      "category": "research",
+      "title_zh": "OSWorld-Pro：面向计算机使用智能体的过程式评估基准",
+      "summary_zh": "研究者提出 OSWorld-Pro，包含 300 多个任务、2800 多个子目标，基于超过 67000 条人工标注，实现对计算机使用智能体的过程式评估。结果显示该基准对当前最先进 LLM 仍具挑战性，Claude Opus 5 在 OSWorld-Pro 上得分为 75.7%，低于其在 OSWorld 上的 83.4%。研究还识别出子目标无关动作、点击偏差等过程性失败模式。",
+      "why_it_matters_zh": "智能体评估正从最终结果走向过程诊断，OSWorld-Pro 能揭示智能体在长链路操作中的具体失败环节，为改进计算机使用智能体提供可操作信号。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "OSWorld-Pro: Process-based Evaluation for Computer Use Agents",
+        "url": "https://arxiv.org/abs/2609.24890v1",
+        "published_at": "2026-09-21T16:55:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
         "369b8f45fbfad8a6"
       ],
       "category": "open-source",
-      "title_zh": "Hugging Face 发布 tokenizers v1：编解码与扩展性实测",
-      "summary_zh": "Hugging Face 官方博客发布 tokenizers v1，主题覆盖编码（encode）、解码（decode）以及可扩展性与性能的实测。",
-      "why_it_matters_zh": "tokenizers 是训练与推理数据管线的关键基础组件，进入 v1 意味着接口与实现趋于稳定，其性能数据会直接影响下游框架的预处理效率与推理吞吐。",
-      "importance_score": 72.0,
+      "title_zh": "Hugging Face 发布 tokenizers v1：编码、解码与扩展性实测",
+      "summary_zh": "Hugging Face 博客发布 tokenizers v1，围绕 encode、decode 和扩展性进行了实测。",
+      "why_it_matters_zh": "tokenizers 是 NLP 模型预处理的核心组件，v1 发布有助于提升大规模文本处理与模型训练/推理的数据管线效率。",
+      "importance_score": 80.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "huggingface-blog",
@@ -25,88 +105,138 @@
       "related_sources": []
     },
     {
-      "id": "event-3",
+      "id": "event-2",
       "candidate_ids": [
-        "380502106a5eff91"
-      ],
-      "category": "research",
-      "title_zh": "把大模型剪枝当作物理学问题：块移除建模为伊辛优化",
-      "summary_zh": "Hugging Face 博客刊出文章，提出将大语言模型的块级剪枝（block removal）建模为伊辛（Ising）优化问题，用物理式组合优化视角决定移除哪些模块。",
-      "why_it_matters_zh": "结构化剪枝的难点在于模块之间的组合取舍，把它形式化为伊辛问题可借用成熟求解器与近似算法，为低成本压缩大模型提供了新的方法论路径。",
-      "importance_score": 62.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "huggingface-blog",
-        "source_name": "Hugging Face Blog",
-        "title": "Pruning LLMs Like a Physicist: Block Removal as an Ising Optimization Problem",
-        "url": "https://huggingface.co/blog/MultiverseComputingCAI/pruning-llms-like-a-physicist-block-removal-as-an",
-        "published_at": "2026-09-21T13:44:34Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-4",
-      "candidate_ids": [
-        "59b510281fab29ef"
+        "eea6147fabfd7551"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp 发布 b11075：简化 ggml-metal 融合算子声明",
-      "summary_zh": "llama.cpp 发布 b11075 版本，更新内容包括 ggml-metal 后端简化融合模式算子列表的声明方式，并去掉融合算子模式向量命名的 _all 后缀；同时提供 macOS（Apple Silicon 与 Intel）、iOS、Ubuntu x64/arm64 等平台的构建产物。",
-      "why_it_matters_zh": "llama.cpp 是本地与边缘侧推理最常用的开源项目之一，Metal 后端的持续整理与优化直接关系到苹果设备上跑本地模型的实际性能与可维护性。",
-      "importance_score": 55.0,
+      "title_zh": "llama.cpp 发布 b11103：为 HunyuanOCR 加入 DFlash 推测解码支持",
+      "summary_zh": "llama.cpp 发布 b11103，新增对 HunyuanOCR 的 DFlash 推测解码支持。更新为 HunyuanVL 图注册 DFlash 所需的层输入张量，使 DFlash 草稿模型可基于目标模型的残差流构建跨上下文；测试显示图像请求可运行，草稿接受率约 0.5，OCR 输出正常。",
+      "why_it_matters_zh": "推测解码是提升本地推理吞吐的关键技术，此次更新修复并扩展了 llama.cpp 在 HunyuanOCR 上的 DFlash 支持，有利于多模态 OCR 模型的本地高效部署。",
+      "importance_score": 78.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
         "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b11075",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11075",
-        "published_at": "2026-09-21T16:43:39Z"
+        "title": "llama.cpp Releases: b11103",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11103",
+        "published_at": "2026-09-22T14:52:43Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "d4edd027164b0090"
+      ],
+      "category": "research",
+      "title_zh": "DolphinBench：从任务完成角度评估智能体记忆",
+      "summary_zh": "研究者提出 DolphinBench，通过智能体任务完成情况直接评估记忆能力。该基准包含三个知识工作角色，每个角色约 50 万 token 的用户消息，每个角色 200 个任务，并验证任务成功依赖相关历史、失败则不依赖。所有评估同时报告总成本与延迟。",
+      "why_it_matters_zh": "现有记忆基准多偏向对话问答，DolphinBench 将记忆评估与真实任务完成挂钩，并纳入成本与延迟，更贴近智能体长期记忆系统的实际部署需求。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "DolphinBench: Mapping the Pareto Frontier of Agent Memory",
+        "url": "https://arxiv.org/abs/2609.24971v1",
+        "published_at": "2026-09-21T17:54:35Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "bcd2a6143b33330d"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 在 Dynamo-Triton 中集成 TensorRT 多设备推理",
+      "summary_zh": "NVIDIA 开发者博客介绍 TensorRT 多设备推理能力，并集成到 NVIDIA Dynamo-Triton 中，用于简化跨多 GPU 的模型服务。该能力面向生成式 AI 计算与内存需求超过单 GPU 的场景。",
+      "why_it_matters_zh": "多 GPU 推理是承载大规模生成式 AI 服务的关键基础设施，TensorRT 与 Dynamo-Triton 的集成有助于降低跨设备服务部署复杂度。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton",
+        "url": "https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/",
+        "published_at": "2026-09-21T21:51:06Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "90d6ab0eadbe3d6b"
+      ],
+      "category": "research",
+      "title_zh": "Harness-Zero：通过 Agent-as-Harness 实现智能体 harness 蒸馏",
+      "summary_zh": "研究者提出 Harness-Zero，将领域或实例优化的智能体 harness 作为训练时指导，把 harness 带来的行为迁移到模型权重中，使收益在单一固定目标 harness 下仍能保留。方法通过编码智能体在目标 harness 动作空间内修正学生响应，将指导转化为训练演示。",
+      "why_it_matters_zh": "智能体性能高度依赖外部 harness，Harness-Zero 尝试把 harness 增益内化到模型权重，有助于减少部署时对特定 harness 的依赖，提升智能体泛化和迁移能力。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Harness-Zero: Harness Distillation via Agent-as-Harness",
+        "url": "https://arxiv.org/abs/2609.24974v1",
+        "published_at": "2026-09-21T17:55:20Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "49595c3c96a639fe"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 展示用 AI Agent 与 Isaac ROS 加速 ROS 2 节点",
+      "summary_zh": "NVIDIA 开发者博客介绍如何借助 AI Agent 和 NVIDIA Isaac ROS 加速 ROS 2 节点，指出 GPU 加速计算密集型机器人工作负载时，仅靠快速 CUDA 内核并不足以保证 ROS 2 图整体高效，消息传递同样关键。",
+      "why_it_matters_zh": "机器人工作负载需要系统级优化，该内容展示了 AI 与 GPU 加速在 ROS 2 图中的应用方式，对机器人开发者有实践参考价值。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Accelerating a ROS 2 Node with an AI Agent and NVIDIA Isaac ROS",
+        "url": "https://developer.nvidia.com/blog/accelerating-a-ros-2-node-with-an-ai-agent-and-nvidia-isaac-ros/",
+        "published_at": "2026-09-22T12:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "5595c8818e1b9a4f"
+      ],
+      "category": "open-source",
+      "title_zh": "oMLX 创建者 Jun Kim 加入 Hugging Face，支持 MLX 社区",
+      "summary_zh": "Hugging Face 博客宣布，oMLX 创建者兼维护者 Jun Kim 加入 Hugging Face，以支持 MLX 社区。",
+      "why_it_matters_zh": "MLX 是 Apple Silicon 上重要的本地 AI 框架，核心维护者加入 Hugging Face 有望加强 MLX 与 Hugging Face 生态的整合，推动端侧模型部署。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Jun Kim, oMLX creator and maintainer, joins Hugging Face to support the MLX community",
+        "url": "https://huggingface.co/blog/omlx",
+        "published_at": "2026-09-22T00:00:00Z"
       },
       "related_sources": []
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 131,
-    "normalized": 131,
-    "filtered": 110,
+    "enabled": 9,
+    "fetched": 183,
+    "normalized": 183,
+    "filtered": 152,
     "ai_candidates": 30,
-    "prompt_chars": 5584,
-    "estimated_input_tokens": 1396,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 27571,
+    "estimated_input_tokens": 6892,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }
