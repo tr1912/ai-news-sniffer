@@ -1,0 +1,221 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T15:21:38.440450Z",
+  "run_id": "2026-09-23-16adbbf6",
+  "daily_summary_zh": "今日技术侧以智能体系统与推理效率为主线：CliffCompaction 通过忠实截断式压缩把长程编码智能体的成本降幅做到最高约 50%，SWE-Serve 则把智能体评测推进到生产推理服务工程；扩散语言模型加速（Flash-dLLM）、自生长 harness、无中心编排的千智能体系统、混合粒度多智能体图等一批工作集中出现。安全侧，A2M 揭示 MCP 生态的工具元数据投毒风险。官方与标准侧，NVIDIA 发布 Nemotron 3 说话人分离方案与机密计算推理方案，英国 AISI 联合 EvalEval 推进基准可复现。开源工具链方面，llama.cpp 新增 OpenAI video_url 视频输入支持并开始发布骁龙 NPU 构建。",
+  "events": [
+    {
+      "id": "event-cliffcompaction",
+      "candidate_ids": [
+        "829bbfbc0a68a851"
+      ],
+      "category": "research",
+      "title_zh": "CliffCompaction：面向长程编码智能体的低成本上下文压缩",
+      "summary_zh": "论文提出 CliffCompaction，一种自动压缩（autocompaction）技术，在上下文受限的条件下最高可降低约 50% 成本，同时在 Terminal-Bench 上保持或提升表现，并在 KernelBench 上取得新的最优结果。其做法是只截断或丢弃内容、绝不改写或重述，且每次压缩只作用于原始内容、丢弃先前的压缩输出，以避免上下文漂移累积。摘要称并行测试时扩展下可让 Kimi K2.6 追平 Opus 4.7，并在更低成本下超过 Opus 4.6 与 GPT-5.3 Codex；在 Terminal-Bench 上以不足两次全上下文运行的成本换取超过 10 个百分点的提升。",
+      "why_it_matters_zh": "长程编码智能体的主要瓶颈正从模型能力转向上下文成本与漂移控制。把“忠实压缩”作为可复用机制，直接影响测试时扩展的性能—成本曲线，对智能体产品的经济性有直接意义。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "CliffCompaction: Cost-Efficient Compaction for Long-Horizon Coding Agents",
+        "url": "https://arxiv.org/abs/2609.26779v1",
+        "published_at": "2026-09-22T17:55:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-swe-serve",
+      "candidate_ids": [
+        "fde01fe99da28471"
+      ],
+      "category": "research",
+      "title_zh": "SWE-Serve：面向生产推理服务工程的智能体基准",
+      "summary_zh": "论文发布 SWE-Serve 基准，用于评测智能体在生产推理工程任务上的能力。基准包含 53 个源自 SGLang 近期生产变更的仓库级任务，覆盖六类推理工程家族，任务在 CPU 或单张 H100 上执行，并用隐藏的功能与回归测试评测，在适用场景下还包括端到端服务测试与校准过的性能门槛。评测还引入可执行 no-op 与 oracle 对照、对抗式验证者复核和闭卷执行以保障任务有效性与评测完整性，覆盖 11 个模型与 31 个（摘要截断）配置。",
+      "why_it_matters_zh": "现有基准要么不针对推理工程，要么只覆盖孤立的 kernel 生成，SWE-Serve 把评测拉到“仓库级、可上线的推理特性实现”，为推理栈相关智能体能力提供了更接近生产现实的衡量方式。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "SWE-Serve: Benchmarking Agentic Engineering For Production Inference Serving",
+        "url": "https://arxiv.org/abs/2609.26777v1",
+        "published_at": "2026-09-22T17:54:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-flash-dllm",
+      "candidate_ids": [
+        "a595540a6b6a805b"
+      ],
+      "category": "research",
+      "title_zh": "Flash-dLLM：面向扩散语言模型的 IO 感知 KV 缓存与并行解码",
+      "summary_zh": "论文提出 Flash-dLLM，一个免训练的扩散大语言模型（dLLM）推理加速框架。作者指出，在同时使用 KV 缓存复用与并行 token 验证时，GPU 显存 I/O 会成为主要瓶颈，为此设计了 I/O 感知的融合 KV 缓存内核以减少冗余内存搬运；并在此基础上提出由 KV 缓存驱动的 draft-and-verify 解码策略，由 dLLM 自身同时充当草稿模型与验证器，无需辅助模型，从而在保持生成质量的同时加快解码。",
+      "why_it_matters_zh": "扩散语言模型的落地长期受制于推理效率，该工作把 KV 缓存与并行解码联合优化到内存 I/O 层面，是 dLLM 走向实用部署的一条关键技术路径。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Flash-dLLM: IO-Aware KV Caching and Parallel Decoding for Fast, Memory-Efficient Diffusion LLMs",
+        "url": "https://arxiv.org/abs/2609.26796v1",
+        "published_at": "2026-09-22T17:59:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-a2m-mcp-hijack",
+      "candidate_ids": [
+        "66e01a80e7367501"
+      ],
+      "category": "research",
+      "title_zh": "A2M：MCP 生态中的工具投毒与智能体劫持攻击",
+      "summary_zh": "论文提出 A2M（Attraction-to-Manipulation）两阶段黑盒框架，用于劫持使用 Model Context Protocol 的智能体：Attraction 阶段优化工具元数据以提高被调用概率，Manipulation 阶段利用执行轨迹精炼对抗性工具返回值，引导智能体走向攻击者期望的结果。在 LiveMCPBench 上，针对 GLM-4.6 优化的直接攻击在四个场景中取得 93.6% 的宏平均恶意工具调用率，在“认知拒绝服务”下把加权 token 成本推高至良性基线的 32.4 倍，并在信息窃取、环境完整性破坏与推理脱轨三类任务上取得 74.4% 的平均攻击成功率；不重新优化迁移到另外四个模型时，对应宏平均分别为 63.6%、2.7 倍与 24.5%。",
+      "why_it_matters_zh": "MCP 已成为智能体接工具的事实标准，该研究把语义匹配选工具这一机制暴露为供应链攻击面，直接支撑更严格的工具审核与运行时隔离需求。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem",
+        "url": "https://arxiv.org/abs/2609.26761v1",
+        "published_at": "2026-09-22T17:41:34Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nemotron-diarization",
+      "candidate_ids": [
+        "8ed947023e75eae3"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Nemotron 3 说话人分离方案",
+      "summary_zh": "NVIDIA 在 Hugging Face 博客发布 Nemotron 3 Diarization，介绍如何在实时、多说话人场景中构建语音 AI，明确“谁在什么时候说话”的说话人分离能力。",
+      "why_it_matters_zh": "说话人分离是会议记录、实时转写与多说话人交互产品的关键前置能力，由 NVIDIA 在官方渠道给出方案，意味着实时多说话人语音应用的可落地性进一步提升。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "**Know Who Spoke When: Build Real-Time, Multi-Speaker AI with NVIDIA Nemotron 3 Diarization**",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-diarization",
+        "published_at": "2026-09-23T13:17:01Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-confidential-inference",
+      "candidate_ids": [
+        "87d5d03a9b9312ca"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 机密计算支持生产级私有高性能 AI 推理",
+      "summary_zh": "NVIDIA 开发者博客介绍如何用 NVIDIA 机密计算在生产环境中实现私密、高性能的 AI 推理，面向个人、企业与受监管场景中越来越多涉及敏感信息与专有模型上下文的 LLM 推理需求。",
+      "why_it_matters_zh": "推理侧的数据保护正成为企业与受监管行业采用 LLM 的前置条件，机密计算把隐私保证与生产性能放在同一栈内，是 AI 基础设施合规化的重要一环。",
+      "importance_score": 71.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Enabling Private High-Performance Production AI Inference with NVIDIA Confidential Computing",
+        "url": "https://developer.nvidia.com/blog/enabling-private-high-performance-production-ai-inference-with-nvidia-confidential-computing/",
+        "published_at": "2026-09-22T17:27:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-aisi-evaleval",
+      "candidate_ids": [
+        "a4a605789fb50164"
+      ],
+      "category": "research",
+      "title_zh": "英国 AISI 与 EvalEval 推动基准结果可复现",
+      "summary_zh": "Hugging Face 博客介绍英国 AI 安全研究所（UK AISI）与 EvalEval 在让基准评测结果可复现方面的工作。",
+      "why_it_matters_zh": "模型评测结果正被用于安全评估与政策判断，评测可复现性是这些结论可信的前提；由官方安全机构与评测社区共同推进，具有标准建设意义。",
+      "importance_score": 69.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "How UK AISI and EvalEval Are Making Benchmark Results Reproducible",
+        "url": "https://huggingface.co/blog/evaleval-aisi",
+        "published_at": "2026-09-22T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llama-cpp-releases",
+      "candidate_ids": [
+        "e55ab7213b90a29f",
+        "a1dd301e5dd0d4da"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 更新：支持 OpenAI video_url 视频输入并发布骁龙 NPU 构建",
+      "summary_zh": "llama.cpp 发布 b11136 与 b11099 两个构建版本。b11136 让 llama-server 接受 OpenAI chat completions 规范中的 video_url 内容类型并兼容 data: 视频 URI：此前服务端只接受非标准的 input_video 类型且拒绝视频的 data URI，导致符合 OpenAI 规范的客户端报错，现在 video_url 作为 input_video 的别名被接受、可从任一键读取媒体对象，并允许 data:video/* 形式的 URI（与图片处理保持一致）。b11099 则在发布工作流中同时构建并附带骁龙（Snapdragon）与 Hexagon NPU 二进制，使这些构建能真正进入 releases 页面。",
+      "why_it_matters_zh": "llama.cpp 是本地推理的重要开源基座，兼容 OpenAI 多模态请求格式可降低客户端与服务端的适配成本，而把骁龙 NPU 构建纳入正式发布则直接改善端侧与移动设备的可用性。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11136",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11136",
+        "published_at": "2026-09-23T14:42:03Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b11099",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11099",
+          "published_at": "2026-09-22T07:59:05Z"
+        }
+      ]
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceFetchError: microsoft-research: HTML fetch failed",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 195,
+    "normalized": 195,
+    "filtered": 155,
+    "ai_candidates": 30,
+    "prompt_chars": 24114,
+    "estimated_input_tokens": 6028,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
