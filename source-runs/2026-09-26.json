@@ -1,0 +1,826 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 149,
+  "normalized_count": 149,
+  "filtered_count": 112,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "索辰科技加码世界模型，与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+        "url": "https://www.qbitai.com/2026/09/498478.html",
+        "published_at": "2026-09-26T11:49:43Z",
+        "fetched_at": "2026-09-26T14:55:41.937116Z",
+        "language": "unknown",
+        "excerpt": "“世界模型”开始成为具身智能跨越商业化“奇点”的新叙事。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "616b2e9b7d8fb763",
+        "canonical_url": "https://www.qbitai.com/2026/09/498478.html",
+        "normalized_title": "索辰科技加码世界模型 与战略投资企业美梦空间联合发布具身模型与物理测评标准",
+        "fingerprint": "616b2e9b7d8fb763edf635638007ab7ec97a6dc99f0ba0b1b5a58d37a524fd3e",
+        "rule_score": 57.582861111111114
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "笔记本跑7000亿参数GLM！无GPU也行? SSD当显存用火爆GitHub",
+        "url": "https://www.qbitai.com/2026/09/497624.html",
+        "published_at": "2026-09-26T09:01:00Z",
+        "fetched_at": "2026-09-26T14:55:41.937171Z",
+        "language": "unknown",
+        "excerpt": "GitHub现在最火热的大模型开源小蜂鸟Colibrì是个啥？",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "田, 晏林",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9a9b789feb4d9760",
+        "canonical_url": "https://www.qbitai.com/2026/09/497624.html",
+        "normalized_title": "笔记本跑7000亿参数glm 无gpu也行 ssd当显存用火爆github",
+        "fingerprint": "9a9b789feb4d9760b63a5a154f9a2ffee2b7c52a04858d098b20156b83fc8f13",
+        "rule_score": 57.30166666666667
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "谷歌TPU跑Kimi比英伟达GPU快57%！用的还是DeepSeek推理框架",
+        "url": "https://www.qbitai.com/2026/09/497425.html",
+        "published_at": "2026-09-26T07:12:05Z",
+        "fetched_at": "2026-09-26T14:55:41.937194Z",
+        "language": "unknown",
+        "excerpt": "vLLM人马创业公司团队出品",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9473e0ebd69d0a31",
+        "canonical_url": "https://www.qbitai.com/2026/09/497425.html",
+        "normalized_title": "谷歌tpu跑kimi比英伟达gpu快57 用的还是deepseek推理框架",
+        "fingerprint": "9473e0ebd69d0a31b8bb348b999dc156b5105575a8df25fc72f3e88b338a4006",
+        "rule_score": 57.12013888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "OpenAI失控Agent还找DeepSeek、Kimi当外援！近百万条作案短链曝光",
+        "url": "https://www.qbitai.com/2026/09/497382.html",
+        "published_at": "2026-09-26T07:04:15Z",
+        "fetched_at": "2026-09-26T14:55:41.937205Z",
+        "language": "unknown",
+        "excerpt": "还把「密钥」叫战利品",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "18c1c3abaff41e5a",
+        "canonical_url": "https://www.qbitai.com/2026/09/497382.html",
+        "normalized_title": "openai失控agent还找deepseek kimi当外援 近百万条作案短链曝光",
+        "fingerprint": "18c1c3abaff41e5a64ae65ac8eddafa276c7cb0997b9b5c8af31505eff4ff8bc",
+        "rule_score": 57.107083333333335
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11200",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11200",
+        "published_at": "2026-09-26T10:24:41Z",
+        "fetched_at": "2026-09-26T14:55:37.040131Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\njinja : implement sameas test (#29448)\n\n* implement sameas test\n\n* add tests\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/50397675>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11200/llama-b11200-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11200/llama-b11200-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11200/llama-b11200-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11200/llama-b11200-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11200/llama-b11200-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11200/llama-b11200-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b11200/llama-b11200-bin-ub",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 397190393
+        },
+        "id": "e56f9970200c4943",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11200",
+        "normalized_title": "llama cpp releases b11200",
+        "fingerprint": "e56f9970200c49438cc275c66aaf217090ee00e3a7ce5bd3edb09df7452b7bac",
+        "rule_score": 56.44113888888889
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11199",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11199",
+        "published_at": "2026-09-26T10:00:00Z",
+        "fetched_at": "2026-09-26T14:55:37.040171Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\njinja : fix compile error (#29468)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/50395469>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11199/llama-b11199-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11199/llama-b11199-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11199/llama-b11199-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11199/llama-b11199-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11199/llama-b11199-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11199/llama-b11199-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b11199/llama-b11199-bin-ubuntu-vulkan-x64.tar.gz)\n- [Ubuntu arm64 (V",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 397181784
+        },
+        "id": "0b97d30fdc3c4385",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11199",
+        "normalized_title": "llama cpp releases b11199",
+        "fingerprint": "0b97d30fdc3c4385f6c9a3a28ace49ac6737b21990047c2649f991d1aa408083",
+        "rule_score": 56.4
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge",
+        "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+        "published_at": "2026-09-25T22:20:47Z",
+        "fetched_at": "2026-09-26T14:55:42.055819Z",
+        "language": "unknown",
+        "excerpt": "AI agents operating in OpenAI's research environment posted user images on public image-hosting sites without the lab's knowledge.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Tim Fernholz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "8c420a01179c2715",
+        "canonical_url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge",
+        "normalized_title": "unsecured openai agents posted 53 user images on the internet without the lab s knowledge",
+        "fingerprint": "8c420a01179c27152d07f5df46ead062ad294014b139bcc711a3dadd4b2ae71c",
+        "rule_score": 55.23463888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+        "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+        "published_at": "2026-09-25T18:33:59Z",
+        "fetched_at": "2026-09-26T14:55:42.055863Z",
+        "language": "unknown",
+        "excerpt": "The funding, which comes from Third Point, Nvidia, and others, will  fuel the company's massive AI data center buildout.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Marina Temkin",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b47c6ae1a2983342",
+        "canonical_url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing",
+        "normalized_title": "ahead of us ipo british ai neocloud nscale secures 3 36b in convertible financing",
+        "fingerprint": "b47c6ae1a2983342984a5038de546dfbb79c7b33fa76dee86b9c04c7199d3e2b",
+        "rule_score": 54.85663888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta’s Muse just stole the AI spotlight from OpenAI and Anthropic",
+        "url": "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic/",
+        "published_at": "2026-09-25T18:22:47Z",
+        "fetched_at": "2026-09-26T14:55:42.055873Z",
+        "language": "unknown",
+        "excerpt": "When AI leaders at OpenAI and Anthropic started talking about “pacing the frontier,”&#160;maybe someone&#160;should have asked: what pace?&#160;Now&#160;it’s&#160;turned into model drop week for both companies as&#160;Anthropic rolled out Opus 5.5, followed by&#160;OpenAI’s GPT-6 model updates&#160;just&#160;90 minutes&#160;later.&#160;But the company that stole the spotlight was Meta, whose&#160;personal AI agent Muse&#160;is&#160;reportedly&#160;outpacing&#160;ChatGPT’s early numbers and is headed for&#160;smart glasses&#160;and [&#8230;]",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha, Kirsten Korosec, Sean O'Kane, Theresa Loconsolo",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d0032d694b303875",
+        "canonical_url": "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic",
+        "normalized_title": "meta s muse just stole the ai spotlight from openai and anthropic",
+        "fingerprint": "d0032d694b303875395d61f13dc72a45acd09ac06d339d2cbad68fa2540e8c8f",
+        "rule_score": 54.83797222222222
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta’s AI Tamagotchi bet is…working?",
+        "url": "https://techcrunch.com/video/will-metas-ai-tamagotchi-bet-isworking/",
+        "published_at": "2026-09-25T16:00:00Z",
+        "fetched_at": "2026-09-26T14:55:42.055916Z",
+        "language": "unknown",
+        "excerpt": "When AI leaders at OpenAI and Anthropic started talking about “pacing the frontier,”&#160;maybe someone&#160;should have asked: what pace?&#160;Now&#160;it’s&#160;turned into model drop week for both companies as&#160;Anthropic rolled out Opus 5.5, followed by&#160;OpenAI’s GPT-6 model updates&#160;just&#160;90 minutes&#160;later.&#160;But the company that stole the spotlight was Meta, whose&#160;personal AI agent Muse&#160;is&#160;reportedly&#160;outpacing&#160;ChatGPT’s early numbers and is headed for&#160;smart glasses&#160;and [&#8230;]",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Theresa Loconsolo",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9e8674cd7fdd7d1f",
+        "canonical_url": "https://techcrunch.com/video/will-metas-ai-tamagotchi-bet-isworking",
+        "normalized_title": "meta s ai tamagotchi bet is working",
+        "fingerprint": "9e8674cd7fdd7d1f89a0b3d6ebc81f6cb3d39421c1c18342ee345d7b958f6082",
+        "rule_score": 54.6
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "AI开始研究Physical AI：FSD级团队亮出首版模型Simate-beta，空降RoboDojo",
+        "url": "https://www.qbitai.com/2026/09/498271.html",
+        "published_at": "2026-09-26T09:07:41Z",
+        "fetched_at": "2026-09-26T14:55:41.937155Z",
+        "language": "unknown",
+        "excerpt": "Simate将训练、推理与评测全流程接入自研Infra，通过极致的任务编排与资源调度，同时并行推进数十条相互独立的研究路线。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "田, 晏林",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ca16df8210f29b75",
+        "canonical_url": "https://www.qbitai.com/2026/09/498271.html",
+        "normalized_title": "ai开始研究physical ai fsd级团队亮出首版模型simate beta 空降robodojo",
+        "fingerprint": "ca16df8210f29b75e253f5e0252d1ddc2a1febea4e6665df42b37fec1554a43f",
+        "rule_score": 53.312805555555556
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "在云栖大会，我终于看懂了米哈游千亿AI野心",
+        "url": "https://www.qbitai.com/2026/09/497613.html",
+        "published_at": "2026-09-26T07:18:05Z",
+        "fetched_at": "2026-09-26T14:55:41.937183Z",
+        "language": "unknown",
+        "excerpt": "大伟哥：如果做不到，一年两年之后过来打我脸",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "51b3f91abf8c3bd5",
+        "canonical_url": "https://www.qbitai.com/2026/09/497613.html",
+        "normalized_title": "在云栖大会 我终于看懂了米哈游千亿ai野心",
+        "fingerprint": "51b3f91abf8c3bd58099d0e2a2d2acd70d8b8b17d5752fe37333bea0825d4104",
+        "rule_score": 53.13013888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+        "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+        "published_at": "2026-09-25T19:13:38Z",
+        "fetched_at": "2026-09-26T14:55:42.055841Z",
+        "language": "unknown",
+        "excerpt": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Aditya Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "19cc04940a9b6f7a",
+        "canonical_url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal",
+        "normalized_title": "anthropic to pay akamai 11 6 billion over seven years in cloud deal",
+        "fingerprint": "19cc04940a9b6f7a4d8b5ac2e1c84ceeb936897642335fc3f59ce855c0947c5d",
+        "rule_score": 50.92272222222222
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta is putting its muscle behind Muse as the AI app takes off",
+        "url": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/",
+        "published_at": "2026-09-25T16:16:52Z",
+        "fetched_at": "2026-09-26T14:55:42.055906Z",
+        "language": "unknown",
+        "excerpt": "Muse is topping the app store charts and adding users at a rapid clip, while Meta ramps up the personal AI agent's promotion across its own apps and beyond.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4e299b548b21b3b1",
+        "canonical_url": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off",
+        "normalized_title": "meta is putting its muscle behind muse as the ai app takes off",
+        "fingerprint": "4e299b548b21b3b1e8eea55443641131ed4ce8a09c880f8ddabca97e89f5bcc9",
+        "rule_score": 50.62811111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Understanding the Impact of LLM Watermarking on AI Agent Behavior",
+        "url": "https://www.lasso.security/blog/the-provenance-tax-understanding-the-impact-of-llm-watermarking-on-ai-agent-behavior",
+        "published_at": "2026-09-26T13:05:36Z",
+        "fetched_at": "2026-09-26T14:55:42.559204Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "nisosguy",
+        "upstream_urls": [
+          "https://www.lasso.security/blog/the-provenance-tax-understanding-the-impact-of-llm-watermarking-on-ai-agent-behavior"
+        ],
+        "raw_metadata": {
+          "hn_id": 49856149,
+          "score": 46
+        },
+        "id": "cea8e1419ac70dfb",
+        "canonical_url": "https://www.lasso.security/blog/the-provenance-tax-understanding-the-impact-of-llm-watermarking-on-ai-agent-behavior",
+        "normalized_title": "understanding the impact of llm watermarking on ai agent behavior",
+        "fingerprint": "cea8e1419ac70dfb55c8fa5411143c950cf513caabd03a2e8a444072d14cb91c",
+        "rule_score": 49.70933333333333
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "I created an interactive digital avatar of myself — and you can talk to it",
+        "url": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
+        "published_at": "2026-09-26T14:00:00Z",
+        "fetched_at": "2026-09-26T14:55:42.055765Z",
+        "language": "unknown",
+        "excerpt": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Dominic-Madori Davis",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "23dd57fb32554821",
+        "canonical_url": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it",
+        "normalized_title": "i created an interactive digital avatar of myself and you can talk to it",
+        "fingerprint": "23dd57fb32554821082d6e1a87530cc046a32732145f9688d26604623a62a2f1",
+        "rule_score": 48.8
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+        "url": "https://swarmtraces.org/",
+        "published_at": "2026-09-25T21:09:27Z",
+        "fetched_at": "2026-09-26T14:55:42.352158Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "specked-citrus",
+        "upstream_urls": [
+          "https://swarmtraces.org/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49849985,
+          "score": 575
+        },
+        "id": "e225489867b23bc1",
+        "canonical_url": "https://swarmtraces.org/",
+        "normalized_title": "revealing the details of how openai agents hacked hugging face",
+        "fingerprint": "e225489867b23bc111e88c47f4ce4e9565a66a1e034e3d239dcb18aa62ee376f",
+        "rule_score": 48.11575
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+        "url": "https://ollaya.dev/",
+        "published_at": "2026-09-25T18:33:50Z",
+        "fetched_at": "2026-09-26T14:55:42.610496Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Ardakilic",
+        "upstream_urls": [
+          "https://ollaya.dev/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49848269,
+          "score": 517
+        },
+        "id": "1ee2d4fc78333e82",
+        "canonical_url": "https://ollaya.dev/",
+        "normalized_title": "ollaya ollama for open source jev style decision models",
+        "fingerprint": "1ee2d4fc78333e8268a1fccf1955a6032dce37b67f1cfbfaf0446bb00ad72d49",
+        "rule_score": 47.85638888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
+        "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
+        "published_at": "2026-09-25T23:11:10Z",
+        "fetched_at": "2026-09-26T14:55:42.055807Z",
+        "language": "unknown",
+        "excerpt": "Boom Supersonic CEO Blake Scholl said the company's new stationary power plants were no longer in Crusoe's near-term plans.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kirsten Korosec",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7e3f7fe623bdd1ab",
+        "canonical_url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers",
+        "normalized_title": "crusoe abandons 1 25b plan to use boom turbines at ai data centers",
+        "fingerprint": "7e3f7fe623bdd1abe906ba95112b80183c6392e036f761e2867844bb7dfe29ed",
+        "rule_score": 47.31861111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Some Supabase customers are publicly exposing reams of people’s data to the web",
+        "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+        "published_at": "2026-09-25T17:29:46Z",
+        "fetched_at": "2026-09-26T14:55:42.055884Z",
+        "language": "unknown",
+        "excerpt": "The findings highlight how AI-generated and vibe-coded apps can spill and expose users' data when not configured or secured properly.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Zack Whittaker",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "177afff1b80df01a",
+        "canonical_url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web",
+        "normalized_title": "some supabase customers are publicly exposing reams of people s data to the web",
+        "fingerprint": "177afff1b80df01adad0fd59e8f1cc240f8577854dea976d0411b926c4654fdd",
+        "rule_score": 46.74961111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Astra and Opus just passed Turing’s other test",
+        "url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/",
+        "published_at": "2026-09-25T17:24:36Z",
+        "fetched_at": "2026-09-26T14:55:42.055895Z",
+        "language": "unknown",
+        "excerpt": "Frontier AI models are finishing Alan Turing's World War II codebreaking work.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Tim Fernholz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5c1cebf5cd5cbcf5",
+        "canonical_url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test",
+        "normalized_title": "astra and opus just passed turing s other test",
+        "fingerprint": "5c1cebf5cd5cbcf5b13cab60476f9ca4c7442cb4fc46bf1ac645034250c6f033",
+        "rule_score": 46.741
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic’s founders seek voting control ahead of IPO",
+        "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
+        "published_at": "2026-09-25T15:40:03Z",
+        "fetched_at": "2026-09-26T14:55:42.055938Z",
+        "language": "unknown",
+        "excerpt": "Anthropic is asking its shareholders to approve a structure that would give its seven co-founders a combined 50.1% of the vote on most corporate matters.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Connie Loizos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f8df4d112e3416c5",
+        "canonical_url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo",
+        "normalized_title": "anthropic s founders seek voting control ahead of ipo",
+        "fingerprint": "f8df4d112e3416c5141dff94289e9281fb4b2d5c382ba8452e33b892ed5bf904",
+        "rule_score": 46.56675
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "TechCrunch Disrupt 2026: Ricursive Intelligence’s Anna Goldie and Azalia Mirhoseini on when AI starts designing its own hardware",
+        "url": "https://techcrunch.com/2026/09/25/techcrunch-disrupt-2026-ricursive-intelligences-anna-goldie-and-azalia-mirhoseini-on-when-ai-starts-designing-its-own-hardware/",
+        "published_at": "2026-09-25T15:00:00Z",
+        "fetched_at": "2026-09-26T14:55:42.055948Z",
+        "language": "unknown",
+        "excerpt": "At TechCrunch Disrupt 2026, Ricursive Intelligence co-founders Anna Goldie and Azalia Mirhoseini will take the Disrupt Stage to discuss closing the loop between AI and chip development. Save up to $200 on your pass before today ends.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "43b4348b06bea65e",
+        "canonical_url": "https://techcrunch.com/2026/09/25/techcrunch-disrupt-2026-ricursive-intelligences-anna-goldie-and-azalia-mirhoseini-on-when-ai-starts-designing-its-own-hardware",
+        "normalized_title": "techcrunch disrupt 2026 ricursive intelligence s anna goldie and azalia mirhoseini on when ai starts designing its own hardware",
+        "fingerprint": "43b4348b06bea65e5a08bd7caab362e90809c3acfb142da93bd79c9c3c0a7876",
+        "rule_score": 46.5
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Validate GPU Cluster Readiness Before AI Workloads Land",
+        "url": "https://developer.nvidia.com/blog/validate-gpu-cluster-readiness-before-ai-workloads-land/",
+        "published_at": "2026-09-23T19:45:19Z",
+        "fetched_at": "2026-09-26T14:55:25.838580Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"338\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2025/12/cybersecurity.jpg\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"cybersecurity\" width=\"600\" />A GPU cluster can pass every health check and still fail to run an AI workload. Even when every GPU, network link, and pod reports healthy, a 512-GPU training...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Michelle Horton",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "051db81af892f7d0",
+        "canonical_url": "https://developer.nvidia.com/blog/validate-gpu-cluster-readiness-before-ai-workloads-land",
+        "normalized_title": "validate gpu cluster readiness before ai workloads land",
+        "fingerprint": "051db81af892f7d06fbcaec864e502faae1f914b0535f2bb45ba97f1bfcfa4f2",
+        "rule_score": 46.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Lightspeed targets $250M for new India fund, focusing on early-stage AI",
+        "url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/",
+        "published_at": "2026-09-25T05:00:00Z",
+        "fetched_at": "2026-09-26T14:55:42.055980Z",
+        "language": "unknown",
+        "excerpt": "The venture firm is aligning its India fundraising cycle with its global funds for the first time, as it shifts to a shorter investment period.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Jagmeet Singh",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "55f28cc64bfca468",
+        "canonical_url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai",
+        "normalized_title": "lightspeed targets 250m for new india fund focusing on early stage ai",
+        "fingerprint": "55f28cc64bfca4683e343556c392d533247293ec7a34e96b33c5e066743c3ee9",
+        "rule_score": 45.5
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI Says Its Models Engaged with US Government Websites in New Disclosure",
+        "url": "https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure/",
+        "published_at": "2026-09-26T10:49:03Z",
+        "fetched_at": "2026-09-26T14:55:46.267931Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pluc",
+        "upstream_urls": [
+          "https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49855278,
+          "score": 8
+        },
+        "id": "3bd5f4e0e31552f0",
+        "canonical_url": "https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure",
+        "normalized_title": "openai says its models engaged with us government websites in new disclosure",
+        "fingerprint": "3bd5f4e0e31552f0acfa21f79e02970beaab4840d00fb138c543a859f7f9b193",
+        "rule_score": 45.48175
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+        "url": "https://github.com/devdotfast/whiteboard",
+        "published_at": "2026-09-24T17:21:36Z",
+        "fetched_at": "2026-09-26T14:55:45.269034Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sidharthkmenon",
+        "upstream_urls": [
+          "https://github.com/devdotfast/whiteboard"
+        ],
+        "raw_metadata": {
+          "hn_id": 49833867,
+          "score": 403
+        },
+        "id": "fe3e11ecc937721e",
+        "canonical_url": "https://github.com/devdotfast/whiteboard",
+        "normalized_title": "show hn whiteboard yc w26 an open source ide for thoughtful software design",
+        "fingerprint": "fe3e11ecc937721e919bb5fa574ea0aeefe2b1225ad84f4244b707068d5237ce",
+        "rule_score": 45.336
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "FTC chair suggests AI developers should be liable for conduct of agents",
+        "url": "https://www.reuters.com/business/ftc-chair-pushes-back-treating-ai-agents-independent-actors-2026-09-25/",
+        "published_at": "2026-09-25T22:49:41Z",
+        "fetched_at": "2026-09-26T14:55:45.188742Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "usernomdeguerre",
+        "upstream_urls": [
+          "https://www.reuters.com/business/ftc-chair-pushes-back-treating-ai-agents-independent-actors-2026-09-25/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49850999,
+          "score": 57
+        },
+        "id": "db4662dcab8903e7",
+        "canonical_url": "https://www.reuters.com/business/ftc-chair-pushes-back-treating-ai-agents-independent-actors-2026-09-25",
+        "normalized_title": "ftc chair suggests ai developers should be liable for conduct of agents",
+        "fingerprint": "db4662dcab8903e7577f9db0c998c071200393de0934be196fbe136a6adfdcd3",
+        "rule_score": 44.282805555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+        "url": "https://mouse.dev/blog/muse-special/",
+        "published_at": "2026-09-25T18:18:06Z",
+        "fetched_at": "2026-09-26T14:55:44.793481Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Aeroi",
+        "upstream_urls": [
+          "https://mouse.dev/blog/muse-special/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49848095,
+          "score": 137
+        },
+        "id": "8b77ec950d1be475",
+        "canonical_url": "https://mouse.dev/blog/muse-special",
+        "normalized_title": "meta s muse appears to use an openai model labeled muse special",
+        "fingerprint": "8b77ec950d1be475ba5b1818815aa1d09f21038e2ed45c8337d61584a427ca9b",
+        "rule_score": 43.83016666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+        "published_at": "2026-09-25T15:29:25Z",
+        "fetched_at": "2026-09-26T14:55:43.686196Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "cramer4next",
+        "upstream_urls": [
+          "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 49845977,
+          "score": 468
+        },
+        "id": "a7b8bb4133e58edf",
+        "canonical_url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+        "normalized_title": "u s appeals court upholds designation of anthropic as supply chain risk",
+        "fingerprint": "a7b8bb4133e58edf17155ceead70b03ba11b7ab8cb1cc7fd12d208b4b5325186",
+        "rule_score": 43.54902777777778
+      }
+    ],
+    "prompt_chars": 8372,
+    "estimated_input_tokens": 2093
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "arxiv-ai": "SourceFetchError: arxiv-ai: RSS fetch failed",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
