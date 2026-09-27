@@ -1,0 +1,94 @@
+{
+  "date": "2026-09-27",
+  "generated_at": "2026-09-27T15:33:41.786845Z",
+  "run_id": "2026-09-27-30ec7a41",
+  "daily_summary_zh": "今日AI领域动态：Rolling-WAM：以“滚动想象”为机器人世界模型提速重规划；llama.cpp 发布 b11218：jinja 模板支持 dict 内置并补齐测试。",
+  "events": [
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "ed85a138186becd1"
+      ],
+      "category": "research",
+      "title_zh": "Rolling-WAM：以“滚动想象”为机器人世界模型提速重规划",
+      "summary_zh": "arXiv 论文提出 Rolling-WAM，把视频与动作的联合去噪分散到连续的重规划周期中：用滑动窗口让不同视频-动作块处于错开的噪声水平，当前动作块被完整去噪后立即执行，更远的块只做部分精修。在 LIBERO、RoboTwin 和真实 Unitree G1 人形机器人上，该方法取得了有竞争力的操作表现，稳态重规划速度相比标准联合世界动作模型提升 4.5 倍。",
+      "why_it_matters_zh": "闭环重规划的推理延迟是机器人世界模型落地的核心瓶颈之一，把去噪计算在时间上摊开，为具身智能的实时控制提供了一条可复用的工程思路。",
+      "importance_score": 50.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Rolling-WAM: World Action Models with Rolling Imagination",
+        "url": "https://arxiv.org/abs/2609.30247v1",
+        "published_at": "2026-09-24T17:58:03Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "464a9d406971942b"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11218：jinja 模板支持 dict 内置并补齐测试",
+      "summary_zh": "llama.cpp 发布 b11218 版本，为 jinja 模板新增对 dict 内置的支持并补充相关测试，同时提供 macOS/iOS、Ubuntu 等平台的预编译包。",
+      "why_it_matters_zh": "模板兼容性直接决定本地模型部署时的提示词与对话模板能否正确渲染，是本地推理框架面向开发者体验的关键细节迭代。",
+      "importance_score": 45.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11218",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11218",
+        "published_at": "2026-09-27T14:58:46Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source kimi-platform-blog failed: SourceFetchError: kimi-platform-blog: HTML fetch failed",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 176,
+    "normalized": 176,
+    "filtered": 105,
+    "ai_candidates": 30,
+    "prompt_chars": 16006,
+    "estimated_input_tokens": 4001,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "kimi-platform-blog",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

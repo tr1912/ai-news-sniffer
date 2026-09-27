@@ -1,0 +1,812 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 176,
+  "normalized_count": 176,
+  "filtered_count": 105,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "啥题啊能干崩OpenAI最强模型训练…",
+        "url": "https://www.qbitai.com/2026/09/498546.html",
+        "published_at": "2026-09-27T09:44:16Z",
+        "fetched_at": "2026-09-27T15:34:47.294585Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "59914a334204a298",
+        "canonical_url": "https://www.qbitai.com/2026/09/498546.html",
+        "normalized_title": "啥题啊能干崩openai最强模型训练",
+        "fingerprint": "59914a334204a298b3aa1cab2056fe729ed5fff0edc6270e32b92d045eb6ec6b",
+        "rule_score": 57.373777777777775
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11218",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11218",
+        "published_at": "2026-09-27T14:58:46Z",
+        "fetched_at": "2026-09-27T15:34:34.835709Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\njinja : add support for dict builtin (#29477)\n\n* add support for dict builtin\n\n* add tests\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/50563209>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11218/llama-b11218-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11218/llama-b11218-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11218/llama-b11218-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11218/llama-b11218-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11218/llama-b11218-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11218/llama-b11218-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b11218/llama",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 397692003
+        },
+        "id": "464a9d406971942b",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11218",
+        "normalized_title": "llama cpp releases b11218",
+        "fingerprint": "464a9d406971942b72c3bfd93e943af18b40d1863bec07df56f30c9d501a1540",
+        "rule_score": 56.89794444444445
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "量子AI创业来了一支“清华梦之队”：10亿估值，用量子改造大模型底层",
+        "url": "https://www.qbitai.com/2026/09/498633.html",
+        "published_at": "2026-09-27T14:20:35Z",
+        "fetched_at": "2026-09-27T15:34:47.294481Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e5db64290f4def11",
+        "canonical_url": "https://www.qbitai.com/2026/09/498633.html",
+        "normalized_title": "量子ai创业来了一支 清华梦之队 10亿估值 用量子改造大模型底层",
+        "fingerprint": "e5db64290f4def1151584852d01fa50dfe9f4bc363341de611dc7f9f5fb66c00",
+        "rule_score": 53.83430555555556
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "量子计算走上桌面！“小盒子”跑通端到端，数据全程不出门",
+        "url": "https://www.qbitai.com/2026/09/498605.html",
+        "published_at": "2026-09-27T13:57:57Z",
+        "fetched_at": "2026-09-27T15:34:47.294528Z",
+        "language": "unknown",
+        "excerpt": "想让开发者“说句话就能跑量子计算”",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1dae30bec74c9f51",
+        "canonical_url": "https://www.qbitai.com/2026/09/498605.html",
+        "normalized_title": "量子计算走上桌面 小盒子 跑通端到端 数据全程不出门",
+        "fingerprint": "1dae30bec74c9f511a21df1354bc530a56d7c2edcfe903f08e210065b2fe8e00",
+        "rule_score": 49.79658333333333
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
+        "url": "https://www.qbitai.com/2026/09/498584.html",
+        "published_at": "2026-09-27T13:40:02Z",
+        "fetched_at": "2026-09-27T15:34:47.294543Z",
+        "language": "unknown",
+        "excerpt": "中秋假期文具OpenRouter调用日榜榜首",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "44604ca73482c1c6",
+        "canonical_url": "https://www.qbitai.com/2026/09/498584.html",
+        "normalized_title": "又快又能打 匿名模型玉兔模型杀上双榜第一 coding实测全记录",
+        "fingerprint": "44604ca73482c1c6f52a737cd3f4f9e90b2d20e662463012804237c3719b6129",
+        "rule_score": 49.76672222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI pauses training of latest models after agents probed US Government sites",
+        "url": "https://apnews.com/article/ai-openai-anthropic-agents-rogue-hack-2f8a2b9024d4f06793bcca12f8089d20",
+        "published_at": "2026-09-27T09:07:03Z",
+        "fetched_at": "2026-09-27T15:34:51.227357Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ml-student",
+        "upstream_urls": [
+          "https://apnews.com/article/ai-openai-anthropic-agents-rogue-hack-2f8a2b9024d4f06793bcca12f8089d20"
+        ],
+        "raw_metadata": {
+          "hn_id": 49864790,
+          "score": 15
+        },
+        "id": "1797fc266c08e7fa",
+        "canonical_url": "https://apnews.com/article/ai-openai-anthropic-agents-rogue-hack-2f8a2b9024d4f06793bcca12f8089d20",
+        "normalized_title": "openai pauses training of latest models after agents probed us government sites",
+        "fingerprint": "1797fc266c08e7fa01b6dd19d8225160108c34c73ce2f15b18e7fa9ab34fdf10",
+        "rule_score": 49.31175
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+        "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+        "published_at": "2026-09-27T01:30:00Z",
+        "fetched_at": "2026-09-27T15:34:47.463174Z",
+        "language": "unknown",
+        "excerpt": "The limited test covers select products and users, with a broader rollout planned for later in October.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Jagmeet Singh",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b884c10a0dd97a0c",
+        "canonical_url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india",
+        "normalized_title": "google tests buying from walmart owned flipkart through gemini and ai mode in india",
+        "fingerprint": "b884c10a0dd97a0c07101fd4983bb3b921cd5d2bb0bf52face7c73b459757bae",
+        "rule_score": 47.55
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Insurers claim AI is already increasing healthcare costs",
+        "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+        "published_at": "2026-09-26T21:02:06Z",
+        "fetched_at": "2026-09-27T15:34:47.463221Z",
+        "language": "unknown",
+        "excerpt": "Blue Cross Blue Shield says hospital use of AI tools led to an additional $942M in healthcare spending over a two-year period.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a57ecb4535d10745",
+        "canonical_url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs",
+        "normalized_title": "insurers claim ai is already increasing healthcare costs",
+        "fingerprint": "a57ecb4535d107450fb956a0451a4769cdceb2f02e3d7a9a31955ed2022eb5c5",
+        "rule_score": 47.1035
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Unsealed Briefs in Authors’ Case v. Microsoft/OpenAI",
+        "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+        "published_at": "2026-09-27T06:19:33Z",
+        "fetched_at": "2026-09-27T15:34:48.001919Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "papergirl",
+        "upstream_urls": [
+          "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49863864,
+          "score": 526
+        },
+        "id": "86d04822df4e03be",
+        "canonical_url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal",
+        "normalized_title": "unsealed briefs in authors case v microsoft openai",
+        "fingerprint": "86d04822df4e03be08fba4611554ef490c9b962e9683609e1aa012c55b2142d7",
+        "rule_score": 45.032583333333335
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control",
+        "url": "https://arxiv.org/abs/2609.30264v1",
+        "published_at": "2026-09-24T17:59:41Z",
+        "fetched_at": "2026-09-27T15:34:32.860315Z",
+        "language": "unknown",
+        "excerpt": "Latent world models are typically trained to predict factual transitions, whereas model predictive control (MPC) must compare alternative actions from the same state. A model can therefore achieve low factual prediction error yet poorly distinguish candidate actions. We introduce AD-WM, an action-discriminative joint-embedding world model for counterfactual MPC. AD-WM combines residual latent dynamics with predictor-level action-recovery regularization, using inverse dynamics and a normalized recovery objective motivated by conditional mutual information. Both objectives encourage planning transitions to preserve action information; their auxiliary heads are discarded at test time, leaving MPC unchanged. On OGBench-Cube, AD-WM improves hard-start success from 3.7% to 52.0% over a matched LeWM baseline and improves mean success over the reproduced baseline in four of five simulation environments. Planning diagnostics show that factual prediction error and whole-bank action ranking do not follow the closed-loop success ordering, whereas CEM-aligned elite regret tracks success more closely. With a frozen V-JEPA 2 encoder and matched DROID post-training, AD-WM also improves zero-shot t",
+        "categories": [
+          "research"
+        ],
+        "author": "Yang Gao",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9cd837009888c610",
+        "canonical_url": "https://arxiv.org/abs/2609.30264v1",
+        "normalized_title": "ad wm action discriminative world models for counterfactual model predictive control",
+        "fingerprint": "9cd837009888c610bfb2e3611e1368ecf333f27f15690eec25fae9973740f8a8",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Rolling-WAM: World Action Models with Rolling Imagination",
+        "url": "https://arxiv.org/abs/2609.30247v1",
+        "published_at": "2026-09-24T17:58:03Z",
+        "fetched_at": "2026-09-27T15:34:32.860369Z",
+        "language": "unknown",
+        "excerpt": "World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.",
+        "categories": [
+          "research"
+        ],
+        "author": "Yue Wang",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ed85a138186becd1",
+        "canonical_url": "https://arxiv.org/abs/2609.30247v1",
+        "normalized_title": "rolling wam world action models with rolling imagination",
+        "fingerprint": "ed85a138186becd1d16a4aef0baa8acd5032a89b3f610607c8205e35e7cc9d56",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "JevOut: Natural Context Can Flip Decision Models",
+        "url": "https://arxiv.org/abs/2609.30243v1",
+        "published_at": "2026-09-24T17:57:07Z",
+        "fetched_at": "2026-09-27T15:34:32.860380Z",
+        "language": "unknown",
+        "excerpt": "Dedicated decision models such as Jev map unstructured language to probability distributions over finite choices, allowing their outputs to directly route requests, select tools, and trigger actions. Yet real-world inputs rarely arrive in isolation: they come with background details and surrounding context. We find that short additions that fit naturally into this context can nevertheless redirect an otherwise correct decision, even when the correct answer remains unchanged. To study this behavior, we fix a wrong target option for each initially correct item and use the model's option probabilities to refine fluent context additions while preserving the source, question, choices, and gold answer. Within 64 accepted target evaluations, the optimizer identifies contexts that redirect Jev on 312 of 508 initially correct decisions (61.4%); in 229 cases, Jev assigns at least 0.7 probability to the fixed wrong option. Across seven datasets, three additional decision systems show targeted flip rates of 64.9%-73.2% on decisions they initially answer correctly. Taken together, these results expose a pronounced fragility in current decision models: short, ordinary-looking context can shift a",
+        "categories": [
+          "research"
+        ],
+        "author": "Zixiang Xu",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cf74274e10e14156",
+        "canonical_url": "https://arxiv.org/abs/2609.30243v1",
+        "normalized_title": "jevout natural context can flip decision models",
+        "fingerprint": "cf74274e10e14156f0f0989e4911703d5e60720fbfb0452cf621105865b34cfb",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "PoEM: Predicting RL Outcomes from Existing Policies",
+        "url": "https://arxiv.org/abs/2609.30226v1",
+        "published_at": "2026-09-24T17:50:25Z",
+        "fetched_at": "2026-09-27T15:34:32.860425Z",
+        "language": "unknown",
+        "excerpt": "Foundation models are post-trained with reinforcement learning (RL) to maximize specific rewards, such as human alignment, correctness, or instruction following. This post-training process is computationally intensive, sometimes unstable, and has to be run from scratch every time the reward model changes or when we want to combine multiple rewards. We hence ask: given a new reward function, is it possible to predict the RL outcomes without actually running RL on it? We answer this in the affirmative by introducing PoEM, a framework to predict the outputs of RL on a new reward function using a set of models already post-trained on other rewards. First, we show that if the new reward function can be written as a linear combination of existing ones, then the new policy in log-space can be written as a linear combination of the existing log-policies. Surprisingly, even in cases where the rewards are not linearly connected, we observe that often log-policies from RL training span an approximately low-rank subspace across rewards. To our benefit, the weighting coefficients for this combination can be estimated using only the reward or basis policy outputs on the samples. We turn these ob",
+        "categories": [
+          "research"
+        ],
+        "author": "Antonio Torralba",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "53a111faa9d40b50",
+        "canonical_url": "https://arxiv.org/abs/2609.30226v1",
+        "normalized_title": "poem predicting rl outcomes from existing policies",
+        "fingerprint": "53a111faa9d40b50757dba0afb7017f49b4923a0109d41c8e2a18afab6364d1c",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Anchored Extra-Proximal Methods: Optimal Higher-Order Methods for Monotone Inclusion Problems",
+        "url": "https://arxiv.org/abs/2609.30212v1",
+        "published_at": "2026-09-24T17:43:45Z",
+        "fetched_at": "2026-09-27T15:34:32.860499Z",
+        "language": "unknown",
+        "excerpt": "We study the deterministic oracle complexity of finding approximate solutions to composite monotone inclusion problems, formed by the sum of a smooth single-valued monotone operator and a maximally monotone set-valued operator, under the tangent-residual criterion. We introduce the Anchored Extra-Proximal (AEP) framework, which combines an anchored extrapolation step with an inexact anchored proximal update satisfying a relative-error condition. The framework recovers the composite Fast Extragradient method in the first-order setting and yields natural second- and higher-order extensions by replacing the operator in the implicit update with its Taylor approximation at the extrapolated point. For every $p\\geq 2$, assuming that the $(p-1)$th derivative of the single-valued operator is Lipschitz continuous, we combine this construction with a bisection line search to obtain a $p$th-order method that finds a point with tangent residual at most $\\varepsilon$ in $\\widetilde{O}(\\varepsilon^{-2/(3p-1)})$ oracle calls. This improves all prior upper bounds for $p$th-order methods: in particular, it improves the previous best-known $\\widetilde{O}(\\varepsilon^{-1/p})$ tangent-residual complexi",
+        "categories": [
+          "research"
+        ],
+        "author": "TaeHo Yoon",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "71c02ef9f88c7340",
+        "canonical_url": "https://arxiv.org/abs/2609.30212v1",
+        "normalized_title": "anchored extra proximal methods optimal higher order methods for monotone inclusion problems",
+        "fingerprint": "71c02ef9f88c7340888078ac2e0523099297c186340aedbc8d2e6e4adc5a47b9",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Beyond Compression: Training Latent Representations for Stable Long-Horizon Rollout in Neural Surrogate Solvers",
+        "url": "https://arxiv.org/abs/2609.30198v1",
+        "published_at": "2026-09-24T17:36:46Z",
+        "fetched_at": "2026-09-27T15:34:32.860542Z",
+        "language": "unknown",
+        "excerpt": "Latent neural surrogate solvers, or latent dynamics models, accelerate simulations of time-dependent physical systems by evolving a compressed latent space rather than resolving full-resolution fields directly. In principle this reduces computational cost and simplifies learning, but in practice errors often accumulate rapidly during long autoregressive rollouts, limiting predictive utility. We show that this instability does not stem from the latent representation itself, but arises when it is trained solely for reconstruction, producing representations poorly suited to long-horizon forecasting. We systematically evaluate training-level interventions that align latent representations with long-horizon rollout: Koopman operator learning and Hamming noise injection during autoencoder training to improve compression, together with noise injection and multi-step rollout fine-tuning to improve dynamics. Interventions that improve long-horizon rollout stability often degrade conventional training metrics, including reconstruction and one-step prediction accuracy. Collectively, these interventions reduce long-rollout error by approximately 40\\% and match or exceed the accuracy of full-re",
+        "categories": [
+          "research"
+        ],
+        "author": "Remi Dingreville",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e79d5155d103d3fb",
+        "canonical_url": "https://arxiv.org/abs/2609.30198v1",
+        "normalized_title": "beyond compression training latent representations for stable long horizon rollout in neural surrogate solvers",
+        "fingerprint": "e79d5155d103d3fb3081c95d44500a5492268f056058f3c000dcd8c16f5bc20d",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Intrinsic-Extrinsic Coupling in Learning Dynamics",
+        "url": "https://arxiv.org/abs/2609.30185v1",
+        "published_at": "2026-09-24T17:30:22Z",
+        "fetched_at": "2026-09-27T15:34:32.860599Z",
+        "language": "unknown",
+        "excerpt": "A learner's current observations need not determine its response to further training. We formulate intrinsic-extrinsic coupling through the continuation-conditioned value of a constrained learning-state intervention, with observation-relative fibers describing present agreement. An executable finite-frame classifier-head write protects current logits while repairing specified historical margins under finite-precision acceptance checks. We distinguish local admissibility, continuation-conditioned intervention value, and complete-policy performance. A matched four-cell contrast identifies readout-specific non-additivity between the same intrinsic intervention and alternative external continuations. In a CLINC-derived class-incremental setting, replay changes the write's 32-update contribution from five correct predictions to zero. Nonzero interactions also occur under output distillation, with a RoBERTa backbone, and under optimizer-native SGDW dynamics. Under SGDW, correct-count interactions are negative in all three activated roots at 128 updates, showing that coupling need not imply positive synergy. The mathematical analysis distinguishes feasible local repairs and favorable term",
+        "categories": [
+          "research"
+        ],
+        "author": "Qinyou Wang",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ddf790ab5dfb8642",
+        "canonical_url": "https://arxiv.org/abs/2609.30185v1",
+        "normalized_title": "intrinsic extrinsic coupling in learning dynamics",
+        "fingerprint": "ddf790ab5dfb86420e54abd7ff1529bd13af7a22e09a58ad313f92cbc74f6ff4",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition",
+        "url": "https://arxiv.org/abs/2609.30160v1",
+        "published_at": "2026-09-24T17:17:55Z",
+        "fetched_at": "2026-09-27T15:34:32.860651Z",
+        "language": "unknown",
+        "excerpt": "Automatic speech recognition is typically trained assuming that the reference transcript is the only valid labeling of an utterance, yet even nominally verbatim transcripts contain localized differences in pronunciation, spelling, or lexical realization that the acoustics do not uniquely determine. Omni-temporal Classification (OTC) tolerates such noise by adding wildcard paths to the connectionist temporal classification (CTC) alignment graph, but its word-level arcs are too coarse, since bypassing one unsupported token discards supervision for the whole word. We move wildcard arcs to token granularity so unsupported tokens can be bypassed while the rest of the word stays supervised, and we combine token- and word-level arcs as complementary escape paths. Across 19 languages and three corpora, token-level OTC improves over CTC on all 25 tasks. We also replace epoch-indexed relaxation of the wildcard weights with a predictive-entropy-indexed schedule, which performs comparably while reducing dependence on training length. Combining this schedule with the hybrid graph gives the lowest mean word error rate (WER) on every corpus and a 9.45% average relative WER reduction over CTC. Ind",
+        "categories": [
+          "research"
+        ],
+        "author": "Prasanta Kumar Ghosh",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3a99f2f20b3bb9c0",
+        "canonical_url": "https://arxiv.org/abs/2609.30160v1",
+        "normalized_title": "a training criterion with token level tolerance to transcription ambiguity for automatic speech recognition",
+        "fingerprint": "3a99f2f20b3bb9c079c9466610206a66a78339ddad4918146977caacf40c4211",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI bots meddled with multiple US Government agency sites",
+        "url": "https://www.bbc.com/news/articles/cw62jje658dlo",
+        "published_at": "2026-09-26T14:03:54Z",
+        "fetched_at": "2026-09-27T15:34:50.196382Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Betelbuddy",
+        "upstream_urls": [
+          "https://www.bbc.com/news/articles/cw62jje658dlo"
+        ],
+        "raw_metadata": {
+          "hn_id": 49856665,
+          "score": 123
+        },
+        "id": "e93be1ff1eade8c0",
+        "canonical_url": "https://www.bbc.com/news/articles/cw62jje658dlo",
+        "normalized_title": "openai bots meddled with multiple us government agency sites",
+        "fingerprint": "e93be1ff1eade8c0f58c6f238678bb8e04cb941051d991edb3d52e44c3c3f5af",
+        "rule_score": 43.4065
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+        "url": "https://arxiv.org/abs/2609.25021",
+        "published_at": "2026-09-27T10:26:25Z",
+        "fetched_at": "2026-09-27T15:34:48.356829Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "yu3zhou4",
+        "upstream_urls": [
+          "https://arxiv.org/abs/2609.25021"
+        ],
+        "raw_metadata": {
+          "hn_id": 49865343,
+          "score": 81
+        },
+        "id": "203a1b52c548defa",
+        "canonical_url": "https://arxiv.org/abs/2609.25021",
+        "normalized_title": "as a language model chat template switches llm self referential voice",
+        "fingerprint": "203a1b52c548defa272880eda70239ca0b4e38439641460ebe9971d00791762f",
+        "rule_score": 41.44402777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Meta Blocks President Lula's Facebook Page, Campaign Ads 2 Weeks from Election",
+        "url": "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/",
+        "published_at": "2026-09-27T08:44:04Z",
+        "fetched_at": "2026-09-27T15:34:48.744320Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rbanffy",
+        "upstream_urls": [
+          "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49864642,
+          "score": 354
+        },
+        "id": "dbf4cf93bf6dc7fe",
+        "canonical_url": "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and",
+        "normalized_title": "meta blocks president lula s facebook page campaign ads 2 weeks from election",
+        "fingerprint": "dbf4cf93bf6dc7fe52bcf70cdd031462f614b7c7acea78bcf1a47bcd60ee7e79",
+        "rule_score": 41.27344444444444
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "At Meta Connect, the company’s smart glasses were everywhere",
+        "url": "https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere/",
+        "published_at": "2026-09-26T01:08:57Z",
+        "fetched_at": "2026-09-27T15:34:47.463250Z",
+        "language": "unknown",
+        "excerpt": "The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lucas Ropek",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7fb1da4c23acd921",
+        "canonical_url": "https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere",
+        "normalized_title": "at meta connect the company s smart glasses were everywhere",
+        "fingerprint": "7fb1da4c23acd92140620969f08d6ac8c4a238e75707ef5d9e13916706581642",
+        "rule_score": 41.114916666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I Found a $113,337 Af_alg Linux Local Privilege Escalation Before Copy Fail",
+        "url": "https://idnsec.com/research/linux-local-privilege-escalation-with-af-alg/",
+        "published_at": "2026-09-27T07:02:51Z",
+        "fetched_at": "2026-09-27T15:34:50.058377Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "thebitofmyheart",
+        "upstream_urls": [
+          "https://idnsec.com/research/linux-local-privilege-escalation-with-af-alg/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49864112,
+          "score": 3
+        },
+        "id": "a2c75b4ccbb6620a",
+        "canonical_url": "https://idnsec.com/research/linux-local-privilege-escalation-with-af-alg",
+        "normalized_title": "i found a 113 337 af_alg linux local privilege escalation before copy fail",
+        "fingerprint": "a2c75b4ccbb6620a18d439870f0dc4ed7066e6d4d3b7f9a23eed5461fb7db718",
+        "rule_score": 41.10475
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Minimally Invasive Steering of Language Models",
+        "url": "https://arxiv.org/abs/2609.30218v1",
+        "published_at": "2026-09-24T17:46:46Z",
+        "fetched_at": "2026-09-27T15:34:32.860457Z",
+        "language": "unknown",
+        "excerpt": "Pre-logit steering adapts a frozen language model to a test-time reward by adding vectors to its final hidden states. Unregularized reward optimization can substantially alter the output distribution and degrade generation quality. We propose Minimally Invasive Steering Vector Optimization (MISVO), which penalizes interventions using the local KL geometry of the induced token distribution. The resulting Fisher quadratic measures distributional sensitivity and admits an analytic gradient computed through matrix--vector products with the frozen language-model head. We derive an exact decomposition of the sequence-level KL gradient into an analytic Fisher term and a suffix score-function term. For a fixed generation horizon, we show that the suffix term is second order in the steering magnitude and that three Fisher surrogates agree with the full KL gradient to first order. MISVO uses the frozen-reference surrogate to optimize position-specific interventions without updating model parameters. Across preference and code-generation tasks on models with approximately 1B--14B parameters, MISVO achieves the highest mean reward in six of seven model--task settings, with diversity and cohere",
+        "categories": [
+          "research"
+        ],
+        "author": "Mahyar Fazlyab",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "25723840181a1c54",
+        "canonical_url": "https://arxiv.org/abs/2609.30218v1",
+        "normalized_title": "minimally invasive steering of language models",
+        "fingerprint": "25723840181a1c5400b9bfeacc3204c723cf1b921e2413ffa6412f77e54d0993",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "A Nearly Quadratic Lower Bound for Linear Optimization over Convex Bodies in the Membership Oracle Model",
+        "url": "https://arxiv.org/abs/2609.30215v1",
+        "published_at": "2026-09-24T17:45:58Z",
+        "fetched_at": "2026-09-27T15:34:32.860478Z",
+        "language": "unknown",
+        "excerpt": "We prove nearly quadratic lower bounds for randomized algorithms for linear optimization and uniform sampling over convex bodies in the membership oracle model. For linear optimization, this matches the known nearly quadratic upper bound up to a polylog factor in the dimension. For uniform sampling, this improves on the previous linear lower bound. Our construction also implies the same lower bound for volume estimation.",
+        "categories": [
+          "research"
+        ],
+        "author": "Santosh S. Vempala",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0246b27cf0f29d71",
+        "canonical_url": "https://arxiv.org/abs/2609.30215v1",
+        "normalized_title": "a nearly quadratic lower bound for linear optimization over convex bodies in the membership oracle model",
+        "fingerprint": "0246b27cf0f29d710daa44b6cd3890eb46e20cf9aae924e11878ec666dff17ad",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta opens early access program for new Muse features",
+        "url": "https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/",
+        "published_at": "2026-09-25T20:34:53Z",
+        "fetched_at": "2026-09-27T15:34:47.463283Z",
+        "language": "unknown",
+        "excerpt": "Anyone interested in joining has to ask Muse to put them on the list.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0dac4419fd14f970",
+        "canonical_url": "https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features",
+        "normalized_title": "meta opens early access program for new muse features",
+        "fingerprint": "0dac4419fd14f9706d61218b6be9875e33feead8a2c75ca7a20746cc1fbefe14",
+        "rule_score": 40.658138888888885
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his",
+        "url": "https://techcrunch.com/2026/09/25/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/",
+        "published_at": "2026-09-25T18:48:33Z",
+        "fetched_at": "2026-09-27T15:34:47.463305Z",
+        "language": "unknown",
+        "excerpt": "Mark Wahlberg joins Bruce K. Lee at Disrupt to discuss investing, entrepreneurship, healthcare, wellness, and building businesses.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d83cc73dfaa76d35",
+        "canonical_url": "https://techcrunch.com/2026/09/25/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026",
+        "normalized_title": "mark wahlberg is coming to techcrunch disrupt 2026 and he wants to talk about your work not his",
+        "fingerprint": "d83cc73dfaa76d355e275cd64d11bf1a619a2dcf933a4b315c835e1408de7fb0",
+        "rule_score": 40.480916666666666
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass",
+        "url": "https://techcrunch.com/2026/09/25/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/",
+        "published_at": "2026-09-25T14:15:00Z",
+        "fetched_at": "2026-09-27T15:34:47.463417Z",
+        "language": "unknown",
+        "excerpt": "Your next opportunity could be one conversation away. Get your Expo+ Pass for just $75. Limited to the first 100 qualifying people.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4bd0476c568d54e5",
+        "canonical_url": "https://techcrunch.com/2026/09/25/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars",
+        "normalized_title": "affected by layoffs don t miss this 75 deal for your techcrunch disrupt 2026 expo pass",
+        "fingerprint": "4bd0476c568d54e5f840bc783e3cf380080eeae6c9df918cf8ad03dfec060517",
+        "rule_score": 40.025
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Last 24 hours to save up to $200 on TechCrunch Disrupt 2026. Reason 5 of 5 to attend: Momentum",
+        "url": "https://techcrunch.com/2026/09/25/last-24-hours-to-save-up-to-200-on-techcrunch-disrupt-2026-reason-5-of-5-to-attend-momentum/",
+        "published_at": "2026-09-25T14:00:00Z",
+        "fetched_at": "2026-09-27T15:34:47.463428Z",
+        "language": "unknown",
+        "excerpt": "Last 24 hours to save up to $200 on your TechCrunch Disrupt 2026 pass. Leave the event further in your startup's trajectory than where you started. Don't miss your chance to save and to push the needle.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1584ca742a5ae3a5",
+        "canonical_url": "https://techcrunch.com/2026/09/25/last-24-hours-to-save-up-to-200-on-techcrunch-disrupt-2026-reason-5-of-5-to-attend-momentum",
+        "normalized_title": "last 24 hours to save up to 200 on techcrunch disrupt 2026 reason 5 of 5 to attend momentum",
+        "fingerprint": "1584ca742a5ae3a513d19f401687d3e5021976ee201f834f872ffb358c9fb9cb",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "DeepSeek Elastic Compute (DSec)",
+        "url": "https://arxiv.org/abs/2609.22978",
+        "published_at": "2026-09-26T18:22:41Z",
+        "fetched_at": "2026-09-27T15:34:48.285267Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "shenli3514",
+        "upstream_urls": [
+          "https://arxiv.org/abs/2609.22978"
+        ],
+        "raw_metadata": {
+          "hn_id": 49859112,
+          "score": 299
+        },
+        "id": "bd6a3160acc0a1bc",
+        "canonical_url": "https://arxiv.org/abs/2609.22978",
+        "normalized_title": "deepseek elastic compute dsec",
+        "fingerprint": "bd6a3160acc0a1bc81057011241faf6b2a89d93718b905b74b1c7199c9386535",
+        "rule_score": 39.837805555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+        "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+        "published_at": "2026-09-26T15:56:34Z",
+        "fetched_at": "2026-09-27T15:34:48.709397Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "parasitid",
+        "upstream_urls": [
+          "https://tangled.org/yanndegat.tngl.sh/drawgent"
+        ],
+        "raw_metadata": {
+          "hn_id": 49857729,
+          "score": 169
+        },
+        "id": "c2ac78a353d4031c",
+        "canonical_url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+        "normalized_title": "drawgent coding agent on a live excalidraw canvas",
+        "fingerprint": "c2ac78a353d4031ce1b5fc57dc34d4391e81fe6a1856ef1083ba4f5bbb79e4b1",
+        "rule_score": 39.594277777777776
+      }
+    ],
+    "prompt_chars": 16006,
+    "estimated_input_tokens": 4001
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "kimi-platform-blog": "SourceFetchError: kimi-platform-blog: HTML fetch failed",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
