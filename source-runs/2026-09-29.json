@@ -1,0 +1,830 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 132,
+  "normalized_count": 132,
+  "filtered_count": 96,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative",
+        "url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/",
+        "published_at": "2026-09-28T16:52:38Z",
+        "fetched_at": "2026-09-28T18:32:26.275340Z",
+        "language": "unknown",
+        "excerpt": "Meta says it will focus on bringing its full technology stack, including Muse, Meta Business Agent, Muse API, Muse Code, and more to businesses and developers.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Aisha Malik",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9c559cf5bcfeff1c",
+        "canonical_url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative",
+        "normalized_title": "meta launches enterprise ai platform hires mongodb ceo to lead new initiative",
+        "fingerprint": "9c559cf5bcfeff1c2da98c4441c7a13ea96e303d4968bea622f78533256f6e99",
+        "rule_score": 63.68772222222222
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Nvidia launches new platform for reining in rogue AI agents",
+        "url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/",
+        "published_at": "2026-09-28T18:31:23Z",
+        "fetched_at": "2026-09-28T18:32:26.275263Z",
+        "language": "unknown",
+        "excerpt": "As the debate rages over whether the recent spate of rogue AI agents is a step toward AGI or a more conventional engineering problem, Nvidia is offering its own answer to problem. Nvidia CEO Jensen Huang on Monday introduced a toolkit of software and hardware products that add independent security layers around AI agents to [&#8230;]",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kirsten Korosec",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ddb70a0cd00997eb",
+        "canonical_url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents",
+        "normalized_title": "nvidia launches new platform for reining in rogue ai agents",
+        "fingerprint": "ddb70a0cd00997eba85bbf309041491f41cda285fda98a54b79c43045c1f4734",
+        "rule_score": 58.85230555555555
+      },
+      {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "source_group": "official",
+        "independence_group": "huggingface-blog",
+        "title": "Holo4: powering generalist computer-use agents",
+        "url": "https://huggingface.co/blog/Hcompany/holo4",
+        "published_at": "2026-09-28T09:44:05Z",
+        "fetched_at": "2026-09-28T18:32:12.382908Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "research",
+          "open-source"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e7185f55122ea3ae",
+        "canonical_url": "https://huggingface.co/blog/Hcompany/holo4",
+        "normalized_title": "holo4 powering generalist computer use agents",
+        "fingerprint": "e7185f55122ea3ae9652064b29102cec101af14df33dae1879ceb159b94fc830",
+        "rule_score": 57.97347222222222
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11236",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11236",
+        "published_at": "2026-09-28T18:31:25Z",
+        "fetched_at": "2026-09-28T18:32:21.494288Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nbatch: migrate speculative, mtmd and server to batch_ext (#29385)\n\n* adapt common\n\n* add common_batch\n\n* wip\n\n* wip: spec\n\n* cont\n\n* common_speculative_process\n\n* server_batch to use common_batch\n\n* rm some stale calls\n\nAssisted-by: Claude Fable 5.1\n\n* migrate mtmd\n\n* handle imrope, handle return val of add()/add_embd()\n\n* add spec zeros vector\n\n* add warning on zero fill path\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/50870264>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11236/llama-b11236-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11236/llama-b11236-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11236/llama-b11236-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11236/llama-b11236-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 398515877
+        },
+        "id": "62a8ad251a107fd6",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11236",
+        "normalized_title": "llama cpp releases b11236",
+        "fingerprint": "62a8ad251a107fd691345e2fafd6d962b5277af2243b07d9c8e0477d09ad5c7e",
+        "rule_score": 54.85236111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner",
+        "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/",
+        "published_at": "2026-09-28T18:00:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275300Z",
+        "language": "unknown",
+        "excerpt": "Anthropic has released the newest version of its mid-range model, boasting faster response times and less token burn.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lucas Ropek",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b8546c5a5fefc620",
+        "canonical_url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner",
+        "normalized_title": "anthropic releases sonnet 5 5 which it calls a significantly cheaper faster work partner",
+        "fingerprint": "b8546c5a5fefc6209d7df16fcb2c67f4e52339a616d1b2b6dffcbb1ab4481b79",
+        "rule_score": 54.8
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Can Muse overcome Meta’s trust issues?",
+        "url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
+        "published_at": "2026-09-27T19:57:30Z",
+        "fetched_at": "2026-09-28T18:32:26.275438Z",
+        "language": "unknown",
+        "excerpt": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "08dcbae54b865d84",
+        "canonical_url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues",
+        "normalized_title": "can muse overcome meta s trust issues",
+        "fingerprint": "08dcbae54b865d84b8c755129266bc4a20ea666c1d6029101cdd214e4bfb5823",
+        "rule_score": 52.59583333333333
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "NVIDIA Open Agent Safety Platform: A Reference for Continuous In-Silicon Agent Monitoring",
+        "url": "https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/",
+        "published_at": "2026-09-28T08:56:55Z",
+        "fetched_at": "2026-09-28T18:32:12.164857Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/09/agentic-ai-openshell-logo-ver-a-5746677-1920x1080-3-768x432.png\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"agentic-ai-openshell-logo-ver-a-5746677-1920x1080 (3)\" width=\"768\" />To understand where agentic AI stands today, consider the last seismic shift in technology: the rise of the internet in the 90s. It was new and full of...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Tanya Lenz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4db7d7a5310a957b",
+        "canonical_url": "https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring",
+        "normalized_title": "nvidia open agent safety platform a reference for continuous in silicon agent monitoring",
+        "fingerprint": "4db7d7a5310a957be3ab006d5feb872bc9f72ac6f088bbb318df1f5223837758",
+        "rule_score": 51.89486111111111
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Add Runtime Controls to AI Agents with NVIDIA OpenShell",
+        "url": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell/",
+        "published_at": "2026-09-28T08:55:00Z",
+        "fetched_at": "2026-09-28T18:32:12.164918Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"Three AI agents above a layered runtime stack with glowing green control icons, enclosed by a black-and-yellow safety barrier.\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/09/OpenShell-Controls-768x432.png\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"OpenShell-Controls\" width=\"768\" />AI agents can be given a goal, write code, use tools, and keep working as new information becomes available. This opens the door to applications that...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Alex Watson",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "520c9ed1a25168bb",
+        "canonical_url": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell",
+        "normalized_title": "add runtime controls to ai agents with nvidia openshell",
+        "fingerprint": "520c9ed1a25168bb2feee0e0ef8f28a9dc692cd8a413f00d4bd7683702de3a8b",
+        "rule_score": 51.891666666666666
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "工业创新进入“组队局”，拆解西门子Xcelerator开放生态的赋能链路",
+        "url": "https://www.qbitai.com/2026/09/498877.html",
+        "published_at": "2026-09-28T12:43:53Z",
+        "fetched_at": "2026-09-28T18:32:26.241429Z",
+        "language": "unknown",
+        "excerpt": "工业平台已经卷到帮伙伴拿线索、做Agent、出海了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "田, 晏林",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4bd9edf762f5ccb2",
+        "canonical_url": "https://www.qbitai.com/2026/09/498877.html",
+        "normalized_title": "工业创新进入 组队局 拆解西门子xcelerator开放生态的赋能链路",
+        "fingerprint": "4bd9edf762f5ccb2fa5a07b4b77a22124f80fe92777116ce41be241ad399e00a",
+        "rule_score": 51.27313888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "HC归来，华为正重新定义AIDC基础设施",
+        "url": "https://www.qbitai.com/2026/09/498787.html",
+        "published_at": "2026-09-28T11:18:27Z",
+        "fetched_at": "2026-09-28T18:32:26.241480Z",
+        "language": "unknown",
+        "excerpt": "AI基础设施下一站：算电协同",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "杰西卡",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5b0a8a4942f5add5",
+        "canonical_url": "https://www.qbitai.com/2026/09/498787.html",
+        "normalized_title": "hc归来 华为正重新定义aidc基础设施",
+        "fingerprint": "5b0a8a4942f5add5b8f39bffdae6258cf09554b32f8c6644a23bda1d355bb10b",
+        "rule_score": 51.13075
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Google is killing off Gemini’s Gems in favor of ‘skills’",
+        "url": "https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills/",
+        "published_at": "2026-09-28T17:29:50Z",
+        "fetched_at": "2026-09-28T18:32:26.275316Z",
+        "language": "unknown",
+        "excerpt": "As all-in-one AI agents like Meta's Muse and Instinct take off, Google is opting to end a feature which built task-specific agents.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "756c54595768b021",
+        "canonical_url": "https://techcrunch.com/2026/09/28/google-is-killing-off-geminis-gems-in-favor-of-skills",
+        "normalized_title": "google is killing off gemini s gems in favor of skills",
+        "fingerprint": "756c54595768b021040ba6395828697d4b6502a4abfe92b58fb68f08c90a2b2f",
+        "rule_score": 50.749722222222225
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic, Gamma, and Clay share what happens when enterprises actually deploy AI at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/28/anthropic-gamma-and-clay-share-what-happens-when-enterprises-actually-deploy-ai-at-techcrunch-disrupt-2026/",
+        "published_at": "2026-09-28T15:30:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275352Z",
+        "language": "unknown",
+        "excerpt": "Anthropic, Clay, and Gamma on what it takes for an AI product to go beyond the demo at the AI Stage at TechCrunchDisrupt 2026. Register to join and get 50% off a second pass.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b1dc4bdfed0eddfc",
+        "canonical_url": "https://techcrunch.com/2026/09/28/anthropic-gamma-and-clay-share-what-happens-when-enterprises-actually-deploy-ai-at-techcrunch-disrupt-2026",
+        "normalized_title": "anthropic gamma and clay share what happens when enterprises actually deploy ai at techcrunch disrupt 2026",
+        "fingerprint": "b1dc4bdfed0eddfc1d8fd44ea5e6d867b5d4e36cde3053025b175b737dc53ed2",
+        "rule_score": 50.55
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+        "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+        "published_at": "2026-09-28T13:38:48Z",
+        "fetched_at": "2026-09-28T18:32:26.275418Z",
+        "language": "unknown",
+        "excerpt": "Instinct has raised a $1 billion Series C, saying 'we're just getting started.' The company is now valued at $10 billion.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0dfcb907764bcc40",
+        "canonical_url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation",
+        "normalized_title": "viral ai agent instinct raises 1b series c at a 10b valuation",
+        "fingerprint": "0dfcb907764bcc408ab651400b0289d50a3228b4aaff1c28179f30686b1c411d",
+        "rule_score": 50.364666666666665
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic’s Dario Amodei gets the SNL treatment",
+        "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+        "published_at": "2026-09-27T16:30:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275448Z",
+        "language": "unknown",
+        "excerpt": "\"AI is the devil and I its maker.\"",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "81fb7db56fe6fa3d",
+        "canonical_url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment",
+        "normalized_title": "anthropic s dario amodei gets the snl treatment",
+        "fingerprint": "81fb7db56fe6fa3dcb67f540cc3c7921fb2110c08add71435d9665fa54de7c3e",
+        "rule_score": 48.25
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI Pauses Training Its Most Powerful Models After Agents Target Government",
+        "url": "https://www.wired.com/story/openai-pauses-training-most-powerful-models-after-rogue-agents-target-government/",
+        "published_at": "2026-09-28T13:09:38Z",
+        "fetched_at": "2026-09-28T18:32:28.768523Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "chunky1994",
+        "upstream_urls": [
+          "https://www.wired.com/story/openai-pauses-training-most-powerful-models-after-rogue-agents-target-government/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49877374,
+          "score": 13
+        },
+        "id": "0e95e221f3dd38c1",
+        "canonical_url": "https://www.wired.com/story/openai-pauses-training-most-powerful-models-after-rogue-agents-target-government",
+        "normalized_title": "openai pauses training its most powerful models after agents target government",
+        "fingerprint": "0e95e221f3dd38c16d2f906f71c7e89a2beb5c7ae33ea212ba362d65423c986a",
+        "rule_score": 47.31605555555556
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "After a deepfake voice fooled her grandfather, this founder sprang into action",
+        "url": "https://techcrunch.com/2026/09/28/after-a-deepfake-voice-fooled-her-grandfather-this-founder-sprang-into-action/",
+        "published_at": "2026-09-28T15:00:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275363Z",
+        "language": "unknown",
+        "excerpt": "After her grandfather was scammed by a deepfake of his brother's voice, Tarini Padmanabhuni founded DetectifAI, a San Francisco startup building AI models small enough to run directly on smartphones and flag fake voices in real time, and it's now one of the companies competing in Startup Battlefield at TechCrunch Disrupt.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Connie Loizos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e56f8012f2d6d08d",
+        "canonical_url": "https://techcrunch.com/2026/09/28/after-a-deepfake-voice-fooled-her-grandfather-this-founder-sprang-into-action",
+        "normalized_title": "after a deepfake voice fooled her grandfather this founder sprang into action",
+        "fingerprint": "e56f8012f2d6d08db783af267a6447202a5598340122bcc23e4f1f577b22bfbe",
+        "rule_score": 46.5
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Next 5 VCs judging Startup Battlefield 200 contenders at TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/09/28/next-five-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026/",
+        "published_at": "2026-09-28T14:30:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275374Z",
+        "language": "unknown",
+        "excerpt": "Thousands of applications. Multiple rounds of review. Hundreds of hours spent evaluating startups from around the world. Now comes the part everyone has been waiting for. Register for TechCrunch Disrupt 2026 today.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2be546e45b79752b",
+        "canonical_url": "https://techcrunch.com/2026/09/28/next-five-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026",
+        "normalized_title": "next 5 vcs judging startup battlefield 200 contenders at techcrunch disrupt 2026",
+        "fingerprint": "2be546e45b79752b94ad83be8e2f4b3ddbbd1d68d193f937084eb4b9387356df",
+        "rule_score": 46.45
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Modulate raises $25M for its voice models and analysis suite",
+        "url": "https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite/",
+        "published_at": "2026-09-28T14:05:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275384Z",
+        "language": "unknown",
+        "excerpt": "Modulate deploys its models to detect deepfake, fraud and scam",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a098695235e37ed0",
+        "canonical_url": "https://techcrunch.com/2026/09/28/modulate-raises-25m-for-its-voice-models-and-analysis-suite",
+        "normalized_title": "modulate raises 25m for its voice models and analysis suite",
+        "fingerprint": "a098695235e37ed04d3e20f39e2a6ebdbde2317965e896c6cf7d510f50b0aab1",
+        "rule_score": 46.40833333333333
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Insurtech Outmarket raises $34.5M just months after prior round",
+        "url": "https://techcrunch.com/2026/09/28/insuretech-outmarket-raises-34-5m-just-months-after-prior-round/",
+        "published_at": "2026-09-28T14:00:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275396Z",
+        "language": "unknown",
+        "excerpt": "The startup uses AI to automate tedious paperwork for insurance agencies and brokers.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Marina Temkin",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "edd6220ff13a33b4",
+        "canonical_url": "https://techcrunch.com/2026/09/28/insuretech-outmarket-raises-34-5m-just-months-after-prior-round",
+        "normalized_title": "insurtech outmarket raises 34 5m just months after prior round",
+        "fingerprint": "edd6220ff13a33b450fe62c7eced3281c31216e7aec626b49c7c906c7a604731",
+        "rule_score": 46.4
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Armada: Encrypted, Open-Source, Discord Alternative (Built on Nostr)",
+        "url": "https://soapbox.pub/armada",
+        "published_at": "2026-09-28T02:55:27Z",
+        "fetched_at": "2026-09-28T18:32:28.801505Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "long____cat",
+        "upstream_urls": [
+          "https://soapbox.pub/armada"
+        ],
+        "raw_metadata": {
+          "hn_id": 49873048,
+          "score": 120
+        },
+        "id": "6eda52051b7ffa9a",
+        "canonical_url": "https://soapbox.pub/armada",
+        "normalized_title": "armada encrypted open source discord alternative built on nostr",
+        "fingerprint": "6eda52051b7ffa9a259ec73e5291c2f1648476b18e0f2a17035c5d0ad80d7229",
+        "rule_score": 46.29241666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic’s CEO is about to have dinner with President Trump",
+        "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+        "published_at": "2026-09-27T20:34:28Z",
+        "fetched_at": "2026-09-28T18:32:26.275428Z",
+        "language": "unknown",
+        "excerpt": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d7c34c2018eabf62",
+        "canonical_url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump",
+        "normalized_title": "anthropic s ceo is about to have dinner with president trump",
+        "fingerprint": "d7c34c2018eabf62ea5cd2dcc93fa12a1aa1d5300c4687fda8e00ceb68a95fd0",
+        "rule_score": 44.657444444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Launch HN: Vespper (YC F24) – SOTA Docx MCP",
+        "url": "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+        "published_at": "2026-09-28T17:34:36Z",
+        "fetched_at": "2026-09-28T18:32:26.672148Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "topaztee",
+        "upstream_urls": [
+          "https://www.vespper.com/blog/launching-vespper-docx-mcp"
+        ],
+        "raw_metadata": {
+          "hn_id": 49881505,
+          "score": 8
+        },
+        "id": "09e02c018cd08b3d",
+        "canonical_url": "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+        "normalized_title": "launch hn vespper yc f24 sota docx mcp",
+        "fingerprint": "09e02c018cd08b3df0713de5ec9f2f78fb2bcfbedbcee95cedd7baf1f942ca39",
+        "rule_score": 43.757666666666665
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI still doesn't seem to have a handle on all of its rogue AI activity",
+        "url": "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/",
+        "published_at": "2026-09-28T17:33:34Z",
+        "fetched_at": "2026-09-28T18:32:26.787968Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mikelgan",
+        "upstream_urls": [
+          "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49881484,
+          "score": 41
+        },
+        "id": "57230ae5cfd3d394",
+        "canonical_url": "https://techcrunch.com/2026/09/28/openai-still-doesnt-seem-to-have-a-handle-on-all-of-its-rogue-ai-activity",
+        "normalized_title": "openai still doesn t seem to have a handle on all of its rogue ai activity",
+        "fingerprint": "57230ae5cfd3d394abcd35017efdd42d6376ffea1dbff00e3b1bb4a5bdfeddb5",
+        "rule_score": 43.755944444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nvidia wants to put a watchdog chip next to every AI agent",
+        "url": "https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents/",
+        "published_at": "2026-09-28T15:46:36Z",
+        "fetched_at": "2026-09-28T18:32:29.379411Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jonbaer",
+        "upstream_urls": [
+          "https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49879883,
+          "score": 33
+        },
+        "id": "97cf8d092d828eda",
+        "canonical_url": "https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents",
+        "normalized_title": "nvidia wants to put a watchdog chip next to every ai agent",
+        "fingerprint": "97cf8d092d828eda1f519dcc35c6702f1e00d666fdf23258a5318b1c13a6988f",
+        "rule_score": 43.577666666666666
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Your final chance to grab your exhibit table at TechCrunch Disrupt 2026 is October 2",
+        "url": "https://techcrunch.com/2026/09/28/disrupt-2026-exhibitor-program-extended-until-oct-2/",
+        "published_at": "2026-09-28T14:00:00Z",
+        "fetched_at": "2026-09-28T18:32:26.275407Z",
+        "language": "unknown",
+        "excerpt": "The last day to book your Disrupt 2026 exhibit table is this Friday, October 2 at 11:59 p.m. PT. Secure your exhibit table and get your startup in front of 10,000+ founders, investors, and tech leaders at San Francisco's Moscone West on October 13-15.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1b72ab1b3f45e409",
+        "canonical_url": "https://techcrunch.com/2026/09/28/disrupt-2026-exhibitor-program-extended-until-oct-2",
+        "normalized_title": "your final chance to grab your exhibit table at techcrunch disrupt 2026 is october 2",
+        "fingerprint": "1b72ab1b3f45e409bddcf9b06870b3f53c0c1a9ae9e5eaedd5a4fbefe178003b",
+        "rule_score": 42.4
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: TinyAIArena watch AI agents battle it out",
+        "url": "https://tinyaiarena.com/",
+        "published_at": "2026-09-27T15:51:28Z",
+        "fetched_at": "2026-09-28T18:32:28.739428Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "hp6",
+        "upstream_urls": [
+          "https://tinyaiarena.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49867775,
+          "score": 116
+        },
+        "id": "70480fad8e218ed1",
+        "canonical_url": "https://tinyaiarena.com/",
+        "normalized_title": "show hn tinyaiarena watch ai agents battle it out",
+        "fingerprint": "70480fad8e218ed1f4736f8cacfc52b34685e10a9e6297688ed71219bf9cd4b0",
+        "rule_score": 41.18577777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "MongoDB CEO resigns to join Meta",
+        "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/",
+        "published_at": "2026-09-28T14:54:21Z",
+        "fetched_at": "2026-09-28T18:32:26.848059Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "diek",
+        "upstream_urls": [
+          "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49879000,
+          "score": 182
+        },
+        "id": "a86fc6b5bacbcc4c",
+        "canonical_url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28",
+        "normalized_title": "mongodb ceo resigns to join meta",
+        "fingerprint": "a86fc6b5bacbcc4cd274889455f72aff9a876c305de2d32a988215098f940970",
+        "rule_score": 40.49058333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I made a visual workspace for AI Automations",
+        "url": "https://www.biom.dev/",
+        "published_at": "2026-09-28T17:53:14Z",
+        "fetched_at": "2026-09-28T18:32:26.909871Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jduhking",
+        "upstream_urls": [
+          "https://www.biom.dev/"
+        ],
+        "raw_metadata": {
+          "hn_id": 49881777,
+          "score": 6
+        },
+        "id": "2e4d7f182aaffe61",
+        "canonical_url": "https://www.biom.dev/",
+        "normalized_title": "i made a visual workspace for ai automations",
+        "fingerprint": "2e4d7f182aaffe61cd22cf0ec09ade65a48559e3129b3f411321e3f6d84a13ab",
+        "rule_score": 39.78872222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Protest Against European Parliament Chat Control 1.0 Legislation in Warsaw",
+        "url": "https://www.reutersconnect.com/item/protest-against-european-parliament-chat-control-10-legislation-in-warsaw-poland-26-sep-2026/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVNPUEEwMDA3UVVNMFQ",
+        "published_at": "2026-09-28T17:48:19Z",
+        "fetched_at": "2026-09-28T18:32:27.823918Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "latexr",
+        "upstream_urls": [
+          "https://www.reutersconnect.com/item/protest-against-european-parliament-chat-control-10-legislation-in-warsaw-poland-26-sep-2026/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVNPUEEwMDA3UVVNMFQ"
+        ],
+        "raw_metadata": {
+          "hn_id": 49881711,
+          "score": 6
+        },
+        "id": "d01caa8c957a76aa",
+        "canonical_url": "https://www.reutersconnect.com/item/protest-against-european-parliament-chat-control-10-legislation-in-warsaw-poland-26-sep-2026/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVNPUEEwMDA3UVVNMFQ",
+        "normalized_title": "protest against european parliament chat control 1 0 legislation in warsaw",
+        "fingerprint": "d01caa8c957a76aab3e29e32deea2811a0f26aeebb19ba69e0e357e14f46910b",
+        "rule_score": 39.78052777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The Teen Portraits That Captivated Sofia Coppola",
+        "url": "https://www.newyorker.com/culture/photo-booth/the-teen-portraits-that-captivated-sofia-coppola",
+        "published_at": "2026-09-28T17:41:28Z",
+        "fetched_at": "2026-09-28T18:32:26.643489Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "prismatic",
+        "upstream_urls": [
+          "https://www.newyorker.com/culture/photo-booth/the-teen-portraits-that-captivated-sofia-coppola"
+        ],
+        "raw_metadata": {
+          "hn_id": 49881606,
+          "score": 7
+        },
+        "id": "c436a491b440fa3e",
+        "canonical_url": "https://www.newyorker.com/culture/photo-booth/the-teen-portraits-that-captivated-sofia-coppola",
+        "normalized_title": "the teen portraits that captivated sofia coppola",
+        "fingerprint": "c436a491b440fa3e20eb16a1369c21a55028702c37f00e5bf5510f7c0579d442",
+        "rule_score": 39.76911111111111
+      }
+    ],
+    "prompt_chars": 7134,
+    "estimated_input_tokens": 1783
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}

@@ -1966,10 +1966,10 @@
   },
   {
     "domain": "arstechnica.com",
-    "sample_url": "https://arstechnica.com/security/2026/09/google-ads-caught-delivering-convincing-scareware-ads-to-unsuspecting-users/",
-    "sample_title": "Uncle's frozen Mac says it's infected after viewing a Google ad. Now what?",
+    "sample_url": "https://arstechnica.com/space/2026/09/the-large-robotic-arm-on-the-international-space-station-has-stopped-working/",
+    "sample_title": "The large robotic arm on the International Space Station has stopped working",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-09-26T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2011,10 +2011,10 @@
   },
   {
     "domain": "arxiv.org",
-    "sample_url": "https://arxiv.org/abs/2609.25021",
-    "sample_title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+    "sample_url": "https://arxiv.org/abs/2110.01834",
+    "sample_title": "Thinking fast and slow in AI: The role of metacognition (2021)",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2566,10 +2566,10 @@
   },
   {
     "domain": "bcantrill.dtrace.org",
-    "sample_url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
-    "sample_title": "What Sun got wrong",
+    "sample_url": "https://bcantrill.dtrace.org/2026/09/27/fools-expertise/",
+    "sample_title": "Fool's Expertise",
     "first_seen_at": "2026-09-06T16:00:00Z",
-    "last_seen_at": "2026-09-23T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2660,6 +2660,21 @@
     "sample_title": "Gpiozero Flow",
     "first_seen_at": "2026-07-30T16:00:00Z",
     "last_seen_at": "2026-07-31T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "benovermyer.com",
+    "sample_url": "https://benovermyer.com/blog/2026/09/japanese-vs-western-heraldry/",
+    "sample_title": "What Heraldry and Mon Can Teach Us About Building Visual-Identity Generators",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -2925,6 +2940,21 @@
     "enabled": false
   },
   {
+    "domain": "blog.alexewerlof.com",
+    "sample_url": "https://blog.alexewerlof.com/p/coding-is-not-solved",
+    "sample_title": "Coding Is Not Solved",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "blog.andymasley.com",
     "sample_url": "https://blog.andymasley.com/p/i-think-the-data-center-backlash",
     "sample_title": "I think the data center backlash is mostly about data centers",
@@ -3091,10 +3121,10 @@
   },
   {
     "domain": "blog.cloudflare.com",
-    "sample_url": "https://blog.cloudflare.com/vary-support/",
-    "sample_title": "We just shipped support for the ugliest part of HTTP: Vary",
+    "sample_url": "https://blog.cloudflare.com/cloudflare-cf-cli-launch/",
+    "sample_title": "Cf: The Agentic CLI for the Cloudflare API",
     "first_seen_at": "2026-07-25T16:00:00Z",
-    "last_seen_at": "2026-09-24T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -3425,6 +3455,21 @@
     "sample_title": "Let's all meet up in the Y2K",
     "first_seen_at": "2026-08-06T16:00:00Z",
     "last_seen_at": "2026-08-08T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "blog.glyph.im",
+    "sample_url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
+    "sample_title": "What Would a Serious AI Product Look Like?",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -4445,6 +4490,21 @@
     "sample_title": "My favorite nonfiction books about cults, scams, and schemes",
     "first_seen_at": "2026-08-24T16:00:00Z",
     "last_seen_at": "2026-08-24T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "bookofrevenue.com",
+    "sample_url": "https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does",
+    "sample_title": "Footguns with Postgres “at time zone 'UTC'”",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -5869,7 +5929,7 @@
     "sample_url": "https://clydesnotes.blogspot.com/2026/08/video-cds-break-windows-explorer.html",
     "sample_title": "Video CDs Break Windows Explorer",
     "first_seen_at": "2026-09-27T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -6185,6 +6245,21 @@
     "sample_title": "Discovery of a new OpenAI agent message board",
     "first_seen_at": "2026-09-04T16:00:00Z",
     "last_seen_at": "2026-09-06T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "colo.to",
+    "sample_url": "https://colo.to/nvidia-stock-narrative.html",
+    "sample_title": "Owed a billion dollars in Nvidia stock",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -7125,6 +7200,21 @@
     "enabled": false
   },
   {
+    "domain": "david.alvarezrosa.com",
+    "sample_url": "https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/",
+    "sample_title": "Self-Hosting on the Dark Web",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "davidepiffer.com",
     "sample_url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
     "sample_title": "AI isn’t outthinking mathematicians, it’s out-remembering them",
@@ -7250,6 +7340,21 @@
     "sample_title": "Two lines of Python that segfault the interpreter – Timofei Ivankov",
     "first_seen_at": "2026-08-19T16:00:00Z",
     "last_seen_at": "2026-08-19T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "debarshibasak.github.io",
+    "sample_url": "https://debarshibasak.github.io/readables/blogs/cambrian-explosion",
+    "sample_title": "Cambrian Explosion of AI",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -7395,6 +7500,21 @@
     "enabled": false
   },
   {
+    "domain": "definitelynotwindows.com",
+    "sample_url": "https://definitelynotwindows.com/",
+    "sample_title": "Definitely not Windows (Win 11 parody)",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "dejan.ai",
     "sample_url": "https://dejan.ai/blog/ox-alpha/",
     "sample_title": "Ox-Alpha Is GLM?",
@@ -7445,6 +7565,21 @@
     "sample_title": "Show HN: Desktopcolors.com – A museum for solid background colors of classic OS",
     "first_seen_at": "2026-08-17T16:00:00Z",
     "last_seen_at": "2026-08-18T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "destroy.spritefusion.com",
+    "sample_url": "https://destroy.spritefusion.com/",
+    "sample_title": "Show HN: Destroy Any Website with Stickman",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -8445,6 +8580,21 @@
     "enabled": false
   },
   {
+    "domain": "earnanhonestdollar.com",
+    "sample_url": "https://earnanhonestdollar.com/bench",
+    "sample_title": "Calling the AI bluff: Adding \"Do not guess\" cut made-up claims from 71% to 20%",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "earth.nullschool.net",
     "sample_url": "https://earth.nullschool.net/",
     "sample_title": "Earth.nullschool.net",
@@ -8734,7 +8884,7 @@
     "sample_url": "https://eli.thegreenplace.net/2026/rusty-thoughts-on-parse-dont-validate/",
     "sample_title": "Rusty thoughts on \"Parse, don't validate\"",
     "first_seen_at": "2026-09-16T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -9495,6 +9645,21 @@
     "enabled": false
   },
   {
+    "domain": "felixrieseberg.com",
+    "sample_url": "https://felixrieseberg.com/made-by-mechanical-means/",
+    "sample_title": "Made by Mechanical Means",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "fermisense.com",
     "sample_url": "https://fermisense.com/when-machines-take-the-wheel/",
     "sample_title": "A $500 RL fine-tune of a 9B open model beat frontier models on catalog review",
@@ -9605,6 +9770,21 @@
     "sample_title": "Show HN: Firemaps Spain – Live wildfire map with wind flow for ES and PT",
     "first_seen_at": "2026-07-29T16:00:00Z",
     "last_seen_at": "2026-07-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "fireworks.ai",
+    "sample_url": "https://fireworks.ai/blog/ember-1",
+    "sample_title": "Ember-1",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -10475,6 +10655,21 @@
     "sample_title": "Laya on Mac M4 CoreML Offline",
     "first_seen_at": "2026-08-25T16:00:00Z",
     "last_seen_at": "2026-09-22T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "git.mills.io",
+    "sample_url": "https://git.mills.io/prologic/parley",
+    "sample_title": "Parley: Federated, decentralised chat that speaks plain IRC",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -11506,10 +11701,10 @@
   },
   {
     "domain": "hereticpleb.vercel.app",
-    "sample_url": "https://hereticpleb.vercel.app/blog/10-tells-of-slop",
-    "sample_title": "10 Tells of a Slop UI",
+    "sample_url": "https://hereticpleb.vercel.app/blog/packing-binary-is-fun-actually",
+    "sample_title": "Packing Binary Is Fun",
     "first_seen_at": "2026-09-27T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -11615,6 +11810,21 @@
     "sample_title": "Pilots, Flight Attendants Top in the List of Radiation-Related Cancer Deaths",
     "first_seen_at": "2026-08-18T16:00:00Z",
     "last_seen_at": "2026-08-18T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "hn.watch",
+    "sample_url": "https://hn.watch/",
+    "sample_title": "Show HN: HN.watch – Videos of all Hacker News posts",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -11990,6 +12200,21 @@
     "sample_title": "Every exterior shot in The Taking of Pelham 123",
     "first_seen_at": "2026-08-15T16:00:00Z",
     "last_seen_at": "2026-08-15T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "iain.rocks",
+    "sample_url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+    "sample_title": "Don't couple your Go code to GitHub",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -12735,6 +12960,21 @@
     "enabled": false
   },
   {
+    "domain": "jadidbourbaki.github.io",
+    "sample_url": "https://jadidbourbaki.github.io/blog/prompt-lookup-llama-cpp/",
+    "sample_title": "Faster prompt lookup drafting in llama.cpp",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "jakeasmith.com",
     "sample_url": "https://jakeasmith.com/blog/http-build-url/",
     "sample_title": "My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it",
@@ -13384,7 +13624,7 @@
     "sample_url": "https://jvns.ca/blog/2026/09/27/replacing-the-old-battery-on-rechargeable-bike-lights/",
     "sample_title": "Replacing the old battery on rechargeable bike lights",
     "first_seen_at": "2026-09-27T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -14355,6 +14595,21 @@
     "enabled": false
   },
   {
+    "domain": "lecaro.me",
+    "sample_url": "https://lecaro.me/20260921-google-less.html",
+    "sample_title": "So long Google, and thanks for all the nudes",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "lectronz.com",
     "sample_url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
     "sample_title": "How Europe is killing makers and micro-entrepreneurs",
@@ -14780,6 +15035,21 @@
     "sample_title": "How is the Bun rewrite in Rust going?",
     "first_seen_at": "2026-07-27T16:00:00Z",
     "last_seen_at": "2026-07-28T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "loficities.com",
+    "sample_url": "https://loficities.com/",
+    "sample_title": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -15230,6 +15500,21 @@
     "sample_title": "How to Create a Tor Exit Node (2015)",
     "first_seen_at": "2026-09-05T16:00:00Z",
     "last_seen_at": "2026-09-05T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "madrobot.blog",
+    "sample_url": "https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents/",
+    "sample_title": "Nvidia wants to put a watchdog chip next to every AI agent",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -16231,10 +16516,10 @@
   },
   {
     "domain": "microsoft.github.io",
-    "sample_url": "https://microsoft.github.io/z3guide/",
-    "sample_title": "Online Z3 Guide",
+    "sample_url": "https://microsoft.github.io/rust-for-dotnet-devs/latest/",
+    "sample_title": "Rust for C# and .NET developers guide by Microsoft",
     "first_seen_at": "2026-08-01T16:00:00Z",
-    "last_seen_at": "2026-09-17T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -16715,6 +17000,21 @@
     "sample_title": "An Honest Review of AI Programming",
     "first_seen_at": "2026-08-04T16:00:00Z",
     "last_seen_at": "2026-08-04T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "mubi.com",
+    "sample_url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
+    "sample_title": "Pirating the Pirates",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -17910,6 +18210,21 @@
     "enabled": false
   },
   {
+    "domain": "notes.secretsauce.net",
+    "sample_url": "https://notes.secretsauce.net/notes/2026/09/27_lunar-terminator-paradox.html",
+    "sample_title": "Lunar Terminator Paradox",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "notesfrompoland.com",
     "sample_url": "https://notesfrompoland.com/2026/09/24/starlink-ground-station-in-poland-hit-by-fire-in-suspected-arson-attack/",
     "sample_title": "Starlink ground station in Poland hit by fire in suspected arson attack",
@@ -17930,6 +18245,21 @@
     "sample_title": "I can't stop thinking about Papua New Guinea",
     "first_seen_at": "2026-09-15T16:00:00Z",
     "last_seen_at": "2026-09-17T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "nourishedbyscience.com",
+    "sample_url": "https://nourishedbyscience.com/keto_and_liverfat/",
+    "sample_title": "Which Diet Is Best to Lower Liver Fat and Improve Insulin Sensitivity?",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -18065,6 +18395,21 @@
     "sample_title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
     "first_seen_at": "2026-09-25T16:00:00Z",
     "last_seen_at": "2026-09-26T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "nyanpasu64.gitlab.io",
+    "sample_url": "https://nyanpasu64.gitlab.io/blog/8bitdo-game-controller/",
+    "sample_title": "An 8BitDo Switch controller adventure",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -19442,9 +19787,9 @@
   {
     "domain": "pixelambacht.nl",
     "sample_url": "https://pixelambacht.nl/2026/ten-lines-of-code/",
-    "sample_title": "Ten Lines of Code That Changed My World",
+    "sample_title": "Ten lines of code that changed my world",
     "first_seen_at": "2026-09-27T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -19501,10 +19846,10 @@
   },
   {
     "domain": "platform.claude.com",
-    "sample_url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
-    "sample_title": "Claude: System Prompts",
+    "sample_url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
+    "sample_title": "Prompting Claude Opus 5.5",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-08-18T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -21885,6 +22230,21 @@
     "enabled": false
   },
   {
+    "domain": "sancho.bearblog.dev",
+    "sample_url": "https://sancho.bearblog.dev/google-weird/",
+    "sample_title": "When did Google get so weird?",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "sander.ai",
     "sample_url": "https://sander.ai/2026/08/24/continuous-dlms.html",
     "sample_title": "Continuous Diffusion Language Models (CDLM's)",
@@ -22040,6 +22400,21 @@
     "sample_title": "Three schoolgirls in Kinsale pulled up a pea plant covered in warts (2016)",
     "first_seen_at": "2026-09-03T16:00:00Z",
     "last_seen_at": "2026-09-03T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "scissor.studio",
+    "sample_url": "https://scissor.studio/",
+    "sample_title": "Show HN: Free alternative to graphics design giants",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -22740,6 +23115,21 @@
     "enabled": false
   },
   {
+    "domain": "simonw.substack.com",
+    "sample_url": "https://simonw.substack.com/p/2026-in-llms-so-far",
+    "sample_title": "2026 in LLMs (So Far)",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "simonwillison.net",
     "sample_url": "https://simonwillison.net/2026/Sep/21/jev/",
     "sample_title": "Jev introduces a new shape of LLM",
@@ -23030,6 +23420,21 @@
     "sample_title": "Show HN: Snapdrop: Instantly share files between devices. No setup, no signup",
     "first_seen_at": "2026-09-18T16:00:00Z",
     "last_seen_at": "2026-09-19T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "soapbox.pub",
+    "sample_url": "https://soapbox.pub/armada",
+    "sample_title": "Armada: Encrypted, Open-Source, Discord Alternative (Built on Nostr)",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -25050,6 +25455,21 @@
     "enabled": false
   },
   {
+    "domain": "thill.me",
+    "sample_url": "https://thill.me/2026/09/11/what-i-did-at-rc.html",
+    "sample_title": "What I did at Recurse Center",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "think-twice.me",
     "sample_url": "https://think-twice.me/?p=116",
     "sample_title": "The Overton Window of Food",
@@ -25295,6 +25715,21 @@
     "sample_title": "How much of F-Droid is LLM generated?",
     "first_seen_at": "2026-09-16T16:00:00Z",
     "last_seen_at": "2026-09-16T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "tinyaiarena.com",
+    "sample_url": "https://tinyaiarena.com/",
+    "sample_title": "Show HN: TinyAIArena watch AI agents battle it out",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -25710,6 +26145,21 @@
     "enabled": false
   },
   {
+    "domain": "trekhleb.dev",
+    "sample_url": "https://trekhleb.dev/blog/2021/self-parking-car-evolution/",
+    "sample_title": "Self-parking car using genetic algorithm (2021)",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "trellner.com",
     "sample_url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
     "sample_title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
@@ -25981,10 +26431,10 @@
   },
   {
     "domain": "twitter.com",
-    "sample_url": "https://twitter.com/amplifiedamp/status/2103535129503383700",
-    "sample_title": "Font where each token is equal-width",
+    "sample_url": "https://twitter.com/danielhayesmith/status/2103976394338271515",
+    "sample_title": "I built a native Apple app for 4 platforms in one afternoon with my AI workflow",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -26162,9 +26612,9 @@
   {
     "domain": "unsung.aresluna.org",
     "sample_url": "https://unsung.aresluna.org/they-had-no-concept-of-a-duty-of-care-to-their-users/",
-    "sample_title": "\"They had no concept of a duty of care to their users.\"",
+    "sample_title": "On caring for user data: NeoVim caused Vim undo files to be deleted",
     "first_seen_at": "2026-07-25T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -26510,6 +26960,21 @@
     "sample_title": "Small Models Can Introspect, Too (2025)",
     "first_seen_at": "2026-08-23T16:00:00Z",
     "last_seen_at": "2026-08-23T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "vhyrro.neorg.org",
+    "sample_url": "https://vhyrro.neorg.org/posts/critical-luarocks-exploit-cve/",
+    "sample_title": "Luarocks.org remote code execution exploit",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -28110,6 +28575,21 @@
     "enabled": false
   },
   {
+    "domain": "www.biom.dev",
+    "sample_url": "https://www.biom.dev/",
+    "sample_title": "I made a visual workspace for AI Automations",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.blackmagicdesign.com",
     "sample_url": "https://www.blackmagicdesign.com/media/release/20260908-03",
     "sample_title": "DaVinci Resolve 21.1",
@@ -28175,6 +28655,21 @@
     "sample_title": "Used ThinkPad Buyer's Guide (2019)",
     "first_seen_at": "2026-09-22T16:00:00Z",
     "last_seen_at": "2026-09-22T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.bobbytables.io",
+    "sample_url": "https://www.bobbytables.io/p/13-months-sober",
+    "sample_title": "13 Months Sober (2025)",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -29791,10 +30286,10 @@
   },
   {
     "domain": "www.economist.com",
-    "sample_url": "https://www.economist.com/leaders/2026/09/10/plunging-test-scores-are-a-slow-moving-catastrophe",
-    "sample_title": "Plunging test scores are a slow-moving catastrophe",
+    "sample_url": "https://www.economist.com/business/2026/09/27/european-industry-is-doing-better-than-you-may-think",
+    "sample_title": "European industry is doing better than you may think",
     "first_seen_at": "2026-08-08T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -30065,6 +30560,21 @@
     "sample_title": "There is no epidemic of loneliness, but there is an epidemic of scurvy",
     "first_seen_at": "2026-08-09T16:00:00Z",
     "last_seen_at": "2026-09-23T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.extremetech.com",
+    "sample_url": "https://www.extremetech.com/mobile/grapheneos-picks-motorola-signature-27-as-its-first-non-pixel-phone",
+    "sample_title": "GrapheneOS Picks Motorola Signature 27 as Its First Non-Pixel Phone",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -30810,6 +31320,21 @@
     "enabled": false
   },
   {
+    "domain": "www.habibicode.org",
+    "sample_url": "https://www.habibicode.org/thedrawnworld",
+    "sample_title": "37,500 border drawings: a map of the world as people remember it",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.hacktron.ai",
     "sample_url": "https://www.hacktron.ai/blog/hacking-openai",
     "sample_title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
@@ -31245,6 +31770,21 @@
     "enabled": false
   },
   {
+    "domain": "www.ihatethefuture.com",
+    "sample_url": "https://www.ihatethefuture.com/2026/09/the-normalization-of-inexplicable.html",
+    "sample_title": "The Normalization of Inexplicable Failures",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.ikea.com",
     "sample_url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
     "sample_title": "How does IKEA come up with names for its products?",
@@ -31351,10 +31891,10 @@
   },
   {
     "domain": "www.inkandswitch.com",
-    "sample_url": "https://www.inkandswitch.com/",
-    "sample_title": "Ink and Switch interactive homepage",
+    "sample_url": "https://www.inkandswitch.com/essay/malleable-software/",
+    "sample_title": "Malleable software: Restoring user agency in a world of locked-down apps (2025)",
     "first_seen_at": "2026-09-25T16:00:00Z",
-    "last_seen_at": "2026-09-26T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -32165,6 +32705,21 @@
     "sample_title": "LispBM is a concurrent Lisp for microcontrollers with message passing",
     "first_seen_at": "2026-09-19T16:00:00Z",
     "last_seen_at": "2026-09-19T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.livescience.com",
+    "sample_url": "https://www.livescience.com/archaeology/ancient-egyptians/we-have-found-traces-of-peace-thousands-of-years-old-fragment-of-worlds-oldest-known-peace-treaty-found-in-turkey",
+    "sample_title": "Fragment of oldest known peace treaty found in Turkey",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -33181,10 +33736,10 @@
   },
   {
     "domain": "www.newyorker.com",
-    "sample_url": "https://www.newyorker.com/magazine/2026/09/28/on-the-mark-louis-menand-book-review",
-    "sample_title": "The Curious Power of Punctuation",
+    "sample_url": "https://www.newyorker.com/culture/photo-booth/the-teen-portraits-that-captivated-sofia-coppola",
+    "sample_title": "The Teen Portraits That Captivated Sofia Coppola",
     "first_seen_at": "2026-07-26T16:00:00Z",
-    "last_seen_at": "2026-09-24T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -33230,6 +33785,21 @@
     "sample_title": "USA Today Co., partners with Palantir to analyze audience data",
     "first_seen_at": "2026-08-08T16:00:00Z",
     "last_seen_at": "2026-08-08T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.nissan-global.com",
+    "sample_url": "https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/",
+    "sample_title": "Nissan's third generation e-POWER powertrain",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -33452,9 +34022,9 @@
   {
     "domain": "www.nytimes.com",
     "sample_url": "https://www.nytimes.com/2026/09/26/science/motel-science-discovery.html",
-    "sample_title": "In an $80 Motel Room, a Discovery to Shed Light on the Origins of Life",
+    "sample_title": "In an $80 motel room, a discovery to shed light on the origins of life",
     "first_seen_at": "2026-07-26T16:00:00Z",
-    "last_seen_at": "2026-09-27T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -33916,10 +34486,10 @@
   },
   {
     "domain": "www.pewresearch.org",
-    "sample_url": "https://www.pewresearch.org/methods/2026/08/27/no-easy-fix-for-bogus-respondents-in-online-opt-in-polls/",
-    "sample_title": "No Easy Fix for Bogus Respondents in Online Opt-In Polls",
+    "sample_url": "https://www.pewresearch.org/decoded/2026/09/28/how-pew-research-center-is-and-is-not-using-ai-in-our-work-2/",
+    "sample_title": "How Pew Research Center is – and is not – using AI in our work",
     "first_seen_at": "2026-08-21T16:00:00Z",
-    "last_seen_at": "2026-09-23T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -34305,6 +34875,21 @@
     "enabled": false
   },
   {
+    "domain": "www.quora.com",
+    "sample_url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
+    "sample_title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.qwencloud.com",
     "sample_url": "https://www.qwencloud.com/models/qwen3.8-max-0902",
     "sample_title": "Qwen3.8-Max",
@@ -34486,10 +35071,25 @@
   },
   {
     "domain": "www.reuters.com",
-    "sample_url": "https://www.reuters.com/business/ftc-chair-pushes-back-treating-ai-agents-independent-actors-2026-09-25/",
-    "sample_title": "FTC chair suggests AI developers should be liable for conduct of agents",
+    "sample_url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/",
+    "sample_title": "MongoDB CEO resigns to join Meta",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-09-26T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.reutersconnect.com",
+    "sample_url": "https://www.reutersconnect.com/item/protest-against-european-parliament-chat-control-10-legislation-in-warsaw-poland-26-sep-2026/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX01UMVNPUEEwMDA3UVVNMFQ",
+    "sample_title": "Protest Against European Parliament Chat Control 1.0 Legislation in Warsaw",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -35281,10 +35881,10 @@
   },
   {
     "domain": "www.smithsonianmag.com",
-    "sample_url": "https://www.smithsonianmag.com/science-nature/earths-organisms-developed-via-evolution-some-theorists-wonder-what-if-the-entire-cosmos-did-too-180989338/",
-    "sample_title": "Earth's organisms developed via evolution. What if the cosmos did, too?",
+    "sample_url": "https://www.smithsonianmag.com/history/who-wrote-elizabeth-is-most-scathing-letters-new-research-suggests-the-tudor-queens-male-secretaries-revised-her-correspondence-to-emphasize-her-temper-180989565/",
+    "sample_title": "Who Wrote Elizabeth I's Most Scathing Letters?",
     "first_seen_at": "2026-08-16T16:00:00Z",
-    "last_seen_at": "2026-09-04T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -35386,10 +35986,10 @@
   },
   {
     "domain": "www.ssp.sh",
-    "sample_url": "https://www.ssp.sh/brain/ai-writing/",
-    "sample_title": "If you start writing today, there's no way to know if you can write without AI",
+    "sample_url": "https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/",
+    "sample_title": "The problem is not AI code, but not knowing about system architecture or intent",
     "first_seen_at": "2026-08-28T16:00:00Z",
-    "last_seen_at": "2026-09-22T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -36061,10 +36661,25 @@
   },
   {
     "domain": "www.theregister.com",
-    "sample_url": "https://www.theregister.com/systems/2026/09/25/uncle-sam-coughs-up-19b-for-grid-upgrades-as-datacenters-hit-a-power-wall/5299276",
-    "sample_title": "US DOE will give $5.25B to upgrade the grid for AI datacenters",
+    "sample_url": "https://www.theregister.com/columnists/2026/09/27/big-ais-content-problem-take-the-work-keep-the-money/5299007",
+    "sample_title": "Big AI's content problem: Take the work, keep the money",
     "first_seen_at": "2026-07-24T16:00:00Z",
-    "last_seen_at": "2026-09-26T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "www.thisamericanlife.org",
+    "sample_url": "https://www.thisamericanlife.org/897/transcript",
+    "sample_title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -36570,6 +37185,21 @@
     "enabled": false
   },
   {
+    "domain": "www.vespper.com",
+    "sample_url": "https://www.vespper.com/blog/launching-vespper-docx-mcp",
+    "sample_title": "Launch HN: Vespper (YC F24) – SOTA Docx MCP",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
     "domain": "www.vice.com",
     "sample_url": "https://www.vice.com/en/article/the-strange-case-of-elias-thorne-the-imaginary-man-ai-chatbots-are-obsessed-with/",
     "sample_title": "The Case of Elias Thorne, Imaginary Man AI Chatbots Are Obsessed With",
@@ -36856,10 +37486,10 @@
   },
   {
     "domain": "www.wired.com",
-    "sample_url": "https://www.wired.com/story/flock-is-offering-voluntary-buyouts-to-employees/",
-    "sample_title": "Flock Offers Employees Buyouts as Customers Flee",
+    "sample_url": "https://www.wired.com/story/openai-pauses-training-most-powerful-models-after-rogue-agents-target-government/",
+    "sample_title": "OpenAI Pauses Training Its Most Powerful Models After Agents Target Government",
     "first_seen_at": "2026-08-03T16:00:00Z",
-    "last_seen_at": "2026-09-19T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -37051,10 +37681,10 @@
   },
   {
     "domain": "www.youtube.com",
-    "sample_url": "https://www.youtube.com/watch?v=Cjntrqhn8pk",
-    "sample_title": "Alan Kay: Shannon gave us a way of dealing with noisy channels [video]",
+    "sample_url": "https://www.youtube.com/watch?v=t0knYnEYBRo",
+    "sample_title": "Rails World 2026 Closing Keynote – Aaron Patterson [video]",
     "first_seen_at": "2026-07-25T16:00:00Z",
-    "last_seen_at": "2026-09-26T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],
@@ -37325,6 +37955,21 @@
     "sample_title": "Good CLI Design Is Mostly Silence",
     "first_seen_at": "2026-07-29T16:00:00Z",
     "last_seen_at": "2026-07-29T16:00:00Z",
+    "referring_source_ids": [
+      "hacker-news"
+    ],
+    "suggested_group": "official",
+    "suggested_kind": "html_whitelist",
+    "reason": "Referenced by an enabled media or community source",
+    "risk": "Requires ownership, access-policy, and parser review",
+    "enabled": false
+  },
+  {
+    "domain": "yashgarg.dev",
+    "sample_url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
+    "sample_title": "Hijacking the PS5's RTMP Stream",
+    "first_seen_at": "2026-09-29T16:00:00Z",
+    "last_seen_at": "2026-09-29T16:00:00Z",
     "referring_source_ids": [
       "hacker-news"
     ],

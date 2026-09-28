@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-29",
+  "generated_at": "2026-09-28T18:32:00.301397Z",
+  "run_id": "2026-09-29-3654f165",
+  "daily_summary_zh": "今日AI领域动态：英伟达发布 AI Agent 安全平台与 OpenShell 运行时控制；Hugging Face 官方博客发布 Holo4：面向通用 computer-use agent。",
+  "events": [
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "4db7d7a5310a957b",
+        "520c9ed1a25168bb",
+        "ddb70a0cd00997eb",
+        "97cf8d092d828eda"
+      ],
+      "category": "infrastructure",
+      "title_zh": "英伟达发布 AI Agent 安全平台与 OpenShell 运行时控制",
+      "summary_zh": "英伟达发布面向 AI Agent 的安全平台（Open Agent Safety Platform）及 OpenShell 运行时控制方案，通过软件与硬件为 Agent 增加独立的安全层，支持对 Agent 行为进行持续监控与运行时管控。英伟达开发者博客分别从“在硅层持续监控 Agent”和“为 Agent 添加运行时控制”两个角度给出参考实现，CEO 黄仁勋将该方案定位为对近期“失控 Agent”问题的工程化回应。",
+      "why_it_matters_zh": "Agent 大规模进入生产环境的前提是可控、可审计、可熔断；英伟达把安全与运行时管控做成独立基础设施层，可能形成新的 Agent 安全赛道，并影响企业采购 Agent 方案时的技术选型标准。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA Open Agent Safety Platform: A Reference for Continuous In-Silicon Agent Monitoring",
+        "url": "https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/",
+        "published_at": "2026-09-28T08:56:55Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "nvidia-genai",
+          "source_name": "NVIDIA Generative AI Blog",
+          "title": "Add Runtime Controls to AI Agents with NVIDIA OpenShell",
+          "url": "https://developer.nvidia.com/blog/add-runtime-controls-to-ai-agents-with-nvidia-openshell/",
+          "published_at": "2026-09-28T08:55:00Z"
+        },
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "Nvidia launches new platform for reining in rogue AI agents",
+          "url": "https://techcrunch.com/2026/09/28/nvidia-launches-new-platform-for-reining-in-rogue-ai-agents/",
+          "published_at": "2026-09-28T18:31:23Z"
+        },
+        {
+          "source_id": "hacker-news",
+          "source_name": "Hacker News",
+          "title": "Nvidia wants to put a watchdog chip next to every AI agent",
+          "url": "https://madrobot.blog/2026/09/28/nvidia-open-agent-safety-platform-openshell-sentry-rogue-ai-agents/",
+          "published_at": "2026-09-28T15:46:36Z"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "e7185f55122ea3ae"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face 官方博客发布 Holo4：面向通用 computer-use agent",
+      "summary_zh": "Hugging Face 博客上线 Hcompany 的 Holo4 介绍内容，将其定位为驱动通用 computer-use（计算机操作）智能体的模型，属于模型与研究/开源方向的新发布。",
+      "why_it_matters_zh": "通用 computer-use agent 是让模型直接操作软件界面的关键方向，新模型的公开亮相为开发者提供了可参考与试验的新选择，也反映该细分赛道的迭代速度。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Holo4: powering generalist computer-use agents",
+        "url": "https://huggingface.co/blog/Hcompany/holo4",
+        "published_at": "2026-09-28T09:44:05Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 132,
+    "normalized": 132,
+    "filtered": 96,
+    "ai_candidates": 30,
+    "prompt_chars": 7134,
+    "estimated_input_tokens": 1783,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
