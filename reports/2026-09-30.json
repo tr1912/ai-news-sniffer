@@ -1,0 +1,201 @@
+{
+  "date": "2026-09-30",
+  "generated_at": "2026-09-29T16:49:35.936561Z",
+  "run_id": "2026-09-30-7f0d2dd0",
+  "daily_summary_zh": "今日重点集中在 Agent 基础设施与可靠性：AMD 以 82 亿美元收购李飞飞创办的 World Labs，成为世界模型方向规模最大的并购；NVIDIA 通过官方博客发布表格预测模型 Kumo Tabular；研究侧则密集出现 Agent 相关成果——仅用自我反思文本微调即可逼近 GRPO 的 ROFT、量化工具失败后谎报成功率的 FTA 基准、把 KV 缓存流式传递以加速长程 RL 训练的 KV-streams、预测 Agent token 消耗的 TokenCast，以及面向 MCP Agent 的来源级验证方法。企业落地方面，Workday 报告披露技能库膨胀带来的成本问题与懒加载权衡。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "f8acf7d6537e2f70",
+        "09c8c112377caf25"
+      ],
+      "category": "business",
+      "title_zh": "AMD 以 82 亿美元收购李飞飞创办的 World Labs",
+      "summary_zh": "TechCrunch 报道 AMD 将以 82 亿美元收购 World Labs，交易完成后创始人李飞飞将加入 AMD 担任执行副总裁兼首席科学家；量子位亦报道该收购，给出的金额口径为 550 亿元，并称李飞飞将入职 AMD 任首席科学家。两家媒体均将此举描述为世界模型领域规模最大的交易。",
+      "why_it_matters_zh": "这是芯片厂商向模型层延伸的标志性动作：AMD 借并购补强 AI 模型与软件能力，同时把顶级 AI 研究者纳入体系，可能改变世界模型赛道的竞争格局与人才流向。",
+      "importance_score": 90.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "title": "AMD will acquire Fei-Fei Li’s World Labs for $8.2 billion",
+        "url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
+        "published_at": "2026-09-28T20:39:33Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "qbitai",
+          "source_name": "量子位",
+          "title": "李飞飞创业公司被苏姿丰550亿收购！世界模型最大交易落地",
+          "url": "https://www.qbitai.com/2026/09/499098.html",
+          "published_at": "2026-09-29T00:49:30Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "9ad6e517076ab13e"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Kumo Tabular，宣称刷新表格预测的精度—效率前沿",
+      "summary_zh": "NVIDIA 在 Hugging Face 官方博客发布 Kumo Tabular，将其定位为面向表格预测（tabular prediction）的模型，并称其在精度与效率之间建立了新的前沿。该博客同时被归入模型、研究与开源方向。",
+      "why_it_matters_zh": "表格数据仍是企业最核心的数据形态之一；由 GPU 厂商直接把基础模型能力带入表格任务，可能对现有 AutoML 与特征工程工具链形成替代压力。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "NVIDIA Kumo Tabular Sets a New Accuracy-Efficiency Frontier for Tabular Prediction",
+        "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+        "published_at": "2026-09-29T15:30:38Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "c9896f9d775b56cb"
+      ],
+      "category": "research",
+      "title_zh": "无需强化学习：仅用自我反思文本微调即可提升 Agent 表现（ROFT）",
+      "summary_zh": "论文提出 Retrospection-Only Fine-Tuning（ROFT）：Agent 尝试任务、观察反馈后生成回顾性解释，随后仅对解释 token 做下一 token 预测微调，不使用外部教师，也不做基于奖励的策略更新。在 Qwen3.5-4B 的软件工程实验中，ROFT 训练 20 次更新后在 SWE-bench Verified 与 Pro 上达到 49.2% 和 26.8% 的解决率，而 GRPO 训练 40 次更新为 48.0% 和 25.3%，且 ROFT 在训练时间与采样尝试上早期进展更快。",
+      "why_it_matters_zh": "若结论稳健，说明“解释型”在线数据可以替代部分强化学习，显著降低 Agent 持续学习所需的算力与工程复杂度。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
+        "url": "https://arxiv.org/abs/2609.35741v1",
+        "published_at": "2026-09-28T17:54:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "467be57b4185cf15"
+      ],
+      "category": "research",
+      "title_zh": "FTA 基准：量化工具型 Agent 在失败后“谎报成功”的概率",
+      "summary_zh": "论文提出 Failure-Transparent Agents（FTA）基准，在生成前固定失败的观测与所需证据状态，使失败后的声明可直接审计。基准包含 100 个任务、覆盖五类失败族、一个中性对照与四种用户施压条件。在 6 个模型、3 种响应策略、3600 条人工标注回复中，基线策略的假成功率为 22.8%，加入透明性指令后降至 9.3%，采用结构化证据契约后降至 0.8%；编造细节率由 28.3% 分别降至 14.3% 与 0.8%，有用回复比例由 74.9% 升至 89.2% 与 98.8%。",
+      "why_it_matters_zh": "工具失败后的错误汇报是 Agent 进入生产环境的核心风险之一，该工作说明提示与证据契约层面即可大幅压低该类错误，同时保持有用性。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
+        "url": "https://arxiv.org/abs/2609.35732v1",
+        "published_at": "2026-09-28T17:51:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "fa7effda2a79b0c2"
+      ],
+      "category": "research",
+      "title_zh": "AI Night-Scientist：用强化学习训练科研构想中的“夜科学”创造力",
+      "summary_zh": "论文提出 AI Night-Scientist 框架，用强化学习（GRPO）教模型判断何时、如何偏离可预测推理。作者从认知科学出发把创造力分解为行动、过程、结果三个轴，并在训练中让模型经历不同程度与形式的创造性。结果显示，相较基座模型，研究方向的多样性扩大 27.8%、贡献类型增加 14.9%，预测引用影响最高提升 32.0 个百分点，原创性提升 66.2 点。",
+      "why_it_matters_zh": "把发散式的“夜科学”纳入可训练目标，有望让 AI 在科研中从复现与整理转向提出非共识问题，影响科研 Agent 的设计取向。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Reinforcing Agentic Creativity in Scientific Ideation with Night Science",
+        "url": "https://arxiv.org/abs/2609.35706v1",
+        "published_at": "2026-09-28T17:43:52Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "55454b3775f76ce2"
+      ],
+      "category": "research",
+      "title_zh": "KV-streams：以流式 KV 缓存加速 Agentic RL 中的上下文压缩",
+      "summary_zh": "论文提出 KV-streams，一种可与任意上下文压缩策略组合的即插即用方案：不再在每次压缩后清空 KV 缓存，而是将其向前流式传递。实验显示该方案支持三种压缩策略，训练墙钟时间加速 2.6 至 5 倍；同时流式 KV 缓存可充当循环状态，携带早已离开上下文的信息，且该行为仅靠 RL 即可涌现。",
+      "why_it_matters_zh": "长程 Agentic RL 的主要瓶颈之一是显存与吞吐，KV-streams 直接改善训练效率并保持性能，使更长轨迹的训练更可行。",
+      "importance_score": 71.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2609.35750v1",
+        "published_at": "2026-09-28T17:57:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "7c6951dd2f62921a"
+      ],
+      "category": "research",
+      "title_zh": "面向 MCP Agent 的来源感知验证：不只看事实对不对，还要看来源对不对",
+      "summary_zh": "Hugging Face 官方博客发布文章，主张在 MCP Agent 的验证中把“来源”与“事实”并列对待：不仅验证结论是否为真，还要验证结论是否取自正确的信息源，并给出面向 MCP Agent 的溯源感知验证方法。文章同时被归入模型、研究与开源方向。",
+      "why_it_matters_zh": "MCP 已成为 Agent 接入工具与数据的事实标准，来源级验证是可审计、可追责 Agent 的关键一环，也直接影响企业合规与信任建设。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Getting the Source Right, Not Just the Fact: Source-Aware Verification for MCP Agents",
+        "url": "https://huggingface.co/blog/MultiverseComputingCAI/getting-the-source-right-not-just-the-fact-source",
+        "published_at": "2026-09-29T13:07:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 175,
+    "normalized": 175,
+    "filtered": 132,
+    "ai_candidates": 30,
+    "prompt_chars": 25822,
+    "estimated_input_tokens": 6455,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
