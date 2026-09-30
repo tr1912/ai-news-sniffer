@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-01",
+  "generated_at": "2026-09-30T16:43:45.767434Z",
+  "run_id": "2026-10-01-2fbd177a",
+  "daily_summary_zh": "今日重点：OpenAI在DevDay发布GPT-6.1 Sol、Dots智能体及办公套件等25项更新；NVIDIA推出TensorRT Model Connect与NeMo Relay开发者工具；Hugging Face上线Open TTS Leaderboard；llama.cpp发布b11292；多篇arXiv论文聚焦智能体推理、状态压缩与思维链有效性。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "ad27637f6dee9906",
+        "da7cb3f22060e24e",
+        "00c4130d41570ece",
+        "a9828efb99291a1d",
+        "7388ddbd1c17a511"
+      ],
+      "category": "models",
+      "title_zh": "OpenAI DevDay发布GPT-6.1 Sol、Dots智能体及办公套件等25项更新",
+      "summary_zh": "OpenAI在DevDay上发布GPT-6.1 Sol，称其接近GPT-6 Astra且成本更低，在代码编写调试、文档理解和多步业务工作流等专业任务上较GPT-6 Sol有提升。同时推出Dots智能体头像，可在后台持续追求用户目标；发布办公套件功能，并推出面向应用商店模式的平台能力，一晚上共25项更新。",
+      "why_it_matters_zh": "OpenAI继续加速模型迭代和产品生态扩张，直接挑战微软办公套件和传统应用商店模式，推动AI智能体成为软件发现与使用的新入口。",
+      "importance_score": 95.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "title": "OpenAI光速上新GPT-6.1 Sol！一晚上25项更新，都在这里了",
+        "url": "https://www.qbitai.com/2026/09/499246.html",
+        "published_at": "2026-09-29T23:01:05Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "OpenAI launches GPT-6.1 Sol, says it nearly matches GPT-6 Astra and costs less",
+          "url": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/",
+          "published_at": "2026-09-29T17:15:00Z"
+        },
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "OpenAI takes on Microsoft with the launch of what feels a whole lot like ChatGPT’s own office suite",
+          "url": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/",
+          "published_at": "2026-09-29T17:45:51Z"
+        },
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "OpenAI’s latest features take direct aim at the app store model",
+          "url": "https://techcrunch.com/2026/09/29/openais-latest-features-take-direct-aim-at-the-app-store-model/",
+          "published_at": "2026-09-29T20:15:47Z"
+        },
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "OpenAI launches Dots, its bubbly agentic avatar",
+          "url": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/",
+          "published_at": "2026-09-29T17:17:15Z"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "591d19b5cef57fd2"
+      ],
+      "category": "research",
+      "title_zh": "提出元推理框架Thinking Before Thinking，扩展智能体推理",
+      "summary_zh": "论文提出agentic meta-reasoning，将智能体执行中的控制决策显式结构化，由控制器整合进展、探索选项、评估剩余预算并派发工作，同时维护紧凑运行记忆。在ProgramBench上，使用GPT-5.5达到71.5%，对比Codex的58.0%；使用Opus 4.8达到67.2%，对比Claude Code的65.5%。",
+      "why_it_matters_zh": "为长时程智能体提供推理时控制框架，可能提升复杂任务执行效率和可管理性。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning",
+        "url": "https://arxiv.org/abs/2609.38147v1",
+        "published_at": "2026-09-29T17:57:25Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "7b4a2d5294fc5e66"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA分享TensorRT Model Connect的AI原生开发经验",
+      "summary_zh": "NVIDIA发布官方博客，分享构建开源项目TensorRT Model Connect的经验，强调并行工作、模型家族隔离、可逆变更和GPU验证，项目围绕编码智能体设计。",
+      "why_it_matters_zh": "为开发者提供AI原生开发工具和基础设施参考，推动模型优化与部署流程的工程化。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "AI Native by Design: Lessons Learned from Building NVIDIA TensorRT Model Connect",
+        "url": "https://developer.nvidia.com/blog/ai-native-by-design-lessons-learned-from-building-nvidia-tensorrt-model-connect/",
+        "published_at": "2026-09-29T19:10:51Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "acf89852552ba444"
+      ],
+      "category": "research",
+      "title_zh": "研究揭示思维链正确但轨迹无效的问题",
+      "summary_zh": "论文在iGSM基准上程序化验证思维链轨迹，发现模型在分布外最难实例上，31.6%的正确回答伴随无效轨迹，其中过半通过语法和算术检查但未通过语义依赖检查。",
+      "why_it_matters_zh": "对思维链可解释性和智能体审计提出警示，表明答案正确不等于推理有效。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Correct Answers, Invalid Traces: What Verifiable Grade-School Math Reveals About Chain-of-Thought Traces",
+        "url": "https://arxiv.org/abs/2609.38107v1",
+        "published_at": "2026-09-29T17:46:55Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "a2d39b440d9df847"
+      ],
+      "category": "research",
+      "title_zh": "LeapQuant：线性注意力递归状态8比特量化",
+      "summary_zh": "论文提出LeapQuant，一种免训练方法，通过逐窗口量化和保留高精度补偿token，在8比特递归状态量化下实现近无损性能，针对Gated DeltaNet、Kimi Delta Attention等线性注意力模型。",
+      "why_it_matters_zh": "缓解长上下文推理中递归状态读写瓶颈，推动高效推理和线性注意力模型实用化。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "LeapQuant: Efficient Linear Attention with Accurate Recurrent State Quantization",
+        "url": "https://arxiv.org/abs/2609.38166v1",
+        "published_at": "2026-09-29T17:59:34Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "7ad38ac617596bac"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA发布NeMo Relay，用于追踪智能体Harness行为",
+      "summary_zh": "NVIDIA官方博客介绍NeMo Relay，可追踪智能体执行路径，识别低效行为，如失败搜索触发重复搜索、截断文件读取导致额外命令等，并展示任务成功面板数据。",
+      "why_it_matters_zh": "提升智能体可观测性和调试效率，帮助开发者优化智能体Harness设计。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Tracing Agent Harness Behavior with NVIDIA NeMo Relay",
+        "url": "https://developer.nvidia.com/blog/tracing-agent-harness-behavior-with-nvidia-nemo-relay/",
+        "published_at": "2026-09-30T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "c6d693c786921c6f"
+      ],
+      "category": "research",
+      "title_zh": "LIFT：预训练潜在信息反馈Transformer",
+      "summary_zh": "论文提出LIFT架构与训练方法，通过教师监督将递归状态学习转化为教师强制预测问题，让模型预测下一token和下一状态，在135M到1B参数模型上实验，推理时反馈自身预测状态，计算开销较小且随模型规模下降。",
+      "why_it_matters_zh": "探索跨生成步骤传播状态，可能突破Transformer前馈限制，提升推理效率。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Pretraining Latent Information Feedback Transformers with Teacher Supervision",
+        "url": "https://arxiv.org/abs/2609.38149v1",
+        "published_at": "2026-09-29T17:57:40Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "f25dfdfc3e31d224"
+      ],
+      "category": "open-source",
+      "title_zh": "Hugging Face推出Open TTS Leaderboard",
+      "summary_zh": "Hugging Face发布开源多语言文本转语音与声音克隆的可扩展评估榜单。",
+      "why_it_matters_zh": "为TTS和声音克隆提供标准化评估，促进开源语音模型的可比较与迭代。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
+        "url": "https://huggingface.co/blog/open-tts-leaderboard",
+        "published_at": "2026-09-30T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "2e178903ecccbd90"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp发布b11292版本",
+      "summary_zh": "llama.cpp发布b11292，CPU后端支持mul_mat的BF16 src1，Vulkan后端在src0非BF16时拒绝BF16 src1，并新增conv_1d_dw测试覆盖F32、F16和BF16。",
+      "why_it_matters_zh": "改进BF16支持和后端一致性，提升推理兼容性与稳定性。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11292",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11292",
+        "published_at": "2026-09-30T16:18:25Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 171,
+    "normalized": 171,
+    "filtered": 139,
+    "ai_candidates": 30,
+    "prompt_chars": 18849,
+    "estimated_input_tokens": 4712,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
