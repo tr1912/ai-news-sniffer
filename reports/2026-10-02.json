@@ -1,0 +1,183 @@
+{
+  "date": "2026-10-02",
+  "generated_at": "2026-10-01T17:18:21.694187Z",
+  "run_id": "2026-10-02-ff413d78",
+  "daily_summary_zh": "今日要闻集中在模型与开源训练/推理基础设施：谷歌发布新一代 Gemini 4（Argon），被称为其最强模型并主打编码与网络安全；Allen AI 在 Hugging Face 发布面向大型 MoE 的开放训练栈 Olmo-core 3；Transformers 5.18.0 纳入 Nemotron 3 Diarization 流式说话人分离模型。决策/路由类小模型成为新热点，OpenAI 推出 Decisions API，AWS Strand Labs 与 Cloudflare 相继跟进。英伟达则围绕方言语音识别微调与 AI 存储访问发布开发者侧内容，llama.cpp 继续更新 BLAS 后端适配。",
+  "events": [
+    {
+      "id": "event-gemini4-argon",
+      "candidate_ids": [
+        "2c4027a68df4d025",
+        "f230fe31dde9f86a"
+      ],
+      "category": "models",
+      "title_zh": "谷歌发布 Gemini 4（Argon），官宣其为最强模型并主打编码与网络安全",
+      "summary_zh": "多家媒体报道谷歌发布新一代 Gemini 4 Argon 模型，并将其宣传为其迄今最强模型、面向编码与网络安全等任务的“主力”模型。中文媒体称该模型带有 RSI 相关能力，且定价约为 Astra 的一半。",
+      "why_it_matters_zh": "前沿模型的新一轮迭代直接影响开发者选型、编码与安全类 agent 的工作流，以及 API 价格竞争格局；低价策略若属实，将进一步压低上层应用成本。",
+      "importance_score": 92.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
+        "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+        "published_at": "2026-09-30T23:43:07Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "qbitai",
+          "source_name": "量子位",
+          "title": "谷歌Gemini 4突然发布！RSI加持，GPT和Opus都让让",
+          "url": "https://www.qbitai.com/2026/10/499663.html",
+          "published_at": "2026-10-01T15:02:14Z"
+        }
+      ]
+    },
+    {
+      "id": "event-olmocore3",
+      "candidate_ids": [
+        "864e77085600fb3a"
+      ],
+      "category": "open-source",
+      "title_zh": "Allen AI 发布 Olmo-core 3：面向大型 MoE 的开放可扩展训练基础设施",
+      "summary_zh": "Hugging Face 博客发布 Olmo-core 3，定位为支持大型 MoE 模型的开放、可扩展训练基础设施。",
+      "why_it_matters_zh": "开源训练栈向大规模 MoE 训练延伸，有助于降低团队自建与复现大模型训练的门槛，影响开源模型生态的算力与工程实践标准。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Introducing Olmo-core 3: Open, scalable training infrastructure for large MoEs",
+        "url": "https://huggingface.co/blog/allenai/olmocore3",
+        "published_at": "2026-10-01T15:01:43Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-transformers-5-18-nemotron-diarization",
+      "candidate_ids": [
+        "708d5387f2af1803"
+      ],
+      "category": "open-source",
+      "title_zh": "Transformers 5.18.0 发布，新增 Nemotron 3 Diarization 说话人分离模型",
+      "summary_zh": "Transformers 5.18.0 加入开放权重的 Nemotron 3 Diarization 流式说话人分离模型，支持流式与离线推理、最多八位说话人，并按说话人首次出现顺序输出。该模型采用 Arrival-Order Speaker Cache（AOSC）与 FIFO 队列，单一 checkpoint 支持从 80 毫秒输入缓冲到 30.4 秒的多种延迟配置，输出帧分辨率可按 10 毫秒为步长调整，分块推理下音频时长不受限制。",
+      "why_it_matters_zh": "把高质量流式说话人分离能力纳入主流推理库，可直接用于会议转写、多说话人语音助手等场景，降低开发者集成成本。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "transformers-releases",
+        "source_name": "Transformers Releases",
+        "title": "Transformers Releases: Release 5.18.0",
+        "url": "https://github.com/huggingface/transformers/releases/tag/v5.18.0",
+        "published_at": "2026-09-30T16:46:27Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-nemotron-arabic-asr",
+      "candidate_ids": [
+        "3be91255efcd7321"
+      ],
+      "category": "infrastructure",
+      "title_zh": "英伟达展示用 Nemotron 微调沙特阿拉伯方言语音识别，并给出跨语言迁移路径",
+      "summary_zh": "NVIDIA 开发者博客介绍如何微调 Nemotron 模型以支持沙特阿拉伯方言的自动语音识别，并说明相关方法可迁移到其他语言与方言。",
+      "why_it_matters_zh": "方言与低资源语言的 ASR 效果长期落后于主流语言，这类可复用的微调方案直接影响区域化语音产品的可用性与落地速度。",
+      "importance_score": 54.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Fine-Tuning NVIDIA Nemotron for Saudi Arabic Dialects, with a Path to Other Languages",
+        "url": "https://developer.nvidia.com/blog/fine-tuning-nvidia-nemotron-for-saudi-arabic-dialects-with-a-path-to-other-languages/",
+        "published_at": "2026-10-01T05:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-cuobject-scada",
+      "candidate_ids": [
+        "fd2d3d48bf284642"
+      ],
+      "category": "infrastructure",
+      "title_zh": "英伟达发布 cuObject 与 SCADA Server SDK，扩展 AI 存储访问能力",
+      "summary_zh": "NVIDIA 面向 AI 基础设施工程师、存储开发者与云服务商发布 cuObject 及 SCADA Server SDK，用于对高容量文件与对象存储进行快速、安全的访问。",
+      "why_it_matters_zh": "存储 I/O 常是训练与推理管线的瓶颈，此类 SDK 会影响数据加载效率与多租户安全隔离的架构设计。",
+      "importance_score": 50.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Expanding AI Storage Access with NVIDIA cuObject and the NVIDIA SCADA Server SDK",
+        "url": "https://developer.nvidia.com/blog/expanding-ai-storage-access-with-nvidia-cuobject-and-the-nvidia-scada-server-sdk/",
+        "published_at": "2026-09-30T19:13:02Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llamacpp-b11321",
+      "candidate_ids": [
+        "4523bec6a8c70e42"
+      ],
+      "category": "developer-tools",
+      "title_zh": "llama.cpp 发布 b11321：补充 AOCL-BLAS 构建文档与设备标记",
+      "summary_zh": "该版本主要为 BLAS 后端更新，新增 AOCL-BLAS 构建文档、设备标记与 Quick Start，并同步提供 macOS、iOS、Linux 等多平台预编译包。",
+      "why_it_matters_zh": "本地推理框架持续适配 AMD/CPU 侧 BLAS 优化，影响边缘与本地部署场景的性能表现和编译体验。",
+      "importance_score": 45.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11321",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11321",
+        "published_at": "2026-10-01T14:09:49Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source arxiv-ai failed: SourceFetchError: arxiv-ai: RSS fetch failed",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 143,
+    "normalized": 143,
+    "filtered": 103,
+    "ai_candidates": 30,
+    "prompt_chars": 8520,
+    "estimated_input_tokens": 2130,
+    "failed_source_ids": [
+      "anthropic-news",
+      "arxiv-ai",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
