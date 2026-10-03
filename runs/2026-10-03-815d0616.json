@@ -1,9 +1,9 @@
 {
   "run_id": "2026-10-03-815d0616",
   "target_date": "2026-10-03",
-  "status": "published",
+  "status": "notified",
   "created_at": "2026-10-03T15:06:04.357606Z",
-  "updated_at": "2026-10-03T15:06:50.615543Z",
+  "updated_at": "2026-10-03T15:06:53.806639Z",
   "report_path": "reports/2026-10-03.json",
   "report_url": "https://www.happyxiao1435.top/ai-news-sniffer/2026/10/03/",
   "pending_fingerprints": [
@@ -38,6 +38,13 @@
     "f642aafc55c3c1f2223f7123d7b5f63903ebbb1cef487607898debd35f7fc5ce",
     "fc08c6dfb291821a189ac0032facb9201e893d57772f91af663b65db5f31f06e"
   ],
-  "channel_results": [],
+  "channel_results": [
+    {
+      "channel_id": "meow",
+      "success": true,
+      "attempts": 1,
+      "error": null
+    }
+  ],
   "errors": []
 }
