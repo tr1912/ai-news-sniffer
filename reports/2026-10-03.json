@@ -1,19 +1,19 @@
 {
   "date": "2026-10-03",
-  "generated_at": "2026-10-02T16:33:11.561588Z",
-  "run_id": "2026-10-03-0a5aa3a3",
-  "daily_summary_zh": "今日研究亮点较多：VISTA 在 ARC-AGI-3 把 Claude Opus 5.0 的相对人类动作效率提升到满分；Faynt 用 10M Transformer 策略在《大乱斗 Melee》取得 98.4% 同角色胜率；数学推理诊断、具身智能体自我改进、编码 agent 上下文压缩、循环 Transformer 免训练解码、LLM 微调优化器与多机器人协调等方向均有新进展。产品与开源方面，Hugging Face/AllenAI 开源快速报告生成模型 AstaBrief，ServiceNow 的 AutoSynthData 面向企业 agent 训练数据，NVIDIA 推出 DOCA Agent Skills。",
+  "generated_at": "2026-10-03T15:05:08.024207Z",
+  "run_id": "2026-10-03-815d0616",
+  "daily_summary_zh": "今日 AI 进展亮点：VISTA 视觉推理框架将 Claude Opus 5.0 在 ARC-AGI-3 上的行动效率提升至满分；Faynt 用 1000 万参数 Transformer 策略在《任天堂明星大乱斗》中取得 98.4% 胜率；编码智能体 AutoCompact 通过上下文压缩显著提升 SWE-bench 通过率。此外，分层连续扩散语言模型、多教师蒸馏、优化器内存压缩和机器人自主练习等研究也有新成果，NVIDIA 发布 DOCA Agent Skills，企业智能体训练数据合成工具 AutoSynthData 亮相。",
   "events": [
     {
-      "id": "event-1",
+      "id": "event-vista",
       "candidate_ids": [
         "71c0a954bafb6eac"
       ],
       "category": "research",
-      "title_zh": "VISTA：面向交互世界推理的视觉 Harness",
-      "summary_zh": "VISTA 让通用多模态模型获得长时程视觉能力：模型可直接通过视觉观察感知环境，并维护无损视觉记忆，在推理时主动检索和重组视觉输入。在 ARC-AGI-3 上，VISTA 将 Claude Opus 5.0 的相对人类动作效率从 40.68 提升到 100.00，模型用比首次人类参与者少 57.4% 的动作完成全部 25 个公开游戏；在另外三个视觉游戏与谜题基准上，也大幅超过使用同一底层模型但仅配最小 harness 的基线。",
-      "why_it_matters_zh": "表明多模态模型本身具备较强推理能力，合适的视觉 harness 可显著释放其在交互环境中的长时程决策潜力，对通用视觉 agent 有参考价值。",
-      "importance_score": 90.0,
+      "title_zh": "VISTA：为多模态模型提供视觉推理框架，ARC-AGI-3 得分从 40.68 提升至 100",
+      "summary_zh": "VISTA 是一个视觉框架，为通用多模态模型提供长时程视觉能力。它让模型直接通过视觉观察感知环境，并维护无损视觉记忆，可主动检索和重组视觉输入。在 ARC-AGI-3 上，VISTA 将 Claude Opus 5.0 的相对人类行动效率从 40.68 提升至满分 100.00，模型完成全部 25 个公开游戏，所用动作比首次参与的人类少 57.4%。在另外三个视觉游戏和谜题基准上，它也显著优于使用相同底层模型但仅用最小框架的基线。",
+      "why_it_matters_zh": "该工作表明，无需修改模型权重，仅通过合适的推理框架就能大幅释放多模态模型的交互推理潜力，为构建通用视觉智能体提供了新思路。",
+      "importance_score": 92.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -25,14 +25,14 @@
       "related_sources": []
     },
     {
-      "id": "event-2",
+      "id": "event-faynt",
       "candidate_ids": [
         "2f884fe03d2ac4f2"
       ],
       "category": "research",
-      "title_zh": "Faynt：面向竞技《任天堂明星大乱斗 Melee》的策略扩展与优化",
-      "summary_zh": "提出 Faynt，包含 10M 和 75M 参数的 Transformer 策略，单个 checkpoint 控制全部 26 个角色。经强化学习后，10M 模型在 244 场同角色对局中赢下 240 场（98.4%），对手为 14 个 specialist 和多角色版本，且对所有版本保持胜绩；这些对手保留 21 或 24 帧动作延迟，而 Faynt 不额外增加延迟。在另一项对私有零延迟 Slippi-AI 模型的评估中，10M 在两种 conditioning 设置下 68 场全胜。论文还研究架构、优化、扩展和超参迁移，用于约 84 万人类回放的预训练，并结合 rank/outcome curriculum、75M 到 10M 蒸馏和仅 Fox 镜像对局的 RL。",
-      "why_it_matters_zh": "展示 Transformer 策略在复杂格斗游戏中通过 RL、扩展和蒸馏达到高水平竞技表现，为通用游戏 AI 和策略学习提供可复用方法。",
+      "title_zh": "Faynt：为《任天堂明星大乱斗》训练 1000 万至 7500 万参数 Transformer 策略",
+      "summary_zh": "研究者提出 Faynt，一系列 1000 万和 7500 万参数的 Transformer 策略，用单个检查点控制《任天堂明星大乱斗》全部 26 个角色。经过强化学习后，1000 万参数版本在 244 场同角色对局中赢下 240 场（98.4%），对手包括十四个专业及多角色版本。这些对手保留 21 或 24 帧动作延迟，而 Faynt 未额外增加延迟。在另一项对私下提供的零延迟 Slippi-AI 模型的评估中，1000 万参数版本在两种条件下 68 场全胜。研究还探讨了架构、优化、扩展和超参数迁移，以指导在约 84 万人类回放上的预训练。",
+      "why_it_matters_zh": "该工作展示了小规模 Transformer 策略在复杂格斗游戏中的扩展性和强化学习潜力，并为游戏 AI 的延迟公平性评估提供了参考。",
       "importance_score": 88.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
@@ -45,95 +45,35 @@
       "related_sources": []
     },
     {
-      "id": "event-4",
+      "id": "event-autocompact",
       "candidate_ids": [
-        "91b1e02000c53b20"
+        "78f7dcd660327c68"
       ],
-      "category": "research",
-      "title_zh": "重建、练习、落地：具身智能体的引导式自我改进",
-      "summary_zh": "提出 Reconstruct, Practice, Go Real（RPG）框架，在不更新模型权重的情况下自主改进机器人执行系统。RPG 从离线数据集中识别操作能力，在仿真中构建相关练习任务；练习时利用执行反馈、特权模拟器状态和可用数据集视频诊断失败，发展新的可复用符号技能、改进已有技能并修订系统提示；跨任务评估会在保留前测试单个候选改动与合并修订。测试时，多模态 LLM 使用得到的系统提示和技能库协调感知与机器人控制。在 22 个操作任务的 held-out 初始化上，成功率从第一轮练习后的 28.6% 提升到 15 轮后的 95.0%，超过 ASPIRE（75.5%）和由 GPT-6 Astra Pro 驱动的 CaP-Agent0（60.0%）。",
-      "why_it_matters_zh": "无需权重更新即可持续提升机器人任务成功率，可降低技能维护与奖励设计成本，对可扩展具身智能体有实际意义。",
-      "importance_score": 87.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "arxiv-ai",
-        "source_name": "arXiv AI",
-        "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
-        "url": "https://arxiv.org/abs/2610.02204v1",
-        "published_at": "2026-10-01T17:59:50Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-3",
-      "candidate_ids": [
-        "0e865a48bf391e29"
-      ],
-      "category": "research",
-      "title_zh": "缺失的基元：诊断并修复大语言模型的数学推理",
-      "summary_zh": "论文引入 Mathematical Primitive 概念以探测 LLM 的结构性数学理解，并提出一个从 Discovery、Generation、Digestion、Execution 四个维度评估数学推理的基准。系统诊断显示，解答准确率掩盖了不同的能力 profile，基元可释放大量潜在执行能力，而 Discovery 是数学推理的主要瓶颈；后训练分析表明，受 discovery 限制的失败尤其适合修复。基于这些发现，论文提出一种 primitive-privileged 自蒸馏框架，选择性将基元引导的推理迁移到学生模型。",
-      "why_it_matters_zh": "把数学推理从最终答案准确率拆解为可诊断的能力维度，并给出后训练修复路径，有助于构建更可靠的数学推理模型。",
+      "category": "developer-tools",
+      "title_zh": "AutoCompact：让编码智能体学会何时压缩上下文",
+      "summary_zh": "AutoCompact 训练编码智能体将上下文压缩决策纳入策略。研究者在编码任务上运行基础智能体，用裁判审查其压缩决策、摘要及压缩后的动作，将有缺陷的输出替换为修正版本后再执行，从而生成训练轨迹。经过监督微调后，再通过强化学习联合优化编码和压缩。在 SWE-bench Verified 和 SWE-PolyBench Verified 上，AutoCompact 分别将基础模型的通过率绝对提升 9.2% 和 5.0%，且在评估的推理预算下均保持提升，256K 上下文窗口从未溢出。",
+      "why_it_matters_zh": "长时程编码智能体常因上下文过时或溢出而失败，学会主动压缩并保留关键状态能显著提升仓库级软件工程任务的自动化能力。",
       "importance_score": 86.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
         "source_name": "arXiv AI",
-        "title": "The Missing Primitive: Diagnosing and Repairing Mathematical Reasoning in Large Language Models",
-        "url": "https://arxiv.org/abs/2610.02191v1",
-        "published_at": "2026-10-01T17:59:32Z"
+        "title": "AutoCompact: Learning When to Compact Context in Long-Horizon Coding Agents",
+        "url": "https://arxiv.org/abs/2610.02163v1",
+        "published_at": "2026-10-01T17:54:34Z"
       },
       "related_sources": []
     },
     {
-      "id": "event-6",
-      "candidate_ids": [
-        "dd7e80d764dac0a0"
-      ],
-      "category": "open-source",
-      "title_zh": "AllenAI 开源 AstaBrief：Asta 中的快速报告生成模型",
-      "summary_zh": "AllenAI 在 Hugging Face 博客宣布开源 AstaBrief，这是其 Asta 系统中的快速报告生成模型。",
-      "why_it_matters_zh": "开源快速报告生成模型可加速科研与信息综合 agent 的工作流，并方便社区在报告生成任务上复用和迭代。",
-      "importance_score": 80.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "huggingface-blog",
-        "source_name": "Hugging Face Blog",
-        "title": "Open-sourcing AstaBrief, the fast report-generation model in Asta",
-        "url": "https://huggingface.co/blog/allenai/astabrief",
-        "published_at": "2026-10-02T15:19:50Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-7",
-      "candidate_ids": [
-        "3ed9aa4ecd3233d3"
-      ],
-      "category": "infrastructure",
-      "title_zh": "NVIDIA 发布 DOCA Agent Skills，加速 BlueField 应用开发",
-      "summary_zh": "NVIDIA 开发者博客介绍 DOCA Agent Skills，旨在让 AI agent 更好地处理 BlueField 等专用基础设施软件的开发工作，帮助开发者更快在 NVIDIA BlueField 上构建应用。",
-      "why_it_matters_zh": "把 agent 能力引入底层网络与基础设施开发，扩展 AI 开发者工具在专业硬件软件栈中的适用范围。",
-      "importance_score": 79.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "nvidia-genai",
-        "source_name": "NVIDIA Generative AI Blog",
-        "title": "Build Applications on NVIDIA BlueField Faster with NVIDIA DOCA Agent Skills",
-        "url": "https://developer.nvidia.com/blog/build-applications-on-nvidia-bluefield-faster-with-nvidia-doca-agent-skills/",
-        "published_at": "2026-10-01T18:13:29Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-5",
+      "id": "event-autosynthdata",
       "candidate_ids": [
         "a114d06ce639c013"
       ],
-      "category": "models",
-      "title_zh": "AutoSynthData：为企业级智能体生成训练数据",
-      "summary_zh": "Hugging Face 博客发布 ServiceNow AI 的 AutoSynthData 相关内容，主题是为企业级智能体生成训练数据。",
-      "why_it_matters_zh": "企业级 agent 落地依赖高质量、领域化的训练数据；自动合成数据有望降低数据准备成本并加速 agent 定制。",
-      "importance_score": 78.0,
+      "category": "open-source",
+      "title_zh": "AutoSynthData：为企业智能体生成训练数据",
+      "summary_zh": "Hugging Face 博客介绍了 AutoSynthData，一种为企业智能体生成训练数据的方法。该工作属于 ServiceNow AI，旨在自动合成训练数据以提升企业场景下智能体的表现。",
+      "why_it_matters_zh": "企业智能体需要大量高质量、领域特定的训练数据，自动合成数据有望降低数据获取成本并加速智能体落地。",
+      "importance_score": 85.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "huggingface-blog",
@@ -143,50 +83,60 @@
         "published_at": "2026-10-02T04:01:31Z"
       },
       "related_sources": []
+    },
+    {
+      "id": "event-hc-dlm",
+      "candidate_ids": [
+        "f642aafc55c3c1f2"
+      ],
+      "category": "models",
+      "title_zh": "分层连续扩散语言模型 HC-DLM：耦合离散 token 与连续隐状态",
+      "summary_zh": "研究提出分层连续扩散语言模型（HC-DLM），将离散 token 生成与连续隐状态轨迹耦合在单一去噪过程中，训练目标由 token 似然的变分下界导出。与近期将连续上下文附加到离散链的方法不同，HC-DLM 让隐状态成为唯一持久生成状态：每一步从隐状态读出 token，并将其反馈为下一次隐状态更新的脚手架。在结构化推理（数独）、数学规划（Countdown）等任务上进行了评估。",
+      "why_it_matters_zh": "该架构试图解决离散扩散语言模型并行解码时 token 独立性过强的问题，为双向推理和全局约束满足任务提供了新的生成建模范式。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Hierarchical Continuous Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2610.02193v1",
+        "published_at": "2026-10-01T17:59:39Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-doca",
+      "candidate_ids": [
+        "3ed9aa4ecd3233d3"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 发布 DOCA Agent Skills，加速 BlueField 应用开发",
+      "summary_zh": "NVIDIA 开发者博客介绍 DOCA Agent Skills，旨在让开发者更快地在 NVIDIA BlueField 上构建应用。文章指出，通用智能体并非为专业基础设施软件设计，DOCA Agent Skills 为这类场景提供专门支持。",
+      "why_it_matters_zh": "随着智能体进入开发工作流，针对专用基础设施的智能体技能可以降低 BlueField 等平台的应用开发门槛，推动 AI 与网络基础设施的结合。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Build Applications on NVIDIA BlueField Faster with NVIDIA DOCA Agent Skills",
+        "url": "https://developer.nvidia.com/blog/build-applications-on-nvidia-bluefield-faster-with-nvidia-doca-agent-skills/",
+        "published_at": "2026-10-01T18:13:29Z"
+      },
+      "related_sources": []
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 172,
-    "normalized": 172,
-    "filtered": 123,
+    "enabled": 9,
+    "fetched": 185,
+    "normalized": 185,
+    "filtered": 148,
     "ai_candidates": 30,
-    "prompt_chars": 30029,
-    "estimated_input_tokens": 7507,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 31094,
+    "estimated_input_tokens": 7773,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }
