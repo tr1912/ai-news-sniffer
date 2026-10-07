@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-08",
+  "generated_at": "2026-10-07T17:42:26.436627Z",
+  "run_id": "2026-10-08-41a7c3f7",
+  "daily_summary_zh": "今日摘要：nanoMuse 发布开源个人代理方案，LiquidAI 开源面向边缘的多模态决策模型 open d1，NVIDIA 展示 Nemotron 微调在 IOI/IMO 达金牌级；此外，多项研究聚焦机器人 VLA、Web Agent 提示注入防御、流策略强化学习、3D 世界模型、物理仿真与长上下文压缩。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "26afb541b99a73ec",
+        "16e45b08d95a6d04"
+      ],
+      "category": "open-source",
+      "title_zh": "nanoMuse：面向个人设备的开源个人代理",
+      "summary_zh": "arXiv 论文提出 nanoMuse，一个 GPL-3.0 开源个人代理，目标是让用户在自己的手机和电脑等设备上运行同一代理。它通过任何人都可自建的 relay 共享同一段对话，所有行动经过 Sentinel 审核，记忆以用户可读文件保存，模型可由用户选择。论文称其对照 Meta Muse 等闭源方案，并给出开放记忆溯源、行动评测套件和开放模型等路线图。Hacker News 上有对应 Show HN 链接到 GitHub 项目。",
+      "why_it_matters_zh": "个人代理目前多由厂商闭源云服务提供；nanoMuse 尝试用开源、自托管、可审计记忆和可选模型来替代，若生态成熟，可能降低个人 AI 代理的锁定风险并推动开放协作。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "nanoMuse: An Open-Source Personal Agent for Every Device You Own",
+        "url": "https://arxiv.org/abs/2610.08699v1",
+        "published_at": "2026-10-06T17:13:53Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "hacker-news",
+          "source_name": "Hacker News",
+          "title": "Show HN: NanoMuse – An open-source AI agent for your phone and computer",
+          "url": "https://github.com/nano-muse/nanoMuse",
+          "published_at": "2026-10-07T03:30:44Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "dbdc5e66fc3106d1"
+      ],
+      "category": "models",
+      "title_zh": "LiquidAI 开源面向边缘的多模态决策模型 open d1",
+      "summary_zh": "Hugging Face 博客发布 LiquidAI 的 open d1，定位为面向边缘设备的多模态开放决策模型。候选信息仅显示其标题与官方博客链接，未提供更多参数或评测细节。",
+      "why_it_matters_zh": "边缘侧多模态决策模型可支持本地低延迟、隐私敏感的 agent 与决策应用；以开源形式发布，有利于开发者在端侧实验和部署。",
+      "importance_score": 87.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Multimodal open d1 decision models for the edge",
+        "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+        "published_at": "2026-10-07T16:54:33Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "42444ef3a0b95a8a"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 微调 Nemotron 在 IOI 与 IMO 达金牌级结果",
+      "summary_zh": "NVIDIA 在 Hugging Face 博客发布文章，介绍同一模型家族通过微调 Nemotron，在国际信息学奥林匹克（IOI）和国际数学奥林匹克（IMO）两项任务中取得金牌级结果。候选摘要未提供具体分数、模型规模或训练细节。",
+      "why_it_matters_zh": "若结果可复现，说明开放/可微调模型在复杂编程与数学推理上具备竞赛级潜力，对开源推理模型和数学/代码训练方向有参考价值。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-ioi-and-imo-2026",
+        "published_at": "2026-10-07T12:45:31Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "eec87a4c35dcb758"
+      ],
+      "category": "research",
+      "title_zh": "EgoLAP：用语言-动作推理从第一人称人类数据学习机器人控制",
+      "summary_zh": "论文提出 EgoLAP，一个 VLA 预训练框架，联合学习人类与机器人轨迹，通过共享的基于语言的动作思维链，把运动意图表示为结构化、时间抽象的语言动作，并结合场景几何、物理和物体可供性进行运动级推理。实验称其在真实与仿真任务中比替代动作表示更有效地迁移人类经验，达到 80.1% 平均真实任务进度，相对提升 2.3 倍。",
+      "why_it_matters_zh": "机器人学习受限于昂贵机器人演示；EgoLAP 探索利用大量第一人称人类数据，通过语言-动作表示弥合 embodiment gap，可能降低机器人策略训练的数据门槛。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "EgoLAP: Learning from Egocentric Human Data through Language-Action Reasoning",
+        "url": "https://arxiv.org/abs/2610.08726v1",
+        "published_at": "2026-10-06T17:30:33Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "768c7cf31ec13549"
+      ],
+      "category": "research",
+      "title_zh": "AdvSim2Real：在 Web 世界模型中训练抗自适应提示注入的 Web Agent",
+      "summary_zh": "论文提出 AdvSim2Real，在冻结的 Web 世界模型中协同演化任务课程、注入攻击者和 agent。课程偏向 agent 约一半成功率的任务，攻击者只在成功翻转为失败时获得奖励。训练出的 4B agent 在有/无攻击下完成率均上升，并能抵御未训练过的前沿模型攻击，能力提升可迁移到真实浏览器；在 150 个 Web 任务上相对提升 33.6%。",
+      "why_it_matters_zh": "Web agent 需要读取第三方页面，提示注入是核心安全风险；该工作展示模拟对抗训练可同时提升能力与鲁棒性，并迁移到真实环境。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model",
+        "url": "https://arxiv.org/abs/2610.08773v1",
+        "published_at": "2026-10-06T17:56:43Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "7d89f37d6cbc5907"
+      ],
+      "category": "research",
+      "title_zh": "QF3：用过滤 Q 梯度的快速流策略强化学习",
+      "summary_zh": "论文提出 QF3，一种在线 off-policy 强化学习算法，用 flow matching 加 critic 的动作梯度训练流策略，梯度通过流输出的一步预测反传。为保持更新可靠，它只对靠近 replay 动作的动作维度应用 critic 梯度。作者称这是首个从零训练人形行走策略并零样本迁移到硬件的 off-policy flow RL 方法，较 FPO++ 有 10 倍墙钟加速，并可用于微调预训练流式操作策略。",
+      "why_it_matters_zh": "流策略在机器人学习中日益常见，QF3 提升 RL 训练效率并展示从仿真到硬件的迁移，可能降低机器人策略训练成本。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
+        "url": "https://arxiv.org/abs/2610.08789v1",
+        "published_at": "2026-10-06T17:59:34Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "77040a30bf7a15a3"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11476：Metal 少量行 MMA 矩阵乘法内核扩展",
+      "summary_zh": "llama.cpp 发布 b11476，为 Metal 后端扩展 few-row MMA mat-mul 内核，使其覆盖 BF16、Q1_0、Q2_0、MXFP4、Q2_K、Q3_K、TQ2_0 和 IQ 等类型。每种类型在 M3 Ultra 上从不同行数阈值开始优于现有内核，并给出 test-backend-ops 上的性能变化。",
+      "why_it_matters_zh": "该更新优化 Apple Silicon 上小行数矩阵乘法，可提升本地 llama.cpp 推理在量化模型和不同批次场景下的效率，对端侧 LLM 开发者有直接价值。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11476",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11476",
+        "published_at": "2026-10-07T14:55:09Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 179,
+    "normalized": 179,
+    "filtered": 141,
+    "ai_candidates": 30,
+    "prompt_chars": 23819,
+    "estimated_input_tokens": 5954,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
