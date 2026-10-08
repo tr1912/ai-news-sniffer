@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-09",
+  "generated_at": "2026-10-08T17:46:40.627619Z",
+  "run_id": "2026-10-09-0fa20a08",
+  "daily_summary_zh": "今日可核实来源集中在官方与学术侧：Hugging Face 官方博客发布 Falcon ASR；llama.cpp 连续推出 b11499、b11512 两个构建，涉及 CUDA ROLL 与 DFlash 输出头/绑定的 GGUF 权重读取修复。研究侧看点较多：EngramEdit 提出基于条件记忆的解耦知识更新；RoboJEPA 用 12 种机器人本体数据训练潜空间世界模型并给出算力二阶幂律缩放规律、开源全部检查点；《A Society of Researchers》描述万人级自主科研智能体社会与约 30% 算力节省的报告；RLVR 方向提出探索与优化解耦的 ExpDis；EmbodiedRSI 在 RoboCasa365 上报告 77.0% 成功率；SciExam for ENSO 则用真实观测检验智能体能否构建气候模型。未纳入本次摘要的候选多为单一媒体来源的事件，无法满足官方/研究来源或两个独立媒体来源的收录门槛。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "6d3aad9f7f03fec4"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face 官方博客上线 Falcon ASR",
+      "summary_zh": "TII（tiiuae）在 Hugging Face 官方博客发布 Falcon ASR，条目归类为模型、研究与开源，但目前公开信息仅有发布标题与页面，未提供更详细的能力说明或评测数据。",
+      "why_it_matters_zh": "Falcon 系列是开源模型生态中受关注的模型家族之一，官方渠道新增 ASR（语音识别）模态，意味着该家族从文本向语音任务扩展，对开源语音模型选型有直接参考价值。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Introducing Falcon ASR",
+        "url": "https://huggingface.co/blog/tiiuae/falcon-asr",
+        "published_at": "2026-10-07T13:21:03Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "bedbe6857500c076"
+      ],
+      "category": "research",
+      "title_zh": "RoboJEPA：机器人潜空间世界模型的规模化规律与开源发布",
+      "summary_zh": "论文提出基于联合嵌入预测架构（JEPA）的世界模型 RoboJEPA，在覆盖 12 种机器人本体的大规模数据集上训练。结果显示其“想象误差”（潜空间推演的误差）随算力呈二阶幂律下降，可外推预测超过拟合规模的模型质量；下游机器人规划性能随算力可预测提升，且与想象误差强相关。模型可零样本作为机器人智能体，仅以单张目标图像进行长时程规划并在真实硬件上执行。作者开源了全部模型检查点以及训练与机器人部署代码。",
+      "why_it_matters_zh": "把世界模型的缩放规律与真实机器人规划性能挂钩，使“想象误差”成为可替代真机评测的代理指标，能显著降低机器人基础模型的评测成本；同时开源检查点与部署代码，便于社区直接复现与二次开发。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "RoboJEPA: Scaling Robotic Latent World Models",
+        "url": "https://arxiv.org/abs/2610.10515v1",
+        "published_at": "2026-10-07T17:54:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "3d3132c0f6d6fdf4"
+      ],
+      "category": "research",
+      "title_zh": "EngramEdit：通过条件记忆实现大模型解耦式知识更新",
+      "summary_zh": "论文针对 DeepSeek Engram 一类条件记忆架构提出 EngramEdit。该方法先计算目标记忆表示，使模型在多种表述下都预测更新后的事实，再联合更新共享的 n-gram 嵌入以匹配这些目标；同时对被频繁复用的嵌入施加更强惩罚，以保护无关知识不被改写。实验表明其可在保持 Transformer 主干固定的前提下独立更新事实性知识。",
+      "why_it_matters_zh": "把事实知识存储与通用计算解耦，为“固定主干、只改记忆”的低成本知识更新路线提供了可行方法，也回应了共享嵌入导致连带改变其他事实预测的关键难点。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
+        "url": "https://arxiv.org/abs/2610.10533v1",
+        "published_at": "2026-10-07T17:58:52Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "93bd4d904e149949"
+      ],
+      "category": "research",
+      "title_zh": "万人级自主科研智能体社会的制度设计",
+      "summary_zh": "论文主张，当研究智能体以数千至数万规模共享同一算力池部署时，无论设计者是否提供组织架构，这一群体都会自发形成某种组织，因此应显式设计制度。作者提出“研究者社会”，以六项原则构建：首席研究员通过提案申请、独立评审和资助来竞争算力，人类“市长”负责分配资源而不指派任务。在一个运行中的万人研究者社会中，仅要求其改进语言模型预训练，某个实验室报告了在同等质量下减少约 30% 算力的方法，但参与验证的实验室尚未就此达成一致。论文最后列出智能体社区面临的六个开放问题。",
+      "why_it_matters_zh": "将多智能体系统的制度设计问题从工程细节提升为科研组织的核心议题，给出了大规模自主研究智能体的可操作治理框架，也如实标注了关键实验结果尚未被复现确认。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "A Society of Researchers: Designing Institutions for Populations of Autonomous Research Agents",
+        "url": "https://arxiv.org/abs/2610.10468v1",
+        "published_at": "2026-10-07T17:30:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "39cf9f3edef75bef",
+        "5465057a42d9b80d"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 连续发布 b11499 与 b11512 构建",
+      "summary_zh": "开源推理项目 llama.cpp 发布两个新构建。b11499 为 CUDA 后端引入字节步长（byte strides）以支持非连续 ROLL 操作（#29547）。b11512 修复 DFlash 输出头共享问题（#30111），包括从 GGUF 元数据读取绑定的输出权重、共享绑定的词嵌入元数据，并移除了 DFlash 嵌入头的回退逻辑。两个版本均提供 macOS/iOS、Linux 各架构的预编译包。",
+      "why_it_matters_zh": "作为本地/端侧大模型推理的主流开源实现，其构建更新直接影响下游开发者与推理框架的兼容性；本次改动涉及 CUDA 算子正确性与 GGUF 权重读取，对多后端部署稳定性有实际意义。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11512",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11512",
+        "published_at": "2026-10-08T17:39:33Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b11499",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11499",
+          "published_at": "2026-10-08T12:20:18Z"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "adcb953061929c38"
+      ],
+      "category": "research",
+      "title_zh": "ExpDis：在 RLVR 中把探索与优化解耦",
+      "summary_zh": "论文指出，带可验证奖励的强化学习（RLVR）理论上可发现新的推理策略，但加入强新颖性激励往往收效有限，甚至会因为可验证奖励只监督模型知识与行为的狭窄部分而难以恢复地损害模型质量。作者提出 Exploration-Distillation（ExpDis）框架：先用新颖性奖励训练一个或多个探索策略，对其轨迹按正确性与质量过滤后蒸馏到独立的学生策略，学生策略训练时不带新颖性奖励，并交替多轮重复探索与优化。在七个数学推理基准和两个模型家族上，ExpDis 在同等工作量下优于 DAPO。",
+      "why_it_matters_zh": "为 RLVR 长期存在的“探索带来多样性、也带来退化”矛盾提供了一种可复用的解耦配方，若结果可泛化，将对推理模型的后训练流程产生直接影响。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Decoupling Exploration from Optimization in RLVR",
+        "url": "https://arxiv.org/abs/2610.10536v1",
+        "published_at": "2026-10-07T17:59:26Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 171,
+    "normalized": 171,
+    "filtered": 134,
+    "ai_candidates": 30,
+    "prompt_chars": 20714,
+    "estimated_input_tokens": 5178,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
