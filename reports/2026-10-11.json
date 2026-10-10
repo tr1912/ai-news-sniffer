@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-11",
+  "generated_at": "2026-10-10T16:08:19.635587Z",
+  "run_id": "2026-10-11-631fe646",
+  "daily_summary_zh": "今日AI领域动态：对 METR 时间跨度图的统计审视：AI 时间跨度估计的效度问题；llama.cpp 发布 b11541：新增 OpenCL 分组 MoE 内核等；NVIDIA KGMON 团队以“更小的 agent harness”获 KDD Cup 2026 数据智能体赛道第二。",
+  "events": [
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "5f6041e8bb5b540e"
+      ],
+      "category": "research",
+      "title_zh": "对 METR 时间跨度图的统计审视：AI 时间跨度估计的效度问题",
+      "summary_zh": "一篇 arXiv 论文基于 228 个任务和 26 个 AI，用样条与项目反应理论重新计算 METR 的 50% 时间跨度，放松了“任务的 AI 难度与人类耗时对数线性相关”的假设。拟合曲线在 2 至 30 分钟区间接近平坦，因此时间跨度从 3 分钟跳到 30 分钟，远比从 30 分钟跳到 5 小时容易，尽管倍数同为 10 倍。作者还给出在交叉验证下表现更好的点估计与诊断图。",
+      "why_it_matters_zh": "时间跨度已成为衡量 AI 能力的重要指标，该工作指出其构造效度依赖建模假设，建议在使用时间跨度基准时配合诊断图解读，避免把等倍数的进步误读为同等难度。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "On the estimation and validity of AI time horizons---a statistical look at the METR plot",
+        "url": "https://arxiv.org/abs/2610.12466v1",
+        "published_at": "2026-10-08T17:59:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "5ef0fc8bba2bf9d6"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11541：新增 OpenCL 分组 MoE 内核等",
+      "summary_zh": "llama.cpp 发布 b11541，OpenCL 后端新增 kernel_gemm_moe_q4_k_q8_1_dp4a_bin 与 kernel_gemm_moe_q6_k_q8_1_dp4a_bin 两个 MoE 相关内核，并提供 macOS（Apple Silicon / Intel）、iOS XCFramework 以及 Ubuntu x64/arm64/s390x 等构建包。",
+      "why_it_matters_zh": "作为最主流的本地推理栈之一，llama.cpp 持续优化 MoE 内核与多后端支持，直接影响端侧与本地部署的性能和可用性，对开发者具有即时价值。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11541",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11541",
+        "published_at": "2026-10-10T08:02:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "2ce14c4f66e488df"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA KGMON 团队以“更小的 agent harness”获 KDD Cup 2026 数据智能体赛道第二",
+      "summary_zh": "NVIDIA 开发者博客介绍，其 KGMON 团队在 KDD Cup 2026 Data Agents 竞赛中获得第二名，系统的核心思路是让智能体的 harness 更小，从而构建可靠的数据分析智能体。",
+      "why_it_matters_zh": "竞赛级实践给出了构建可靠数据分析 agent 的工程取向——简化 agent 框架而非堆叠复杂度，对企业级数据分析 agent 的实现具有可复用价值。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Building Reliable Data Analytics Agents: Lessons from the KDD Cup",
+        "url": "https://developer.nvidia.com/blog/building-reliable-data-analytics-agents-lessons-from-the-kdd-cup/",
+        "published_at": "2026-10-08T18:30:02Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 160,
+    "normalized": 160,
+    "filtered": 106,
+    "ai_candidates": 30,
+    "prompt_chars": 19876,
+    "estimated_input_tokens": 4969,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
