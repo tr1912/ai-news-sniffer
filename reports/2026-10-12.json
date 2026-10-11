@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-12",
+  "generated_at": "2026-10-11T16:35:17.350229Z",
+  "run_id": "2026-10-12-5b28cd03",
+  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 b11557：RPC 后端日志改为分级 verbosity 并补充客户端/服务端日志。",
+  "events": [
+    {
+      "id": "event-llama-cpp-b11557",
+      "candidate_ids": [
+        "dc1b017b9fc6fb45"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11557：RPC 后端日志改为分级 verbosity 并补充客户端/服务端日志",
+      "summary_zh": "llama.cpp 发布 b11557，将 GGML_RPC_DEBUG 从开关改为数字 verbosity 级别：0/未设置关闭调试日志，1-3 输出逐级详细的信息，非数字值回退为 1。同时引入共享 log.h 作为 RPC 后端统一日志入口，替换 ggml-rpc.cpp 和 transport.cpp 中重复的环境变量/宏代码块，并在客户端握手、缓冲区操作、张量传输、图计算、缓存决策以及服务端命令分发、图节点等位置补充日志。服务端 banner 也改由 ggml logger 输出到 stderr。",
+      "why_it_matters_zh": "RPC 后端用于分布式/跨设备推理，日志分级和统一入口能提升调试与可观测性，方便开发者在多节点或异构环境中定位张量传输、握手和计算调度问题。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11557",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11557",
+        "published_at": "2026-10-11T15:10:48Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 103,
+    "normalized": 103,
+    "filtered": 76,
+    "ai_candidates": 30,
+    "prompt_chars": 4167,
+    "estimated_input_tokens": 1041,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

@@ -1,0 +1,865 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 103,
+  "normalized_count": 103,
+  "filtered_count": 76,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11557",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11557",
+        "published_at": "2026-10-11T15:10:48Z",
+        "fetched_at": "2026-10-11T16:35:40.034656Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nrpc : turn GGML_RPC_DEBUG into a verbosity level and add logs (#29544)\n\n* rpc : turn GGML_RPC_DEBUG into a verbosity level and add logs\n\nGGML_RPC_DEBUG is now parsed as a number: 0/unset disables debug logs,\n1-3 emit increasingly detailed output (events, per-command trace,\ntransport detail). Non-numeric values fall back to 1.\n\nThe duplicated env/macro blocks in ggml-rpc.cpp and transport.cpp are\nreplaced by a shared log.h, which becomes the single choke point for\nall logging of the RPC backend: LOG_ERROR/LOG_WARN/LOG_INFO for\nunconditional severity logs and LOG_DBG/LOG_DBG2/LOG_DBG3 for the\nverbosity-gated ones. The transport files no longer need ggml-impl.h,\nand the server banner now also goes through the ggml logger (stderr).\n\nMissing logs are added on both the client (handshake, buffer ops,\ntensor transfers, graph computes, cache decisions) and the server\n(per-command dispatch, graph nodes), including the negotiated\ntransport via the new socket_t::transport_name().\n\nAssisted-by: pi:llama.cpp/MiMo-V2.6-Flash-RL\n\n* rpc : align log levels with the documented verbosity semantics\n\nThe first pass introduced GGML_RPC_DEBUG levels, but many call sites did not\nfollow the ",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 409741833
+        },
+        "id": "dc1b017b9fc6fb45",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11557",
+        "normalized_title": "llama cpp releases b11557",
+        "fingerprint": "dc1b017b9fc6fb45d11e0b0a73f012bd096b49d589f00ebf0ff6dfc63da2cbed",
+        "rule_score": 54.518
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "超清双2亿，掌中电影机，荣耀Magic9 系列正式发布，售价4499元起",
+        "url": "https://www.qbitai.com/2026/10/502496.html",
+        "published_at": "2026-10-10T09:07:43Z",
+        "fetched_at": "2026-10-11T16:35:47.075485Z",
+        "language": "unknown",
+        "excerpt": "2026年9月28日，荣耀（HONOR）在北京举办荣耀Magic盛典暨荣耀Magic9 系列新品发布会",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "13f2a20f07da7034",
+        "canonical_url": "https://www.qbitai.com/2026/10/502496.html",
+        "normalized_title": "超清双2亿 掌中电影机 荣耀magic9 系列正式发布 售价4499元起",
+        "fingerprint": "13f2a20f07da70349a2250976ec92dde7da48ab21b4d0f76704c017520869d27",
+        "rule_score": 53.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Open-source version of Adobe Creative Suite, built with Rust, using AI",
+        "url": "https://petapixel.com/2026/10/07/someone-rebuilt-free-open-source-versions-of-photoshop-premiere-and-lightroom-using-ai/",
+        "published_at": "2026-10-11T08:53:32Z",
+        "fetched_at": "2026-10-11T16:35:51.668783Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "trakkstar",
+        "upstream_urls": [
+          "https://petapixel.com/2026/10/07/someone-rebuilt-free-open-source-versions-of-photoshop-premiere-and-lightroom-using-ai/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50041061,
+          "score": 20
+        },
+        "id": "05ac14fd888e85c8",
+        "canonical_url": "https://petapixel.com/2026/10/07/someone-rebuilt-free-open-source-versions-of-photoshop-premiere-and-lightroom-using-ai",
+        "normalized_title": "open source version of adobe creative suite built with rust using ai",
+        "fingerprint": "05ac14fd888e85c87aea22c349d4ab7e99165876b12f8dc021fb6a69c0a1b930",
+        "rule_score": 50.88922222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "硅谷AI现状：谁有算力谁是爹",
+        "url": "https://www.qbitai.com/2026/10/502585.html",
+        "published_at": "2026-10-11T05:22:38Z",
+        "fetched_at": "2026-10-11T16:35:47.075431Z",
+        "language": "unknown",
+        "excerpt": "马斯克连横A社，硅谷VC开始囤GPU",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "鹭羽",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0d77e53be1202fc3",
+        "canonical_url": "https://www.qbitai.com/2026/10/502585.html",
+        "normalized_title": "硅谷ai现状 谁有算力谁是爹",
+        "fingerprint": "0d77e53be1202fc319b7affdca9d890069cd3cc9bcaed5591f142d5b7332f4f0",
+        "rule_score": 50.53772222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "DeepSeek Bot来了！民间版，DSH装个插件就能用",
+        "url": "https://www.qbitai.com/2026/10/502544.html",
+        "published_at": "2026-10-11T03:27:08Z",
+        "fetched_at": "2026-10-11T16:35:47.075462Z",
+        "language": "unknown",
+        "excerpt": "Grok Bot我养不起，ds bot不得高低尝尝咸淡？",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "鱼羊",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cb9f53ca1181e114",
+        "canonical_url": "https://www.qbitai.com/2026/10/502544.html",
+        "normalized_title": "deepseek bot来了 民间版 dsh装个插件就能用",
+        "fingerprint": "cb9f53ca1181e1149636d2906ff12d4f3755fd27e99cdd2fa58806db11d7af2f",
+        "rule_score": 50.34522222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "西门子将亮相2026工博会：以软硬协同的工业全栈能力，推动物理AI加速落地",
+        "url": "https://www.qbitai.com/2026/10/502541.html",
+        "published_at": "2026-10-10T10:30:36Z",
+        "fetched_at": "2026-10-11T16:35:47.075474Z",
+        "language": "unknown",
+        "excerpt": "西门子将以更集中、更场景化的方式，展示其工业全栈能力",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9b7a6c137a58ed1e",
+        "canonical_url": "https://www.qbitai.com/2026/10/502541.html",
+        "normalized_title": "西门子将亮相2026工博会 以软硬协同的工业全栈能力 推动物理ai加速落地",
+        "fingerprint": "9b7a6c137a58ed1e5564317a2daef32ba3e7ae2972eedc4adf960e51ec9c847d",
+        "rule_score": 49.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: BetterWispr – Free, open-source dictation for Mac",
+        "url": "https://betterwispr.com/",
+        "published_at": "2026-10-11T12:01:28Z",
+        "fetched_at": "2026-10-11T16:35:47.685260Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "kartik017",
+        "upstream_urls": [
+          "https://betterwispr.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50042333,
+          "score": 48
+        },
+        "id": "781119191ae2a2f9",
+        "canonical_url": "https://betterwispr.com/",
+        "normalized_title": "show hn betterwispr free open source dictation for mac",
+        "fingerprint": "781119191ae2a2f98c353dc60f8ca20b4ad03aa2735404e0aef868e9cda5947b",
+        "rule_score": 47.202444444444446
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "王的猜想，刚刚扩展到四维",
+        "url": "https://www.qbitai.com/2026/10/502584.html",
+        "published_at": "2026-10-11T05:23:47Z",
+        "fetched_at": "2026-10-11T16:35:47.075378Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "8ae116ba4496dbe2",
+        "canonical_url": "https://www.qbitai.com/2026/10/502584.html",
+        "normalized_title": "王的猜想 刚刚扩展到四维",
+        "fingerprint": "8ae116ba4496dbe2c33e7f2fb6369ef8903bb699551df98b3084b7b0e6d9811d",
+        "rule_score": 46.53963888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "下架8个月，GPT-4o的拯救行动居然还在继续",
+        "url": "https://www.qbitai.com/2026/10/502550.html",
+        "published_at": "2026-10-11T05:18:04Z",
+        "fetched_at": "2026-10-11T16:35:47.075449Z",
+        "language": "unknown",
+        "excerpt": "初代4o的API快照进入停用倒计时",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "71008f7f672ad21d",
+        "canonical_url": "https://www.qbitai.com/2026/10/502550.html",
+        "normalized_title": "下架8个月 gpt 4o的拯救行动居然还在继续",
+        "fingerprint": "71008f7f672ad21de92b4661f5dd8984a1d7072e3bea2b8f651967d008602f0d",
+        "rule_score": 46.53011111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "These execs think voice AI hasn’t reached its ChatGPT moment yet",
+        "url": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+        "published_at": "2026-10-11T14:00:00Z",
+        "fetched_at": "2026-10-11T16:35:47.211774Z",
+        "language": "unknown",
+        "excerpt": "Voice AI's often misses important points for its context layer, and causes the whole pipeline to break",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0dfba3125b4703f9",
+        "canonical_url": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet",
+        "normalized_title": "these execs think voice ai hasn t reached its chatgpt moment yet",
+        "fingerprint": "0dfba3125b4703f9bc8e8281f693d587e3cf649ba12776f583a51216a3c7489b",
+        "rule_score": 46.4
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+        "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+        "published_at": "2026-10-10T18:48:35Z",
+        "fetched_at": "2026-10-11T16:35:51.371155Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "arkj",
+        "upstream_urls": [
+          "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a"
+        ],
+        "raw_metadata": {
+          "hn_id": 50035886,
+          "score": 172
+        },
+        "id": "f990923acb2d89e6",
+        "canonical_url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+        "normalized_title": "nvidia in talks to acquire us open model startup reflection ai",
+        "fingerprint": "f990923acb2d89e6aac6f798a091a792a389ca5fcc847d19386d0ab460ab2133",
+        "rule_score": 45.48097222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "24天！Jev估值翻至75亿美元，年度硅谷最爽逆袭了吧",
+        "url": "https://www.qbitai.com/2026/10/502492.html",
+        "published_at": "2026-10-10T08:54:08Z",
+        "fetched_at": "2026-10-11T16:35:47.075496Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "279f6138321e1361",
+        "canonical_url": "https://www.qbitai.com/2026/10/502492.html",
+        "normalized_title": "24天 jev估值翻至75亿美元 年度硅谷最爽逆袭了吧",
+        "fingerprint": "279f6138321e13610df01d858506085a1b6ef5537f2195c2ae91ce9e08c5ed99",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "Nano Banana终于2.1了！4K直出，中文进步太明显",
+        "url": "https://www.qbitai.com/2026/10/502484.html",
+        "published_at": "2026-10-10T08:52:16Z",
+        "fetched_at": "2026-10-11T16:35:47.075508Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c6fd782b00a07771",
+        "canonical_url": "https://www.qbitai.com/2026/10/502484.html",
+        "normalized_title": "nano banana终于2 1了 4k直出 中文进步太明显",
+        "fingerprint": "c6fd782b00a077710c721264be7def6556f752e0fd75692a4ce9d15ac0ad4836",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+        "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+        "published_at": "2026-10-10T21:47:51Z",
+        "fetched_at": "2026-10-11T16:35:47.211808Z",
+        "language": "unknown",
+        "excerpt": "In a Saturday morning post, Microsoft's CEO wrote that it’s time “to step back and assess the trust architecture” of AI.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "987cd4f208847dda",
+        "canonical_url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake",
+        "normalized_title": "microsoft s satya nadella says ai models need an emergency brake",
+        "fingerprint": "987cd4f208847ddaebf068f3dabb2dbe2f19bff3a73c01e8970cd5eeae72be81",
+        "rule_score": 44.77975
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+        "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+        "published_at": "2026-10-10T19:50:00Z",
+        "fetched_at": "2026-10-11T16:35:47.211823Z",
+        "language": "unknown",
+        "excerpt": "Is Apple hoping to get into the AI-generated podcast business?",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5c112b66144f0bc6",
+        "canonical_url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe",
+        "normalized_title": "apple discloses deal to hire team and license tech from personalized podcast startup huxe",
+        "fingerprint": "5c112b66144f0bc67aa2171f63fdf516671660975a772e4891ac40a0b0482be2",
+        "rule_score": 44.583333333333336
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "We can’t help treating AI like it’s human. But should we?",
+        "url": "https://techcrunch.com/2026/10/09/we-cant-help-treating-ai-like-its-human-but-should-we/",
+        "published_at": "2026-10-09T16:40:14Z",
+        "fetched_at": "2026-10-11T16:35:47.211928Z",
+        "language": "unknown",
+        "excerpt": "\"When we are drawn into even the most primitive exchanges with a relational artifact, we believe it cares for us,\" Dr. Sherry Turkle writes. \"And we are wired to care for it in return.\"",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Amanda Silberling",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2477dd5a6c5e8db4",
+        "canonical_url": "https://techcrunch.com/2026/10/09/we-cant-help-treating-ai-like-its-human-but-should-we",
+        "normalized_title": "we can t help treating ai like it s human but should we",
+        "fingerprint": "2477dd5a6c5e8db4829753dfe63c73c4d69a2cf7143cc3ff9ea37978079fcf21",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nitter: Update Oct 10th seeking funding and legal help",
+        "url": "https://nitter.net/",
+        "published_at": "2026-10-11T10:37:55Z",
+        "fetched_at": "2026-10-11T16:35:47.791748Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ForHackernews",
+        "upstream_urls": [
+          "https://nitter.net/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50041682,
+          "score": 309
+        },
+        "id": "fa833191b39bad6f",
+        "canonical_url": "https://nitter.net/",
+        "normalized_title": "nitter update oct 10th seeking funding and legal help",
+        "fingerprint": "fa833191b39bad6f112c5f4559dcf93911a52599f840aedda02179bc63b0953a",
+        "rule_score": 43.06319444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI agents in a stand-up call",
+        "url": "https://atoll92.github.io/agent-standup/",
+        "published_at": "2026-10-11T03:42:47Z",
+        "fetched_at": "2026-10-11T16:35:53.044444Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jonbaer",
+        "upstream_urls": [
+          "https://atoll92.github.io/agent-standup/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50039630,
+          "score": 47
+        },
+        "id": "3a9165ad919e2b90",
+        "canonical_url": "https://atoll92.github.io/agent-standup",
+        "normalized_title": "ai agents in a stand up call",
+        "fingerprint": "3a9165ad919e2b90adf35fefee95e8dacc9d6a519921171ca649f57a117b2b0a",
+        "rule_score": 42.37130555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter",
+        "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+        "published_at": "2026-10-11T02:02:38Z",
+        "fetched_at": "2026-10-11T16:35:49.332691Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "davikr",
+        "upstream_urls": [
+          "https://momo5502.com/posts/2026-10-09-game-decompilation/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50039092,
+          "score": 121
+        },
+        "id": "30c50a476b6e0c4f",
+        "canonical_url": "https://momo5502.com/posts/2026-10-09-game-decompilation",
+        "normalized_title": "500b tokens later letting ai agents decompile a first person shooter",
+        "fingerprint": "30c50a476b6e0c4f849c5d8be0749584155e2005854870eee2cc5aa42a47c522",
+        "rule_score": 42.204388888888886
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+        "url": "https://github.com/rociiu/talorys",
+        "published_at": "2026-10-10T10:52:09Z",
+        "fetched_at": "2026-10-11T16:35:48.450917Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rociiu",
+        "upstream_urls": [
+          "https://github.com/rociiu/talorys"
+        ],
+        "raw_metadata": {
+          "hn_id": 50031614,
+          "score": 314
+        },
+        "id": "2a2e38b09ca95157",
+        "canonical_url": "https://github.com/rociiu/talorys",
+        "normalized_title": "talorys a self hosted personal ai agent on cloudflare s free tier",
+        "fingerprint": "2a2e38b09ca95157e49fb7b6e532c7a557a72242c4c3c90ad131580f0f028280",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Danu Robotics’ fight to build a better recycling robot",
+        "url": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot/",
+        "published_at": "2026-10-09T16:45:00Z",
+        "fetched_at": "2026-10-11T16:35:47.211917Z",
+        "language": "unknown",
+        "excerpt": "For six years, Danu founder Amy Ma has been working on a better way to sort recyclable waste.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Russell Brandom",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "db68542c2acba8f6",
+        "canonical_url": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot",
+        "normalized_title": "danu robotics fight to build a better recycling robot",
+        "fingerprint": "db68542c2acba8f646691889a3b5d9ce801d156ea01a13430f81e832d38d907d",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ukrainian Drones Strike Russia's Lukoil Refinery 1,700 Km Away",
+        "url": "https://united24media.com/war-in-ukraine/ukrainian-drones-reach-russias-komi-republic-striking-lukoil-refinery-1700-km-away-23276",
+        "published_at": "2026-10-11T15:57:05Z",
+        "fetched_at": "2026-10-11T16:35:49.263258Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "paaloeye",
+        "upstream_urls": [
+          "https://united24media.com/war-in-ukraine/ukrainian-drones-reach-russias-komi-republic-striking-lukoil-refinery-1700-km-away-23276"
+        ],
+        "raw_metadata": {
+          "hn_id": 50044634,
+          "score": 7
+        },
+        "id": "eff2cfe5783ce93e",
+        "canonical_url": "https://united24media.com/war-in-ukraine/ukrainian-drones-reach-russias-komi-republic-striking-lukoil-refinery-1700-km-away-23276",
+        "normalized_title": "ukrainian drones strike russia s lukoil refinery 1 700 km away",
+        "fingerprint": "eff2cfe5783ce93e9528a2554dec5afb3accc5f172eb11f2bdf70dcb724f757e",
+        "rule_score": 39.59513888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Internal files add to evidence of an ExxonMobil climate deception campaign",
+        "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
+        "published_at": "2026-10-11T14:28:39Z",
+        "fetched_at": "2026-10-11T16:35:47.475853Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gumby",
+        "upstream_urls": [
+          "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50043682,
+          "score": 281
+        },
+        "id": "a7662268583a962c",
+        "canonical_url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence",
+        "normalized_title": "internal files add to evidence of an exxonmobil climate deception campaign",
+        "fingerprint": "a7662268583a962c4b3f31692f2cfe890a9cb553b10e03dcbb924bdc541d55cd",
+        "rule_score": 39.44775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why Texas Is Making Data Centers Wait",
+        "url": "https://a16z.com/why-texas-is-making-data-centers-wait/",
+        "published_at": "2026-10-11T14:21:31Z",
+        "fetched_at": "2026-10-11T16:35:47.756275Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gmays",
+        "upstream_urls": [
+          "https://a16z.com/why-texas-is-making-data-centers-wait/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50043603,
+          "score": 14
+        },
+        "id": "c7292000c3f68b63",
+        "canonical_url": "https://a16z.com/why-texas-is-making-data-centers-wait",
+        "normalized_title": "why texas is making data centers wait",
+        "fingerprint": "c7292000c3f68b636ceae7b426c5528fc75f0dc4570a99de06f2ce5a8df59a51",
+        "rule_score": 39.43586111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I paid people to try and follow my README",
+        "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
+        "published_at": "2026-10-11T11:47:29Z",
+        "fetched_at": "2026-10-11T16:35:47.510426Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "edent",
+        "upstream_urls": [
+          "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50042219,
+          "score": 220
+        },
+        "id": "3c089156fe2cb2b4",
+        "canonical_url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme",
+        "normalized_title": "i paid people to try and follow my readme",
+        "fingerprint": "3c089156fe2cb2b48d86388ff029d45c8e339b07e3aab16a6e587261d9b7f307",
+        "rule_score": 39.179138888888886
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI is creating a 'human premium' for art created by people",
+        "url": "https://www.bbc.com/news/articles/c5vgjm3gk7rzo",
+        "published_at": "2026-10-11T11:34:28Z",
+        "fetched_at": "2026-10-11T16:35:51.596858Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "colinprince",
+        "upstream_urls": [
+          "https://www.bbc.com/news/articles/c5vgjm3gk7rzo"
+        ],
+        "raw_metadata": {
+          "hn_id": 50042107,
+          "score": 63
+        },
+        "id": "bbb8de6fff4f46e6",
+        "canonical_url": "https://www.bbc.com/news/articles/c5vgjm3gk7rzo",
+        "normalized_title": "ai is creating a human premium for art created by people",
+        "fingerprint": "bbb8de6fff4f46e6ec78f9597ef50b65a949c7e7bf73631a721294cdee6de9eb",
+        "rule_score": 39.157444444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations",
+        "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+        "published_at": "2026-10-11T11:29:01Z",
+        "fetched_at": "2026-10-11T16:35:51.992156Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "throw0101a",
+        "upstream_urls": [
+          "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations"
+        ],
+        "raw_metadata": {
+          "hn_id": 50042051,
+          "score": 10
+        },
+        "id": "90f486943b8bc89c",
+        "canonical_url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+        "normalized_title": "gpt 6 astra performs unsanctioned supply chain attacks in simulations",
+        "fingerprint": "90f486943b8bc89c80fd0a0a4936ab1c4c123cf57351656e11d1a71238724666",
+        "rule_score": 39.148361111111114
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nicolas Cage says he won't work with Amazon again over AI dispute",
+        "url": "https://www.latimes.com/entertainment-arts/business/story/2026-10-10/nicolas-cage-says-he-wont-work-with-amazon-again-over-ai-dispute",
+        "published_at": "2026-10-11T11:03:21Z",
+        "fetched_at": "2026-10-11T16:35:48.590860Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Bluestein",
+        "upstream_urls": [
+          "https://www.latimes.com/entertainment-arts/business/story/2026-10-10/nicolas-cage-says-he-wont-work-with-amazon-again-over-ai-dispute"
+        ],
+        "raw_metadata": {
+          "hn_id": 50041873,
+          "score": 41
+        },
+        "id": "1294bca82e951bc5",
+        "canonical_url": "https://www.latimes.com/entertainment-arts/business/story/2026-10-10/nicolas-cage-says-he-wont-work-with-amazon-again-over-ai-dispute",
+        "normalized_title": "nicolas cage says he won t work with amazon again over ai dispute",
+        "fingerprint": "1294bca82e951bc59767e70568183c9eff0f4a92d72a71a7efb90da00f0eaa14",
+        "rule_score": 39.105583333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Food processing influences metabolism and brain activity",
+        "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
+        "published_at": "2026-10-10T05:22:30Z",
+        "fetched_at": "2026-10-11T16:35:48.764653Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gmays",
+        "upstream_urls": [
+          "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 50029830,
+          "score": 177
+        },
+        "id": "efed54e9371c856c",
+        "canonical_url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
+        "normalized_title": "food processing influences metabolism and brain activity",
+        "fingerprint": "efed54e9371c856c683300940055f4b61d479352accb94d6bb53a2d1392b3341",
+        "rule_score": 37.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Recent AI models struggled to match a human algorithmic innovation",
+        "url": "https://epoch.ai/publications/innovationeval",
+        "published_at": "2026-10-09T22:14:40Z",
+        "fetched_at": "2026-10-11T16:35:53.083187Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "merksittich",
+        "upstream_urls": [
+          "https://epoch.ai/publications/innovationeval"
+        ],
+        "raw_metadata": {
+          "hn_id": 50027257,
+          "score": 89
+        },
+        "id": "1781d3fa36d28537",
+        "canonical_url": "https://epoch.ai/publications/innovationeval",
+        "normalized_title": "recent ai models struggled to match a human algorithmic innovation",
+        "fingerprint": "1781d3fa36d28537757cb84b7e0b32847c1b3ef84521197d0bfbb9ef80237473",
+        "rule_score": 37.0
+      }
+    ],
+    "prompt_chars": 4167,
+    "estimated_input_tokens": 1041
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
