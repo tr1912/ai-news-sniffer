@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-12T20:10:38.695260Z",
+  "run_id": "2026-10-13-d810f5af",
+  "daily_summary_zh": "今日AI领域动态：NVIDIA 提出 ReplaySSM：面向混合模型解码的状态存储优化；llama.cpp 发布 b11574：优化 Hexagon CPY/CONCAT 与短行场景。",
+  "events": [
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "1fc9824adbf444d7"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 提出 ReplaySSM：面向混合模型解码的状态存储优化",
+      "summary_zh": "NVIDIA 开发者博客发布 ReplaySSM，重新思考混合模型解码时的状态存储。混合模型交替使用 SSM 层和少量注意力层；该工作面向 NVIDIA Nemotron 3、Qwen3.5 至 Qwen3.8、Kimi-K3、GLM-5.3-Flash 等模型，目标是加速解码。",
+      "why_it_matters_zh": "混合模型正成为长上下文与高效推理的重要路线，状态存储与重放策略可能直接影响解码吞吐，对推理基础设施和模型部署有参考价值。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+        "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
+        "published_at": "2026-10-12T16:00:54Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "ab87b3c93a028a55"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11574：优化 Hexagon CPY/CONCAT 与短行场景",
+      "summary_zh": "llama.cpp 发布 b11574，主要针对 Hexagon 后端优化 CPY/CONCAT 算子。更新包括：按 DMA descriptor 分块处理转换型 CPY，避免短行受 DMA 延迟限制；清理 CPY 游标；引入线程化 DMA/HVX gather-row helper；支持扩展缓冲区、快速路径、f16、双缓冲，并支持折叠 3/4 维。",
+      "why_it_matters_zh": "提升 llama.cpp 在 Qualcomm Hexagon 等边缘/端侧平台上的推理效率，对本地大模型部署和开源推理生态有直接价值。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11574",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11574",
+        "published_at": "2026-10-12T15:13:57Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 134,
+    "normalized": 134,
+    "filtered": 102,
+    "ai_candidates": 30,
+    "prompt_chars": 6205,
+    "estimated_input_tokens": 1551,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}

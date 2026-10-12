@@ -1,0 +1,847 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 134,
+  "normalized_count": 134,
+  "filtered_count": 102,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11574",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11574",
+        "published_at": "2026-10-12T15:13:57Z",
+        "fetched_at": "2026-10-12T20:11:00.365140Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nhexagon: optimize CPY/CONCAT — round 3, short-rows edition (#30341)\n\n* hexagon: move the converting CPY in blocks of rows per DMA descriptor so short rows are not DMA-latency bound\n\n* hex-cpy: cleanup cpy cursor handling\n\n* hex-cpy-concat: introduce threaded dma/hvx gather-row helper\n\nCo-authored-by: Ruslan Karymov <67752306+karusrus@users.noreply.github.com>\n\n* hex-cpy: remove leftover rejections for extended buffers\n\n* hex-cpy: relax the gate for fast-path\n\n* hex-cpy: remove scalar divs and vtcm access and use explicit gather_sync\n\n* hex-cpy: add proper support for mdev work splitting to fastpath\n\n* hex-cpy: optimize dense gather-row tasks\n\n* hex-cpy: unroll gather-rows loops\n\n* hex-cpy: add fastpath for f16\n\n* hex-cpy-concat: support for colapsing 3/4D dims\n\n* hex-cpy: double-buffer support\n\n* hex-cpy: factor out gather-rows into more of an op by itself\n\n* hex-cpy-concat: dedup kernel-params\n\n* hex-cpy-concat: step-down nr to fit instead of hard fail\n\n* hex-gather: replace div with a mask\n\n* hex-gather-rows: cleanup dma pipeline and remove the stalls\n\n* hex-gather: specialize compute funcs\n\n* hex-gather: reduce scalar reg.spills and func calls\n\n* hex-gather: do n",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 410740997
+        },
+        "id": "ab87b3c93a028a55",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11574",
+        "normalized_title": "llama cpp releases b11574",
+        "fingerprint": "ab87b3c93a028a55ed66a8ca2f0b9eb6790ed43e79f3d357b1fb11bb7dc2b3eb",
+        "rule_score": 62.52325
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta releases its first frontier model, Muse Wonder",
+        "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "published_at": "2026-10-12T17:56:56Z",
+        "fetched_at": "2026-10-12T20:11:04.559464Z",
+        "language": "unknown",
+        "excerpt": "Where Muse Spark aimed to be a lightweight model that could perform at low latency, the Wonder models are larger and said to be more capable, with higher benchmark scores and better results on complex tasks like coding.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Russell Brandom",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7374d071465e87f3",
+        "canonical_url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder",
+        "normalized_title": "meta releases its first frontier model muse wonder",
+        "fingerprint": "7374d071465e87f3e77db8880e92c87c383f9e243cea867d898432d7a5978ff3",
+        "rule_score": 54.79488888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Microsoft president says UK is best placed to drive AI regulation",
+        "url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation/",
+        "published_at": "2026-10-12T15:31:19Z",
+        "fetched_at": "2026-10-12T20:11:04.559532Z",
+        "language": "unknown",
+        "excerpt": "Microsoft president Brad Smith calls for urgent AI regulation, saying milk and washing machines have more oversight than AI companies.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "79db086083725f24",
+        "canonical_url": "https://techcrunch.com/2026/10/12/microsoft-president-says-uk-is-best-placed-to-drive-ai-regulation",
+        "normalized_title": "microsoft president says uk is best placed to drive ai regulation",
+        "fingerprint": "79db086083725f24c43bf01b30935d55ebb653c4d1af0d6b8b120f7457398a8f",
+        "rule_score": 54.552194444444446
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "何恺明团队发布多模态Harness框架",
+        "url": "https://www.qbitai.com/2026/10/502628.html",
+        "published_at": "2026-10-11T08:59:06Z",
+        "fetched_at": "2026-10-12T20:11:04.411115Z",
+        "language": "unknown",
+        "excerpt": "多模态模型的视觉原生Harness，来了！",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "henry",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f867582b874e4562",
+        "canonical_url": "https://www.qbitai.com/2026/10/502628.html",
+        "normalized_title": "何恺明团队发布多模态harness框架",
+        "fingerprint": "f867582b874e45623f0f5bbec29f92c8623c4ee0f011e6d1e5679108a9f54cbe",
+        "rule_score": 53.0
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+        "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
+        "published_at": "2026-10-12T16:00:54Z",
+        "fetched_at": "2026-10-12T20:10:51.160817Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"A cube assembled from smaller dark blocks, with glowing cyan, pink, yellow, and green sections against a black background.\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/cube-black-background-768x432.png\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"cube-black-background\" width=\"768\" />Hybrid models interleave state-space model (SSM) layers with a few attention layers. NVIDIA Nemotron 3, Qwen3.5 through Qwen3.8, Kimi-K3, and GLM-5.3-Flash are...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Michelle Horton",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1fc9824adbf444d7",
+        "canonical_url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding",
+        "normalized_title": "replayssm rethinking state storage for faster hybrid model decoding",
+        "fingerprint": "1fc9824adbf444d7d90aa7c1f380309421c7ba7c40f4a979df68fb6518da4b44",
+        "rule_score": 52.6015
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "华为AI靠RSI通关25款游戏！操作次数比人类少56%",
+        "url": "https://www.qbitai.com/2026/10/502654.html",
+        "published_at": "2026-10-12T05:48:36Z",
+        "fetched_at": "2026-10-12T20:11:04.411041Z",
+        "language": "unknown",
+        "excerpt": "游戏打到21:0，AI甚至不用再调用大模型了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "一水",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "06dc7d23d7127bb0",
+        "canonical_url": "https://www.qbitai.com/2026/10/502654.html",
+        "normalized_title": "华为ai靠rsi通关25款游戏 操作次数比人类少56",
+        "fingerprint": "06dc7d23d7127bb0fd8c5bafcd730a6a958605c0186240a584a12d7246600416",
+        "rule_score": 50.581
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "用不着Ctrl+F了！全新AI论文工具，帮你在原文献里海里捞针",
+        "url": "https://www.qbitai.com/2026/10/502644.html",
+        "published_at": "2026-10-11T09:04:31Z",
+        "fetched_at": "2026-10-12T20:11:04.411103Z",
+        "language": "unknown",
+        "excerpt": "一套生成论文初稿的多智能体工作流",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "henry",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1988220c92215952",
+        "canonical_url": "https://www.qbitai.com/2026/10/502644.html",
+        "normalized_title": "用不着ctrl f了 全新ai论文工具 帮你在原文献里海里捞针",
+        "fingerprint": "1988220c92215952837f549927813bc7ddebac79e5b9b2b5da09e860261c9983",
+        "rule_score": 49.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Will the HomeView be Apple’s first smart home success?",
+        "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+        "published_at": "2026-10-11T21:14:40Z",
+        "fetched_at": "2026-10-12T20:11:04.559577Z",
+        "language": "unknown",
+        "excerpt": "Over the past couple of years, we’ve seen multiple reports that Apple was working on a new smart home product, but now it seems the product has a name and a launch date.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3fd24d230b065e38",
+        "canonical_url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success",
+        "normalized_title": "will the homeview be apple s first smart home success",
+        "fingerprint": "3fd24d230b065e3885883146bb3826ab44220ea5a9a0504ac53da24a1ce43233",
+        "rule_score": 48.724444444444444
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "WindBorne wins a hefty US Air Force contract for its balloon data",
+        "url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data/",
+        "published_at": "2026-10-12T17:19:14Z",
+        "fetched_at": "2026-10-12T20:11:04.559504Z",
+        "language": "unknown",
+        "excerpt": "A Silicon Valley startup that uses weather balloons and AI to predict the weather won a U.S. military contract worth almost $50 million.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Tim Fernholz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c9ef16132b874d12",
+        "canonical_url": "https://techcrunch.com/2026/10/12/windborne-wins-a-hefty-us-air-force-contract-for-its-balloon-data",
+        "normalized_title": "windborne wins a hefty us air force contract for its balloon data",
+        "fingerprint": "c9ef16132b874d1236b878363492d67552c9754d782f7129071674cfa98ccd4b",
+        "rule_score": 46.732055555555554
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Honeyjar offers AI tools to improve PR and comms at every company",
+        "url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company/",
+        "published_at": "2026-10-12T15:45:00Z",
+        "fetched_at": "2026-10-12T20:11:04.559520Z",
+        "language": "unknown",
+        "excerpt": "Journalists, entrepreneurs, and even some public relations professionals will tell you that the PR process is broken. But could AI actually make things better?",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c8cf596ed9e8b0bd",
+        "canonical_url": "https://techcrunch.com/2026/10/12/honeyjar-offers-ai-tools-to-improve-pr-and-comms-at-every-company",
+        "normalized_title": "honeyjar offers ai tools to improve pr and comms at every company",
+        "fingerprint": "c8cf596ed9e8b0bd8fb6a656498eefff790da4a3677577ac2af71a9f56169691",
+        "rule_score": 46.575
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "This AI startup says it can generate permit-ready blueprints in minutes",
+        "url": "https://techcrunch.com/2026/10/12/this-ai-startup-says-it-can-generate-permit-ready-blueprints-in-minutes/",
+        "published_at": "2026-10-12T15:27:59Z",
+        "fetched_at": "2026-10-12T20:11:04.559544Z",
+        "language": "unknown",
+        "excerpt": "Blueprints AI, a bootstrapped startup based in Santa Monica, developed software that produces code-compliant construction blueprints from a photo, PDF, or sketch.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kirsten Korosec",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9afee396d9b30797",
+        "canonical_url": "https://techcrunch.com/2026/10/12/this-ai-startup-says-it-can-generate-permit-ready-blueprints-in-minutes",
+        "normalized_title": "this ai startup says it can generate permit ready blueprints in minutes",
+        "fingerprint": "9afee396d9b30797354f8e5077bacbec16e9bd639e2a5dbe1157d144077a7cee",
+        "rule_score": 46.546638888888886
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Crest – an Arc-inspired open-source browser for Mac",
+        "url": "https://crestbrowser.com/",
+        "published_at": "2026-10-12T03:37:09Z",
+        "fetched_at": "2026-10-12T20:11:10.853482Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "cobychapple",
+        "upstream_urls": [
+          "https://crestbrowser.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50051097,
+          "score": 28
+        },
+        "id": "5ffa63acd98910d0",
+        "canonical_url": "https://crestbrowser.com/",
+        "normalized_title": "crest an arc inspired open source browser for mac",
+        "fingerprint": "5ffa63acd98910d028549598904a69186d289cb11e81970c53dcf79596065f30",
+        "rule_score": 46.361916666666666
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Former Plaud exec raises $26M for AI app that listens to you in the background",
+        "url": "https://techcrunch.com/2026/10/12/former-plaud-exec-raises-26m-for-ai-app-that-listens-to-you-in-the-background/",
+        "published_at": "2026-10-12T12:47:59Z",
+        "fetched_at": "2026-10-12T20:11:04.559566Z",
+        "language": "unknown",
+        "excerpt": "One of the core promises of AI is that the more it knows about a person, the better it will be able to assist them with tasks and make appropriate suggestions, which, if you'll believe the tech companies, requires apps and devices to listen, watch, or record users' activity all the time and gather all possible context.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ffa55e3d7ab5980b",
+        "canonical_url": "https://techcrunch.com/2026/10/12/former-plaud-exec-raises-26m-for-ai-app-that-listens-to-you-in-the-background",
+        "normalized_title": "former plaud exec raises 26m for ai app that listens to you in the background",
+        "fingerprint": "ffa55e3d7ab5980ba3c525d3e75c84915efb6411b39bf2ecae007d9c36ef2ca4",
+        "rule_score": 46.27997222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "智谱新模型，490 tokens/s！",
+        "url": "https://www.qbitai.com/2026/10/502649.html",
+        "published_at": "2026-10-12T02:37:04Z",
+        "fetched_at": "2026-10-12T20:11:04.411088Z",
+        "language": "unknown",
+        "excerpt": "GLM「速度仙人」来了？",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "40892f76ccd61ae9",
+        "canonical_url": "https://www.qbitai.com/2026/10/502649.html",
+        "normalized_title": "智谱新模型 490 tokens s",
+        "fingerprint": "40892f76ccd61ae9d4c64621f70493e52c032126ccc273900dec3a23912f7fd4",
+        "rule_score": 46.26177777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Doory – Open-Source Canva",
+        "url": "https://github.com/shaongitbd/doory",
+        "published_at": "2026-10-12T00:48:27Z",
+        "fetched_at": "2026-10-12T20:11:07.538325Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "acley",
+        "upstream_urls": [
+          "https://github.com/shaongitbd/doory"
+        ],
+        "raw_metadata": {
+          "hn_id": 50049872,
+          "score": 194
+        },
+        "id": "b1b35056ed3d51b4",
+        "canonical_url": "https://github.com/shaongitbd/doory",
+        "normalized_title": "doory open source canva",
+        "fingerprint": "b1b35056ed3d51b435f52bffabf2ec795fc8d03d8595f1188a38dfbf2fc90164",
+        "rule_score": 46.08075
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "陶哲轩：数学2.0时代已至！",
+        "url": "https://www.qbitai.com/2026/10/502594.html",
+        "published_at": "2026-10-11T07:52:16Z",
+        "fetched_at": "2026-10-12T20:11:04.411127Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f698933f953c3afe",
+        "canonical_url": "https://www.qbitai.com/2026/10/502594.html",
+        "normalized_title": "陶哲轩 数学2 0时代已至",
+        "fingerprint": "f698933f953c3afe098ad9b9c9ad72c0cbeb2b658189feb826a861a6fcdf9284",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+        "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+        "published_at": "2026-10-11T16:52:33Z",
+        "fetched_at": "2026-10-12T20:11:04.559599Z",
+        "language": "unknown",
+        "excerpt": "On Equity, we debate the impact of data center moratoriums and whether the AI industry has a communication problem.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "163f2a1949b1dd33",
+        "canonical_url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas",
+        "normalized_title": "can the ai industry persuade data center opponents by getting rid of ndas",
+        "fingerprint": "163f2a1949b1dd3367aac0f7abb3a977c13eb9fd00a4f87a1e8aa49e783d54de",
+        "rule_score": 44.28758333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI coding agents generate more code, but not more software",
+        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+        "published_at": "2026-10-12T17:14:01Z",
+        "fetched_at": "2026-10-12T20:11:05.017604Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gumby",
+        "upstream_urls": [
+          "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50059523,
+          "score": 181
+        },
+        "id": "83eb87891b21410e",
+        "canonical_url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software",
+        "normalized_title": "ai coding agents generate more code but not more software",
+        "fingerprint": "83eb87891b21410ec922d906845a6f8c2f01814169050e920ff1599bae59972f",
+        "rule_score": 43.72336111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "TechCrunch Disrupt 2026 starts tomorrow: Your final chance to secure up to $100 ticket savings",
+        "url": "https://techcrunch.com/2026/10/12/techcrunch-disrupt-2026-starts-tomorrow-your-final-chance-to-secure-up-to-100-ticket-savings/",
+        "published_at": "2026-10-12T14:00:00Z",
+        "fetched_at": "2026-10-12T20:11:04.559555Z",
+        "language": "unknown",
+        "excerpt": "Tomorrow at 8 a.m. PT, it all begins z— 10,000+ founders, investors, and tech operators will gather at San Francisco’s Moscone West for TechCrunch Disrupt 2026 for three days of ideas, connections, and startups shaping what comes next. This is your last 24 hours to secure ticket savings of up to $100, and get 50% off a second.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "02dbd08d077d0182",
+        "canonical_url": "https://techcrunch.com/2026/10/12/techcrunch-disrupt-2026-starts-tomorrow-your-final-chance-to-secure-up-to-100-ticket-savings",
+        "normalized_title": "techcrunch disrupt 2026 starts tomorrow your final chance to secure up to 100 ticket savings",
+        "fingerprint": "02dbd08d077d0182fb2b24290cb01e2d54e2e36ab12a1788d8168f09783a54fe",
+        "rule_score": 42.4
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "48 hours to TechCrunch Disrupt 2026 — hear directly from the people building what’s next",
+        "url": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/",
+        "published_at": "2026-10-11T19:00:00Z",
+        "fetched_at": "2026-10-12T20:11:04.559588Z",
+        "language": "unknown",
+        "excerpt": "Less than 48 hours, TechCrunch Disrupt 2026 starts in San Francisco’s Moscone West. Save up to $100 on your pass before prices increase at the door, plus get 50% on a second pass. Or score other deals.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "92d3f0f4e778a57a",
+        "canonical_url": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next",
+        "normalized_title": "48 hours to techcrunch disrupt 2026 hear directly from the people building what s next",
+        "fingerprint": "92d3f0f4e778a57a4618cc9af08bd35ae71f98fbbcbd77585eb123bd9b31579b",
+        "rule_score": 40.5
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "\"Today we're laying off a large part of the Airtable team \"",
+        "url": "https://twitter.com/fedesimio/status/2109713695165329511",
+        "published_at": "2026-10-12T19:56:16Z",
+        "fetched_at": "2026-10-12T20:11:07.710301Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "tortilla",
+        "upstream_urls": [
+          "https://twitter.com/fedesimio/status/2109713695165329511"
+        ],
+        "raw_metadata": {
+          "hn_id": 50062076,
+          "score": 9
+        },
+        "id": "32060a80971eea1f",
+        "canonical_url": "https://twitter.com/fedesimio/status/2109713695165329511",
+        "normalized_title": "today we re laying off a large part of the airtable team",
+        "fingerprint": "32060a80971eea1f0f4e1b22e742a21becd0c7203eafb81a041d37e766479d81",
+        "rule_score": 39.99377777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI models may be capable of self-replicating without access to a datacenter",
+        "url": "https://www.anthropic.com/research/self-replicating-ai",
+        "published_at": "2026-10-12T19:25:29Z",
+        "fetched_at": "2026-10-12T20:11:04.970016Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "artninja1988",
+        "upstream_urls": [
+          "https://www.anthropic.com/research/self-replicating-ai"
+        ],
+        "raw_metadata": {
+          "hn_id": 50061603,
+          "score": 38
+        },
+        "id": "5ce7e9ed04b50c9c",
+        "canonical_url": "https://www.anthropic.com/research/self-replicating-ai",
+        "normalized_title": "ai models may be capable of self replicating without access to a datacenter",
+        "fingerprint": "5ce7e9ed04b50c9c9231eec01201aaae0d2516948972bb49497baf08ef1c1286",
+        "rule_score": 39.94247222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "'AI' Is Not a Tool by Rich Hickey",
+        "url": "https://gist.github.com/svieira/619d60dea942a8d4498cba3bb6b11c02",
+        "published_at": "2026-10-12T18:00:25Z",
+        "fetched_at": "2026-10-12T20:11:06.751895Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "svieira",
+        "upstream_urls": [
+          "https://gist.github.com/svieira/619d60dea942a8d4498cba3bb6b11c02"
+        ],
+        "raw_metadata": {
+          "hn_id": 50060269,
+          "score": 37
+        },
+        "id": "15ede87e3f971ca1",
+        "canonical_url": "https://gist.github.com/svieira/619d60dea942a8d4498cba3bb6b11c02",
+        "normalized_title": "ai is not a tool by rich hickey",
+        "fingerprint": "15ede87e3f971ca163da7c27821858fa611d76b906313b7c38d86c704191f45a",
+        "rule_score": 39.800694444444446
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Reverse engineer anything with agents, from app behavior down to native binaries",
+        "url": "https://github.com/morluto/rea",
+        "published_at": "2026-10-12T16:31:55Z",
+        "fetched_at": "2026-10-12T20:11:06.482507Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "taytus",
+        "upstream_urls": [
+          "https://github.com/morluto/rea"
+        ],
+        "raw_metadata": {
+          "hn_id": 50058850,
+          "score": 46
+        },
+        "id": "0564b6433ff86c55",
+        "canonical_url": "https://github.com/morluto/rea",
+        "normalized_title": "reverse engineer anything with agents from app behavior down to native binaries",
+        "fingerprint": "0564b6433ff86c550bb2d9b45698bf4d7ac14e7af375adc8f046de36beb67a36",
+        "rule_score": 39.653194444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+        "url": "https://taylor.town/kk-ai-2026",
+        "published_at": "2026-10-12T15:16:45Z",
+        "fetched_at": "2026-10-12T20:11:05.428981Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "surprisetalk",
+        "upstream_urls": [
+          "https://taylor.town/kk-ai-2026"
+        ],
+        "raw_metadata": {
+          "hn_id": 50057668,
+          "score": 78
+        },
+        "id": "182d22f98c9cf0c7",
+        "canonical_url": "https://taylor.town/kk-ai-2026",
+        "normalized_title": "kevin kelly s 2016 ai predictions 10 years later",
+        "fingerprint": "182d22f98c9cf0c70c026737c9cc0af58f9f6e10e42c84b52d687e90fb4febb9",
+        "rule_score": 39.52791666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Deep dive into Azure Maia 300 architecture",
+        "url": "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/",
+        "published_at": "2026-10-12T14:45:44Z",
+        "fetched_at": "2026-10-12T20:11:08.310273Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "azhenley",
+        "upstream_urls": [
+          "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50057185,
+          "score": 22
+        },
+        "id": "96830ffba30b4bba",
+        "canonical_url": "https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture",
+        "normalized_title": "deep dive into azure maia 300 architecture",
+        "fingerprint": "96830ffba30b4bba7584cd291cdc3377c9b9f4547e98d6352fe71b7415efd379",
+        "rule_score": 39.47622222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI less regulated than milk, Microsoft president says in warning over safety",
+        "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+        "published_at": "2026-10-12T12:46:52Z",
+        "fetched_at": "2026-10-12T20:11:10.320617Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "nephihaha",
+        "upstream_urls": [
+          "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules"
+        ],
+        "raw_metadata": {
+          "hn_id": 50055654,
+          "score": 65
+        },
+        "id": "ab803b63dfbad1dd",
+        "canonical_url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+        "normalized_title": "ai less regulated than milk microsoft president says in warning over safety",
+        "fingerprint": "ab803b63dfbad1dd32dc68602c967e53be785d7e1862e570c7c125c6b09d20ca",
+        "rule_score": 39.27811111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "French supermarket chains say cyberattack forced refrigerator shutdown",
+        "url": "https://www.france24.com/en/live-news/20261012-french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown",
+        "published_at": "2026-10-12T12:07:48Z",
+        "fetched_at": "2026-10-12T20:11:11.198324Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Zadak",
+        "upstream_urls": [
+          "https://www.france24.com/en/live-news/20261012-french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown"
+        ],
+        "raw_metadata": {
+          "hn_id": 50055195,
+          "score": 23
+        },
+        "id": "3f0bc6cc1fecc31c",
+        "canonical_url": "https://www.france24.com/en/live-news/20261012-french-supermarket-chains-say-cyberattack-forced-refrigerator-shutdown",
+        "normalized_title": "french supermarket chains say cyberattack forced refrigerator shutdown",
+        "fingerprint": "3f0bc6cc1fecc31c8f9bd7c886d51b919a1089b1ee06b612d137a99103c09fee",
+        "rule_score": 39.213
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "QGIS: No AI contributions permitted",
+        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+        "published_at": "2026-10-12T11:22:24Z",
+        "fetched_at": "2026-10-12T20:11:07.655946Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "bwnkl",
+        "upstream_urls": [
+          "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387"
+        ],
+        "raw_metadata": {
+          "hn_id": 50054751,
+          "score": 344
+        },
+        "id": "db1efd633f68c552",
+        "canonical_url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+        "normalized_title": "qgis no ai contributions permitted",
+        "fingerprint": "db1efd633f68c5520d55ed5dd6e63d4156262a0b81a7ef58f6090b0baf200a69",
+        "rule_score": 39.13733333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The gap in shared understanding of LLM capability is widening",
+        "url": "https://twitter.com/karpathy/status/2109361546505966046",
+        "published_at": "2026-10-11T20:20:52Z",
+        "fetched_at": "2026-10-12T20:11:06.057097Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "albertzeyer",
+        "upstream_urls": [
+          "https://twitter.com/karpathy/status/2109361546505966046"
+        ],
+        "raw_metadata": {
+          "hn_id": 50047422,
+          "score": 660
+        },
+        "id": "29daaf768cea1270",
+        "canonical_url": "https://twitter.com/karpathy/status/2109361546505966046",
+        "normalized_title": "the gap in shared understanding of llm capability is widening",
+        "fingerprint": "29daaf768cea127011200cae5c863e6ab8a76b46b62d0c61e007b28ec4a52704",
+        "rule_score": 37.63477777777778
+      }
+    ],
+    "prompt_chars": 6205,
+    "estimated_input_tokens": 1551
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
