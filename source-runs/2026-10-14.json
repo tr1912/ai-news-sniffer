@@ -1,0 +1,833 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 138,
+  "normalized_count": 138,
+  "filtered_count": 101,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "source_group": "official",
+        "independence_group": "huggingface-blog",
+        "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+        "published_at": "2026-10-13T17:05:48Z",
+        "fetched_at": "2026-10-13T18:03:01.891281Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "models",
+          "research",
+          "open-source"
+        ],
+        "author": null,
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6ebb8cf0e717187b",
+        "canonical_url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+        "normalized_title": "run fast private agents on device with lfm2 5 24b a2b",
+        "fingerprint": "6ebb8cf0e717187b2d95a4d1348f29f0d928b3a8f5d511eabe355146c05013d8",
+        "rule_score": 58.709666666666664
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "单轮23亿，累计43亿，无问芯穹刷新国产AI Infra赛道融资双重纪录",
+        "url": "https://www.qbitai.com/2026/10/502767.html",
+        "published_at": "2026-10-13T04:01:15Z",
+        "fetched_at": "2026-10-13T18:03:15.183728Z",
+        "language": "unknown",
+        "excerpt": "算力、模型、行业，三层生意一起做",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "克雷西",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "01030a708ae057b2",
+        "canonical_url": "https://www.qbitai.com/2026/10/502767.html",
+        "normalized_title": "单轮23亿 累计43亿 无问芯穹刷新国产ai infra赛道融资双重纪录",
+        "fingerprint": "01030a708ae057b231c0b615b7ec6d095944f3f9e20b4dd5b1e55812deddc3e3",
+        "rule_score": 58.40208333333334
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "梁文锋投了Swin Transformer作者！DeepSeek开始布局具身大脑",
+        "url": "https://www.qbitai.com/2026/10/503093.html",
+        "published_at": "2026-10-13T09:33:37Z",
+        "fetched_at": "2026-10-13T18:03:15.183646Z",
+        "language": "unknown",
+        "excerpt": "Winverse AI",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4e9a4da61be4dacb",
+        "canonical_url": "https://www.qbitai.com/2026/10/503093.html",
+        "normalized_title": "梁文锋投了swin transformer作者 deepseek开始布局具身大脑",
+        "fingerprint": "4e9a4da61be4dacb15284df0940b624d0b801669d567f470e670ff21ae64fdbe",
+        "rule_score": 54.95602777777778
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11588",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11588",
+        "published_at": "2026-10-13T15:20:38Z",
+        "fetched_at": "2026-10-13T18:03:10.954520Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nmodel : allow Qwen3.8 Flash Next to accept image embds for MTP (#30397)\n\nCont of #30257, closes #30307\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/55472459>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11588/llama-b11588-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11588/llama-b11588-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11588/llama-b11588-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11588/llama-b11588-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11588/llama-b11588-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11588/llama-b11588-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 411822668
+        },
+        "id": "8a1f68031a5c795a",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11588",
+        "normalized_title": "llama cpp releases b11588",
+        "fingerprint": "8a1f68031a5c795a0e018b08ad84499a703265657d9336bf446d6ce07d047792",
+        "rule_score": 54.53438888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "9大赛道，23份企业真实考卷！上海具身智能大考，邀千队共解题",
+        "url": "https://www.qbitai.com/2026/10/502784.html",
+        "published_at": "2026-10-13T04:07:04Z",
+        "fetched_at": "2026-10-13T18:03:15.183707Z",
+        "language": "unknown",
+        "excerpt": "赢奖金、拿融资、送出海",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "思邈",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0a14d4f18521f767",
+        "canonical_url": "https://www.qbitai.com/2026/10/502784.html",
+        "normalized_title": "9大赛道 23份企业真实考卷 上海具身智能大考 邀千队共解题",
+        "fingerprint": "0a14d4f18521f7674bf149b491359a455de1fe50b96eb945f94522b4cd691feb",
+        "rule_score": 54.41177777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
+        "url": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
+        "published_at": "2026-10-13T17:18:25Z",
+        "fetched_at": "2026-10-13T18:03:15.321226Z",
+        "language": "unknown",
+        "excerpt": "The problem with giving everyone in a company access to AI tools is that people will use them in unexpected ways. And that fact is steadily seeding fears that companies now have new, gaping security holes in their systems or, at least, will soon.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ram Iyer",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "aaef5d3a4315decf",
+        "canonical_url": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache",
+        "normalized_title": "pluto security raises 42m as ai gives enterprise security teams a new headache",
+        "fingerprint": "aaef5d3a4315decf62b96639222ff8c5d33e8820edd02840a2069127dab63a2a",
+        "rule_score": 51.730694444444445
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "魔法原子具身Agent框架拿下MolmoSpaces全球第一",
+        "url": "https://www.qbitai.com/2026/10/503107.html",
+        "published_at": "2026-10-13T11:05:39Z",
+        "fetched_at": "2026-10-13T18:03:15.183599Z",
+        "language": "unknown",
+        "excerpt": "让VLA从“演示可用”逼近“产线可用”",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "05b6ad66c1e6079e",
+        "canonical_url": "https://www.qbitai.com/2026/10/503107.html",
+        "normalized_title": "魔法原子具身agent框架拿下molmospaces全球第一",
+        "fingerprint": "05b6ad66c1e6079e28a201f1687c79912ea3e2ea5a43dd27ec40a0e3c8041a90",
+        "rule_score": 51.10941666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
+        "url": "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
+        "published_at": "2026-10-13T17:30:00Z",
+        "fetched_at": "2026-10-13T18:03:15.321181Z",
+        "language": "unknown",
+        "excerpt": "University of Michigan spinout Laplace Intelligence uses AI agents and interactive simulation to stress-test robots and self-driving vehicles before deployment. The profitable startup is competing at TechCrunch Disrupt's Startup Battlefield.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b68d8cf37eff3df1",
+        "canonical_url": "https://techcrunch.com/2026/10/13/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world",
+        "normalized_title": "laplace intelligence red teams robots and self driving cars before they hit the real world",
+        "fingerprint": "b68d8cf37eff3df12e77d691dbe768dd7d19b221e791465dbfe56d220377b98b",
+        "rule_score": 50.75
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "Claude团队又搞事：实测AI全自主复制进智能家电",
+        "url": "https://www.qbitai.com/2026/10/502920.html",
+        "published_at": "2026-10-13T06:19:10Z",
+        "fetched_at": "2026-10-13T18:03:15.183685Z",
+        "language": "unknown",
+        "excerpt": "拉马克进化的幽灵",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "Jay",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c8c8259b5d07c234",
+        "canonical_url": "https://www.qbitai.com/2026/10/502920.html",
+        "normalized_title": "claude团队又搞事 实测ai全自主复制进智能家电",
+        "fingerprint": "c8c8259b5d07c23415dc09b9af7430082cc6bba3645cb73c577dd4208df35a14",
+        "rule_score": 50.63194444444444
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Amex introduces a framework to prevent AI agents from making unauthorized purchases",
+        "url": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
+        "published_at": "2026-10-13T13:00:00Z",
+        "fetched_at": "2026-10-13T18:03:15.321299Z",
+        "language": "unknown",
+        "excerpt": "American Express is introducing a new framework designed to ensure AI agents only make purchases their users have authorized, potentially preventing costly mistakes and disputes as AI-powered shopping grows.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ceb226bd040e4440",
+        "canonical_url": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases",
+        "normalized_title": "amex introduces a framework to prevent ai agents from making unauthorized purchases",
+        "fingerprint": "ceb226bd040e4440192e4f7401c4b4b5a66e534f3b5fd7319ead180363766fa0",
+        "rule_score": 50.3
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "中国车企反攻德系车心脏！巴黎车展国产品牌独占三成，大众CEO连忙呼吁抱团迎战",
+        "url": "https://www.qbitai.com/2026/10/502992.html",
+        "published_at": "2026-10-13T07:20:23Z",
+        "fetched_at": "2026-10-13T18:03:15.183661Z",
+        "language": "unknown",
+        "excerpt": "宝马保时捷缺席",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "杰西卡",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2b0468a9106cfa79",
+        "canonical_url": "https://www.qbitai.com/2026/10/502992.html",
+        "normalized_title": "中国车企反攻德系车心脏 巴黎车展国产品牌独占三成 大众ceo连忙呼吁抱团迎战",
+        "fingerprint": "2b0468a9106cfa79377f45bbabf9fd10e07f8b71c85cdd993cb16304728b8448",
+        "rule_score": 46.73397222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "华为哈勃投了个98年博士！让机器人皮肤变色，团队平均23岁",
+        "url": "https://www.qbitai.com/2026/10/502954.html",
+        "published_at": "2026-10-13T07:19:21Z",
+        "fetched_at": "2026-10-13T18:03:15.183674Z",
+        "language": "unknown",
+        "excerpt": "让材料感知压力，造出超薄高密度电子皮肤",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "思邈",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "476ce8e234fd807d",
+        "canonical_url": "https://www.qbitai.com/2026/10/502954.html",
+        "normalized_title": "华为哈勃投了个98年博士 让机器人皮肤变色 团队平均23岁",
+        "fingerprint": "476ce8e234fd807d48670da72208ad89b15a52f6ae8c4815e5632440182182a9",
+        "rule_score": 46.73225
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Google Play now lets anyone build private, vibe-coded apps that run on Android",
+        "url": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/",
+        "published_at": "2026-10-13T17:00:00Z",
+        "fetched_at": "2026-10-13T18:03:15.321242Z",
+        "language": "unknown",
+        "excerpt": "Google is making it easier to build and use personal Android apps created with AI, without having to make them available to everyone on the Play Store.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bfa3d28acdd520fc",
+        "canonical_url": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you",
+        "normalized_title": "google play now lets anyone build private vibe coded apps that run on android",
+        "fingerprint": "bfa3d28acdd520fc62b9640436ed2d1e006bde06bb0e5617f48a857a27be1501",
+        "rule_score": 46.7
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Satlyt, founded by a former Google and SpaceX product manager, raises $8M to run AI on satellites",
+        "url": "https://techcrunch.com/2026/10/13/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites/",
+        "published_at": "2026-10-13T16:30:00Z",
+        "fetched_at": "2026-10-13T18:03:15.321254Z",
+        "language": "unknown",
+        "excerpt": "Satlyt wants to be the Android of orbital computing, offering open software that works on many companies' satellites, versus SpaceX's closed, all-in-one iPhone-style approach.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Tim Fernholz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7d77de2e15e7fda9",
+        "canonical_url": "https://techcrunch.com/2026/10/13/satlyt-founded-by-a-former-google-and-spacex-product-manager-raises-8m-to-run-ai-on-satellites",
+        "normalized_title": "satlyt founded by a former google and spacex product manager raises 8m to run ai on satellites",
+        "fingerprint": "7d77de2e15e7fda9bef4cb8a3995ce0f1cc8ee027e40cbe13a188129d0756c7c",
+        "rule_score": 46.65
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "“模态进化”：第八届亿邦产业互联网年会暨首届产业智能体大会双会合体定档",
+        "url": "https://www.qbitai.com/2026/10/502907.html",
+        "published_at": "2026-10-13T06:00:20Z",
+        "fetched_at": "2026-10-13T18:03:15.183696Z",
+        "language": "unknown",
+        "excerpt": "由亿邦动力主办的“2026第八届亿邦产业互联网年会暨首届产业智能体大会”正式定档",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "974ac65a6c332a5b",
+        "canonical_url": "https://www.qbitai.com/2026/10/502907.html",
+        "normalized_title": "模态进化 第八届亿邦产业互联网年会暨首届产业智能体大会双会合体定档",
+        "fingerprint": "974ac65a6c332a5bdf5941b9edaa8c0207b60b315f56d1a2ca4d00d88b65e4d7",
+        "rule_score": 46.60055555555556
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "退差价、约保养、订球场、跟客服磨赔偿，千问Go什么都想管",
+        "url": "https://www.qbitai.com/2026/10/502849.html",
+        "published_at": "2026-10-13T04:04:22Z",
+        "fetched_at": "2026-10-13T18:03:15.183718Z",
+        "language": "unknown",
+        "excerpt": "丢一句话进去，事儿就办完了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "克雷西",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "879226038003eab9",
+        "canonical_url": "https://www.qbitai.com/2026/10/502849.html",
+        "normalized_title": "退差价 约保养 订球场 跟客服磨赔偿 千问go什么都想管",
+        "fingerprint": "879226038003eab98857939ca544b3caa288c7751b4d4cc0ff6520ba1da04fc2",
+        "rule_score": 46.40727777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "SpaceXSI bundles X Premium, Grok, and Cursor into one subscription",
+        "url": "https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription/",
+        "published_at": "2026-10-13T13:50:19Z",
+        "fetched_at": "2026-10-13T18:03:15.321276Z",
+        "language": "unknown",
+        "excerpt": "The new X Subscription combines X's paid features with AI tools like Grok and Cursor, offering plans ranging from $8 to $200 per month.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4742a229fe049b3f",
+        "canonical_url": "https://techcrunch.com/2026/10/13/spacexsi-bundles-x-premium-grok-and-cursor-into-one-subscription",
+        "normalized_title": "spacexsi bundles x premium grok and cursor into one subscription",
+        "fingerprint": "4742a229fe049b3f2b7e3f8f8344d5efd72eee75d871db3ea00b848f705acd6c",
+        "rule_score": 46.38386111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Just 5 years in, interactive chatbot platform Character.AI files for bankruptcy",
+        "url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/",
+        "published_at": "2026-10-13T12:23:42Z",
+        "fetched_at": "2026-10-13T18:03:15.321310Z",
+        "language": "unknown",
+        "excerpt": "The startup will sell some of its assets to Disney for $20 million.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "25f760d59c00c713",
+        "canonical_url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy",
+        "normalized_title": "just 5 years in interactive chatbot platform character ai files for bankruptcy",
+        "fingerprint": "25f760d59c00c7130d031100250d3e3e5a3f9f1c68c3493380845afd6803d79c",
+        "rule_score": 46.2395
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "优必选上榜 2026 年《财富》全球未来成长 120 强，位列全球第 11、中国企业第一",
+        "url": "https://www.qbitai.com/2026/10/502770.html",
+        "published_at": "2026-10-13T02:01:56Z",
+        "fetched_at": "2026-10-13T18:03:15.183739Z",
+        "language": "unknown",
+        "excerpt": "优必选以总分 115 拿下2026 Fortune Future 120全球第 11 名",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "89557c2d185254c6",
+        "canonical_url": "https://www.qbitai.com/2026/10/502770.html",
+        "normalized_title": "优必选上榜 2026 年 财富 全球未来成长 120 强 位列全球第 11 中国企业第一",
+        "fingerprint": "89557c2d185254c6de6b9570c7709b8acc5d259f6ea21df433ab540ad0996194",
+        "rule_score": 46.20322222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: SolidCraft – Open-Source Parametric CAD in Rust (With MCP Support)",
+        "url": "https://github.com/bherbruck/solidcraft",
+        "published_at": "2026-10-13T00:11:04Z",
+        "fetched_at": "2026-10-13T18:03:19.266812Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "bherbruck",
+        "upstream_urls": [
+          "https://github.com/bherbruck/solidcraft"
+        ],
+        "raw_metadata": {
+          "hn_id": 50064840,
+          "score": 120
+        },
+        "id": "9c7d0095198b2dbf",
+        "canonical_url": "https://github.com/bherbruck/solidcraft",
+        "normalized_title": "show hn solidcraft open source parametric cad in rust with mcp support",
+        "fingerprint": "9c7d0095198b2dbf51f459cef1511bcae2450305e3b9638cd01623703dc1867a",
+        "rule_score": 46.01844444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Use your OpenAI subscription to create audiobooks",
+        "url": "https://pdftomp3.com/connect-ai/",
+        "published_at": "2026-10-13T10:08:34Z",
+        "fetched_at": "2026-10-13T18:03:18.187688Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "janpmz",
+        "upstream_urls": [
+          "https://pdftomp3.com/connect-ai/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50069337,
+          "score": 136
+        },
+        "id": "cda825939dd2db66",
+        "canonical_url": "https://pdftomp3.com/connect-ai",
+        "normalized_title": "show hn use your openai subscription to create audiobooks",
+        "fingerprint": "cda825939dd2db66b72993704b4feaf71104d3a7fe516320cc70c90e3b000c74",
+        "rule_score": 43.01427777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "TechCrunch Disrupt 2026: Day 1",
+        "url": "https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1/",
+        "published_at": "2026-10-13T14:00:00Z",
+        "fetched_at": "2026-10-13T18:03:15.321265Z",
+        "language": "unknown",
+        "excerpt": "TechCrunch Disrupt 2026 officially kicks off today. See what's in store for Day 1 (Oct. 13) at San Francisco's Moscone West. Don't miss it. Register for your pass now and meet 10,000+ tech leaders at the startup epicenter of the year.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "da02fe9865fb8a62",
+        "canonical_url": "https://techcrunch.com/2026/10/13/techcrunch-disrupt-2026-day-1",
+        "normalized_title": "techcrunch disrupt 2026 day 1",
+        "fingerprint": "da02fe9865fb8a623cb55ca53fa1f7d3bf30f74b3569851d600978bdc0f46137",
+        "rule_score": 42.4
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "The final Disrupt Stage lineup: Three days of conversations you won’t hear anywhere outside of TechCrunch Disrupt 2026",
+        "url": "https://techcrunch.com/2026/10/13/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026/",
+        "published_at": "2026-10-13T13:28:06Z",
+        "fetched_at": "2026-10-13T18:03:15.321288Z",
+        "language": "unknown",
+        "excerpt": "The full TechCrunch Disrupt Stage lineup revealed, featuring Max Hodak, Mark Wahlberg, Benchmark partners, and more. Register now to save up to $100 on your pass and get a second at 50% off.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5518e33525e8de21",
+        "canonical_url": "https://techcrunch.com/2026/10/13/the-final-disrupt-stage-lineup-three-days-of-conversations-you-wont-hear-anywhere-outside-of-techcrunch-disrupt-2026",
+        "normalized_title": "the final disrupt stage lineup three days of conversations you won t hear anywhere outside of techcrunch disrupt 2026",
+        "fingerprint": "5518e33525e8de21add962c503a63b359af2c0e276db7135b8dca9c0e4c16bff",
+        "rule_score": 42.346833333333336
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A look at the math that OpenAI claims computes faster Fourier transforms",
+        "url": "https://www.argmin.net/p/faster-fourier-transforms",
+        "published_at": "2026-10-13T02:46:43Z",
+        "fetched_at": "2026-10-13T18:03:19.508733Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mochomocha",
+        "upstream_urls": [
+          "https://www.argmin.net/p/faster-fourier-transforms"
+        ],
+        "raw_metadata": {
+          "hn_id": 50065932,
+          "score": 231
+        },
+        "id": "0b5aed7c585c92b1",
+        "canonical_url": "https://www.argmin.net/p/faster-fourier-transforms",
+        "normalized_title": "a look at the math that openai claims computes faster fourier transforms",
+        "fingerprint": "0b5aed7c585c92b1f81e57d51e7ca060047d88c92b2f84a10aa8c9c37059bac6",
+        "rule_score": 42.27786111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Firefox Enterprise",
+        "url": "https://www.firefox.com/en-US/enterprise/",
+        "published_at": "2026-10-13T12:00:42Z",
+        "fetched_at": "2026-10-13T18:03:16.124497Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "recvonline",
+        "upstream_urls": [
+          "https://www.firefox.com/en-US/enterprise/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50070302,
+          "score": 400
+        },
+        "id": "b17a27b6d2555f03",
+        "canonical_url": "https://www.firefox.com/en-US/enterprise",
+        "normalized_title": "firefox enterprise",
+        "fingerprint": "b17a27b6d2555f03cdbf0e14618a953c6aaa8603b88c8149ccc9367e414439b9",
+        "rule_score": 40.201166666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Kroger to lay off 3k corporate employees over 3 years as it leans into AI",
+        "url": "https://apnews.com/article/kroger-layoffs-grocery-job-cuts-30f0a5d88377e9969ce8994644e14498",
+        "published_at": "2026-10-13T16:49:57Z",
+        "fetched_at": "2026-10-13T18:03:21.545170Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "vrganj",
+        "upstream_urls": [
+          "https://apnews.com/article/kroger-layoffs-grocery-job-cuts-30f0a5d88377e9969ce8994644e14498"
+        ],
+        "raw_metadata": {
+          "hn_id": 50074766,
+          "score": 7
+        },
+        "id": "2dafc30e8abd0803",
+        "canonical_url": "https://apnews.com/article/kroger-layoffs-grocery-job-cuts-30f0a5d88377e9969ce8994644e14498",
+        "normalized_title": "kroger to lay off 3k corporate employees over 3 years as it leans into ai",
+        "fingerprint": "2dafc30e8abd08036a734107cdf5086e72e2718791117485d05bc7e25204d1a6",
+        "rule_score": 39.68325
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ukraine Is Successfully Bombing the Heart of Russia's Disinformation Machine",
+        "url": "https://cmarmitage.substack.com/p/ukraine-is-successfully-bombing-the",
+        "published_at": "2026-10-13T16:14:16Z",
+        "fetched_at": "2026-10-13T18:03:19.605556Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "rectang",
+        "upstream_urls": [
+          "https://cmarmitage.substack.com/p/ukraine-is-successfully-bombing-the"
+        ],
+        "raw_metadata": {
+          "hn_id": 50074091,
+          "score": 36
+        },
+        "id": "c43b65c8005146e3",
+        "canonical_url": "https://cmarmitage.substack.com/p/ukraine-is-successfully-bombing-the",
+        "normalized_title": "ukraine is successfully bombing the heart of russia s disinformation machine",
+        "fingerprint": "c43b65c8005146e32db8647f00ff37197673463bc586023e4d84a43092c2156a",
+        "rule_score": 39.623777777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Scientists wonder: Is my AI stealing my ideas?",
+        "url": "https://www.scientificamerican.com/article/scientists-worry-ai-is-stealing-their-ideas/",
+        "published_at": "2026-10-13T16:05:51Z",
+        "fetched_at": "2026-10-13T18:03:18.859592Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "geox",
+        "upstream_urls": [
+          "https://www.scientificamerican.com/article/scientists-worry-ai-is-stealing-their-ideas/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50073926,
+          "score": 16
+        },
+        "id": "d1d8d42f960e73ac",
+        "canonical_url": "https://www.scientificamerican.com/article/scientists-worry-ai-is-stealing-their-ideas",
+        "normalized_title": "scientists wonder is my ai stealing my ideas",
+        "fingerprint": "d1d8d42f960e73ac152f4f9d42fef5f90d5f6897cdba7cd20106f6e02ecc1417",
+        "rule_score": 39.60975
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Redesigning Source Control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "published_at": "2026-10-13T15:49:56Z",
+        "fetched_at": "2026-10-13T18:03:18.406581Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Philpax",
+        "upstream_urls": [
+          "https://www.anthropic.com/engineering/redesigning-source-control"
+        ],
+        "raw_metadata": {
+          "hn_id": 50073633,
+          "score": 100
+        },
+        "id": "0cece0787f003053",
+        "canonical_url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "normalized_title": "redesigning source control at anthropic",
+        "fingerprint": "0cece0787f003053a8fd40196f9da2381a46ebfda956281dc09d40232119ea0a",
+        "rule_score": 39.58322222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+        "published_at": "2026-10-13T15:25:50Z",
+        "fetched_at": "2026-10-13T18:03:16.239353Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sammy0910",
+        "upstream_urls": [
+          "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic"
+        ],
+        "raw_metadata": {
+          "hn_id": 50073221,
+          "score": 107
+        },
+        "id": "f73245375c38da76",
+        "canonical_url": "https://www.sammystraus.com/",
+        "normalized_title": "i posted to hn and then my website was flooded with ai bot traffic",
+        "fingerprint": "f73245375c38da76faa9fe37309ce926213ebaddfe7989fee00d9fc6f14e2c78",
+        "rule_score": 39.543055555555554
+      }
+    ],
+    "prompt_chars": 5455,
+    "estimated_input_tokens": 1363
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
