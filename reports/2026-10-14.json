@@ -1,19 +1,19 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-13T18:02:39.474186Z",
-  "run_id": "2026-10-14-ba6e49ba",
-  "daily_summary_zh": "今日AI领域动态：Liquid AI 发布 LFM2.5-24B-A2B，可在设备端运行快速、私密的智能体；llama.cpp 发布 b11588 版本。",
+  "generated_at": "2026-10-14T15:44:21.336262Z",
+  "run_id": "2026-10-14-d425bdd5",
+  "daily_summary_zh": "今日要点集中在模型与智能体基础设施：Liquid AI 发布面向设备端私有智能体的 LFM2.5-24B-A2B；llama.cpp 连续发布新构建；NVIDIA 给出用 AI 智能体把 Spark UDF 重写为 GPU 加速的实践方案。研究侧，机器人智能体（ChunkAct、SEAR、LIBERO-RIG）、长时程智能体训练（Tev）、高效推理解码（DoubtLess）与混合潜空间推理智能体（HybridAgents）是主要亮点；基准类还包括全模态视频理解 OmniCompass。商业与政策侧，Pluto Security 融资、Apple 诉 OpenAI 商业秘密案的取证裁定、Facebook 算法控制功能与 Zenzap、Deezer 的产品动作值得关注。",
   "events": [
     {
-      "id": "event-1",
+      "id": "event-lfm25",
       "candidate_ids": [
         "6ebb8cf0e717187b"
       ],
       "category": "models",
-      "title_zh": "Liquid AI 发布 LFM2.5-24B-A2B，可在设备端运行快速、私密的智能体",
-      "summary_zh": "Liquid AI 在 Hugging Face 博客发布 LFM2.5-24B-A2B 模型，主打在设备端运行快速、私密的 AI 智能体（on-device agents），实现本地化智能体部署。",
-      "why_it_matters_zh": "端侧运行智能体可提升隐私保护与响应速度，降低云端依赖，是 AI 模型向本地化、轻量化发展的重要方向。",
-      "importance_score": 85.0,
+      "title_zh": "Liquid AI 发布 LFM2.5-24B-A2B：可在设备端运行的私有智能体模型",
+      "summary_zh": "Liquid AI 通过 Hugging Face 博客发布 LFM2.5-24B-A2B，官方定位为“在设备端运行快速、私有的智能体（on-device agents）”，归类为模型、研究与开源方向。",
+      "why_it_matters_zh": "端侧可运行模型是把智能体能力下沉到本地、降低推理成本并规避数据外发风险的关键路径；头部小型模型厂商持续在这一方向迭代，直接影响开发者的部署选择。",
+      "importance_score": 82.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "huggingface-blog",
@@ -25,68 +25,147 @@
       "related_sources": []
     },
     {
-      "id": "event-2",
+      "id": "event-chunkact",
       "candidate_ids": [
-        "8a1f68031a5c795a"
+        "c6f932be9aa52aed"
+      ],
+      "category": "research",
+      "title_zh": "ChunkAct：把动作分块引入智能体机器人，大幅减少 LLM 调用",
+      "summary_zh": "论文提出 ChunkAct，将 action chunking 用于智能体机器人：在线时单次调用即可启动一串链式原语自主执行，仅在失败时交回控制权；离线时将记忆编译进这些分块，使测试时无需记忆、LLM 计算随“决策数”而非“原语数”增长。在 LIBERO-Pro 上相比智能体机器人当前最优方案任务成功率提升 5.0 个百分点，LLM 调用减少 2.9 倍、约 4.4 倍（原文摘要截断）。",
+      "why_it_matters_zh": "智能体机器人的成本瓶颈在于每个动作原语都要重新做一次全历史 LLM 推理；把“子目标确定后例行动作”从推理循环中剥离，是让 LLM 驱动机器人真正具备工程可行性的重要效率改进。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "ChunkAct: Action Chunking for Agentic Robotics",
+        "url": "https://arxiv.org/abs/2610.18874v1",
+        "published_at": "2026-10-13T17:59:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-sear",
+      "candidate_ids": [
+        "a22075af66181c53"
+      ],
+      "category": "research",
+      "title_zh": "SEAR：面向自演化智能体机器人的框架与基准",
+      "summary_zh": "论文提出 SEAR（Self-Evolving Agentic Robotics）框架与基准，围绕两个问题：智能体是真的在学习还是只是更多次重试，以及所学能否迁移到新任务、新模拟器和真实机器人。框架支持三种模式——写代码即策略（code-as-policy）、在控制回路中实时行动（agent-as-policy）、以及作为研究者微调视觉-语言-动作模型（auto-research）；基准加入区分“保留经验”与“重复尝试”等混淆因素的对照。实验覆盖七个前沿语言模型、330 个模拟任务与 5 个物理任务，累计超过四年的智能体运行时长。",
+      "why_it_matters_zh": "它把“智能体自我改进机器人”这一说法拆解成可证伪的对照实验，为判断机器人智能体的学习是否真实、是否可迁移提供了评测标准。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "SEAR: Self-Evolving Agentic Robotics",
+        "url": "https://arxiv.org/abs/2610.18792v1",
+        "published_at": "2026-10-13T17:40:20Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-tev",
+      "candidate_ids": [
+        "0bf6a018c021d959"
+      ],
+      "category": "research",
+      "title_zh": "Tev：以稠密进度奖励扩展长时程智能体训练环境",
+      "summary_zh": "论文提出 Tev-Gym，称其为首个带有可验证、稠密、渐进式奖励的长时程智能体训练数据集，包含 7 个领域、1170 个已验证任务环境；构建方式为“潜世界优先”，先给出任务领域、工作流与每步期望状态的完整隐藏规格，再逐步渲染为面向智能体的环境。论文进一步提出 progress-potential reward shaping（PPRS），把进度转化为每步稠密奖励以提升训练效率。",
+      "why_it_matters_zh": "长时程任务的主要障碍是奖励稀疏与数据难以校验；可验证的稠密进度信号把“奖励工程设计”变成可扩展的数据问题，是长时程智能体训练的关键基础设施。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Tev: Scaling Long-Horizon Agentic Environments with Dense Progress Rewards",
+        "url": "https://arxiv.org/abs/2610.18868v1",
+        "published_at": "2026-10-13T17:59:51Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-doubtless",
+      "candidate_ids": [
+        "b53e9cf70d55a042"
+      ],
+      "category": "research",
+      "title_zh": "DoubtLess：用小型模型引导的免训练对比解码缩短推理链",
+      "summary_zh": "论文提出免训练解码方法 DoubtLess：由一个小型推理模型读取大模型当前的思维链两次，一次以“简洁”提示、一次以“冗长”提示，将两次 logits 之差按强度缩放到大模型每一步的 logits 上。在竞赛数学、研究生级科学与竞技编程的七个基准上，把 Qwen3-32B 的思维链缩短 31% 且准确率不变，优于五种推理时基线；在自调试编程智能体中把每轮思考 token 减少 20% 且任务表现不变，并泛化到另外两个模型。",
+      "why_it_matters_zh": "在不重训、不牺牲准确率的前提下压缩推理 token，直接对应推理成本与延迟；避免“禁止某些词/提前停止”这类会掉点的启发式，对生产部署更有实际价值。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "DoubtLess: Training-Free Contrastive Decoding for Efficient Reasoning",
+        "url": "https://arxiv.org/abs/2610.18862v1",
+        "published_at": "2026-10-13T17:59:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-spark",
+      "candidate_ids": [
+        "38f434bfe75a9b45"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA 发布用 AI 智能体重写 Apache Spark UDF 以实现 GPU 加速的方法",
+      "summary_zh": "NVIDIA 开发者博客给出方案：借助 AI 智能体把 Apache Spark 的 UDF 重写为可 GPU 加速的实现。文章指出，企业应用负载日益沉重，智能体式 AI 进一步放大了对海量企业数据与频繁复杂处理的需求。",
+      "why_it_matters_zh": "把智能体用在“改造既有数据管线”而非仅生成应用逻辑，是 AI 落地企业数据栈的高价值场景，也直接关系到 Spark 类批处理负载的算力成本。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "How to Rewrite Apache Spark UDFs for GPU Acceleration with AI Agents",
+        "url": "https://developer.nvidia.com/blog/rewrite-apache-spark-udfs-gpu-acceleration-ai-agents/",
+        "published_at": "2026-10-13T21:33:21Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llamacpp",
+      "candidate_ids": [
+        "3c92e7e1434edf84",
+        "d6b1d8ab80ef4108"
       ],
       "category": "open-source",
-      "title_zh": "llama.cpp 发布 b11588 版本",
-      "summary_zh": "llama.cpp 发布 b11588 版本，主要更新为允许 Qwen3.8 Flash Next 接受图像嵌入以支持 MTP（多令牌预测），并提供 macOS、iOS、Linux 等多平台构建。",
-      "why_it_matters_zh": "llama.cpp 是广泛使用的开源推理框架，该更新增强了对多模态模型与 MTP 的支持，有助于开发者在本地高效运行大模型。",
-      "importance_score": 60.0,
+      "title_zh": "llama.cpp 连续发布 b11598 与 b11617 构建版本",
+      "summary_zh": "llama.cpp 发布两个新构建：b11598 为 laguna 模型加载 YaRN beta 元数据，b11617 修复 Vulkan 编译错误。两个版本均提供 macOS/iOS（Apple Silicon、Intel、XCFramework）与 Linux（x64、arm64、s390x CPU 及 Vulkan）等平台的可执行文件与验证链接。",
+      "why_it_matters_zh": "作为本地推理最主流的基础设施之一，llama.cpp 的持续构建决定了新模型支持与多后端（含 Vulkan）可用性，直接影响开发者与终端用户的部署体验。",
+      "importance_score": 58.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "llama-cpp-releases",
         "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b11588",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11588",
-        "published_at": "2026-10-13T15:20:38Z"
+        "title": "llama.cpp Releases: b11617",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11617",
+        "published_at": "2026-10-14T12:53:33Z"
       },
-      "related_sources": []
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b11598",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11598",
+          "published_at": "2026-10-13T20:36:17Z"
+        }
+      ]
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 138,
-    "normalized": 138,
-    "filtered": 101,
+    "enabled": 9,
+    "fetched": 179,
+    "normalized": 179,
+    "filtered": 146,
     "ai_candidates": 30,
-    "prompt_chars": 5455,
-    "estimated_input_tokens": 1363,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 25911,
+    "estimated_input_tokens": 6477,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }
