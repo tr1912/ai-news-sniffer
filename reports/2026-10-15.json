@@ -1,0 +1,252 @@
+{
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T15:31:45.502798Z",
+  "run_id": "2026-10-15-8ed72d3f",
+  "daily_summary_zh": "今日AI领域有多项模型发布与研究进展：Apertus 1.5、NVIDIA Nemotron 3.5 Super VL、FLUX.3 Image Klein等模型更新，以及安全对齐、Agent可靠性、长上下文压缩等前沿研究。",
+  "events": [
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "cdfdff5f2247c68c"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Nemotron 3.5 Super VL，为专用 Agent 提供多模态推理能力",
+      "summary_zh": "NVIDIA 发布 Nemotron 3.5 Super VL 模型，旨在为常驻 Agent 提供多模态推理能力，以处理文档阅读、信息核对和视频分析等复杂企业工作流。",
+      "why_it_matters_zh": "该模型强化了 Agent 在多模态场景下的推理能力，有助于推动企业级 AI Agent 的落地。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning",
+        "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
+        "published_at": "2026-10-15T15:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "1aadffb2838db073"
+      ],
+      "category": "models",
+      "title_zh": "FLUX.3 Image Klein 登陆 Diffusers",
+      "summary_zh": "Hugging Face 博客宣布 FLUX.3 Image Klein 已在 Diffusers 中支持。",
+      "why_it_matters_zh": "FLUX 系列是重要的开源图像生成模型，此次集成便于开发者使用。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Welcome FLUX.3 Image Klein in Diffusers",
+        "url": "https://huggingface.co/blog/flux-3",
+        "published_at": "2026-10-15T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "b13bf6d28d895fba"
+      ],
+      "category": "models",
+      "title_zh": "Apertus 1.5 发布",
+      "summary_zh": "Hugging Face 博客发布 Apertus 1.5 版本更新说明。",
+      "why_it_matters_zh": "作为开源模型的重要更新，Apertus 1.5 可能带来性能提升或新功能，值得开发者关注。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Apertus 1.5 Release Notes",
+        "url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+        "published_at": "2026-10-15T09:08:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "27b01191dfcc884c"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA NeMo Gym：优化芯片设计中的 Agent 可靠性与工具调用效率",
+      "summary_zh": "NVIDIA 博客介绍如何利用 NeMo Gym 优化芯片设计工作流中的 Agent 可靠性和工具调用效率。",
+      "why_it_matters_zh": "该工作展示了 Agent 在复杂工程领域的应用潜力，并提供了提升可靠性的工具方法。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym",
+        "url": "https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym/",
+        "published_at": "2026-10-14T16:10:45Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "7ce2f2697212a958"
+      ],
+      "category": "research",
+      "title_zh": "HiRO-ACEv2：以低成本模拟 3 公里分辨率极端天气",
+      "summary_zh": "Hugging Face 博客介绍 HiRO-ACEv2，能够以较低成本模拟 3 公里分辨率的极端天气。",
+      "why_it_matters_zh": "该模型有望大幅降低高分辨率天气模拟的计算成本，推动气候科学和灾害预警。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+        "url": "https://huggingface.co/blog/allenai/hiro-acev2",
+        "published_at": "2026-10-14T16:12:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "9b72696596e02ec2"
+      ],
+      "category": "models",
+      "title_zh": "PrismaCoder：开放多模态代码智能",
+      "summary_zh": "论文提出 PrismaCoder，通过分解式评分合成（PrismaForge）构建数据管道，推动开放多模态代码智能，使模型能生成图表、网页和动画等。",
+      "why_it_matters_zh": "该工作旨在缩小开放模型与专有多模态代码模型之间的差距，促进开放生态发展。",
+      "importance_score": 81.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "PrismaCoder: Pushing the Boundaries of Open Multimodal Code Intelligence through Decomposed Rubric Synthesis",
+        "url": "https://arxiv.org/abs/2610.20538v1",
+        "published_at": "2026-10-14T17:32:54Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "7733e000b7095515"
+      ],
+      "category": "research",
+      "title_zh": "Beyond LLM Judge：面向 Agent 自动形式化的机械验证",
+      "summary_zh": "论文提出一种超越 LLM 评判的 Lean 形式化验证方法，结合 LLM 语义审查与机械数值和空泛性检查，并构建了 NIST DLMF 的部分形式化库 FLMF。",
+      "why_it_matters_zh": "该方法能检测 LLM 评判遗漏的错误，提高自动形式化的可靠性，对数学和代码验证有重要意义。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Beyond LLM Judge: Mechanical Verification for Agentic Autoformalization",
+        "url": "https://arxiv.org/abs/2610.20573v1",
+        "published_at": "2026-10-14T17:54:48Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "f7f765a972dd0a6b"
+      ],
+      "category": "research",
+      "title_zh": "Latent Compaction：通过测试时训练压缩 KV 缓存",
+      "summary_zh": "论文提出 Latent Compaction，通过测试时训练学习紧凑的文档特定缓存，在 RULER 等基准上以 32 倍压缩实现 96.7% 准确率。",
+      "why_it_matters_zh": "该方法显著提升长上下文处理效率，降低内存和注意力成本。",
+      "importance_score": 79.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Latent Compaction with Test-Time Training",
+        "url": "https://arxiv.org/abs/2610.20582v1",
+        "published_at": "2026-10-14T17:57:01Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "eb53115545b71ca2"
+      ],
+      "category": "research",
+      "title_zh": "Player-1：从合成经验中学习游戏控制",
+      "summary_zh": "论文提出 Player-1 后训练框架，通过合成经验学习游戏控制，扩展了计算机使用 Agent 的动作空间，并构建了 Player-1-Gym 环境。",
+      "why_it_matters_zh": "该工作推动了通用数字控制 Agent 在复杂游戏环境中的能力边界。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Player-1: Learning to Play from Synthetic Experience",
+        "url": "https://arxiv.org/abs/2610.20584v1",
+        "published_at": "2026-10-14T17:57:12Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "049039c6df607915"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11658 版本",
+      "summary_zh": "llama.cpp 发布 b11658 版本，新增对 maion-coder 架构的支持。",
+      "why_it_matters_zh": "llama.cpp 是广泛使用的本地推理工具，新版本增加了模型支持，方便开发者部署。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11658",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11658",
+        "published_at": "2026-10-15T13:11:15Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 189,
+    "normalized": 189,
+    "filtered": 150,
+    "ai_candidates": 30,
+    "prompt_chars": 24085,
+    "estimated_input_tokens": 6021,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
