@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T15:18:03.879131Z",
+  "run_id": "2026-10-16-911157d9",
+  "daily_summary_zh": "今日重点：Meta 发布开放权重前沿多模态 MoE 模型 Muse Spark Open，主打编码与智能体场景并可本地运行（NVIDIA GB300 NVL72 / Apple Silicon）；Hugging Face Transformers v5.20.1 接入 Reflection AI 的 Beam 模型；llama.cpp v0.7.0 带来 MoE 专家 GPU 缓存与 LiliCorr 投机解码；IBM 发布 Granite Switch 4.1，用一个端点提供对话、决策与语音能力。研究侧，DeepMind 报告四个 Gemini 4 Argon 智能体在 Minecraft 中端到端通关，KnowGPO 提出以知识状态分组的搜索智能体过程奖励方法，另外还有 Indic 2.8T token 预训练数据开源、MLExpert 自主 MLE 智能体、LLM 发现更优量子电路、以及多语言评测意识（evaluation awareness）研究。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "6032e5089fa72e2d",
+        "71276727bda90c80",
+        "e7855ee101660ae6"
+      ],
+      "category": "models",
+      "title_zh": "Meta 发布开放权重多模态 MoE 模型 Muse Spark Open",
+      "summary_zh": "Meta 发布开放权重前沿多模态混合专家（MoE）模型 Muse Spark Open。NVIDIA 开发者博客称其为面向编码优化的 816B 参数 MoE，激活参数 42B，支持 100 万 token 上下文，并可在 NVIDIA GB300 NVL72 上运行；TechCrunch 报道该模型可与 Apple 合作在 Apple 芯片上本地运行。Hugging Face 博客同步发布模型说明。",
+      "why_it_matters_zh": "这是 Meta 在开放权重路线上的又一前沿级发布：大规模 MoE + 超长上下文，同时覆盖数据中心（GB300 NVL72）与本地（Apple Silicon）两条部署路径，直接冲击编码与智能体这类高价值工作负载的开放模型格局。",
+      "importance_score": 92.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+        "url": "https://huggingface.co/blog/meta-muse-spark-open",
+        "published_at": "2026-10-15T00:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "nvidia-genai",
+          "source_name": "NVIDIA Generative AI Blog",
+          "title": "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72",
+          "url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+          "published_at": "2026-10-15T18:00:01Z"
+        },
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "Meta launches an open-weight AI model that runs on Macs",
+          "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+          "published_at": "2026-10-15T20:04:53Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "ec319f11f27d5ca0"
+      ],
+      "category": "research",
+      "title_zh": "四个 Gemini 4 Argon 智能体自主通关 Minecraft",
+      "summary_zh": "研究团队将四个 Gemini 4 Argon 智能体放入沙盒化的 Minecraft 生存世界，唯一目标是击败末影龙。每个智能体通过开源库 Mineflayer 控制一个玩家，并用游戏内聊天与共享记忆协同；没有人为分配角色或编写游戏逻辑。智能体自行规划、编写并调试程序，共写下 2,783 个程序，在简单难度随机世界中耗时 27 小时 14 分钟击败末影龙，过程中死亡 605 次。作者称这是首次仅使用标准 Mineflayer 库、无需预勘探种子或人类编写的游戏专用工具的端到端自主通关。",
+      "why_it_matters_zh": "它验证了智能体在数千个相互依赖步骤上维持一致计划的长期程（long-horizon）能力与多智能体协作能力，这类能力正是真实软件工程与企业级任务的瓶颈所在，也提供了难得的公开长程智能体实测数据点。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "A team of Gemini 4 Argon agents beats Minecraft",
+        "url": "https://arxiv.org/abs/2610.22319v1",
+        "published_at": "2026-10-15T17:51:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "b19e2e333c80c73b"
+      ],
+      "category": "research",
+      "title_zh": "KnowGPO：按知识状态分组的搜索智能体策略优化",
+      "summary_zh": "论文提出 KnowGPO 强化学习框架：不再按表层观测对齐轨迹，而是按轨迹已获得的任务相关知识对齐。方法先将推导答案所需信息分解为原子知识条件，用已满足条件的子集表示每步轨迹状态，把处于相同知识状态的轨迹分组进行组内比较，并以相邻步骤间的知识增量作为环境锚定的过程奖励。",
+      "why_it_matters_zh": "深度搜索智能体的信用分配长期受限于稀疏的终端奖励和噪声较大的过程监督信号。以“知识获取状态”而非观测表面作为信用锚点，为长程多轮搜索智能体的 RL 训练提供了更可靠的中间监督思路。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "KnowGPO: Knowledge-Grouped Policy Optimization for Search Agents",
+        "url": "https://arxiv.org/abs/2610.22331v1",
+        "published_at": "2026-10-15T17:52:33Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "f82e29f8e1fb1f6c"
+      ],
+      "category": "open-source",
+      "title_zh": "Transformers v5.20.1 发布，接入 Reflection AI 的 Beam 模型",
+      "summary_zh": "Hugging Face Transformers 发布 v5.20.1，新增 Reflection AI 的模型 Beam，官方描述其为面向编码与智能体场景的 token 高效前沿级模型，面向希望自有硬件、基础设施或云上运行并定制模型的团队，并附有模型文档链接。该版本同时修复了若干问题，包括旧版 torch 上的模型加载、HunYuan-VL 批量生成图像分配、DeepGEMM Mega MoE 专家并行，以及分布式检查点对 torch 版本的要求。",
+      "why_it_matters_zh": "主流开源模型库第一时间接入新的前沿编码/智能体模型，意味着开发者可用统一接口直接部署与微调，降低了新模型的采用门槛，也反映“可自托管前沿编码模型”正成为竞争焦点。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "transformers-releases",
+        "source_name": "Transformers Releases",
+        "title": "Transformers Releases: Release v5.20.1",
+        "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.1",
+        "published_at": "2026-10-16T13:02:29Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "8e04df217ce4cead"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 开源 2.8 万亿 token 的 Indic 预训练数据与生成流程",
+      "summary_zh": "Hugging Face 官方博客发布 NVIDIA 的 Indic 预训练工作，介绍规模达 2.8 万亿 token 的预训练数据以及一套开放的（开放数据生成）流程。",
+      "why_it_matters_zh": "Indic 语系覆盖超过十亿使用者，但长期缺乏高质量预训练语料。大规模数据与可复现的数据生成管线开源，有助于缩小多语言基础模型的能力差距。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
+        "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+        "published_at": "2026-10-16T01:44:47Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "75bca9d8c9c94fd8"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp v0.7.0：MoE 专家 GPU 缓存与 LiliCorr 投机解码",
+      "summary_zh": "llama.cpp v0.7.0 引入 LiliCorr 投机解码技术，以及面向 GLM5-Next 的 MTP；新增针对存放于主机内存的 MoE 专家的 GPU 缓存（--moe-cache-mib），在专家被卸载时可带来最高约 2.2 倍解码加速，且缓存可跨多 GPU 共享。该版本还支持大量新模型（K2 Horizon、Prism Bonsai 2 27B、EmbeddingGemma-2 文本+视觉+音频、LiquidAI d1/d1-omni、MiniCPM-V 4.7、Nemotron Super 3.5 VL / Nemotron Bolt、maion-coder 等），重构服务端聊天会话 API，改进 slot 与 prompt 缓存恢复，默认端口改为 9931，Web UI 新增完整模型管理器，ggml 升级至 v0.27.0。",
+      "why_it_matters_zh": "在消费级与本地部署场景中，MoE 专家卸载一直是解码速度瓶颈；专家 LRU 缓存与跨 GPU 共享把这一环节显著提速，使本地运行大 MoE 模型更实用，是本地推理栈的重要性能更新。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v0.7.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.7.0",
+        "published_at": "2026-10-15T17:13:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "39934d99d7bf04f3"
+      ],
+      "category": "models",
+      "title_zh": "IBM 发布 Granite Switch 4.1：单一端点提供对话、决策与语音",
+      "summary_zh": "Hugging Face 官方博客发布 IBM Granite Switch 4.1，其定位是通过一个端点同时提供对话（Chat）、决策（Decisions）与语音（Speech）能力。",
+      "why_it_matters_zh": "把多类能力收敛到单一端点，可简化企业侧模型路由与运维成本，也体现开源企业模型家族向多模态统一服务接口演进的趋势。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Granite Switch 4.1: Chat, Decisions, and Speech from One Endpoint",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1",
+        "published_at": "2026-10-15T20:34:01Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "6cb13dde1b83b21c"
+      ],
+      "category": "research",
+      "title_zh": "MLExpert：面向自主机器学习工程的 35B 智能体模型",
+      "summary_zh": "论文提出面向长程自主机器学习工程（MLE）优化的后训练方法，并据此训练出 MLExpert——一个 35B 的 MoE 智能体模型。作者构建 Kaggle-MLE Factory 以生成可执行任务与交互测试框架，通过分层智能体式 SFT 将通用工具使用与编码能力迁移到 MLE 任务，并从长交互轨迹中挑选有用的监督信号、利用中间结果学习。",
+      "why_it_matters_zh": "该工作瞄准“AI 改进 AI”（AI4AI）与递归自我改进路径：长程 MLE 单次运行包含大量昂贵实验，如何从中间结果中有效学习是关键难题，MLExpert 给出了可复现的训练与评测方案。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
+        "url": "https://arxiv.org/abs/2610.22344v1",
+        "published_at": "2026-10-15T17:56:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "4f9692148cc523e7"
+      ],
+      "category": "research",
+      "title_zh": "用大模型演化搜索发现更优量子电路",
+      "summary_zh": "论文提出一个演化式框架：由大语言模型提出电路设计，独立评估器负责验证并打分。该框架被应用于数值计算、化学、优化、量子模拟与数论等任务；在 8 个任务中的 7 个，所发现的电路显著降低了 Toffoli 门与量子比特数，优于当前最优结果。第 8 个任务中搜索出面向素域模逆的新可逆架构，使原本在可逆整数运算中不实用的 divsteps 算法变得可行。",
+      "why_it_matters_zh": "这展示了 LLM 作为“设计提议器”加独立验证器在硬科学搜索问题上的实际增益：在量子资源受限的领域，直接降低门数与比特数比通用能力提升更具工程价值。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Discovering state-of-the-art quantum circuits with large language models",
+        "url": "https://arxiv.org/abs/2610.22367v1",
+        "published_at": "2026-10-15T17:59:20Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 189,
+    "normalized": 189,
+    "filtered": 145,
+    "ai_candidates": 30,
+    "prompt_chars": 27559,
+    "estimated_input_tokens": 6889,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
