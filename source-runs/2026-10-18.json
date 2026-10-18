@@ -1,0 +1,826 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 172,
+  "normalized_count": 172,
+  "filtered_count": 97,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "source_group": "research",
+        "independence_group": "vllm-releases",
+        "title": "vLLM Releases: v0.32.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+        "published_at": "2026-10-18T06:50:48Z",
+        "fetched_at": "2026-10-18T14:21:56.613435Z",
+        "language": "unknown",
+        "excerpt": "# v0.32.0\r\n\r\n## Highlights\r\n\r\nThis release features 814 commits from 363 contributors (121 new)!\r\n\r\n* **Structured decisions and generic parsers**: the new `POST /v1/systemone` endpoint answers `choice`, `noul` and `score` questions over a structured state (#59299), is served by default (#60677, #60696), and also runs on `Cloudflare/clef-omni` (#61064), `LiquidAI/d1-3B` (#60676) and DiffusionGemma (#60466). The new `hf` tool and reasoning parser (`--tool-call-parser hf`, `--reasoning-parser hf`) reads the checkpoint's `response_template`, so models that ship it need no model-specific parser (#58604, #58602), in both the Python and Rust frontends (#59005).\r\n* **Low-precision KV cache everywhere**: NVFP4 KV cache now runs on SM8x and SM12x (#46963), SM90 (#60620) and with XQA decode on SM12x (#60452), and on MiniMax-M3 sparse attention on SM100 (#59300); GLM-5.x defaults to an FP8 KV cache on SM100, halving KV memory per rank with 2.3-5.5% more throughput at a 7-11% TTFT cost in the PR's benchmark (#60140, #60281); `fp8_ds_mla` on SM90 gives GLM-5.3-Flash up to 31% more output throughput (#59246); ROCm gains the 4-bit `ultraquant_4bit` KV cache with about 2x the density of FP8 (#5705",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "khluu",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 416285351
+        },
+        "id": "cd4757601ca05228",
+        "canonical_url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+        "normalized_title": "vllm releases v0 32 0",
+        "fingerprint": "cd4757601ca05228b38947b70dd117a4d29a9910e954dff3c122ac82e0cd8b38",
+        "rule_score": 69.08466666666666
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "突发！DeepSeek新模型发布，超级性价比斩杀一切",
+        "url": "https://www.qbitai.com/2026/10/504067.html",
+        "published_at": "2026-10-17T12:21:09Z",
+        "fetched_at": "2026-10-18T14:22:03.576224Z",
+        "language": "unknown",
+        "excerpt": "新版本V4.1-Flash-1017，还开放了自研搜索API",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "鹭羽",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cb464f28ba85f3eb",
+        "canonical_url": "https://www.qbitai.com/2026/10/504067.html",
+        "normalized_title": "突发 deepseek新模型发布 超级性价比斩杀一切",
+        "fingerprint": "cb464f28ba85f3eb2ea63cb57db131bf649f30f9ce3a6e095fc5312784111c81",
+        "rule_score": 59.23525
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "清华开源！智能体操作系统任务成本降83%，AI记忆可查可改",
+        "url": "https://www.qbitai.com/2026/10/503935.html",
+        "published_at": "2026-10-17T12:10:35Z",
+        "fetched_at": "2026-10-18T14:22:03.576287Z",
+        "language": "unknown",
+        "excerpt": "整套系统原生支持MCP",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "梦瑶",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "bb12fcb75742765a",
+        "canonical_url": "https://www.qbitai.com/2026/10/503935.html",
+        "normalized_title": "清华开源 智能体操作系统任务成本降83 ai记忆可查可改",
+        "fingerprint": "bb12fcb75742765a3eae7c6ddc3adbfcaa0f144f3af11824012e537154946c3c",
+        "rule_score": 59.217638888888885
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11719",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11719",
+        "published_at": "2026-10-18T11:11:37Z",
+        "fetched_at": "2026-10-18T14:21:57.661450Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nggml-cuda: fattn do not check oob if k_VKQ_max = (k_VKQ_max - nbatch_fa) (#30572)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/57114852>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b11719/llama-b11719-b",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 416402270
+        },
+        "id": "71aff0fb6e6359e7",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11719",
+        "normalized_title": "llama cpp releases b11719",
+        "fingerprint": "71aff0fb6e6359e72740bfeeae0ebfe69734ddd5e2fb29775de6fc8b6a1ef29c",
+        "rule_score": 56.51936111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+        "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+        "published_at": "2026-10-17T18:48:08Z",
+        "fetched_at": "2026-10-18T14:22:03.680238Z",
+        "language": "unknown",
+        "excerpt": "Over the weekend, Masad clarified that OpenAI would replace Anthropic as its default model provider. Claude will still be available to customers on the platform.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kirsten Korosec, Lucas Ropek, Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "59655cd9b1abcb8e",
+        "canonical_url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says",
+        "normalized_title": "replit makes openai its default over anthropic ceo says",
+        "fingerprint": "59655cd9b1abcb8ec5d4e83e6051ec1466b3ceef68507b7fc743ff3c318d6991",
+        "rule_score": 54.88022222222222
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11688",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11688",
+        "published_at": "2026-10-16T10:03:55Z",
+        "fetched_at": "2026-10-18T14:21:57.661656Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\ncpu : reduce AVX2 tiled accumulators together (#30296)\n\nAssisted-by: Codex\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/56615050>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11688/llama-b11688-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11688/llama-b11688-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11688/llama-b11688-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11688/llama-b11688-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11688/llama-b11688-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11688/llama-b11688-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu x64 (Vulkan)](https://github.com/ggml-org/llama.cpp/releases/download/b11688/llama-b11688-bin-ubun",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 414803907
+        },
+        "id": "36105a8134c67b2e",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11688",
+        "normalized_title": "llama cpp releases b11688",
+        "fingerprint": "36105a8134c67b2ea7798b5aebb009ba702b79e384e3123ec73a86981dfe9903",
+        "rule_score": 52.0
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "智谱新模型，懂法方面全球第一了",
+        "url": "https://www.qbitai.com/2026/10/503965.html",
+        "published_at": "2026-10-17T12:13:45Z",
+        "fetched_at": "2026-10-18T14:22:03.576276Z",
+        "language": "unknown",
+        "excerpt": "AI的风还是刮到了法律圈",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "文婷",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "483fc65aa25a14a8",
+        "canonical_url": "https://www.qbitai.com/2026/10/503965.html",
+        "normalized_title": "智谱新模型 懂法方面全球第一了",
+        "fingerprint": "483fc65aa25a14a8e8c447760907edab1ac0b7192272a7ffd2f489df9f98b7ee",
+        "rule_score": 51.22291666666667
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "Claude半小时解开密码学悬案，学界集体走偏20年",
+        "url": "https://www.qbitai.com/2026/10/503910.html",
+        "published_at": "2026-10-17T12:06:51Z",
+        "fetched_at": "2026-10-18T14:22:03.576297Z",
+        "language": "unknown",
+        "excerpt": "谜底指向时间",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "鹭羽",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "69ac6d4256dcd829",
+        "canonical_url": "https://www.qbitai.com/2026/10/503910.html",
+        "normalized_title": "claude半小时解开密码学悬案 学界集体走偏20年",
+        "fingerprint": "69ac6d4256dcd829c3d42073d83e65367b4e961bb94fe84da6ae6bbcdedd9c38",
+        "rule_score": 47.211416666666665
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Meta removes language that raised scraping and AI training concerns",
+        "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+        "published_at": "2026-10-17T21:31:32Z",
+        "fetched_at": "2026-10-18T14:22:03.680170Z",
+        "language": "unknown",
+        "excerpt": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "544fa50c502607d8",
+        "canonical_url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns",
+        "normalized_title": "meta removes language that raised scraping and ai training concerns",
+        "fingerprint": "544fa50c502607d84066ef5639c1fcf20392cf6e05dcfc6081fedc2f48197071",
+        "rule_score": 47.15255555555556
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
+        "url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+        "published_at": "2026-10-17T20:21:19Z",
+        "fetched_at": "2026-10-18T14:22:03.680226Z",
+        "language": "unknown",
+        "excerpt": "The composition of Anthropic’s workforce and the type of work getting done have changed significantly in the past year.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "544c2dfadc1f74ee",
+        "canonical_url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings",
+        "normalized_title": "anthropic says its workforce has become less junior and is spending more time in meetings",
+        "fingerprint": "544c2dfadc1f74eedafd49a25085881cd2d94fc6a5126a9fe9605e48167c1b25",
+        "rule_score": 47.03552777777778
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "科技企业出海，为啥我推荐你去迪拜？",
+        "url": "https://www.qbitai.com/2026/10/503893.html",
+        "published_at": "2026-10-17T09:05:08Z",
+        "fetched_at": "2026-10-18T14:22:03.576306Z",
+        "language": "unknown",
+        "excerpt": "通往全球市场的超级跳板",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "一水",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "db929f20182d6219",
+        "canonical_url": "https://www.qbitai.com/2026/10/503893.html",
+        "normalized_title": "科技企业出海 为啥我推荐你去迪拜",
+        "fingerprint": "db929f20182d6219a4f81d527b49801466e0f187c399085d0e2807201dd21867",
+        "rule_score": 46.90855555555556
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "AVC-Reward: Event-Centric Audio-Video Consistency Evaluation",
+        "url": "https://arxiv.org/abs/2610.22321v1",
+        "published_at": "2026-10-15T17:51:56Z",
+        "fetched_at": "2026-10-18T14:21:55.816490Z",
+        "language": "unknown",
+        "excerpt": "As joint audio-video generation models become more capable, they can generate audio-visual scenes exhibiting three forms of complexity: multi-event composition, multi-layer audio mixture, and asymmetric cross-modal relations. However, current evaluations largely reuse metrics from earlier simple and unidirectional tasks. They typically evaluate an audio-video clip as a whole and rely on simple predefined relations, making them unsuitable for these increasingly complex scenes. We propose an event-centric evaluation framework that disentangles audio and visual events at the event level, analyzes each event independently, cross-validates relations across modalities, and aggregates the judgments into a coarse-to-fine, three-level consistency metric. The metric assesses global narrative harmony, event-level temporal synchronization, and fine-grained attribute alignment, providing a general formulation for audio-video consistency evaluation across diverse generation settings and cross-modal relations. We instantiate the metric as AVC-Reward, a trainable audio-video reward model. To evaluate the agreement between automatic judgments and human perception across generation paradigms and rel",
+        "categories": [
+          "research"
+        ],
+        "author": "Siliang Tang",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9ad37f46155b6008",
+        "canonical_url": "https://arxiv.org/abs/2610.22321v1",
+        "normalized_title": "avc reward event centric audio video consistency evaluation",
+        "fingerprint": "9ad37f46155b60081100c815c9fd0ba595f60d2cc6fa7550e3ba5b2031034c50",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Grid-Bench: Can LLMs Predict How Discrete Worlds Change?",
+        "url": "https://arxiv.org/abs/2610.22312v1",
+        "published_at": "2026-10-15T17:50:57Z",
+        "fetched_at": "2026-10-18T14:21:55.816523Z",
+        "language": "unknown",
+        "excerpt": "Spatial instructions describe how to move objects, transform regions, or modify their surroundings. When several operations are applied in sequence, each acts on a configuration shaped by earlier changes. How accurately can large language models (LLMs) predict the resulting spatial state? We introduce Grid-Bench, an executable benchmark in which eight families of operations transform discrete worlds represented as two-, three-, and four-dimensional grids. Given an initial grid, explicit rules, and an event history expressed as text, a model predicts the complete final grid. Reference execution makes every predicted value checkable, supporting comparisons across spatial operations, history lengths, and workloads. Evaluating six LLMs shows that complete-state accuracy falls sharply as histories grow, with substantial divergence among models that perform similarly on single events. Models with similar exact-match accuracy can nevertheless differ substantially in the number of incorrect cells on shared instances. Even over long histories, some models recover many correct changes beyond what copying the initial state would yield. Grid-Bench makes both complete recovery and these differe",
+        "categories": [
+          "research"
+        ],
+        "author": "Yue Zhao",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9c0446e64bf86b88",
+        "canonical_url": "https://arxiv.org/abs/2610.22312v1",
+        "normalized_title": "grid bench can llms predict how discrete worlds change",
+        "fingerprint": "9c0446e64bf86b886aee7b74bf7eb82cf4b6fe6134a15ee325d6b4c1185242bb",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Knowledge That Is Linear Before Fine-Tuning Generalizes After It",
+        "url": "https://arxiv.org/abs/2610.22300v1",
+        "published_at": "2026-10-15T17:47:52Z",
+        "fetched_at": "2026-10-18T14:21:55.816532Z",
+        "language": "unknown",
+        "excerpt": "Not all facts a language model can recall support further learning equally well. We distinguish active facts, which support generalization beyond their own recall, from inert facts, which can be recalled but do not support such generalization in a given task. We study this distinction by constructing new relations from existing ones. Take the relation that maps a place to its continent (Paris -> Europe) and assign each of its answers an arbitrary new label (Europe -> crab, Asia -> zebra). The new relation then maps Paris -> crab. We fine-tune the model on the new relation for a subset of subjects, without telling it the original relation or the relabeling rule, and test whether it assigns the corresponding labels to held-out subjects that share an answer in the original relation. Having learned Paris -> crab, does it answer Munich -> crab? Across eleven language models and 70 relations, how linearly readable the original relation is in pretrained representations strongly predicts this generalization. Within each model, the two correlate across relations at Pearson r = 0.87 to 0.92. This association persists when controlling, separately and jointly, for the number of fine-tuning sub",
+        "categories": [
+          "research"
+        ],
+        "author": "Hinrich Schütze",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ec65daca735b2d60",
+        "canonical_url": "https://arxiv.org/abs/2610.22300v1",
+        "normalized_title": "knowledge that is linear before fine tuning generalizes after it",
+        "fingerprint": "ec65daca735b2d607fc52a6a8d52a325762196bf2627d7c6f18d1ba5a5f6c34d",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Private Retrieval Augmented Generation via Random Projection",
+        "url": "https://arxiv.org/abs/2610.22297v1",
+        "published_at": "2026-10-15T17:45:51Z",
+        "fetched_at": "2026-10-18T14:21:55.816549Z",
+        "language": "unknown",
+        "excerpt": "Retrieval-Augmented Generation (RAG) enhances the capabilities of large language models (LLMs) by querying external structured knowledge. However, it can also introduce privacy risks by leaking sensitive information from the retrieval datastore. We propose a simple method to preserve datastore privacy in RAG systems via random projection. By applying the same projection to both datastore embeddings and query embeddings, our method provably preserves semantic similarity between queries and retrieved items while substantially mitigating data extraction attacks. Across multiple RAG architectures and datasets, we show that this lightweight approach achieves superior retrieval and generation performance compared to prior methods which leverage formal differential privacy (DP) guarantees, while exhibiting comparable empirical privacy under strong attack models. Our results for the first time suggest that random projection can serve as a competitive and practical baseline for privacy-preserving RAG systems.",
+        "categories": [
+          "research"
+        ],
+        "author": "Tian Li",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6f73f1c34ecf85b6",
+        "canonical_url": "https://arxiv.org/abs/2610.22297v1",
+        "normalized_title": "private retrieval augmented generation via random projection",
+        "fingerprint": "6f73f1c34ecf85b6fdce6efc050ab4ecc859afa51706ef611ac668cb71c2b8c0",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "Backward Compatibility in Zero-Bit Neural Audio Watermarking",
+        "url": "https://arxiv.org/abs/2610.22296v1",
+        "published_at": "2026-10-15T17:45:27Z",
+        "fetched_at": "2026-10-18T14:21:55.816557Z",
+        "language": "unknown",
+        "excerpt": "Neural watermarking systems are typically trained as tightly coupled embedder-detector pairs and implicitly assume static deployment. In real-world deployments, embedders and detectors are frequently updated and selectively decoupled for security and versioning purposes, which can break detection in previously embedded content and, more critically, increase false-positive rates on embedders that a given detector is intentionally not intended to recognize.\n  In this paper the concept of backward compatibility in zero-bit audio watermarking is formalized. A training framework is proposed that pairs a new detector with a sequence of frozen legacy embedders (its legacy chain), using a performance-weighted sampling strategy so that the detector retains accuracy across all earlier versions. This coupling, while necessary for backward compatibility, is shown to induce an embedder-collapse effect that catastrophically degrades the true negative rate (TNR) against out-of-chain embedders. To counteract this, a Angular Diversity Loss (ADL) is introduced that explicitly forces each new embedder to occupy a distinct region of the output space. The combined approach restores near-perfect TNR wit",
+        "categories": [
+          "research"
+        ],
+        "author": "Igor Djurović",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "46e8746e6a7b95fb",
+        "canonical_url": "https://arxiv.org/abs/2610.22296v1",
+        "normalized_title": "backward compatibility in zero bit neural audio watermarking",
+        "fingerprint": "46e8746e6a7b95fb2629f51b0a56995a135750390d8c7a6a795295f98147e9bb",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Amazon devices chief Panos Panay sees a future where AI devices replace the need to use apps",
+        "url": "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/",
+        "published_at": "2026-10-15T19:55:25Z",
+        "fetched_at": "2026-10-18T14:22:03.680341Z",
+        "language": "unknown",
+        "excerpt": "Speaking at TechCrunch Disrupt, Amazon devices chief Panos Panay described a future where ambient AI devices work in the background, anticipating users' needs instead of waiting for commands.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "a400db6a70aac807",
+        "canonical_url": "https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps",
+        "normalized_title": "amazon devices chief panos panay sees a future where ai devices replace the need to use apps",
+        "fingerprint": "a400db6a70aac8078d4d8af5a65e01e5fdac1804b4736da688300ffecb216d93",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Bluesky expands its AI-powered Attie app to let anyone build websites, games, and more",
+        "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+        "published_at": "2026-10-15T18:56:46Z",
+        "fetched_at": "2026-10-18T14:22:03.680359Z",
+        "language": "unknown",
+        "excerpt": "Bluesky is bringing “social vibe coding” to its experimental Attie platform, allowing users to create interactive experiences like games, quizzes, and websites that can tap into the social network's audience.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "50d4955a6909175a",
+        "canonical_url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more",
+        "normalized_title": "bluesky expands its ai powered attie app to let anyone build websites games and more",
+        "fingerprint": "50d4955a6909175a8a69976db4596e6f4da83dc073697aac95cf453e394cf721",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The math that OpenAI keeps for itself",
+        "url": "https://newsletter.danielpaleka.com/p/the-math-that-openai-keeps-for-itself",
+        "published_at": "2026-10-17T19:22:52Z",
+        "fetched_at": "2026-10-18T14:22:05.766681Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dpaleka",
+        "upstream_urls": [
+          "https://newsletter.danielpaleka.com/p/the-math-that-openai-keeps-for-itself"
+        ],
+        "raw_metadata": {
+          "hn_id": 50134211,
+          "score": 43
+        },
+        "id": "0439d9c9f5f3a38e",
+        "canonical_url": "https://newsletter.danielpaleka.com/p/the-math-that-openai-keeps-for-itself",
+        "normalized_title": "the math that openai keeps for itself",
+        "fingerprint": "0439d9c9f5f3a38e0676fde56c512f7f87065394877a3e38d92280218422dcee",
+        "rule_score": 43.93811111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Starlink Gateway Station Serving Ukraine Targeted in Arson Attempt in Lithuania",
+        "url": "https://militarnyi.com/en/news/starlink-gateway-station-serving-ukraine-targeted-in-arson-attempt-in-lithuania/",
+        "published_at": "2026-10-18T13:41:02Z",
+        "fetched_at": "2026-10-18T14:22:06.527466Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "defly",
+        "upstream_urls": [
+          "https://militarnyi.com/en/news/starlink-gateway-station-serving-ukraine-targeted-in-arson-attempt-in-lithuania/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50141022,
+          "score": 5
+        },
+        "id": "12ecb692ff76c4c0",
+        "canonical_url": "https://militarnyi.com/en/news/starlink-gateway-station-serving-ukraine-targeted-in-arson-attempt-in-lithuania",
+        "normalized_title": "starlink gateway station serving ukraine targeted in arson attempt in lithuania",
+        "fingerprint": "12ecb692ff76c4c07cbeb3d307b0522e9aff9e068aaec466b540d134a9d428e1",
+        "rule_score": 41.768388888888886
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The Brain Sandwich",
+        "url": "https://terriblesoftware.org/2026/10/02/the-brain-sandwich/",
+        "published_at": "2026-10-18T11:15:37Z",
+        "fetched_at": "2026-10-18T14:22:04.725364Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "keyle",
+        "upstream_urls": [
+          "https://terriblesoftware.org/2026/10/02/the-brain-sandwich/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50139998,
+          "score": 5
+        },
+        "id": "7ba9c27c7f09892f",
+        "canonical_url": "https://terriblesoftware.org/2026/10/02/the-brain-sandwich",
+        "normalized_title": "the brain sandwich",
+        "fingerprint": "7ba9c27c7f09892f1fb9e979ab8166a1f299634a020e27745dae3fbccf91167f",
+        "rule_score": 41.52602777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+        "url": "https://api-docs.deepseek.com/guides/search/",
+        "published_at": "2026-10-18T06:50:36Z",
+        "fetched_at": "2026-10-18T14:22:03.888573Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "fagnerbrack",
+        "upstream_urls": [
+          "https://api-docs.deepseek.com/guides/search/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50138531,
+          "score": 346
+        },
+        "id": "4a9c5c781b0466b4",
+        "canonical_url": "https://api-docs.deepseek.com/guides/search",
+        "normalized_title": "deepseek search and fetch 0 75 per 1000 successful requests",
+        "fingerprint": "4a9c5c781b0466b437104eea51c62d953f663a109acff98aa6f406cb3cc0cb99",
+        "rule_score": 41.08433333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "America's $10T AI infrastructure boom is starting to fray",
+        "url": "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c",
+        "published_at": "2026-10-18T06:46:50Z",
+        "fetched_at": "2026-10-18T14:22:07.482833Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "cheesecompiler",
+        "upstream_urls": [
+          "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c"
+        ],
+        "raw_metadata": {
+          "hn_id": 50138511,
+          "score": 9
+        },
+        "id": "533af1368e7a66b9",
+        "canonical_url": "https://www.ft.com/content/9ea5a37d-15c9-4d5b-94d6-719048c9cd3c",
+        "normalized_title": "america s 10t ai infrastructure boom is starting to fray",
+        "fingerprint": "533af1368e7a66b9510db6f376ce038151fc414aa45d7680f6558f76d4f4a29b",
+        "rule_score": 41.07805555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
+        "url": "https://sphinx-six-theta.vercel.app/",
+        "published_at": "2026-10-18T04:33:49Z",
+        "fetched_at": "2026-10-18T14:22:04.054889Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "critiquebrowser",
+        "upstream_urls": [
+          "https://sphinx-six-theta.vercel.app/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50137950,
+          "score": 184
+        },
+        "id": "fa9790b6bf61dd95",
+        "canonical_url": "https://sphinx-six-theta.vercel.app/",
+        "normalized_title": "show hn sphinx a hook that quizzes you on your ai s code before shipping",
+        "fingerprint": "fa9790b6bf61dd95cdcae94787ce13eddc41eee0ec689b1945d294757fac1b13",
+        "rule_score": 40.85636111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "An Nvidia insider-turned-VC on why robotics hasn’t hit its ChatGPT moment, yet",
+        "url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet/",
+        "published_at": "2026-10-16T16:30:00Z",
+        "fetched_at": "2026-10-18T14:22:03.680258Z",
+        "language": "unknown",
+        "excerpt": "Amulya Vishwanath, who spent seven years leading product marketing for NVIDIA’s robotics platforms, says robotics is currently in its “Lego era,” with the basic building blocks like actuators, robotic hands, software, and safety standards still being&#160;rebuilt.&#160; This view runs counter to those who believe that robotics, powered by a general foundation model,&#160;is about to have [&#8230;]",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Theresa Loconsolo",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7a0f72a4dbb35934",
+        "canonical_url": "https://techcrunch.com/video/a-nvidia-insider-turned-vc-on-why-robotics-hasnt-hit-its-chatgpt-moment-yet",
+        "normalized_title": "an nvidia insider turned vc on why robotics hasn t hit its chatgpt moment yet",
+        "fingerprint": "7a0f72a4dbb35934ed0491697f9097b655ad895451c38413846701304befe5e3",
+        "rule_score": 40.25
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles",
+        "url": "https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods/",
+        "published_at": "2026-10-16T14:00:00Z",
+        "fetched_at": "2026-10-18T14:22:03.680304Z",
+        "language": "unknown",
+        "excerpt": "Counterfeiters are getting better at replicating brands' marks and passing off dupes, known as \"superfakes,\" as genuine items. A startup called Veritas wants to tackle the problem with its own chip that verifies goods.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3a81276f2f7240ba",
+        "canonical_url": "https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods",
+        "normalized_title": "veritas expands its anti counterfeit chip to jewelry trophies and fragrance bottles",
+        "fingerprint": "3a81276f2f7240ba232b4681ab7a5e02d33918b98304ac1124fddeade15ccbc5",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Last chance to save up to $200 on your TechCrunch Founder Summit pass: Early booking ends October 16",
+        "url": "https://techcrunch.com/2026/10/15/last-chance-to-save-up-to-200-on-techcrunch-founder-summit-early-booking-ends-oct-16/",
+        "published_at": "2026-10-15T18:00:00Z",
+        "fetched_at": "2026-10-18T14:22:03.680369Z",
+        "language": "unknown",
+        "excerpt": "Savings of up to $200 end October 16 for TechCrunch Founder Summit. These savings for Founder and Investor Passes vanish after Friday. Join 1,000 founders and investors on November 4 at Boston’s SoWa Power Station. Bring your toughest questions and make the day count for your business.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "6bbe9dd98c75969a",
+        "canonical_url": "https://techcrunch.com/2026/10/15/last-chance-to-save-up-to-200-on-techcrunch-founder-summit-early-booking-ends-oct-16",
+        "normalized_title": "last chance to save up to 200 on your techcrunch founder summit pass early booking ends october 16",
+        "fingerprint": "6bbe9dd98c75969a48c681a16fa85e0eb8167c44f2c2c2cee1c4eba469ad0095",
+        "rule_score": 40.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Microsoft and CMU team up to train early career software engineers",
+        "url": "https://www.cs.cmu.edu/news/2026/microsoft-cmu-praise",
+        "published_at": "2026-10-17T18:45:07Z",
+        "fetched_at": "2026-10-18T14:22:07.118822Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "azhenley",
+        "upstream_urls": [
+          "https://www.cs.cmu.edu/news/2026/microsoft-cmu-praise"
+        ],
+        "raw_metadata": {
+          "hn_id": 50133830,
+          "score": 67
+        },
+        "id": "e4b973f38ddee28c",
+        "canonical_url": "https://www.cs.cmu.edu/news/2026/microsoft-cmu-praise",
+        "normalized_title": "microsoft and cmu team up to train early career software engineers",
+        "fingerprint": "e4b973f38ddee28c5eec1e98cd76527ceb53ca8c9b29585130ab38154064292c",
+        "rule_score": 39.875194444444446
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Pele – Mermaid diagrams as themeable SVG",
+        "url": "https://pele.run/",
+        "published_at": "2026-10-17T15:55:09Z",
+        "fetched_at": "2026-10-18T14:22:04.321513Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dchest",
+        "upstream_urls": [
+          "https://pele.run/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50132193,
+          "score": 493
+        },
+        "id": "9faf34ff7d1e807a",
+        "canonical_url": "https://pele.run/",
+        "normalized_title": "pele mermaid diagrams as themeable svg",
+        "fingerprint": "9faf34ff7d1e807acc6f9df74915678636fa1e1be4a11219579b7c7baad6d498",
+        "rule_score": 39.59191666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "DeepSeek-v4.1-Flash-1017",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "published_at": "2026-10-17T08:21:25Z",
+        "fetched_at": "2026-10-18T14:22:04.283754Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "theykk",
+        "upstream_urls": [
+          "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+        ],
+        "raw_metadata": {
+          "hn_id": 50129045,
+          "score": 907
+        },
+        "id": "c6850c68a215a844",
+        "canonical_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "normalized_title": "deepseek v4 1 flash 1017",
+        "fingerprint": "c6850c68a215a844fbcfab20c8912e9ab37895c662a5d70e788c305406ad7a26",
+        "rule_score": 38.83569444444444
+      }
+    ],
+    "prompt_chars": 13561,
+    "estimated_input_tokens": 3390
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}

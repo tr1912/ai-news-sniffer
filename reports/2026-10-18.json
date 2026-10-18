@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-18",
+  "generated_at": "2026-10-18T14:21:36.504359Z",
+  "run_id": "2026-10-18-0939dc06",
+  "daily_summary_zh": "今日可验证的高信号事件集中在模型发布、推理基础设施与 AI 研究：DeepSeek 推出 V4.1-Flash-1017 并开放搜索 API；vLLM v0.32.0 强化结构化决策与低精度 KV cache；研究侧关注知识泛化、长程空间状态跟踪和隐私保护 RAG。",
+  "events": [
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "cd4757601ca05228"
+      ],
+      "category": "open-source",
+      "title_zh": "vLLM 发布 v0.32.0：结构化决策、通用解析器与低精度 KV cache",
+      "summary_zh": "vLLM 发布 v0.32.0，包含来自 363 位贡献者的 814 个提交，其中 121 位为新贡献者。版本重点包括新的结构化决策接口与通用 tool/reasoning parser、降低对模型专用解析器的依赖，以及 NVFP4、FP8、4-bit 等低精度 KV cache 在更多硬件和后端上的支持。",
+      "why_it_matters_zh": "推理引擎在吞吐、显存占用和模型兼容性上继续优化，低精度 KV cache 的硬件覆盖面扩大，对部署长上下文和大模型服务的成本影响直接。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "title": "vLLM Releases: v0.32.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+        "published_at": "2026-10-18T06:50:48Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "ec65daca735b2d60"
+      ],
+      "category": "research",
+      "title_zh": "研究：预训练表征中线性可读的知识更易在微调后泛化",
+      "summary_zh": "论文区分 active facts 和 inert facts，在 11 个语言模型、70 个关系上构造新关系并微调，发现原始关系在预训练表征中的线性可读性越强，模型越能把新标签泛化到共享原答案的未见主体；模型内跨关系相关系数为 Pearson r=0.87 至 0.92。",
+      "why_it_matters_zh": "为理解微调为何有时只记住事实、有时能泛化提供可预测指标，也可能指导数据筛选与表征分析。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Knowledge That Is Linear Before Fine-Tuning Generalizes After It",
+        "url": "https://arxiv.org/abs/2610.22300v1",
+        "published_at": "2026-10-15T17:47:52Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "9c0446e64bf86b88"
+      ],
+      "category": "research",
+      "title_zh": "Grid-Bench：评估 LLM 预测离散世界状态变化的能力",
+      "summary_zh": "论文提出 Grid-Bench，一个可执行基准：八类操作在二维、三维和四维网格上依次变换离散世界，模型需根据初始网格、显式规则和文本事件历史预测完整最终网格。对六个 LLM 的评估显示，随着历史变长，完整状态准确率明显下降；在单事件上表现相近的模型，在长历史共享实例上的错误单元格数量也会显著分化。",
+      "why_it_matters_zh": "把长程空间状态跟踪变成可逐格校验的测试，揭示当前 LLM 在多步操作和状态更新上的系统性短板。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Grid-Bench: Can LLMs Predict How Discrete Worlds Change?",
+        "url": "https://arxiv.org/abs/2610.22312v1",
+        "published_at": "2026-10-15T17:50:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "6f73f1c34ecf85b6"
+      ],
+      "category": "research",
+      "title_zh": "随机投影实现隐私保护 RAG",
+      "summary_zh": "论文提出对检索库嵌入和查询嵌入施加同一随机投影的 RAG 隐私方法，声称可证明地保留查询与检索项之间的语义相似度，同时显著缓解数据抽取攻击。在多种 RAG 架构和数据集上，该方法在检索与生成表现上优于依赖形式化差分隐私保证的先前方法，并在强攻击模型下表现出可比的实证隐私。",
+      "why_it_matters_zh": "为 RAG 数据存储隐私提供轻量、可部署的基线，可能降低企业采用检索增强生成时的合规与泄露风险。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Private Retrieval Augmented Generation via Random Projection",
+        "url": "https://arxiv.org/abs/2610.22297v1",
+        "published_at": "2026-10-15T17:45:51Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 172,
+    "normalized": 172,
+    "filtered": 97,
+    "ai_candidates": 30,
+    "prompt_chars": 13561,
+    "estimated_input_tokens": 3390,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
