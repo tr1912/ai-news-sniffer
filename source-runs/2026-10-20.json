@@ -1,0 +1,898 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 97,
+  "normalized_count": 97,
+  "filtered_count": 74,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Nvidia launches new open models to run agents in the enterprise and on PCs",
+        "url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
+        "published_at": "2026-10-19T15:37:09Z",
+        "fetched_at": "2026-10-19T17:22:50.504072Z",
+        "language": "unknown",
+        "excerpt": "Nvidia is leaning hard into the trend of enterprise companies wanting to run their own open models in their own data centers and also trying to make on-device, private AI agents a thing.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Julie Bort",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "c25ee9b944b73ff7",
+        "canonical_url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs",
+        "normalized_title": "nvidia launches new open models to run agents in the enterprise and on pcs",
+        "fingerprint": "c25ee9b944b73ff7a08813e6c51c947e9094450e3a39303f153c1f0aac0f8b96",
+        "rule_score": 58.56191666666667
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11738",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11738",
+        "published_at": "2026-10-19T16:59:59Z",
+        "fetched_at": "2026-10-19T17:22:46.803172Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nserver : fix swa checkpoint invalidation logic (#30666)\n\n* server : fix swa checkpoint invalidation logic\n\nAssisted-by: Claude\n\n* add testcase that fails with > n_past, but works with > n_prefix\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/57466532>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11738/llama-b11738-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11738/llama-b11738-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11738/llama-b11738-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11738/llama-b11738-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11738/llama-b11738-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b11738/llama-b11738-bin-ubuntu-s3",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 417531293
+        },
+        "id": "a20db86d4c5e868d",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11738",
+        "normalized_title": "llama cpp releases b11738",
+        "fingerprint": "a20db86d4c5e868df9f19fda8c391e630e68db3e4d050e79d5adf19bdcb9e14a",
+        "rule_score": 54.69997222222222
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "VAST开源实时世界模型EdenLive！单消费级显卡、720P超24FPS",
+        "url": "https://www.qbitai.com/2026/10/504136.html",
+        "published_at": "2026-10-18T11:49:49Z",
+        "fetched_at": "2026-10-19T17:22:50.396000Z",
+        "language": "unknown",
+        "excerpt": "让人人都能自由创造并体验可交互世界",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "78efbee8a1a58b36",
+        "canonical_url": "https://www.qbitai.com/2026/10/504136.html",
+        "normalized_title": "vast开源实时世界模型edenlive 单消费级显卡 720p超24fps",
+        "fingerprint": "78efbee8a1a58b36960f41e6d7d109fbd4ee0039c436daef3937292e5ba13c8b",
+        "rule_score": 53.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "People are using AI to make their smart TVs dumb again",
+        "url": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
+        "published_at": "2026-10-19T16:13:22Z",
+        "fetched_at": "2026-10-19T17:22:50.504026Z",
+        "language": "unknown",
+        "excerpt": "Fed up with ads, tracking and sluggish interfaces, some smart TV owners are turning to AI agents to strip away bloatware and take back control of their TVs.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Sarah Perez",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ba58f39bf10b7f6a",
+        "canonical_url": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again",
+        "normalized_title": "people are using ai to make their smart tvs dumb again",
+        "fingerprint": "ba58f39bf10b7f6ab259fe8634487402fb74efc7fc8d6aa9e4129d6220fc1d67",
+        "rule_score": 50.622277777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+        "url": "https://arxiv.org/abs/2610.18861",
+        "published_at": "2026-10-18T20:48:14Z",
+        "fetched_at": "2026-10-19T17:22:51.564342Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "allinonai",
+        "upstream_urls": [
+          "https://arxiv.org/abs/2610.18861"
+        ],
+        "raw_metadata": {
+          "hn_id": 50145337,
+          "score": 489
+        },
+        "id": "55cd52278fa035c3",
+        "canonical_url": "https://arxiv.org/abs/2610.18861",
+        "normalized_title": "hybrid reasoning agents llm agents that think in latent space act through text",
+        "fingerprint": "55cd52278fa035c3723ece4d5d881f2657c82642ca780551d8b823c601c7f0d8",
+        "rule_score": 45.68038888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+        "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+        "published_at": "2026-10-18T20:37:40Z",
+        "fetched_at": "2026-10-19T17:22:50.504086Z",
+        "language": "unknown",
+        "excerpt": "The company offered some broad-strokes ideas for how this money might actually be used, such as “large donations to traditional nonprofits or direct distributions to specific populations.”",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "06226ac977495847",
+        "canonical_url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund",
+        "normalized_title": "anthropic says it s committing 5 of its shares to a public benefit fund",
+        "fingerprint": "06226ac97749584757130fc0866ec3743148baf9eaf7bc82f69fa6d320f4e0e1",
+        "rule_score": 44.66277777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+        "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+        "published_at": "2026-10-18T16:30:00Z",
+        "fetched_at": "2026-10-19T17:22:50.504097Z",
+        "language": "unknown",
+        "excerpt": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "1fa1f411255c240e",
+        "canonical_url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce",
+        "normalized_title": "disney agrees to hire the majority of character ai s workforce",
+        "fingerprint": "1fa1f411255c240e6775d830df212d19c3b985dff177a46b6c03eb1ecb1e13f8",
+        "rule_score": 44.25
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A hacker broke into John Deere and SharkNinja with an army of AI agents",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+        "published_at": "2026-10-19T14:23:17Z",
+        "fetched_at": "2026-10-19T17:22:51.824029Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dkobia",
+        "upstream_urls": [
+          "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins"
+        ],
+        "raw_metadata": {
+          "hn_id": 50152877,
+          "score": 44
+        },
+        "id": "5e4327c19a788013",
+        "canonical_url": "https://www.theverge.com/ai-artificial-intelligence/1013643/ai-agents-hack-john-deere-shark-ninja-cummins",
+        "normalized_title": "a hacker broke into john deere and sharkninja with an army of ai agents",
+        "fingerprint": "5e4327c19a788013a7d2c94764282471f241f5fccbd7a200048333009ac8f6aa",
+        "rule_score": 43.438805555555554
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Timestral: Mistral release time-series foundation models",
+        "url": "https://mistral.ai/news/timestral/",
+        "published_at": "2026-10-19T09:59:32Z",
+        "fetched_at": "2026-10-19T17:22:50.799664Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "groar",
+        "upstream_urls": [
+          "https://mistral.ai/news/timestral/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50150434,
+          "score": 376
+        },
+        "id": "f85af8d6446ad22b",
+        "canonical_url": "https://mistral.ai/news/timestral",
+        "normalized_title": "timestral mistral release time series foundation models",
+        "fingerprint": "f85af8d6446ad22b1ce9e7629e7085ae3753c2d1caf89f9825aa08f802a58b40",
+        "rule_score": 42.99922222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Degraded availability for GitHub Actions, GitHub Pages and Webhooks",
+        "url": "https://www.githubstatus.com/incidents/8tzbpcnl75jp",
+        "published_at": "2026-10-19T15:52:26Z",
+        "fetched_at": "2026-10-19T17:22:51.060078Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gateauxd",
+        "upstream_urls": [
+          "https://www.githubstatus.com/incidents/8tzbpcnl75jp"
+        ],
+        "raw_metadata": {
+          "hn_id": 50153934,
+          "score": 106
+        },
+        "id": "28293186a9d97eb5",
+        "canonical_url": "https://www.githubstatus.com/incidents/8tzbpcnl75jp",
+        "normalized_title": "degraded availability for github actions github pages and webhooks",
+        "fingerprint": "28293186a9d97eb59d67bb8e6a87653456187d29485fc4d5a3fa196186d843d0",
+        "rule_score": 39.58738888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "CERN and Mistral join forces to accelerate AI for science",
+        "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+        "published_at": "2026-10-19T15:28:24Z",
+        "fetched_at": "2026-10-19T17:22:50.712589Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "kensai",
+        "upstream_urls": [
+          "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50153630,
+          "score": 115
+        },
+        "id": "f0c9fa2200a170da",
+        "canonical_url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science",
+        "normalized_title": "cern and mistral join forces to accelerate ai for science",
+        "fingerprint": "f0c9fa2200a170dab6dcf6dc04a0e216efcdf0355f011295174a491c10062d3e",
+        "rule_score": 39.547333333333334
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nearly $3B: Mapping the Money Behind the AI Existential Risk Ecosystem",
+        "url": "https://www.aipanic.news/p/nearly-3-billion-mapping-the-money",
+        "published_at": "2026-10-19T14:32:04Z",
+        "fetched_at": "2026-10-19T17:22:54.979121Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "MrBuddyCasino",
+        "upstream_urls": [
+          "https://www.aipanic.news/p/nearly-3-billion-mapping-the-money"
+        ],
+        "raw_metadata": {
+          "hn_id": 50152990,
+          "score": 3
+        },
+        "id": "5f2e7046abf0b665",
+        "canonical_url": "https://www.aipanic.news/p/nearly-3-billion-mapping-the-money",
+        "normalized_title": "nearly 3b mapping the money behind the ai existential risk ecosystem",
+        "fingerprint": "5f2e7046abf0b66582228deb2c975e0ce3217a94f55ad1693bdad590909720df",
+        "rule_score": 39.45344444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Qwen3-4B with the AI writing tics trained out",
+        "url": "https://100toolkit.com/blog/deslop-model/",
+        "published_at": "2026-10-19T13:00:47Z",
+        "fetched_at": "2026-10-19T17:22:51.520883Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "erikkannike",
+        "upstream_urls": [
+          "https://100toolkit.com/blog/deslop-model/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50151928,
+          "score": 119
+        },
+        "id": "97b2ae4621bd6e4e",
+        "canonical_url": "https://100toolkit.com/blog/deslop-model",
+        "normalized_title": "show hn qwen3 4b with the ai writing tics trained out",
+        "fingerprint": "97b2ae4621bd6e4e375ab35570b067c8653c13e6a085943edb48f999299fef18",
+        "rule_score": 39.30130555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Harness2 by Google Research – Recursive Agent Harnessing",
+        "url": "https://github.com/google-research/harness2",
+        "published_at": "2026-10-19T11:28:45Z",
+        "fetched_at": "2026-10-19T17:22:52.390447Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "irthomasthomas",
+        "upstream_urls": [
+          "https://github.com/google-research/harness2"
+        ],
+        "raw_metadata": {
+          "hn_id": 50151059,
+          "score": 61
+        },
+        "id": "bb1795097e31468c",
+        "canonical_url": "https://github.com/google-research/harness2",
+        "normalized_title": "harness2 by google research recursive agent harnessing",
+        "fingerprint": "bb1795097e31468c158c2c48bdba27a47ab92f662fc2d8fbeb2dbab1e4bb4406",
+        "rule_score": 39.14791666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
+        "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+        "published_at": "2026-10-19T10:53:39Z",
+        "fetched_at": "2026-10-19T17:22:51.104217Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gslin",
+        "upstream_urls": [
+          "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166"
+        ],
+        "raw_metadata": {
+          "hn_id": 50150809,
+          "score": 171
+        },
+        "id": "c52287a244d6a89f",
+        "canonical_url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+        "normalized_title": "let s encrypt is adding two additional remote perspectives for domain validation",
+        "fingerprint": "c52287a244d6a89f4b0e6d37ff9c75b94d2ced9bac52347e8f2c966a2c5f2da7",
+        "rule_score": 39.089416666666665
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ousted Savannah police officer gave ICE agent husband access to Flock system",
+        "url": "https://www.wjcl.com/article/savannah-police-officer-ice-agent-flock-access/74135816",
+        "published_at": "2026-10-19T10:45:14Z",
+        "fetched_at": "2026-10-19T17:22:53.464683Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "DeepLogin",
+        "upstream_urls": [
+          "https://www.wjcl.com/article/savannah-police-officer-ice-agent-flock-access/74135816"
+        ],
+        "raw_metadata": {
+          "hn_id": 50150750,
+          "score": 591
+        },
+        "id": "eae0d9d15469e6f1",
+        "canonical_url": "https://www.wjcl.com/article/savannah-police-officer-ice-agent-flock-access/74135816",
+        "normalized_title": "ousted savannah police officer gave ice agent husband access to flock system",
+        "fingerprint": "eae0d9d15469e6f1f836dd10d56ee49c6f743c52eab72c30e3f3f0beeba5f7bd",
+        "rule_score": 39.07538888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "DeepSeek V4.1 Flash 1017 (Max)",
+        "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+        "published_at": "2026-10-19T04:41:46Z",
+        "fetched_at": "2026-10-19T17:22:53.832491Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "theanonymousone",
+        "upstream_urls": [
+          "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017"
+        ],
+        "raw_metadata": {
+          "hn_id": 50148452,
+          "score": 178
+        },
+        "id": "b4d783e7bcdebdc8",
+        "canonical_url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+        "normalized_title": "deepseek v4 1 flash 1017 max",
+        "fingerprint": "b4d783e7bcdebdc83fcf864ff3a2aaeb63386a437c6557019d47ad20e33de9ed",
+        "rule_score": 38.469611111111114
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "If you don't run your own LLM proxy, how do you know whats going on?",
+        "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
+        "published_at": "2026-10-18T21:09:12Z",
+        "fetched_at": "2026-10-19T17:22:51.736012Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "amrrs",
+        "upstream_urls": [
+          "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50145507,
+          "score": 277
+        },
+        "id": "149058349c884f20",
+        "canonical_url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on",
+        "normalized_title": "if you don t run your own llm proxy how do you know whats going on",
+        "fingerprint": "149058349c884f20c534951bd19e03168f3955af242d7be421ca2b6b519837ce",
+        "rule_score": 37.715333333333334
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Namecheap just seized and disabled all my domains",
+        "url": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/",
+        "published_at": "2026-10-18T16:56:56Z",
+        "fetched_at": "2026-10-19T17:22:53.044463Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sashk",
+        "upstream_urls": [
+          "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50142866,
+          "score": 642
+        },
+        "id": "5be88b5aaf422940",
+        "canonical_url": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains",
+        "normalized_title": "namecheap just seized and disabled all my domains",
+        "fingerprint": "5be88b5aaf4229408f77c084443486cf137abadc5afc7750676492e5376f62af",
+        "rule_score": 37.29488888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "How Far Will AI Assistants Go for a Refund They Can't Get?",
+        "url": "https://www.vals.ai/blogs/impossible-refund",
+        "published_at": "2026-10-18T12:22:58Z",
+        "fetched_at": "2026-10-19T17:22:53.659710Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "DeepLogin",
+        "upstream_urls": [
+          "https://www.vals.ai/blogs/impossible-refund"
+        ],
+        "raw_metadata": {
+          "hn_id": 50140462,
+          "score": 97
+        },
+        "id": "7ea78b0dbe80170d",
+        "canonical_url": "https://www.vals.ai/blogs/impossible-refund",
+        "normalized_title": "how far will ai assistants go for a refund they can t get",
+        "fingerprint": "7ea78b0dbe80170d25d27bd25f70962d67c2ad6d9a6b901ccd1108690a7e8808",
+        "rule_score": 37.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "How employment is changing at Anthropic",
+        "url": "https://www.anthropic.com/research/employment-at-anthropic",
+        "published_at": "2026-10-18T10:49:26Z",
+        "fetched_at": "2026-10-19T17:22:54.050872Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "theanonymousone",
+        "upstream_urls": [
+          "https://www.anthropic.com/research/employment-at-anthropic"
+        ],
+        "raw_metadata": {
+          "hn_id": 50139873,
+          "score": 143
+        },
+        "id": "7c9f07db18fda6d9",
+        "canonical_url": "https://www.anthropic.com/research/employment-at-anthropic",
+        "normalized_title": "how employment is changing at anthropic",
+        "fingerprint": "7c9f07db18fda6d9f00a970999620221f43514bbbf52e1631c2fd832b2b0fa1a",
+        "rule_score": 37.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I built a programming language that LLMs can't use",
+        "url": "https://blog.picheta.me/post/killswitch-lang/",
+        "published_at": "2026-10-17T22:26:47Z",
+        "fetched_at": "2026-10-19T17:22:52.433590Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dom96",
+        "upstream_urls": [
+          "https://blog.picheta.me/post/killswitch-lang/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50135762,
+          "score": 257
+        },
+        "id": "c0971f8295592935",
+        "canonical_url": "https://blog.picheta.me/post/killswitch-lang",
+        "normalized_title": "i built a programming language that llms can t use",
+        "fingerprint": "c0971f829559293534d61bbf18270eeacf45907e1bfdee582513ee0a53b2572f",
+        "rule_score": 37.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I Tried to Verify Rust OSS with Lean 4 and Found Many Bugs",
+        "url": "https://medium.com/@Koukyosyumei/i-tried-to-formally-verify-popular-rust-projects-with-lean-4-but-found-more-bugs-than-i-expected-5badd0017b7c",
+        "published_at": "2026-10-19T17:07:59Z",
+        "fetched_at": "2026-10-19T17:22:52.304542Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "syumei",
+        "upstream_urls": [
+          "https://medium.com/@Koukyosyumei/i-tried-to-formally-verify-popular-rust-projects-with-lean-4-but-found-more-bugs-than-i-expected-5badd0017b7c"
+        ],
+        "raw_metadata": {
+          "hn_id": 50154951,
+          "score": 3
+        },
+        "id": "a7d53813cbf58fd8",
+        "canonical_url": "https://medium.com/@Koukyosyumei/i-tried-to-formally-verify-popular-rust-projects-with-lean-4-but-found-more-bugs-than-i-expected-5badd0017b7c",
+        "normalized_title": "i tried to verify rust oss with lean 4 and found many bugs",
+        "fingerprint": "a7d53813cbf58fd88ed6f4a69132e8a0ff19d867c0a23dec8a53d2e6488a47f1",
+        "rule_score": 35.71330555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I no longer care to work on any Ruby gems so I've archived all my repositories",
+        "url": "https://po-ru.com/2026/10/18/why-im-no-longer-updating-this-repository",
+        "published_at": "2026-10-19T16:37:10Z",
+        "fetched_at": "2026-10-19T17:22:52.476467Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "phoronixrly",
+        "upstream_urls": [
+          "https://po-ru.com/2026/10/18/why-im-no-longer-updating-this-repository"
+        ],
+        "raw_metadata": {
+          "hn_id": 50154518,
+          "score": 152
+        },
+        "id": "e47a47e82a7ed88f",
+        "canonical_url": "https://po-ru.com/2026/10/18/why-im-no-longer-updating-this-repository",
+        "normalized_title": "i no longer care to work on any ruby gems so i ve archived all my repositories",
+        "fingerprint": "e47a47e82a7ed88f506d3085bebaed66b78095e58a8f65d06462e7b5ed3310a9",
+        "rule_score": 35.661944444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Japanese TV Station Interviews Americans About Their Love for Kei Trucks",
+        "url": "https://www.thedrive.com/news/japanese-tv-station-interviews-americans-about-their-love-for-kei-trucks-and-its-too-wholesome",
+        "published_at": "2026-10-19T16:09:22Z",
+        "fetched_at": "2026-10-19T17:22:52.562700Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "cf100clunk",
+        "upstream_urls": [
+          "https://www.thedrive.com/news/japanese-tv-station-interviews-americans-about-their-love-for-kei-trucks-and-its-too-wholesome"
+        ],
+        "raw_metadata": {
+          "hn_id": 50154150,
+          "score": 6
+        },
+        "id": "890b4a063b3de186",
+        "canonical_url": "https://www.thedrive.com/news/japanese-tv-station-interviews-americans-about-their-love-for-kei-trucks-and-its-too-wholesome",
+        "normalized_title": "japanese tv station interviews americans about their love for kei trucks",
+        "fingerprint": "890b4a063b3de186e6c372f0a4b6fff9e09e439b231368087a7b9b8c6a6290ec",
+        "rule_score": 35.615611111111114
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ontology-Driven Observability: Building an End-to-End Knowledge Graph at Netflix",
+        "url": "https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf",
+        "published_at": "2026-10-19T15:10:20Z",
+        "fetched_at": "2026-10-19T17:22:50.755886Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "tosh",
+        "upstream_urls": [
+          "https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf"
+        ],
+        "raw_metadata": {
+          "hn_id": 50153431,
+          "score": 65
+        },
+        "id": "59b3930ce33ea922",
+        "canonical_url": "https://netflixtechblog.com/ontology-driven-observability-building-an-end-to-end-knowledge-graph-at-netflix-scale-421392cf5adf",
+        "normalized_title": "ontology driven observability building an end to end knowledge graph at netflix",
+        "fingerprint": "59b3930ce33ea9220489b959bc342dde3a5848970fdd6a3c92ed7f5a580a5ce3",
+        "rule_score": 35.51722222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Big Tech Oligarchs Have a Terrible Plan for Humanity",
+        "url": "https://www.theatlantic.com/ideas/2026/10/ai-regulation-transhumanism-oligarchs/689013/",
+        "published_at": "2026-10-19T15:07:11Z",
+        "fetched_at": "2026-10-19T17:22:52.956829Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "01-_-",
+        "upstream_urls": [
+          "https://www.theatlantic.com/ideas/2026/10/ai-regulation-transhumanism-oligarchs/689013/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50153403,
+          "score": 42
+        },
+        "id": "e6c649a36a2234cb",
+        "canonical_url": "https://www.theatlantic.com/ideas/2026/10/ai-regulation-transhumanism-oligarchs/689013",
+        "normalized_title": "big tech oligarchs have a terrible plan for humanity",
+        "fingerprint": "e6c649a36a2234cb3119cabb8a2ef74b4fcff195190109e68955cb836de6a47c",
+        "rule_score": 35.51197222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Maybe There Was an Egg Cartel After All",
+        "url": "https://www.politico.com/news/magazine/2026/10/18/egg-prices-conspiracy-affordability-issue-01100411",
+        "published_at": "2026-10-19T14:31:11Z",
+        "fetched_at": "2026-10-19T17:22:51.477014Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "iamnothere",
+        "upstream_urls": [
+          "https://www.politico.com/news/magazine/2026/10/18/egg-prices-conspiracy-affordability-issue-01100411"
+        ],
+        "raw_metadata": {
+          "hn_id": 50152970,
+          "score": 117
+        },
+        "id": "bd188486c295653c",
+        "canonical_url": "https://www.politico.com/news/magazine/2026/10/18/egg-prices-conspiracy-affordability-issue-01100411",
+        "normalized_title": "maybe there was an egg cartel after all",
+        "fingerprint": "bd188486c295653c83b8c106c61e5d0044c3338f4f281c3f4a2da41c44919dd4",
+        "rule_score": 35.451972222222224
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Beyond These Stars",
+        "url": "https://store.steampowered.com/app/2295060/Beyond_These_Stars/",
+        "published_at": "2026-10-19T14:06:10Z",
+        "fetched_at": "2026-10-19T17:22:54.510985Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "doener",
+        "upstream_urls": [
+          "https://store.steampowered.com/app/2295060/Beyond_These_Stars/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50152701,
+          "score": 13
+        },
+        "id": "50bb2d7bed687036",
+        "canonical_url": "https://store.steampowered.com/app/2295060/Beyond_These_Stars",
+        "normalized_title": "beyond these stars",
+        "fingerprint": "50bb2d7bed687036c72688bf17b85adf15449c07ee897c39bc3e79133ea3bc88",
+        "rule_score": 35.41027777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: KiviDB, a faster Redis-compatible memory database and vector cache",
+        "url": "https://github.com/kividbio/kividb",
+        "published_at": "2026-10-19T13:53:52Z",
+        "fetched_at": "2026-10-19T17:22:51.258457Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "murtazayusuf",
+        "upstream_urls": [
+          "https://github.com/kividbio/kividb"
+        ],
+        "raw_metadata": {
+          "hn_id": 50152541,
+          "score": 46
+        },
+        "id": "2aa038d317af2371",
+        "canonical_url": "https://github.com/kividbio/kividb",
+        "normalized_title": "show hn kividb a faster redis compatible memory database and vector cache",
+        "fingerprint": "2aa038d317af2371c250714d7665f988029cb624e484479eac87c293488bbb91",
+        "rule_score": 35.38977777777778
+      }
+    ],
+    "prompt_chars": 4541,
+    "estimated_input_tokens": 1135
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
