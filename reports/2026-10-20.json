@@ -1,72 +1,162 @@
 {
   "date": "2026-10-20",
-  "generated_at": "2026-10-19T17:22:21.269335Z",
-  "run_id": "2026-10-20-b27d003f",
-  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 b11738，修复 SWA 检查点失效逻辑。",
+  "generated_at": "2026-10-20T15:35:00.542448Z",
+  "run_id": "2026-10-20-fc9034e1",
+  "daily_summary_zh": "今日高信号主要集中在智能体环境与记忆架构：WildAWM 用开源模型合成计算机使用环境，MemT-1.0 将记忆内化到基础模型；世界模型泛化基准 AnyGoal 与想象式智能体训练 Agima 也值得关注。工程侧有 Transformers 多模态/专家并行修复和 AWS Trainium 适配进展。",
   "events": [
     {
       "id": "event-1",
       "candidate_ids": [
-        "a20db86d4c5e868d"
+        "a49d7f521c5a58dd"
       ],
-      "category": "open-source",
-      "title_zh": "llama.cpp 发布 b11738，修复 SWA 检查点失效逻辑",
-      "summary_zh": "llama.cpp 发布 b11738 版本，主要修复 server 端滑动窗口注意力（SWA）检查点失效逻辑，并加入在 n_past 与 n_prefix 边界下验证的测试用例；同时提供 macOS/iOS、Linux 多平台构建产物。",
-      "why_it_matters_zh": "本地推理工具链的稳定性更新，直接影响长上下文/滑动窗口场景下的服务端缓存与恢复行为，对本地部署和边缘推理有实用价值。",
-      "importance_score": 50.0,
+      "category": "research",
+      "title_zh": "WildAWM：用开源模型合成计算机使用智能体环境",
+      "summary_zh": "论文提出 Agent World Model in the Wild（WildAWM），一个可扩展的流水线，用于合成可控环境和任务以训练通用计算机使用智能体。其可执行环境同时支持 GUI、MCP 服务和命令行界面，且完全由开源模型驱动；并通过执行式质量门控（异构智能体 rollout、交叉评审一致性检查等）处理任务可解性、难度和验证器可靠性。",
+      "why_it_matters_zh": "在真实计算机系统中训练 CUA 有安全风险，WildAWM 试图用合成环境扩展训练，并证明不依赖专有前沿模型也能生成高质量环境。",
+      "importance_score": 86.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
-        "source_id": "llama-cpp-releases",
-        "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b11738",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11738",
-        "published_at": "2026-10-19T16:59:59Z"
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Agent World Model in the Wild: Computer-Use Agent Environment Synthesis",
+        "url": "https://arxiv.org/abs/2610.26828v1",
+        "published_at": "2026-10-19T17:55:35Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "e4fa30bfd0746768"
+      ],
+      "category": "models",
+      "title_zh": "MemT-1.0：把记忆内化为基础模型计算能力",
+      "summary_zh": "MemT-1.0 是记忆基础模型架构，基于 Metis，采用 Gated DeltaNet-2 的稳定 token 级记忆更新机制，并引入 Mixture-of-Storage 扩展原生记忆容量；使用 34B tokens 进行继续预训练和后训练，发布 Nano 与 Flash 两个模型。评测称其平均优于参数化记忆基线，与检索增强方法竞争，同时基本保持通用能力；128K 历史长度下 Nano 约 1.86 倍端到端推理加速。",
+      "why_it_matters_zh": "把记忆作为模型计算的一部分，而非外挂检索，是长上下文、持续学习和个性化基础模型的重要方向。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MemT-1.0: Towards Memory-Native Evolution",
+        "url": "https://arxiv.org/abs/2610.26825v1",
+        "published_at": "2026-10-19T17:54:35Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "cdc4a58d687cc3c0"
+      ],
+      "category": "research",
+      "title_zh": "AnyGoal：世界模型的组合泛化基准",
+      "summary_zh": "论文提出 AnyGoal，一个由常用世界模型环境改造出的目标偏移任务基准及开源库。任务设计让单个状态因子和动作仍在训练支持内，但其组合在专家轨迹中覆盖不足；在多个环境和世界模型家族上，当前模型一致出现失败。",
+      "why_it_matters_zh": "把数据覆盖、动力学泛化与下游规划性能联系起来，指出世界模型在未见组合上的可靠性缺口。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AnyGoal: On World Model Generalization Beyond Expert Rollouts",
+        "url": "https://arxiv.org/abs/2610.26844v1",
+        "published_at": "2026-10-19T17:59:05Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "a101961566d8e94a"
+      ],
+      "category": "research",
+      "title_zh": "Agima：训练会“先想象再行动”的智能体",
+      "summary_zh": "论文提出 Agentic Imagination（Agima）训练框架，让单一 omni 模型在行动前想象后果：提出动作、生成结果图像，并对想象出的未来进行推理。先用 SFT 统一策略与世界建模，再用智能体强化学习教模型利用想象进行规划；在 Maze2D、Sokoban、Pacman、PushT 四个环境中验证泛化。",
+      "why_it_matters_zh": "面向不可逆或反馈稀疏的动作，把世界模型想象直接接入决策循环，减少盲目试错。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Train An Imaginative Agent",
+        "url": "https://arxiv.org/abs/2610.26845v1",
+        "published_at": "2026-10-19T17:59:12Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "6893750376790b98"
+      ],
+      "category": "models",
+      "title_zh": "ALTK-Evolve：学习式记忆在客服任务基准登顶",
+      "summary_zh": "Hugging Face 博客介绍 IBM Research 的 ALTK-Evolve：通过学习到的记忆，在 τ²-bench 客服任务排行榜上登顶，且未依赖前沿模型。",
+      "why_it_matters_zh": "表明记忆机制和系统工程可在特定任务上弥补模型规模差距，对企业客服智能体有参考价值。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "ALTK-Evolve: How learned memory tops the τ²-bench leaderboard on customer service tasks without a frontier model",
+        "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+        "published_at": "2026-10-20T15:19:48Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "cd373689c797e644"
+      ],
+      "category": "developer-tools",
+      "title_zh": "TorchNeuron：在 AWS Trainium 上运行 Hugging Face 模型更简单",
+      "summary_zh": "Hugging Face 发布博客介绍 TorchNeuron，称在 AWS Trainium 上运行 Hugging Face 模型变得更简单。",
+      "why_it_matters_zh": "降低在非 NVIDIA 加速器上运行和部署 Hugging Face 模型的门槛，扩展硬件选择。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "TorchNeuron: running HF models on AWS Trainium is easier than ever",
+        "url": "https://huggingface.co/blog/hf-torchneuron",
+        "published_at": "2026-10-19T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-14",
+      "candidate_ids": [
+        "5ced3a55bb011b26"
+      ],
+      "category": "developer-tools",
+      "title_zh": "Transformers 发布 v5.20.2 补丁",
+      "summary_zh": "Transformers 发布 v5.20.2 补丁，修复 generate 中 prepare_inputs_for_generation 可能丢失输入类型、进而影响多模态模型的问题；同时修复 bfloat16 下专家并行且 ep_size 小于 fsdp_size 时的零专家梯度、VLM 仅报告文本时的输入模态声明，以及 eager_mask 中的一次 host-to-device 拷贝。",
+      "why_it_matters_zh": "涉及多模态生成和专家并行训练稳定性，影响使用最新 Transformers 的开发者。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "transformers-releases",
+        "source_name": "Transformers Releases",
+        "title": "Transformers Releases: Patch release v5.20.2",
+        "url": "https://github.com/huggingface/transformers/releases/tag/v5.20.2",
+        "published_at": "2026-10-19T17:45:37Z"
       },
       "related_sources": []
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 97,
-    "normalized": 97,
-    "filtered": 74,
+    "enabled": 9,
+    "fetched": 175,
+    "normalized": 175,
+    "filtered": 143,
     "ai_candidates": 30,
-    "prompt_chars": 4541,
-    "estimated_input_tokens": 1135,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 27842,
+    "estimated_input_tokens": 6960,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }
