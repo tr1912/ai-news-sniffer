@@ -1,0 +1,261 @@
+{
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21T15:52:05.793425Z",
+  "run_id": "2026-10-21-303ec7e6",
+  "daily_summary_zh": "今日精选聚焦智能体能力演化、语音与时间序列模型、TPU 原生开发工具，以及企业级智能体安全与推理缓存优化。研究侧关注具身控制、扩散-自回归混合推理、机器人集群记忆和可观测性诊断；开源与基础设施侧则覆盖 Granite Speech 5.0、TorchTPU、NVIDIA Agent 安全方案和 llama.cpp 增量更新。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "6218a106658518a2"
+      ],
+      "category": "research",
+      "title_zh": "Agent S4：自主演化智能体接口，OSWorld V2 开源 SOTA",
+      "summary_zh": "论文提出 Agent S4，让元智能体从任务智能体的轨迹经验中构建并修订接口及使用知识库，再通过种群式演化选择更能泛化的接口库。在 OSWorld V2 上，使用 Qwen3.8-27B 与演化接口库达到 21.3% binary score，是同一模型使用固定接口的 3.8 倍，并高于 GPT-5.5 的 13.0%。",
+      "why_it_matters_zh": "该工作把接口设计本身变成智能体可学习的能力，而不是依赖人工为每个应用手工构建接口，为计算机使用智能体扩展到新应用和工作流提供了可演化路径。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Evolving Agent Interfaces",
+        "url": "https://arxiv.org/abs/2610.28601v1",
+        "published_at": "2026-10-20T17:47:37Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "036e83817962f945"
+      ],
+      "category": "models",
+      "title_zh": "IBM 发布 Granite Speech 5.0：更快更准的转写、翻译与归属",
+      "summary_zh": "IBM Granite 在 Hugging Face 博客发布 Granite Speech 5.0，官方介绍其在语音转写、翻译与说话人/内容归属方面实现更准确、更快速的能力。",
+      "why_it_matters_zh": "语音模型正从单一转写走向转写、翻译与归属一体化，Granite Speech 5.0 为企业级多语言语音应用提供了新的开源模型选择。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Granite Speech 5.0: Transcribe, Translate, and Attribute more Accurately and Faster",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-speech-5",
+        "published_at": "2026-10-21T14:58:18Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "50e18246935bb803"
+      ],
+      "category": "developer-tools",
+      "title_zh": "Hugging Face 介绍 TorchTPU：在生态中原生使用 TPU",
+      "summary_zh": "Hugging Face 官方博客发布 TorchTPU 相关内容，介绍在 Hugging Face 生态中以原生方式接入和使用 TPU 的路径。",
+      "why_it_matters_zh": "若 TPU 能更原生地融入主流开源模型与工具链，将降低开发者在非 NVIDIA 加速器上训练和部署模型的迁移成本。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Hugging Face ❤️ TorchTPU: TPUs, Natively",
+        "url": "https://huggingface.co/blog/hf-torchtpu",
+        "published_at": "2026-10-20T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "49399aad06f1eb4b",
+        "bf8c40bfcf9fc9c4"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 推出 Sentry 与 OpenShell，强化 AI Agent 运行时安全治理",
+      "summary_zh": "NVIDIA 官方博客介绍 Sentry，用于在运行时保护 AI Agent，防止其在执行任务时绕过安全边界；同时发布 OpenShell 参考架构，用于大规模保护和治理 AI Agent 工作负载。",
+      "why_it_matters_zh": "随着自主 Agent 长时间运行并访问文件、工具和网络，运行时安全与规模化治理正成为企业部署 Agent 的关键基础设施，而不仅是模型能力问题。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
+        "url": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/",
+        "published_at": "2026-10-21T09:52:16Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "nvidia-genai",
+          "source_name": "NVIDIA Generative AI Blog",
+          "title": "How NVIDIA OpenShell Reference Architecture Secures and Governs AI Agent Workloads at Scale",
+          "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/",
+          "published_at": "2026-10-21T09:50:14Z"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "849f24934c586513"
+      ],
+      "category": "research",
+      "title_zh": "面向 Agent 的缓存工程：直接控制 KV Cache 而无需重预填充",
+      "summary_zh": "论文提出“缓存工程”方案，让 Agent 通过 drop 与 repos 操作直接控制活跃 KV Cache，无需修改轨迹或对保留上下文重新预填充；同时指出相同 token 序列在不同缓存操作序列下可能产生不同缓存状态，带来历史依赖的服务挑战。",
+      "why_it_matters_zh": "长轨迹 Agent 的 KV Cache I/O 与存储已成为主要成本，缓存工程试图在不牺牲上下文准确性的前提下控制缓存增长，对 Agent 推理系统优化有直接价值。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Cache Engineering for Agents",
+        "url": "https://arxiv.org/abs/2610.28577v1",
+        "published_at": "2026-10-20T17:32:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "9c4ad16123d2891e"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA Kumo Forecast：融合预训练时间序列表示、历史模式检索与可解释性",
+      "summary_zh": "NVIDIA 在 Hugging Face 博客介绍 Kumo Forecast，将预训练时间序列表示与历史模式检索、可解释性能力结合，用于时间序列预测。",
+      "why_it_matters_zh": "时间序列基础模型正在从纯端到端预测走向检索增强与可解释输出，这对企业预测场景的可靠落地尤为重要。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "NVIDIA Kumo Forecast Combines Pretrained Time-Series Representations with Historical Pattern Retrieval and Interpretability",
+        "url": "https://huggingface.co/blog/nvidia/kumo-forecast",
+        "published_at": "2026-10-21T12:51:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "55b1c033196bc346"
+      ],
+      "category": "research",
+      "title_zh": "FairStress：更深入评估 LLM 决策中的公平性",
+      "summary_zh": "Hugging Face 博客介绍 AllenAI 的 FairStress，用于对 LLM 决策过程中的公平性进行更深入的评估。",
+      "why_it_matters_zh": "公平性评估若只停留在聚合指标，容易掩盖模型在不同压力场景下的差异；FairStress 指向更细粒度的决策公平性测试。",
+      "importance_score": 63.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "FairStress: A deeper evaluation of fairness in LLM decision-making",
+        "url": "https://huggingface.co/blog/allenai/fairstress",
+        "published_at": "2026-10-20T16:09:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "e8bec9a96e9a7a33"
+      ],
+      "category": "research",
+      "title_zh": "UniWALM：统一世界-动作-语言模型用于具身机器人控制",
+      "summary_zh": "论文提出 UniWALM，在单一共享表示中联合学习视频、动作和语言，并在一个混合 Transformer 主干中让各模态扩散头同步去噪；生成的语言会在下一步被重新消费，形成语言作为记忆的闭环，同时提出 Flow Matching with Correction 训练目标以提升动作流可靠性。",
+      "why_it_matters_zh": "该方法尝试把规划、记忆与动作生成统一进单个模型，减少对外部规划器或记忆库的依赖，是具身智能架构一体化的重要探索。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "UniWALM: Unified World Action Language Model for Embodied Robot Control",
+        "url": "https://arxiv.org/abs/2610.28626v1",
+        "published_at": "2026-10-20T17:59:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "82e61b16f5de2654"
+      ],
+      "category": "research",
+      "title_zh": "CoRAL：扩散-自回归混合框架缓解多模态推理的顺序瓶颈",
+      "summary_zh": "论文提出 CoRAL，通过非对称规划器-执行器架构组合扩散语言模型与自回归模型：扩散规划器并行生成多条推理轨迹，大型自回归执行器选择最优方案并生成最终答案，并使用 Reward-Guided Denoising for CoT 训练规划器。",
+      "why_it_matters_zh": "该工作试图同时利用扩散模型的并行生成和自回归模型的语义连贯性，为多模态推理的效率与质量平衡提供新架构。",
+      "importance_score": 61.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Beyond the Sequentiality Bottleneck: A Hybrid Diffusion-Autoregressive Framework for Efficient Multimodal Reasoning",
+        "url": "https://arxiv.org/abs/2610.28584v1",
+        "published_at": "2026-10-20T17:39:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "4718f4be10d351c7"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11796：为 mtmd_gen 增加状态对象",
+      "summary_zh": "llama.cpp 发布 b11796 版本，主要变更为 mtmd 增加 mtmd_gen 状态对象，并同步提供 macOS、iOS、Linux 等多平台预编译包。",
+      "why_it_matters_zh": "作为本地推理的重要开源项目，llama.cpp 的持续迭代直接影响开发者在多硬件平台上的部署体验；本次更新属于工具链层面的增量改进。",
+      "importance_score": 55.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11796",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11796",
+        "published_at": "2026-10-21T12:34:53Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 190,
+    "normalized": 190,
+    "filtered": 153,
+    "ai_candidates": 30,
+    "prompt_chars": 26398,
+    "estimated_input_tokens": 6599,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
