@@ -1,0 +1,192 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-22T15:49:01.057787Z",
+  "run_id": "2026-10-22-532a41df",
+  "daily_summary_zh": "今日高信号事件以研究评测、开源工程与模型效率为主：P2NPCBench 揭示前沿模型在 P/NP 复杂度边界上的系统性短板；LIBERO-10、Environment Duels 与 Quant-Arena 分别从机器人操作、模型共演化和量化研究角度扩展智能体评测。工程侧，NVIDIA Kumo Relational 强调免训练关系数据建模，词表专用化展示 77% 推理降本空间，llama.cpp 继续扩展新模型支持。研究侧还出现 AI 辅助发现共识协议、无需外部数据的长上下文自训练、循环扩散语言模型效率提升，以及面向类人机器人和世界模型的物理/控制新框架。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "0c9497b475824090"
+      ],
+      "category": "evaluation",
+      "title_zh": "P2NPCBench：用对抗式多智能体重写检验LLM能否区分P与NP完全问题",
+      "summary_zh": "研究者提出 P2NPCBench，包含12个问题族，每个NP完全问题都配一个表面形式相同的P类孪生问题；并用 AgentGAN 让生成器重写题干直到冻结代码模型失败，同时通过可执行有效性门保持答案和复杂度类别不变，最终得到2,114条硬化题。评测12个闭源和开源模型，NPC题 pass@1 为35.4%，P孪生题为63.8%；95.1%的模型族配对在NPC侧错误更多；将时间限制提高10倍，NPC准确率仅从28.5%升至31.9%。",
+      "why_it_matters_zh": "该基准把“记忆题型”和“真正推理”区分开，显示前沿模型在复杂度边界上仍存在系统性弱点，对模型评测和推理能力研究有直接价值。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Did the Problem Actually Get Harder? Testing LLMs on Paired P and NP-Complete Problems Hardened by Adversarial Multi-Agent Rewriting",
+        "url": "https://arxiv.org/abs/2610.30103v1",
+        "published_at": "2026-10-21T17:50:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "42c72c0ca0a1a6a0"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA Kumo Relational：无需训练即在关系型数据上超过监督学习",
+      "summary_zh": "NVIDIA 在 Hugging Face 博客介绍 Kumo Relational，称其在关系型数据任务上无需训练即可优于监督机器学习方法。",
+      "why_it_matters_zh": "若无需任务特定训练即可处理关系数据，可能降低企业表格/关系数据建模门槛，并改变特征工程与模型部署流程。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+        "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+        "published_at": "2026-10-21T18:26:30Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "2327dcba6e428b37"
+      ],
+      "category": "research",
+      "title_zh": "AI辅助发现新共识协议A-greement，挑战分布式共识研究",
+      "summary_zh": "论文报告 AI 辅助发现新共识协议 A-greement，面向地理复制状态机；在六种使用5或9个副本的部署上平均，写密集和读密集负载下相比最快基线分别降低12.2%和33.3%平均延迟，只读负载与最快基线持平。其核心是 AI-greement 智能体框架，用于自主发现、实现、实验和验证候选协议。",
+      "why_it_matters_zh": "这是AI参与系统级科学发现的标志性案例，显示智能体框架可能加速分布式系统等传统由人类主导的协议研究。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "The End of Consensus Research?",
+        "url": "https://arxiv.org/abs/2610.30114v1",
+        "published_at": "2026-10-21T17:55:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "39cd7ca94fa4963f"
+      ],
+      "category": "robotics",
+      "title_zh": "LIBERO-10机器人操作评测：前沿模型直接控制机械臂的成功率仍有限",
+      "summary_zh": "研究提出统一闭环操作框架，让模型通过视觉观测、机器人本体感知和结构化工具调用直接控制机器人，无需任务微调或预训练操作技能；在 LIBERO-10 上评估6个前沿模型（GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna、Claude Opus 5、Claude Opus 5.5、Gemini-4 Argon）在3种推理强度下共18种配置、1800个回合。GPT-6 Astra 成功率最高44%，Gemini-4 Argon 43%；提高推理强度总体改善操作表现。",
+      "why_it_matters_zh": "系统量化了通用模型作为机器人控制器的能力边界，说明视觉语言推理与真实操作之间仍有明显差距。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation Tasks",
+        "url": "https://arxiv.org/abs/2610.30051v1",
+        "published_at": "2026-10-21T17:11:52Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "ecfe49846264486c"
+      ],
+      "category": "inference",
+      "title_zh": "专用化小模型词表可将实际应用推理成本降低77%",
+      "summary_zh": "Hugging Face 博客文章介绍一种面向小语言模型的词表专用化方法，并在真实应用中报告可将推理成本降低77%。",
+      "why_it_matters_zh": "推理成本是LLM落地的核心约束；词表级优化提供了不依赖更大模型的降本路径，对端侧和规模化部署有参考价值。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications",
+        "url": "https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization",
+        "published_at": "2026-10-21T17:35:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "f9396d1e08b72d96"
+      ],
+      "category": "research",
+      "title_zh": "LongZero：无需外部数据提升LLM长上下文推理",
+      "summary_zh": "论文提出 LongZero，让LLM在没有任何外部数据的情况下自我改进长上下文推理：模型先以紧凑结构化形式合成问题、答案和支持证据，再把证据扩展为长多文档上下文，并结合自写多跳推理任务与多轮检索任务，用 GRPO 训练。",
+      "why_it_matters_zh": "长上下文RL训练受限于高质量长数据和强教师模型；从零数据自生成任务为持续提升长上下文能力提供了可扩展路径。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "LongZero: Enhancing Long-Context Reasoning in LLMs from Zero Data",
+        "url": "https://arxiv.org/abs/2610.30132v1",
+        "published_at": "2026-10-21T17:59:14Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "056053e27bd50dc5"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp发布b11819：增加Nemotron非标准GQA、BPE分词器等支持",
+      "summary_zh": "llama.cpp 发布 b11819，包含对 Nemotron 非标准 GQA、BPE tokenizer 以及 domyn-small pre-type 的支持，并涉及 GGUF 元数据中 Metaspace prepend_scheme 的写入与解析。",
+      "why_it_matters_zh": "llama.cpp 是本地推理的关键开源项目；对新模型结构和分词器的支持直接扩展了可部署模型范围。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11819",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11819",
+        "published_at": "2026-10-22T12:53:52Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 193,
+    "normalized": 193,
+    "filtered": 150,
+    "ai_candidates": 30,
+    "prompt_chars": 23322,
+    "estimated_input_tokens": 5830,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
