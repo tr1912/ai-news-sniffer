@@ -1,0 +1,261 @@
+{
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T15:40:08.972026Z",
+  "run_id": "2026-10-23-22e0499a",
+  "daily_summary_zh": "今日候选以研究与官方工具更新为主：微软 ThinkingBox 将数据库评分转为强化学习奖励；Hugging Face、AllenAI 与 NVIDIA 发布模型、部署和机器人仿真相关工具；研究侧聚焦 LLM 合规评估、预训练语料审计、RLVR 行为轨迹、智能体证据缺失安全、推理忠实性以及低比特 n-gram 内存优化。单一商业媒体来源的发布未纳入。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "20b1ce16a6dcb046"
+      ],
+      "category": "models",
+      "title_zh": "微软 ThinkingBox：把数据库评分转化为强化学习奖励",
+      "summary_zh": "Hugging Face 官方博客发布文章，介绍微软的 ThinkingBox 方法，将数据库评分转化为强化学习奖励，用于后训练智能体。",
+      "why_it_matters_zh": "把可验证的数据库执行结果作为奖励信号，可能推动工具调用与数据操作智能体的后训练方法发展。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+        "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+        "published_at": "2026-10-22T22:24:34Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "450fa0843ea3d58a"
+      ],
+      "category": "research",
+      "title_zh": "VERA：面向 EU AI Act 的负责任 AI 评估仪表盘",
+      "summary_zh": "论文提出 VERA，一个开源自托管仪表盘，帮助非工程评审者按 EU AI Act 的 COMPL-AI 框架评估 LLM。该框架将证据组织为六组原则和十八项技术要求，其中十二项可由现有基准测量；VERA 支持选择模型、运行公开基准、对可测量要求评分，并记录每次评估的能耗。作者在一家大型欧洲银行部署该仪表盘，用四款开源权重模型跑通要求流水线，并开展用户研究比较原始输出与仪表盘阅读方式。",
+      "why_it_matters_zh": "把合规证据、能耗记录与可用性结合，降低受监管行业评估和审批 LLM 部署的技术门槛。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "VERA: A Responsible AI Dashboard for Assessing LLM Deployments in Light of the EU AI Act",
+        "url": "https://arxiv.org/abs/2610.31588v1",
+        "published_at": "2026-10-22T17:23:39Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "82039267474ab44d"
+      ],
+      "category": "research",
+      "title_zh": "RLVR 是否强化工具性收敛？OLMo-3 检查点证据",
+      "summary_zh": "论文用 InstrumentalEval 评估 OLMo-3-7B-Think 在 SFT、DPO、13 个 RLVR 中间检查点和最终 RLVR 模型上的工具性收敛行为。轨迹呈非单调：工具性收敛率从 SFT 的 25.0% 上升到 RLVR 约第 200 步的 46.1%，最终检查点降至 11.8%；配对条目级检验和逐步回归支持最终的 SFT 到 RLVR 下降。",
+      "why_it_matters_zh": "提示不能只用最终安全分数判断 RLVR 影响，训练中段可能出现明显的行为波动。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3",
+        "url": "https://arxiv.org/abs/2610.31624v1",
+        "published_at": "2026-10-22T17:44:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "049f1ae1e225e056"
+      ],
+      "category": "research",
+      "title_zh": "用智能体审计斯洛伐克语 FineWeb2 语料",
+      "summary_zh": "论文把 LLM 用作语料调试器，通过只读、预算受限的 API 探索 FineWeb2 的 2650 万篇斯洛伐克语文档，每次运行成本约 2.21 至 2.84 美元。三次运行在四类现象上发现七个问题，最大问题是 1,408,437 篇机器生成内容农场文档（5.32%）通过流水线过滤，其中 86.6% 也通过更严格阈值。编译后的测试套件可在 0.7 秒内扫描全语料且无需 GPU；盲标支持七个发现中的六个。",
+      "why_it_matters_zh": "展示智能体审计多语言预训练语料、并把发现转化为可复用可执行测试的低成本路径。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Can an Agent Debug a Web Corpus? Agentic Auditing of Slovak FineWeb2",
+        "url": "https://arxiv.org/abs/2610.31636v1",
+        "published_at": "2026-10-22T17:52:22Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "c7197a8795c6e758"
+      ],
+      "category": "research",
+      "title_zh": "低比特 n-gram 嵌入降低语言模型内存",
+      "summary_zh": "论文研究以低精度存储 n-gram 嵌入表，并在 nanochat、Llama 和 GPT-2 系列从零训练模型上测试。四比特表节省约 75% 的表内存，同时保留超过 99% 的由加入 n-gram 表带来的验证损失改善；更低位宽会导致更大性能下降，但短时间微调可恢复部分损失。将节省的内存再投资于更大的表，可在使用更少内存的同时超过原始全精度表性能。",
+      "why_it_matters_zh": "针对大 n-gram 记忆带来的内存开销给出压缩方案，有助于降低开放权重模型的内存成本。",
+      "importance_score": 71.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Low-Bit N-Gram Embeddings for Language Models",
+        "url": "https://arxiv.org/abs/2610.31646v1",
+        "published_at": "2026-10-22T17:56:13Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "d719061fb6e59b45"
+      ],
+      "category": "models",
+      "title_zh": "OlmoEarth v1.3 发布：面向全球尺度的嵌入模型",
+      "summary_zh": "AllenAI 在 Hugging Face 发布 OlmoEarth v1.3，称其提供面向整个地球的 state-of-the-art embeddings。",
+      "why_it_matters_zh": "地球观测与地理空间嵌入模型更新，可服务遥感、环境监测等下游任务。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "OlmoEarth v1.3: State-of-the-art embeddings for the whole planet",
+        "url": "https://huggingface.co/blog/allenai/olmoearth-v1-3",
+        "published_at": "2026-10-22T16:11:31Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "b9be7da021a42d10"
+      ],
+      "category": "infrastructure",
+      "title_zh": "Hugging Face 提供 AWS Trainium 模型支持查询",
+      "summary_zh": "Hugging Face 官方博客介绍如何查询模型是否支持 AWS Trainium，帮助开发者确认模型在 Trainium 上的可运行性。",
+      "why_it_matters_zh": "降低开发者在 Trainium 上选型和部署模型时的检索成本，便利非 NVIDIA 加速栈的模型适配。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Does Your Model Run on AWS Trainium? Look It Up",
+        "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+        "published_at": "2026-10-23T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "e21752499fc2ae0d"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 展示在 8 个 DGX Spark 节点上运行前沿级 AI 模型",
+      "summary_zh": "NVIDIA 博客介绍在 8 个 DGX Spark 节点上运行前沿级 AI 模型，面向多模型并行、链式推理调用和实验等开发场景。",
+      "why_it_matters_zh": "工作站级多节点分布式推理与实验方案，有助于开发者在本地环境编排多模型工作负载。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes",
+        "url": "https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/",
+        "published_at": "2026-10-22T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "f784da2646ce36d1"
+      ],
+      "category": "products",
+      "title_zh": "NVIDIA 展示用 AI 智能体在仿真中训练 Microduck 机器人行走",
+      "summary_zh": "NVIDIA 开发者博客介绍使用 AI 智能体教 Microduck 在仿真障碍赛道中行走；任务需要机器人感知环境、保持平衡并调整动作。",
+      "why_it_matters_zh": "展示智能体用于机器人仿真训练与复杂运动控制的实践路径。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Using AI Agents to Teach Robots Like Microduck to Walk in Simulation",
+        "url": "https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation/",
+        "published_at": "2026-10-23T14:58:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "b2a8d6ec0124c77e",
+        "827b8c3acbb0eae2"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 连续发布 b11799 与 b11838，修复时间溢出并优化 SYCL q8 反量化",
+      "summary_zh": "llama.cpp 发布 b11799，包含 SYCL q8 快速反量化；随后发布 b11838，修复 ggml_time_us 时间溢出，并提供 macOS、Linux 等多平台二进制包。",
+      "why_it_matters_zh": "本地推理工具持续修复平台问题并优化后端性能，影响开源模型在多种硬件上的部署体验。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11838",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11838",
+        "published_at": "2026-10-23T13:37:01Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b11799",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11799",
+          "published_at": "2026-10-21T17:52:03Z"
+        }
+      ]
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 183,
+    "normalized": 183,
+    "filtered": 140,
+    "ai_candidates": 30,
+    "prompt_chars": 28348,
+    "estimated_input_tokens": 7087,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
