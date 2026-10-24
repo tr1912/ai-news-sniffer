@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-24",
+  "generated_at": "2026-10-24T14:21:01.733196Z",
+  "run_id": "2026-10-24-ace0343d",
+  "daily_summary_zh": "今日重点集中在AI安全评估、人对LLM的信任校准、扩散语言模型解码、在线策略蒸馏、序列压缩与具身表示对齐等研究进展，并包含一项 llama.cpp 开源构建更新。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "e6e4a26a131b067b"
+      ],
+      "category": "research",
+      "title_zh": "研究：自信但错误的LLM会破坏人类信任校准",
+      "summary_zh": "arXiv 论文设计被试内实验：32名参与者分别与五个基于同一模型（GPT-5-mini）的助手学习最多五个科学主题，助手背景材料中0%、25%、50%、75%、100%的事实被替换为看似合理的错误信息，且均以完全自信的语气表达。104次测验、1040个答案中，得分从7.4/10降至2.9/10；被植入的错误选项在虚假条目中被选中60%，在正确教学条目中仅11%（优势比12.5）；助手陈述错误时约65%被采纳，且被采纳错误以8.4/10的高置信度持有，正确答案相对错误答案的置信度优势消失。",
+      "why_it_matters_zh": "该结果表明，LLM的自信表达会显著影响用户判断，削弱基于置信度的信任校准；这对AI助手在高风险知识场景中的交互设计和安全评估有直接启示。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration",
+        "url": "https://arxiv.org/abs/2610.31579v1",
+        "published_at": "2026-10-22T17:15:59Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "873901767e6870f7"
+      ],
+      "category": "research",
+      "title_zh": "模拟控制评估：用语言模型模拟工具响应以扩展安全评估",
+      "summary_zh": "arXiv 论文提出模拟控制评估（SCEs），用语言模型模拟工具响应来替代真实环境，从而扩大控制评估的可运行范围。在 LinuxArena 上，SCEs 在5%审计预算、五个监控器下预测安全性的均方根误差为3.6个百分点，BashArena 为10.1；SCEs 还能以比执行结果低十倍以上的KL散度复现攻击策略、攻击者推理和监控器推理的分布。",
+      "why_it_matters_zh": "控制评估用于检验模型即使有意作恶时防护措施是否有效；SCEs降低了在多样环境和任务中运行此类评估的成本，有助于部署前安全评估。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Simulated Control Evals",
+        "url": "https://arxiv.org/abs/2610.31593v1",
+        "published_at": "2026-10-22T17:26:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "c9ca9e09225a61cc"
+      ],
+      "category": "research",
+      "title_zh": "扩散语言模型学习解掩码策略的控制研究",
+      "summary_zh": "arXiv 论文系统研究掩码扩散语言模型中的学习型解掩码策略，分别考察教师标注何为可提交、策略在哪些状态模仿、策略观察什么，以及需要降低多少NFE才能抵消策略开销。研究发现，以匹配最终输出为标签在低NFE下过于宽松，隐藏状态单独较弱但可补充置信度；在所测设置中，最多750万参数策略需约10%的NFE降幅来抵消开销。作者用轨迹收缩目标、置信度和隐藏状态训练策略，856K参数策略在LLaDA-8B-Instruct上取得最佳准确率-NFE前沿，并在GSM8K上取得最高吞吐。",
+      "why_it_matters_zh": "该工作为扩散语言模型的并行解码提供了可复现的策略设计依据，有助于在保持准确率的同时降低推理函数评估次数。",
+      "importance_score": 81.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "What Makes a Good Unmasking Policy? A Controlled Study of Learned Unmasking in Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2610.31576v1",
+        "published_at": "2026-10-22T17:15:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "ccf0d893b4eccc72"
+      ],
+      "category": "research",
+      "title_zh": "AOPD：基于优势的在线策略蒸馏",
+      "summary_zh": "arXiv 论文提出优势基在线策略蒸馏（AOPD），不再假设教师指导在任何状态都有益，而是按教师动作在学生策略下的反事实优势加权：提升学生期望结果的动作被强化，否则被降权。作者证明该目标只需标准学生 rollout 和终端奖励即可估计，利用教师重要性权重对学生采样动作提供无偏的优势加权监督，无需额外 rollout 或奖励评估。",
+      "why_it_matters_zh": "在线策略蒸馏常优于离线SFT，但无条件模仿教师会引入无效监督；AOPD让蒸馏更聚焦于真正帮助学生成功的教师动作。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "When to Follow the Teacher: Advantage-Based On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2610.31563v1",
+        "published_at": "2026-10-22T17:05:21Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "43ff306705d50c8a"
+      ],
+      "category": "research",
+      "title_zh": "LitPivot：在文献图景中动态情境化研究想法",
+      "summary_zh": "Hugging Face 官方博客介绍 AllenAI 的 LitPivot，主题是通过在文献图景中进行动态情境化来发展研究想法。候选材料未提供更多技术细节。",
+      "why_it_matters_zh": "将文献检索与情境化用于研究构思，可能帮助研究者定位相关工作、发现空白并形成更可检验的研究方向。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+        "url": "https://huggingface.co/blog/allenai/litpivot",
+        "published_at": "2026-10-23T16:15:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "cce5d88bc8978dec"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11853：为 HIP 增加字节置换回退",
+      "summary_zh": "llama.cpp 发布 b11853，在 HIP 后端为不可用 __builtin_amdgcn_perm 的目标增加字节置换回退。发布说明指出，amdgcnspirv 会拒绝未由 __builtin_amdgcn_is_invocable 保护的目标特定内建函数，导致145个HIP文件中有66个构建失败；新实现将 perm 调用封装为辅助函数，在目标支持时保留 v_perm_b32，否则回退到可移植的字节选择。该版本同时提供 macOS、Linux、iOS 等平台二进制和证明链接。",
+      "why_it_matters_zh": "该修复改善了 llama.cpp 在 AMD HIP 目标上的构建兼容性，对使用 AMD GPU 或相关工具链的本地推理开发者有直接影响。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11853",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11853",
+        "published_at": "2026-10-24T11:12:30Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 176,
+    "normalized": 176,
+    "filtered": 111,
+    "ai_candidates": 30,
+    "prompt_chars": 19183,
+    "estimated_input_tokens": 4795,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
