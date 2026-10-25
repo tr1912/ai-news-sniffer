@@ -1,0 +1,891 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 155,
+  "normalized_count": 155,
+  "filtered_count": 79,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11876",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11876",
+        "published_at": "2026-10-25T14:27:02Z",
+        "fetched_at": "2026-10-25T14:54:14.438300Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nvulkan : one warp tile per subgroup in the small matmul tiles (#30106)\n\nWM of the small tiles was 32, or 8 for 8-wide subgroups, whatever the\ntile's BLOCK_SIZE and WARP. With 16-wide subgroups (Mali) the second\nsubgroup of a workgroup wrote into the next tile's columns. With 8-wide\nsubgroups some _id tiles left rows uncomputed. Derive WM so there is one\nwarp tile per subgroup.\n\nTested on my Pixel 9 Android phone. Before the change there were 20\nMUL_MAT and 6 MUL_MAT_ID failures. After the change they all pass.\n\nFixes #28637\n\nAssisted-by: Claude Opus 5.5\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/59631087>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b11876/llama-b11876-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b11876/llama-b11876-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b11876/llama-b11876-xcframework.zip)\n\n**",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 423452955
+        },
+        "id": "07d18581ac602335",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11876",
+        "normalized_title": "llama cpp releases b11876",
+        "fingerprint": "07d18581ac60233527659206fcf867a751f4c4d14ea45071c7c4fd229d824124",
+        "rule_score": 56.845055555555554
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+        "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+        "published_at": "2026-10-24T15:00:00Z",
+        "fetched_at": "2026-10-25T14:54:18.437175Z",
+        "language": "unknown",
+        "excerpt": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "fe9e62668a33edb7",
+        "canonical_url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats",
+        "normalized_title": "forced to pick grok s ai model chooses republicans openai s picks democrats",
+        "fingerprint": "fe9e62668a33edb7cd9495cc5fbaed6f23326a2f8e6392a836c8e2a359d93651",
+        "rule_score": 50.5
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Here are the top AI agents that can live in your text messages",
+        "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+        "published_at": "2026-10-24T14:00:00Z",
+        "fetched_at": "2026-10-25T14:54:18.437187Z",
+        "language": "unknown",
+        "excerpt": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lauren Forristal",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "30abe870397a07de",
+        "canonical_url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages",
+        "normalized_title": "here are the top ai agents that can live in your text messages",
+        "fingerprint": "30abe870397a07de523bb22d5fcd56c6a829abe313b50b1a553e1757ad741934",
+        "rule_score": 50.4
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "The hottest AI wearables and gadgets you should know about",
+        "url": "https://techcrunch.com/2026/10/25/the-hottest-ai-wearables-and-gadgets-you-should-know-about/",
+        "published_at": "2026-10-25T14:10:00Z",
+        "fetched_at": "2026-10-25T14:54:18.437118Z",
+        "language": "unknown",
+        "excerpt": "We compiled a list of all the hottest AI wearables, including Muse Charm, Bee, Friend, Plaud, and more.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lauren Forristal",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "23073ae354fafd62",
+        "canonical_url": "https://techcrunch.com/2026/10/25/the-hottest-ai-wearables-and-gadgets-you-should-know-about",
+        "normalized_title": "the hottest ai wearables and gadgets you should know about",
+        "fingerprint": "23073ae354fafd629fc8d57b08c849c550235aa4b5dce8577a85bc7d7f702b37",
+        "rule_score": 48.81666666666666
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Block’s new voice model sounds eerily human",
+        "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+        "published_at": "2026-10-24T16:00:00Z",
+        "fetched_at": "2026-10-25T14:54:18.437163Z",
+        "language": "unknown",
+        "excerpt": "Block said that the voice model can run locally on a MacBook M4 Max",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "764af956f5814848",
+        "canonical_url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human",
+        "normalized_title": "block s new voice model sounds eerily human",
+        "fingerprint": "764af956f5814848625fbbbd716634ca654f909c63c1a5a42f5f0255518f529e",
+        "rule_score": 46.6
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Making My Blog Readable by AI Agents",
+        "url": "https://deallocatedobjects.com/posts/making-my-blog-readable-by-ai-agents",
+        "published_at": "2026-10-24T21:21:33Z",
+        "fetched_at": "2026-10-25T14:54:21.205137Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ingve",
+        "upstream_urls": [
+          "https://deallocatedobjects.com/posts/making-my-blog-readable-by-ai-agents"
+        ],
+        "raw_metadata": {
+          "hn_id": 50225443,
+          "score": 24
+        },
+        "id": "6435e3435f472a79",
+        "canonical_url": "https://deallocatedobjects.com/posts/making-my-blog-readable-by-ai-agents",
+        "normalized_title": "making my blog readable by ai agents",
+        "fingerprint": "6435e3435f472a79b194aa0d68d79e692a81245d8da696a4b7837c31069da5cd",
+        "rule_score": 44.13591666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Oai-math-revised: a community hub for revising OpenAI's math write-ups",
+        "url": "https://terrytao.wordpress.com/2026/10/24/oai-math-revised-a-community-hub-for-revising-openais-math-write-ups/",
+        "published_at": "2026-10-24T15:35:17Z",
+        "fetched_at": "2026-10-25T14:54:20.236600Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "tokepi",
+        "upstream_urls": [
+          "https://terrytao.wordpress.com/2026/10/24/oai-math-revised-a-community-hub-for-revising-openais-math-write-ups/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50222283,
+          "score": 48
+        },
+        "id": "91ce268d96771e81",
+        "canonical_url": "https://terrytao.wordpress.com/2026/10/24/oai-math-revised-a-community-hub-for-revising-openais-math-write-ups",
+        "normalized_title": "oai math revised a community hub for revising openai s math write ups",
+        "fingerprint": "91ce268d96771e81b7db44db5fbd8b1e0ace8fe4fbd9beebd2ace79db4894fdd",
+        "rule_score": 43.55880555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "R/open source bans all solo projects and projects using LLMs",
+        "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
+        "published_at": "2026-10-25T14:05:03Z",
+        "fetched_at": "2026-10-25T14:54:18.830406Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "schleck8",
+        "upstream_urls": [
+          "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai"
+        ],
+        "raw_metadata": {
+          "hn_id": 50231722,
+          "score": 28
+        },
+        "id": "6b644b024790a84d",
+        "canonical_url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
+        "normalized_title": "r open source bans all solo projects and projects using llms",
+        "fingerprint": "6b644b024790a84d2c4227f481d372f282c54930145bb58d9dabf240c5238c61",
+        "rule_score": 41.808416666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The AI graveyard: a running list of projects and startups that didn't make it",
+        "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "published_at": "2026-10-25T13:16:49Z",
+        "fetched_at": "2026-10-25T14:54:21.562991Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "theanonymousone",
+        "upstream_urls": [
+          "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50231249,
+          "score": 5
+        },
+        "id": "a60ca00af8c010b0",
+        "canonical_url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it",
+        "normalized_title": "the ai graveyard a running list of projects and startups that didn t make it",
+        "fingerprint": "a60ca00af8c010b0b6c057f50bb50c23b066ac3fc4e3bb569de0817769531172",
+        "rule_score": 41.728027777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Imagine an AI future where being banned means you are now economically useless",
+        "url": "https://twitter.com/boneGPT/status/2114035719853265264",
+        "published_at": "2026-10-25T12:47:20Z",
+        "fetched_at": "2026-10-25T14:54:19.822794Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "MrBuddyCasino",
+        "upstream_urls": [
+          "https://twitter.com/boneGPT/status/2114035719853265264"
+        ],
+        "raw_metadata": {
+          "hn_id": 50230995,
+          "score": 11
+        },
+        "id": "0383bf7289389429",
+        "canonical_url": "https://twitter.com/boneGPT/status/2114035719853265264",
+        "normalized_title": "imagine an ai future where being banned means you are now economically useless",
+        "fingerprint": "0383bf7289389429b8ea5f0d5cb1f4e9ae761ee3d737a9ced509ef6b51790551",
+        "rule_score": 41.67888888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
+        "url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
+        "published_at": "2026-10-25T09:51:17Z",
+        "fetched_at": "2026-10-25T14:54:19.052294Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "thunderbong",
+        "upstream_urls": [
+          "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 50229827,
+          "score": 64
+        },
+        "id": "08ac78df1b99078d",
+        "canonical_url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
+        "normalized_title": "nikon photography contest winner loses title after scientists spot signs of ai",
+        "fingerprint": "08ac78df1b99078da9780609c39d942c7166c7fee011e1dfeecab9bc1950acf7",
+        "rule_score": 41.38547222222222
+      },
+      {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "source_group": "research",
+        "independence_group": "arxiv-ai",
+        "title": "A Fix for Softmax and Cross-Entropy",
+        "url": "https://arxiv.org/abs/2610.31642v1",
+        "published_at": "2026-10-22T17:54:56Z",
+        "fetched_at": "2026-10-25T14:54:12.498644Z",
+        "language": "unknown",
+        "excerpt": "Standard implementations of softmax, log-softmax, and cross-entropy have two numerical bugs. The first bug, Softmax Collapse, rounds the target logit's gradient to zero if that one logit is much larger than the others, resulting in gradients that no longer sum to zero. The second bug, Softmax Cancellation, occurs when student logits are close to teacher logits, and produces non-zero gradients even when the student and teacher logits are equal. We present simple implementations of log-softmax, softmax, and cross-entropy that fix both bugs. Our fix eliminates the previously-observed \"Slingshot\" phenomenon, speeds up grokking with weight decay, prevents accuracy collapse without weight decay, stops student networks from drifting away from the teacher during distillation, and shows that after memorization, logit growth is bounded by an equilibrium between weight decay and Adam's $ε$ hyperparameter.",
+        "categories": [
+          "research"
+        ],
+        "author": "Michael Tschannen",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "36754aed88110bf1",
+        "canonical_url": "https://arxiv.org/abs/2610.31642v1",
+        "normalized_title": "a fix for softmax and cross entropy",
+        "fingerprint": "36754aed88110bf1bceeec8a7b8a1aba553e5b802f1b44a33c14cc1e2d7f7f3a",
+        "rule_score": 41.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell",
+        "url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/",
+        "published_at": "2026-10-23T21:59:19Z",
+        "fetched_at": "2026-10-25T14:54:18.437210Z",
+        "language": "unknown",
+        "excerpt": "The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a \"nap,\" and summersaulted on voice command.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Julie Bort",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e0c38d3d4c086e5a",
+        "canonical_url": "https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell",
+        "normalized_title": "hottest toy for christmas nvidia ceo plays with adorable microduck robots 20 000 sell",
+        "fingerprint": "e0c38d3d4c086e5a6f161d39531e497e86ca120fbdf9f99da1c3509cb8d090a0",
+        "rule_score": 40.79886111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "published_at": "2026-10-25T01:33:49Z",
+        "fetched_at": "2026-10-25T14:54:18.797202Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gmays",
+        "upstream_urls": [
+          "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras"
+        ],
+        "raw_metadata": {
+          "hn_id": 50227356,
+          "score": 251
+        },
+        "id": "fa4d77a7c4e97d40",
+        "canonical_url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "normalized_title": "cerebras deploys trillion parameter ai models",
+        "fingerprint": "fa4d77a7c4e97d401749d618cbf63e1c02cc052806cb603257254fb92f792131",
+        "rule_score": 40.55636111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
+        "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+        "published_at": "2026-10-24T23:11:54Z",
+        "fetched_at": "2026-10-25T14:54:19.355582Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gnabgib",
+        "upstream_urls": [
+          "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class"
+        ],
+        "raw_metadata": {
+          "hn_id": 50226419,
+          "score": 420
+        },
+        "id": "d1f8d476dfbe31c0",
+        "canonical_url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+        "normalized_title": "america has lost 200k of jobs in media film and the arts how much is ai",
+        "fingerprint": "d1f8d476dfbe31c0a8aa6c8b9cb20058b6a8e3d97ac6ab4c8c30225e95bbb262",
+        "rule_score": 40.319833333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "No signs of AI payoff outside the tech sector",
+        "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+        "published_at": "2026-10-24T19:47:19Z",
+        "fetched_at": "2026-10-25T14:54:21.826715Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "the-mitr",
+        "upstream_urls": [
+          "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector"
+        ],
+        "raw_metadata": {
+          "hn_id": 50224463,
+          "score": 581
+        },
+        "id": "c5c9fe77d5e6639f",
+        "canonical_url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+        "normalized_title": "no signs of ai payoff outside the tech sector",
+        "fingerprint": "c5c9fe77d5e6639f6fb7c49e47a6dfbf32b94cbf9982a062f48258781dd665c4",
+        "rule_score": 39.97886111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why is AI generated language so hard to understand?",
+        "url": "https://arxiv.org/abs/2610.29162",
+        "published_at": "2026-10-24T18:04:57Z",
+        "fetched_at": "2026-10-25T14:54:20.092900Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "canjobear",
+        "upstream_urls": [
+          "https://arxiv.org/abs/2610.29162"
+        ],
+        "raw_metadata": {
+          "hn_id": 50223647,
+          "score": 216
+        },
+        "id": "2d5be35a6c8bff23",
+        "canonical_url": "https://arxiv.org/abs/2610.29162",
+        "normalized_title": "why is ai generated language so hard to understand",
+        "fingerprint": "2d5be35a6c8bff23d96c4d8d2c1efe6e4391f1371f31e34367d3cf7c820def5e",
+        "rule_score": 39.80825
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Progressive disclosure in agents to make them 2.3x faster",
+        "url": "https://www.skyvern.com/blog/deleting-rag-from-our-web-agent-made-it-2-3x-faster/",
+        "published_at": "2026-10-24T16:30:58Z",
+        "fetched_at": "2026-10-25T14:54:22.226428Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "suchintan",
+        "upstream_urls": [
+          "https://www.skyvern.com/blog/deleting-rag-from-our-web-agent-made-it-2-3x-faster/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50222826,
+          "score": 18
+        },
+        "id": "b23b60f0fdc41868",
+        "canonical_url": "https://www.skyvern.com/blog/deleting-rag-from-our-web-agent-made-it-2-3x-faster",
+        "normalized_title": "progressive disclosure in agents to make them 2 3x faster",
+        "fingerprint": "b23b60f0fdc418685241186c4c1a3448ae014153f9ebac133b3f01f9dc22f242",
+        "rule_score": 39.65161111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Neural chip decodes interactions between brain regions",
+        "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+        "published_at": "2026-10-24T15:57:17Z",
+        "fetched_at": "2026-10-25T14:54:19.623829Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "giuliomagnifico",
+        "upstream_urls": [
+          "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50222525,
+          "score": 121
+        },
+        "id": "a6dfeb20e5a496b0",
+        "canonical_url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2",
+        "normalized_title": "neural chip decodes interactions between brain regions",
+        "fingerprint": "a6dfeb20e5a496b0846e1d9d4225156674e202a54b19460d895b8d59e85633f0",
+        "rule_score": 39.59547222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Farol – a risk map of a pull request for the person who approves it",
+        "url": "https://github.com/winnin/farol",
+        "published_at": "2026-10-25T13:28:06Z",
+        "fetched_at": "2026-10-25T14:54:18.698518Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ericholiveira",
+        "upstream_urls": [
+          "https://github.com/winnin/farol"
+        ],
+        "raw_metadata": {
+          "hn_id": 50231349,
+          "score": 22
+        },
+        "id": "0a1b155c71fbd82a",
+        "canonical_url": "https://github.com/winnin/farol",
+        "normalized_title": "show hn farol a risk map of a pull request for the person who approves it",
+        "fingerprint": "0a1b155c71fbd82af82c8f54f81c0eeba2d4419b031de8ad145ab40435e7b03b",
+        "rule_score": 37.746833333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "US inequality is getting worse in ways you might not expect",
+        "url": "https://theconversation.com/us-inequality-is-getting-worse-in-ways-you-might-not-expect-294075",
+        "published_at": "2026-10-25T13:24:37Z",
+        "fetched_at": "2026-10-25T14:54:19.288288Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "JKCalhoun",
+        "upstream_urls": [
+          "https://theconversation.com/us-inequality-is-getting-worse-in-ways-you-might-not-expect-294075"
+        ],
+        "raw_metadata": {
+          "hn_id": 50231310,
+          "score": 13
+        },
+        "id": "832a0b959fc95451",
+        "canonical_url": "https://theconversation.com/us-inequality-is-getting-worse-in-ways-you-might-not-expect-294075",
+        "normalized_title": "us inequality is getting worse in ways you might not expect",
+        "fingerprint": "832a0b959fc95451ad02049334763c3cdfbef2524c82f5b4e074b1ce39916cdb",
+        "rule_score": 37.74102777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Samsung TVs look for microphones in your house via Bluetooth and then spy events",
+        "url": "https://twitter.com/freddier/status/2114042326758867453",
+        "published_at": "2026-10-25T13:11:22Z",
+        "fetched_at": "2026-10-25T14:54:20.134992Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "taubek",
+        "upstream_urls": [
+          "https://twitter.com/freddier/status/2114042326758867453"
+        ],
+        "raw_metadata": {
+          "hn_id": 50231189,
+          "score": 6
+        },
+        "id": "0b07ded763db13bc",
+        "canonical_url": "https://twitter.com/freddier/status/2114042326758867453",
+        "normalized_title": "samsung tvs look for microphones in your house via bluetooth and then spy events",
+        "fingerprint": "0b07ded763db13bc94304ae4ce379ab9e80d271204e7ff7b140551617146cc12",
+        "rule_score": 37.718944444444446
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The Lego group reveals collaboration with Daft Punk",
+        "url": "https://www.lego.com/en-us/categories/adults-welcome/article/daft-punk",
+        "published_at": "2026-10-25T12:48:11Z",
+        "fetched_at": "2026-10-25T14:54:19.019560Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pieterr",
+        "upstream_urls": [
+          "https://www.lego.com/en-us/categories/adults-welcome/article/daft-punk"
+        ],
+        "raw_metadata": {
+          "hn_id": 50231001,
+          "score": 33
+        },
+        "id": "2e7fc47de01878fe",
+        "canonical_url": "https://www.lego.com/en-us/categories/adults-welcome/article/daft-punk",
+        "normalized_title": "the lego group reveals collaboration with daft punk",
+        "fingerprint": "2e7fc47de01878febaa0f4f068953f87d59432f340fee2b9dfea79a04be3326a",
+        "rule_score": 37.680305555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Challenge Is Gone",
+        "url": "https://blog.alxgsv.com/challenge-is-gone/",
+        "published_at": "2026-10-25T12:43:52Z",
+        "fetched_at": "2026-10-25T14:54:21.728261Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "alxgsv",
+        "upstream_urls": [
+          "https://blog.alxgsv.com/challenge-is-gone/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50230965,
+          "score": 55
+        },
+        "id": "6968a87ce47d5593",
+        "canonical_url": "https://blog.alxgsv.com/challenge-is-gone",
+        "normalized_title": "challenge is gone",
+        "fingerprint": "6968a87ce47d5593d1ed82dc0a85b1a678ce00160257c5b1909a1f3cba47a023",
+        "rule_score": 37.67311111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Tool book of a Nuremberg knight from 1505",
+        "url": "https://loeffelholz-codex.org/en/",
+        "published_at": "2026-10-25T12:37:54Z",
+        "fetched_at": "2026-10-25T14:54:18.665548Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "edwardog",
+        "upstream_urls": [
+          "https://loeffelholz-codex.org/en/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50230917,
+          "score": 70
+        },
+        "id": "b2cb5bbffe41fc4d",
+        "canonical_url": "https://loeffelholz-codex.org/en",
+        "normalized_title": "tool book of a nuremberg knight from 1505",
+        "fingerprint": "b2cb5bbffe41fc4d098390cab840d9f276a6d977101037686b6052c687656e2a",
+        "rule_score": 37.66316666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer",
+        "url": "https://corgi.computer/",
+        "published_at": "2026-10-23T19:46:38Z",
+        "fetched_at": "2026-10-25T14:54:21.761237Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "eiopa",
+        "upstream_urls": [
+          "https://corgi.computer/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50214373,
+          "score": 133
+        },
+        "id": "cf1e819a2163279a",
+        "canonical_url": "https://corgi.computer/",
+        "normalized_title": "show hn corgi a helpful agent terminal multiplexer",
+        "fingerprint": "cf1e819a2163279a5597a619177c120b605db73f18ef8626536efc5ed97d8c61",
+        "rule_score": 37.57772222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Dessa: Conversation Model trained only on speech",
+        "url": "https://block.xyz/dessa",
+        "published_at": "2026-10-23T19:09:54Z",
+        "fetched_at": "2026-10-25T14:54:21.662207Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "dsr12",
+        "upstream_urls": [
+          "https://block.xyz/dessa"
+        ],
+        "raw_metadata": {
+          "hn_id": 50213925,
+          "score": 514
+        },
+        "id": "157429bfc4d26f57",
+        "canonical_url": "https://block.xyz/dessa",
+        "normalized_title": "dessa conversation model trained only on speech",
+        "fingerprint": "157429bfc4d26f570de9a9bca6a3ad44570095e13b54a39aae63429b8bba42d7",
+        "rule_score": 37.5165
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "fheroes2: A recreation of Heroes of Might and Magic II game engine",
+        "url": "https://github.com/ihhub/fheroes2",
+        "published_at": "2026-10-25T11:09:12Z",
+        "fetched_at": "2026-10-25T14:54:18.731258Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "tosh",
+        "upstream_urls": [
+          "https://github.com/ihhub/fheroes2"
+        ],
+        "raw_metadata": {
+          "hn_id": 50230384,
+          "score": 93
+        },
+        "id": "8a53fbf38f9f1cff",
+        "canonical_url": "https://github.com/ihhub/fheroes2",
+        "normalized_title": "fheroes2 a recreation of heroes of might and magic ii game engine",
+        "fingerprint": "8a53fbf38f9f1cff811f65b8201a89b5e15f58032d10538359c9486ecd9976be",
+        "rule_score": 37.51533333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Bye Bye Brotli? Google's Compression Library Is a Security Mess",
+        "url": "https://www.bugsink.com/blog/bye-bye-brotli/",
+        "published_at": "2026-10-25T11:06:25Z",
+        "fetched_at": "2026-10-25T14:54:22.265280Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "vanschelven",
+        "upstream_urls": [
+          "https://www.bugsink.com/blog/bye-bye-brotli/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50230362,
+          "score": 7
+        },
+        "id": "c4f52e395f4982a4",
+        "canonical_url": "https://www.bugsink.com/blog/bye-bye-brotli",
+        "normalized_title": "bye bye brotli google s compression library is a security mess",
+        "fingerprint": "c4f52e395f4982a478eec2b214c9cd640b5fa10a3c03e0491f842971ffe0b83f",
+        "rule_score": 37.51069444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Samsung running a TensorFlow lite model on 960x540 image to track you",
+        "url": "https://twitter.com/mike64_t/status/2114150399406202896",
+        "published_at": "2026-10-25T10:42:01Z",
+        "fetched_at": "2026-10-25T14:54:18.953962Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mashally",
+        "upstream_urls": [
+          "https://twitter.com/mike64_t/status/2114150399406202896"
+        ],
+        "raw_metadata": {
+          "hn_id": 50230181,
+          "score": 175
+        },
+        "id": "3e27a0ad0aae7164",
+        "canonical_url": "https://twitter.com/mike64_t/status/2114150399406202896",
+        "normalized_title": "samsung running a tensorflow lite model on 960x540 image to track you",
+        "fingerprint": "3e27a0ad0aae716421a34ad0271f35ca2a2dbbeb6eda52dd6546fac6ec4c10a7",
+        "rule_score": 37.47002777777778
+      }
+    ],
+    "prompt_chars": 5330,
+    "estimated_input_tokens": 1332
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}

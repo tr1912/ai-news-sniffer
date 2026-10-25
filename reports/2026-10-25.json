@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T14:53:50.487652Z",
+  "run_id": "2026-10-25-c9ee758f",
+  "daily_summary_zh": "今日AI领域动态：研究提出修复 softmax 与交叉熵数值缺陷的新实现；llama.cpp 发布 b11876，修复 Vulkan 小矩阵乘法分组问题。",
+  "events": [
+    {
+      "id": "event-softmax-cross-entropy-fix",
+      "candidate_ids": [
+        "36754aed88110bf1"
+      ],
+      "category": "research",
+      "title_zh": "研究提出修复 softmax 与交叉熵数值缺陷的新实现",
+      "summary_zh": "一篇 arXiv 论文指出，标准 softmax、log-softmax 与交叉熵实现存在两个数值问题：Softmax Collapse 会在目标 logit 远大于其他 logit 时将目标梯度舍入为零，导致梯度不再和为零；Softmax Cancellation 会在学生与教师 logit 接近时，即使二者相等也产生非零梯度。论文给出同时修复这两个问题的简单实现，并报告其可消除此前观察到的“Slingshot”现象、在有 weight decay 时加速 grokking、在无 weight decay 时防止准确率崩塌、阻止蒸馏中学生网络偏离教师，以及说明记忆后 logit 增长受 weight decay 与 Adam ε 的平衡约束。",
+      "why_it_matters_zh": "softmax 与交叉熵是模型训练和蒸馏的基础组件；修正数值实现可提升训练稳定性与蒸馏可靠性，并影响对 grokking、logit 增长等训练动力学的理解。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "A Fix for Softmax and Cross-Entropy",
+        "url": "https://arxiv.org/abs/2610.31642v1",
+        "published_at": "2026-10-22T17:54:56Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llamacpp-b11876",
+      "candidate_ids": [
+        "07d18581ac602335"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11876，修复 Vulkan 小矩阵乘法分组问题",
+      "summary_zh": "llama.cpp 发布 b11876，说明该版本修复 Vulkan 后端小 matmul tile 的分组问题：改为每个 subgroup 一个 warp tile。发布说明称，16-wide subgroup 下第二个 subgroup 会写入下一个 tile 的列，8-wide subgroup 下部分 _id tile 会漏算行；修复后在 Pixel 9 Android 手机上测试，原先的 20 个 MUL_MAT 和 6 个 MUL_MAT_ID 失败全部通过。该版本同时提供 macOS、iOS 等构建产物。",
+      "why_it_matters_zh": "该修复提升 Vulkan 后端在移动与 ARM GPU 上的矩阵乘法正确性，对本地推理和跨平台部署 llama.cpp 的开发者有直接价值。",
+      "importance_score": 52.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11876",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11876",
+        "published_at": "2026-10-25T14:27:02Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 155,
+    "normalized": 155,
+    "filtered": 79,
+    "ai_candidates": 30,
+    "prompt_chars": 5330,
+    "estimated_input_tokens": 1332,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
