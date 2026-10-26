@@ -1,0 +1,894 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 113,
+  "normalized_count": 113,
+  "filtered_count": 79,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic officially files for its public debut",
+        "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
+        "published_at": "2026-10-26T14:35:22Z",
+        "fetched_at": "2026-10-26T17:10:47.245128Z",
+        "language": "unknown",
+        "excerpt": "Anthropic has officially filed for an IPO, revealing soaring revenue, mounting losses, major enterprise adoption, and an unusual governance structure designed to preserve founder control and its AI safety mission.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "fc1325a7e71b0062",
+        "canonical_url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut",
+        "normalized_title": "anthropic officially files for its public debut",
+        "fingerprint": "fc1325a7e71b0062ad6409ca12d6ab0b90123cac179c87b99236a6df6b300af0",
+        "rule_score": 55.45894444444444
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11900",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11900",
+        "published_at": "2026-10-26T14:00:15Z",
+        "fetched_at": "2026-10-26T17:10:42.327538Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\ncommon: pin model resolution on real HF repo layouts (#30548)\n\n* tests: pin model resolution on real repo listings\n\nExtend test-model-resolution with 63 repo listings captured verbatim\nfrom the HF API, chosen to cover every file naming pattern found across\n1237 GGUF repos of the major publishers and pruned to whole quant groups.\nEach repo pins its resolved plans and its cache listing.\n\nThe expectations follow what each file really is per its GGUF header,\nnot what the current resolver picks, so a mismatch is a resolution bug.\nMismatches are collected and reported together before the test fails.\n\n* tests: leave the listing unchecked on paths the filesystem refuses\n\nSome real split names (DevQuasar's Model.Q2_K.gguf-00001-of-00012.gguf\nunder a quant folder) exceed MAX_PATH once materialized in the temporary\ncache on Windows, so the listing of such a repo is skipped with a note\nwhile its plans stay checked.\n\n* tests: pin real listings to master on GGUF convention names only\n\nReplace the real repo table with 171 HF listings whose file names follow\nthe GGUF naming convention (lowercase sidecar prefix, - delimited\ncomponents, quant last), one per layout pattern found acros",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 424319969
+        },
+        "id": "0ad7fca15d38f713",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11900",
+        "normalized_title": "llama cpp releases b11900",
+        "fingerprint": "0ad7fca15d38f713b2554fec686c02e29ae1010f89221ebf5c24b423e8df7f54",
+        "rule_score": 54.400416666666665
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b11888",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11888",
+        "published_at": "2026-10-25T23:28:18Z",
+        "fetched_at": "2026-10-26T17:10:42.327680Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\ncommon, grammar: add recursive depth limit, make it a requirement (#31153)\n\n* common, grammar: add recursive depth limit, make it a requirement\n\n* catch more recursive functions\n\n* common : tidy up peg parser changes\n\n* grammar : reject candidates in a loop, without a depth limit\n\nThe depth limit in llama_grammar_reject_candidates_for_stack counted\nthe code points of a vocab token, so any token of 256 chars or more\nwas always rejected under a grammar, such as the 512-space token of\nGLM-4.7-Flash or the long space tokens of Laguna-S-2.1.\n\nThe rejection now walks the code points with its own stack of levels\ninstead of recursing: there is no limit and no stack risk, whatever\nthe length of a token from the GGUF, and the masks match master.\n\n* grammar : track rejected candidates as indices into the input\n\nAt a given code point a candidate only differs from its input by the\nposition of its code point pointer, so the levels now carry indices\ninto the input candidates instead of copies. The first level needs no\nspecial case and the rejects map back to the input directly.\n\nGrammar sampling gets faster than master on GLM-4.7, Laguna, Qwen3.6\nand gemma-4 with the json, list an",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 423726596
+        },
+        "id": "606435f52a75967e",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11888",
+        "normalized_title": "llama cpp releases b11888",
+        "fingerprint": "606435f52a75967e6c7f4a550ad31289b4bdea689a5bc96af30d782878ff310e",
+        "rule_score": 52.94716666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Grok releases the first seven minutes of its AI-generated ‘Odyssey’",
+        "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/",
+        "published_at": "2026-10-25T21:31:16Z",
+        "fetched_at": "2026-10-26T17:10:47.245141Z",
+        "language": "unknown",
+        "excerpt": "The footage looks okay, as long as you're not seeking artistry, inspiration, or human interest.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "27cc3e0367184710",
+        "canonical_url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey",
+        "normalized_title": "grok releases the first seven minutes of its ai generated odyssey",
+        "fingerprint": "27cc3e0367184710c58c128437111b03a08a04eaa38db6ab6f88d2bb3cfb90f7",
+        "rule_score": 52.75211111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+        "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+        "published_at": "2026-10-25T16:57:32Z",
+        "fetched_at": "2026-10-26T17:10:47.245154Z",
+        "language": "unknown",
+        "excerpt": "\"Despite massive investments and widespread hype around artificial intelligence, the technology has delivered zero financial payoff to corporate America outside of tech.\"",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9f91679a594a08d8",
+        "canonical_url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist",
+        "normalized_title": "ai delivers zero financial payoff to most companies apollo economist says",
+        "fingerprint": "9f91679a594a08d8382f7ba9123415df25b63d4087b112cd1444f5bf3ba9f0fd",
+        "rule_score": 49.29588888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
+        "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
+        "published_at": "2026-10-26T16:49:42Z",
+        "fetched_at": "2026-10-26T17:10:47.245054Z",
+        "language": "unknown",
+        "excerpt": "Anthropic’s S-1 shows more than half of its $100,000-plus customers now use both the Claude Platform and a first-party app, a cross-selling playbook reminiscent of Amazon that’s making enterprise customers stickier.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "75c15a775181eb6c",
+        "canonical_url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked",
+        "normalized_title": "anthropic s ipo filing reveals its strategy for keeping enterprise customers hooked",
+        "fingerprint": "75c15a775181eb6c902fd68f5cc7849e7ad95186ea8eb54abff42f691258bb16",
+        "rule_score": 46.682833333333335
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "SpaceX locks in $40B GPU financing deal with Apollo",
+        "url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
+        "published_at": "2026-10-26T16:46:36Z",
+        "fetched_at": "2026-10-26T17:10:47.245110Z",
+        "language": "unknown",
+        "excerpt": "SpaceX has locked in a binding commitment for roughly $40 billion in financing to pay for AI chips and related data center equipment, the company disclosed in a regulatory filing Monday. In a statement, SpaceX called it the “largest committed GPU financing” ever.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Aditya Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0af4cbb4ce2343dd",
+        "canonical_url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo",
+        "normalized_title": "spacex locks in 40b gpu financing deal with apollo",
+        "fingerprint": "0af4cbb4ce2343dd47fd5cc8d37ecd7a99d8c323611de5df271d6823e0518e36",
+        "rule_score": 46.67766666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Freehire, open-source search 3M+ tech jobs from company career boards",
+        "url": "https://freehire.me/",
+        "published_at": "2026-10-26T01:13:43Z",
+        "fetched_at": "2026-10-26T17:10:49.346105Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "i_strelov",
+        "upstream_urls": [
+          "https://freehire.me/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50237813,
+          "score": 26
+        },
+        "id": "ecfcd17d89ce86ae",
+        "canonical_url": "https://freehire.me/",
+        "normalized_title": "show hn freehire open source search 3m tech jobs from company career boards",
+        "fingerprint": "ecfcd17d89ce86aefc18ba03e7ec23fa33510bcea28fe9187dc11d568442a6f4",
+        "rule_score": 46.12286111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+        "url": "https://minimaxir.com/2026/10/cheap-llms/",
+        "published_at": "2026-10-25T21:11:31Z",
+        "fetched_at": "2026-10-26T17:10:48.832936Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "minimaxir",
+        "upstream_urls": [
+          "https://minimaxir.com/2026/10/cheap-llms/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50236102,
+          "score": 395
+        },
+        "id": "07dcd22393c3666b",
+        "canonical_url": "https://minimaxir.com/2026/10/cheap-llms",
+        "normalized_title": "openai and anthropic cut their llm prices by up to 80 within a few months why",
+        "fingerprint": "07dcd22393c3666ba3ac768d1405b47f44dce02f42b8ac14d90a20e55eef8f5c",
+        "rule_score": 45.71919444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+        "url": "https://www.anthropic.com/news/s1-sec",
+        "published_at": "2026-10-26T13:06:35Z",
+        "fetched_at": "2026-10-26T17:10:49.487568Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "meetpateltech",
+        "upstream_urls": [
+          "https://www.anthropic.com/news/s1-sec"
+        ],
+        "raw_metadata": {
+          "hn_id": 50242957,
+          "score": 22
+        },
+        "id": "4229b43fb89e2bc0",
+        "canonical_url": "https://www.anthropic.com/news/s1-sec",
+        "normalized_title": "anthropic files s 1 with the sec for proposed initial public offering",
+        "fingerprint": "4229b43fb89e2bc024e372ebbcb5043ffb1eeeffcad574c6263ad7cde0767059",
+        "rule_score": 44.31097222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic's Claude AI model accessed Georgia voter data in US",
+        "url": "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us",
+        "published_at": "2026-10-26T11:48:22Z",
+        "fetched_at": "2026-10-26T17:10:50.354690Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "chrisjj",
+        "upstream_urls": [
+          "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us"
+        ],
+        "raw_metadata": {
+          "hn_id": 50242152,
+          "score": 7
+        },
+        "id": "3b0ccb7ebf602c91",
+        "canonical_url": "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us",
+        "normalized_title": "anthropic s claude ai model accessed georgia voter data in us",
+        "fingerprint": "3b0ccb7ebf602c911041c46d4a066d3b98cbd9febb37da8b79cc4930d084bd6e",
+        "rule_score": 43.18061111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Apollo says AI has delivered 'zero financial payoff' outside the tech industry",
+        "url": "https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-10",
+        "published_at": "2026-10-25T22:49:06Z",
+        "fetched_at": "2026-10-26T17:10:50.297277Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "levzettelin",
+        "upstream_urls": [
+          "https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-10"
+        ],
+        "raw_metadata": {
+          "hn_id": 50236828,
+          "score": 68
+        },
+        "id": "fd8ba95793f6861b",
+        "canonical_url": "https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-10",
+        "normalized_title": "apollo says ai has delivered zero financial payoff outside the tech industry",
+        "fingerprint": "fd8ba95793f6861bc10d7b857863b6bc8349efb1c0c14c7f434c615232300547",
+        "rule_score": 42.88183333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: AgentTrust – Zero-trust security and human approvals for AI agents",
+        "url": "https://github.com/SRN0129/Agenttrust",
+        "published_at": "2026-10-25T20:46:50Z",
+        "fetched_at": "2026-10-26T17:10:50.411215Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "SRN0129",
+        "upstream_urls": [
+          "https://github.com/SRN0129/Agenttrust"
+        ],
+        "raw_metadata": {
+          "hn_id": 50235909,
+          "score": 12
+        },
+        "id": "f7d5f6ca5196b1e4",
+        "canonical_url": "https://github.com/SRN0129/Agenttrust",
+        "normalized_title": "show hn agenttrust zero trust security and human approvals for ai agents",
+        "fingerprint": "f7d5f6ca5196b1e493da9c276232494250dff6a041b576431857ec38a75eb9b5",
+        "rule_score": 41.67805555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Stalwart v1.0: The Fastest Mail Server on the Planet",
+        "url": "https://stalw.art/blog/stalwart-1-0/",
+        "published_at": "2026-10-26T15:57:12Z",
+        "fetched_at": "2026-10-26T17:10:47.886248Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "StalwartLabs",
+        "upstream_urls": [
+          "https://stalw.art/blog/stalwart-1-0/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50245945,
+          "score": 9
+        },
+        "id": "1d0289a45f7d5115",
+        "canonical_url": "https://stalw.art/blog/stalwart-1-0",
+        "normalized_title": "stalwart v1 0 the fastest mail server on the planet",
+        "fingerprint": "1d0289a45f7d511523d5d9df601757999cb54e37ada3413ea9ad05ef18a01fc8",
+        "rule_score": 39.595333333333336
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+        "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+        "published_at": "2026-10-26T15:11:59Z",
+        "fetched_at": "2026-10-26T17:10:47.399014Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sgiannopoulos",
+        "upstream_urls": [
+          "https://magazine.sebastianraschka.com/p/building-reasoning-models"
+        ],
+        "raw_metadata": {
+          "hn_id": 50245138,
+          "score": 193
+        },
+        "id": "690780ec0187fa0a",
+        "canonical_url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+        "normalized_title": "sebastian raschka s from scratch video course on building reasoning models",
+        "fingerprint": "690780ec0187fa0a285811f81b87b6430a19688a07f75876fa074122923c6dd9",
+        "rule_score": 39.51997222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "R/opensource bans AI-made and AI-focused projects and non-English speakers",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/reddits-r-opensource-bans-ai-made-and-ai-focused-projects-also-bans-non-english-speakers-sweeping-new-rules-spark-backlash-over-linux-kernel-contributions-and-solo-developers",
+        "published_at": "2026-10-26T13:00:51Z",
+        "fetched_at": "2026-10-26T17:10:49.547460Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "NordStreamYacht",
+        "upstream_urls": [
+          "https://www.tomshardware.com/tech-industry/artificial-intelligence/reddits-r-opensource-bans-ai-made-and-ai-focused-projects-also-bans-non-english-speakers-sweeping-new-rules-spark-backlash-over-linux-kernel-contributions-and-solo-developers"
+        ],
+        "raw_metadata": {
+          "hn_id": 50242884,
+          "score": 15
+        },
+        "id": "818d583532b02bfa",
+        "canonical_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/reddits-r-opensource-bans-ai-made-and-ai-focused-projects-also-bans-non-english-speakers-sweeping-new-rules-spark-backlash-over-linux-kernel-contributions-and-solo-developers",
+        "normalized_title": "r opensource bans ai made and ai focused projects and non english speakers",
+        "fingerprint": "818d583532b02bfaaea585ef7b52f35d4a8864f95210283a9a50ad97b4c1ab38",
+        "rule_score": 39.30141666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Fixing Tool-Call Accuracy in vLLM",
+        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+        "published_at": "2026-10-26T12:59:48Z",
+        "fetched_at": "2026-10-26T17:10:47.572982Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "coffeemug",
+        "upstream_urls": [
+          "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm"
+        ],
+        "raw_metadata": {
+          "hn_id": 50242870,
+          "score": 108
+        },
+        "id": "c9a635d2f3f126a9",
+        "canonical_url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+        "normalized_title": "fixing tool call accuracy in vllm",
+        "fingerprint": "c9a635d2f3f126a9b9b28ca05d050c9080ad16d3914bbefad8e31650f7e5dc05",
+        "rule_score": 39.29966666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Brown student maps the hidden global labor powering AI",
+        "url": "https://www.brown.edu/news/2026-10-26/ai-data-workers",
+        "published_at": "2026-10-26T12:58:27Z",
+        "fetched_at": "2026-10-26T17:10:47.944302Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "cdrnsf",
+        "upstream_urls": [
+          "https://www.brown.edu/news/2026-10-26/ai-data-workers"
+        ],
+        "raw_metadata": {
+          "hn_id": 50242843,
+          "score": 104
+        },
+        "id": "552eab4f53436f70",
+        "canonical_url": "https://www.brown.edu/news/2026-10-26/ai-data-workers",
+        "normalized_title": "brown student maps the hidden global labor powering ai",
+        "fingerprint": "552eab4f53436f70168afe0e315f3a37086d355b660f613e4a3789af54bcadaf",
+        "rule_score": 39.29741666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why is it so expensive to send an email?",
+        "url": "https://evancz.dev/why-is-it-so-expensive-to-send-an-email",
+        "published_at": "2026-10-26T12:06:32Z",
+        "fetched_at": "2026-10-26T17:10:48.673268Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "wheatBread",
+        "upstream_urls": [
+          "https://evancz.dev/why-is-it-so-expensive-to-send-an-email"
+        ],
+        "raw_metadata": {
+          "hn_id": 50242308,
+          "score": 11
+        },
+        "id": "9670e1e6525f400b",
+        "canonical_url": "https://evancz.dev/why-is-it-so-expensive-to-send-an-email",
+        "normalized_title": "why is it so expensive to send an email",
+        "fingerprint": "9670e1e6525f400b1d40f4d59d3c58df1f16030e97d743373f39eadd0c76e43c",
+        "rule_score": 39.21088888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Proc-CLI – An agent-friendly CLI tool for process and port management",
+        "url": "https://proc-cli.com/",
+        "published_at": "2026-10-26T04:14:35Z",
+        "fetched_at": "2026-10-26T17:10:49.689813Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "yazeedaloyoun",
+        "upstream_urls": [
+          "https://proc-cli.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50239041,
+          "score": 16
+        },
+        "id": "29850ce19d562bd6",
+        "canonical_url": "https://proc-cli.com/",
+        "normalized_title": "show hn proc cli an agent friendly cli tool for process and port management",
+        "fingerprint": "29850ce19d562bd6996bba9ccdfe39c629e52889bc72f1aee445f3fc3d66aec7",
+        "rule_score": 38.424305555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: RainbowSay – Learn, teach, research languages live with shows you love",
+        "url": "https://rainbowsay.ai/",
+        "published_at": "2026-10-26T01:08:13Z",
+        "fetched_at": "2026-10-26T17:10:50.326677Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gigapotential",
+        "upstream_urls": [
+          "https://rainbowsay.ai/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50237773,
+          "score": 10
+        },
+        "id": "e8c1c896c46ff06b",
+        "canonical_url": "https://rainbowsay.ai/",
+        "normalized_title": "show hn rainbowsay learn teach research languages live with shows you love",
+        "fingerprint": "e8c1c896c46ff06bb13f934b8ed165542d318d84c418de96b8b2145bf2778c51",
+        "rule_score": 38.11369444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI didn't cause the tech jobs bust, but it explains why there's no recovery",
+        "url": "https://vithushansylvester.com/writing/the-real-impact-of-ai-on-tech-jobs",
+        "published_at": "2026-10-25T18:42:23Z",
+        "fetched_at": "2026-10-26T17:10:49.027122Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "hacker_v_s",
+        "upstream_urls": [
+          "https://vithushansylvester.com/writing/the-real-impact-of-ai-on-tech-jobs"
+        ],
+        "raw_metadata": {
+          "hn_id": 50234699,
+          "score": 76
+        },
+        "id": "430bc3f9dc8a901e",
+        "canonical_url": "https://vithushansylvester.com/writing/the-real-impact-of-ai-on-tech-jobs",
+        "normalized_title": "ai didn t cause the tech jobs bust but it explains why there s no recovery",
+        "fingerprint": "430bc3f9dc8a901ea811d192e5896866f770ea82d0d550d4b80450d6936bfde3",
+        "rule_score": 37.470638888888885
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+        "url": "https://lynchlab.net/llm-skin-cancer",
+        "published_at": "2026-10-25T17:15:38Z",
+        "fetched_at": "2026-10-26T17:10:48.593103Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "sungam",
+        "upstream_urls": [
+          "https://lynchlab.net/llm-skin-cancer"
+        ],
+        "raw_metadata": {
+          "hn_id": 50233779,
+          "score": 641
+        },
+        "id": "081c142ea1f968fc",
+        "canonical_url": "https://lynchlab.net/llm-skin-cancer",
+        "normalized_title": "a 10 year old cnn outperforms frontier llms for skin cancer diagnosis",
+        "fingerprint": "081c142ea1f968fce2918dcb367963b104a4f86e01f9dff75b13047c6d44cd44",
+        "rule_score": 37.326055555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A mathematician reads the AI future",
+        "url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/",
+        "published_at": "2026-10-25T16:31:21Z",
+        "fetched_at": "2026-10-26T17:10:49.517891Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "artninja1988",
+        "upstream_urls": [
+          "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50233347,
+          "score": 68
+        },
+        "id": "460cbb814f6dd480",
+        "canonical_url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133",
+        "normalized_title": "a mathematician reads the ai future",
+        "fingerprint": "460cbb814f6dd4800d2030996c09e69d6b333c4753274b10a55592b7a53f1ae2",
+        "rule_score": 37.252250000000004
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
+        "url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
+        "published_at": "2026-10-25T16:28:26Z",
+        "fetched_at": "2026-10-26T17:10:49.747294Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "romanhn",
+        "upstream_urls": [
+          "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 50233304,
+          "score": 228
+        },
+        "id": "62f33567e39a23fb",
+        "canonical_url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
+        "normalized_title": "ai use leads uc berkeley math professor to see no point in grading homework",
+        "fingerprint": "62f33567e39a23fbed96feb386c89258bba1d5dd4e3f424729e0f39b1668e091",
+        "rule_score": 37.24738888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "JetBrains Thinkrail",
+        "url": "https://github.com/JetBrains/thinkrail",
+        "published_at": "2026-10-25T16:27:12Z",
+        "fetched_at": "2026-10-26T17:10:49.661503Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "hmokiguess",
+        "upstream_urls": [
+          "https://github.com/JetBrains/thinkrail"
+        ],
+        "raw_metadata": {
+          "hn_id": 50233294,
+          "score": 230
+        },
+        "id": "916f66d2265e1628",
+        "canonical_url": "https://github.com/JetBrains/thinkrail",
+        "normalized_title": "jetbrains thinkrail",
+        "fingerprint": "916f66d2265e16285e572fbc22fd87e157df2627f0f7532c9fd6e03563bcc566",
+        "rule_score": 37.245333333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+        "url": "https://adrs.systems/",
+        "published_at": "2026-10-25T00:43:47Z",
+        "fetched_at": "2026-10-26T17:10:49.172250Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "lumbroso",
+        "upstream_urls": [
+          "https://adrs.systems/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50227041,
+          "score": 62
+        },
+        "id": "f44066a785e8ae4d",
+        "canonical_url": "https://adrs.systems/",
+        "normalized_title": "show hn adrs for ai deliberation records for human ai work versioned in git",
+        "fingerprint": "f44066a785e8ae4d9e0d5c49a003213ca66732183e75f6d9bf6619d01452e1fd",
+        "rule_score": 37.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "CSS-Tricks has a new owner",
+        "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+        "published_at": "2026-10-26T15:51:23Z",
+        "fetched_at": "2026-10-26T17:10:47.429068Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "edent",
+        "upstream_urls": [
+          "https://css-tricks.com/css-tricks-has-a-new-owner/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50245831,
+          "score": 77
+        },
+        "id": "ad0527ab340b6f01",
+        "canonical_url": "https://css-tricks.com/css-tricks-has-a-new-owner",
+        "normalized_title": "css tricks has a new owner",
+        "fingerprint": "ad0527ab340b6f0124807817f270892e608f5c1998763edd18bd500623057daa",
+        "rule_score": 35.58563888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Microsoft offers mass buyouts for roughly a quarter of its workforce",
+        "url": "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/",
+        "published_at": "2026-10-26T15:35:12Z",
+        "fetched_at": "2026-10-26T17:10:47.773151Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "doctorzook",
+        "upstream_urls": [
+          "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50245524,
+          "score": 223
+        },
+        "id": "ee0b838f0db1fb4c",
+        "canonical_url": "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce",
+        "normalized_title": "microsoft offers mass buyouts for roughly a quarter of its workforce",
+        "fingerprint": "ee0b838f0db1fb4c87acfeacff3c7421f90036146b70653b9280c833c6dd8a5b",
+        "rule_score": 35.55866666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "'It's offensively cheap': Solar power is quietly becoming bigger than nuclear",
+        "url": "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear",
+        "published_at": "2026-10-26T15:26:17Z",
+        "fetched_at": "2026-10-26T17:10:49.718825Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "geox",
+        "upstream_urls": [
+          "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear"
+        ],
+        "raw_metadata": {
+          "hn_id": 50245385,
+          "score": 82
+        },
+        "id": "335d6e5d73a4a2f9",
+        "canonical_url": "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear",
+        "normalized_title": "it s offensively cheap solar power is quietly becoming bigger than nuclear",
+        "fingerprint": "335d6e5d73a4a2f9f7fcaa8127457697119926247ef28dd7c5b45c4cb828c131",
+        "rule_score": 35.54380555555556
+      }
+    ],
+    "prompt_chars": 6016,
+    "estimated_input_tokens": 1504
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceParseError: zhipu-research: no dated article records found",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}
