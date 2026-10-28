@@ -1,0 +1,190 @@
+{
+  "date": "2026-10-29",
+  "generated_at": "2026-10-28T17:02:00.928445Z",
+  "run_id": "2026-10-29-77c76e5b",
+  "daily_summary_zh": "今日重点集中在开源推理栈与开放模型：llama.cpp v0.8.0 一次性接入 LFM3 多模态家族与多种新架构，并加入实时音频 API 与服务端 TTS 端点；LiquidAI 同期在 Hugging Face 官方博客发布 LFM3 专用多模态模型家族。研究侧值得关注的是：工具调用 agent 的可预测扩展律（用 849 个模型、45 万余任务验证数据构成对泛化的影响）、时间序列基础模型 Timestral 在 GIFT-Eval/TIME/fev-bench 三榜登顶并开放权重、对当前潜世界模型“是否真的学到动力学”的证伪性评估，以及用学习式注意力门做提示注入防御的新方法。另有实时交互 agent 基准、LLM 自主发现物理定律、预训练知识获取时序分析等实证工作。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "52074dc17acfc9c2",
+        "6ad037cdd6809245"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v0.8.0：接入 LFM3 多模态家族与实时音频 API",
+      "summary_zh": "llama.cpp 发布 v0.8.0：新增 LiquidAI LFM3 家族（文本、视觉、音频与 omni）支持，并在 mtmd 中加入实验性流式音频 API，服务端新增 /v1/realtime 与 /tts 端点以打通实时音频输入输出；同时新增 DeepSeek V4.1 Flash、SenseNova U1、Beam、Kolibri-1、Flint、Muse Spark、Granite Switch Decision 以及 LiquidAI、百度、NVIDIA 的决策/嵌入模型等架构。核心侧把稀疏注意力（QSA/DSA）重写为融合 mask 算子，引入面向主机端 MoE 专家的 50/50 SLRU 缓存，并整理 no_alloc 内存处理；服务端改进了路由的内存管理与工具调用；UI 支持直接从 HF Hub 浏览与下载模型、会话搜索与压缩。ggml 升至 v0.28.0，带来 GGML_OP_TOP_K_MASK、-1 专家索引语义，以及 CUDA 分块图启动、SYCL graph replay、OpenCL Q2_K/Q3_K、Hexagon HTP 重构、KleidiAI SVE kernel 等后端性能工作。同期仓库另有滚动构建 b11966，把 s390x CI 切换到 Ubuntu 26.04 runner。",
+      "why_it_matters_zh": "这是本地/自托管推理栈一次覆盖面很广的更新：新架构覆盖多家厂商模型，实时音频端点把语音输入输出纳入统一服务端接口，稀疏注意力与专家缓存改动直接关系到长上下文与 MoE 模型的显存和吞吐表现，对依赖 llama.cpp 做端侧与私有化部署的开发者影响最直接。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v0.8.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.8.0",
+        "published_at": "2026-10-28T12:47:51Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b11966",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11966",
+          "published_at": "2026-10-28T16:47:02Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "f433fbef5b77fe40",
+        "52074dc17acfc9c2"
+      ],
+      "category": "models",
+      "title_zh": "LiquidAI 发布 LFM3：面向专用多模态模型的开放家族",
+      "summary_zh": "LiquidAI 在 Hugging Face 官方博客发布 LFM3，定位为可用于构建专用多模态模型的开放模型家族。据 llama.cpp v0.8.0 的发布说明，该家族覆盖文本、视觉、音频与 omni 形态，其中 LFM3-1.7B（文本）与 LFM3-VL-2B（视觉）已对照 Hugging Face 参考实现完成验证。",
+      "why_it_matters_zh": "小参数、多模态、可本地推理是当前开放模型竞争最激烈的方向之一：LFM3 在发布当周即被主流推理框架合入支持，意味着它面向的是端侧与私有化部署场景，而非仅做榜单展示，对想在本地搭专用多模态能力的开发者是可选项。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Build specialized multimodal models with LFM3",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+        "published_at": "2026-10-27T17:16:52Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: v0.8.0",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.8.0",
+          "published_at": "2026-10-28T12:47:51Z"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "16f8fd43064e2928"
+      ],
+      "category": "research",
+      "title_zh": "工具调用智能体的可预测扩展律：数据构成比任务数量更关键",
+      "summary_zh": "论文提出 SynthAPI 管线，可沿工具、任务、工具所操作数据库三个维度显式控制合成环境的多样性，并在 458,752 个任务、849 个四种规模模型上系统变化生成参数，拟合出可预测下游工具使用泛化能力的扩展律。结论包括：随数据预算增长，扩大工具与数据库多样性比单纯增加任务数更有效，提升数据复杂度带来的收益更大；按此结论扩数据训练的智能体在四个评测基准上优于先前工作。",
+      "why_it_matters_zh": "智能体训练长期缺乏“该往哪个方向加数据”的可操作依据，这项工作把合成环境构成与下游泛化连成可预测关系，等于给工具调用智能体的数据配方提供了定量指导，方法上也可复用到其他可合成环境。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Scaling Laws for Tool-Use Agents via Controllable Environment Synthesis",
+        "url": "https://arxiv.org/abs/2610.37648v1",
+        "published_at": "2026-10-27T17:56:46Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "912e040fb8409723"
+      ],
+      "category": "research",
+      "title_zh": "研究质疑潜世界模型：SOTA 模型并未真正学到环境动力学",
+      "summary_zh": "论文把“忠实的潜世界模型”定义为环境转移映射与所学潜动力学之间满足等变性条件，并提出 latent rollout consistency（LRC）指标来评估动作条件下的潜空间预测。在所考察的当前最优潜世界模型上，作者发现没有一个模型是通过真正忠实地建模环境动力学来完成任务的。",
+      "why_it_matters_zh": "世界模型被广泛当作长时程智能体的核心组件，但现有评估大多只看任务分数；这项结果说明高分可能来自捷径而非可用的动力学预测，对以世界模型为卖点的智能体与视频生成路线是一个需要正面回应的评估缺口。",
+      "importance_score": 71.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Understanding the limits of latent world models",
+        "url": "https://arxiv.org/abs/2610.37588v1",
+        "published_at": "2026-10-27T17:25:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "7b12890578c4ab2a"
+      ],
+      "category": "models",
+      "title_zh": "Timestral：四个规模的时间序列基础模型登顶三项基准并开放权重",
+      "summary_zh": "论文发布 Timestral 系列概率预测基础模型，参数规模为 5M、28M、123M、209M，在 GIFT-Eval、TIME、fev-bench 上刷新 SOTA，其中 Timestral-209M 与 Timestral-123M 在每项指标上占据前两名。方法包含三部分：Decoupled Horizon Forecasting（把预测 token 与因果编码的上下文分离，长horizon训练时无需 mask 上下文，每个观测值既作预测目标又作后续预测的上下文）、原生支持已知未来协变量的因果架构，以及先在大规模多样化合成语料预训练、再混合真实与合成数据并用更长上下文后训练的两阶段流程。四个模型的权重已在 Hugging Face 发布，推理代码在 GitHub。",
+      "why_it_matters_zh": "时间序列预测的通用基础模型此前多是单点突破，这次同时在三个主流基准的每项指标上占前二，且四个规模全部开源，对做预测类产品的团队意味着可以直接做基线替换；其“合成预训练+混合后训练”的配方对其他小规模基础模型也有参考价值。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Timestral",
+        "url": "https://arxiv.org/abs/2610.37585v1",
+        "published_at": "2026-10-27T17:25:43Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "18590cd3f98097a6"
+      ],
+      "category": "safety",
+      "title_zh": "Heads of Security：用学习式注意力门实现指令与数据分离，抗提示注入",
+      "summary_zh": "论文提出 Heads of Security（HoS），通过一小组可学习的逐头注意力门，让每个注意力头学习在可信 token 与不可信 token 之间重新分配注意力，从而在读取不可信内容时仍不执行其中夹带的指令。在 Llama-3.3-70B-Instruct 与 GPT-OSS-20B 上对比微调式防御 SecAlign++ 与架构式防御 ASIDE：黑盒 RL-Hammer 攻击对 GPT-OSS-20B 达 97% 攻击成功率、对 SecAlign 达 85%，而对 HoS 仅 10%；白盒 Claudini 在针对 HoS 经自动搜索强化后，需约 3 倍 FLOPs 才能达到对 GPT-OSS-20B 或 SecAlign 相同的攻击成功率。HoS 同时在常规多选题基准与提示设置上保持了基座模型的效用，并在标准智能体提示注入基准上达到最好水平。",
+      "why_it_matters_zh": "提示注入是智能体落地最现实的阻塞项，而多数防御要么牺牲通用能力、要么只在静态攻击集上有效；把指令-数据分离做进注意力结构，并给出自适应黑盒/白盒攻击下的量化对比，是这条路线少见的可比较证据。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Heads of Security: Learned Attention Gates Improve Prompt Injection Robustness",
+        "url": "https://arxiv.org/abs/2610.37657v1",
+        "published_at": "2026-10-27T17:58:52Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 167,
+    "normalized": 167,
+    "filtered": 130,
+    "ai_candidates": 30,
+    "prompt_chars": 27243,
+    "estimated_input_tokens": 6810,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
