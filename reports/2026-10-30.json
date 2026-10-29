@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-29T17:20:41.625210Z",
+  "run_id": "2026-10-30-bd8b5629",
+  "daily_summary_zh": "今日重点：Mistral Large 4（Le Chonk）以约 1T 参数、原生多模态 MoE 和 1M 上下文发布并上线 Hugging Face；Hugging Face 官方博客集中更新 Granite Switch 4.1.1、NVIDIA Nemotron 3.5 Transcribe/Granary v2、Apple 平台开放模型 AnySpeechRecognizer/AnyDecisionModel，以及 Project ProtoStar；llama.cpp 则优化 Metal 后端以提升本地推理性能。",
+  "events": [
+    {
+      "id": "mistral-large-4-le-chonk",
+      "candidate_ids": [
+        "21840a63582b365e",
+        "3f669cdad05c1e13"
+      ],
+      "category": "models",
+      "title_zh": "Mistral 发布 Large 4（Le Chonk）：1T 参数原生多模态 MoE",
+      "summary_zh": "Mistral 发布 Large 4（Le Chonk），为约 1 万亿总参数、约 520 亿激活参数的 natively multimodal Mixture-of-Experts 模型，采用 128 个路由专家（每 token 激活 4 个）加 1 个共享专家，支持 1M 上下文，并在欧洲自有数据中心使用 3,800 块 NVIDIA Grace Blackwell GPU 从零训练。模型支持 160+ 种语言，并已上线 Hugging Face。",
+      "why_it_matters_zh": "这是 Mistral 迄今最大、最强的模型，以单一权重统一指令跟随、推理、编程与智能体工作流，并在视觉 grounding 等任务上对标前沿闭源模型；对欧洲本土大模型能力和长上下文、多语言应用具有标志意义。",
+      "importance_score": 93.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+        "url": "https://huggingface.co/blog/mistral-large4",
+        "published_at": "2026-10-29T00:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "transformers-releases",
+          "source_name": "Transformers Releases",
+          "title": "Transformers Releases: v5.22.0: Mistral Large 4 (Le Chonk)",
+          "url": "https://github.com/huggingface/transformers/releases/tag/v5.22.0",
+          "published_at": "2026-10-29T14:15:39Z"
+        }
+      ]
+    },
+    {
+      "id": "nvidia-nemotron-3-5-transcribe-granary-v2",
+      "candidate_ids": [
+        "3e409db8b431a6eb"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Nemotron 3.5 Transcribe 与 Granary v2",
+      "summary_zh": "Hugging Face 博客发布 NVIDIA Nemotron 3.5 Transcribe 和 Granary v2，定位为可提示、可适配的智能多语言转录模型与方案。",
+      "why_it_matters_zh": "多语言语音转录是企业与开发者常用基础能力；可提示和可适配意味着更易针对领域术语、口音和业务场景做定制，值得语音应用开发者关注。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+        "published_at": "2026-10-28T14:58:17Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "granite-switch-4-1-1",
+      "candidate_ids": [
+        "c2335cee27bc3d51"
+      ],
+      "category": "models",
+      "title_zh": "Granite Switch 4.1.1 发布：像更新软件一样更新模型",
+      "summary_zh": "Hugging Face 博客发布 Granite Switch 4.1.1，主题为“像更新软件一样更新模型”，介绍该版本在模型更新方式上的变化。",
+      "why_it_matters_zh": "该发布聚焦模型更新范式，若相关方法落地，有助于降低企业模型升级与维护成本，对开放模型的生命周期管理具有参考价值。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Granite Switch 4.1.1 — Update models like you update software",
+        "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+        "published_at": "2026-10-29T13:37:07Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "anyspeechrecognizer-anydecisionmodel-apple",
+      "candidate_ids": [
+        "75e21bbf3c4abdec"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face 发布面向 Apple 平台的 AnySpeechRecognizer 与 AnyDecisionModel",
+      "summary_zh": "Hugging Face 博客发布 AnySpeechRecognizer 和 AnyDecisionModel 两个开放模型，分别面向 Apple 平台上的语音识别与决策任务。",
+      "why_it_matters_zh": "把开放模型带入 Apple 平台，有助于开发者在 Apple 生态中部署语音识别与决策能力，扩展本地 AI 开发选择。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms",
+        "url": "https://huggingface.co/blog/anydecisionmodel",
+        "published_at": "2026-10-29T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "llama-cpp-b11985-metal",
+      "candidate_ids": [
+        "358b07c2b2ebecf2"
+      ],
+      "category": "developer-tools",
+      "title_zh": "llama.cpp b11985 优化 Metal 后端：加速 MXFP4 与 GLU",
+      "summary_zh": "llama.cpp 发布 b11985，包含 Metal 后端优化：用 fp16 位技巧解码 MXFP4 矩阵-向量乘、连续 unary/binary 算子使用完整 threadgroups，并将 GLU 行拆分到多个 threadgroups。",
+      "why_it_matters_zh": "这些改动面向 Apple Silicon 本地推理的吞吐与延迟，尤其影响量化模型 decode 性能，对本地 LLM 开发者有直接价值。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11985",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11985",
+        "published_at": "2026-10-29T17:10:01Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 174,
+    "normalized": 174,
+    "filtered": 121,
+    "ai_candidates": 30,
+    "prompt_chars": 11131,
+    "estimated_input_tokens": 2782,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
