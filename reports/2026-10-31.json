@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-31",
+  "generated_at": "2026-10-30T16:57:48.222281Z",
+  "run_id": "2026-10-31-5a5d26b5",
+  "daily_summary_zh": "今日可验证的高信号事件以研究与开发者工具为主：NVIDIA 介绍智能体运行时 NemoClaw；机器人仿真、临床基因组智能体、自主实验、LLM 水印、智能体安全与计算机使用验证等论文集中出现；llama.cpp 跟进新模型支持。单一媒体来源且缺少官方或研究佐证的商业快讯未纳入。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "88ef0b5fb885b597"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA 发布 NemoClaw：在可控技术栈上构建专用智能体",
+      "summary_zh": "NVIDIA 开发者博客介绍 NemoClaw，称构建自主智能体需要模型、harness 与领域专用工具；为更安全地部署智能体，开发者需要能够强制执行策略的运行时。文章围绕在开发者可控的技术栈上构建专用智能体展开。",
+      "why_it_matters_zh": "官方提供智能体运行时与工具链叙事，若落地将影响企业智能体开发、部署与安全治理。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw",
+        "url": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw/",
+        "published_at": "2026-10-30T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "d1b19a2b2a68c482"
+      ],
+      "category": "research",
+      "title_zh": "Gym-Anything：用编码智能体扩展机器人仿真与 RoboWorld 基准",
+      "summary_zh": "论文提出 Gym-Anything for Robotics，让编码智能体创建真实机器人仿真；按美国 GDP 数据选择仿真以覆盖有经济价值的物理工作，定义高质量仿真与任务标准，并设计对抗式创建-审核循环。基于该流程构建 RoboWorld，包含 25 个仿真、25 个测试和 175 个训练 RL 环境；最佳前沿模型在每项测试任务上均失败，平均奖励仅 0.06。",
+      "why_it_matters_zh": "把仿真创建转化为编码智能体任务，使机器人/具身智能训练环境的扩充可能随编码智能体能力提升而规模化，并给出高难度基准。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Gym-Anything for Robotics: Scaling physical simulations with digital agents",
+        "url": "https://arxiv.org/abs/2610.40565v1",
+        "published_at": "2026-10-29T17:42:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "49a7fb46ab006e0d"
+      ],
+      "category": "research",
+      "title_zh": "ClinGeX：以 105 项技能编排临床基因组分析智能体",
+      "summary_zh": "研究开发 LLM 智能体 ClinGeX，通过任务特定检索和依赖感知编排组合 105 个精选可执行技能。在 223 个时间留出基准病例上，其宏观平均任务级一致率为 71.7%，最强对照为 45.7%。在 45 名临床基因组专业人员评估 135 个临床病例的人机协作研究中，ClinGeX 辅助在变异分析、罕见病基因组解读和肿瘤决策等任务上提高了病例级一致率。",
+      "why_it_matters_zh": "临床基因组解读是测序普及后的瓶颈；该工作显示技能化智能体编排可在专家评估中提升一致率，但仍是研究性基准。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Advancing Clinical Genomic Analysis with a Skill-Centred Agent",
+        "url": "https://arxiv.org/abs/2610.40556v1",
+        "published_at": "2026-10-29T17:40:24Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "1dcb18fcc54824ab"
+      ],
+      "category": "research",
+      "title_zh": "多智能体自主实验室：相互审核并修正量子自旋实验",
+      "summary_zh": "论文展示一个基于 LLM 智能体的自主研究实验室，智能体可评估彼此工作、停止或重定向研究，并能生成与否定研究问题、要求独立理论检查、设计挑战自身主张的实验。在金刚石量子自旋系综实验中，智能体推导预测微波脉冲序列响应所需的最少校准设置，进行计算检查并设计区分竞争预测的实验；因重复参考测量显示信号漂移，智能体将初始结果视为不确定并修订测量协议。",
+      "why_it_matters_zh": "展示智能体在真实科研闭环中进行相互审核、实验设计和自我纠错，为自主实验室提供可验证范式。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
+        "url": "https://arxiv.org/abs/2610.40589v1",
+        "published_at": "2026-10-29T17:47:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "95080ce620c770f5"
+      ],
+      "category": "research",
+      "title_zh": "TextSeal2：兼容推测解码的无失真 LLM 水印",
+      "summary_zh": "论文提出 TextSeal2，通过 AutoMark 的高斯 copula 将多个密钥合并为单一虚拟密钥，并在推测解码下用无记忆指数竞赛对草稿残留进行验证，使被拒绝草稿替换后的 token 仍带相同密钥水印、接受率不变且不增加可测推理延迟。在三个 LLM 上，同等输出 token 多样性下，100 token 答案的检测率比 TextSeal 高 8 至 22 个百分点。",
+      "why_it_matters_zh": "水印若要与高效推理栈共存，必须兼容推测解码且不损多样性；该方案降低了部署冲突。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races",
+        "url": "https://arxiv.org/abs/2610.40613v1",
+        "published_at": "2026-10-29T17:54:12Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "8c07d4f6d48e043c",
+        "cdc9f83c95ca6ddc"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b11998 与 b12015：新增 Mistral le chonk 支持并清理路径工具",
+      "summary_zh": "llama.cpp 发布 b11998，新增对 mistral le chonk 模型的支持并扩展 DSA 与 sdpark；随后发布 b12015，删除 common 中的 fs_path_to_utf8()。两个版本均提供 macOS、iOS 与 Linux 多平台构建。",
+      "why_it_matters_zh": "本地推理运行时快速跟进新模型支持，并持续维护跨平台构建，对开发者部署开源模型有直接影响。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b11998",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11998",
+        "published_at": "2026-10-30T01:11:38Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b12015",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12015",
+          "published_at": "2026-10-30T16:06:05Z"
+        }
+      ]
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 176,
+    "normalized": 176,
+    "filtered": 140,
+    "ai_candidates": 30,
+    "prompt_chars": 25536,
+    "estimated_input_tokens": 6384,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
