@@ -1,39 +1,19 @@
 {
   "date": "2026-10-31",
-  "generated_at": "2026-10-30T16:57:48.222281Z",
-  "run_id": "2026-10-31-5a5d26b5",
-  "daily_summary_zh": "今日可验证的高信号事件以研究与开发者工具为主：NVIDIA 介绍智能体运行时 NemoClaw；机器人仿真、临床基因组智能体、自主实验、LLM 水印、智能体安全与计算机使用验证等论文集中出现；llama.cpp 跟进新模型支持。单一媒体来源且缺少官方或研究佐证的商业快讯未纳入。",
+  "generated_at": "2026-10-31T15:58:37.194600Z",
+  "run_id": "2026-10-31-9d20bb69",
+  "daily_summary_zh": "今日高信号集中在三条线：一是用编码智能体扩展机器人仿真、临床基因组分析和自主量子实验等研究流程；二是智能体安全与验证，包括输出前泄密预警、多轮安全决策和计算机使用智能体验证；三是 NVIDIA 连发分布式推理、专用智能体运行时与边缘 AI 开发工具。模型侧还有投机解码下的无失真水印、RLVR 教师纠正、token 级自蒸馏，以及对 Neural Thickets 的重新解释。",
   "events": [
     {
       "id": "event-1",
       "candidate_ids": [
-        "88ef0b5fb885b597"
-      ],
-      "category": "developer-tools",
-      "title_zh": "NVIDIA 发布 NemoClaw：在可控技术栈上构建专用智能体",
-      "summary_zh": "NVIDIA 开发者博客介绍 NemoClaw，称构建自主智能体需要模型、harness 与领域专用工具；为更安全地部署智能体，开发者需要能够强制执行策略的运行时。文章围绕在开发者可控的技术栈上构建专用智能体展开。",
-      "why_it_matters_zh": "官方提供智能体运行时与工具链叙事，若落地将影响企业智能体开发、部署与安全治理。",
-      "importance_score": 86.0,
-      "confirmation_status": "primary_confirmed",
-      "primary_source": {
-        "source_id": "nvidia-genai",
-        "source_name": "NVIDIA Generative AI Blog",
-        "title": "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw",
-        "url": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw/",
-        "published_at": "2026-10-30T16:00:00Z"
-      },
-      "related_sources": []
-    },
-    {
-      "id": "event-2",
-      "candidate_ids": [
         "d1b19a2b2a68c482"
       ],
       "category": "research",
-      "title_zh": "Gym-Anything：用编码智能体扩展机器人仿真与 RoboWorld 基准",
-      "summary_zh": "论文提出 Gym-Anything for Robotics，让编码智能体创建真实机器人仿真；按美国 GDP 数据选择仿真以覆盖有经济价值的物理工作，定义高质量仿真与任务标准，并设计对抗式创建-审核循环。基于该流程构建 RoboWorld，包含 25 个仿真、25 个测试和 175 个训练 RL 环境；最佳前沿模型在每项测试任务上均失败，平均奖励仅 0.06。",
-      "why_it_matters_zh": "把仿真创建转化为编码智能体任务，使机器人/具身智能训练环境的扩充可能随编码智能体能力提升而规模化，并给出高难度基准。",
-      "importance_score": 85.0,
+      "title_zh": "Gym-Anything 用编码智能体生成机器人仿真，并发布 RoboWorld",
+      "summary_zh": "论文提出 Gym-Anything for Robotics，让编码智能体自动创建真实感机器人仿真，以缓解仿真覆盖不足且依赖专家手工搭建的瓶颈。作者按美国 GDP 数据选择仿真任务，设计仿真/任务质量标准与对抗式创建-审核循环，构建 RoboWorld：25 个仿真、25 个测试和 175 个训练 RL 环境。最佳前沿模型在所有 RoboWorld 测试任务上平均奖励仅 0.06。",
+      "why_it_matters_zh": "把仿真创建转化为编码智能体任务，有望随编码智能体能力提升而扩展具身 AI 训练环境；RoboWorld 也提供了高难度基准。",
+      "importance_score": 86.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -45,15 +25,35 @@
       "related_sources": []
     },
     {
+      "id": "event-2",
+      "candidate_ids": [
+        "1dcb18fcc54824ab"
+      ],
+      "category": "research",
+      "title_zh": "LLM 智能体协作实现自主量子自旋实验研究",
+      "summary_zh": "研究展示一个自主研究实验室：基于大语言模型的智能体互相评估工作，并可叫停或重定向研究。它们能生成和否决研究问题、要求独立理论检查、设计挑战自身结论的实验。在金刚石量子自旋系综实验中，智能体推导出预测指定微波脉冲序列响应所需的最少校准设置，并进行计算检查和区分竞争预测的实验；初始实验符合理论，但重复参考测量显示信号漂移，智能体因此判定结果不确定并修改测量协议。",
+      "why_it_matters_zh": "自主科研系统不仅执行实验，还具备交叉审查和纠错能力，对高风险科研自动化有示范意义。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
+        "url": "https://arxiv.org/abs/2610.40589v1",
+        "published_at": "2026-10-29T17:47:50Z"
+      },
+      "related_sources": []
+    },
+    {
       "id": "event-3",
       "candidate_ids": [
         "49a7fb46ab006e0d"
       ],
       "category": "research",
-      "title_zh": "ClinGeX：以 105 项技能编排临床基因组分析智能体",
-      "summary_zh": "研究开发 LLM 智能体 ClinGeX，通过任务特定检索和依赖感知编排组合 105 个精选可执行技能。在 223 个时间留出基准病例上，其宏观平均任务级一致率为 71.7%，最强对照为 45.7%。在 45 名临床基因组专业人员评估 135 个临床病例的人机协作研究中，ClinGeX 辅助在变异分析、罕见病基因组解读和肿瘤决策等任务上提高了病例级一致率。",
-      "why_it_matters_zh": "临床基因组解读是测序普及后的瓶颈；该工作显示技能化智能体编排可在专家评估中提升一致率，但仍是研究性基准。",
-      "importance_score": 83.0,
+      "title_zh": "ClinGeX：用技能中心智能体推进临床基因组分析",
+      "summary_zh": "研究提出 ClinGeX，一个通过任务特定检索和依赖感知编排组合 105 个精选可执行技能的大语言模型智能体，用于临床基因组分析。在 223 个时间留出基准病例上，其任务级宏观一致率为 71.7%，最强对照为 45.7%。在 45 名临床基因组专业人员、135 个病例的人机协作研究中，ClinGeX 辅助提高了变异分析、罕见病解读和肿瘤决策等条件的一致率。",
+      "why_it_matters_zh": "临床基因组分析依赖专家整合不断更新的指南、数据库和计算证据，是临床决策的瓶颈；技能化智能体为可审计地扩展这类分析提供了路径。",
+      "importance_score": 82.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
@@ -67,115 +67,96 @@
     {
       "id": "event-4",
       "candidate_ids": [
-        "1dcb18fcc54824ab"
+        "cf3bcbf1b9f3176e"
       ],
       "category": "research",
-      "title_zh": "多智能体自主实验室：相互审核并修正量子自旋实验",
-      "summary_zh": "论文展示一个基于 LLM 智能体的自主研究实验室，智能体可评估彼此工作、停止或重定向研究，并能生成与否定研究问题、要求独立理论检查、设计挑战自身主张的实验。在金刚石量子自旋系综实验中，智能体推导预测微波脉冲序列响应所需的最少校准设置，进行计算检查并设计区分竞争预测的实验；因重复参考测量显示信号漂移，智能体将初始结果视为不确定并修订测量协议。",
-      "why_it_matters_zh": "展示智能体在真实科研闭环中进行相互审核、实验设计和自我纠错，为自主实验室提供可验证范式。",
+      "title_zh": "VeriCUA：把验证变成智能体探索，面向计算机使用智能体",
+      "summary_zh": "论文提出 VeriCUA，一个平台无关的验证框架，将任务完成验证视为在数字环境中的动态证据收集与评估。它先检查可用上下文构建任务 rubric，再针对未满足要求选择 GUI 或代码检查，并按显式证据规则合并结论，统一在线/离线以及不同平台和观测模态。实验显示其与人工判断的一致性提升。",
+      "why_it_matters_zh": "数据筛选、评测和强化学习都需要可靠的任务完成验证；平台无关方法可降低多端计算机使用智能体的工程成本。",
       "importance_score": 80.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
         "source_id": "arxiv-ai",
         "source_name": "arXiv AI",
-        "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
-        "url": "https://arxiv.org/abs/2610.40589v1",
-        "published_at": "2026-10-29T17:47:50Z"
+        "title": "VeriCUA: Verification as Agentic Exploration for Computer-Using Agents",
+        "url": "https://arxiv.org/abs/2610.40578v1",
+        "published_at": "2026-10-29T17:45:26Z"
       },
       "related_sources": []
     },
     {
-      "id": "event-5",
+      "id": "event-7",
       "candidate_ids": [
-        "95080ce620c770f5"
+        "f6c0ba83fe024d9c"
       ],
-      "category": "research",
-      "title_zh": "TextSeal2：兼容推测解码的无失真 LLM 水印",
-      "summary_zh": "论文提出 TextSeal2，通过 AutoMark 的高斯 copula 将多个密钥合并为单一虚拟密钥，并在推测解码下用无记忆指数竞赛对草稿残留进行验证，使被拒绝草稿替换后的 token 仍带相同密钥水印、接受率不变且不增加可测推理延迟。在三个 LLM 上，同等输出 token 多样性下，100 token 答案的检测率比 TextSeal 高 8 至 22 个百分点。",
-      "why_it_matters_zh": "水印若要与高效推理栈共存，必须兼容推测解码且不损多样性；该方案降低了部署冲突。",
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 开发者博客：为 Dynamo 构建经过验证的 Kubernetes 运行时",
+      "summary_zh": "NVIDIA 开发者博客介绍如何为 NVIDIA Dynamo 构建经过验证的 Kubernetes 运行时。文章指出，构建 AI 应用的团队需要一条可重复的路径，从模型配置走到可工作的推理端点，而 Dynamo 是分布式推理系统。",
+      "why_it_matters_zh": "分布式推理的部署与运维仍是落地瓶颈；官方给出可重复的 Kubernetes 运行时路径，有助于降低推理服务化门槛。",
       "importance_score": 78.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
-        "source_id": "arxiv-ai",
-        "source_name": "arXiv AI",
-        "title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races",
-        "url": "https://arxiv.org/abs/2610.40613v1",
-        "published_at": "2026-10-29T17:54:12Z"
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Build a Validated Kubernetes Runtime for NVIDIA Dynamo",
+        "url": "https://developer.nvidia.com/blog/build-a-validated-kubernetes-runtime-for-nvidia-dynamo/",
+        "published_at": "2026-10-30T21:35:31Z"
       },
       "related_sources": []
     },
     {
-      "id": "event-9",
+      "id": "event-11",
       "candidate_ids": [
-        "8c07d4f6d48e043c",
-        "cdc9f83c95ca6ddc"
+        "88ef0b5fb885b597"
       ],
-      "category": "open-source",
-      "title_zh": "llama.cpp 发布 b11998 与 b12015：新增 Mistral le chonk 支持并清理路径工具",
-      "summary_zh": "llama.cpp 发布 b11998，新增对 mistral le chonk 模型的支持并扩展 DSA 与 sdpark；随后发布 b12015，删除 common 中的 fs_path_to_utf8()。两个版本均提供 macOS、iOS 与 Linux 多平台构建。",
-      "why_it_matters_zh": "本地推理运行时快速跟进新模型支持，并持续维护跨平台构建，对开发者部署开源模型有直接影响。",
-      "importance_score": 66.0,
+      "category": "developer-tools",
+      "title_zh": "NVIDIA 开发者博客介绍 NemoClaw：在可控技术栈上构建专用智能体",
+      "summary_zh": "NVIDIA 开发者博客介绍 NemoClaw，用于在开发者可控的技术栈上构建专用自主智能体。文章指出，构建智能体需要模型、harness 和领域工具，而更安全地部署还需要能执行约束的运行时。",
+      "why_it_matters_zh": "智能体落地不仅是模型问题，还涉及运行时、工具集成与安全边界；官方栈方案面向企业可控部署。",
+      "importance_score": 74.0,
       "confirmation_status": "primary_confirmed",
       "primary_source": {
-        "source_id": "llama-cpp-releases",
-        "source_name": "llama.cpp Releases",
-        "title": "llama.cpp Releases: b11998",
-        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11998",
-        "published_at": "2026-10-30T01:11:38Z"
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Build Specialized Agents on a Stack You Control with NVIDIA NemoClaw",
+        "url": "https://developer.nvidia.com/blog/build-specialized-agents-on-a-stack-you-control-with-nvidia-nemoclaw/",
+        "published_at": "2026-10-30T16:00:00Z"
       },
-      "related_sources": [
-        {
-          "source_id": "llama-cpp-releases",
-          "source_name": "llama.cpp Releases",
-          "title": "llama.cpp Releases: b12015",
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12015",
-          "published_at": "2026-10-30T16:06:05Z"
-        }
-      ]
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "1ecf646e4a77c286"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA 开发者博客：用少量命令运行边缘 AI 模型",
+      "summary_zh": "NVIDIA 开发者博客介绍面向边缘应用开发的 AI 模型运行方式，强调仅需少量命令。文章背景是 AI 正从数据中心扩展到边缘，开发者正在构建驾驶员注意力监测、座舱状态监测等新一代边缘智能体。",
+      "why_it_matters_zh": "边缘 AI 开发工具链的简化，有助于把模型部署到时延、带宽和隐私受限的场景。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Run AI Models for Edge Application Development with Just a Few Commands",
+        "url": "https://developer.nvidia.com/blog/run-ai-models-for-edge-application-development-with-just-a-few-commands/",
+        "published_at": "2026-10-30T20:33:18Z"
+      },
+      "related_sources": []
     }
   ],
   "degraded": false,
-  "warnings": [
-    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
-    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
-    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
-    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
-    "source google-research failed: SourceParseError: google-research: no dated article records found",
-    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
-    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
-    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
-    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
-    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
-    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
-    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
-    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
-    "source zhipu-research failed: SourceParseError: zhipu-research: no dated article records found"
-  ],
+  "warnings": [],
   "report_url": null,
   "source_coverage": {
-    "enabled": 25,
-    "fetched": 176,
-    "normalized": 176,
-    "filtered": 140,
+    "enabled": 9,
+    "fetched": 168,
+    "normalized": 168,
+    "filtered": 135,
     "ai_candidates": 30,
-    "prompt_chars": 25536,
-    "estimated_input_tokens": 6384,
-    "failed_source_ids": [
-      "anthropic-news",
-      "cohere-blog",
-      "deepmind-news",
-      "deepseek-updates",
-      "google-research",
-      "hf-daily-papers",
-      "jiqizhixin",
-      "meta-ai-blog",
-      "microsoft-research",
-      "minimax-news",
-      "mistral-news",
-      "openai-news",
-      "qwen-blog",
-      "zhipu-research"
-    ],
+    "prompt_chars": 27958,
+    "estimated_input_tokens": 6989,
+    "failed_source_ids": [],
     "newly_auto_paused_source_ids": []
   }
 }
