@@ -1,0 +1,840 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "meta-ai-blog",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "qwen-blog",
+    "minimax-news",
+    "zhipu-research",
+    "mistral-news",
+    "cohere-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "jiqizhixin",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 129,
+  "normalized_count": 129,
+  "filtered_count": 101,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "source_group": "research",
+        "independence_group": "vllm-releases",
+        "title": "vLLM Releases: v0.33.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+        "published_at": "2026-11-02T10:10:05Z",
+        "fetched_at": "2026-11-02T20:43:34.651176Z",
+        "language": "unknown",
+        "excerpt": "# v0.33.0\r\n\r\n## Highlights\r\n\r\nThis release features 927 commits from 389 contributors (122 new)!\r\n\r\n* **New models**: Reflection Beam-1.0 (501B MoE, 23B active) with its DFlash2 drafter (#62074), Yandex AliceAI-Foundation-80B-A3B (#57963), Recursive Flint (40B MoE, 2.5B active) (#62938), Muse Spark Open (#61879), Step-5 Preview (#61727, #63147), NVIDIA Alpamayo 2 Super (#62957), Nemotron-Labs Dory1.0-4B (#60149), Nemotron Parse 3.5 (#61651), MiniCPM-OCR 1.0 (#63095), Domyn Edge (#62544) and the ColUltraVBERT visual document retriever (#62237).\r\n* **PyTorch 2.14**: vLLM is upgraded to PyTorch 2.14.0, with torchvision 0.29.0 and Triton 3.8.0 (#52183).\r\n* **CUDA 12.9 dropped**: release wheels and images are CUDA 13.0 only. The CUDA 12.9 wheels and the `-cu129` / `-cu129-ubuntu2404` images are no longer published (#62575); use the default CUDA 13.0 artifacts instead.\r\n* **libtorch ABI stable CUDA wheel**: the CUDA wheel is now ABI stable with libtorch.\r\n* **AWS EFA image**: a new `vllm/vllm-openai:v0.33.0-efa` image (x86_64 and aarch64) bundles the AWS EFA libraries and the EFA build of the Mooncake transfer engine, for KV transfer and multi-node serving on EFA-enabled EC2 instances (#",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "khluu",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 431309343
+        },
+        "id": "3c21535c575c374a",
+        "canonical_url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+        "normalized_title": "vllm releases v0 33 0",
+        "fingerprint": "3c21535c575c374afe4ec886a8145126493162f06c83706a6300844b1df5e860",
+        "rule_score": 67.01680555555555
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "小米开源了个150元的AI小玩意，火到配件都涨价了",
+        "url": "https://www.qbitai.com/2026/11/507107.html",
+        "published_at": "2026-11-02T06:08:04Z",
+        "fetched_at": "2026-11-02T20:43:39.820699Z",
+        "language": "unknown",
+        "excerpt": "能指挥Agent干活，还能控制智能家居",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "思邈",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "3a65a6911dd9d942",
+        "canonical_url": "https://www.qbitai.com/2026/11/507107.html",
+        "normalized_title": "小米开源了个150元的ai小玩意 火到配件都涨价了",
+        "fingerprint": "3a65a6911dd9d942c4530cf096aabb2f6d97582a70f4c46cadbb39f63dc72f49",
+        "rule_score": 62.61344444444445
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b12058",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12058",
+        "published_at": "2026-11-02T19:30:07Z",
+        "fetched_at": "2026-11-02T20:43:35.616953Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nimatrix : fix --nextn crash (#31522)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/62794269>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12058/llama-b12058-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b12058/llama-b12058-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b12058/llama-b12058-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12058/llama-b12058-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12058/llama-b12058-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12058/llama-b12058-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu 26.04 s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12058/llama-b12058-bin-ubuntu-26.04-s390x.tar.gz)\n- [Ubuntu ",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 431881360
+        },
+        "id": "e4e16892cb7bb5c2",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12058",
+        "normalized_title": "llama cpp releases b12058",
+        "fingerprint": "e4e16892cb7bb5c26b70cc525d84b77fb21b5b463748887b7ee18286e4096e45",
+        "rule_score": 54.95019444444444
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "从“能调用”到“敢托付”：仪电智算云 Token 工厂的三重可信",
+        "url": "https://www.qbitai.com/2026/11/507260.html",
+        "published_at": "2026-11-02T07:47:38Z",
+        "fetched_at": "2026-11-02T20:43:39.820671Z",
+        "language": "unknown",
+        "excerpt": "上海仪电与上海创智学院联合发布“飞轮转・万象生”仪电智算数链生态。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "量子位的朋友们",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2272e0b02dc71c03",
+        "canonical_url": "https://www.qbitai.com/2026/11/507260.html",
+        "normalized_title": "从 能调用 到 敢托付 仪电智算云 token 工厂的三重可信",
+        "fingerprint": "2272e0b02dc71c032ea0aad50dd34cad63384af7ecdbb7e52fa043ad7ebe056c",
+        "rule_score": 54.77938888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "OpenAI重写大模型法则，第一条：忠于人类！！",
+        "url": "https://www.qbitai.com/2026/11/507225.html",
+        "published_at": "2026-11-02T07:27:54Z",
+        "fetched_at": "2026-11-02T20:43:39.820682Z",
+        "language": "unknown",
+        "excerpt": "新版“机器人三定律”。",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "程浅",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "08242f65cf65fcb6",
+        "canonical_url": "https://www.qbitai.com/2026/11/507225.html",
+        "normalized_title": "openai重写大模型法则 第一条 忠于人类",
+        "fingerprint": "08242f65cf65fcb6d989df933fe0253a284690f5941c60b81a314274adb6f6f7",
+        "rule_score": 54.7465
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "顶级AI翻车的活儿，被这个新出的免费国产AI接住了！",
+        "url": "https://www.qbitai.com/2026/11/507277.html",
+        "published_at": "2026-11-02T13:36:41Z",
+        "fetched_at": "2026-11-02T20:43:39.820624Z",
+        "language": "unknown",
+        "excerpt": "商汤SenseNova 6.8 Flash",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "十三",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "9bb7eab17397ceb0",
+        "canonical_url": "https://www.qbitai.com/2026/11/507277.html",
+        "normalized_title": "顶级ai翻车的活儿 被这个新出的免费国产ai接住了",
+        "fingerprint": "9bb7eab17397ceb00c6abed18b0f6aab8140334f39440b7f6594a5046e8e79ad",
+        "rule_score": 51.36113888888889
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "央视严选「中国AI创业十骏」：唯一AI制药公司是清华系",
+        "url": "https://www.qbitai.com/2026/11/507150.html",
+        "published_at": "2026-11-02T06:28:07Z",
+        "fetched_at": "2026-11-02T20:43:39.820690Z",
+        "language": "unknown",
+        "excerpt": "模型管线双驱动",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "鹭羽",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "5c9acbd3a3c9db3a",
+        "canonical_url": "https://www.qbitai.com/2026/11/507150.html",
+        "normalized_title": "央视严选 中国ai创业十骏 唯一ai制药公司是清华系",
+        "fingerprint": "5c9acbd3a3c9db3aefa84b62c020c798de96158a919db7c12f0d7403143b6d65",
+        "rule_score": 50.64686111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "OpenAI is finally merging ChatGPT’s Chat and Work tabs",
+        "url": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/",
+        "published_at": "2026-11-02T13:57:53Z",
+        "fetched_at": "2026-11-02T20:43:39.856342Z",
+        "language": "unknown",
+        "excerpt": "OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ivan Mehta",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b4380ff31ce3c30a",
+        "canonical_url": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs",
+        "normalized_title": "openai is finally merging chatgpt s chat and work tabs",
+        "fingerprint": "b4380ff31ce3c30a4c58a5684f73e72fb9f23f121c7ce608188b2d02d099e61d",
+        "rule_score": 50.39647222222222
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Making Kubernetes AI-Ready for NVIDIA Vera Rubin on Day One",
+        "url": "https://developer.nvidia.com/blog/making-kubernetes-ai-ready-for-nvidia-vera-rubin-on-day-one/",
+        "published_at": "2026-11-02T18:00:00Z",
+        "fetched_at": "2026-11-02T20:39:27.983920Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/10/runai-tech-blog-compute-domains-1920x1080-4504000-1024x576-png-768x432.webp\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"runai-tech-blog-compute-domains-1920x1080-4504000-1024x576-png\" width=\"768\" />Configuring and optimizing Kubernetes for new GPU hardware such as NVIDIA Vera Rubin is complex and error-prone. Drivers, kernels, runtimes, networking,...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Shara Tibken",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d0940510325742dd",
+        "canonical_url": "https://developer.nvidia.com/blog/making-kubernetes-ai-ready-for-nvidia-vera-rubin-on-day-one",
+        "normalized_title": "making kubernetes ai ready for nvidia vera rubin on day one",
+        "fingerprint": "d0940510325742dd77eee5a62b30c836695290c9fd4004aec18da619573bc957",
+        "rule_score": 48.8
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+        "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+        "published_at": "2026-11-01T21:55:23Z",
+        "fetched_at": "2026-11-02T20:43:39.856351Z",
+        "language": "unknown",
+        "excerpt": "Data centers are deeply unpopular. But what if we called them something else?",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d1b7f42d8c996a08",
+        "canonical_url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses",
+        "normalized_title": "openai might rebrand its data centers as ai compute campuses",
+        "fingerprint": "d1b7f42d8c996a08efdc109205cb53825dbabdbafc435e6662cd5532f5386f38",
+        "rule_score": 48.79230555555556
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Build World Models for Interactive Simulation with NVIDIA Cosmos",
+        "url": "https://developer.nvidia.com/blog/build-world-models-for-interactive-simulation-with-nvidia-cosmos/",
+        "published_at": "2026-11-02T17:00:00Z",
+        "fetched_at": "2026-11-02T20:39:27.983973Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"338\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/10/cosmos-framework-tech-blog-600x338-5784057.webp\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"cosmos-framework-tech-blog-600x338-5784057\" width=\"600\" />Physical AI developers working with world models face two distinct challenges: adapting models to their sensors, tasks, and data, and getting those models into...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Elizabeth Goodman",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "476fbcb73a4a1061",
+        "canonical_url": "https://developer.nvidia.com/blog/build-world-models-for-interactive-simulation-with-nvidia-cosmos",
+        "normalized_title": "build world models for interactive simulation with nvidia cosmos",
+        "fingerprint": "476fbcb73a4a1061b0711591de41f3994d60c90b2fae8e076ac3c92614f6e4c8",
+        "rule_score": 48.7
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+        "url": "https://momentic.ai/",
+        "published_at": "2026-11-02T17:05:25Z",
+        "fetched_at": "2026-11-02T20:43:40.087605Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "wuweiweiwu",
+        "upstream_urls": [
+          "https://momentic.ai/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50339913,
+          "score": 83
+        },
+        "id": "58f08e1443630372",
+        "canonical_url": "https://momentic.ai/",
+        "normalized_title": "launch hn momentic yc w24 agents that catch bugs by using your app",
+        "fingerprint": "58f08e14436303721700f8bad6dc964302a5401bdedf152e8d9462d56efa2291",
+        "rule_score": 47.70902777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "New York Times and other outlets sue web browser Brave over alleged content scraping",
+        "url": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/",
+        "published_at": "2026-11-02T19:19:17Z",
+        "fetched_at": "2026-11-02T20:43:39.856261Z",
+        "language": "unknown",
+        "excerpt": "The New York Times is suing privacy-focused web browser company Brave for allegedly scraping the outlet’s copyrighted content and unlawfully distributing it to its own customers, like Anthropic and Perplexity.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Rebecca Bellan",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ddc9aee76a9d5ae9",
+        "canonical_url": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping",
+        "normalized_title": "new york times and other outlets sue web browser brave over alleged content scraping",
+        "fingerprint": "ddc9aee76a9d5ae90e1ada8dd04a83ea1a08d43895a1eeb0194214134c3178f8",
+        "rule_score": 46.932138888888886
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "42AI comes out of stealth with $62.5M and a world model that can ‘predict human behavior’",
+        "url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior/",
+        "published_at": "2026-11-02T16:30:00Z",
+        "fetched_at": "2026-11-02T20:43:39.856304Z",
+        "language": "unknown",
+        "excerpt": "Here's a question straight out of sci-fi: What if AI could predict what you were going to do before you decided to, even in a completely new situation?",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Ram Iyer",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "36c020930b2ad596",
+        "canonical_url": "https://techcrunch.com/2026/11/02/42ai-comes-out-of-stealth-with-62-5m-and-a-world-model-that-can-predict-human-behavior",
+        "normalized_title": "42ai comes out of stealth with 62 5m and a world model that can predict human behavior",
+        "fingerprint": "36c020930b2ad5965c91c1aa5412cdc4b6ea314f3cd483a31000f523508724d9",
+        "rule_score": 46.65
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Elon Musk throttles Grok Bot limits due to ‘unsustainably high’ costs",
+        "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/",
+        "published_at": "2026-11-02T16:23:21Z",
+        "fetched_at": "2026-11-02T20:43:39.856315Z",
+        "language": "unknown",
+        "excerpt": "Musk recently referred to Grok Bot as having \"the fastest growth of a product that I've ever seen in my life.\"",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Amanda Silberling",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "7c7bb1408737b18c",
+        "canonical_url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs",
+        "normalized_title": "elon musk throttles grok bot limits due to unsustainably high costs",
+        "fingerprint": "7c7bb1408737b18cd3c73e2e743cd0bff264063291416f52b6df4d78b0c7785e",
+        "rule_score": 46.63891666666667
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Omen AI adds liquid know-how in $16 million Aquatic Labs acquisition",
+        "url": "https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/",
+        "published_at": "2026-11-02T15:00:00Z",
+        "fetched_at": "2026-11-02T20:43:39.856324Z",
+        "language": "unknown",
+        "excerpt": "Two startups tackling the data center water problem are joining forces in a $16 million deal.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Tim Fernholz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "972571fd439e4ace",
+        "canonical_url": "https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition",
+        "normalized_title": "omen ai adds liquid know how in 16 million aquatic labs acquisition",
+        "fingerprint": "972571fd439e4ace71962251838e9d00320c595e8d31a675c424a83702a1707b",
+        "rule_score": 46.5
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "GPT-6.2 Astra开启灰测！Claude Mythos 5.5同日曝光",
+        "url": "https://www.qbitai.com/2026/11/507082.html",
+        "published_at": "2026-11-02T04:28:53Z",
+        "fetched_at": "2026-11-02T20:43:39.820707Z",
+        "language": "unknown",
+        "excerpt": "HuggingFace疑似泄露权重已被下5000次",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "梦晨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "73c296918d91ab81",
+        "canonical_url": "https://www.qbitai.com/2026/11/507082.html",
+        "normalized_title": "gpt 6 2 astra开启灰测 claude mythos 5 5同日曝光",
+        "fingerprint": "73c296918d91ab818760c9a4f0bff88b57ef1d306b87fbecb76cae677578bf17",
+        "rule_score": 46.44813888888889
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
+        "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+        "published_at": "2026-11-01T20:57:58Z",
+        "fetched_at": "2026-11-02T20:43:39.856359Z",
+        "language": "unknown",
+        "excerpt": "On Equity, we discuss why tech CEO statements can seem so tone deaf.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cb824e6c67696d67",
+        "canonical_url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else",
+        "normalized_title": "ai can make tech ceos lives easier what about everyone else",
+        "fingerprint": "cb824e6c67696d672a028c831928946cecf722d0e34955e48b27b6e470fd34df",
+        "rule_score": 44.69661111111111
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Data centers are now a midterm issue, even in Brooklyn",
+        "url": "https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn/",
+        "published_at": "2026-11-01T02:22:10Z",
+        "fetched_at": "2026-11-02T20:43:39.856367Z",
+        "language": "unknown",
+        "excerpt": "At a Brooklyn midterm party five days before Election Day, every conversation, from a council member’s fireside chat to a debate about the Democratic Party, kept circling back to AI and data centers.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Dominic-Madori Davis",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "47bca3b862112bcb",
+        "canonical_url": "https://techcrunch.com/2026/10/31/data-centers-are-now-a-midterm-issue-even-in-brooklyn",
+        "normalized_title": "data centers are now a midterm issue even in brooklyn",
+        "fingerprint": "47bca3b862112bcb83e8d221b50478fb44c97ae890021559b8851e48f41f65ff",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic reveals $900B AI spending commitments ahead of IPO",
+        "url": "https://www.ft.com/content/4d91dbab-6fe4-45ab-beee-d77e091cb37f",
+        "published_at": "2026-11-02T19:36:37Z",
+        "fetched_at": "2026-11-02T20:43:40.571364Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "zomtorg",
+        "upstream_urls": [
+          "https://www.ft.com/content/4d91dbab-6fe4-45ab-beee-d77e091cb37f"
+        ],
+        "raw_metadata": {
+          "hn_id": 50342424,
+          "score": 35
+        },
+        "id": "1b16338fe39f27b2",
+        "canonical_url": "https://www.ft.com/content/4d91dbab-6fe4-45ab-beee-d77e091cb37f",
+        "normalized_title": "anthropic reveals 900b ai spending commitments ahead of ipo",
+        "fingerprint": "1b16338fe39f27b24e8bb1a8ae2897d237d9d9ef31e98ccba4cfcf2d66ebc171",
+        "rule_score": 43.96102777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+        "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+        "published_at": "2026-11-02T18:39:38Z",
+        "fetched_at": "2026-11-02T20:43:40.457633Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "majorchord",
+        "upstream_urls": [
+          "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432"
+        ],
+        "raw_metadata": {
+          "hn_id": 50341462,
+          "score": 74
+        },
+        "id": "225c8a44abf4bedd",
+        "canonical_url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+        "normalized_title": "ubuntu still has not released patch for linux 0day rce in almost 3 weeks",
+        "fingerprint": "225c8a44abf4bedd15df4d7c93ad82fb6121ac48a4a061bd6a34fec013529e7b",
+        "rule_score": 43.866055555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Agentic backdoors via pretraining poisoning",
+        "url": "https://arxiv.org/abs/2610.37741",
+        "published_at": "2026-11-02T18:30:58Z",
+        "fetched_at": "2026-11-02T20:43:40.628660Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gmays",
+        "upstream_urls": [
+          "https://arxiv.org/abs/2610.37741"
+        ],
+        "raw_metadata": {
+          "hn_id": 50341334,
+          "score": 48
+        },
+        "id": "f3c1c65aa0426821",
+        "canonical_url": "https://arxiv.org/abs/2610.37741",
+        "normalized_title": "agentic backdoors via pretraining poisoning",
+        "fingerprint": "f3c1c65aa042682155cf751387a85baaed6935c6f1b4ade940109ff2bf49c588",
+        "rule_score": 43.85161111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Sneaking into the auditorium for the Windows 2000 launch rehearsal",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20261102-00/?p=112818/",
+        "published_at": "2026-11-02T18:12:48Z",
+        "fetched_at": "2026-11-02T20:43:40.229938Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ibobev",
+        "upstream_urls": [
+          "https://devblogs.microsoft.com/oldnewthing/20261102-00/?p=112818/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50341028,
+          "score": 49
+        },
+        "id": "12bad747aadfbbae",
+        "canonical_url": "https://devblogs.microsoft.com/oldnewthing/20261102-00?p=112818%2F",
+        "normalized_title": "sneaking into the auditorium for the windows 2000 launch rehearsal",
+        "fingerprint": "12bad747aadfbbae7fa254ebbb78c68b037d70f223fa38225d9dde2f8befbd75",
+        "rule_score": 43.821333333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Polyend releases the Tracker firmware source code",
+        "url": "https://polyend.com/whats-up/tracker-the-biggest-update-yet/",
+        "published_at": "2026-11-02T17:20:13Z",
+        "fetched_at": "2026-11-02T20:43:40.800875Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "austinallegro",
+        "upstream_urls": [
+          "https://polyend.com/whats-up/tracker-the-biggest-update-yet/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50340159,
+          "score": 12
+        },
+        "id": "4cab2d7b5fc5ad90",
+        "canonical_url": "https://polyend.com/whats-up/tracker-the-biggest-update-yet",
+        "normalized_title": "polyend releases the tracker firmware source code",
+        "fingerprint": "4cab2d7b5fc5ad90bf214300775fc0f3df4f4b0f4281b0bfdf324f15448fb74a",
+        "rule_score": 43.733694444444446
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+        "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+        "published_at": "2026-11-02T16:40:29Z",
+        "fetched_at": "2026-11-02T20:43:40.514837Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "entryleveljobsc",
+        "upstream_urls": [
+          "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11"
+        ],
+        "raw_metadata": {
+          "hn_id": 50339494,
+          "score": 221
+        },
+        "id": "957c865dab19ff53",
+        "canonical_url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+        "normalized_title": "anthropic s internal ai use at retail prices now exceeds its employee pay",
+        "fingerprint": "957c865dab19ff53befe2fc20ac26edea1daaae9e122ae869a2585c9e816aa8b",
+        "rule_score": 43.66747222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
+        "url": "https://longcat.ai/blog/longcat-2.5/",
+        "published_at": "2026-11-02T15:00:26Z",
+        "fetched_at": "2026-11-02T20:43:40.599910Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pretext",
+        "upstream_urls": [
+          "https://longcat.ai/blog/longcat-2.5/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50337716,
+          "score": 60
+        },
+        "id": "dcfe695011610c46",
+        "canonical_url": "https://longcat.ai/blog/longcat-2.5",
+        "normalized_title": "longcat 2 5 native multimodality for agentic tasks",
+        "fingerprint": "dcfe695011610c460635e8b7533b57a36c04cc091ab9c61b794a9b641d329dac",
+        "rule_score": 43.50072222222222
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Last night an AI agent performed brain surgery on a mouse",
+        "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+        "published_at": "2026-11-02T12:50:59Z",
+        "fetched_at": "2026-11-02T20:43:41.083809Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "FacZap",
+        "upstream_urls": [
+          "https://twitter.com/OcanaSantero/status/2115442964574908902"
+        ],
+        "raw_metadata": {
+          "hn_id": 50336138,
+          "score": 107
+        },
+        "id": "fa0ec407bdac2fad",
+        "canonical_url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+        "normalized_title": "last night an ai agent performed brain surgery on a mouse",
+        "fingerprint": "fa0ec407bdac2fad0e6ecc5e723bab861be46908b662461691160cadf6ba8196",
+        "rule_score": 43.28497222222222
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "2 days till TechCrunch Founder Summit: Boston founders don’t need a Silicon Valley address to build something big",
+        "url": "https://techcrunch.com/2026/11/02/2-days-till-techcrunch-founder-summit-boston-founders-dont-need-a-silicon-valley-address-to-build-something-big/",
+        "published_at": "2026-11-02T14:00:00Z",
+        "fetched_at": "2026-11-02T20:43:39.856333Z",
+        "language": "unknown",
+        "excerpt": "TechCrunch Founder Summit happens on November 4 in Boston for a founder-focused agenda and impactful connections. Save up to $100 or get discounts with group passes.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "TechCrunch Events",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "37d95ccf65c24103",
+        "canonical_url": "https://techcrunch.com/2026/11/02/2-days-till-techcrunch-founder-summit-boston-founders-dont-need-a-silicon-valley-address-to-build-something-big",
+        "normalized_title": "2 days till techcrunch founder summit boston founders don t need a silicon valley address to build something big",
+        "fingerprint": "37d95ccf65c24103c06f1ba3477af4cbb18676f8b56b6ca5f261e7cad5c6defa",
+        "rule_score": 42.4
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Bones may release proteins that slow aging and extend life span",
+        "url": "https://www.science.org/content/article/bones-may-release-proteins-slow-aging-and-extend-life-span",
+        "published_at": "2026-11-02T01:31:07Z",
+        "fetched_at": "2026-11-02T20:43:40.714759Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "EA-3167",
+        "upstream_urls": [
+          "https://www.science.org/content/article/bones-may-release-proteins-slow-aging-and-extend-life-span"
+        ],
+        "raw_metadata": {
+          "hn_id": 50331957,
+          "score": 299
+        },
+        "id": "159d8403cb49d347",
+        "canonical_url": "https://www.science.org/content/article/bones-may-release-proteins-slow-aging-and-extend-life-span",
+        "normalized_title": "bones may release proteins that slow aging and extend life span",
+        "fingerprint": "159d8403cb49d347583e479050ffe252e2cb4f8fbe8d2fc80a3ade744c7f382e",
+        "rule_score": 42.15186111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Oracle files to sell $20B in new stock, bonds to finance AI buildout",
+        "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html",
+        "published_at": "2026-11-02T19:27:37Z",
+        "fetched_at": "2026-11-02T20:43:40.316970Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "smartmic",
+        "upstream_urls": [
+          "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 50342284,
+          "score": 48
+        },
+        "id": "341d6e9fdcf75ee0",
+        "canonical_url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html",
+        "normalized_title": "oracle files to sell 20b in new stock bonds to finance ai buildout",
+        "fingerprint": "341d6e9fdcf75ee01332d84a7c4fa77c847350994992d8e08492e8c9d8b7d641",
+        "rule_score": 39.94602777777778
+      }
+    ],
+    "prompt_chars": 7159,
+    "estimated_input_tokens": 1789
+  },
+  "failures": {
+    "openai-news": "SourceFetchError: openai-news: HTML fetch failed",
+    "anthropic-news": "SourceParseError: anthropic-news: no dated article records found",
+    "deepmind-news": "SourceParseError: deepmind-news: no dated article records found",
+    "google-research": "SourceParseError: google-research: no dated article records found",
+    "meta-ai-blog": "SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "microsoft-research": "SourceParseError: microsoft-research: no dated article records found",
+    "deepseek-updates": "SourceParseError: deepseek-updates: no dated article records found",
+    "qwen-blog": "SourceParseError: qwen-blog: no dated article records found",
+    "minimax-news": "SourceParseError: minimax-news: no dated article records found",
+    "zhipu-research": "SourceFetchError: zhipu-research: HTML fetch failed",
+    "mistral-news": "SourceParseError: mistral-news: no dated article records found",
+    "cohere-blog": "SourceParseError: cohere-blog: no dated article records found",
+    "hf-daily-papers": "SourceParseError: hf-daily-papers: no dated article records found",
+    "jiqizhixin": "SourceParseError: jiqizhixin: no dated article records found"
+  },
+  "newly_auto_paused_source_ids": []
+}

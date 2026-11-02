@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-03",
+  "generated_at": "2026-11-02T20:39:17.840122Z",
+  "run_id": "2026-11-03-a6c4033d",
+  "daily_summary_zh": "今日AI领域动态：vLLM 发布 v0.33.0：支持多款新模型并升级至 PyTorch 2.14；NVIDIA 发布 Cosmos 世界模型交互式仿真指南；NVIDIA 发布面向 Vera Rubin 的 Kubernetes AI 就绪方案。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "3c21535c575c374a"
+      ],
+      "category": "open-source",
+      "title_zh": "vLLM 发布 v0.33.0：支持多款新模型并升级至 PyTorch 2.14",
+      "summary_zh": "vLLM v0.33.0 包含来自 389 位贡献者的 927 个提交，新增 Reflection Beam-1.0、Yandex AliceAI-Foundation-80B-A3B、Recursive Flint、Muse Spark Open、Step-5 Preview、NVIDIA Alpamayo 2 Super、Nemotron-Labs Dory1.0-4B、Nemotron Parse 3.5、MiniCPM-OCR 1.0、Domyn Edge 和 ColUltraVBERT 等模型支持；升级至 PyTorch 2.14.0、torchvision 0.29.0 和 Triton 3.8.0；发布产物转为仅 CUDA 13.0，不再发布 CUDA 12.9 版本，并提供 AWS EFA 专用镜像。",
+      "why_it_matters_zh": "vLLM 是主流开源推理引擎，此次更新同时扩大模型覆盖范围、升级深度学习栈并调整 CUDA 发布策略，将直接影响开发者和生产环境的模型部署与硬件适配。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "vllm-releases",
+        "source_name": "vLLM Releases",
+        "title": "vLLM Releases: v0.33.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+        "published_at": "2026-11-02T10:10:05Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "476fbcb73a4a1061"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Cosmos 世界模型交互式仿真指南",
+      "summary_zh": "NVIDIA 开发者博客介绍如何使用 NVIDIA Cosmos 构建面向交互式仿真的世界模型，并说明物理 AI 开发者在将模型适配到自身传感器、任务和数据，以及将模型投入实际使用时所面临的挑战。",
+      "why_it_matters_zh": "世界模型是物理 AI、机器人仿真和交互式环境构建的重要技术方向，NVIDIA 提供工具与方法指南有助于降低相关模型的开发和部署门槛。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Build World Models for Interactive Simulation with NVIDIA Cosmos",
+        "url": "https://developer.nvidia.com/blog/build-world-models-for-interactive-simulation-with-nvidia-cosmos/",
+        "published_at": "2026-11-02T17:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "d0940510325742dd"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 发布面向 Vera Rubin 的 Kubernetes AI 就绪方案",
+      "summary_zh": "NVIDIA 开发者博客讨论如何让 Kubernetes 在第一天就支持 NVIDIA Vera Rubin 等新 GPU 硬件，涉及驱动、内核、运行时和网络等配置与优化问题。",
+      "why_it_matters_zh": "新 GPU 平台在 Kubernetes 上的就绪程度会影响 AI 集群的部署效率与稳定性，该方案有助于降低基础设施团队适配 Vera Rubin 的复杂度和出错风险。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Making Kubernetes AI-Ready for NVIDIA Vera Rubin on Day One",
+        "url": "https://developer.nvidia.com/blog/making-kubernetes-ai-ready-for-nvidia-vera-rubin-on-day-one/",
+        "published_at": "2026-11-02T18:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source anthropic-news failed: SourceParseError: anthropic-news: no dated article records found",
+    "source cohere-blog failed: SourceParseError: cohere-blog: no dated article records found",
+    "source deepmind-news failed: SourceParseError: deepmind-news: no dated article records found",
+    "source deepseek-updates failed: SourceParseError: deepseek-updates: no dated article records found",
+    "source google-research failed: SourceParseError: google-research: no dated article records found",
+    "source hf-daily-papers failed: SourceParseError: hf-daily-papers: no dated article records found",
+    "source jiqizhixin failed: SourceParseError: jiqizhixin: no dated article records found",
+    "source meta-ai-blog failed: SourceFetchError: meta-ai-blog: HTML fetch failed",
+    "source microsoft-research failed: SourceParseError: microsoft-research: no dated article records found",
+    "source minimax-news failed: SourceParseError: minimax-news: no dated article records found",
+    "source mistral-news failed: SourceParseError: mistral-news: no dated article records found",
+    "source openai-news failed: SourceFetchError: openai-news: HTML fetch failed",
+    "source qwen-blog failed: SourceParseError: qwen-blog: no dated article records found",
+    "source zhipu-research failed: SourceFetchError: zhipu-research: HTML fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 25,
+    "fetched": 129,
+    "normalized": 129,
+    "filtered": 101,
+    "ai_candidates": 30,
+    "prompt_chars": 7159,
+    "estimated_input_tokens": 1789,
+    "failed_source_ids": [
+      "anthropic-news",
+      "cohere-blog",
+      "deepmind-news",
+      "deepseek-updates",
+      "google-research",
+      "hf-daily-papers",
+      "jiqizhixin",
+      "meta-ai-blog",
+      "microsoft-research",
+      "minimax-news",
+      "mistral-news",
+      "openai-news",
+      "qwen-blog",
+      "zhipu-research"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
