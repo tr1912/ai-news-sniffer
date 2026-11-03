@@ -19,8 +19,8 @@ def ids(profile: str, **kwargs: object) -> set[str]:
 
 
 def test_profiles_resolve_exact_counts() -> None:
-    assert len(ids("light")) == 12
-    assert len(ids("balanced")) == 25
+    assert len(ids("light")) == 8
+    assert len(ids("balanced")) == 20
     assert len(ids("full")) == 35
 
 

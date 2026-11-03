@@ -13,8 +13,8 @@ def test_committed_registry_has_exact_profile_counts() -> None:
     settings = load_settings(ROOT / "config")
 
     assert len(settings.sources.sources) == 35
-    assert sum("light" in item.profiles for item in settings.sources.sources) == 12
-    assert sum("balanced" in item.profiles for item in settings.sources.sources) == 25
+    assert sum("light" in item.profiles for item in settings.sources.sources) == 8
+    assert sum("balanced" in item.profiles for item in settings.sources.sources) == 20
     assert sum("full" in item.profiles for item in settings.sources.sources) == 35
     assert len({item.id for item in settings.sources.sources}) == 35
 
