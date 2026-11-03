@@ -484,6 +484,8 @@ def test_html_adapter_uses_browser_user_agent() -> None:
 
     assert request_headers is not None
     assert "Chrome" in request_headers.get("user-agent", "")
+    # 未安装 brotli 解码器时声明 br 会导致响应无法解码、解析失败，故不得请求 br
+    assert "br" not in request_headers.get("accept-encoding", "")
 
 
 @respx.mock

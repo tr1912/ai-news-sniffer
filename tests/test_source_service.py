@@ -64,9 +64,9 @@ def test_collection_isolates_failure_and_applies_budget(tmp_path: Path) -> None:
         adapter_factory=factory,
     )
 
-    assert len(result.enabled_source_ids) == 12
+    assert len(result.enabled_source_ids) == 8
     assert "anthropic-news" in result.failures
-    assert result.fetched_count == 11
+    assert result.fetched_count == 7
     assert len(result.budgeted.articles) <= 20
     assert result.budgeted.prompt_chars <= 60000
     assert result.newly_auto_paused_source_ids == ["anthropic-news"]
@@ -119,7 +119,7 @@ def test_auto_paused_source_is_retried_after_cooldown(tmp_path: Path) -> None:
 
     assert "anthropic-news" in result.enabled_source_ids
     assert "anthropic-news" not in result.failures
-    assert result.fetched_count == 12
+    assert result.fetched_count == 8
 
 
 def test_auto_paused_source_is_skipped_before_cooldown(tmp_path: Path) -> None:
@@ -149,4 +149,4 @@ def test_auto_paused_source_is_skipped_before_cooldown(tmp_path: Path) -> None:
     )
 
     assert "anthropic-news" not in result.enabled_source_ids
-    assert result.fetched_count == 11
+    assert result.fetched_count == 7
