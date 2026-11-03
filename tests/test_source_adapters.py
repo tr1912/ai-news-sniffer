@@ -29,6 +29,41 @@ def source(kind: SourceKind, url: str, **options: object) -> SourceConfig:
 
 
 @respx.mock
+def test_anthropic_selectors_extract_articles() -> None:
+    anthropic = SourceConfig(
+        id="anthropic-news",
+        name="Anthropic Newsroom",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://www.anthropic.com/news",
+        categories=["models"],
+        selectors=HtmlSelectors(
+            item="article",
+            title="h2, h3",
+            link="a[href*='-']",
+            date="time",
+            excerpt="p",
+        ),
+    )
+    respx.get(str(anthropic.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text=(FIXTURES / "html_anthropic.html").read_text(encoding="utf-8"),
+        )
+    )
+
+    articles = build_source_adapter(anthropic, httpx.Client()).fetch(
+        anthropic, SINCE, UNTIL
+    )
+
+    assert len(articles) == 2
+    assert str(articles[0].url) == "https://www.anthropic.com/claude-opus-5-5"
+    assert articles[0].published_at == datetime(2026, 7, 23, tzinfo=UTC)
+    assert all(a.published_at == datetime(2026, 7, 23, tzinfo=UTC) for a in articles)
+
+
+@respx.mock
 def test_hf_daily_papers_adapter_returns_papers() -> None:
     papers = source(
         SourceKind.HF_DAILY_PAPERS,
