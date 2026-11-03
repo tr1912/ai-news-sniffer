@@ -29,6 +29,41 @@ def source(kind: SourceKind, url: str, **options: object) -> SourceConfig:
 
 
 @respx.mock
+def test_hf_daily_papers_adapter_returns_papers() -> None:
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(
+        return_value=httpx.Response(
+            200,
+            json=json.loads(
+                (FIXTURES / "hf_daily_papers.json").read_text(encoding="utf-8")
+            ),
+        )
+    )
+
+    articles = build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+    assert len(articles) == 2
+    assert articles[0].title == "Recursive Self-Improvement for Agent Orchestration"
+    assert str(articles[0].url) == "https://huggingface.co/papers/2607.12345"
+    assert articles[0].published_at == datetime(2026, 7, 23, 8, tzinfo=UTC)
+
+
+@respx.mock
+def test_hf_daily_papers_empty_raises() -> None:
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(return_value=httpx.Response(200, json=[]))
+
+    with pytest.raises(SourceParseError):
+        build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+
+@respx.mock
 def test_html_changelog_mode_splits_by_date_heading() -> None:
     changelog = SourceConfig(
         id="deepseek-updates",

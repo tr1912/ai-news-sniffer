@@ -15,6 +15,7 @@ class SourceKind(StrEnum):
     GITHUB_RELEASES = "github_releases"
     HACKER_NEWS = "hacker_news"
     HTML_WHITELIST = "html_whitelist"
+    HF_DAILY_PAPERS = "hf_daily_papers"
 
 
 class SourceGroup(StrEnum):
