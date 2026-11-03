@@ -29,6 +29,37 @@ def source(kind: SourceKind, url: str, **options: object) -> SourceConfig:
 
 
 @respx.mock
+def test_html_changelog_mode_splits_by_date_heading() -> None:
+    changelog = SourceConfig(
+        id="deepseek-updates",
+        name="DeepSeek API Updates",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://api-docs.deepseek.com/updates/",
+        categories=["models"],
+        options={"mode": "changelog"},
+    )
+    respx.get(str(changelog.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text=(FIXTURES / "html_changelog.html").read_text(encoding="utf-8"),
+        )
+    )
+
+    articles = build_source_adapter(changelog, httpx.Client()).fetch(
+        changelog, SINCE, UNTIL
+    )
+
+    assert len(articles) == 2
+    assert all(a.published_at == datetime(2026, 7, 23, tzinfo=UTC) for a in articles)
+    assert articles[0].title == "Opening up the in-house search API"
+    assert str(articles[0].url) == (
+        "https://api-docs.deepseek.com/updates/#date-2026-07-23"
+    )
+
+
+@respx.mock
 def test_hacker_news_skips_invalid_url_item() -> None:
     hacker_news = source(
         SourceKind.HACKER_NEWS,

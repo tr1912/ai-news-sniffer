@@ -1,5 +1,6 @@
 import calendar
 import json
+import re
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
 from typing import Any
@@ -334,6 +335,51 @@ def _articles_from_explicit_selectors(
     return parsed
 
 
+def _articles_from_changelog(
+    tree: LexborHTMLParser,
+    source: SourceConfig,
+) -> list[tuple[str, str, datetime, str]]:
+    """Parse changelog-style pages where each dated section is a heading like
+    'Date: 2026-10-17' (e.g. DeepSeek API updates), with entries following it."""
+    parsed: list[tuple[str, str, datetime, str]] = []
+    headings = tree.css("h1, h2, h3")
+    date_headings: list[tuple[int, datetime, str]] = []
+    for index, node in enumerate(headings):
+        text = node.text(strip=True).replace("\u200b", "")
+        match = re.search(r"Date:\s*(\d{4}-\d{2}-\d{2})", text)
+        if not match:
+            continue
+        published = _parse_datetime(match.group(1))
+        if published is None:
+            continue
+        anchor = node.attributes.get("id") or ""
+        link = urljoin(str(source.url), f"#{anchor}") if anchor else str(source.url)
+        date_headings.append((index, published, link))
+
+    for order, (index, published, link) in enumerate(date_headings):
+        next_index = (
+            date_headings[order + 1][0]
+            if order + 1 < len(date_headings)
+            else len(headings)
+        )
+        # 该日期段内的子标题（跳过日期标题本身），每个标题后紧跟的 p 作摘要
+        for entry in headings[index + 1 : next_index]:
+            title = entry.text(strip=True).replace("\u200b", "")
+            if not title:
+                continue
+            excerpt = ""
+            sibling = entry.next
+            while sibling is not None:
+                if sibling.tag in ("h1", "h2", "h3", "h4"):
+                    break
+                if sibling.tag == "p":
+                    excerpt = sibling.text(strip=True)
+                    break
+                sibling = sibling.next
+            parsed.append((title, link, published, excerpt))
+    return parsed
+
+
 def _extract_page_level_date(tree: LexborHTMLParser, ref_year: int) -> datetime | None:
     """Try to extract a date from the page header/title area for pages like hf-daily-papers
     where dates are not inside individual article cards."""
@@ -416,6 +462,29 @@ class HtmlWhitelistAdapter:
             raise SourceFetchError(f"{source.id}: HTML fetch failed") from exc
 
         tree = LexborHTMLParser(response.text)
+
+        if source.options.get("mode") == "changelog":
+            parsed = _articles_from_changelog(tree, source)
+            if not parsed:
+                raise SourceParseError(f"{source.id}: no dated article records found")
+            articles = [
+                RawArticle(
+                    source_id=source.id,
+                    source_name=source.name,
+                    source_group=source.group,
+                    independence_group=source.independence_group or source.id,
+                    title=title,
+                    url=url,
+                    published_at=published,
+                    fetched_at=datetime.now(UTC),
+                    excerpt=excerpt,
+                    categories=source.categories,
+                )
+                for title, url, published, excerpt in parsed
+                if since <= published <= until
+            ]
+            return articles
+
         parsed = _articles_from_jsonld(_jsonld_records(tree), str(source.url))
 
         if not parsed:
