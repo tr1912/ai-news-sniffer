@@ -1,6 +1,7 @@
 from datetime import UTC, datetime
 
 import httpx
+from pydantic import ValidationError
 
 from ai_news_sniffer.models import RawArticle, SourceConfig
 from ai_news_sniffer.sources.base import SourceFetchError
@@ -37,23 +38,27 @@ class HackerNewsAdapter:
             published_at = datetime.fromtimestamp(item["time"], tz=UTC)
             if not since <= published_at <= until:
                 continue
-            articles.append(
-                RawArticle(
-                    source_id=source.id,
-                    source_name=source.name,
-                    source_group=source.group,
-                    independence_group=source.independence_group or source.id,
-                    title=item["title"],
-                    url=item["url"],
-                    published_at=published_at,
-                    fetched_at=datetime.now(UTC),
-                    author=item.get("by"),
-                    categories=source.categories,
-                    upstream_urls=[item["url"]],
-                    raw_metadata={
-                        "hn_id": item_id,
-                        "score": item.get("score", 0),
-                    },
+            try:
+                articles.append(
+                    RawArticle(
+                        source_id=source.id,
+                        source_name=source.name,
+                        source_group=source.group,
+                        independence_group=source.independence_group or source.id,
+                        title=item["title"],
+                        url=item["url"],
+                        published_at=published_at,
+                        fetched_at=datetime.now(UTC),
+                        author=item.get("by"),
+                        categories=source.categories,
+                        upstream_urls=[item["url"]],
+                        raw_metadata={
+                            "hn_id": item_id,
+                            "score": item.get("score", 0),
+                        },
+                    )
                 )
-            )
+            except ValidationError:
+                # 单条 URL 非法（如 emoji/非法 IDN）时跳过该条，不拖垮整个源
+                continue
         return articles

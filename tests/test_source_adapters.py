@@ -29,6 +29,42 @@ def source(kind: SourceKind, url: str, **options: object) -> SourceConfig:
 
 
 @respx.mock
+def test_hacker_news_skips_invalid_url_item() -> None:
+    hacker_news = source(
+        SourceKind.HACKER_NEWS,
+        "https://hacker-news.firebaseio.com/v0/topstories.json",
+        item_limit=2,
+    )
+    respx.get(str(hacker_news.url)).mock(
+        return_value=httpx.Response(200, json=[42, 43])
+    )
+    respx.get("https://hacker-news.firebaseio.com/v0/item/42.json").mock(
+        return_value=httpx.Response(
+            200,
+            json=json.loads(
+                (FIXTURES / "hn_item_good.json").read_text(encoding="utf-8")
+            ),
+        )
+    )
+    respx.get("https://hacker-news.firebaseio.com/v0/item/43.json").mock(
+        return_value=httpx.Response(
+            200,
+            json=json.loads(
+                (FIXTURES / "hn_item_bad_url.json").read_text(encoding="utf-8")
+            ),
+        )
+    )
+    client = httpx.Client()
+
+    articles = build_source_adapter(hacker_news, client).fetch(
+        hacker_news, SINCE, UNTIL
+    )
+
+    assert len(articles) == 1
+    assert str(articles[0].url) == "https://primary.example/model"
+
+
+@respx.mock
 def test_rss_and_arxiv_adapters_return_windowed_items() -> None:
     rss = source(SourceKind.RSS, "https://example.com/feed.xml")
     arxiv = source(
