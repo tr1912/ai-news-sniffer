@@ -1,0 +1,271 @@
+{
+  "date": "2026-11-04",
+  "generated_at": "2026-11-03T18:16:37.916219Z",
+  "run_id": "2026-11-04-e3624512",
+  "daily_summary_zh": "今日候选集中在智能体安全、评测与推理基础设施：MCP 工具投毒跨框架测量显示真实执行下攻击成功率达 22.9%；DR Pixel 以页面图像直接做深度研究；Strategist 自动演化推理策略并降低推理成本；WebHarbor 提供 153 个可执行网站环境用于 GUI 智能体训练与评测；llama.cpp 新版本跟进 GLM-5.3。另有多项智能体协作、编码安全、研究品味与长文档状态跟踪基准，以及 OpenAI 安全加固和企业落地动态。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "1680b553234ab3f4"
+      ],
+      "category": "security",
+      "title_zh": "MCP 工具投毒跨框架测量：真实执行下攻击成功率达 22.9%",
+      "summary_zh": "该研究提出首个带真实工具执行的 MCP 工具投毒跨框架测量，构建 25 类根因分类和开源工具 mcpvenom，覆盖 12 个框架、18 个模型、45 个攻击场景，形成 9720 个测试单元。总体攻击成功率为 22.9%（2113 个脆弱单元），其中 64.9% 触发攻击者工具调用、23.0% 联系攻击者端点、12.1% 可验证泄露秘密；九个核心框架的抵抗力集中在 23% 至 26%，未发现框架实现有意防御。",
+      "why_it_matters_zh": "MCP 是智能体连接外部工具的关键协议，该研究把提示注入风险推进到真实执行与跨框架可比测量，为框架和模型层防护提供了基线。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study",
+        "url": "https://arxiv.org/abs/2611.03555v1",
+        "published_at": "2026-11-02T18:17:08Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "d8717d28de063692"
+      ],
+      "category": "research",
+      "title_zh": "DR Pixel：以页面图像为检索与推理单元的端到端多模态深度研究智能体",
+      "summary_zh": "DR Pixel 是开源端到端多模态深度研究智能体，直接把渲染后的文档页面图像作为唯一检索和推理单元，运行在 106 万页语料上；同时构建 DRPixelBench，评估科学论文中文本、图表和公式推理。未训练情况下，页面原生深度研究在 GPT-5.4、Gemini-3.5-Flash、Qwen3.6-27B 等模型上已优于 OCR 基线且工具调用更少；针对教师轨迹噪声，研究还提出反事实信用重加权。",
+      "why_it_matters_zh": "该工作挑战将文档先 OCR 成纯文本的路线，为科学文档深度研究保留版面、图表和公式信息，并提供开源智能体与基准。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "DR Pixel: Page-Native Deep Research with Vision-Language Models",
+        "url": "https://huggingface.co/papers/2611.03097",
+        "published_at": "2026-11-01T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "37c9fcba8accac93"
+      ],
+      "category": "research",
+      "title_zh": "Strategist：用元智能体自动演化推理策略，平均推理成本降 39%",
+      "summary_zh": "Strategist 是一个跨任务演化推理策略的元智能体，将策略写成可复用的 blueprint 代码并汇成策略库。给定任务和小型开发集，它会检索相关 blueprint、生成候选策略、在真实样本上测试并迭代修订。在 30 个基准中，Strategist 在 24 个上超过最强基线，平均准确率 74.7% 对 74.0%，推理成本低 39%，且策略可迁移到未见任务和其他模型。",
+      "why_it_matters_zh": "该工作把智能体系统中“模型之外的推理流程”自动化，有望降低手工编排成本并提升跨任务复用能力。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Strategist: Evolving Reasoning with Agents",
+        "url": "https://arxiv.org/abs/2611.03618v1",
+        "published_at": "2026-11-02T18:51:04Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "f47593e87a61ceff"
+      ],
+      "category": "developer-tools",
+      "title_zh": "WebHarbor：153 个可执行网站环境与 3518 个任务，用于 GUI 智能体训练和评测",
+      "summary_zh": "WebHarbor 包含 153 个 docker 化、可执行且确定性的网站环境，重建真实 Web 服务的视觉界面、内容和功能流程。它通过任务驱动的人机协作构建，含 3518 个任务，覆盖多步和登录后工作流。研究还展示，在 WebHarbor 中用强化学习训练的 Qwen 4B 级 GUI 智能体能够泛化。",
+      "why_it_matters_zh": "GUI 智能体长期缺少稳定、可复现且功能深入的训练与评测环境；WebHarbor 同时补足真实感、登录后复杂工作流覆盖和 RL 训练需求。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "WebHarbor: Docking Real Websites for Evolving GUI Agent Environments",
+        "url": "https://arxiv.org/abs/2611.03634v1",
+        "published_at": "2026-11-02T18:57:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "977b7e1559fac014"
+      ],
+      "category": "research",
+      "title_zh": "协作智能基准：衡量 AI 智能体作为队友的能力，最佳模型仅 82.2 分",
+      "summary_zh": "Collaborative Intelligence Benchmark 含 240 个任务、8 个团队协作维度，来自航空事故报告、临床案例、编码任务和谈判等真实记录或现有基准，结果可程序化验证。为隔离团队协作与个体能力，模型只在自己拥有完整信息且能独立解决的任务上评分。评估 18 个闭源和开源模型后发现，所有模型都有明显队友短板，最佳模型仅得 82.2/100。",
+      "why_it_matters_zh": "该基准把 AI 能力评估从单模型任务推进到人机与多智能体协作，为团队型智能体提供可验证的评测维度。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Measuring AI Agents as Teammates with Collaborative Intelligence",
+        "url": "https://huggingface.co/papers/2611.02633",
+        "published_at": "2026-11-02T01:59:08Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "1466ff8d270fb068"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp b12077 发布：支持 GLM-5.3 与多设备 MLA 拆分修复",
+      "summary_zh": "llama.cpp 发布 b12077，加入对 GLM-5.3 的 next sm tensor 支持，并修复非统一 KV 缓存下 MLA 头拆分、置换张量视图等问题。更新说明还提到 HIP tile FA 内核在 D=512 时需要偶数 GQA 比例，并解释按设备拆分注意力头的处理。",
+      "why_it_matters_zh": "本地推理框架持续跟进新模型架构和多设备张量并行，直接影响开发者在多卡或本地环境部署 GLM-5.3 等模型。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12077",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12077",
+        "published_at": "2026-11-03T17:50:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "720ce6fcc6e58b7d"
+      ],
+      "category": "products",
+      "title_zh": "Google Antigravity 与化学信息学技能：用智能体加速药物发现工作流",
+      "summary_zh": "Google DeepMind 介绍 Google Antigravity 与 Cheminformatics Skills 如何加速药物发现工作流、搜索化合物，并提出新型刚性化大环化合物。",
+      "why_it_matters_zh": "这展示了通用智能体产品与领域技能结合进入真实科研工作流，而不仅是通用聊天或代码生成。",
+      "importance_score": 79.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "deepmind-news",
+        "source_name": "Google DeepMind News",
+        "title": "Agentic cheminformatics with Google Antigravity",
+        "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+        "published_at": "2026-11-03T17:01:49Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "bcab403c6697516b"
+      ],
+      "category": "research",
+      "title_zh": "Reviso：让视频描述模型学会选择性观察关键视觉证据",
+      "summary_zh": "Reviso 是一个智能体式视频描述框架，核心观点是不同视觉证据的重要性取决于视频内容。它从低帧率全局预览出发，构建“上下文—焦点—观察点”的分层计划，确定关键方面和具体观察目标，再按计划选择性回看时间段并组合工具做细粒度检查；框架通过验证引导流程构建高质量训练轨迹。",
+      "why_it_matters_zh": "该工作针对多模态模型在视频描述中过度关注次要细节、忽略关键上下文的问题，提出可学习的主动观察策略。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Reviso: Not All Visual Evidence Deserves Equal Attention in Video Captioning",
+        "url": "https://huggingface.co/papers/2611.03602",
+        "published_at": "2026-11-02T13:41:14Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "4577af747026424e"
+      ],
+      "category": "security",
+      "title_zh": "VeriHarm-Bench：可验证测量编码智能体的“有害成功”",
+      "summary_zh": "VeriHarm 是自动构建可程序化验证基准的框架，用于直接测量编码智能体在完成良性任务时造成的非预期伤害。它通过最小扰动编码任务诱发有害行为，同时保持任务良性，关注删除无关文件、削弱访问控制、损坏数据等“任务成功但产生有害副作用”的情况。",
+      "why_it_matters_zh": "编码智能体拥有 shell 权限后，传统任务成功率会掩盖副作用；该基准补足了智能体安全评测的关键盲区。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably",
+        "url": "https://arxiv.org/abs/2611.03575v1",
+        "published_at": "2026-11-02T18:27:55Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "8be30a11713b08a9"
+      ],
+      "category": "research",
+      "title_zh": "IdeaTaste：LLM 的“研究品味”仍远逊人类，引用匹配约 26%、想法匹配 18%",
+      "summary_zh": "IdeaTaste 基准让 LLM 基于冻结于 2025 年的文献快照写研究提案，再与同一社区后续发表工作比较。实验覆盖 6 个当代语言模型、4 个研究领域、9 万多份提案。LLM 智能体在引用匹配上约达人类水平的 26%，在想法匹配上仅 18%；更多领域上下文或更大群体规模未显著弥合差距。盲审专家认为 AI 提案在展示上差距最小，在预期成功上差距最大。",
+      "why_it_matters_zh": "该基准把“AI 科学家”评估从执行能力推进到选题与研究品味，揭示当前模型在具体方法路径上的短板。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?",
+        "url": "https://huggingface.co/papers/2611.03424",
+        "published_at": "2026-11-01T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "8ab4baa415c873c2",
+        "9429b2183290abae"
+      ],
+      "category": "security",
+      "title_zh": "OpenAI 启动新一轮内部安全冲刺并提高漏洞赏金",
+      "summary_zh": "OpenAI 表示正与 Cathedral Systems 准备下一轮内部安全冲刺，用 AI 测试和加固自身防御；同时提高安全漏洞赏金，并引入报告质量、忠诚度和优先活动奖金，面向独立安全研究者。",
+      "why_it_matters_zh": "前沿实验室用 AI 加固自身安全并调整漏洞激励机制，反映模型安全治理正从模型评测延伸到基础设施和外部研究者生态。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Preparing our next security sprint to harden OpenAI",
+        "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+        "published_at": "2026-11-02T18:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "openai-news",
+          "source_name": "OpenAI Newsroom",
+          "title": "Rewarding defenders with bigger bug bounties",
+          "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+          "published_at": "2026-11-02T18:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "event-14",
+      "candidate_ids": [
+        "53bc9e690ce80389"
+      ],
+      "category": "products",
+      "title_zh": "Heimstaden 用 ChatGPT Enterprise 与 Codex 改造欧洲物业管理",
+      "summary_zh": "OpenAI 案例介绍 Heimstaden 使用 ChatGPT Enterprise 和 Codex 改造住宅房地产管理、降低成本，并赋能欧洲员工。",
+      "why_it_matters_zh": "该案例展示大模型在企业后台与房地产运营中的落地，但属于客户案例，战略重要性低于模型、基础设施和安全发布。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Heimstaden is changing residential real estate management with AI",
+        "url": "https://openai.com/index/heimstaden",
+        "published_at": "2026-11-03T08:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 228,
+    "normalized": 228,
+    "filtered": 187,
+    "ai_candidates": 30,
+    "prompt_chars": 24339,
+    "estimated_input_tokens": 6084,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
