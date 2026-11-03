@@ -6,6 +6,7 @@ import httpx
 import pytest
 import respx
 
+from ai_news_sniffer.dedup import deduplicate_articles
 from ai_news_sniffer.models import HtmlSelectors, SourceConfig, SourceGroup, SourceKind
 from ai_news_sniffer.normalization import normalize_article
 from ai_news_sniffer.sources.base import SourceParseError, build_source_adapter
@@ -26,6 +27,189 @@ def source(kind: SourceKind, url: str, **options: object) -> SourceConfig:
         categories=["research"],
         options=options,
     )
+
+
+@respx.mock
+def test_anthropic_selectors_extract_articles() -> None:
+    anthropic = SourceConfig(
+        id="anthropic-news",
+        name="Anthropic Newsroom",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://www.anthropic.com/news",
+        categories=["models"],
+        selectors=HtmlSelectors(
+            item="article",
+            title="h2, h3",
+            link="a[href*='-']",
+            date="time",
+            excerpt="p",
+        ),
+    )
+    respx.get(str(anthropic.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text=(FIXTURES / "html_anthropic.html").read_text(encoding="utf-8"),
+        )
+    )
+
+    articles = build_source_adapter(anthropic, httpx.Client()).fetch(
+        anthropic, SINCE, UNTIL
+    )
+
+    assert len(articles) == 2
+    assert str(articles[0].url) == "https://www.anthropic.com/claude-opus-5-5"
+    assert articles[0].published_at == datetime(2026, 7, 23, tzinfo=UTC)
+    assert all(a.published_at == datetime(2026, 7, 23, tzinfo=UTC) for a in articles)
+
+
+@respx.mock
+def test_hf_daily_papers_adapter_returns_papers() -> None:
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(
+        return_value=httpx.Response(
+            200,
+            json=json.loads(
+                (FIXTURES / "hf_daily_papers.json").read_text(encoding="utf-8")
+            ),
+        )
+    )
+
+    articles = build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+    assert len(articles) == 2
+    assert articles[0].title == "Recursive Self-Improvement for Agent Orchestration"
+    assert str(articles[0].url) == "https://huggingface.co/papers/2607.12345"
+    assert articles[0].published_at == datetime(2026, 7, 23, 8, tzinfo=UTC)
+
+
+@respx.mock
+def test_hf_daily_papers_empty_raises() -> None:
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(return_value=httpx.Response(200, json=[]))
+
+    with pytest.raises(SourceParseError):
+        build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+
+@respx.mock
+def test_hf_daily_papers_nonempty_but_unparseable_raises() -> None:
+    # 接口字段改名/结构变化时，非空却零有效记录应 fail-closed，而非记为成功
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(
+        return_value=httpx.Response(
+            200,
+            json=[{"data": {"renamed": "field"}}, {"data": {"renamed": "field2"}}],
+        )
+    )
+
+    with pytest.raises(SourceParseError):
+        build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+
+@respx.mock
+def test_hf_daily_papers_valid_but_out_of_window_returns_empty() -> None:
+    # 有可解析记录但都在窗口外：返回空列表，不视为错误（区别于接口失效）
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(
+        return_value=httpx.Response(
+            200,
+            json=[
+                {
+                    "paper": {"id": "2601.00001", "title": "Old paper"},
+                    "title": "Old paper",
+                    "publishedAt": "2026-01-01T00:00:00.000Z",
+                }
+            ],
+        )
+    )
+
+    articles = build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+    assert articles == []
+
+
+@respx.mock
+def test_html_changelog_mode_splits_by_date_heading() -> None:
+    changelog = SourceConfig(
+        id="deepseek-updates",
+        name="DeepSeek API Updates",
+        kind=SourceKind.HTML_WHITELIST,
+        group=SourceGroup.OFFICIAL,
+        profiles={"full"},
+        url="https://api-docs.deepseek.com/updates/",
+        categories=["models"],
+        options={"mode": "changelog"},
+    )
+    respx.get(str(changelog.url)).mock(
+        return_value=httpx.Response(
+            200,
+            text=(FIXTURES / "html_changelog.html").read_text(encoding="utf-8"),
+        )
+    )
+
+    articles = build_source_adapter(changelog, httpx.Client()).fetch(
+        changelog, SINCE, UNTIL
+    )
+
+    assert len(articles) == 2
+    assert all(a.published_at == datetime(2026, 7, 23, tzinfo=UTC) for a in articles)
+    assert articles[0].title == "Opening up the in-house search API"
+    # 同一天多条须有各自不同的 URL，否则下游按 canonical_url 去重会坍塌成一条
+    assert articles[0].url != articles[1].url
+
+    # 经归一化 + 去重后，同一天的两条都应存活
+    deduped = deduplicate_articles([normalize_article(a) for a in articles], set())
+    assert len(deduped) == 2
+
+
+@respx.mock
+def test_hacker_news_skips_invalid_url_item() -> None:
+    hacker_news = source(
+        SourceKind.HACKER_NEWS,
+        "https://hacker-news.firebaseio.com/v0/topstories.json",
+        item_limit=2,
+    )
+    respx.get(str(hacker_news.url)).mock(
+        return_value=httpx.Response(200, json=[42, 43])
+    )
+    respx.get("https://hacker-news.firebaseio.com/v0/item/42.json").mock(
+        return_value=httpx.Response(
+            200,
+            json=json.loads(
+                (FIXTURES / "hn_item_good.json").read_text(encoding="utf-8")
+            ),
+        )
+    )
+    respx.get("https://hacker-news.firebaseio.com/v0/item/43.json").mock(
+        return_value=httpx.Response(
+            200,
+            json=json.loads(
+                (FIXTURES / "hn_item_bad_url.json").read_text(encoding="utf-8")
+            ),
+        )
+    )
+    client = httpx.Client()
+
+    articles = build_source_adapter(hacker_news, client).fetch(
+        hacker_news, SINCE, UNTIL
+    )
+
+    assert len(articles) == 1
+    assert str(articles[0].url) == "https://primary.example/model"
 
 
 @respx.mock
@@ -347,6 +531,8 @@ def test_html_adapter_uses_browser_user_agent() -> None:
 
     assert request_headers is not None
     assert "Chrome" in request_headers.get("user-agent", "")
+    # 未安装 brotli 解码器时声明 br 会导致响应无法解码、解析失败，故不得请求 br
+    assert "br" not in request_headers.get("accept-encoding", "")
 
 
 @respx.mock

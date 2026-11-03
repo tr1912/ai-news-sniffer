@@ -1,9 +1,10 @@
 import calendar
 import json
+import re
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import urlencode, urljoin
 
 import httpx
 from selectolax.lexbor import LexborHTMLParser
@@ -334,6 +335,59 @@ def _articles_from_explicit_selectors(
     return parsed
 
 
+def _articles_from_changelog(
+    tree: LexborHTMLParser,
+    source: SourceConfig,
+) -> list[tuple[str, str, datetime, str]]:
+    """Parse changelog-style pages where each dated section is a heading like
+    'Date: 2026-10-17' (e.g. DeepSeek API updates), with entries following it."""
+    parsed: list[tuple[str, str, datetime, str]] = []
+    headings = tree.css("h1, h2, h3")
+    date_headings: list[tuple[int, datetime, str]] = []
+    for index, node in enumerate(headings):
+        text = node.text(strip=True).replace("\u200b", "")
+        match = re.search(r"Date:\s*(\d{4}-\d{2}-\d{2})", text)
+        if not match:
+            continue
+        published = _parse_datetime(match.group(1))
+        if published is None:
+            continue
+        anchor = node.attributes.get("id") or ""
+        date_headings.append((index, published, anchor))
+
+    for order, (index, published, anchor) in enumerate(date_headings):
+        next_index = (
+            date_headings[order + 1][0]
+            if order + 1 < len(date_headings)
+            else len(headings)
+        )
+        # 该日期段内的子标题（跳过日期标题本身），每个标题后紧跟的 p 作摘要
+        for entry in headings[index + 1 : next_index]:
+            title = entry.text(strip=True).replace("\u200b", "")
+            if not title:
+                continue
+            excerpt = ""
+            sibling = entry.next
+            while sibling is not None:
+                if sibling.tag in ("h1", "h2", "h3", "h4"):
+                    break
+                if sibling.tag == "p":
+                    excerpt = sibling.text(strip=True)
+                    break
+                sibling = sibling.next
+            # changelog 每条无独立页面，仅共享日期锚点。用标题 slug 作查询参数保证
+            # 每条 URL 唯一，否则下游按 canonical_url 去重会把同一天的多条坍塌成一条
+            # （canonicalize_url 保留 query、丢弃 fragment）。
+            slug = re.sub(r"[^a-z0-9]+", "-", title.casefold()).strip("-")[:60]
+            query = urlencode({"entry": slug}) if slug else ""
+            anchor_part = f"#{anchor}" if anchor else ""
+            link = urljoin(str(source.url), f"?{query}{anchor_part}" if query else anchor_part)
+            if not query and not anchor_part:
+                link = str(source.url)
+            parsed.append((title, link, published, excerpt))
+    return parsed
+
+
 def _extract_page_level_date(tree: LexborHTMLParser, ref_year: int) -> datetime | None:
     """Try to extract a date from the page header/title area for pages like hf-daily-papers
     where dates are not inside individual article cards."""
@@ -401,7 +455,8 @@ class HtmlWhitelistAdapter:
             "User-Agent": _BROWSER_USER_AGENT,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
-            "Accept-Encoding": "gzip, deflate, br",
+            # 不手动声明 Accept-Encoding，交给 httpx 协商：它仅在 brotli 解码器
+            # 可用时才声明 br，避免请求了无法解码的编码导致解析失败。
             "Connection": "keep-alive",
             "Upgrade-Insecure-Requests": "1",
         }
@@ -416,6 +471,29 @@ class HtmlWhitelistAdapter:
             raise SourceFetchError(f"{source.id}: HTML fetch failed") from exc
 
         tree = LexborHTMLParser(response.text)
+
+        if source.options.get("mode") == "changelog":
+            parsed = _articles_from_changelog(tree, source)
+            if not parsed:
+                raise SourceParseError(f"{source.id}: no dated article records found")
+            articles = [
+                RawArticle(
+                    source_id=source.id,
+                    source_name=source.name,
+                    source_group=source.group,
+                    independence_group=source.independence_group or source.id,
+                    title=title,
+                    url=url,
+                    published_at=published,
+                    fetched_at=datetime.now(UTC),
+                    excerpt=excerpt,
+                    categories=source.categories,
+                )
+                for title, url, published, excerpt in parsed
+                if since <= published <= until
+            ]
+            return articles
+
         parsed = _articles_from_jsonld(_jsonld_records(tree), str(source.url))
 
         if not parsed:

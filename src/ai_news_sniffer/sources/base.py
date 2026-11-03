@@ -47,4 +47,8 @@ def build_source_adapter(
         from ai_news_sniffer.sources.html import HtmlWhitelistAdapter
 
         return HtmlWhitelistAdapter(client)
+    if source.kind == SourceKind.HF_DAILY_PAPERS:
+        from ai_news_sniffer.sources.hf_daily_papers import HfDailyPapersAdapter
+
+        return HfDailyPapersAdapter(client)
     raise ValueError(f"Unsupported source kind: {source.kind}")
