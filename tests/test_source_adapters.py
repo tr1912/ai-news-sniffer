@@ -6,6 +6,7 @@ import httpx
 import pytest
 import respx
 
+from ai_news_sniffer.dedup import deduplicate_articles
 from ai_news_sniffer.models import HtmlSelectors, SourceConfig, SourceGroup, SourceKind
 from ai_news_sniffer.normalization import normalize_article
 from ai_news_sniffer.sources.base import SourceParseError, build_source_adapter
@@ -99,6 +100,49 @@ def test_hf_daily_papers_empty_raises() -> None:
 
 
 @respx.mock
+def test_hf_daily_papers_nonempty_but_unparseable_raises() -> None:
+    # 接口字段改名/结构变化时，非空却零有效记录应 fail-closed，而非记为成功
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(
+        return_value=httpx.Response(
+            200,
+            json=[{"data": {"renamed": "field"}}, {"data": {"renamed": "field2"}}],
+        )
+    )
+
+    with pytest.raises(SourceParseError):
+        build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+
+@respx.mock
+def test_hf_daily_papers_valid_but_out_of_window_returns_empty() -> None:
+    # 有可解析记录但都在窗口外：返回空列表，不视为错误（区别于接口失效）
+    papers = source(
+        SourceKind.HF_DAILY_PAPERS,
+        "https://huggingface.co/api/daily_papers",
+    )
+    respx.get(str(papers.url)).mock(
+        return_value=httpx.Response(
+            200,
+            json=[
+                {
+                    "paper": {"id": "2601.00001", "title": "Old paper"},
+                    "title": "Old paper",
+                    "publishedAt": "2026-01-01T00:00:00.000Z",
+                }
+            ],
+        )
+    )
+
+    articles = build_source_adapter(papers, httpx.Client()).fetch(papers, SINCE, UNTIL)
+
+    assert articles == []
+
+
+@respx.mock
 def test_html_changelog_mode_splits_by_date_heading() -> None:
     changelog = SourceConfig(
         id="deepseek-updates",
@@ -124,9 +168,12 @@ def test_html_changelog_mode_splits_by_date_heading() -> None:
     assert len(articles) == 2
     assert all(a.published_at == datetime(2026, 7, 23, tzinfo=UTC) for a in articles)
     assert articles[0].title == "Opening up the in-house search API"
-    assert str(articles[0].url) == (
-        "https://api-docs.deepseek.com/updates/#date-2026-07-23"
-    )
+    # 同一天多条须有各自不同的 URL，否则下游按 canonical_url 去重会坍塌成一条
+    assert articles[0].url != articles[1].url
+
+    # 经归一化 + 去重后，同一天的两条都应存活
+    deduped = deduplicate_articles([normalize_article(a) for a in articles], set())
+    assert len(deduped) == 2
 
 
 @respx.mock

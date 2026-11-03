@@ -4,7 +4,7 @@ import re
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import urlencode, urljoin
 
 import httpx
 from selectolax.lexbor import LexborHTMLParser
@@ -353,10 +353,9 @@ def _articles_from_changelog(
         if published is None:
             continue
         anchor = node.attributes.get("id") or ""
-        link = urljoin(str(source.url), f"#{anchor}") if anchor else str(source.url)
-        date_headings.append((index, published, link))
+        date_headings.append((index, published, anchor))
 
-    for order, (index, published, link) in enumerate(date_headings):
+    for order, (index, published, anchor) in enumerate(date_headings):
         next_index = (
             date_headings[order + 1][0]
             if order + 1 < len(date_headings)
@@ -376,6 +375,15 @@ def _articles_from_changelog(
                     excerpt = sibling.text(strip=True)
                     break
                 sibling = sibling.next
+            # changelog 每条无独立页面，仅共享日期锚点。用标题 slug 作查询参数保证
+            # 每条 URL 唯一，否则下游按 canonical_url 去重会把同一天的多条坍塌成一条
+            # （canonicalize_url 保留 query、丢弃 fragment）。
+            slug = re.sub(r"[^a-z0-9]+", "-", title.casefold()).strip("-")[:60]
+            query = urlencode({"entry": slug}) if slug else ""
+            anchor_part = f"#{anchor}" if anchor else ""
+            link = urljoin(str(source.url), f"?{query}{anchor_part}" if query else anchor_part)
+            if not query and not anchor_part:
+                link = str(source.url)
             parsed.append((title, link, published, excerpt))
     return parsed
 
@@ -447,7 +455,8 @@ class HtmlWhitelistAdapter:
             "User-Agent": _BROWSER_USER_AGENT,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
-            "Accept-Encoding": "gzip, deflate",
+            # 不手动声明 Accept-Encoding，交给 httpx 协商：它仅在 brotli 解码器
+            # 可用时才声明 br，避免请求了无法解码的编码导致解析失败。
             "Connection": "keep-alive",
             "Upgrade-Insecure-Requests": "1",
         }

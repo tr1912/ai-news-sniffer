@@ -72,6 +72,14 @@ class HfDailyPapersAdapter:
             except ValidationError:
                 continue
 
-        if not articles and not payload:
+        # 窗口内无文章是正常的（返回空），但「接口有数据却一条都解析不出」说明
+        # 接口结构已变，必须 fail-closed 以触发健康告警，而非静默记为成功。
+        windowed = any(
+            _parse_iso(item.get("publishedAt")) or _parse_iso((item.get("paper") or {}).get("publishedAt"))
+            for item in payload
+            if (item.get("title") or (item.get("paper") or {}).get("title"))
+            and (item.get("paper") or {}).get("id")
+        )
+        if not articles and not windowed:
             raise SourceParseError(f"{source.id}: no dated article records found")
         return articles
