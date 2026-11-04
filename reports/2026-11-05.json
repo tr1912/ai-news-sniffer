@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-05",
+  "generated_at": "2026-11-04T18:30:32.322064Z",
+  "run_id": "2026-11-05-171d0da6",
+  "daily_summary_zh": "今日精选 14 个事件：OpenAI 收购 Pierre 扩展 Codex 工具链，llama.cpp v0.9.0 带来 FP8、多架构与多后端更新；研究侧关注机器人世界模型 PrimeSim、推理压缩 LoCo、长时程智能体推测解码、ICL 电路与医疗物理基准；产品侧有 Kling 多模态理解总结、Daybreak Red 登陆 AWS GovCloud，以及 Cisco 与 OpenAI 的企业安全合作。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "4b8980465739f5f1",
+        "d21c7889bbb34b80"
+      ],
+      "category": "acquisition",
+      "title_zh": "OpenAI 将收购 Pierre Computer Company",
+      "summary_zh": "OpenAI 宣布将收购 Pierre Computer Company，以扩展 Codex 在代码构建、理解与审查方面的工具能力。Hacker News 亦出现同一收购消息的社区讨论。",
+      "why_it_matters_zh": "交易将把代码协作与审查工具并入 OpenAI 的 Codex 生态，反映 AI 编程工具链正在加速整合。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "OpenAI to acquire Pierre Computer Company, Inc.",
+        "url": "https://openai.com/index/openai-to-acquire-pierre",
+        "published_at": "2026-11-04T14:30:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "hacker-news",
+          "source_name": "Hacker News",
+          "title": "Pierre Computer is being acquired by OpenAI",
+          "url": "https://twitter.com/pierrecomputer/status/2117999036175188183",
+          "published_at": "2026-11-04T15:21:21Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "8b13ad132f3a1eb8",
+        "18a427dc5c1d61c3"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v0.9.0",
+      "summary_zh": "llama.cpp 发布 v0.9.0，新增 OCP FP8 E4M3 量化、flash_attn_ext_rows、通用批量张量拷贝 API，并支持 Clover、Limite、Metis-1.6、Mistral Large 4 等新架构；音频方面加入 Chatterbox TTS、Nemotron 3.5 Transcribe 与 Pocket TTS 预置音色，Gemma 4 E2B/E4B 获得预填充优化。ggml 升至 v0.29.0，带来 FP8 E4M3、flash attention rows、基于 NCCL 的多节点张量并行及多后端性能改进。",
+      "why_it_matters_zh": "作为广泛使用的本地推理项目，此次更新直接影响多架构、多后端部署与长序列、多序列推理效率。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v0.9.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.9.0",
+        "published_at": "2026-11-04T13:08:06Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b12110",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12110",
+          "published_at": "2026-11-04T12:52:04Z"
+        }
+      ]
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "c28432a9aecc071f"
+      ],
+      "category": "research",
+      "title_zh": "PrimeSim：通用世界模型模拟器",
+      "summary_zh": "PrimeSim 是一种动作条件、多视角世界模型模拟器：从预训练视频生成器出发，在 22 个平台、30,110 小时机器人演示上进行中期训练，引入统一跨具身动作表示与帧对齐双路径条件，并用带相机标识的视角感知交错注意力保持多视角一致性。通过快速视频、慢速记忆的后训练框架转为高效自回归模拟器。",
+      "why_it_matters_zh": "它面向机器人策略训练的长时程世界模型模拟，强调动作跟随、多视角一致性和误差累积控制，是具身智能数据与仿真基础设施的重要方向。",
+      "importance_score": 79.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations",
+        "url": "https://huggingface.co/papers/2611.04870",
+        "published_at": "2026-11-02T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "f18853157d3d1bbb"
+      ],
+      "category": "research",
+      "title_zh": "LoCo：用局部偏好学习压缩推理",
+      "summary_zh": "LoCo 从模型自身轨迹中检测过度思考状态，冻结对应推理前缀，重新生成更短且经验证的续写，再用 DPO 训练状态条件偏好对。在五个数学和三个代码基准上，数学完成长度减少 41.7%–45.4%，代码减少 23.4%–36.3%，同时保持或提升准确率。",
+      "why_it_matters_zh": "该方法把推理压缩从整体轨迹约束转向局部决策，有望降低长推理模型的推理成本而不牺牲正确率。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Think Less, Locally: Local Preference Learning for Reasoning Compression",
+        "url": "https://huggingface.co/papers/2611.04814",
+        "published_at": "2026-11-02T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "f161772a38ec1865"
+      ],
+      "category": "research",
+      "title_zh": "对抗性推测推理提升长时程智能体",
+      "summary_zh": "研究指出，推测解码在长时程智能体推理中并非纯系统优化：数值噪声会在验证窗口内累积，草稿接受结果可能在 30 步后改变模型输出分布。作者训练草稿模型在关键推理点偏向被拒绝的对抗偏好，以提升目标模型在复杂智能体任务上的推理准确率。",
+      "why_it_matters_zh": "它揭示推测解码对长程推理行为的影响，并提供通过草稿模型控制噪声、提升智能体可靠性的新思路。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
+        "url": "https://arxiv.org/abs/2611.05345v1",
+        "published_at": "2026-11-03T18:45:23Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "92e8d0627290ac78"
+      ],
+      "category": "research",
+      "title_zh": "LLM 严重天气指导中的“错误安抚”评估",
+      "summary_zh": "研究用 117 个来自真实美国国家气象局警报的冻结案例，回放 Claude 基备灾管线的五种条件，测量“错误安抚”。生产管线错误安抚率为 0.0%，盲测中性提示下为 37.7%，盲测并要求披露盲点时为 44.9%；接入真实警报可消除错误安抚，而披露指令无效。",
+      "why_it_matters_zh": "这说明高危场景中模型能否访问权威警报比提示披露更关键，为 LLM 安全评估与部署提供了可复现方法。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "False Reassurance in LLM Severe-Weather Guidance: A Replayable Evaluation Against Real NWS Alerts",
+        "url": "https://arxiv.org/abs/2611.05290v1",
+        "published_at": "2026-11-03T18:04:53Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "631ac0342be50fbc"
+      ],
+      "category": "research",
+      "title_zh": "Kling 总结视频生成背后的多模态理解",
+      "summary_zh": "Kling 团队总结视频生成与多模态理解观察：生成质量是整个数据—条件—对齐—评估链路的投影；Kling-MLLM 统一图像、视频、音频、同步音视频与交错输入；将 captioning 视为语义契约，并扩展参考 grounded captioning；提示增强结合文本级与生成器在环强化学习，以及 agentic 提示增强。",
+      "why_it_matters_zh": "报告指出视频生成瓶颈正从渲染转向语义控制，为多模态基础模型与视频生成系统设计提供工程洞察。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Behind Video Generation: Observations and Insights on Multimodal Understanding from Kling",
+        "url": "https://huggingface.co/papers/2611.04916",
+        "published_at": "2026-11-02T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "1137d6295fc93a38"
+      ],
+      "category": "products",
+      "title_zh": "Daybreak Red 在 AWS GovCloud 上线",
+      "summary_zh": "Daybreak Red 通过 Amazon Bedrock 在 AWS GovCloud (US-East) 向获批客户提供 GPT-5.6 Cyber，用于授权网络安全工作。",
+      "why_it_matters_zh": "网络安全专用模型进入政府云，反映前沿模型在受监管、高安全行业的部署路径。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+        "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+        "published_at": "2026-11-04T07:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "11e2db9802f331c0"
+      ],
+      "category": "benchmark",
+      "title_zh": "MedPhysBench：医疗物理计算与查错基准",
+      "summary_zh": "MedPhysBench 用十个种子生成器构造放疗、诊断影像、核医学与辐射防护计算题及误差检测题，参考答案由执行相关协议的代码生成，评分器处理单位换算和容差。在 1,200 项留出测试上，12 个模型计算得分 33.3%–100.0%；Claude Sonnet 5.5 在 20 个等中心 MU 题中有 19 个遗漏平方反比修正。",
+      "why_it_matters_zh": "医疗物理计算对误差零容忍，该基准把计算与查错分开评估，揭示当前模型在临床级任务中的可靠性与单位、协议理解短板。",
+      "importance_score": 69.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MedPhysBench: A Benchmark for Evaluating Language Models on Medical Physics Calculations and Error Detection",
+        "url": "https://arxiv.org/abs/2611.05340v1",
+        "published_at": "2026-11-03T18:40:35Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "cc2b266d9f2e644a"
+      ],
+      "category": "products",
+      "title_zh": "Cisco 用 OpenAI 模型强化企业安全防御",
+      "summary_zh": "OpenAI 发布案例，介绍 Cisco 将网络智能与 OpenAI 模型结合，用于增强企业安全并构建更具适应性的防御。",
+      "why_it_matters_zh": "这体现前沿模型进入企业安全运营场景，但属于厂商合作案例，仍需结合后续落地数据观察。",
+      "importance_score": 63.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "How Cisco defends at machine speed with OpenAI",
+        "url": "https://openai.com/index/cisco-cyber",
+        "published_at": "2026-11-03T08:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 231,
+    "normalized": 231,
+    "filtered": 188,
+    "ai_candidates": 30,
+    "prompt_chars": 25828,
+    "estimated_input_tokens": 6457,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
