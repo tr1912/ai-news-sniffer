@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-06",
+  "generated_at": "2026-11-05T18:34:22.068877Z",
+  "run_id": "2026-11-06-bbe2290b",
+  "daily_summary_zh": "今日高信号事件集中在端侧语音模型、智能体编程验证与系统级研究。Hugging Face 推出端侧 Phonon TTS；微软研究院用 PDD Kit 对智能体生成代码做形式化验证；OpenAI 发布 AI 基础设施社区与政策蓝图。研究侧，SLA 针对 TPU 重写门控线性注意力，SleuthVLM 探索智能体式全模态视频理解，PyRUA-REAL 与 HALO 分别推进真实世界机器人自我改进和仿真到真实的人形运动；ARC-AGI-2、CompressionBench、ServerBench 和 FrontierPhysics 则给出智能体在推理、模型压缩、服务系统和物理研究上的新评测。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "61890c32b8b98ef7"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face 发布 Phonon TTS：面向端侧的高质量语音合成",
+      "summary_zh": "Hugging Face 博客介绍 Phonon TTS，定位为可在设备端部署的高质量语音合成，并称其在相关基准上表现领先。",
+      "why_it_matters_zh": "端侧 TTS 若能在质量与部署成本之间取得平衡，将为本地语音交互产品提供新的模型选项。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "A Closer Look at Phonon TTS. Launching High-Quality On-Device Speech That Tops the Benchmarks.",
+        "url": "https://huggingface.co/blog/phonon-tts",
+        "published_at": "2026-11-05T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "7ef64fa2d3298a4c"
+      ],
+      "category": "research",
+      "title_zh": "Systolic Linear Attention：面向 TPU 重写门控线性注意力",
+      "summary_zh": "论文提出 SLA，通过将 key 扩展到 256、把衰减门分成四组 64 通道 tile，并用块矩阵乘在单一融合内核中完成 chunk solve，以适配 TPU 的 256×256 脉动矩阵单元；在 TPU v7x 上 SLA-R4 层比 Tokamax KDA 内核快 1.6–2.5 倍，MoE 预训练快 11%–24%。",
+      "why_it_matters_zh": "它说明线性注意力内核需与加速器微架构协同设计；TPU 上的内核优化可直接影响大模型预训练效率。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Systolic Linear Attention: Co-Designing Tile-Grouped Gated Delta Attention for TPUs",
+        "url": "https://arxiv.org/abs/2611.06828v1",
+        "published_at": "2026-11-04T17:42:58Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "93078ae8b8cfb493"
+      ],
+      "category": "developer-tools",
+      "title_zh": "微软研究院推出 PDD Kit，用形式化规约验证智能体生成的全栈 Web 应用",
+      "summary_zh": "PDD Kit 将开发者意图转换为 Verus 规约，对 AI 生成代码进行全输入证明，并在不适合证明时使用测试；开发者审查意图而非逐行代码。",
+      "why_it_matters_zh": "随着编码智能体生成代码规模上升，形式化验证与测试结合的流程可提升可审查性和正确性保障，是智能体编程走向生产的重要基础设施。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "microsoft-research",
+        "source_name": "Microsoft Research Blog",
+        "title": "Formally verifying agent-written full-stack web apps with PDD Kit",
+        "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+        "published_at": "2026-11-05T16:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "4c9cc7f58b3d8e07"
+      ],
+      "category": "research",
+      "title_zh": "SleuthVLM：不直接听音频的智能体式全模态视频理解",
+      "summary_zh": "SleuthVLM 构建在 VLM 上的 agent harness，不直接处理音频，而将语音转写为文本，由 VLM 自主排查视频；在四个全模态基准上平均准确率 75.0%，高于 Gemini 3.8 Flash 2.6 个百分点，并在 Video-MME-v2 以 77.8% 登顶；搭配开源 27B VLM 时超过所有开源全模态模型。",
+      "why_it_matters_zh": "结果挑战“必须直接建模音频”的假设，指出全模态视频理解瓶颈更多在智能体能力而非模态对齐数据规模。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "SleuthVLM: Do We Really Need Audio-in-Video for Omni Video Understanding?",
+        "url": "https://huggingface.co/papers/2611.06083",
+        "published_at": "2026-11-03T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "e607124a9d4267f4"
+      ],
+      "category": "research",
+      "title_zh": "PyRUA-REAL：用真实世界探索让编码智能体实现机器人自我改进",
+      "summary_zh": "PyRUA-REAL 让编码智能体把交互经验保存为持久记忆和可复用可执行技能，通过真实世界探索、代码精炼和部署提升机器人能力；在 8 个真实任务上平均成功率 91.1%，在 RoboDojo 42 个任务上 84.4%。",
+      "why_it_matters_zh": "该工作把具身递归自我改进放到真实物理交互中验证，为机器人智能体从经验中持续改进提供了可执行路径。",
+      "importance_score": 71.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World",
+        "url": "https://huggingface.co/papers/2611.06768",
+        "published_at": "2026-11-04T11:46:03Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "f3b463d1f9129949"
+      ],
+      "category": "research",
+      "title_zh": "HALO：从仿真合成数据训练可零样本迁移的人形机器人运动",
+      "summary_zh": "HALO 利用程序化生成的 1000 个家庭场景合成视觉-语言-运动数据，训练人形机器人掌握坐椅、导航到指定物体、侧身穿半开门、桌下蹲爬和推箱子等技能，并编排完成长程任务；训练未见真实家庭，却在 6 个未建图真实环境中 360 次试验达到 91% 成功率。",
+      "why_it_matters_zh": "它用可随算力扩展的仿真数据替代昂贵的人类遥操作数据，展示了人形机器人零样本迁移到真实环境的可行性。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Perceptive Humanoid Motion from Simulation",
+        "url": "https://arxiv.org/abs/2611.06908v1",
+        "published_at": "2026-11-04T18:55:33Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "aaf74c34bd681229"
+      ],
+      "category": "policy",
+      "title_zh": "OpenAI 发布负责任 AI 基础设施政策蓝图与社区契约",
+      "summary_zh": "OpenAI 介绍 National Community Compact 与 Compute Campus Policy Blueprint，提出保护本地资源、创造就业并指导负责任 AI 基础设施建设。",
+      "why_it_matters_zh": "头部 AI 公司主动提出数据中心与社区关系政策框架，可能影响 AI 基础设施选址、监管沟通与社会许可。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Setting a new standard for responsible AI infrastructure",
+        "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+        "published_at": "2026-11-05T02:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "e6dda5464de203cc"
+      ],
+      "category": "research",
+      "title_zh": "回合级 Best-of-N 采样提升长程 LLM 智能体表现",
+      "summary_zh": "论文评估 generator-selector 框架：每回合生成器产生 N 个候选动作，选择器模型挑一个执行；在长程终端任务上准确率提升 5–10%，重复尝试一致性改善，并观察到尝试次数减少、指令遵循与调试测试行为改善。",
+      "why_it_matters_zh": "它提供了一种无需额外训练、仅靠推理时采样与选择扩展智能体能力的简单方法，对长程任务部署有直接参考价值。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "On Turn-Level Best-of-N Sampling for Scaling LLM Agents",
+        "url": "https://arxiv.org/abs/2611.06868v1",
+        "published_at": "2026-11-04T18:23:14Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 232,
+    "normalized": 232,
+    "filtered": 190,
+    "ai_candidates": 30,
+    "prompt_chars": 23985,
+    "estimated_input_tokens": 5996,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
