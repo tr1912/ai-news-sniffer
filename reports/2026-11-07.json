@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-07",
+  "generated_at": "2026-11-06T17:51:21.287901Z",
+  "run_id": "2026-11-07-8640cd19",
+  "daily_summary_zh": "今日重点包括 OpenAI 发布 GPT-6 Cyber 网络安全模型、WeLM-Image 统一图像生成模型，以及多项围绕智能体评估与科研自动化的进展：Terminal-Bench 2.1 修复基准维护债务，ReproBridge 提升 ML 复现成功率，Drex 推出开放决策模型，XStack 和 TB-MathModel 扩展智能体基准，Scientist World 与 SwarmEvolve 推进 AI 科研与进化搜索。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "168ec2c16cbf056f",
+        "2009a6a3947ff084"
+      ],
+      "category": "models",
+      "title_zh": "OpenAI 发布 GPT-6 Cyber 网络安全模型",
+      "summary_zh": "OpenAI 推出 GPT-6 Cyber，面向发现可利用漏洞并开发修复方案，训练目标是让模型在授权范围内行动。TechCrunch 同日报道称，该模型发布之际，AI 实验室在保护数字基础设施方面的工作正受到审视。",
+      "why_it_matters_zh": "专用网络安全智能体可能改变漏洞发现与修补流程，同时把授权边界和模型滥用风险推到台前；其实际防护效果仍需外部验证。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+        "url": "https://openai.com/index/introducing-gpt-6-cyber",
+        "published_at": "2026-11-05T09:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "OpenAI released a new cybersecurity model. Is that enough?",
+          "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
+          "published_at": "2026-11-05T19:06:12Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "9208d2ce89495ecc"
+      ],
+      "category": "models",
+      "title_zh": "WeLM-Image：面向微信大规模消费级应用的统一图像生成模型",
+      "summary_zh": "WeLM-Image 将多模态理解融入文生图、指令引导编辑和多参考图合成，面向微信大规模消费级应用的单 GPU 部署。模型把文本、参考图和目标 latent 作为交错序列处理，采用 Mixture-of-Transformers 主干和 MoE 模块，存储参数 31.7B，每个目标 latent token 激活约 5.4B 生成参数；支持原生 1.5K 分辨率和中英双语标注。",
+      "why_it_matters_zh": "单 GPU 部署与 MoE 稀疏激活设计，显示统一图像理解/生成模型正朝消费级规模化落地；统一编辑与生成能力也会影响内容生产工具链。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "WeLM-Image: A Unified Image Generation Model towards Visual Intelligence",
+        "url": "https://huggingface.co/papers/2611.07392",
+        "published_at": "2026-11-04T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "66c1183ef81d01fa"
+      ],
+      "category": "research",
+      "title_zh": "Terminal-Bench 2.1：用持续验证修复 Agent 基准的维护债务",
+      "summary_zh": "论文提出面向智能体基准的持续验证工作流，结合社区报告、任务工件、智能体轨迹、自动 oracle 检查和人工把关修复，并将其用于 Terminal-Bench 2.0。审计发现约 30% 的基准存在问题，修复结果以 Terminal-Bench 2.1 发布；修复后准确率提升超过 10 个百分点，排行榜名次最多移动三位，但整体排名仍高度一致。",
+      "why_it_matters_zh": "编码智能体基准一旦过时，会系统性地低估或误判模型能力；持续验证和可维护的基准基础设施成为可靠评估的关键。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
+        "url": "https://arxiv.org/abs/2611.08417v1",
+        "published_at": "2026-11-05T18:18:39Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "6b9eb36b7754199a"
+      ],
+      "category": "research",
+      "title_zh": "ReproBridge：把可复现性构建进 ML 研究工件",
+      "summary_zh": "论文提出标准化工件设计（精炼代码库、环境配置、实验启动器和复现指南）及智能体工作流 ReproBridge，用于构建可复现的 ML 研究工件。ReproBridge-Bench 包含来自 36 篇论文、387 个实验的 1,029 个任务，每个任务有 5 个人工验证参考分数；使用精炼工件后，四个模型的平均复现成功率从 76.4% 升至 92.6%，下游 API 支出平均减少 19.7%，跨模型成功率差距从 21.6 个百分点收窄至 3.9 个百分点。",
+      "why_it_matters_zh": "可复现性是 ML 研究可信度和智能体自动科研的基础；把复现过程沉淀为可执行工件，有望同时提升独立复现成功率和成本效率。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "ReproBridge: Building Reproducibility into ML Research Artifacts",
+        "url": "https://arxiv.org/abs/2611.08452v1",
+        "published_at": "2026-11-05T18:45:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "64a4f9185a056a67"
+      ],
+      "category": "models",
+      "title_zh": "Drex：面向生产环境的开放决策模型家族",
+      "summary_zh": "Drex 是一组四个开放决策模型，参数规模为 8B、9B、35B（激活 3B）和 27B Max。每个请求由状态（文档、记录或智能体上下文，可含图像）和问题组成，问题要求在选项中做选择、是/否判断或有序评分；模型不进行自回归解码，直接返回选项上的概率分布。训练结合监督微调、基于调整反馈的强化学习（RLAF），Max 还加入视觉调优；在 Decision Index 0.4.1 上，Max 取得 67.52 的公开套件得分。",
+      "why_it_matters_zh": "相比长链式自回归推理，决策模型可能降低延迟和输出解析成本，并提升生产环境一致性；开放权重有利于把这类模型用于路由、评估和智能体决策。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Towards Foundation Decision Models: Drex",
+        "url": "https://huggingface.co/papers/2611.07854",
+        "published_at": "2026-11-04T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "77b506728f7b8bd4"
+      ],
+      "category": "research",
+      "title_zh": "XStack：评估智能体跨 PyTorch/JAX 与 GPU/TPU 迁移 ML 仓库",
+      "summary_zh": "XStack 是评估智能体迁移 ML 仓库的基准：智能体收到一个 PyTorch 仓库和一台干净的 TPU 机器，必须交付 JAX 仓库，结果按源仓库已发表结果校准后的标准判定。迁移仍不可靠：Claude Opus 5 通过率 75%，GPT-5.6-sol 为 45%，其他智能体最高不超过 40%。",
+      "why_it_matters_zh": "ML 代码长期绑定框架与硬件生态；可靠迁移可释放硬件选择空间，而基准结果说明当前智能体在跨框架、跨硬件长周期工程任务上仍有明显瓶颈。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "XStack: A Benchmark for ML Repo Migration",
+        "url": "https://arxiv.org/abs/2611.08472v1",
+        "published_at": "2026-11-05T18:55:54Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "95e7be55a066e760"
+      ],
+      "category": "research",
+      "title_zh": "SwarmEvolve：在潜空间中协作的进化式智能体群体",
+      "summary_zh": "SwarmEvolve 让每轮数百个低成本智能体以群体方式工作，在潜空间中推理而不解码为文本，并通过传递 KV cache 共享信息；新颖性过滤器按隐藏状态距离保留差异想法，汇总智能体合并各成员 KV cache 实现想法交叉。在 21 个数学发现和科学计算问题上，它取得最高平均分，达到其他先进框架约 60 分钟才能取得的最佳分数的中位时间为 3 至 8 分钟；在若干问题上，使用 Qwen3 8B 的 SwarmEvolve 改进了 AlphaEvolve 的解。",
+      "why_it_matters_zh": "它把 LLM 引导的进化搜索从长文本生成转向潜空间群体协作，可能显著降低发现成本与延迟，并让小模型参与高价值优化任务。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+        "url": "https://arxiv.org/abs/2611.08483v1",
+        "published_at": "2026-11-05T18:59:29Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "bea267fa5e145b05"
+      ],
+      "category": "research",
+      "title_zh": "TB-MathModel：首个可验证的终端式数学建模智能体基准",
+      "summary_zh": "TB-MathModel 覆盖 2023—2025 年 18 道真实 CUMCM 和 MCM 题目。每项任务在容器化终端中提供原始题面、官方附件和图表，智能体返回一个 JSON 工件，按最终问题的数值核心与 Outstanding 论文复现结果评分。它采用方向感知的单侧评分，不惩罚超过锚点的答案，并设置两层可行性验证：六类可判定不变量的程序化门禁，以及 624 个 Lean 4 义务；不可行答案会被硬门禁清零。",
+      "why_it_matters_zh": "现有数学建模基准多评分解题片段或用 LLM 评审报告，TB-MathModel 试图把完整建模流程变成可验证的智能体任务，提升评分的客观性和物理可行性约束。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Terminal-style Mathematical Modeling Bench: The First Agentic and Verifiable Benchmark for Mathematical Modeling",
+        "url": "https://huggingface.co/papers/2611.08237",
+        "published_at": "2026-11-05T11:18:35Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 230,
+    "normalized": 230,
+    "filtered": 191,
+    "ai_candidates": 30,
+    "prompt_chars": 23422,
+    "estimated_input_tokens": 5855,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
