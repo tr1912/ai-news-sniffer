@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-07T16:46:09.592986Z",
+  "run_id": "2026-11-08-c424f9ba",
+  "daily_summary_zh": "今日高信号集中在开放世界模型、Agent 科研评测与 AI 基础设施：NVIDIA 发布 Cosmos 3 开放模型，并更新 GPU 集群运维与 RL 训练工具；OpenAI 推出湿实验室 Agent 基准并披露安全合作。研究侧关注 OPD/GRPO 算力效率、人形机器人交互、LoRA 动态、医疗图记忆和线性注意力；llama.cpp 修复 Metal 后端关键 kernel。",
+  "events": [
+    {
+      "id": "event-nvidia-cosmos-3",
+      "candidate_ids": [
+        "15bb88ec8ec90999"
+      ],
+      "category": "models",
+      "title_zh": "NVIDIA 发布 Cosmos 3 开放模型，面向交互式世界仿真",
+      "summary_zh": "NVIDIA 在 Hugging Face 博客发布 Cosmos 3 开放模型，用于交互式世界仿真。",
+      "why_it_matters_zh": "开放世界仿真模型可为需要交互式环境建模的研究与产品提供基础能力，并强化 NVIDIA 在仿真与开放模型生态中的布局。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+        "published_at": "2026-11-05T19:35:16Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-openai-biobasicsbench",
+      "candidate_ids": [
+        "c335b812b169a4b1"
+      ],
+      "category": "models",
+      "title_zh": "OpenAI 推出 BioBasicsBench，衡量 AI Agent 处理湿实验室日常科学的能力",
+      "summary_zh": "OpenAI 介绍 BioBasicsBench，包含 100 项任务，用于衡量 AI Agent 解读原始实验数据和处理日常湿实验室科学的能力。",
+      "why_it_matters_zh": "该基准把评测从文本问答推进到真实科研操作流程，有助于识别 Agent 在实验数据理解与科研工作流中的能力边界。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Measuring how AI agents handle everyday wet-lab science",
+        "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+        "published_at": "2026-11-06T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-rl-reshard",
+      "candidate_ids": [
+        "182a089e31aa8de5"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 介绍 Reshard Collective，加速强化学习权重重装",
+      "summary_zh": "NVIDIA 开发者博客介绍 Reshard Collective，用于加速强化学习训练中的权重重装，面向强化学习后训练中训练与推理交替的场景。",
+      "why_it_matters_zh": "RL 后训练对训练与推理之间的权重同步效率敏感，优化 weight refit 有助于提升大规模后训练吞吐。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Accelerating Reinforcement Learning Weight Refit with the Reshard Collective",
+        "url": "https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/",
+        "published_at": "2026-11-06T18:03:26Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-dsx-os",
+      "candidate_ids": [
+        "cc7fa4a8bceeee7a"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA 发布 DSX OS，面向 Kubernetes GPU 集群的配置、认证与运维",
+      "summary_zh": "NVIDIA 开发者博客介绍 DSX OS，用于配置、认证和运维 Kubernetes GPU 集群，并指出单个性能不佳的 GPU 可能拖慢整个分布式训练任务。",
+      "why_it_matters_zh": "GPU 集群运维是 AI 基础设施的关键环节；将节点健康、认证与集群操作产品化，有助于降低大规模训练的不稳定性。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Configure, Certify, and Operate Kubernetes GPU Clusters with NVIDIA DSX OS",
+        "url": "https://developer.nvidia.com/blog/configure-certify-and-operate-kubernetes-gpu-clusters-with-nvidia-dsx-os/",
+        "published_at": "2026-11-05T17:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-openai-hacktron",
+      "candidate_ids": [
+        "358e7b0d6028956c"
+      ],
+      "category": "security",
+      "title_zh": "OpenAI 与 Hacktron 合作排查系统漏洞",
+      "summary_zh": "OpenAI 宣布与 Hacktron 合作，寻找其系统漏洞、测试与第三方服务的连接，并用前沿 AI 加强防御。",
+      "why_it_matters_zh": "前沿 AI 公司引入外部安全团队进行漏洞发现和第三方集成测试，反映 AI 系统安全与供应链风险治理的重要性。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+        "url": "https://openai.com/index/partnering-with-hacktron",
+        "published_at": "2026-11-06T08:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-opd-grpo-compute",
+      "candidate_ids": [
+        "5eb1184656fd4cdf"
+      ],
+      "category": "research",
+      "title_zh": "研究比较 OPD 与 GRPO 的计算效率",
+      "summary_zh": "一篇 arXiv 论文系统比较 vanilla reverse-KL 在线策略蒸馏（OPD）与 GRPO 在达到目标准确率时所需训练 FLOPs，覆盖任务难度、师生模型规模、领域和优化选择；发现外部后训练教师下 OPD 通常每训练 FLOP 的准确率不如 GRPO，但以学生自身 GRPO checkpoint 为教师时，OPD 在数学任务上以少 50 倍蒸馏 FLOPs 恢复该 checkpoint 准确率。",
+      "why_it_matters_zh": "该研究为蒸馏与 RL 后训练的算力预算选择提供实证依据，并说明教师模型来源会显著改变 OPD 的效率结论。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
+        "url": "https://arxiv.org/abs/2611.08453v1",
+        "published_at": "2026-11-05T18:47:05Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-social-humanoid",
+      "candidate_ids": [
+        "a162d78eca678cac"
+      ],
+      "category": "research",
+      "title_zh": "Social Humanoid：面向人形机器人的社交响应式人-人形交互",
+      "summary_zh": "论文提出 Social Humanoid 分层系统，在 29 自由度 Unitree G1 上根据人类伙伴动作生成并执行全身社交响应动作；高层策略用共享 tokenized 表示建模人-人形动作序列并预测遮挡伙伴动作，低层控制器执行动作，同时构建 260 小时人-人形交互 benchmark。",
+      "why_it_matters_zh": "提升人形机器人与人类物理协作能力，且发布交互 benchmark 有助于该方向评测标准化。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Social Humanoid: Socially Responsive Human-Humanoid Interaction",
+        "url": "https://arxiv.org/abs/2611.08407v1",
+        "published_at": "2026-11-05T18:14:06Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-lora-spectral-dynamics",
+      "candidate_ids": [
+        "87bf7ed2981aca6e"
+      ],
+      "category": "research",
+      "title_zh": "研究揭示 LoRA 在 SFT 与 RL 中的谱与子空间动态差异",
+      "summary_zh": "论文跟踪数学推理任务中 LoRA 更新的奇异谱和子空间，发现 RL 在各学习率下集中谱，而 SFT 在中等学习率下扩张谱；RL 在小学习率下更快旋转奇异子空间；组均值基线减法是两种差异的来源，并据此提出分阶段调整 LoRA 更新。",
+      "why_it_matters_zh": "理解 LoRA 在 SFT/RL 下的不同动态，可为后训练学习率、rank 和更新策略设计提供理论指导。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Spectral and Subspace Dynamics of LoRA in Supervised Fine-Tuning and Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2611.08414v1",
+        "published_at": "2026-11-05T18:17:39Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-medgraph",
+      "candidate_ids": [
+        "34f0b45dc788a437"
+      ],
+      "category": "research",
+      "title_zh": "MedGraph：用图记忆维护长期医疗对话中的患者状态",
+      "summary_zh": "论文提出 MedGraph 图记忆，针对长期医疗对话中检索证据过时、混入他人健康事实、缺少安全事实三类错误；构建时抽取带日期事实并归属到对应个人，把药物、诊断和测量记录链接成保留历史状态的链，检索时按患者链和时间读取，并在 MedMemoryBench 上以 GPT 和 Qwen 为骨干取得最高总体准确率，分别比最强基线高 10.5 和 10.4 个百分点。",
+      "why_it_matters_zh": "长期医疗 Agent 的可靠性取决于状态记忆与安全事实，图记忆方案为医疗对话系统提供可评测的结构化记忆路径。",
+      "importance_score": 61.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "MedGraph: Maintaining Patient State with Graph Memory for Long-Term Medical Dialogue",
+        "url": "https://arxiv.org/abs/2611.08433v1",
+        "published_at": "2026-11-05T18:27:20Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llamacpp-b12189",
+      "candidate_ids": [
+        "f149b1983156bf39"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12189，修复 Metal GROUP_NORM 批维与步幅处理",
+      "summary_zh": "llama.cpp 发布 b12189，修复 Metal 后端 GROUP_NORM 在 ne03>1 和非连续输入下的问题：按（group, i03）调度 threadgroup、计算每批统计量，并支持带步幅的 src/dst 路径；同时处理最后一组元素计数和 int64 索引。",
+      "why_it_matters_zh": "推理框架后端 kernel 的正确性直接影响 Apple Metal 上的模型输出与稳定性；此类修复对本地和端侧推理可靠性重要。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12189",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12189",
+        "published_at": "2026-11-07T12:15:59Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 194,
+    "normalized": 194,
+    "filtered": 142,
+    "ai_candidates": 30,
+    "prompt_chars": 13874,
+    "estimated_input_tokens": 3468,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
