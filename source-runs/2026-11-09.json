@@ -1,0 +1,816 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "mit-tech-review-ai",
+    "infoq-cn",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 127,
+  "normalized_count": 127,
+  "filtered_count": 90,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "GitHub不堪重负！OpenAI收购替代品，A社原地自研，马斯克也要搞",
+        "url": "https://www.qbitai.com/2026/11/508449.html",
+        "published_at": "2026-11-07T09:38:56Z",
+        "fetched_at": "2026-11-08T16:57:04.836915Z",
+        "language": "unknown",
+        "excerpt": "AI写代码太快，基础设施跟不上了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "f6bc4f3ba2c5741d",
+        "canonical_url": "https://www.qbitai.com/2026/11/508449.html",
+        "normalized_title": "github不堪重负 openai收购替代品 a社原地自研 马斯克也要搞",
+        "fingerprint": "f6bc4f3ba2c5741d5fd554fc9985863bccc34042ce5afaa80c7bddb8282e69fa",
+        "rule_score": 61.0
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "OpenAI新融资到账110亿美元，不及原计划一半",
+        "url": "https://www.qbitai.com/2026/11/508344.html",
+        "published_at": "2026-11-07T08:11:25Z",
+        "fetched_at": "2026-11-08T16:57:04.836930Z",
+        "language": "unknown",
+        "excerpt": "融资缩水，硅谷投资人也谨慎了",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "田, 晏林",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "cc3abfaf11e15733",
+        "canonical_url": "https://www.qbitai.com/2026/11/508344.html",
+        "normalized_title": "openai新融资到账110亿美元 不及原计划一半",
+        "fingerprint": "cc3abfaf11e1573319779346e5798f18fd1495117e593da6f4e2bb683307b518",
+        "rule_score": 61.0
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b12211",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12211",
+        "published_at": "2026-11-08T16:48:49Z",
+        "fetched_at": "2026-11-08T16:56:58.931723Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nmtmd: refactoring: remove clip.h, consolidate code into mtmd (#31865)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/65083165>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu 24.04 s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu 26.04 s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12211/llama-b12211-bi",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 438379972
+        },
+        "id": "32747f811cbc281d",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12211",
+        "normalized_title": "llama cpp releases b12211",
+        "fingerprint": "32747f811cbc281de56c6dcb360dd0e1a84b7c6149d15613f409b23f5a2823e1",
+        "rule_score": 54.68136111111111
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "Agent 越用越多，企业为何仍不够 AI Native？",
+        "url": "https://www.infoq.cn/article/YZx670AAiudsqZjx3UNo?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-09T00:08:00Z",
+        "fetched_at": "2026-11-08T16:57:02.638625Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/YZx670AAiudsqZjx3UNo?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "籍云",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2525095f1efe5d31",
+        "canonical_url": "https://www.infoq.cn/article/YZx670AAiudsqZjx3UNo",
+        "normalized_title": "agent 越用越多 企业为何仍不够 ai native",
+        "fingerprint": "2525095f1efe5d31d5faa7bc55a0521062bda616edf26fab56e287acdb6e10a9",
+        "rule_score": 54.413333333333334
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "AI 生成视频何时才能告别“抽卡”？藏在高效生成背后的返工与成本难题",
+        "url": "https://www.infoq.cn/article/xd9o6TyQ8GLON3dmiWpG?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-08T16:19:44Z",
+        "fetched_at": "2026-11-08T16:57:02.638675Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/xd9o6TyQ8GLON3dmiWpG?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "林绮蓓",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "8af7744690f26a82",
+        "canonical_url": "https://www.infoq.cn/article/xd9o6TyQ8GLON3dmiWpG",
+        "normalized_title": "ai 生成视频何时才能告别 抽卡 藏在高效生成背后的返工与成本难题",
+        "fingerprint": "8af7744690f26a82edbd85801c6e5a5464993ec1dd61d5e827177aaa1bf675b5",
+        "rule_score": 49.632888888888886
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "顶尖 AI 实验室正在成为“人才黑洞”！Claude Code 团队工程师离职后首次受访",
+        "url": "https://www.infoq.cn/article/Qs0pJ5M43c56hdozHiR0?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-08T15:03:06Z",
+        "fetched_at": "2026-11-08T16:57:02.638690Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/Qs0pJ5M43c56hdozHiR0?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "林绮蓓",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "b618d1f4f5e1f56d",
+        "canonical_url": "https://www.infoq.cn/article/Qs0pJ5M43c56hdozHiR0",
+        "normalized_title": "顶尖 ai 实验室正在成为 人才黑洞 claude code 团队工程师离职后首次受访",
+        "fingerprint": "b618d1f4f5e1f56dabb36a687b2ab0f96925acca34fd158ecba7bfc7af134a68",
+        "rule_score": 49.50516666666667
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "从约束到进化：Ontology 与 AI 自迭代的实践｜AICon北京",
+        "url": "https://www.infoq.cn/article/sy9XMK3zJ3jPwHBN5fQV?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-08T10:00:00Z",
+        "fetched_at": "2026-11-08T16:57:02.638715Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/sy9XMK3zJ3jPwHBN5fQV?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "AICon 全球人工智能开发与应用大会",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "e901887f2a219d59",
+        "canonical_url": "https://www.infoq.cn/article/sy9XMK3zJ3jPwHBN5fQV",
+        "normalized_title": "从约束到进化 ontology 与 ai 自迭代的实践 aicon北京",
+        "fingerprint": "e901887f2a219d593607f4f8eb9b417384a296b26bd72513196058979365aff4",
+        "rule_score": 49.0
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "为了去AI味，人类开始主动写烂文章了……",
+        "url": "https://www.qbitai.com/2026/11/508330.html",
+        "published_at": "2026-11-07T07:59:28Z",
+        "fetched_at": "2026-11-08T16:57:04.836942Z",
+        "language": "unknown",
+        "excerpt": "需要说明的是，这并不意味着不会说人话就一定是人，也不意味着说人话的就一定不是AI.......",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "田, 晏林",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d79e5e276873d170",
+        "canonical_url": "https://www.qbitai.com/2026/11/508330.html",
+        "normalized_title": "为了去ai味 人类开始主动写烂文章了",
+        "fingerprint": "d79e5e276873d1707d9de1add5b59ac93cf4e58be7e728d9245b99ab4b791a43",
+        "rule_score": 49.0
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "资本正在撤离“世界模型”",
+        "url": "https://www.qbitai.com/2026/11/508466.html",
+        "published_at": "2026-11-08T04:09:55Z",
+        "fetched_at": "2026-11-08T16:57:04.836871Z",
+        "language": "unknown",
+        "excerpt": "没有永远的夏天",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "衡宇",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "dc1889a6a9a10241",
+        "canonical_url": "https://www.qbitai.com/2026/11/508466.html",
+        "normalized_title": "资本正在撤离 世界模型",
+        "fingerprint": "dc1889a6a9a10241bd02b83da7749630b573a6f4a0324daff31e513484b818c3",
+        "rule_score": 46.41652777777778
+      },
+      {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "source_group": "official",
+        "independence_group": "nvidia-genai",
+        "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+        "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+        "published_at": "2026-11-06T22:20:20Z",
+        "fetched_at": "2026-11-08T16:56:55.931259Z",
+        "language": "unknown",
+        "excerpt": "<img alt=\"Two generated images of a red fox beside a moss-covered fallen tree in an autumn forest.\" class=\"webfeedsFeaturedVisual wp-post-image\" height=\"432\" src=\"https://developer-blogs.nvidia.com/wp-content/uploads/2026/11/techblog-5893-article-kix-ulkeecvizi09-768x432.png\" style=\"display: block; margin-bottom: 5px; clear: both;\" title=\"techblog-5893-article-kix-ulkeecvizi09\" width=\"768\" />When deploying diffusion models in design tools, image editors, and visual production workflows, developers must account for inference latency. Generating an...",
+        "categories": [
+          "infrastructure",
+          "products"
+        ],
+        "author": "Olivia Stoner",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4f3afabe40c1e517",
+        "canonical_url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus",
+        "normalized_title": "speed up image generation with flux 3 image klein on nvidia blackwell gpus",
+        "fingerprint": "4f3afabe40c1e517e0a88829d79ce76e7e5eab1635cbe6034bab2434d360e63f",
+        "rule_score": 46.0
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "租户隔离做了四层，就能放心了吗？工程师提醒：还得看得见边界是否生效",
+        "url": "https://www.infoq.cn/article/zTFVgklcTFZvgE2fkV7A?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-08T14:00:00Z",
+        "fetched_at": "2026-11-08T16:57:02.638703Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/zTFVgklcTFZvgE2fkV7A?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "作者：Leela Kumili",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "fc4ae8798a52b101",
+        "canonical_url": "https://www.infoq.cn/article/zTFVgklcTFZvgE2fkV7A",
+        "normalized_title": "租户隔离做了四层 就能放心了吗 工程师提醒 还得看得见边界是否生效",
+        "fingerprint": "fc4ae8798a52b101d806bac1803c6fe4d533575d8d90cd480558f5a8829ea472",
+        "rule_score": 45.4
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "浙大00后博士生再交卷！把十几种物理要素装进一个世界模型｜华为昇腾原生",
+        "url": "https://www.qbitai.com/2026/11/508236.html",
+        "published_at": "2026-11-07T03:31:44Z",
+        "fetched_at": "2026-11-08T16:57:04.836974Z",
+        "language": "unknown",
+        "excerpt": "中国版cosmos再交卷",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4ee581d9e915af8d",
+        "canonical_url": "https://www.qbitai.com/2026/11/508236.html",
+        "normalized_title": "浙大00后博士生再交卷 把十几种物理要素装进一个世界模型 华为昇腾原生",
+        "fingerprint": "4ee581d9e915af8d0e9db6d274b9d373de6a50383e68e4df064057e32c6116fe",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "source_group": "media",
+        "independence_group": "qbitai",
+        "title": "Jeff Dean李飞飞最新对谈：全是RSI非共识",
+        "url": "https://www.qbitai.com/2026/11/508196.html",
+        "published_at": "2026-11-07T03:23:29Z",
+        "fetched_at": "2026-11-08T16:57:04.836985Z",
+        "language": "unknown",
+        "excerpt": "RSI不可能无限快",
+        "categories": [
+          "models",
+          "products",
+          "business"
+        ],
+        "author": "听雨",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "91aa274920ca46f6",
+        "canonical_url": "https://www.qbitai.com/2026/11/508196.html",
+        "normalized_title": "jeff dean李飞飞最新对谈 全是rsi非共识",
+        "fingerprint": "91aa274920ca46f6b9ab761d74d930e36da93dbcab27e2001a1b6fddef406681",
+        "rule_score": 45.0
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "自动路由真能省钱吗？便宜模型出错后，人类修一小时可能更贵",
+        "url": "https://www.infoq.cn/article/gOcDmZM2MPAQhWtNb6IJ?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-08T09:00:00Z",
+        "fetched_at": "2026-11-08T16:57:02.638727Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/gOcDmZM2MPAQhWtNb6IJ?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "作者：Steef-Jan Wiggers",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "ab060e35ba1a77f8",
+        "canonical_url": "https://www.infoq.cn/article/gOcDmZM2MPAQhWtNb6IJ",
+        "normalized_title": "自动路由真能省钱吗 便宜模型出错后 人类修一小时可能更贵",
+        "fingerprint": "ab060e35ba1a77f85d2c9e7b023bffe8d143a4e302f028426c8d5ee7cbf5347d",
+        "rule_score": 44.9
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+        "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+        "published_at": "2026-11-07T21:17:08Z",
+        "fetched_at": "2026-11-08T16:57:04.906409Z",
+        "language": "unknown",
+        "excerpt": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "36ae7d23207aebfe",
+        "canonical_url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo",
+        "normalized_title": "megaspeed exec was recruited to spy on nvidia ceo according to us intelligence memo",
+        "fingerprint": "36ae7d23207aebfe7ff303eef92b53e31a3ab56226de2126fc49a12290e458ae",
+        "rule_score": 44.72855555555556
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+        "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+        "published_at": "2026-11-06T18:44:38Z",
+        "fetched_at": "2026-11-08T16:57:04.906450Z",
+        "language": "unknown",
+        "excerpt": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Zack Whittaker",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "80410e3a7dcd58be",
+        "canonical_url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web",
+        "normalized_title": "hundreds of artex ai hacking tools found publicly exposed to the web",
+        "fingerprint": "80410e3a7dcd58bea79fb58d157e2a044fe27c69b84a4c18dc5deb7d00cec891",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "How a Blue Wave midterm might reshape the AI industry",
+        "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+        "published_at": "2026-11-06T18:00:00Z",
+        "fetched_at": "2026-11-08T16:57:04.906474Z",
+        "language": "unknown",
+        "excerpt": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot directly, they were a [&#8230;]",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Theresa Loconsolo, Anthony Ha, Sean O'Kane, Kirsten Korosec",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "241311408523699d",
+        "canonical_url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry",
+        "normalized_title": "how a blue wave midterm might reshape the ai industry",
+        "fingerprint": "241311408523699d56727db542b0bfbcfb5707e52499ef76d9ba1b1521021490",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "After the midterms, is the AI industry in for a rough two years?",
+        "url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years/",
+        "published_at": "2026-11-06T17:23:52Z",
+        "fetched_at": "2026-11-08T16:57:04.906485Z",
+        "language": "unknown",
+        "excerpt": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot directly, they were a [&#8230;]",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Theresa Loconsolo, Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "61983d11de92f682",
+        "canonical_url": "https://techcrunch.com/video/after-the-midterms-is-the-ai-industry-in-for-a-rough-two-years",
+        "normalized_title": "after the midterms is the ai industry in for a rough two years",
+        "fingerprint": "61983d11de92f6823ea237b164a5c387d779176a4b14b306641e6c050480d0de",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Tesla Hasn't Had a Successful New Product Launch Since JB Straubel Stepped Down",
+        "url": "https://cleantechnica.com/2026/11/07/tesla-hasnt-had-a-successful-new-product-launch-since-jb-straubel-stepped-down-as-cto/",
+        "published_at": "2026-11-08T16:07:42Z",
+        "fetched_at": "2026-11-08T16:57:05.070792Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gumby",
+        "upstream_urls": [
+          "https://cleantechnica.com/2026/11/07/tesla-hasnt-had-a-successful-new-product-launch-since-jb-straubel-stepped-down-as-cto/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50414427,
+          "score": 132
+        },
+        "id": "73c3639f1cba2530",
+        "canonical_url": "https://cleantechnica.com/2026/11/07/tesla-hasnt-had-a-successful-new-product-launch-since-jb-straubel-stepped-down-as-cto",
+        "normalized_title": "tesla hasn t had a successful new product launch since jb straubel stepped down",
+        "fingerprint": "73c3639f1cba2530cdcdd32068e1d32193cbf184c7ebf4c6751592241ba6e11c",
+        "rule_score": 43.612833333333334
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "OpenAI raises $11B at a $1.25T valuation",
+        "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/",
+        "published_at": "2026-11-08T14:49:23Z",
+        "fetched_at": "2026-11-08T16:57:05.396228Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "armcat",
+        "upstream_urls": [
+          "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50413822,
+          "score": 99
+        },
+        "id": "9d02feb814da7b74",
+        "canonical_url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought",
+        "normalized_title": "openai raises 11b at a 1 25t valuation",
+        "fingerprint": "9d02feb814da7b741d70eb3f81206fd03b19c65ed02803b99dcf251b63c2b56e",
+        "rule_score": 43.482305555555556
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "不复制海量数据，直接查询 S3：CSIRO 重构基因组分析架构",
+        "url": "https://www.infoq.cn/article/mF9A6U1M6SQFWfEKOJGW?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-07T16:11:00Z",
+        "fetched_at": "2026-11-08T16:57:02.638738Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/mF9A6U1M6SQFWfEKOJGW?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "作者：Leela Kumili",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "0d81deb93888d7b8",
+        "canonical_url": "https://www.infoq.cn/article/mF9A6U1M6SQFWfEKOJGW",
+        "normalized_title": "不复制海量数据 直接查询 s3 csiro 重构基因组分析架构",
+        "fingerprint": "0d81deb93888d7b878d0cd6e67abeb8d0eaf99a06ec6691e779e5e49e8a3b50d",
+        "rule_score": 43.218333333333334
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "线上 Worker 变慢，本地却复现不了？Cloudflare 让开发者直接看生产环境火焰图",
+        "url": "https://www.infoq.cn/article/pMNGPheLLJ8hkfikmjUU?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-07T09:00:00Z",
+        "fetched_at": "2026-11-08T16:57:02.638760Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/pMNGPheLLJ8hkfikmjUU?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "作者：Craig Risi",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "d71eaa8e1a6619da",
+        "canonical_url": "https://www.infoq.cn/article/pMNGPheLLJ8hkfikmjUU",
+        "normalized_title": "线上 worker 变慢 本地却复现不了 cloudflare 让开发者直接看生产环境火焰图",
+        "fingerprint": "d71eaa8e1a6619da71ef66aa93a831a3d6d5adbe0b7726c26ad8376307ce1d73",
+        "rule_score": 43.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "After the midterms, things are looking rocky for Elon Musk and data centers",
+        "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+        "published_at": "2026-11-07T22:07:22Z",
+        "fetched_at": "2026-11-08T16:57:04.906364Z",
+        "language": "unknown",
+        "excerpt": "On Equity, we unpacked what the midterms mean for the tech industry.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "10b58109c0bc9c8b",
+        "canonical_url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers",
+        "normalized_title": "after the midterms things are looking rocky for elon musk and data centers",
+        "fingerprint": "10b58109c0bc9c8b8d037bf5be2ebc6f627ca600acce680baede4989b9e6635a",
+        "rule_score": 40.81227777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "I Have Never Seen a Game Fail Because the Artists Were Too Slow",
+        "url": "https://www.productionalchemist.com/p/inever-seen-a-game-fail-because-artists-too-slow",
+        "published_at": "2026-11-08T15:44:17Z",
+        "fetched_at": "2026-11-08T16:57:05.846220Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "pje",
+        "upstream_urls": [
+          "https://www.productionalchemist.com/p/inever-seen-a-game-fail-because-artists-too-slow"
+        ],
+        "raw_metadata": {
+          "hn_id": 50414234,
+          "score": 27
+        },
+        "id": "807dda814afdfef4",
+        "canonical_url": "https://www.productionalchemist.com/p/inever-seen-a-game-fail-because-artists-too-slow",
+        "normalized_title": "i have never seen a game fail because the artists were too slow",
+        "fingerprint": "807dda814afdfef42da1d34dc69ca9f827bc1ea34cb88304c03939447d9eb898",
+        "rule_score": 39.57380555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Apple CEO Presses Software Chief to Pursue More Ambitious AI Strategy",
+        "url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
+        "published_at": "2026-11-08T15:19:51Z",
+        "fetched_at": "2026-11-08T16:57:05.805973Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mfiguiere",
+        "upstream_urls": [
+          "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up"
+        ],
+        "raw_metadata": {
+          "hn_id": 50414021,
+          "score": 26
+        },
+        "id": "e1d0183c4a9fb238",
+        "canonical_url": "https://www.bloomberg.com/news/newsletters/2026-11-08/apple-explores-turning-siri-ai-into-chatgpt-dots-like-agent-ios-28-shake-up",
+        "normalized_title": "apple ceo presses software chief to pursue more ambitious ai strategy",
+        "fingerprint": "e1d0183c4a9fb238132e6f082413c3db617240403e5f5ddf4a35c6e9f579072d",
+        "rule_score": 39.53308333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Drones built to look like birds evaded detection at Air Force tech exercise",
+        "url": "https://taskandpurpose.com/news/drone-mimicking-bird-test/",
+        "published_at": "2026-11-08T15:00:42Z",
+        "fetched_at": "2026-11-08T16:57:06.079633Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "bushwart",
+        "upstream_urls": [
+          "https://taskandpurpose.com/news/drone-mimicking-bird-test/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50413885,
+          "score": 23
+        },
+        "id": "63b25696cca27593",
+        "canonical_url": "https://taskandpurpose.com/news/drone-mimicking-bird-test",
+        "normalized_title": "drones built to look like birds evaded detection at air force tech exercise",
+        "fingerprint": "63b25696cca2759316297a4ac0a2be5223efe326731b5dd17fd1ae42752ce4d0",
+        "rule_score": 39.50116666666667
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "AI stance is not binary",
+        "url": "https://carette.xyz/posts/ai-stance-is-not-binary/",
+        "published_at": "2026-11-08T14:24:58Z",
+        "fetched_at": "2026-11-08T16:57:08.766311Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "LucidLynx",
+        "upstream_urls": [
+          "https://carette.xyz/posts/ai-stance-is-not-binary/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50413632,
+          "score": 7
+        },
+        "id": "3796d30545ae9043",
+        "canonical_url": "https://carette.xyz/posts/ai-stance-is-not-binary",
+        "normalized_title": "ai stance is not binary",
+        "fingerprint": "3796d30545ae9043c34dd6e831183f6b87b12d6d906d81942fae683b8e1551c9",
+        "rule_score": 39.44161111111111
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Anthropic strikes $3.4B deal to generate gas-fired power for data centres",
+        "url": "https://www.ft.com/content/41bf5c6a-9735-4f1a-a8e3-2bcccad58ba0",
+        "published_at": "2026-11-08T12:41:25Z",
+        "fetched_at": "2026-11-08T16:57:08.433583Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mraniki",
+        "upstream_urls": [
+          "https://www.ft.com/content/41bf5c6a-9735-4f1a-a8e3-2bcccad58ba0"
+        ],
+        "raw_metadata": {
+          "hn_id": 50412760,
+          "score": 25
+        },
+        "id": "2701873e5da0d275",
+        "canonical_url": "https://www.ft.com/content/41bf5c6a-9735-4f1a-a8e3-2bcccad58ba0",
+        "normalized_title": "anthropic strikes 3 4b deal to generate gas fired power for data centres",
+        "fingerprint": "2701873e5da0d2750f8d9998638942852e68df801ca0e38cd5c31d3515d2794b",
+        "rule_score": 39.26902777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+        "url": "https://github.com/synchopate/llama-modchip",
+        "published_at": "2026-11-08T10:22:04Z",
+        "fetched_at": "2026-11-08T16:57:05.106782Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "joshcsimmons",
+        "upstream_urls": [
+          "https://github.com/synchopate/llama-modchip"
+        ],
+        "raw_metadata": {
+          "hn_id": 50411961,
+          "score": 174
+        },
+        "id": "c5dfff67e133f0a5",
+        "canonical_url": "https://github.com/synchopate/llama-modchip",
+        "normalized_title": "llama modchip 284b deepseek on 64gb ram no gpu",
+        "fingerprint": "c5dfff67e133f0a51b9bc007f869380b85ca4533a936c3b3cc6fbf43625df5ee",
+        "rule_score": 39.03677777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "GitHub Down Again?",
+        "url": "https://github.com/torvalds/linux",
+        "published_at": "2026-11-08T09:56:07Z",
+        "fetched_at": "2026-11-08T16:57:09.716498Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "ridowk",
+        "upstream_urls": [
+          "https://github.com/torvalds/linux"
+        ],
+        "raw_metadata": {
+          "hn_id": 50411818,
+          "score": 115
+        },
+        "id": "5e5fabdab0dcc8dc",
+        "canonical_url": "https://github.com/torvalds/linux",
+        "normalized_title": "github down again",
+        "fingerprint": "5e5fabdab0dcc8dccfc0d3db79d817a8d0f3e45a072153f2aa806b5df7d137a6",
+        "rule_score": 38.99352777777778
+      }
+    ],
+    "prompt_chars": 6152,
+    "estimated_input_tokens": 1538
+  },
+  "failures": {},
+  "newly_auto_paused_source_ids": []
+}
