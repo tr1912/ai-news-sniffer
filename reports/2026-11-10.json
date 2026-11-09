@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-10",
+  "generated_at": "2026-11-09T21:20:28.085408Z",
+  "run_id": "2026-11-10-dfce13a7",
+  "daily_summary_zh": "今日可确认的高信号事件集中在企业分发、行业落地、合成数据与开源推理：ChatGPT Enterprise 上架 AWS Marketplace；Kuken 用 OpenAI API 将 70 年图纸检索缩短至分钟级；NVIDIA 发布日本金融合成数据集；HOPE 研究关注专家模型剪枝；llama.cpp 发布 b12233 改进分片加载。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "ce83f6e64c728e41"
+      ],
+      "category": "business",
+      "title_zh": "ChatGPT Enterprise 上架 AWS Marketplace",
+      "summary_zh": "OpenAI 宣布 ChatGPT Enterprise 已可通过 AWS Marketplace 购买，企业可沿用现有的 AWS 采购与账单关系完成采购。",
+      "why_it_matters_zh": "企业可通过既有 AWS 采购与账单关系购买，降低采购摩擦，扩大企业级 AI 助手的分销渠道。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "ChatGPT Enterprise now available in AWS Marketplace",
+        "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+        "published_at": "2026-11-09T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "afc485bc20696992"
+      ],
+      "category": "research",
+      "title_zh": "Hugging Face 博客介绍 HOPE 专家剪枝研究",
+      "summary_zh": "Hugging Face 博客发布文章，讨论专家模型中的专家伙伴关系，并介绍 HOPE 方法用于在剪枝时将这些专家保留在一起。",
+      "why_it_matters_zh": "专家模型剪枝直接影响推理成本与部署效率，HOPE 对专家伙伴关系的处理值得关注。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+        "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+        "published_at": "2026-11-09T12:34:29Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "b9f68da4369dc237"
+      ],
+      "category": "research",
+      "title_zh": "NVIDIA 发布 Nemotron-Personas-Finance-Japan 合成数据集",
+      "summary_zh": "Hugging Face 博客介绍 NVIDIA 的 Nemotron-Personas-Finance-Japan，这是一个捕捉日本人口结构与金融语境的合成数据集。",
+      "why_it_matters_zh": "本地化金融合成数据可缓解日本金融场景数据稀缺与隐私限制，支持模型训练和评估。",
+      "importance_score": 64.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+        "published_at": "2026-11-09T15:05:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "de8de1ba55e58587"
+      ],
+      "category": "products",
+      "title_zh": "Kuken Industries 用 OpenAI API 将 70 年图纸检索缩短至分钟级",
+      "summary_zh": "OpenAI 客户案例显示，Kuken Industries 通过 OpenAI API 检索 70 年冷却塔图纸，工程师找到维修图纸的时间从近一小时降至 4.5 分钟。",
+      "why_it_matters_zh": "说明大模型在企业图纸/知识检索等传统工业场景中能显著缩短查找时间。",
+      "importance_score": 59.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Kuken Industries searches 70 years of drawings in minutes",
+        "url": "https://openai.com/index/kuken",
+        "published_at": "2026-11-09T08:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "e53f9657f7799c00"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12233：支持外部 PLE 文件加载",
+      "summary_zh": "llama.cpp 发布 b12233，新增外部 PLE 文件加载；--ple 成为 --shard 的别名，支持逗号分隔及多次传入多个分片路径，并复用多分片加载路径。",
+      "why_it_matters_zh": "作为广泛使用的开源推理运行时，分片/外部权重加载改进有利于大模型本地部署。",
+      "importance_score": 57.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12233",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12233",
+        "published_at": "2026-11-09T19:15:19Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 158,
+    "normalized": 158,
+    "filtered": 121,
+    "ai_candidates": 30,
+    "prompt_chars": 8159,
+    "estimated_input_tokens": 2039,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
