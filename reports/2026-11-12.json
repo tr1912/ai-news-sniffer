@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-12",
+  "generated_at": "2026-11-11T18:28:42.321868Z",
+  "run_id": "2026-11-12-bb16ca3f",
+  "daily_summary_zh": "今日高信号集中在 Agent 安全与工程化落地：Microsoft Research 披露可向 AI Agent 植入后门的 Lazare，LEASH 提出机器人安全基准，OpenAI 与 Cogent 将模型用于企业漏洞修复；工程侧 ReTrace、Tree-Ising、Sable 分别推进低成本工作流、权重级模型修复和可验证推理；开源侧 llama.cpp 优化小 batch CUDA 推理，Hugging Face 展示端侧 BotPsy；此外还有 Earlybird 低延迟流式语音识别、Pyrite 科学发现基准，以及 OpenAI 与 Upwork 的自由职业研究和新航企业案例。",
+  "events": [
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "10de0342d8d97473"
+      ],
+      "category": "security",
+      "title_zh": "Microsoft Research 披露 Lazare：可重编程休眠神经元给 AI Agent 植入后门",
+      "summary_zh": "Microsoft Research 介绍 Lazare 后门技术，可重编程模型休眠神经元，在隐藏触发条件下让原本正常的 AI Agent 执行恶意命令；对具备工具或终端访问权限的 Agent 风险尤其严重。",
+      "why_it_matters_zh": "Agent 获得工具权限后，模型后门可转化为真实系统攻击面，安全评估需覆盖权重级和触发式风险。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "microsoft-research",
+        "source_name": "Microsoft Research Blog",
+        "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+        "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+        "published_at": "2026-11-10T20:52:56Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "e39fcc6d8f269e06"
+      ],
+      "category": "products",
+      "title_zh": "OpenAI 与 Cogent 合作构建企业网络防御工厂",
+      "summary_zh": "OpenAI Newsroom 宣布与 Cogent 合作，将 OpenAI 模型与企业上下文结合，通过 Agent 自动修复漏洞，面向企业构建网络防御能力。",
+      "why_it_matters_zh": "把大模型能力接入漏洞修复和安全运营闭环，是企业级 Agent 在安全场景落地的代表性方向。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+        "url": "https://openai.com/index/cogent-security",
+        "published_at": "2026-11-10T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "0a123f2a0c94dd21"
+      ],
+      "category": "research",
+      "title_zh": "LEASH 提出 RoboRisk 基准，评估 Agentic Robotics 安全风险",
+      "summary_zh": "论文提出 RoboRisk，覆盖 92 个模拟任务和 13 个物理机器人任务，分为任务级拒绝、计划修复、执行时危害、注入和序列记忆五类；评估六个基础模型显示较高危害率，并提出 LEASH 安全 harness。",
+      "why_it_matters_zh": "把基础模型控制机器人的安全评估从文本扩展到闭环执行，为具身智能安全部署提供可测框架。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "LEASH: Stay Safe in Agentic Robotics",
+        "url": "https://huggingface.co/papers/2611.14115",
+        "published_at": "2026-11-09T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "ede428a6b3e888b7"
+      ],
+      "category": "research",
+      "title_zh": "ReTrace 将工具型 Agent 蒸馏为无 Planner 工作流",
+      "summary_zh": "ReTrace 从 SOP 和少量日志中提取步骤条件，生成由代码选择下一步的可执行工作流；在生产 79 个流程上达到 93.8% 完成率（Agent 为 96.8%），每任务成本低 24%，在 τ²-Bench 上达到 75.8% 成功率、运行 1.3 秒而非 170 秒。",
+      "why_it_matters_zh": "在保持接近 Agent 成功率的同时显著降低延迟和成本，是 Agent 规模化落地的重要工程路径。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "ReTrace: Distilling Tool-Using Agents into Planner-Free Workflows",
+        "url": "https://arxiv.org/abs/2611.14492v1",
+        "published_at": "2026-11-10T18:49:47Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "da6cf4c9f7ee031d"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face 展示 BotPsy：不足十亿参数的端侧 Agentic 个人助理",
+      "summary_zh": "Hugging Face 博客介绍 BotPsy，一个在设备端运行、基于 sub-billion 参数 Agentic 语言模型的个人助理。",
+      "why_it_matters_zh": "端侧小模型结合 Agent 能力，有望在隐私、延迟和离线可用性上改善个人助理体验。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+        "url": "https://huggingface.co/blog/qvac/botpsy",
+        "published_at": "2026-11-11T05:01:16Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "23b3e08e35420bd9"
+      ],
+      "category": "research",
+      "title_zh": "Tree-Ising 用 BF16 位级 Ising 编辑修复语言模型",
+      "summary_zh": "Tree-Ising 将语言模型权重修复转化为 BF16 权重上的稀疏离散优化，分解为逐输出行的 QUBO/Ising 问题，并用 GPU 模拟退火或模拟分岔求解；在 MATH-500 上达到 54.6%，高于 Agent 编辑的 51.7% 和基座的 7.9%。",
+      "why_it_matters_zh": "探索无需梯度的权重级模型修复，为模型调试、可控编辑和推理回路修正提供新工具。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+        "url": "https://huggingface.co/papers/2611.14210",
+        "published_at": "2026-11-09T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "f86c03610e134806"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12287：CUDA 小 batch BF16 推理优化",
+      "summary_zh": "llama.cpp 发布 b12287，CUDA 后端在少行 BF16 矩阵的小 batch 场景启用 MMVF，并新增 128x2560、512x2560、320x10240 等评测用例。",
+      "why_it_matters_zh": "本地与边缘推理框架持续优化 GPU 小 batch 性能，直接影响开发者和终端部署效率。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12287",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12287",
+        "published_at": "2026-11-11T18:15:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "6c3cafe9572dc9e6"
+      ],
+      "category": "research",
+      "title_zh": "Sable 为量化 LLM 推理提供逐位精确性证明",
+      "summary_zh": "Sable 是面向整数量化 Transformer 的论证系统和单 GPU prover，可证明给定 prompt 生成指定 token 序列是逐位精确的；在单张 RTX PRO 6000 Blackwell 上证明 Qwen2.5-32B 全部 64 层，4096 token 用时 92.5 秒、16384 token 用时 398 秒，并覆盖 Qwen3 系列。",
+      "why_it_matters_zh": "可验证推理为模型审计、合规和可信部署提供密码学级别的结果证明。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models",
+        "url": "https://huggingface.co/papers/2611.14083",
+        "published_at": "2026-11-09T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "4bbf4b5beae4053f"
+      ],
+      "category": "research",
+      "title_zh": "Earlybird：29M 参数预测式流式语音识别",
+      "summary_zh": "Earlybird 是 29M 参数、4 bit 下 16.8 MB 的流式识别器，学习从随机截断音频中预测完整单词和后续两个词；在 LibriSpeech test-clean 上中位单词比说话人说完提前 90 ms 正确预测，并在六个测试集上均为最早。",
+      "why_it_matters_zh": "更低延迟的流式 ASR 可让语音 Agent 更早开始检索或规划，改善实时交互体验。",
+      "importance_score": 77.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Earlybird: Predictive Streaming Speech Recognition in 29M Parameters",
+        "url": "https://arxiv.org/abs/2611.14421v1",
+        "published_at": "2026-11-10T17:59:28Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "d3d9eb91c00f1561"
+      ],
+      "category": "business",
+      "title_zh": "OpenAI 与 Upwork 研究：AI 对自由职业工作的影响",
+      "summary_zh": "OpenAI 与 Upwork 的新研究发现，自由职业需求正在变化，出现新的技能组合，AI 相关项目获得更高预算和更多工时。",
+      "why_it_matters_zh": "来自平台侧的研究为 AI 对劳动力市场结构的实际影响提供数据，而不仅是宏观预测。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Work at the Frontier: AI’s effect on freelance work",
+        "url": "https://openai.com/index/ai-effect-on-freelance-work",
+        "published_at": "2026-11-10T07:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "2574283cbc714bb9"
+      ],
+      "category": "business",
+      "title_zh": "新加坡航空用 OpenAI 技术提升客服与员工效率",
+      "summary_zh": "OpenAI 案例称新加坡航空使用 OpenAI 模型和 API 改善客户支持、旅行发现和员工生产力，其 Kris 聊天机器人 CSAT 翻倍。",
+      "why_it_matters_zh": "大型航空公司公开规模化案例，显示生成式 AI 在客服和内部效率场景的商业落地。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Singapore Airlines elevates travel & work with OpenAI technology",
+        "url": "https://openai.com/index/singapore-airlines-travel-work",
+        "published_at": "2026-11-10T08:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 236,
+    "normalized": 236,
+    "filtered": 193,
+    "ai_candidates": 30,
+    "prompt_chars": 23212,
+    "estimated_input_tokens": 5803,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
