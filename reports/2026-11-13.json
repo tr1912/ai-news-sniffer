@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-12T18:44:14.349094Z",
+  "run_id": "2026-11-13-86f4a457",
+  "daily_summary_zh": "今日可验证的高信号信息集中在模型发布、AI 安全与训练方法：Google DeepMind 上线 Gemini 4 Carbon；OpenAI 投入 200 万美元支持 AI 与儿童安全研究，并发布 JioStar、Holiday Extras 的落地案例；Hugging Face 发布 3D 生成模型微调指南；arXiv 论文提出 AutoScaffold 自适应训练脚手架；llama.cpp 发布 b12321 构建。",
+  "events": [
+    {
+      "id": "event-gemini-4-carbon",
+      "candidate_ids": [
+        "08e12b5efd291bed"
+      ],
+      "category": "models",
+      "title_zh": "Google DeepMind 发布 Gemini 4 Carbon",
+      "summary_zh": "Google DeepMind 宣布 Gemini 4 Carbon 现已可用，具体能力与接入方式以其官方博客为准。",
+      "why_it_matters_zh": "作为官方发布的新 Gemini 模型版本，它进入可用状态后，开发者和企业可评估其能力、成本与迁移路径。",
+      "importance_score": 92.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "deepmind-news",
+        "source_name": "Google DeepMind News",
+        "title": "Gemini 4 Carbon is now available",
+        "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "published_at": "2026-11-10T16:03:47Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-openai-children-safety",
+      "candidate_ids": [
+        "eb7b0e6163a4c6b6"
+      ],
+      "category": "safety",
+      "title_zh": "OpenAI 投入 200 万美元支持 AI 与儿童安全研究",
+      "summary_zh": "OpenAI 承诺投入 200 万美元用于 AI 与儿童安全研究，支持衡量青少年风险与机会的共享工具。",
+      "why_it_matters_zh": "儿童安全是 AI 治理与产品设计的高敏感议题，资金投入有助于推动风险评估工具和行业测量标准。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Supporting research on AI and children’s safety",
+        "url": "https://openai.com/index/children-first-declaration",
+        "published_at": "2026-11-12T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-autoscaffold",
+      "candidate_ids": [
+        "58cf71c0a6af9575"
+      ],
+      "category": "research",
+      "title_zh": "AutoScaffold：用 AI 自动生成 RL 训练脚手架",
+      "summary_zh": "论文提出 AutoScaffold，将学生模型的训练经验转化为自适应脚手架：冻结教师模型周期性诊断瓶颈，设计跨任务策略与难题提示，并在评估时移除脚手架。该方法应用于 ALFWorld、搜索问答、数学推理和 GPU kernel 生成，无脚手架评估时优于对应 RL 基线。",
+      "why_it_matters_zh": "它把 RLVR 训练中通常由人工设计的提示与策略自动化，减少领域定制，对 LLM 推理与智能体训练有方法启发。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
+        "url": "https://arxiv.org/abs/2611.14515v1",
+        "published_at": "2026-11-10T18:58:46Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-hf-3d-finetuning-guide",
+      "candidate_ids": [
+        "e976dffd2b916f42"
+      ],
+      "category": "research",
+      "title_zh": "Hugging Face 发布 3D 生成模型微调指南",
+      "summary_zh": "Hugging Face 博客发布《3D 生成模型微调终极指南》，面向 3D 生成模型的微调实践提供方法说明。",
+      "why_it_matters_zh": "3D 生成模型定制门槛较高，官方社区指南有助于开发者复用微调流程并推动开源实践。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "The Definitive Fine-Tuning Guide for 3D Generation Models",
+        "url": "https://huggingface.co/blog/3d-lora-finetuning",
+        "published_at": "2026-11-12T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-jiostar-ai-discovery",
+      "candidate_ids": [
+        "bda855974d5fcda6"
+      ],
+      "category": "products",
+      "title_zh": "JioStar 分享 5 亿用户规模下的 AI 发现实践",
+      "summary_zh": "OpenAI 发布 JioStar 首席架构师 Vijay Seshadri 的分享，介绍在 5 亿用户规模下做 AI 发现，并总结评估、防护栏与生产化经验。",
+      "why_it_matters_zh": "大规模用户场景下的评估与防护栏经验，对 AI 产品团队从原型走向生产有参考价值。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
+        "url": "https://openai.com/index/jiostar-vijay-seshadri",
+        "published_at": "2026-11-11T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-holiday-extras-codex",
+      "candidate_ids": [
+        "015b9a79de698b6b"
+      ],
+      "category": "products",
+      "title_zh": "Holiday Extras 用 Codex 重构应用开发",
+      "summary_zh": "OpenAI 发布 Holiday Extras 使用 Codex 的客户案例：借助 Codex 将客户专业知识转化为更好的应用，提升预订转化并探索新增长可能。",
+      "why_it_matters_zh": "该案例展示 Codex 在业务应用开发和转化优化中的实际用法，可作为开发者工具落地参考。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Holiday Extras is rethinking what it can build with Codex",
+        "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+        "published_at": "2026-11-12T09:30:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llamacpp-b12321",
+      "candidate_ids": [
+        "dffd8d402a3cb6fb"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12321 构建",
+      "summary_zh": "llama.cpp 发布 b12321，提供 macOS/iOS、Linux 等多平台二进制包；该版本包含 SYCL 后端 oneDNN FA 缓存线程安全与运行时失败记忆化修复。",
+      "why_it_matters_zh": "本地推理工具链的持续修复会影响使用 SYCL/oneDNN 后端的开发者，属于开源推理栈的常规工程进展。",
+      "importance_score": 55.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12321",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12321",
+        "published_at": "2026-11-12T18:18:02Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 201,
+    "normalized": 201,
+    "filtered": 156,
+    "ai_candidates": 30,
+    "prompt_chars": 7336,
+    "estimated_input_tokens": 1834,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
