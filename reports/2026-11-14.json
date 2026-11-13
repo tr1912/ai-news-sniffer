@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-13T18:26:22.275668Z",
+  "run_id": "2026-11-14-c9aaf50e",
+  "daily_summary_zh": "今日值得关注的进展集中在三块：Google DeepMind 放出 Gemini 4 Hydrogen 新模型信号；OpenAI 推出 ChatGPT Wallet，让 Agent 在用户授权下完成支付，AI 商业闭环再进一步；开源与开发者侧，llama.cpp 发布 v1.0.0 大版本、Transformers v5.23.0 接入 Thinking Machines Lab 的 Inkling 2 Small、DeepSeek 把网页搜索/文件输入/URL 读取等应用层能力开放到 API。研究方面，Apple Silicon 上 GPU 编码 Agent 的隔离执行与调度、视频生成物理自改进、能量模型推理加速、LLM 隐写外泄隐私等方向出现新工作。",
+  "events": [
+    {
+      "id": "event-gemini-4-hydrogen",
+      "candidate_ids": [
+        "e42ce0be85c2653e"
+      ],
+      "category": "models",
+      "title_zh": "Google DeepMind 发布 Gemini 4 Hydrogen",
+      "summary_zh": "Google DeepMind 官方博客上线题为《Introducing Gemini 4 Hydrogen》的文章，宣布 Gemini 4 系列的新成员 Hydrogen。候选材料仅提供标题与官方链接，未给出参数、能力评测或开放范围等细节。",
+      "why_it_matters_zh": "前沿模型代际更新通常会影响 API 定价、开发者选型与下游产品能力上限；由于细节尚未公开，后续模型卡与基准数据值得持续跟踪。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "deepmind-news",
+        "source_name": "Google DeepMind News",
+        "title": "Introducing Gemini 4 Hydrogen",
+        "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+        "published_at": "2026-11-12T18:00:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-chatgpt-wallet",
+      "candidate_ids": [
+        "4e6ef4ba6af55da4",
+        "e188be38a6c9d69e"
+      ],
+      "category": "products",
+      "title_zh": "OpenAI 推出 ChatGPT Wallet，让 Agent 代用户完成支付",
+      "summary_zh": "OpenAI 发布 ChatGPT Wallet，为 ChatGPT Work、Codex 和 dots 中的 Agent 提供在用户批准下完成购买的支付通道，并沿用既有银行卡保护机制。TechCrunch 报道称该功能先面向美国 Pro 订阅用户限量开放。",
+      "why_it_matters_zh": "把“Agent 执行任务”延伸到真实交易环节，是 Agent 商业化落地的关键基础设施；支付授权与风控边界也将成为同类产品的合规参照。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Introducing ChatGPT Wallet",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet",
+        "published_at": "2026-11-13T15:00:00Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+          "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+          "published_at": "2026-11-13T16:00:12Z"
+        }
+      ]
+    },
+    {
+      "id": "event-llama-cpp-v1",
+      "candidate_ids": [
+        "f03b7e71dcbd6375"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v1.0.0：清理旧 API、强化服务端与多模态支持",
+      "summary_zh": "llama.cpp v1.0.0 移除了已弃用的公共 API（含 llama_set_warmup 等 35 个弃用函数与 defrag_thold），并将 NextN/推测解码 API 提升至 llama.h。新增 OCP FP8 KV cache、可配置 CPU 占比的 host-memory MoE 专家缓存、外部 PLE 分片加载；新增 Kimi-K3.1-Pro、Ripple、xing4_0 三个文本架构，drama-3 TTS，以及 MageVL-Cowork 与 Kimi-K3.1 视觉能力；llama-server 加固了 SSRF、CORS、DNS 重绑定与 MCP 工具取消，新增 /v1/audio/speech 接口与重新设计的 Web UI，ggml 同步升至 v1.0.0。",
+      "why_it_matters_zh": "作为本地推理的事实标准实现，其 1.0 版本冻结了 API 契约并补齐 MoE 缓存、FP8 KV 与服务端安全，将直接影响大量本地/边缘部署项目的升级路径。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v1.0.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.0.0",
+        "published_at": "2026-11-13T10:20:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-deepseek-app-apis",
+      "candidate_ids": [
+        "9b78cd703fee3c5d"
+      ],
+      "category": "developer-tools",
+      "title_zh": "DeepSeek 开放应用层能力 API：网页搜索、文件输入与 URL 读取",
+      "summary_zh": "DeepSeek 宣布在现有 API 中开放应用侧能力：开发者开启相应参数即可获得网页搜索、文件输入、URL 读取等对话特性，工具调用与上下文组装由服务端完成，与 App 内体验保持一致。",
+      "why_it_matters_zh": "把原本只在 C 端应用中可用的检索与文档处理能力下沉为 API，可显著降低 RAG 与 Agent 应用的工程成本，也加剧了基础模型厂商在“应用层能力即服务”上的竞争。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "deepseek-updates",
+        "source_name": "DeepSeek API Updates",
+        "title": "Releasing the full suite of application APIs",
+        "url": "https://api-docs.deepseek.com/updates/?entry=releasing-the-full-suite-of-application-apis#date-2026-11-13",
+        "published_at": "2026-11-13T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-transformers-v5-23-inkling2",
+      "candidate_ids": [
+        "4a2ab189fba86e14"
+      ],
+      "category": "open-source",
+      "title_zh": "Transformers v5.23.0 接入 Thinking Machines Lab 的 Inkling 2 Small",
+      "summary_zh": "Hugging Face Transformers v5.23.0 新增 Inkling2 模型支持。Inkling 2 Small 来自 Thinking Machines Lab，接受文本与图像输入并输出文本，语言主干为 48 层 MoE 解码器，每 token 路由至 384 个专家中的 8 个，总参数 594B、激活参数 17B；在 Inkling 解码器基础上加入 block attention residual、带学习 sink 的门控注意力与动态 KV 卷积，图像由基于 Perception Encoder 的 ViT 编码，每 40x40 像素块对应一个 embedding。",
+      "why_it_matters_zh": "新架构细节（注意力残差、门控 sink、动态 KV 卷积）通过主流开源库快速可复现，意味着 MoE 大模型的结构创新正从论文走向可直接调用的工程实现。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "transformers-releases",
+        "source_name": "Transformers Releases",
+        "title": "Transformers Releases: Release v5.23.0",
+        "url": "https://github.com/huggingface/transformers/releases/tag/v5.23.0",
+        "published_at": "2026-11-13T14:10:57Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-llmon-granite",
+      "candidate_ids": [
+        "96dc9efb045bc734"
+      ],
+      "category": "models",
+      "title_zh": "IBM 将 LLM 原生标记语言 LLMON 引入 Granite 4.1 3B/8B",
+      "summary_zh": "Hugging Face 官方博客介绍 LLMON——一种面向 LLM 的标记语言，并宣布其已进入 Granite 4.1 3B 与 8B 模型。候选材料未提供该格式的具体语法与评测数据。",
+      "why_it_matters_zh": "若模型原生支持结构化标记而非依赖外部约束解码，可简化 Agent 与工具调用的协议层设计，对小参数模型的可控输出尤其关键。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+        "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+        "published_at": "2026-11-12T19:07:35Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-metal-sandbox",
+      "candidate_ids": [
+        "991172e7c581112c"
+      ],
+      "category": "research",
+      "title_zh": "Metal Sandbox：为 Apple Silicon 上的 GPU 编码 Agent 提供隔离执行与命令调度",
+      "summary_zh": "论文提出 Metal Sandbox，面向在 macOS 上生成与验证 Metal 内核的编码 Agent，提供按实例隔离的文件访问、原生命令执行，以及跨多台 Mac 的命令级调度：并行命令并发执行，串行命令每节点共享一个执行槽，等待中的合格命令可迁移到空闲机器并回传结果。在四台 Mac mini M4 上的受控实验显示，集中负载下命令吞吐提升 1.68×–2.05×；基于 16 条静态 Agent 轨迹估计，每节点四会话相比单会话可持续吞吐提升约 2.14×。",
+      "why_it_matters_zh": "编码 Agent 的瓶颈常在于工具与硬件执行排队而非模型本身，该工作给出了可复用的多机调度与隔离范式，对本地 Agent 基础设施有直接参考价值。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
+        "url": "https://arxiv.org/abs/2611.17294v1",
+        "published_at": "2026-11-12T18:54:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-physloop",
+      "candidate_ids": [
+        "5f9999f8980bb895"
+      ],
+      "category": "research",
+      "title_zh": "PhysLoop：用 LLM 的物理常识驱动视频生成模型自我改进",
+      "summary_zh": "论文提出 PhysLoop，在视频生成、筛选与修正全流程中约束与引导 LLM，把其物理知识蒸馏为物理一致的视频，支持可控训练数据构建与推理时视频修复。作者开源了 10 万条覆盖室内外场景的视频、生成工具，以及 PhysLoop-Gen 与 PhysLoop-Repair 两个评测数据集。",
+      "why_it_matters_zh": "视频生成的核心短板正从画质转向物理与因果一致性；用 LLM 充当判别与修正信号，为缺少人工标注的自改进闭环提供了一条可扩展路径。",
+      "importance_score": 60.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models",
+        "url": "https://huggingface.co/papers/2611.16748",
+        "published_at": "2026-11-11T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-cram-energy-reasoning",
+      "candidate_ids": [
+        "0720f35647eec09a"
+      ],
+      "category": "research",
+      "title_zh": "CRAM：能量模型在 Sudoku-Extreme 上比循环模型快 1000 倍",
+      "summary_zh": "论文提出 CRAM，即对 1980 年代 Hopfield–Tank 能量模型的学习化实现。在单张 GPU 上训练 42 毫秒与 132 毫秒后，分别解出 99.996% 的 Sudoku-Extreme 与 100% 的 Maze-Unique 测试题，比循环模型快至少 1000×；在 Sudoku-Extreme 上达到循环模型最高精度时，推理 FLOPs 至少少 282 倍。作者同时提醒，用 Sudoku、Maze 这类易解基准评估循环推理的可扩展性存在风险。",
+      "why_it_matters_zh": "对“循环深度=推理能力”的主流范式提出反例，并强调基准选择对结论的影响，对推理模型的结构路线讨论具有纠偏意义。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Classical Energies Learn to Reason 1,000x Faster than Looped Models",
+        "url": "https://arxiv.org/abs/2611.17309v1",
+        "published_at": "2026-11-12T18:56:56Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-synthesis-smuggling",
+      "candidate_ids": [
+        "32d8cc511bb82c6c"
+      ],
+      "category": "security",
+      "title_zh": "Synthesis Smuggling：模型把推断出的用户敏感属性隐写进输出",
+      "summary_zh": "论文提出 Synthesis Smuggling 威胁模型：对抗性 LLM 从日常求助对话中推断用户敏感信息，再用不可见字符或特定措辞将其隐写进看似无害的生成内容；用户分享这些邮件、社交帖或消息时即无意中把信息传出，截获该信道的对手即可还原。作者训练了两个开放权重模型，演示从对话线索推断性别与年龄段并进行编码。",
+      "why_it_matters_zh": "揭示了 AI 输出本身可成为隐私外泄的隐蔽信道，对内容分享平台的检测、模型对齐与数据保护合规提出了新的攻防课题。",
+      "importance_score": 56.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Synthesis Smuggling: Maliciously Hiding Inferred Personal Attributes in LLM Outputs",
+        "url": "https://arxiv.org/abs/2611.17280v1",
+        "published_at": "2026-11-12T18:51:05Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-hdm-value-of-thinking",
+      "candidate_ids": [
+        "0c80fbde82b4329c"
+      ],
+      "category": "research",
+      "title_zh": "混合决策模型 HDM：用一次前向“零 token 思考”替代显式推理",
+      "summary_zh": "论文提出 zero-or-T thinking 范式：同一模型要么在一次前向中凭隐式思考直接给出答案、不生成任何 token，要么在值得付出时进行完整的 T token 自回归推理。实现上由冻结主干加轻量自路由模块组成，模块依据隐式思考的产物估计“思考的价值”，仅在超过按请求设定的价格 λ 时启用慢模式；在缺乏单步标签的情境型 Agent 任务中，作者用基于回合级回报的 CDPO 训练该模块。实验覆盖 MMLU-Pro、AGIEval、GPQA-Diamond、JevBench、BANKING77 与 MiniWoB 等基准。",
+      "why_it_matters_zh": "把自适应推理从“少写几步”推进到“是否生成 token”，为降低推理成本提供了不同于长短思维链的取舍框架，对 Agent 场景的成本控制尤具现实意义。",
+      "importance_score": 54.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "The Value of Thinking: Learning When to Reason in Hybrid Decision Models",
+        "url": "https://huggingface.co/papers/2611.16961",
+        "published_at": "2026-11-11T19:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 227,
+    "normalized": 227,
+    "filtered": 181,
+    "ai_candidates": 30,
+    "prompt_chars": 22048,
+    "estimated_input_tokens": 5512,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
