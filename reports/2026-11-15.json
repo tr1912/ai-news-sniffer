@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-14T16:53:41.168563Z",
+  "run_id": "2026-11-15-4a6025a1",
+  "daily_summary_zh": "今日高信号事件集中在本地推理、英伟达治理与多模态/智能体研究。llama.cpp 发布 v1.0.0，强化本地 AI 生态基础；黄仁勋辞职引发 AI 创业融资与英伟达治理连锁反应；研究侧关注多模态视觉编码解耦、扩散语言模型重生成、LLM 目标编码，以及智能体在无标签数据和跨任务记忆上的新方法。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "1769e5b846199219",
+        "ad52adc7bca66487",
+        "3f26cde74a3bb044"
+      ],
+      "category": "business",
+      "title_zh": "黄仁勋辞职引发英伟达与AI创业融资连锁反应",
+      "summary_zh": "量子位报道黄仁勋辞职，英伟达33年来首次换帅，并有员工请愿要求其回归，马斯克亦签名。TechCrunch 报道，风投和创始人预计，在黄仁勋离任后，英伟达对AI初创公司的投资将收缩、估值承压。",
+      "why_it_matters_zh": "黄仁勋是英伟达AI算力扩张与初创投资的关键人物；其离任可能影响AI初创融资、英伟达战略连续性及政策博弈。",
+      "importance_score": 92.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "title": "黄仁勋辞职，英伟达33年首换帅，市值蒸发超3万亿",
+        "url": "https://www.qbitai.com/2026/11/509995.html",
+        "published_at": "2026-11-13T09:02:39Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+          "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+          "published_at": "2026-11-13T22:43:00Z"
+        },
+        {
+          "source_id": "qbitai",
+          "source_name": "量子位",
+          "title": "英伟达上演“奥特曼2.0”，员工集体请愿：让老黄回家！",
+          "url": "https://www.qbitai.com/2026/11/510297.html",
+          "published_at": "2026-11-14T10:08:08Z"
+        }
+      ]
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "ca1229de6d9f14df"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v1.0.0，强化本地 AI 生态基础",
+      "summary_zh": "Hugging Face Blog 发布 llama.cpp v1.0.0，称其为本地 AI 生态提供更强基础。",
+      "why_it_matters_zh": "llama.cpp 是本地与边缘推理的重要开源项目，v1.0.0 标志项目进入更稳定阶段，有利于开发者构建自托管和端侧 LLM 应用。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+        "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+        "published_at": "2026-11-13T14:05:22Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "24edbb7f4eb12aa9"
+      ],
+      "category": "research",
+      "title_zh": "研究：多模态视觉编码中视觉先验非必需，专用视觉容量更关键",
+      "summary_zh": "论文在统一数据和匹配总算力下从零预训练所有模型，拆解预训练视觉先验、专用视觉容量、融合前放置三个设计选择。结果显示：从零联合训练的编码器可媲美预训练编码器，视觉先验并非必要；但专用视觉容量仍重要，无编码器模型即使扩大骨干也在视觉理解上落后；视觉容量不必在融合前存在。",
+      "why_it_matters_zh": "为多模态模型是否保留独立视觉编码器、如何分配视觉容量提供受控实验证据，影响架构设计与训练成本取舍。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Unbundling Multimodal Vision Encoding",
+        "url": "https://arxiv.org/abs/2611.17334v1",
+        "published_at": "2026-11-12T18:59:54Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "228f4d6602546d1b"
+      ],
+      "category": "research",
+      "title_zh": "DiVR：让扩散语言模型学会何时重新生成",
+      "summary_zh": "论文在数独任务上诊断发现，隐藏状态含 token 置信度未可靠暴露的错误信息，且固定上下文下重掩码孤立错误常会复现。DiVR 作为验证器，基于模型自身轨迹的最终正确性训练，判断部分生成序列能否得到正确答案，并决定何时重生成一个块及保留哪个替代项，生成器本身不变。在 LLaDA-8B-Base 的五个推理基准上，将微调生成器平均准确率从35.3%提升至43.4%，成本为贪心解码的1.9–3.5倍，准确率高于使用3.8–7.4倍成本的搜索基线；也可与 SFT/RL 互补并泛化到 Dream。",
+      "why_it_matters_zh": "为扩散语言模型提供不修改生成器的推理时纠错机制，提升重掩码策略的选择效率。",
+      "importance_score": 77.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Learning When Diffusion Language Models Should Regenerate",
+        "url": "https://arxiv.org/abs/2611.17320v1",
+        "published_at": "2026-11-12T18:58:50Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "611a1c4fab76570f"
+      ],
+      "category": "research",
+      "title_zh": "研究：LLM 在稀疏注意力头中编码下一子目标",
+      "summary_zh": "论文构造含多个子任务的编码场景，在稀疏注意力头输出中定位到下一子目标的编码；相同注意力头可用自然语言解码模型未来动作，例如“我在检查单词是否为回文”。该编码对下一动作具因果性且可迁移：移植到另一编程语言环境会触发相同操作但使用不同 token 序列。作者提出非递归目标寻求解释，认为模型会反复从任务说明重读目标并与进度比较。",
+      "why_it_matters_zh": "揭示LLM目标表征的局部性与因果作用，有助于理解智能体规划和可解释性。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Goal Encoding in LLMs",
+        "url": "https://arxiv.org/abs/2611.17297v1",
+        "published_at": "2026-11-12T18:55:06Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "1e1cbfdb6f73e20a"
+      ],
+      "category": "research",
+      "title_zh": "AgentSSL：MLE 智能体能否利用无标签数据？",
+      "summary_zh": "论文将半监督学习表述为程序搜索问题，研究智能体在有限监督下如何组合和调整已有 SSL 技术。结果显示，在弱反馈和匹配算力下，智能体在12个设置中的8个超过最强人工基线，最高提升21.8%；但程序选择是关键瓶颈，按智能体反馈指标选择时性能最多下降47%。作者发布 ProgramSelectBench，包含16,977个智能体生成和人工设计的 SSL 程序。",
+      "why_it_matters_zh": "把智能体能力扩展到标签稀缺的机器学习工程，并指出选择/验证机制比生成更关键。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+        "url": "https://arxiv.org/abs/2611.17323v1",
+        "published_at": "2026-11-12T18:59:06Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "fee5d35de2daadf7"
+      ],
+      "category": "products",
+      "title_zh": "OpenAI 客户案例：Shield 用 Forge 智能体接手遗留门户工作",
+      "summary_zh": "OpenAI Newsroom 发布 Shield 客户案例：Shield 使用 OpenAI 帮助 IT 技术人员在遗留门户中交接工作。其 Forge 智能体可导航这些系统，让技术人员专注于需要判断的问题。",
+      "why_it_matters_zh": "展示智能体在IT运维和遗留系统自动化中的落地方式，强调人机分工而非完全替代。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+        "url": "https://openai.com/business/customer-stories/shield",
+        "published_at": "2026-11-13T08:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 203,
+    "normalized": 203,
+    "filtered": 147,
+    "ai_candidates": 30,
+    "prompt_chars": 14726,
+    "estimated_input_tokens": 3681,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
