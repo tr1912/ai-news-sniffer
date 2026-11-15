@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-15T17:37:11.816375Z",
+  "run_id": "2026-11-16-adff8e47",
+  "daily_summary_zh": "今日AI领域动态：llama.cpp 最新构建新增 MiniMax-M3.1 模型支持。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "0e0cd730d277b8ea",
+        "f22800c2ad9db58d"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 最新构建新增 MiniMax-M3.1 模型支持",
+      "summary_zh": "llama.cpp 发布 b12420 构建，发布说明中列出的主要变更是新增对 MiniMax-M3.1 模型的支持；同一时间段发布的 b12399 构建则修复 Vulkan 后端的构建问题（显式包含 SPIRV-Headers，以适配未将相关头文件放入系统包含路径的发行版）。两个构建均照例提供 macOS Apple Silicon / Intel、iOS XCFramework 及多平台 Linux 二进制包。",
+      "why_it_matters_zh": "llama.cpp 是本地与自托管推理的事实标准之一，新模型在发布后很快获得上游支持，意味着开发者无需等待商业 API 即可在自有硬件上跑通该模型，对开源推理生态和模型采用速度有直接影响。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12420",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12420",
+        "published_at": "2026-11-15T17:25:01Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b12399",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12399",
+          "published_at": "2026-11-15T06:33:21Z"
+        }
+      ]
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 124,
+    "normalized": 124,
+    "filtered": 77,
+    "ai_candidates": 30,
+    "prompt_chars": 6109,
+    "estimated_input_tokens": 1527,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}

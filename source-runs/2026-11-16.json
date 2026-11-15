@@ -1,0 +1,862 @@
+{
+  "enabled_source_ids": [
+    "openai-news",
+    "anthropic-news",
+    "deepmind-news",
+    "google-research",
+    "microsoft-research",
+    "nvidia-genai",
+    "huggingface-blog",
+    "deepseek-updates",
+    "kimi-platform-blog",
+    "arxiv-ai",
+    "hf-daily-papers",
+    "vllm-releases",
+    "transformers-releases",
+    "llama-cpp-releases",
+    "36kr",
+    "mit-tech-review-ai",
+    "infoq-cn",
+    "qbitai",
+    "techcrunch-ai",
+    "hacker-news"
+  ],
+  "fetched_count": 124,
+  "normalized_count": 124,
+  "filtered_count": 77,
+  "budgeted": {
+    "articles": [
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b12420",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12420",
+        "published_at": "2026-11-15T17:25:01Z",
+        "fetched_at": "2026-11-15T17:37:24.574438Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nmodel: support MiniMax-M3.1 (#32301)\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/67835100>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12420/llama-b12420-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b12420/llama-b12420-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b12420/llama-b12420-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12420/llama-b12420-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12420/llama-b12420-bin-ubuntu-arm64.tar.gz)\n- [Ubuntu 24.04 s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12420/llama-b12420-bin-ubuntu-s390x.tar.gz)\n- [Ubuntu 26.04 s390x (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12420/llama-b12420-bin-ubuntu-26.04-s390x.tar.gz)\n- [U",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 446231192
+        },
+        "id": "0e0cd730d277b8ea",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12420",
+        "normalized_title": "llama cpp releases b12420",
+        "fingerprint": "0e0cd730d277b8ea429e38c606f9aee0881bbaa5344253e83cc3f8fe6019288e",
+        "rule_score": 58.74169444444444
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+        "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "published_at": "2026-11-14T17:30:00Z",
+        "fetched_at": "2026-11-15T17:37:30.022253Z",
+        "language": "unknown",
+        "excerpt": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Lauren Forristal",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "857e5cb9ddf3da6c",
+        "canonical_url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it",
+        "normalized_title": "the ai graveyard a running list of projects and startups that didn t make it",
+        "fingerprint": "857e5cb9ddf3da6cfda55d19331b6669cbe78688c907bd1484a9375f1f6fab2c",
+        "rule_score": 56.35
+      },
+      {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "source_group": "research",
+        "independence_group": "llama-cpp-releases",
+        "title": "llama.cpp Releases: b12399",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12399",
+        "published_at": "2026-11-15T06:33:21Z",
+        "fetched_at": "2026-11-15T17:37:24.574632Z",
+        "language": "unknown",
+        "excerpt": "<details open>\n\nvulkan: Explicitly include SPIRV-Headers (#31416)\n\n* vulkan: Explicitly include SPIRV-Headers\n\nDistros that don't put the headers in a system include path need\nto specify it to the compiler. So we use the appropriate CMake\ntarget to include it.\n\nAssisted-by: Codex\n\n* vulkan: Add explicit headers location to workaround OSX CI runner conf\n\n</details>\n\n**Website:**\n- <https://llama.app>\n\n**Attestations:**\n- <https://github.com/ggml-org/llama.cpp/attestations/67727115>\n\n**macOS/iOS:**\n- [macOS Apple Silicon (arm64)](https://github.com/ggml-org/llama.cpp/releases/download/b12399/llama-b12399-bin-macos-arm64.tar.gz)\n- macOS Apple Silicon (arm64, KleidiAI enabled) [DISABLED](https://github.com/ggml-org/llama.cpp/pull/23780)\n- [macOS Intel (x64)](https://github.com/ggml-org/llama.cpp/releases/download/b12399/llama-b12399-bin-macos-x64.tar.gz)\n- [iOS XCFramework](https://github.com/ggml-org/llama.cpp/releases/download/b12399/llama-b12399-xcframework.zip)\n\n**Linux:**\n- [Ubuntu x64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12399/llama-b12399-bin-ubuntu-x64.tar.gz)\n- [Ubuntu arm64 (CPU)](https://github.com/ggml-org/llama.cpp/releases/download/b12399/llama-",
+        "categories": [
+          "open-source",
+          "inference"
+        ],
+        "author": "github-actions[bot]",
+        "upstream_urls": [],
+        "raw_metadata": {
+          "release_id": 445860119
+        },
+        "id": "f22800c2ad9db58d",
+        "canonical_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12399",
+        "normalized_title": "llama cpp releases b12399",
+        "fingerprint": "f22800c2ad9db58d5698e194b8052cb541d3c60cd63ca13a2d7e16bcf656668c",
+        "rule_score": 53.65558333333333
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "GitLab 19.5 发布，将智能体开发纳入可治理的 DevOps 平台能力",
+        "url": "https://www.infoq.cn/article/0IpE2EOypcqMFtL7z4z1?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-15T09:00:00Z",
+        "fetched_at": "2026-11-15T17:37:27.524228Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/0IpE2EOypcqMFtL7z4z1?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "作者：Craig Risi",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "2b1ba54906af645b",
+        "canonical_url": "https://www.infoq.cn/article/0IpE2EOypcqMFtL7z4z1",
+        "normalized_title": "gitlab 19 5 发布 将智能体开发纳入可治理的 devops 平台能力",
+        "fingerprint": "2b1ba54906af645b85beb92e0542222eb683333112a500b28a7ee1400494e542",
+        "rule_score": 52.9
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "Yelp AI 助手融合原生 UI 与服务端驱动 UI",
+        "url": "https://www.infoq.cn/article/1N801doFOEl2Swqey5Jy?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-15T15:00:00Z",
+        "fetched_at": "2026-11-15T17:37:27.524163Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/1N801doFOEl2Swqey5Jy?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "作者： Leela Kumili",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "eae5bf1a60e3120b",
+        "canonical_url": "https://www.infoq.cn/article/1N801doFOEl2Swqey5Jy",
+        "normalized_title": "yelp ai 助手融合原生 ui 与服务端驱动 ui",
+        "fingerprint": "eae5bf1a60e3120bfba4b59a35b2b5703f17fc5e4ae0d256d07b82261b9b9229",
+        "rule_score": 49.5
+      },
+      {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "source_group": "media",
+        "independence_group": "infoq-cn",
+        "title": "闭环 AI 自我进化：从 Skill、Harness 到模型训练与评估｜AICon北京",
+        "url": "https://www.infoq.cn/article/fZSEkDatL9xajG8PVi7G?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-15T10:00:00Z",
+        "fetched_at": "2026-11-15T17:37:27.524213Z",
+        "language": "unknown",
+        "excerpt": "<div align=\"right\"><a href=\"https://www.infoq.cn/article/fZSEkDatL9xajG8PVi7G?utm_source=rss&amp;utm_medium=article\">点击查看原文></a></div>",
+        "categories": [
+          "developer-tools",
+          "products",
+          "business"
+        ],
+        "author": "AICon 全球人工智能开发与应用大会",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "80b4c9354642e13f",
+        "canonical_url": "https://www.infoq.cn/article/fZSEkDatL9xajG8PVi7G",
+        "normalized_title": "闭环 ai 自我进化 从 skill harness 到模型训练与评估 aicon北京",
+        "fingerprint": "80b4c9354642e13fcbb71f5754c1eb299655f4df7d4bdae2869f07b2f15fd217",
+        "rule_score": 49.0
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+        "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+        "published_at": "2026-11-13T18:40:30Z",
+        "fetched_at": "2026-11-15T17:37:30.022301Z",
+        "language": "unknown",
+        "excerpt": "New research shows the most advanced AI models from China were trained on banned Nvidia chips.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Tim Fernholz",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "10f85cb485cb3fa1",
+        "canonical_url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen",
+        "normalized_title": "export banned nvidia chips are behind china s most powerful ai models uh oh jensen",
+        "fingerprint": "10f85cb485cb3fa1a484ac8e2baa2d469f40ff829b2b5bfebfcf46df0f342f0b",
+        "rule_score": 44.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "What Picasso taught me about building AI Agents",
+        "url": "https://claramap.com/blog/what-picasso-taught-me-about-building-ai-agents/",
+        "published_at": "2026-11-15T16:16:26Z",
+        "fetched_at": "2026-11-15T17:37:30.420434Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mathaix",
+        "upstream_urls": [
+          "https://claramap.com/blog/what-picasso-taught-me-about-building-ai-agents/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50508076,
+          "score": 5
+        },
+        "id": "0a0dfcdc25b47f0b",
+        "canonical_url": "https://claramap.com/blog/what-picasso-taught-me-about-building-ai-agents",
+        "normalized_title": "what picasso taught me about building ai agents",
+        "fingerprint": "0a0dfcdc25b47f0b0eba096982623c5e347fea2607c2feda8c0be2d8c9d15f84",
+        "rule_score": 43.62738888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS",
+        "url": "https://github.com/db-branch/db-branch",
+        "published_at": "2026-11-15T13:50:51Z",
+        "fetched_at": "2026-11-15T17:37:31.502822Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "nu_nu11",
+        "upstream_urls": [
+          "https://github.com/db-branch/db-branch"
+        ],
+        "raw_metadata": {
+          "hn_id": 50506940,
+          "score": 4
+        },
+        "id": "a0000cecc93033b0",
+        "canonical_url": "https://github.com/db-branch/db-branch",
+        "normalized_title": "show hn db branch database branches in seconds for ai agents and ci via zfs",
+        "fingerprint": "a0000cecc93033b0acf93a2a49ef4f295555d8118f7441219b113ed213b88383",
+        "rule_score": 43.38475
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Why did some Apollo missions carry a grenade launcher?",
+        "url": "https://space.stackexchange.com/questions/37775",
+        "published_at": "2026-11-15T09:06:43Z",
+        "fetched_at": "2026-11-15T17:37:30.517939Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "Skyfall106",
+        "upstream_urls": [
+          "https://space.stackexchange.com/questions/37775"
+        ],
+        "raw_metadata": {
+          "hn_id": 50505271,
+          "score": 153
+        },
+        "id": "ccf2edd755c4ab3a",
+        "canonical_url": "https://space.stackexchange.com/questions/37775",
+        "normalized_title": "why did some apollo missions carry a grenade launcher",
+        "fingerprint": "ccf2edd755c4ab3a47f35bd447ceee72797c7519925244cc347db0577c713ff7",
+        "rule_score": 42.91119444444445
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Where was Nvidia’s security team?",
+        "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+        "published_at": "2026-11-15T00:08:07Z",
+        "fetched_at": "2026-11-15T17:37:30.022190Z",
+        "language": "unknown",
+        "excerpt": "Nvidia’s security chief quietly left in August, and now that CEO Jensen Huang has stepped down over his relationships, including one with an executive at a company suspected of funneling chips to China, a former intelligence officer says it’s the kind of leak that runs everyday conversations, which most corporate security teams are poorly equipped to catch.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Connie Loizos",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "83744d867fe37656",
+        "canonical_url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team",
+        "normalized_title": "where was nvidia s security team",
+        "fingerprint": "83744d867fe376567201fa69d72f08f463500643d403599a5c6461fbd2f18e08",
+        "rule_score": 41.01352777777778
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+        "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
+        "published_at": "2026-11-14T21:41:22Z",
+        "fetched_at": "2026-11-15T17:37:30.022238Z",
+        "language": "unknown",
+        "excerpt": "The petition had attracted more than 115,000 signatures as of Saturday afternoon.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Anthony Ha",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "455813290c286718",
+        "canonical_url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang",
+        "normalized_title": "elon musk other tech execs sign petition calling on nvidia to reinstate jensen huang",
+        "fingerprint": "455813290c28671847227b1bdbbd76a6134e2da1feb65fc1b9541b04492f0dea",
+        "rule_score": 40.76894444444444
+      },
+      {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "source_group": "media",
+        "independence_group": "techcrunch-ai",
+        "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+        "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+        "published_at": "2026-11-14T16:34:15Z",
+        "fetched_at": "2026-11-15T17:37:30.022266Z",
+        "language": "unknown",
+        "excerpt": "Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations.",
+        "categories": [
+          "business",
+          "products"
+        ],
+        "author": "Kate Park",
+        "upstream_urls": [],
+        "raw_metadata": {},
+        "id": "4811f62214272cb0",
+        "canonical_url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit",
+        "normalized_title": "asian governments react to nvidia ceo jensen huang s exit",
+        "fingerprint": "4811f62214272cb01a333c2d64b23ccb729c95f82ec33ae96171814afaa6f244",
+        "rule_score": 40.257083333333334
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "A Human Reads the Anthropic IPO Filing",
+        "url": "https://www.nytimes.com/2026/11/15/business/anthropic-ipo-filing-prospectus.html",
+        "published_at": "2026-11-15T15:18:06Z",
+        "fetched_at": "2026-11-15T17:37:31.602321Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "saikatsg",
+        "upstream_urls": [
+          "https://www.nytimes.com/2026/11/15/business/anthropic-ipo-filing-prospectus.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 50507517,
+          "score": 12
+        },
+        "id": "d0b0975934f17a4c",
+        "canonical_url": "https://www.nytimes.com/2026/11/15/business/anthropic-ipo-filing-prospectus.html",
+        "normalized_title": "a human reads the anthropic ipo filing",
+        "fingerprint": "d0b0975934f17a4c4f6ecb3dc11511677c6c67117b3037e617749767b5c063e3",
+        "rule_score": 39.530166666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Top scorer on South Korean tax exam confesses to cheating with AI",
+        "url": "https://www.reuters.com/world/asia-pacific/top-scorer-south-korean-tax-exam-confesses-cheating-with-ai-2026-11-15/",
+        "published_at": "2026-11-15T14:51:10Z",
+        "fetched_at": "2026-11-15T17:37:32.846216Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "bookofjoe",
+        "upstream_urls": [
+          "https://www.reuters.com/world/asia-pacific/top-scorer-south-korean-tax-exam-confesses-cheating-with-ai-2026-11-15/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50507331,
+          "score": 5
+        },
+        "id": "edfa13c0b42b0d06",
+        "canonical_url": "https://www.reuters.com/world/asia-pacific/top-scorer-south-korean-tax-exam-confesses-cheating-with-ai-2026-11-15",
+        "normalized_title": "top scorer on south korean tax exam confesses to cheating with ai",
+        "fingerprint": "edfa13c0b42b0d063227ef3fd0b53a80d2b792fd750754268b9c0d60c35f00cc",
+        "rule_score": 39.485277777777775
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "All AI-generated code should be Open Source",
+        "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+        "published_at": "2026-11-15T14:46:58Z",
+        "fetched_at": "2026-11-15T17:37:30.201233Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "jcubic",
+        "upstream_urls": [
+          "https://jakub.jankiewicz.org/blog/ai-code-open-source/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50507303,
+          "score": 467
+        },
+        "id": "37c2c1e35f97fdb0",
+        "canonical_url": "https://jakub.jankiewicz.org/blog/ai-code-open-source",
+        "normalized_title": "all ai generated code should be open source",
+        "fingerprint": "37c2c1e35f97fdb0d375b74b858da10761b1dd03b2e78b781f9ee41a7954875e",
+        "rule_score": 39.47827777777778
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Understanding Positional Embeddings in Modern LLMs",
+        "url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+        "published_at": "2026-11-15T12:14:06Z",
+        "fetched_at": "2026-11-15T17:37:30.360752Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "vismit2000",
+        "upstream_urls": [
+          "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings"
+        ],
+        "raw_metadata": {
+          "hn_id": 50506376,
+          "score": 115
+        },
+        "id": "745ea03af7dbbe8f",
+        "canonical_url": "https://magazine.sebastianraschka.com/p/understanding-positional-embeddings",
+        "normalized_title": "understanding positional embeddings in modern llms",
+        "fingerprint": "745ea03af7dbbe8f1e80be11b8e4bef5857879b5510c47e8403cf9fe80a03c66",
+        "rule_score": 39.2235
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Kiri – The Modern Container Runtime",
+        "url": "https://runkiri.com/",
+        "published_at": "2026-11-15T04:40:41Z",
+        "fetched_at": "2026-11-15T17:37:31.821986Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "nikolay",
+        "upstream_urls": [
+          "https://runkiri.com/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50504077,
+          "score": 80
+        },
+        "id": "25022bb09b87d618",
+        "canonical_url": "https://runkiri.com/",
+        "normalized_title": "kiri the modern container runtime",
+        "fingerprint": "25022bb09b87d618d82f9a4ac691769f90504368c0d58849d76c5f4e1d8f3225",
+        "rule_score": 38.46780555555556
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Gawain – Require type hints on all Python variables",
+        "url": "https://github.com/matheuzgomes/gawain",
+        "published_at": "2026-11-15T04:39:25Z",
+        "fetched_at": "2026-11-15T17:37:32.364979Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "MarinhoD",
+        "upstream_urls": [
+          "https://github.com/matheuzgomes/gawain"
+        ],
+        "raw_metadata": {
+          "hn_id": 50504072,
+          "score": 66
+        },
+        "id": "eb42fa637c404df5",
+        "canonical_url": "https://github.com/matheuzgomes/gawain",
+        "normalized_title": "show hn gawain require type hints on all python variables",
+        "fingerprint": "eb42fa637c404df5e4be326d0bbdf1feb21c6962271ddefe8dc843345237c56a",
+        "rule_score": 38.465694444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The Single Router in Southern Arkansas That Ground Air Travel to a Halt",
+        "url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
+        "published_at": "2026-11-15T03:05:54Z",
+        "fetched_at": "2026-11-15T17:37:32.815740Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "lxm",
+        "upstream_urls": [
+          "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c"
+        ],
+        "raw_metadata": {
+          "hn_id": 50503588,
+          "score": 78
+        },
+        "id": "6a4e81c7245190bf",
+        "canonical_url": "https://www.wsj.com/business/airlines/the-single-router-in-southern-arkansas-that-ground-air-travel-to-a-halt-eedc326c",
+        "normalized_title": "the single router in southern arkansas that ground air travel to a halt",
+        "fingerprint": "6a4e81c7245190bfd9fda62c3425bcdb56544d4471caa61e8bfb167776fc31e5",
+        "rule_score": 38.30983333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: A custom font based on the Jamaican flag alphabet",
+        "url": "https://bobbiec.github.io/jamaican-font.html",
+        "published_at": "2026-11-15T00:56:45Z",
+        "fetched_at": "2026-11-15T17:37:31.941049Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "bobbiechen",
+        "upstream_urls": [
+          "https://bobbiec.github.io/jamaican-font.html"
+        ],
+        "raw_metadata": {
+          "hn_id": 50502839,
+          "score": 47
+        },
+        "id": "8fd68877c5465a01",
+        "canonical_url": "https://bobbiec.github.io/jamaican-font.html",
+        "normalized_title": "show hn a custom font based on the jamaican flag alphabet",
+        "fingerprint": "8fd68877c5465a01e47dc7079ae95dcad67a005c90a7f5e509eddac593374bca",
+        "rule_score": 38.09458333333333
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Lovable apps expose passport details and more than 200K private messages",
+        "url": "https://www.crissyfield.de/research/lovable-en/",
+        "published_at": "2026-11-14T17:43:10Z",
+        "fetched_at": "2026-11-15T17:37:31.050902Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "armcat",
+        "upstream_urls": [
+          "https://www.crissyfield.de/research/lovable-en/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50499017,
+          "score": 945
+        },
+        "id": "ba1db0b991a975e1",
+        "canonical_url": "https://www.crissyfield.de/research/lovable-en",
+        "normalized_title": "lovable apps expose passport details and more than 200k private messages",
+        "fingerprint": "ba1db0b991a975e1738261ca87045dba362ba355ad1106f7eb0edef91e823c09",
+        "rule_score": 37.371944444444445
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+        "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+        "published_at": "2026-11-14T15:04:15Z",
+        "fetched_at": "2026-11-15T17:37:31.459749Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "VaibhaavTiwari",
+        "upstream_urls": [
+          "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax"
+        ],
+        "raw_metadata": {
+          "hn_id": 50497589,
+          "score": 262
+        },
+        "id": "672e6c3abc86226f",
+        "canonical_url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+        "normalized_title": "show hn deepseek v3 in 200 lines of pure jax",
+        "fingerprint": "672e6c3abc86226fbae092af14581a4d19158e05baf6c11790b674a52d066fef",
+        "rule_score": 37.107083333333335
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
+        "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
+        "published_at": "2026-11-14T14:09:25Z",
+        "fetched_at": "2026-11-15T17:37:33.274048Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "wondersky",
+        "upstream_urls": [
+          "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50497155,
+          "score": 141
+        },
+        "id": "d14d2cdb5a087fea",
+        "canonical_url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm",
+        "normalized_title": "serving glm 5 3 at 607 8 tok s across two nvidia dgx stations with vllm",
+        "fingerprint": "d14d2cdb5a087fea078971c845f89024ac875c800ac659a739bfdc681218a1c7",
+        "rule_score": 37.01569444444444
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Show HN: Agweb – a browser for agents that stays out of your way",
+        "url": "https://github.com/paul-nameless/agweb",
+        "published_at": "2026-11-14T14:08:12Z",
+        "fetched_at": "2026-11-15T17:37:32.745346Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "paul_nameless",
+        "upstream_urls": [
+          "https://github.com/paul-nameless/agweb"
+        ],
+        "raw_metadata": {
+          "hn_id": 50497147,
+          "score": 107
+        },
+        "id": "af73f35573cbcf9e",
+        "canonical_url": "https://github.com/paul-nameless/agweb",
+        "normalized_title": "show hn agweb a browser for agents that stays out of your way",
+        "fingerprint": "af73f35573cbcf9e3f48142daf8d5eddaa8732de5453366e5c898ed37d969005",
+        "rule_score": 37.013666666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Tech companies are trying to shift the concept of privacy again",
+        "url": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
+        "published_at": "2026-11-14T12:45:45Z",
+        "fetched_at": "2026-11-15T17:37:33.487543Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gslin",
+        "upstream_urls": [
+          "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again"
+        ],
+        "raw_metadata": {
+          "hn_id": 50496602,
+          "score": 584
+        },
+        "id": "2a20d15dc57b85c7",
+        "canonical_url": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
+        "normalized_title": "tech companies are trying to shift the concept of privacy again",
+        "fingerprint": "2a20d15dc57b85c73556c0e53d1cfa4cd2e34924d12f4be79c111dfab97d4e00",
+        "rule_score": 37.0
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Dutch websites warn of malicious ad code that tried to hack old iPhones",
+        "url": "https://nltimes.nl/2026/11/15/least-12-dutch-websites-warn-malicious-ad-code-tried-hack-old-iphones",
+        "published_at": "2026-11-15T17:26:11Z",
+        "fetched_at": "2026-11-15T17:37:31.272963Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "giuliomagnifico",
+        "upstream_urls": [
+          "https://nltimes.nl/2026/11/15/least-12-dutch-websites-warn-malicious-ad-code-tried-hack-old-iphones"
+        ],
+        "raw_metadata": {
+          "hn_id": 50508747,
+          "score": 3
+        },
+        "id": "2438ddda732a9640",
+        "canonical_url": "https://nltimes.nl/2026/11/15/least-12-dutch-websites-warn-malicious-ad-code-tried-hack-old-iphones",
+        "normalized_title": "dutch websites warn of malicious ad code that tried to hack old iphones",
+        "fingerprint": "2438ddda732a96403dbee863f4a0b50424979d448b73f045f4bd5a506b740928",
+        "rule_score": 35.74363888888889
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "The Atheist Bible",
+        "url": "https://suchanek.name/texts/atheism/",
+        "published_at": "2026-11-15T16:05:53Z",
+        "fetched_at": "2026-11-15T17:37:30.642903Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "axiologist",
+        "upstream_urls": [
+          "https://suchanek.name/texts/atheism/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50507989,
+          "score": 7
+        },
+        "id": "df9302c48c7d376d",
+        "canonical_url": "https://suchanek.name/texts/atheism",
+        "normalized_title": "the atheist bible",
+        "fingerprint": "df9302c48c7d376d4ae715c01f64e8d8283ed5c3d82104bf6fb879c1319d174a",
+        "rule_score": 35.60980555555555
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "'Duffy Lied': Controllers Refute Transportation Secretary's Ground Stop Story",
+        "url": "https://www.commondreams.org/news/duffy-ground-stop-explanation",
+        "published_at": "2026-11-15T15:45:42Z",
+        "fetched_at": "2026-11-15T17:37:30.704391Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "mikestew",
+        "upstream_urls": [
+          "https://www.commondreams.org/news/duffy-ground-stop-explanation"
+        ],
+        "raw_metadata": {
+          "hn_id": 50507791,
+          "score": 62
+        },
+        "id": "74a21341cc90a06c",
+        "canonical_url": "https://www.commondreams.org/news/duffy-ground-stop-explanation",
+        "normalized_title": "duffy lied controllers refute transportation secretary s ground stop story",
+        "fingerprint": "74a21341cc90a06c80b86728352c3af93edf70d7438393ed2b16c36537a7acd4",
+        "rule_score": 35.576166666666666
+      },
+      {
+        "source_id": "hacker-news",
+        "source_name": "Hacker News",
+        "source_group": "community",
+        "independence_group": "hacker-news",
+        "title": "Uber confirms hackers stole drivers' license information in breach",
+        "url": "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/",
+        "published_at": "2026-11-15T15:37:19Z",
+        "fetched_at": "2026-11-15T17:37:32.062851Z",
+        "language": "unknown",
+        "excerpt": "",
+        "categories": [
+          "products",
+          "developer-tools"
+        ],
+        "author": "gnabgib",
+        "upstream_urls": [
+          "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/"
+        ],
+        "raw_metadata": {
+          "hn_id": 50507716,
+          "score": 10
+        },
+        "id": "18be097791dd72b8",
+        "canonical_url": "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach",
+        "normalized_title": "uber confirms hackers stole drivers license information in breach",
+        "fingerprint": "18be097791dd72b875eb7b6301d89465ab3ed0d0a2b341fd24f9f7604f92728d",
+        "rule_score": 35.562194444444444
+      }
+    ],
+    "prompt_chars": 6109,
+    "estimated_input_tokens": 1527
+  },
+  "failures": {},
+  "newly_auto_paused_source_ids": []
+}
