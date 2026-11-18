@@ -1,0 +1,286 @@
+{
+  "date": "2026-11-19",
+  "generated_at": "2026-11-18T19:16:41.156479Z",
+  "run_id": "2026-11-19-91a1d111",
+  "daily_summary_zh": "今日重点包括：TeleChat/Xing4 展示在 8,192 张昇腾 910C 上预训练 285B 参数模型；Hugging Face 分享 180B MoE 在 32GB 内存下的推理优化；CADMAGEDDON 提供可本地运行的开源 CAD 重建；ATI 提出跨组织智能体信任基础设施；OpenAI 与 Le Figaro 达成内容合作，并发布儿童在线安全新工具。研究侧还有 Spool 流式 VLM 推理、M3OPD-Reasoner 开源后训练配方、权重空间编程与 GameRealm 数据集等进展。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "f6143ca40c5f0d44"
+      ],
+      "category": "models",
+      "title_zh": "TeleChat 发布 Xing 4：在昇腾 910C 上预训练 285B 智能体模型",
+      "summary_zh": "TeleChat 团队发布 Xing 4 系列大模型，报告介绍在 8,192 张昇腾 910C 卡上预训练 285B 参数模型，基于 MindSpore HyperParallel 构建预训练基础设施，并推出 TeleGym 统一智能体执行平台，连接执行、评估、轨迹构建与策略优化。",
+      "why_it_matters_zh": "该工作展示了在国产芯片与框架上训练前沿智能体模型的能力，对国产算力生态和大模型系统工程具有指标意义。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks",
+        "url": "https://huggingface.co/papers/2611.22115",
+        "published_at": "2026-11-16T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "ce2612d21c1b2282"
+      ],
+      "category": "inference",
+      "title_zh": "Hugging Face 分享 180B MoE 模型 32GB 内存推理优化",
+      "summary_zh": "Hugging Face 发布博客，讨论在 32GB 内存条件下使用 Transformers 进行 180B 参数 MoE 模型推理的极限优化。",
+      "why_it_matters_zh": "若能在有限内存下运行超大 MoE，将降低开源模型本地与低成本部署门槛，对推理栈优化有参考价值。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "180B Parameters, 32GB of RAM: Pushing MoE Inference to the Limit with Transformers",
+        "url": "https://huggingface.co/blog/moe-expert-streaming",
+        "published_at": "2026-11-18T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "a116dd877de61194"
+      ],
+      "category": "open-source",
+      "title_zh": "CADMAGEDDON：可本地运行的开源 CAD 重建智能体",
+      "summary_zh": "论文提出 CADMAGEDDON，一个可从网格重建可编辑 CAD 的开源智能体，能在单 GPU 和当前笔记本上本地运行；它将任务分解为一系列视觉决策，用几何工具精确构建，并集成 FreeCAD。使用 Qwen3.8-27B 时，其在主要基准上的重建质量优于此前方法，包括基于前沿模型的系统。",
+      "why_it_matters_zh": "面向不愿将专有零件共享给外部服务的 CAD 用户，提供本地、低成本、可编辑的重建方案，也显示中等规模模型在专业任务上的潜力。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "CADMAGEDDON: High-Fidelity CAD Reconstruction with Local Inference",
+        "url": "https://huggingface.co/papers/2611.22563",
+        "published_at": "2026-11-16T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "3a476a3a5bcf2018"
+      ],
+      "category": "security",
+      "title_zh": "ATI：跨组织自主智能体的联邦身份、信任与问责架构",
+      "summary_zh": "论文提出 Agent Trust Infrastructure（ATI），一个基于 PKI、零信任架构和远程证明的框架无关安全架构，为跨组织自主智能体提供联邦身份、执行完整性与授权验证；它通过同行组织 CA 建立联邦信任，无需共享根 CA，并在执行请求前验证智能体证书、批准的模型/工具/系统提示配置及三项策略检查。",
+      "why_it_matters_zh": "跨组织智能体协作缺乏统一的身份、证明和问责机制，ATI 提供了可集成现有智能体框架的外部安全执行层。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Agent Trust Infrastructure (ATI): A Federated Identity, Trust, Attestation, and Accountability Architecture for Cross-Organization Autonomous AI Agents",
+        "url": "https://arxiv.org/abs/2611.23202v1",
+        "published_at": "2026-11-17T18:44:25Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "8606225c6c9877f9"
+      ],
+      "category": "business",
+      "title_zh": "OpenAI 与 Le Groupe Figaro 合作，将 Le Figaro 内容引入 ChatGPT",
+      "summary_zh": "OpenAI 与 Le Groupe Figaro 达成合作，将 Le Figaro 的新闻通过摘要和摘录形式引入 ChatGPT，并链接回原文。",
+      "why_it_matters_zh": "这是 AI 助手与新闻媒体内容合作的最新案例，影响新闻分发、内容授权与平台合作模式。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+        "url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+        "published_at": "2026-11-18T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "f824a6d91bc1c07a"
+      ],
+      "category": "inference",
+      "title_zh": "Spool：面向混合视觉语言模型的低延迟流式推理",
+      "summary_zh": "论文提出 Spool，一个免训练框架，用于混合视觉语言模型（如 Gated DeltaNet）的滑动窗口流式推理；它缓存每帧的状态变换并利用仿射更新的可组合性，在窗口推进时移除过期帧，而无需将整个窗口重新送入模型主干。",
+      "why_it_matters_zh": "视觉无障碍、机器人等应用需要对最近视频低延迟问答，Spool 降低了长窗口流式 VLM 推理的重放成本。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Spool: Low-Latency Streaming Inference for Hybrid Vision-Language Models",
+        "url": "https://arxiv.org/abs/2611.23228v1",
+        "published_at": "2026-11-17T18:59:27Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "055fb623582bfd78"
+      ],
+      "category": "models",
+      "title_zh": "Rumble-2-Flash：开源 0.5B 多语言语音模型",
+      "summary_zh": "Hugging Face 博客发布 Rumble-2-Flash，一个面向 40 多种语言的开源 0.5B 语音模型。",
+      "why_it_matters_zh": "小尺寸、多语言、开源的语音模型有利于边缘设备和低成本语音应用，丰富开源语音生态。",
+      "importance_score": 77.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+        "url": "https://huggingface.co/blog/rumble-2-flash",
+        "published_at": "2026-11-18T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "d5ec302b2df05a71"
+      ],
+      "category": "research",
+      "title_zh": "M3OPD-Reasoner：多模态推理后训练的开源多教师蒸馏配方",
+      "summary_zh": "论文提出 M3OPD-Reasoner，一个完全开源的多模态推理后训练配方，覆盖图像 STEM、图像感知和视频三个领域；构建 M3OPD-SFT-1.35M 与 M3OPD-RL-193K 数据集，比较混合训练与多教师同策略蒸馏，发现从 Qwen3.5-9B 直接用 GSPO 训练各领域教师再做 MOPD 效果最佳。",
+      "why_it_matters_zh": "为视觉语言模型的多领域推理后训练提供可复现的开源配方，降低多教师蒸馏和领域能力整合的门槛。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "M3OPD-Reasoner: An Open Recipe for Post-Training Multimodal Reasoning with Multi-Teacher On-Policy Distillation",
+        "url": "https://huggingface.co/papers/2611.23034",
+        "published_at": "2026-11-16T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "549d56a31e87e9ce"
+      ],
+      "category": "research",
+      "title_zh": "权重空间编程不必依赖 Transformer",
+      "summary_zh": "论文研究无梯度权重空间编程：让 LLM 直接生成固定架构的权重或自行设计架构，仅给少量示例和沙箱；三个前沿模型在自由设计时多将纯文本事实编译为稀疏表加固定查询流程，最高达到 54.4% 测试准确率，且 LLM 设计的模型比同一 LLM 写出的最准 Transformer 参数少约 1800 倍。",
+      "why_it_matters_zh": "该工作挑战 Transformer 的默认选择，展示无梯度、可解释的权重编程与关联记忆模型在特定任务上的可能性。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Weight-Space Programming Doesn't Need Transformers",
+        "url": "https://huggingface.co/papers/2611.22055",
+        "published_at": "2026-11-16T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "5e9e9b8f97450fa9"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12521：修复 WebGPU FA mask 广播",
+      "summary_zh": "llama.cpp 发布 b12521，包含 WebGPU 修复：允许 FA mask 在 Q batch 上广播，并更新 macOS/iOS/Linux 多平台构建。",
+      "why_it_matters_zh": "持续改进多后端与多平台推理兼容性，对本地和边缘 LLM 部署有实际影响。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12521",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12521",
+        "published_at": "2026-11-18T17:10:32Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "f6f6d655911adbeb"
+      ],
+      "category": "developer-tools",
+      "title_zh": "为什么微调任务耗时超过 FLOPs 估算",
+      "summary_zh": "Hugging Face 博客发文解释为何微调任务的实际耗时高于 FLOPs 理论估算。",
+      "why_it_matters_zh": "帮助开发者更准确地预估微调成本、识别实际训练瓶颈，对训练基础设施选型有参考价值。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Why your fine-tuning job takes longer than the FLOPs say",
+        "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+        "published_at": "2026-11-18T18:53:43Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "a37a75f3adc12a22"
+      ],
+      "category": "research",
+      "title_zh": "编码智能体之后的推断：选择性推断风险与校正",
+      "summary_zh": "论文讨论编码智能体参与实证研究后对经典推断的威胁：智能体可进行开放式估计器搜索并程序化复现选择与估计过程，形成新型 post-selection inference；在零效应模拟数据上，四个前沿智能体在被要求给出显著发现时 54% 至 98% 报告显著 p 值。作者提出通过子样本重放估计选择概率并进行校正的简单流程。",
+      "why_it_matters_zh": "随着 AI 编码智能体进入科研流程，假设检验的有效性面临系统性风险，需要新的推断、审计与可复现方法。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Inference after coding agents",
+        "url": "https://arxiv.org/abs/2611.23174v1",
+        "published_at": "2026-11-17T18:22:01Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-13",
+      "candidate_ids": [
+        "90fe3b1b97e2ced6"
+      ],
+      "category": "policy",
+      "title_zh": "OpenAI 发布儿童在线安全新工具与支持",
+      "summary_zh": "OpenAI 发布新工具、实践指南和合作伙伴关系，用于预防、检测和响应在线儿童性剥削与虐待。",
+      "why_it_matters_zh": "AI 平台安全与儿童保护政策持续加码，影响内容审核、执法协作和平台责任实践。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Strengthening the fight against online child sexual abuse with new tools and support",
+        "url": "https://openai.com/index/strengthening-online-child-safety",
+        "published_at": "2026-11-16T17:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [
+    "source nvidia-genai failed: SourceFetchError: nvidia-genai: RSS fetch failed"
+  ],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 232,
+    "normalized": 232,
+    "filtered": 189,
+    "ai_candidates": 30,
+    "prompt_chars": 24418,
+    "estimated_input_tokens": 6104,
+    "failed_source_ids": [
+      "nvidia-genai"
+    ],
+    "newly_auto_paused_source_ids": []
+  }
+}
