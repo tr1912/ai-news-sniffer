@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-20",
+  "generated_at": "2026-11-19T19:24:19.388951Z",
+  "run_id": "2026-11-20-3a7b9b4c",
+  "daily_summary_zh": "今日重点包括 OpenAI 关于编码智能体加速 AI 研究、前沿风险管理和 ChatGPT 性能工程的官方更新；研究侧关注递归自我改进决策模型、训练数据替代效应、动态容量下的推理调度，以及 Agent 安全与 harness 工程化；开源侧 llama.cpp 更新对 Inkling 2 注意力机制的支持。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "08a4016d0b793e88"
+      ],
+      "category": "research",
+      "title_zh": "OpenAI 发布研究加速报告：编码智能体的“锯齿状前沿”",
+      "summary_zh": "OpenAI 发布文章，衡量编码智能体如何加速 AI 研究，并指出其表现仍不均衡；文章将此与递归自我改进的信号联系起来。",
+      "why_it_matters_zh": "提供一线实验室对 coding agent 科研生产力与 RSI 的观察框架，影响对 AI 研发自动化的预期。",
+      "importance_score": 88.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Research acceleration: The jagged frontier",
+        "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+        "published_at": "2026-11-18T08:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "37c085bb72e8b180"
+      ],
+      "category": "policy",
+      "title_zh": "OpenAI 阐述前沿 AI 风险的全流程管理",
+      "summary_zh": "OpenAI 说明其如何从训练到部署管理前沿 AI 风险，包括模型对齐、沙箱、阻断式防护和监控。",
+      "why_it_matters_zh": "前沿模型治理与部署安全正成为监管审查和客户信任的关键环节。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Managing frontier AI risk: From training to deployment",
+        "url": "https://openai.com/index/managing-frontier-ai-risk",
+        "published_at": "2026-11-18T06:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "0f6bcd1e76982a07"
+      ],
+      "category": "developer-tools",
+      "title_zh": "OpenAI 用 Codex 驱动的 Performance Factory 保持 ChatGPT 快速",
+      "summary_zh": "OpenAI 介绍 Performance Factory：一套由 Codex 驱动的工作流系统，用于发现并修复性能问题，帮助保持 ChatGPT 快速。",
+      "why_it_matters_zh": "展示编码智能体在大规模生产系统性能优化中的工程化用法，而不仅是代码生成。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "published_at": "2026-11-19T08:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "5b383263da3f00dd"
+      ],
+      "category": "research",
+      "title_zh": "语言模型中通用能力进步可替代特定训练数据",
+      "summary_zh": "论文在棋类、Othello、分子字符串、括号语言和网页文本等任务中屏蔽训练信号，发现模型在其他数据上的通用进步可替代被屏蔽的数据；之后用很少数据即可重新获得技能，且所需比例随模型进步下降。7B 参数模型中屏蔽的编程语言也以同样方式恢复。",
+      "why_it_matters_zh": "对数据过滤、能力延迟评估和安全训练策略有直接启示，说明移除数据只能延迟而非永久阻止能力出现。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "General progress substitutes for specific training data in language models",
+        "url": "https://arxiv.org/abs/2611.24844v1",
+        "published_at": "2026-11-18T18:07:55Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "69fa8c357ccff7b7"
+      ],
+      "category": "models",
+      "title_zh": "Piccolo：通过递归自我改进共同演化决策模型与数据",
+      "summary_zh": "Piccolo 是一组 0.8B 到 27B 的多模态决策模型，通过 Agentic Data Engineering 和递归自我改进共同演化模型能力与训练数据。Piccolo-27B 以 75.59 分位列 Decision Index Vision Full 榜首，Piccolo-9B 和 4B 分别为 68.35 和 67.46，并在各自参数规模类别的 Private benchmark 排名第一。",
+      "why_it_matters_zh": "将 Agentic Data Engineering 与递归自我改进用于决策模型，强调数据选择与反馈驱动优化在规模化训练中的作用。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Piccolo: Co-Evolving Decision Models and Data through Recursive Self-Improvement",
+        "url": "https://huggingface.co/papers/2611.24651",
+        "published_at": "2026-11-17T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "220cdb24a69112f3"
+      ],
+      "category": "models",
+      "title_zh": "DaisyRose-27B 推进后训练效率前沿",
+      "summary_zh": "Hugging Face Blog 发布 DaisyRose-27B，主题为推进后训练效率。",
+      "why_it_matters_zh": "27B 规模模型的后训练效率改进，可能影响开源模型的训练与微调成本。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "DaisyRose-27B: Pushing the Frontier of Post-Training Efficiency",
+        "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+        "published_at": "2026-11-18T19:54:56Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "79ef39f721e7e717"
+      ],
+      "category": "research",
+      "title_zh": "Cap-and-Track：面向动态容量的 LLM 推理请求调度",
+      "summary_zh": "Cap-and-Track 提出面向异步 LLM 推理的请求调度设计，利用后端拒绝信号探测容量上限并回退；Meta 的流量整形器已将其用于帖子和直播视频理解。生产 A/B 中，分类器所用 H100 比固定速率的排队前身少 43%。",
+      "why_it_matters_zh": "在容量波动和输出长度未知时提升推理资源利用率，直接关系 serving 成本与稳定性。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity",
+        "url": "https://arxiv.org/abs/2611.24891v1",
+        "published_at": "2026-11-18T18:34:10Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "c794c34dc97dadf0"
+      ],
+      "category": "research",
+      "title_zh": "PIPETTE：面向 LLM Agent 的提示注入紫队测试框架",
+      "summary_zh": "PIPETTE 是一个统一的提示注入紫队测试框架，旨在把红队发现转化为防御者鲁棒性提升；论文指出 RL-Hammer 和 PISmith 等 RL 红队方法存在模式崩溃，会重复发现相似攻击策略。",
+      "why_it_matters_zh": "间接提示注入是 agent 部署的核心安全风险，紫队测试可提升对抗训练和防御效率。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents",
+        "url": "https://huggingface.co/papers/2611.24362",
+        "published_at": "2026-11-17T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-9",
+      "candidate_ids": [
+        "85e85fe88259fe4a"
+      ],
+      "category": "research",
+      "title_zh": "AnyS1：用单一 System-1 模型加速任意 Agent 工作流",
+      "summary_zh": "AnyS1 将人类编写的流程技能转化为通用决策点来源，离线挖掘 1000+ 公共技能中的可枚举决策并训练 4B pointer System-1；运行时常规决策一次前向完成，低置信度回退 System-2。相对未编译 System-2 agent，episode 成本降低 75-91%，模型调用时间降低 63-92%。",
+      "why_it_matters_zh": "为 agent 工作流提供通用、可校准的成本与延迟优化层，减少对大模型逐步调用的依赖。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Thinking Fast, Anywhere: One System-1 for the Decision Points of Any Agent Workflow",
+        "url": "https://huggingface.co/papers/2611.23751",
+        "published_at": "2026-11-17T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "e1187803c7731e2b"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12549：修复 Inkling 2 注意力掩码",
+      "summary_zh": "llama.cpp 发布 b12549，为 Inkling 2 引入独立的相对位置注意力输入，并让专家权重缩放和最终 logit softcap 变为可选。",
+      "why_it_matters_zh": "改善开源推理栈对新型混合注意力模型的支持，并减少不必要的加载限制。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12549",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12549",
+        "published_at": "2026-11-19T17:46:04Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 238,
+    "normalized": 238,
+    "filtered": 194,
+    "ai_candidates": 30,
+    "prompt_chars": 27273,
+    "estimated_input_tokens": 6818,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
