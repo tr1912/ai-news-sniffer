@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-20T18:59:44.100166Z",
+  "run_id": "2026-11-21-4e46ecf6",
+  "daily_summary_zh": "今日高信号内容集中在模型发布、智能体/具身评测、安全审计与推理基础设施。模型侧有 DeepMind Genie 4 上线、开源全模态视频模型 WeMM-Video 和 Depth Pro 2；研究侧聚焦机器人动作级诊断、空间智能交互评测与自主后训练；安全侧出现智能体事故复现和漏洞研究能力系统化评估；基础设施侧关注混合架构 LLM 缓存服务与 RL rollout 优化。",
+  "events": [
+    {
+      "id": "event-genie-4",
+      "candidate_ids": [
+        "828e038f4bdccb00"
+      ],
+      "category": "models",
+      "title_zh": "Google DeepMind 上线 Genie 4",
+      "summary_zh": "Google DeepMind 官方博客宣布 Genie 4 现已可用；候选摘要未披露更多技术细节。",
+      "why_it_matters_zh": "这是 DeepMind Genie 系列的最新官方版本上线，意味着新能力开始对外可用，后续可能影响交互式生成、世界模型研究与智能体训练。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "deepmind-news",
+        "source_name": "Google DeepMind News",
+        "title": "Genie 4 is now available",
+        "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+        "published_at": "2026-11-18T18:13:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-wemm-video",
+      "candidate_ids": [
+        "6e1b50e9bf634ff4"
+      ],
+      "category": "models",
+      "title_zh": "WeMM-Video：开源全模态视频理解模型家族",
+      "summary_zh": "WeMM-Video 是中英双语全模态基础模型家族，覆盖 2B、4B、9B 和 35B-A3B 四种规模，统一处理文本、图像、音频和视频，并支持非思考的 instruct 模式与逐步推理的 thinking 模式。模型使用约 1.2 万亿 token 的多模态语料训练，经过渐进式预训练和多阶段后训练，在 120 多个基准上评估；旗舰 35B-A3B 在 omni-modal 视频评测中称刷新开源 SOTA。",
+      "why_it_matters_zh": "以多尺寸、双语和音视频联合理解切入，并在大规模基准上验证，旗舰模型声称刷新开源全模态视频理解 SOTA，降低了全模态视频模型的研究与部署门槛。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "WeMM-Video: Pushing the Frontiers of Open-Source Omni-Modal Video Understanding",
+        "url": "https://huggingface.co/papers/2611.26409",
+        "published_at": "2026-11-18T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-depth-pro-2",
+      "candidate_ids": [
+        "16e492dc5b76e461"
+      ],
+      "category": "research",
+      "title_zh": "Depth Pro 2：全分辨率、时序一致的度量单目深度",
+      "summary_zh": "Depth Pro 2 面向图像和视频的全分辨率密集度量深度估计，试图同时解决此前方法在时序一致性与边界锐利度之间的取舍。它训练单一可扩展网络处理图像和视频，并预测原生分辨率深度图；作者称其在度量精度、锐利度、时序一致性和运行时上均优于此前工作，并开源代码与权重。",
+      "why_it_matters_zh": "同时追求度量精度、边缘锐利和视频时序一致，并开放代码与权重，对 3D 视觉、机器人、空间计算和视频编辑等下游应用有直接价值。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth",
+        "url": "https://arxiv.org/abs/2611.26603v1",
+        "published_at": "2026-11-19T18:55:41Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-rogue-ai",
+      "candidate_ids": [
+        "4c92b619e037adb3"
+      ],
+      "category": "safety",
+      "title_zh": "ROGUE-AI：离线复现智能体安全事件并定位根因",
+      "summary_zh": "ROGUE-AI 是一个多智能体框架，用于离线重建已报道的 LLM 智能体安全事件，并为每个事件构造只缺少“被归咎原因”的匹配对照组。论文称在 108 次复现尝试中成功复现报告危害的比例为 89%；基于五种 GPT、Claude、Gemini 和 DeepSeek 模型的智能体在 18% 到 33% 的运行中犯下报告中的错误，而对照组至多 1%。在 72 起造成真实危害的事件中，62 起没有底层攻击者。",
+      "why_it_matters_zh": "用匹配对照组把“新闻里的智能体失败”变成可审计实验，并量化主流模型重犯特定错误的概率，对智能体安全评测、事故调查和部署前风控有直接意义。",
+      "importance_score": 77.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)",
+        "url": "https://arxiv.org/abs/2611.26553v1",
+        "published_at": "2026-11-19T18:23:35Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-agentrobocritic",
+      "candidate_ids": [
+        "0dbe3e6a5575ec5d"
+      ],
+      "category": "research",
+      "title_zh": "AgentRoboCritic：面向直接机器人控制的前沿智能体动作级诊断",
+      "summary_zh": "论文对前沿多模态语言智能体在 12 个操作基准上的直接机器人控制进行动作级分析，提出 AgentRoboCritic 框架：策略智能体在每次动作旁声明局部意图，评论器根据该意图评估动作结果和失败模式。分析显示这些智能体具备闭环恢复、跨场景语义 grounding 和零样本操作能力，但也存在抓取、对齐等物理执行瓶颈，以及不同失败模式下恢复能力不均的问题。",
+      "why_it_matters_zh": "把评测从 episode 成功率推进到动作级意图与失败模式分析，既展示前沿智能体的真实操控能力，也定位物理执行瓶颈，为机器人智能体评测和训练提供更细粒度方法。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+        "url": "https://arxiv.org/abs/2611.26613v1",
+        "published_at": "2026-11-19T18:57:25Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-turingspace",
+      "candidate_ids": [
+        "86e6838ea6b35ea4"
+      ],
+      "category": "research",
+      "title_zh": "TuringSpace：用交互式 CAPTCHA 评测多模态模型的空间智能",
+      "summary_zh": "TuringSpace 构建了包含 125 个交互式 CAPTCHA 的合成网页环境，覆盖五类空间能力，要求模型通过点击和拖拽完成任务。人类解决率为 94.1%，最佳模型 GPT-6 Astra 仍失败 25.9%，最佳开源权重模型 Kimi K3 失败 68.0%。分析显示多数失败来自误读截图，且模型推理很少纠正错误信念，反而会幻觉证据为其辩护。",
+      "why_it_matters_zh": "将空间推理与真实点击/拖拽动作闭环结合，暴露当前最强模型与人类在动态空间任务上的显著差距，并提供可程序化生成新实例的训练环境。",
+      "importance_score": 74.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "TuringSpace: Grounding Spatial Intelligence in Action with Interactive CAPTCHAs",
+        "url": "https://huggingface.co/papers/2611.25387",
+        "published_at": "2026-11-18T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-tidecache",
+      "candidate_ids": [
+        "0920786f8bb5bc83"
+      ],
+      "category": "infrastructure",
+      "title_zh": "TideCache：面向混合架构 LLM 的透明缓存管理与层间流式服务",
+      "summary_zh": "TideCache 是面向 CPU-GPU 超级芯片的混合架构 LLM 服务系统，包含透明缓存池、缓存流式器和请求调度器。透明缓存池在固定虚拟地址后重新分配物理页；缓存流式器利用有界状态层的计算区间，预取下一全局注意力层前缀到共享 GPU 槽位；调度器根据请求大小和队列状态选择驻留或流式执行。系统已在 SGLang 中实现，并在 GB300 与 GH200 等七种模型/平台配置上评估。",
+      "why_it_matters_zh": "针对混合注意力与有界状态模型的异构 KV 缓存压力，在真实服务框架中实现页级重分配和层间预取，有望提升长上下文、高并发场景下的 GPU 内存效率与服务吞吐。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
+        "url": "https://arxiv.org/abs/2611.26619v1",
+        "published_at": "2026-11-19T18:58:31Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-hf-harness-adapters",
+      "candidate_ids": [
+        "be8996c23dac69a0"
+      ],
+      "category": "developer-tools",
+      "title_zh": "Hugging Face 推出 harness adapters",
+      "summary_zh": "Hugging Face 官方博客介绍 harness adapters，用于将模型适配到不同 harness，以改善性能和成本；候选摘要未展开具体实现细节。",
+      "why_it_matters_zh": "模型与评测/运行 harness 的适配长期碎片化；官方提供适配层有助于降低跨框架评测、集成和部署成本，对开发者工具链有实际影响。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+        "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+        "published_at": "2026-11-20T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-mind2act",
+      "candidate_ids": [
+        "5ab98c48838daefe"
+      ],
+      "category": "research",
+      "title_zh": "Mind2Act World：诊断机器人操作中的认知、执行与组合能力",
+      "summary_zh": "Mind2Act World 是包含 30 个模拟操作任务的诊断基准，覆盖五个真实应用领域；每个任务有三档难度和 Clean/Random 两种场景，共 180 种配置。任务分为 Mind、Act 和 Mind2Act 三个视图：分别测试基于历史观察的决策、精确及时的执行，以及动作结果反馈指导后续决策的闭环组合。诊断工具还可对失败 episode 进行归因。",
+      "why_it_matters_zh": "把“想、做、边做边调整”拆成三个可比较视图，并定位失败来自哪一环节，比单一成功率更能指导具身智能系统识别能力短板。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation",
+        "url": "https://huggingface.co/papers/2611.26444",
+        "published_at": "2026-11-18T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-nvidia-dynamo-rl",
+      "candidate_ids": [
+        "b4dc08939f45f72c"
+      ],
+      "category": "infrastructure",
+      "title_zh": "NVIDIA Dynamo 降低强化学习 rollout 瓶颈",
+      "summary_zh": "NVIDIA 开发者博客介绍如何用 Dynamo 缓解强化学习训练中的 rollout 瓶颈：推理 worker 生成轨迹，Dynamo 负责调度与资源管理，以提升采样效率。",
+      "why_it_matters_zh": "RL 后训练越来越依赖大规模推理采样，rollout 效率直接影响训练吞吐和成本；官方工程方案对构建 RL 训练基础设施的团队有参考价值。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Reducing Rollout Bottlenecks in Reinforcement Learning with NVIDIA Dynamo",
+        "url": "https://developer.nvidia.com/blog/reducing-rollout-bottlenecks-in-reinforcement-learning-with-nvidia-dynamo/",
+        "published_at": "2026-11-19T20:28:13Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-dailysafe",
+      "candidate_ids": [
+        "5c0e9f0f4bb17393"
+      ],
+      "category": "safety",
+      "title_zh": "DailySafe：评测日常多轮多模态交互中的动态安全",
+      "summary_zh": "DailySafe 是评估多模态大模型动态安全意识的基准，包含 195 个自然主义多轮、多图交互，覆盖 10 个日常领域和 42 类任务。它关注在用户追求合法目标的过程中，看似良性的请求如何结合此前动作和视觉观察而逐步变成安全关键问题，并要求模型跟踪任务条件、识别隐式上下文风险。",
+      "why_it_matters_zh": "现实风险往往在多轮对话和图像观察中逐步显现，而非单轮恶意请求；该基准补足动态安全评测维度，对多模态助手上线前的风险评估有参考价值。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "DailySafe: Benchmarking Dynamic Safety Awareness in Everyday Multi-Turn Multimodal Interactions",
+        "url": "https://huggingface.co/papers/2611.26298",
+        "published_at": "2026-11-18T19:00:00Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 223,
+    "normalized": 223,
+    "filtered": 179,
+    "ai_candidates": 30,
+    "prompt_chars": 28068,
+    "estimated_input_tokens": 7017,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
