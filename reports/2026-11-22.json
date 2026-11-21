@@ -1,0 +1,162 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-21T17:54:28.942759Z",
+  "run_id": "2026-11-22-e0758441",
+  "daily_summary_zh": "今日高信号集中在开源多模态模型、Gemini 代理能力与 OpenAI 的安全/科研评测：Transformers 主线加入 Thinking Machines 的 Inkling 2 Mini；Google 介绍 Duplex 在 Gemini 中代用户致电商家；OpenAI 公布 GPT-6 Astra 金融研究早期评估、对抗性蒸馏防御与 MedChemBench；开发者侧关注 NVIDIA 的 Rust 工具调用解析实践，研究侧关注多模态图像编辑安全基准 EditSafetyBench。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "af262189e2c4fd37"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face Transformers v5.24.0 新增 Thinking Machines 的 Inkling 2 Mini 多模态模型",
+      "summary_zh": "Hugging Face Transformers 发布 v5.24.0，新增 Thinking Machines Lab 的 Inkling 2 Mini 多模态模型。该模型接受文本和图像输入并生成文本，是 Inkling 2 Small 的较小版本：解码器为 24 层（Small 为 48 层），第 6 至 17 层循环运行三次，并通过学习的消息传递机制把上一轮残差混入注意力与 MoE 输入；隐藏维度 2304，每个 token 路由到 128 个专家中的 8 个。图像编码器、tokenizer 和 processor 与 Small 相同。同步提供支持可变循环次数的研究 checkpoint，两个 checkpoint 都包含 NVFP4 与 MXFP8 量化层，加载时反量化。",
+      "why_it_matters_zh": "以循环层和稀疏 MoE 在更小规模下扩展多模态能力，并直接进入 Transformers 主线，降低开发者试用与部署门槛；可变循环次数让推理速度与质量可按场景调节。",
+      "importance_score": 85.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "transformers-releases",
+        "source_name": "Transformers Releases",
+        "title": "Transformers Releases: Release v5.24.0",
+        "url": "https://github.com/huggingface/transformers/releases/tag/v5.24.0",
+        "published_at": "2026-11-21T12:28:26Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "1ac61d0bd673621a"
+      ],
+      "category": "products",
+      "title_zh": "Google Duplex 演进为 Gemini 中可代用户致电商家的能力",
+      "summary_zh": "Google Research 发布博文，介绍 Google Duplex 如何演进，并集成到 Gemini 中，使 Gemini 可以代用户致电商家。",
+      "why_it_matters_zh": "把语音代理能力纳入通用助手，意味着 Gemini 的代理场景从信息处理延伸到真实世界的电话任务；官方披露有助于理解 Duplex 的产品化路径。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "google-research",
+        "source_name": "Google Research Blog",
+        "title": "How Google Duplex evolved to also call businesses for you in Gemini",
+        "url": "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/",
+        "published_at": "2026-11-20T23:30:30Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "b489383a2b495756"
+      ],
+      "category": "models",
+      "title_zh": "OpenAI 公布 Hebbia 使用 GPT-6 Astra 进行金融研究的早期评估",
+      "summary_zh": "OpenAI Newsroom 发布 Hebbia 客户案例，称 Hebbia 针对金融研究测试了 GPT-6 Astra；其预发布评估发现，模型在来源覆盖、引用相关性和呈现质量方面有所提升。",
+      "why_it_matters_zh": "这是 GPT-6 Astra 在企业专业工作流中的早期应用信号，也反映金融研究场景对来源覆盖与引用质量的高要求。",
+      "importance_score": 75.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+        "url": "https://openai.com/business/customer-stories/hebbia",
+        "published_at": "2026-11-20T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "ba02f26399a9fc20"
+      ],
+      "category": "policy",
+      "title_zh": "OpenAI 提出对抗性蒸馏的分层防御方法",
+      "summary_zh": "OpenAI 发布文章，介绍应对对抗性蒸馏的分层方法，结合模型训练、防护措施、检测与执法，以保护模型能力不被提取。",
+      "why_it_matters_zh": "对抗性蒸馏直接关系模型能力保护和商业利益；该文把训练侧防护、检测与执法结合，提供了系统性防御思路。",
+      "importance_score": 72.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Combatting adversarial distillation",
+        "url": "https://openai.com/index/combatting-adversarial-distillation",
+        "published_at": "2026-11-20T10:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "54f9ba9c4d39cfd9"
+      ],
+      "category": "research",
+      "title_zh": "OpenAI 推出 MedChemBench 评估 AI 在早期药物发现中的能力",
+      "summary_zh": "OpenAI 介绍 MedChemBench，用于评估 AI 模型解释分子结构、从实验证据推理以及在早期药物发现中选择化合物的能力。",
+      "why_it_matters_zh": "药物发现需要模型理解分子结构与实验证据，而不只是文本问答；该基准把评测推向专业科研工作流。",
+      "importance_score": 68.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "Can AI help scientists identify promising drug candidates?",
+        "url": "https://openai.com/index/introducing-medchembench",
+        "published_at": "2026-11-20T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "0a6671eb41d25e42"
+      ],
+      "category": "research",
+      "title_zh": "EditSafetyBench：多模态图像编辑系统的文本-视觉安全错配",
+      "summary_zh": "论文提出 EditSafetyBench，包含 5,940 个图像-指令对，覆盖 11 类风险与三种编辑意图，用于衡量图像编辑系统的系统级安全感知。对 Gemini、GPT、Qwen API 与 Qwen Local 的评估发现文本-视觉安全判断存在系统性错配：例如 Gemini 和 GPT 对含不安全编辑意图的请求拒绝率分别为 87.1% 和 81.6%，但对同时含不安全图像与中性指令的请求拒绝率仅 24.2% 和 22.4%。",
+      "why_it_matters_zh": "图像编辑安全不能只依赖文本意图，上传图像本身也可能携带风险；该基准揭示多模态安全机制的结构性盲区，并为系统设计提供评测工具。",
+      "importance_score": 65.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Text-Aware, Vision-Blind: How Multimodal Image Editing Systems Handle Unsafe Inputs",
+        "url": "https://arxiv.org/abs/2611.26569v1",
+        "published_at": "2026-11-19T18:36:19Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "10f276267dcf7e73"
+      ],
+      "category": "developer-tools",
+      "title_zh": "NVIDIA 发布用 Rust 构建工具调用解析器的开发者教程",
+      "summary_zh": "NVIDIA 开发者博客发布教程，介绍如何用 Rust 与 AI 代理构建工具调用解析器，处理工具调用分片到达、参数被截断以及模型特定标记泄漏到回答中的问题。",
+      "why_it_matters_zh": "工具调用是代理落地的关键接口；解析器需要应对流式、多模型和异常输出，该教程对构建稳健代理前端有直接参考价值。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "nvidia-genai",
+        "source_name": "NVIDIA Generative AI Blog",
+        "title": "Build Tool-Calling Parsers in Rust with AI Agents",
+        "url": "https://developer.nvidia.com/blog/build-tool-calling-parsers-in-rust-with-ai-agents/",
+        "published_at": "2026-11-19T16:30:46Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 189,
+    "normalized": 189,
+    "filtered": 136,
+    "ai_candidates": 30,
+    "prompt_chars": 17819,
+    "estimated_input_tokens": 4454,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
