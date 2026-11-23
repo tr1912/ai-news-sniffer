@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-24",
+  "generated_at": "2026-11-23T22:29:08.821471Z",
+  "run_id": "2026-11-24-1d95bebe",
+  "daily_summary_zh": "今日 AI 动态以基础设施与开发工具为主：OpenAI 与 Cisco 联合开源 Linux 运行时 Shirudo，补齐“打补丁期间系统防护”这一运维缺口；DeepMind 用智能体团队加形式化验证改进聚变与化学场景的量子算法；蚂蚁开源其医疗健康模型，并强调本地部署；Hugging Face 与 AllenAI 分别贡献智能体评测方法论与机器人操作点跟踪 RoboTrack；llama.cpp 继续以高频版本迭代推进 WebGPU 等后端能力。商业侧，Anthropic 完成 IPO 后市场情绪与早期投资方逻辑成为讨论焦点；AWS 则把 Agent 治理能力（Well-Architected Agent）做成产品化预览。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "ca998c94f5d9d6cc"
+      ],
+      "category": "open-source",
+      "title_zh": "OpenAI 与 Cisco 推出开源 Linux 运行时 Shirudo",
+      "summary_zh": "OpenAI 新闻室发布消息称，OpenAI 与 Cisco 联合推出 Shirudo，这是一个面向 Linux 的开源运行时，用于帮助团队在推送补丁的过程中保护正在运行的系统。",
+      "why_it_matters_zh": "企业打补丁的窗口期往往也是攻击面最大的时段；由模型厂商与网络设备巨头联合开源运行时，意味着“AI 时代的系统安全”开始从模型层下沉到操作系统与运维层，可能成为企业安全流水线的新默认组件。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "openai-news",
+        "source_name": "OpenAI Newsroom",
+        "title": "OpenAI and Cisco introduce Shirudo",
+        "url": "https://openai.com/index/introducing-shirudo",
+        "published_at": "2026-11-23T21:20:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "36d27b9ba884b707"
+      ],
+      "category": "research",
+      "title_zh": "DeepMind 用智能体团队与形式化验证寻找更快的量子算法",
+      "summary_zh": "Google DeepMind 发布研究，介绍如何用智能体（Agent）团队配合形式化验证，改进用于聚变与化学场景的量子算法。",
+      "why_it_matters_zh": "把“多智能体搜索”与“形式化验证保证正确性”结合，是让 AI 参与硬科学发现的代表性路径：既能扩大搜索空间，又能用可验证性约束幻觉，对量子计算、材料与能源等长周期领域有直接参考价值。",
+      "importance_score": 81.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "deepmind-news",
+        "source_name": "Google DeepMind News",
+        "title": "Finding faster quantum algorithms with agents and formal verification",
+        "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+        "published_at": "2026-11-23T16:59:40Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "22757364ca1ec532",
+        "23aa8d16840cd5da"
+      ],
+      "category": "business",
+      "title_zh": "Anthropic 完成 IPO 后，市场情绪与早期投资方逻辑成为焦点",
+      "summary_zh": "InfoQ 中文报道称，Anthropic 完成创纪录 IPO，但并未扭转市场对 AI 的悲观情绪，且报道称 Claude 在上市当天出现性能降级。TechCrunch 则采访了 Notable Capital、GIC 与 Baillie Gifford，回顾其在 IPO 前大额押注 Anthropic 的判断依据。",
+      "why_it_matters_zh": "头部模型公司进入公开市场，是把 AI 估值从一级市场叙事切换到二级市场定价的关键节点；上市首日的服务稳定性与投资方退出逻辑，都会直接影响后续 AI 公司的融资节奏与估值锚点。",
+      "importance_score": 74.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "infoq-cn",
+        "source_name": "InfoQ 中文",
+        "title": "Anthropic 创纪录 IPO 未能扭转 AI 市场悲观情绪，Claude 上市当天突发性能降级！靠失业焦虑撑起的万亿估值，该踩刹车了",
+        "url": "https://www.infoq.cn/article/OPbZhT0OHL4IbZz8exvA?utm_source=rss&utm_medium=article",
+        "published_at": "2026-11-23T09:20:56Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "techcrunch-ai",
+          "source_name": "TechCrunch AI",
+          "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+          "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+          "published_at": "2026-11-23T01:25:53Z"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "a3ab26a0c796ee00"
+      ],
+      "category": "developer-tools",
+      "title_zh": "Hugging Face 发布指南：如何构建并维护 Agent 评测",
+      "summary_zh": "Hugging Face 博客发布《How to build and maintain an agentic evaluation》，系统讲解构建与长期维护智能体评测体系的方法。",
+      "why_it_matters_zh": "Agent 的效果高度依赖任务环境与多步交互，传统静态榜单难以反映真实表现；可复用的评测构建与维护方法，是团队把 Agent 从 Demo 推进到生产的关键基础设施。",
+      "importance_score": 67.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "How to build and maintain an agentic evaluation",
+        "url": "https://huggingface.co/blog/agentic-evals",
+        "published_at": "2026-11-23T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "23cbc20072225172"
+      ],
+      "category": "research",
+      "title_zh": "AllenAI 发布 RoboTrack：面向真实机器人操作的点跟踪方法",
+      "summary_zh": "AllenAI 在 Hugging Face 博客发布 RoboTrack，一种面向真实世界机器人操作场景的点跟踪（point tracking）方法。",
+      "why_it_matters_zh": "真实环境下的精细操作依赖对物体与接触点的持续跟踪，点跟踪能力的提升会直接迁移到抓取、装配等机器人任务，是具身智能数据与算法栈中的基础环节。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+        "url": "https://huggingface.co/blog/allenai/robotrack",
+        "published_at": "2026-11-23T17:20:37Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "4fecb20fa2376ce9"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12651：WebGPU 后端新增 ROLL 支持",
+      "summary_zh": "llama.cpp 发布构建版本 b12651，其中 WebGPU 后端新增 ROLL 支持，并调整测试以保证 ROLL 用例在不同后端间保持可移植；同时提供 macOS、iOS 与 Linux 多平台预编译包。",
+      "why_it_matters_zh": "llama.cpp 的持续迭代是本地与端侧推理能力扩散的主要通道之一；WebGPU 后端能力补齐，意味着浏览器与跨平台环境下的本地模型推理边界继续外扩。",
+      "importance_score": 44.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12651",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12651",
+        "published_at": "2026-11-23T08:52:50Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 163,
+    "normalized": 163,
+    "filtered": 125,
+    "ai_candidates": 30,
+    "prompt_chars": 6555,
+    "estimated_input_tokens": 1638,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
