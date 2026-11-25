@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-26",
+  "generated_at": "2026-11-25T20:24:20.008851Z",
+  "run_id": "2026-11-26-ce8677d8",
+  "daily_summary_zh": "今日信号集中在 Agent 评测与训练、LLM 推理服务优化，以及 llama.cpp 等开源推理栈更新。研究侧覆盖从数字到物理世界的上下文学习基准、自主规格工程、硬件 RTL 设计、长程记忆与可验证推理；工程侧投机解码校准和自动量化选型值得开发者关注。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "08acc4d5e27821a8"
+      ],
+      "category": "research",
+      "title_zh": "ICLWorld：从数字世界到物理世界评估 Agent 的上下文学习",
+      "summary_zh": "研究提出 ICLWorld，一个在线基准，用于评估 agent 在计算机使用和机器人使用中的上下文学习能力；配套 UIverse 将环境统一为用户界面。基准包含 30 个环境、630 段演示视频（10 小时以上）和 160 个任务，任务规则定制且常常反直觉，并提供文本或视频三种规则版本和三级泛化测试。六个前沿模型中，Claude Opus 5.5 与 GPT-6 Astra 在计算机使用任务成功率分别为 82% 和 76%，但在机器人使用任务上仅 27% 和 26%。",
+      "why_it_matters_zh": "它把 agent 的上下文学习评估从离线文本/静态图像扩展到在线数字与物理环境，并揭示前沿模型在物理世界操作上的明显短板。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+        "url": "https://huggingface.co/papers/2611.32649",
+        "published_at": "2026-11-23T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "0bd09a3ac99d6c7d"
+      ],
+      "category": "research",
+      "title_zh": "强化学习可从自身 rollout 中恢复",
+      "summary_zh": "论文研究 RL 后训练产生的知识有多少保留在 rollout 中。直接回放原始 RL 算法会导致灾难性崩溃；作者提出对归档 rollout 做最大似然更新，按生成顺序回放且不区分正确/错误回答，足以从同一基座模型恢复在线 RL 的性能。每个 rollout batch 做一次最大似然更新即可紧密跟踪在线 RL 学习曲线，最后几步的 rollout 往往足以恢复最终模型性能。",
+      "why_it_matters_zh": "如果 RL 后训练的大量 compute 主要花在发现数据上，那么归档 rollout 的最大似然复用可能显著降低复现或继续训练成本。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Reinforcement Learning Can Be Recovered From Its Own Rollouts",
+        "url": "https://arxiv.org/abs/2611.33102v1",
+        "published_at": "2026-11-24T18:38:06Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "326e70aa88ec7f9b"
+      ],
+      "category": "research",
+      "title_zh": "SpecEngineeringBench：评估编码 Agent 作为自主规格工程师",
+      "summary_zh": "研究提出 SpecEngineeringBench，包含来自 78 个开源 Python 仓库、16 个应用类别的 100 个实例，每个实例记录多个缺陷，分别评估生成测试套件和通过执行分析发现缺陷两项能力。评测结合测试有效性、缺陷检测、覆盖率与定位精确率/召回率；七个前沿编码 Agent 取得 91.47% Head Pass Rate，但结果显示测试有效性与覆盖率同缺陷暴露能力脱钩。",
+      "why_it_matters_zh": "它补上了编码 Agent 在“自己决定测什么、去哪里查”这一自主规格工程环节的评测空白。",
+      "importance_score": 83.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
+        "url": "https://huggingface.co/papers/2611.32973",
+        "published_at": "2026-11-23T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "c3c01fddc9e7a081"
+      ],
+      "category": "research",
+      "title_zh": "CoT-Proxy：从教师动作轨迹蒸馏长程 Agent 策略",
+      "summary_zh": "论文提出 CoT-Proxy，证明在教师 chain-of-thought 不可得时，可以仅用教师动作轨迹蒸馏长程策略：学生推理块留空训练，并用自身生成回放缓冲区的 KL 损失限制漂移。将 Qwen3.6-27B 的动作蒸馏到 Qwen3-4B，AppWorld 任务成功率从 7% 提升到 18%；蒸馏到 Qwen3-32B 从 12% 提升到 25%。作者还提出 CoT-proxies，即放在空推理块后的教师推理短摘要。",
+      "why_it_matters_zh": "它降低了从闭源强教师蒸馏长程 agent 策略对隐藏 CoT 的依赖，并展示了跨推理格式迁移的效果。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+        "url": "https://arxiv.org/abs/2611.33148v1",
+        "published_at": "2026-11-24T18:58:53Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-10",
+      "candidate_ids": [
+        "09dff8fd972c489f"
+      ],
+      "category": "research",
+      "title_zh": "Lazy Agents 会违背自身信念：用可验证信念的 RL 教 Agent 按证据行动",
+      "summary_zh": "论文指出长任务 Agent 常在证据不足时提前提交答案，即使其写出的信念仍列出多个可能答案。提出 Reinforcement Learning with Verifiable Beliefs（RLVB），在训练时用模拟器计算每步答案后验：后验仍允许多个答案时奖励继续探索，证据充分时奖励提交；奖励不需要 judge、critic 或 reward model，也不读取 Agent 写出的信念行。作者还发布 Pro Worlds 视觉谜题基准，在三个基准、三个视觉语言模型共九个设置上均提升基座模型。",
+      "why_it_matters_zh": "它针对 Agent 的“懒惰提交”问题给出无需奖励模型的训练信号，并提供了可验证的评测环境。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe",
+        "url": "https://huggingface.co/papers/2611.32884",
+        "published_at": "2026-11-23T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-14",
+      "candidate_ids": [
+        "20e183950b181b43",
+        "331fa8b3af4e13e1"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 b12728 与 b12669：调度期 scratch 内存与自动量化选型",
+      "summary_zh": "llama.cpp 连续发布 b12728 和 b12669。b12728 在 ggml 的 graph_optimize 参数中加入 add_scratch，允许后端预留一段在节点 first 前分配、到 last 计算后释放的 compute buffer 内存，供多个节点共享；b12669 为 quantize 增加自动选择最优量化类型的选项，以在给定文件/bpw 目标大小下最小化误差。",
+      "why_it_matters_zh": "前者改善后端图优化中的内存复用，后者降低量化调参成本，都是本地/边缘推理栈的实用更新。",
+      "importance_score": 80.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12728",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12728",
+        "published_at": "2026-11-25T15:18:35Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b12669",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12669",
+          "published_at": "2026-11-24T02:38:41Z"
+        }
+      ]
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 235,
+    "normalized": 235,
+    "filtered": 198,
+    "ai_candidates": 30,
+    "prompt_chars": 24805,
+    "estimated_input_tokens": 6201,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
