@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-26T20:01:31.910114Z",
+  "run_id": "2026-11-27-df39bd5f",
+  "daily_summary_zh": "今日高信号集中在开源推理栈、智能体工程与多模态/机器人研究。llama.cpp v1.1.0 大幅扩展模型、音频、工具调用与量化支持，并重构批量 API；NVIDIA/Hugging Face 侧关注 Nemotron 3.5 Parse 的开放数据与微调、多智能体系统实践，以及模型自管上下文的实验。研究侧，Sage-Med 给出 35B 医疗多模态模型的渐进训练与大规模评测，LiveVAE 显著降低流式视频 VAE 延迟，Puzzling-Bench 以去污染方式评测推理；机器人方向出现 RoboEvo^2 的递归自我改进与 SOLVE 的稀疏关键位姿低成本控制。安全方面，有工作指出攻击策略选择会显著影响 AI 监控器假阴性率评估。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "d1f73b43b031ce74"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 发布 v1.1.0：扩展模型与音频支持，重构批量 API",
+      "summary_zh": "llama.cpp v1.1.0 新增 Inkling 2 系列（base、Mini、DSpark）、Domyn Edge 4B、Zaya1 8B、RAON-1-mini 和 Hy4 flash，将 DFlash 投机解码拆分为独立 draft 方法，并用 llama_batch_ext 弃用旧 llama_batch API。该版本还引入 Kokoro、Zonos3-Mini、tiny-voca、VoxCPM2、MiniMax-Music3、YuE2、Fish S2、Higgs v3/VibeVoice-ASR、Kyutai Hibiki 等 TTS/音频模型支持，加入 token-aware 聊天解析、命名工具选择、按 bpw 或大小预算自动逐张量量化、llama-server 槽位调度重构、带语音消息和 agent traces 的 Llama Chat 新 Web UI，并将 ggml 更新至 v1.1.1。",
+      "why_it_matters_zh": "这是开源本地推理栈的一次大版本更新，覆盖模型家族、音频能力、API、量化、服务端调度与聊天前端，会直接影响下游开发者的模型接入和部署方式。",
+      "importance_score": 90.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: v1.1.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v1.1.0",
+        "published_at": "2026-11-26T09:16:47Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "0dc28e0a5f094767"
+      ],
+      "category": "models",
+      "title_zh": "Sage-Med：面向医疗多模态智能的 35B 参数模型与渐进训练方案",
+      "summary_zh": "论文提出 Sage-Med-Preview，一个总参数 35B、激活参数 3B 的医疗多模态模型，通过对 3.227 亿条候选记录进行阶段化筛选，并采用医疗预训练、分阶段监督微调、自适应强化学习的渐进课程训练。作者称现有医疗 MLLM 在多项医疗任务上常弱于前沿通用 MLLM，扩大模型规模主要提升文本能力而非多模态感知，开启推理模式也未弥合视觉差距。Sage-Med 在 238 个临床任务、61 个公开和 13 个多中心私有基准、40 多种模态上对 77 个竞争模型进行了评测。",
+      "why_it_matters_zh": "该工作系统讨论医疗多模态模型的扩展规律，并提供大规模数据筛选、渐进训练和广覆盖评测方案，对医疗 MLLM 的训练配方与基准建设有参考价值。",
+      "importance_score": 86.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Sage-Med: Scaling Medical Multimodal Intelligence",
+        "url": "https://huggingface.co/papers/2611.34575",
+        "published_at": "2026-11-24T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "f340dbaf62efa177"
+      ],
+      "category": "research",
+      "title_zh": "模型自管上下文：nooa 中的上下文 API 实验",
+      "summary_zh": "研究比较了传统 agent harness 触发压缩与模型通过上下文 API 自行决定何时、压缩什么内容的模型驱动上下文管理。作者在 NVIDIA 开源 agent harness nooa 中让模型控制自身上下文，并在文档研究和机器学习工程任务上覆盖 8K 到 512K token 预算进行对比。结果显示，有效使用上下文 API 的模型通常准确率更高，且在紧张预算下常用更少输入 token：GPT 6.1 在 32K 预算的 OfficeQA Pro v2 上从 21% 提升到 56%，Kimi 最多减少 41% 输入 token。模型在 API 使用频率、压缩力度和启动时机上差异很大，提示词变化也会改变时机。作者还展示推理引擎可复用编辑后未变后缀的 KV cache，将每请求 prefill 计算最多降低 15%，且准确率无可测变化。",
+      "why_it_matters_zh": "它把 agent 上下文管理从 harness 策略推进到模型自主决策，并给出推理引擎配合优化的路径，可能影响长上下文 agent 的准确率、token 成本与系统设计。",
+      "importance_score": 84.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Letting Models Manage Their Own Context: Where We Stand",
+        "url": "https://huggingface.co/papers/2611.34147",
+        "published_at": "2026-11-24T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "2037b31967bf1342"
+      ],
+      "category": "research",
+      "title_zh": "LiveVAE：用因果窗口注意力加速流式视频 VAE",
+      "summary_zh": "LiveVAE 提出基于因果窗口注意力的流式视频 VAE 编码器和解码器，利用预训练视频 VAE 的局部感受野特性，降低每帧计算并保持有界的时间 KV cache。方法通过编码器/解码器解耦蒸馏后再联合微调，保留预训练 latent space，使其可作为原 VAE 的 drop-in 替代。在 MiniMax-H3 上，LiveVAE 相比官方 VAE 实现 5.2—6.2 倍更快的编码和 3.0—3.3 倍更快的解码，并具有更高 PSNR。",
+      "why_it_matters_zh": "视频 VAE 是交互式生成与编辑管线中的主要延迟瓶颈之一，LiveVAE 同时优化编码和解码，对实时流式视频生成有直接工程意义。",
+      "importance_score": 82.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "LiveVAE: Causal Window Attention Makes Efficient Streaming Video VAE",
+        "url": "https://huggingface.co/papers/2611.34912",
+        "published_at": "2026-11-24T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "dce2503baba26c65"
+      ],
+      "category": "research",
+      "title_zh": "Puzzling-Bench：23,777 道人类谜题基准",
+      "summary_zh": "Puzzling-Bench 从 Puzzling Stack Exchange 2014—2026 年档案中收集 23,777 道带社区验证答案的谜题，涵盖谜语、密码、逻辑网格、横向思维、文字游戏和娱乐数学，其中三分之一含图像。每道题带有作者接受的答案、简短参考答案、作者提示、社区标签和创建日期，并包含 254 道在九个评测模型中六个模型训练截止后发布的滚动切片用于污染检查。作者用两级评分器评测九个前沿与开源模型，最佳模型 GPT-6.1 在共享 255 题集上达到 74.8%，另有 17 道硬核题击败全部九个模型。",
+      "why_it_matters_zh": "该基准强调社区验证答案、提示消融和训练截止后切片，为评测模型推理与抗污染能力提供了更细粒度的工具。",
+      "importance_score": 79.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "hf-daily-papers",
+        "source_name": "Hugging Face Daily Papers",
+        "title": "Puzzling-Bench: Evaluating Language Models on 23,777 Human-Written Puzzles with Community-Verified Answers",
+        "url": "https://huggingface.co/papers/2611.34331",
+        "published_at": "2026-11-24T19:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "d1c0042c2cd36a0f"
+      ],
+      "category": "open-source",
+      "title_zh": "NVIDIA Nemotron 3.5 Parse：开放数据、微调与更快推理",
+      "summary_zh": "Hugging Face 博客发布基于 Nemotron 3.5 Parse 的实践文章，主题包括开放数据、微调与更快推理。",
+      "why_it_matters_zh": "官方博客围绕开放模型的数据、微调和推理优化给出实践方向，对希望基于 Nemotron 系列做二次开发的团队有直接参考价值。",
+      "importance_score": 78.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+        "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+        "published_at": "2026-11-26T05:05:36Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "9554f850fd21d06e"
+      ],
+      "category": "research",
+      "title_zh": "Hugging Face 发布多智能体系统构建、训练与评估指南",
+      "summary_zh": "Hugging Face 博客发布《Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems》，讨论多智能体系统的构建、训练与评估。",
+      "why_it_matters_zh": "多智能体系统是 agent 工程的重要方向，官方博客有助于开发者形成可复用的系统构建与评测方法。",
+      "importance_score": 76.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Swarms, Flocks, Gangs: How to build, train, and evaluate multi-agent systems",
+        "url": "https://huggingface.co/blog/training-swarms",
+        "published_at": "2026-11-26T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-11",
+      "candidate_ids": [
+        "b11594d29d29e3f5"
+      ],
+      "category": "safety",
+      "title_zh": "攻击策略选择会误导 AI 监控器评估",
+      "summary_zh": "论文以一款前生产环境 OpenAI monitor 为案例，发现测得的假阴性率高度依赖攻击策略生成方法和该方法内部的优化程度。在单一强化学习方法的不同优化水平下，假阴性率从 0.5% 到 20.8% 不等；在各方法最佳观测优化水平下，优化提示与转录编辑之间从 6.4% 到 23.0% 不等。所有攻击策略都只针对代理 monitor 开发，但报告结果均迁移到留出的 GPT-5.4 目标 monitor。作者认为，仅使用基础攻击方法的评估可能让人错误相信 monitor 很强。",
+      "why_it_matters_zh": "它提醒 AI 监控器与越狱评估必须说明攻击策略和优化强度，否则可能高估部署安全性，对 agent 安全评估设计有直接影响。",
+      "importance_score": 73.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Attack Policy Selection can Mislead Monitor Evaluators",
+        "url": "https://arxiv.org/abs/2611.34934v1",
+        "published_at": "2026-11-25T18:59:28Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-12",
+      "candidate_ids": [
+        "cab2d9a594a8c717"
+      ],
+      "category": "developer-tools",
+      "title_zh": "llama.cpp 推出 AMD Ryzen 与 Radeon 基准测试面板",
+      "summary_zh": "Hugging Face 博客介绍 llama.cpp 面向 AMD Ryzen 和 Radeon 的基准测试面板。",
+      "why_it_matters_zh": "公开基准面板可帮助开发者在 AMD CPU/GPU 上评估本地推理性能，完善 llama.cpp 的硬件性能参考。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+        "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+        "published_at": "2026-11-26T11:37:17Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 225,
+    "normalized": 225,
+    "filtered": 190,
+    "ai_candidates": 30,
+    "prompt_chars": 26795,
+    "estimated_input_tokens": 6698,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
