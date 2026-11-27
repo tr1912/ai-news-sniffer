@@ -1,0 +1,217 @@
+{
+  "date": "2026-11-28",
+  "generated_at": "2026-11-27T19:50:04.845240Z",
+  "run_id": "2026-11-28-e7d8c6ed",
+  "daily_summary_zh": "今日（11 月 27 日）值得关注的内容集中在三块：一是蚂蚁灵波发布面向机器人空间导航的 LingBot-Map 2.0 等模型，机器人在端侧运行时具备跨任务记忆、能自行修正地图，成为主流方向；二是 Anthropic CEO Dario Amodei 公开回应外界对其'让 AI 接管人类'的指责，相关讨论与该公司近期的股价、用户争议被两家媒体同时报道；三是工程与开源侧，llama.cpp 连续发布版本，重点优化推理性能，Hugging Face 展示了在 Trainium3 上运行 LTX-2.5 做视频生成的实践。研究层面出现几项有信息量的工作：以 KV 作为跨循环记忆的 Mixture-of-Loops Transformer、针对编码智能体'过度编辑'的大规模实证，以及多用户语音智能体和深度研究智能体的新基准。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "60dc998a7030218c",
+        "d40925f4dfa219c0",
+        "e5d68515cb1f57f4"
+      ],
+      "category": "models",
+      "title_zh": "蚂蚁灵波发布 LingBot-Map 2.0 等两款模型，补齐机器人空间导航能力",
+      "summary_zh": "11 月 27 日，蚂蚁灵波科技发布流式三维重建模型 LingBot-Map 2.0，其特点是模型可自行修正'空间记忆'，从而把地图建得更准。InfoQ 中文报道称，该公司同期发布两款模型，针对机器人在空间导航中的'走偏'与'健忘'两类问题。量子位另文提到，一款带跨任务空间记忆的原生基模已开源，并且可在机器人端侧运行，地图可随时修正、记忆可跨任务复用。",
+      "why_it_matters_zh": "机器人落地的主要瓶颈之一在于空间记忆与地图维护，而非单纯感知。把可在线修正的地图与跨任务记忆做成模型能力，并强调端侧可运行，指向的是从演示走向可部署的机器人导航栈；开源与端侧两个关键词也决定了开发者能否低成本复现。",
+      "importance_score": 76.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "qbitai",
+        "source_name": "量子位",
+        "title": "蚂蚁灵波发布LingBot-Map 2.0，模型自己修正“空间记忆”，把地图画更准",
+        "url": "https://www.qbitai.com/2026/11/513211.html",
+        "published_at": "2026-11-27T04:05:18Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "infoq-cn",
+          "source_name": "InfoQ 中文",
+          "title": "瞄准“走偏”与“健忘”两道难题：蚂蚁灵波发布两大模型，补齐机器人空间导航能力",
+          "url": "https://www.infoq.cn/article/zRubhYcrBMTrOvzjlPQN?utm_source=rss&utm_medium=article",
+          "published_at": "2026-11-27T16:15:06Z"
+        },
+        {
+          "source_id": "qbitai",
+          "source_name": "量子位",
+          "title": "刚刚，首个带跨任务空间记忆的原生基模开源！机器人端侧就能跑",
+          "url": "https://www.qbitai.com/2026/11/513227.html",
+          "published_at": "2026-11-27T07:01:20Z"
+        }
+      ]
+    },
+    {
+      "id": "event-5",
+      "candidate_ids": [
+        "f108ad89f3e40012"
+      ],
+      "category": "research",
+      "title_zh": "Mixture-of-Loops Transformer：用 KV 作为跨循环的可选记忆",
+      "summary_zh": "论文提出 Mixture-of-Loops Transformer（MoLT）：其 Mixture-of-Loops Attention（MoLA）把 key/value 当作记忆，在不同深度与循环之间做选择性复用。MoLT-R 保留残差流并跨循环读取局部 KV；MoLT-KV 则从 embedding 重新开始，读取当前循环的局部 KV 并辅以前序循环的记忆 KV，从而消除同位置的跨循环依赖，配合 loop forcing 并行训练可支持单次遍历的 MoL 解码。作者进一步提出 U 形 MoLT，将记忆构建与预测读出分离，并跳过无用的解码遍历。在 400B token 预训练中，U-MoLT 在 700M/1.5B dense 与 3B MoE 规模上优于 OLMo3。",
+      "why_it_matters_zh": "循环/共享层是提升表达力但牺牲效率的经典权衡。该工作把'循环之间传什么'重定义为可检索的 KV 记忆，并给出可并行训练与单次遍历解码的方案，为在同等算力预算下提升小模型能力提供了一条可验证路径。",
+      "importance_score": 70.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "Mixture-of-Loops Transformer",
+        "url": "https://arxiv.org/abs/2611.34923v1",
+        "published_at": "2026-11-25T18:58:53Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-2",
+      "candidate_ids": [
+        "9f12d7ebeee17852",
+        "a4924c7203174a05"
+      ],
+      "category": "business",
+      "title_zh": "Anthropic CEO Amodei 回应'把人类控制权交给 AI'的指控",
+      "summary_zh": "Anthropic CEO Dario Amodei 公开回应竞争对手对其'主张让人类放弃对 AI 的控制'的指责，称这类说法'荒谬'。TechCrunch 指出，这一争论发生在领先 AI 公司日益自动化自身研究与模型开发的背景下；InfoQ 中文的报道则把该回应与 Anthropic 近期股价破发、用户抱怨、创始人套现等争议放在同一叙事中。",
+      "why_it_matters_zh": "头部实验室一边强调安全，一边加速用 AI 自动化研发，这使其安全叙事面临可信度拷问。这场公开交锋反映出 AI 治理话语正在从技术讨论转变为对公司行为的问责，也会影响监管与公众对'安全派'厂商的认知。",
+      "importance_score": 66.0,
+      "confirmation_status": "cross_confirmed",
+      "primary_source": {
+        "source_id": "techcrunch-ai",
+        "source_name": "TechCrunch AI",
+        "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
+        "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+        "published_at": "2026-11-25T19:44:24Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "infoq-cn",
+          "source_name": "InfoQ 中文",
+          "title": "股价破发、用户抱怨、创始人套现，Anthropic CEO 深夜回应：我从没想过让 AI 统治人类",
+          "url": "https://www.infoq.cn/article/FDR8k5bNu9eWklHh9NmI?utm_source=rss&utm_medium=article",
+          "published_at": "2026-11-27T19:56:26Z"
+        }
+      ]
+    },
+    {
+      "id": "event-6",
+      "candidate_ids": [
+        "409d2a3e9ba407da"
+      ],
+      "category": "research",
+      "title_zh": "实证研究：编码智能体的'过度编辑'多为测试与文档，代码必要性不输人类",
+      "summary_zh": "论文提出 Delta Residue Attribution（DRA）：回放智能体轨迹，把最终补丁的每个代码块追溯到写入它的步骤，逐块回滚并重跑任务测试以判断该块是否必要。作者将其应用于 SWE-bench Verified（6728 条）与 DeepSWE（932 条）上来自 18 个前沿模型的 7660 条已解决的 GitHub Copilot CLI 轨迹，并用同一方法给开发者补丁打分。结果显示，智能体补丁确实改动更多行，但在 SWE-bench Verified 上多余编辑主要是新增测试（61%）与文档（13%），DeepSWE 上则以代码（58%）为主；两个基准上智能体代码的平均必要性与开发者相当（0.887 对 0.864；0.797 对 0.785），18 个模型中有 11 个留下的不必要代码少于开发者；SWE-bench Verified 上平均 11% 的代码单元仍不必要，其中 89% 会改变行为。",
+      "why_it_matters_zh": "'智能体补丁过大'长期被当作质量问题的代理指标，该研究用可复现的归因与测试回放证明这个指标会误导评估。它给团队提供了衡量智能体补丁质量的正确方法，也解释了为什么简单的行数/补丁规模约束可能压制有益的测试与文档产出。",
+      "importance_score": 66.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches",
+        "url": "https://arxiv.org/abs/2611.34875v1",
+        "published_at": "2026-11-25T18:37:06Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-4",
+      "candidate_ids": [
+        "82ecedc5e64c6fc6"
+      ],
+      "category": "models",
+      "title_zh": "Hugging Face 博客：在 Trainium3 上跑 LTX-2.5 生成视频",
+      "summary_zh": "Hugging Face 博客发布实践文章，主题是把 LTX-2.5 视频生成模型放到 Trainium3 上运行并产出视频，属于官方渠道披露的部署与推理实践记录。",
+      "why_it_matters_zh": "视频生成正从'能否生成'转向'在哪跑、成本多高'。把主流视频模型迁移到非 NVIDIA 加速器并公开实践路径，对希望降低推理成本、分散硬件依赖的团队具有参考价值。",
+      "importance_score": 62.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "huggingface-blog",
+        "source_name": "Hugging Face Blog",
+        "title": "Taking Trainium3 to the Track: Generating Videos with LTX-2.5",
+        "url": "https://huggingface.co/blog/video-trainium3",
+        "published_at": "2026-11-27T00:00:00Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-3",
+      "candidate_ids": [
+        "c1b1651159af9162",
+        "a92195d2cae09690"
+      ],
+      "category": "open-source",
+      "title_zh": "llama.cpp 连续发布 b12793/b12816：CUDA 算子融合与循环状态原地读取",
+      "summary_zh": "llama.cpp 发布 b12816，将循环状态改为原地读取而非复制：在多数场景与后端下移除了状态拷贝步骤，内核直接从缓存读取循环状态，并为 RWKV6/7 调整了旧状态读取顺序，同时加入图复用检查以避免与投机解码回滚快照冲突带来的吞吐回退，并补充了内存清空后的回归测试。前一版本 b12793 则聚焦 CUDA 侧，把 Inkling 2 的 short conv、depth mix、loop controller、L2 clip 与 situ 等链路融合，并要求模型侧调整卷积算子顺序以便后端融合，同时提供 macOS/Linux 多平台预编译包。",
+      "why_it_matters_zh": "这类底层改动不显眼，但直接决定本地推理的 token 吞吐与显存/内存开销。原地读取状态、算子融合是当前端侧与私有化部署最实际的性能红利，也体现了 llama.cpp 作为开源推理事实标准对硬件后端的持续适配。",
+      "importance_score": 58.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12816",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12816",
+        "published_at": "2026-11-27T17:02:01Z"
+      },
+      "related_sources": [
+        {
+          "source_id": "llama-cpp-releases",
+          "source_name": "llama.cpp Releases",
+          "title": "llama.cpp Releases: b12793",
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12793",
+          "published_at": "2026-11-26T22:30:32Z"
+        }
+      ]
+    },
+    {
+      "id": "event-7",
+      "candidate_ids": [
+        "a4279a703684c501"
+      ],
+      "category": "research",
+      "title_zh": "μ-Bench：衡量共享空间中多用户语音智能体的联合任务完成能力",
+      "summary_zh": "论文提出 μ-Bench，面向闭环、全双工的多用户语音交互，评估智能体在共享空间中同时满足相互依赖的多用户请求、并遵守各用户权限与隐私约束的能力。模拟参与者基于各自隔离的目标、知识与权限画像行动，并对智能体的语音与工具结果作出反应。基准覆盖 20 个领域、100 个场景（变化群体规模、声学条件与追问需求），共 800 个用例（408 个含工具调用、392 个无工具）。联合任务成功率（JTS）要求所有用户目标、隐私边界与终态同时成立，Pure JTS 进一步禁止未授权工具调用。在 13 个语音智能体上，闭源系统最高为无工具 62.24%、含工具 65.44%，开源权重模型均低于 20%；ATC 诊断显示开源模型主要落后于多轮归因与话题串联，且群体规模增大会持续降低联合成功率。",
+      "why_it_matters_zh": "语音助手正从单人命令走向家庭、车载、会议等多人共用场景，而现有多为单用户评测。该基准把权限、隐私与多人协调纳入成功率定义，暴露了开源语音模型在多用户场景的结构性短板，也为下一代语音智能体划出了一条明确的评测基线。",
+      "importance_score": 55.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "$μ$-Bench: Benchmarking Multi-User Task Completion in Shared Interaction Voice Agents",
+        "url": "https://arxiv.org/abs/2611.34920v1",
+        "published_at": "2026-11-25T18:58:42Z"
+      },
+      "related_sources": []
+    },
+    {
+      "id": "event-8",
+      "candidate_ids": [
+        "84ae7c101e3ac4c4"
+      ],
+      "category": "research",
+      "title_zh": "DRBench Pro：以知识覆盖为核心的深度研究智能体基准",
+      "summary_zh": "论文提出 DRBench Pro，把结构化知识覆盖作为首要评估目标。其自动化流水线从维基百科构建本地知识树，并用采样子图生成研究问题与有证据支撑的评分细则（rubric），每条细则对应知识树中的一个关系，从而保留被评估知识的结构。智能体只拿到研究问题；该结构使其可分别测量主要研究方向的广度与相关知识链的深度，并以几何平均给出总体覆盖率。基准包含 24 个领域、144 个案例、44102 条细则；对 16 个深度研究智能体的评测显示其在广度与深度上各有强弱，最佳智能体总体覆盖率为 57.04%，细则判定与人工标注高度一致。",
+      "why_it_matters_zh": "深度研究智能体的报告质量评估长期依赖主观打分或零散事实核查。用知识树与关系级细则把'覆盖了什么、挖得多深'量化，使不同智能体之间的比较具备可复现性，也为产品迭代提供了明确的失败定位维度。",
+      "importance_score": 52.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "arxiv-ai",
+        "source_name": "arXiv AI",
+        "title": "DRBench Pro: A Knowledge-Centric Benchmark for Professional Deep Research Agents",
+        "url": "https://arxiv.org/abs/2611.34852v1",
+        "published_at": "2026-11-25T18:25:30Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 176,
+    "normalized": 176,
+    "filtered": 134,
+    "ai_candidates": 30,
+    "prompt_chars": 17779,
+    "estimated_input_tokens": 4444,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
