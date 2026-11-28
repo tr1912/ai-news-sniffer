@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-29",
+  "generated_at": "2026-11-28T18:42:56.786561Z",
+  "run_id": "2026-11-29-caff580e",
+  "daily_summary_zh": "今日AI领域动态：llama.cpp 发布 b12835：张量并行可将数据分配到单设备。",
+  "events": [
+    {
+      "id": "event-1",
+      "candidate_ids": [
+        "d863444411d7f288"
+      ],
+      "category": "developer-tools",
+      "title_zh": "llama.cpp 发布 b12835：张量并行可将数据分配到单设备",
+      "summary_zh": "llama.cpp 发布 b12835 构建，更新说明显示张量并行（TP）可将数据分配到单一设备；同时提供 macOS、iOS、Linux 等多平台二进制包。",
+      "why_it_matters_zh": "作为本地推理常用开源项目，llama.cpp 的构建更新会直接影响开发者在多设备、多平台上的部署与推理配置；但本次属于增量更新，重要性有限。",
+      "importance_score": 45.0,
+      "confirmation_status": "primary_confirmed",
+      "primary_source": {
+        "source_id": "llama-cpp-releases",
+        "source_name": "llama.cpp Releases",
+        "title": "llama.cpp Releases: b12835",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12835",
+        "published_at": "2026-11-28T17:07:40Z"
+      },
+      "related_sources": []
+    }
+  ],
+  "degraded": false,
+  "warnings": [],
+  "report_url": null,
+  "source_coverage": {
+    "enabled": 20,
+    "fetched": 139,
+    "normalized": 139,
+    "filtered": 100,
+    "ai_candidates": 30,
+    "prompt_chars": 5207,
+    "estimated_input_tokens": 1301,
+    "failed_source_ids": [],
+    "newly_auto_paused_source_ids": []
+  }
+}
